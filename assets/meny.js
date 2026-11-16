@@ -336,7 +336,6 @@
         maler.innerHTML = '<div class="fremdrift-tekst">' + fr.ferdig + " av " + fr.totalt + ' ferdig</div><div class="fremdrift-bar"><span style="width:' + Math.round(100 * fr.ferdig / fr.totalt) + '%"></span></div>';
         tittel.appendChild(maler);
       }
-      if (TEMA.periodesystem) tittel.appendChild(psKnapp("ps-knapp ps-banner"));
       indre.appendChild(tittel);
     }
     banner.innerHTML = "";
@@ -384,6 +383,9 @@
       sidemeny.appendChild(topp);
 
       var grupper = emner(TEMA);
+      // Står eleven i et emne, vises bare det emnet. Ellers vises alle emnene lukket.
+      var mittEmne = grupper.filter(function (e) { return e.navn && e.sider.some(function (s) { return s.fil === HER; }); });
+      if (mittEmne.length) grupper = mittEmne;
       grupper.forEach(function (e) {
         var ol = lag("ol", "sti");
         e.sider.forEach(function (s, n) { ol.appendChild(stegLi(s, String(n + 1))); });
@@ -401,14 +403,7 @@
         if (e.vurdering) d.appendChild(lag("div", "emne-vurdering", "Avsluttes med: " + e.vurdering));
         sidemeny.appendChild(d);
       });
-      // Åpne første emne hvis eleven står på oversikten og ingen er åpne
-      var aapne = sidemeny.querySelectorAll("details.emne[open]");
-      if (!aapne.length) { var forste = sidemeny.querySelector("details.emne"); if (forste) forste.open = true; }
-
-      var bunnSti = lag("ol", "sti");
-      bunnSti.appendChild(stegLi({ tittel: "Oppgaver", fil: b + "oppgaver.html", type: "oppgaver" }, "✎"));
-      bunnSti.appendChild(stegLi({ tittel: "Ressurser", fil: b + "ressurser.html", type: "ressurser" }, "↗"));
-      sidemeny.appendChild(bunnSti);
+      // Oppgaver og Ressurser nås fra temaets oversiktsside, ikke fra menyen.
       if (TEMA.periodesystem) {
         sidemeny.appendChild(lag("div", "sidemeny-overskrift", "Verktøy"));
         sidemeny.appendChild(psKnapp("ps-knapp ps-sidemeny"));
@@ -746,8 +741,11 @@
     if (!type) type = "fagstoff";
     var h1 = main.querySelector("h1");
     if (!h1) return;
-    var merke = lag("div", "sidetype type-" + type, SIDETYPER[type]);
-    h1.parentNode.insertBefore(merke, h1);
+    // Står først på linja med fagmerkene under overskriften
+    var merke = lag("span", "sidetype type-" + type, SIDETYPER[type]);
+    var linje = h1.nextElementSibling && h1.nextElementSibling.classList.contains("merker") ? h1.nextElementSibling : null;
+    if (!linje) { linje = lag("div", "merker"); h1.parentNode.insertBefore(linje, h1.nextSibling); }
+    linje.insertBefore(merke, linje.firstChild);
   }
 
   // ---------- Emnekort på temaets oversiktsside ----------
