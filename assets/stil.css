@@ -575,6 +575,22 @@ html { overflow-x: clip; }
 .snarveier span { color: var(--dempet); font-size: .92rem; }
 .snarveier .ikon { width: 28px; height: 28px; color: var(--hoved); margin-top: 2px; }
 
+/* ================= Ordliste og begreper ================= */
+.begrep { text-decoration: underline dotted var(--tema); text-decoration-thickness: 2px; text-underline-offset: 3px; cursor: help; }
+.begrep:hover, .begrep:focus-visible { background: var(--tema-lys); border-radius: 3px; outline: none; }
+.begrep-boble {
+  position: fixed; z-index: 40; padding: 10px 14px; border-radius: 10px;
+  background: var(--flate); color: var(--tekst); border: 1px solid var(--linje); border-left: 4px solid var(--tema);
+  box-shadow: var(--skygge-hover); font-size: .92rem; line-height: 1.5;
+}
+.begrep-boble strong { margin-right: 4px; }
+details.ordliste-boks { margin: 2em 0 1em; border-left: 4px solid var(--tema); }
+details.ordliste-boks > summary { font-size: 1.1rem; }
+details.ordliste-boks > summary span { font-weight: 400; color: var(--dempet); font-size: .9rem; }
+details.ordliste-boks > summary::before { background: var(--tema-lys); color: var(--tema); }
+.ps-sidemeny + .ps-sidemeny { margin-top: 6px; }
+a.ps-knapp { text-decoration: none; }
+
 /* ================= Periodesystem ================= */
 .ps-knapp {
   display: inline-flex; align-items: center; gap: 6px; cursor: pointer;

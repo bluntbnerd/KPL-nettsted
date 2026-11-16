@@ -419,10 +419,12 @@
         sidemeny.appendChild(d);
       });
       // Oppgaver og Ressurser nås fra temaets oversiktsside, ikke fra menyen.
-      if (TEMA.periodesystem) {
-        sidemeny.appendChild(lag("div", "sidemeny-overskrift", "Verktøy"));
-        sidemeny.appendChild(psKnapp("ps-knapp ps-sidemeny"));
-      }
+      sidemeny.appendChild(lag("div", "sidemeny-overskrift", "Verktøy"));
+      var ol = lenke("temaer/" + TEMA.mappe + "/index.html#ordliste", "", "ps-knapp ps-sidemeny");
+      ol.innerHTML = '<svg class="ikon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/><path d="M9 8h6"/></svg><span>Ordliste og ordkort</span>';
+      if (/\/index\.html$/.test(HER)) ol.addEventListener("click", function () { var b = document.getElementById("ordliste"); if (b) b.open = true; });
+      sidemeny.appendChild(ol);
+      if (TEMA.periodesystem) sidemeny.appendChild(psKnapp("ps-knapp ps-sidemeny"));
     } else {
       sidemeny.appendChild(lag("div", "sidemeny-overskrift", "Temaer"));
       var ul = lag("ul", "temaliste");
@@ -723,6 +725,109 @@
     });
   }
 
+  // ---------- Ordlisten: forklaring i teksten + sammenleggbar boks ----------
+  var BEGREPER = [];
+  function byggOrdliste() {
+    var erOversikt = /\/index\.html$/.test(HER);
+    Array.prototype.forEach.call(main.querySelectorAll("h2"), function (h) {
+      if (!/^ordliste/i.test(h.textContent.trim())) return;
+      var tabell = h.nextElementSibling;
+      while (tabell && tabell.tagName !== "TABLE" && tabell.tagName !== "H2") tabell = tabell.nextElementSibling;
+      if (!tabell || tabell.tagName !== "TABLE") return;
+      var hoder = Array.prototype.map.call(tabell.querySelectorAll("thead th"), function (th) { return th.textContent.trim().toLowerCase(); });
+      var iF = hoder.findIndex(function (x) { return /forklaring|betydning/.test(x); });
+      var antall = 0;
+      Array.prototype.forEach.call(tabell.querySelectorAll("tbody tr"), function (tr) {
+        var c = tr.querySelectorAll("td");
+        antall++;
+        if (iF > -1 && c[0] && c[iF] && c[iF].textContent.trim()) BEGREPER.push({ begrep: c[0].textContent.trim(), forklaring: c[iF].innerHTML.trim() });
+      });
+      // Pakk overskrift, ordkort og tabell inn i en sammenleggbar boks
+      var d = lag("details", "ordliste-boks");
+      d.id = "ordliste";
+      if (erOversikt) d.open = true;
+      var sum = lag("summary");
+      sum.innerHTML = "Ordliste <span>(" + antall + " begreper)</span>";
+      d.appendChild(sum);
+      h.parentNode.insertBefore(d, h);
+      var el = h.nextElementSibling;
+      while (el) { var neste = el.nextElementSibling; d.appendChild(el); if (el === tabell) break; el = neste; }
+      h.remove();
+    });
+    if (location.hash === "#ordliste") { var b = document.getElementById("ordliste"); if (b) { b.open = true; setTimeout(function () { b.scrollIntoView(); }, 50); } }
+    markerBegreper();
+  }
+
+  // Første forekomst av hvert begrep i teksten får prikket understrek og forklaring
+  function markerBegreper() {
+    if (!BEGREPER.length) return;
+    var liste = BEGREPER.slice().sort(function (a, b) { return b.begrep.length - a.begrep.length; });
+    var brukt = {};
+    var bokstav = "A-Za-zÆØÅæøåÉé";
+    var walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var p = n.parentElement;
+        if (!p || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        if (n.nodeValue.indexOf("\\") !== -1) return NodeFilter.FILTER_REJECT; // formler (MathJax)
+        if (p.closest("h1,h2,h3,h4,summary,a,button,table,figcaption,.ordliste-boks,.quiz,.quiz-karusell,.merker,.boks-tittel,.begrep,script,style,mjx-container,.utkast-varsel")) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var noder = [];
+    while (walker.nextNode()) noder.push(walker.currentNode);
+    noder.forEach(function (node) {
+      liste.forEach(function (o) {
+        var nokkel = o.begrep.toLowerCase();
+        if (brukt[nokkel] || !node.parentNode) return;
+        var ord = o.begrep.replace(/\s*\(.*\)\s*$/, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        if (ord.length < 3) return;
+        var rx = new RegExp("(^|[^" + bokstav + "])(" + ord + "[" + bokstav.replace("A-Z", "").replace("É", "") + "]{0,4})(?![" + bokstav + "])", "i");
+        var m = rx.exec(node.nodeValue);
+        if (!m) return;
+        brukt[nokkel] = true;
+        var start = m.index + m[1].length;
+        var etter = node.splitText(start);
+        etter.splitText(m[2].length);
+        var span = lag("span", "begrep");
+        span.tabIndex = 0;
+        span.setAttribute("role", "button");
+        span.setAttribute("data-begrep", o.begrep);
+        span.setAttribute("data-forklaring", o.forklaring);
+        etter.parentNode.replaceChild(span, etter);
+        span.appendChild(etter);
+        node = span.nextSibling && span.nextSibling.nodeType === 3 ? span.nextSibling : node;
+      });
+    });
+    // Én felles forklaringsboks
+    var boble = lag("div", "begrep-boble");
+    boble.hidden = true;
+    boble.setAttribute("role", "tooltip");
+    document.body.appendChild(boble);
+    var aktiv = null;
+    function vis(el) {
+      aktiv = el;
+      boble.innerHTML = "<strong>" + el.getAttribute("data-begrep") + "</strong> " + el.getAttribute("data-forklaring");
+      boble.hidden = false;
+      var r = el.getBoundingClientRect();
+      var bredde = Math.min(340, window.innerWidth - 24);
+      boble.style.width = bredde + "px";
+      var venstre = Math.max(12, Math.min(r.left, window.innerWidth - bredde - 12));
+      boble.style.left = venstre + "px";
+      var topp = r.bottom + 8;
+      if (topp + boble.offsetHeight > window.innerHeight - 8) topp = r.top - boble.offsetHeight - 8;
+      boble.style.top = topp + "px";
+    }
+    function skjul() { boble.hidden = true; aktiv = null; }
+    main.addEventListener("mouseover", function (e) { var b = e.target.closest && e.target.closest(".begrep"); if (b) vis(b); });
+    main.addEventListener("mouseout", function (e) { var b = e.target.closest && e.target.closest(".begrep"); if (b && !b.contains(e.relatedTarget)) skjul(); });
+    main.addEventListener("click", function (e) { var b = e.target.closest && e.target.closest(".begrep"); if (b) { if (aktiv === b && !boble.hidden) skjul(); else vis(b); } });
+    main.addEventListener("focusin", function (e) { if (e.target.classList && e.target.classList.contains("begrep")) vis(e.target); });
+    main.addEventListener("focusout", function (e) { if (e.target.classList && e.target.classList.contains("begrep")) skjul(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") skjul(); });
+    window.addEventListener("scroll", skjul, { passive: true });
+    document.addEventListener("click", function (e) { if (!e.target.closest(".begrep")) skjul(); });
+  }
+
   // ---------- Temakort (forside og temaoversikt) ----------
   function byggTemakort() {
     var mål = document.getElementById("temakort");
@@ -849,6 +954,7 @@
   // ---------- Start ----------
   byggQuiz();
   byggOrdkort();
+  byggOrdliste();
   lastFormler();
   var trengerAlle = erForside || !!document.getElementById("temakort");
   (trengerAlle ? lastAlleStier() : TEMA ? lastSti(TEMA.mappe) : Promise.resolve()).then(function () {
