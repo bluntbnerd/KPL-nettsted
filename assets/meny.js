@@ -25,6 +25,12 @@
     oversikt: "Oversikt", fagstoff: "Teori", simulering: "Simulering", lab: "Lab",
     sjekk: "Quiz", oppgaver: "Oppgaver", ressurser: "Ressurser", video: "Video", fordypning: "Fordypning"
   };
+  // Kort tittel i venstremenyen: meny: "…" i sti.js, ellers fjernes «Øv:» og «(PhET)»,
+  // siden sidetype-merket allerede sier at det er en simulering.
+  function menyTittel(s) {
+    if (s.meny) return s.meny;
+    return String(s.tittel).replace(/^\s*Øv:\s*/i, "").replace(/\s*\(PhET\)\s*$/i, "").replace(/^./, function (c) { return c.toUpperCase(); });
+  }
   function gjettType(s) {
     if (s.type && SIDETYPER[s.type]) return s.type;
     if (/^øv\b|phet|simulering/i.test(s.tittel)) return "simulering";
@@ -148,8 +154,8 @@
         return VIS_UTKAST || s.status !== "utkast";
       }).map(function (s) {
         return s.status === "planlagt"
-          ? { tittel: s.tittel, type: "planlagt" }
-          : { tittel: s.tittel, fil: b + s.fil, type: "fagstoff", sidetype: s.fordypning ? "fordypning" : gjettType(s), utkast: s.status === "utkast", fordypning: !!s.fordypning };
+          ? { tittel: s.tittel, meny: s.meny, type: "planlagt" }
+          : { tittel: s.tittel, meny: s.meny, fil: b + s.fil, type: "fagstoff", sidetype: s.fordypning ? "fordypning" : gjettType(s), utkast: s.status === "utkast", fordypning: !!s.fordypning };
       });
       // Fordypningssider (ekstrastoff utenfor hovedstien) står nederst i emnet
       sider = sider.filter(function (s) { return !s.fordypning; }).concat(sider.filter(function (s) { return s.fordypning; }));
@@ -377,7 +383,8 @@
           else if (s.sidetype) a.appendChild(lag("span", "type-merke type-" + s.sidetype, SIDETYPER[s.sidetype]));
           if (s.fil === HER) { a.classList.add("aktiv"); a.setAttribute("aria-current", "page"); }
         }
-        a.querySelector(".sti-tittel").textContent = s.tittel;
+        a.querySelector(".sti-tittel").textContent = menyTittel(s);
+        if (menyTittel(s) !== s.tittel) a.title = s.tittel;
         li.appendChild(a);
         return li;
       }
