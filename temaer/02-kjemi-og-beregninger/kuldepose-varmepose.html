@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuldepose og varmepose – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Kuldepose og varmepose – når salter løses i vann</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">KT</span> <strong>Kompetansemål:</strong> KT3, KT4</div>
+
+<p class="ingress">Noen salter gjør vannet kaldt når de løses, andre gjør det varmt. Det brukes i kuldeposer i førstehjelpsskrinet og i varmeposer. I denne simuleringen løser du ulike stoffer i vann og ser hva som skjer med temperaturen.</p>
+
+<h2>Eksoterm eller endoterm oppløsning?</h2>
+<p>Når et salt løses i vann, brytes ionegitteret. Det krever energi. Samtidig binder vannmolekylene seg til ionene, og da frigjøres energi. Forskjellen avgjør om oppløsningen er:</p>
+<ul>
+  <li><strong>endoterm</strong>: tar opp energi, og vannet blir kaldere (kuldepose)</li>
+  <li><strong>eksoterm</strong>: gir fra seg energi, og vannet blir varmere (varmepose)</li>
+</ul>
+
+<h2>Simulering</h2>
+<p>Du har 100 g vann ved 20,0 °C i en isolert kopp. Velg stoff og mengde, og trykk «Løs opp».</p>
+<p>
+  <label for="stoff"><strong>Stoff:</strong></label>
+  <select id="stoff"></select>
+</p>
+<p>
+  <label for="masse"><strong>Masse:</strong> <span id="masse-tall">10</span> g</label><br>
+  <input type="range" id="masse" min="5" max="20" step="5" value="10" style="width:100%;max-width:360px">
+</p>
+<p><button type="button" id="los">Løs opp</button> <button type="button" id="nullstill">Nullstill</button></p>
+
+<figure>
+  <div id="termometer" role="img" aria-live="polite"></div>
+  <figcaption>Termometeret viser temperaturen i løsningen.</figcaption>
+</figure>
+<div class="boks" id="resultat" aria-live="polite"><div class="boks-tittel">Resultat</div><p>Velg stoff og trykk «Løs opp».</p></div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Slik regner simuleringen</div>
+  <ol>
+    <li>Stoffmengde: \( n = \dfrac{m}{M} \)</li>
+    <li>Energi: \( q = n \cdot \Delta H \), der ΔH er energien når 1 mol stoff løses (oppløsningsentalpi).</li>
+    <li>Temperaturendring: \( \Delta T = -\dfrac{q}{m_\text{løsning} \cdot c} \), der \( c = 4{,}18 \text{ J/(g·°C)} \) er varmekapasiteten til vann.</li>
+  </ol>
+  <p>Simuleringen regner som om ingen varme går tapt til koppen eller lufta. På laben blir temperaturendringen derfor litt mindre.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Natriumhydroksid er etsende og blir svært varmt når det løses. Det skal bare løses i små mengder, med vernebriller og hansker, og med omrøring. Ammoniumnitrat er oksiderende og skal holdes borte fra brennbart materiale. Les sikkerhetsdatabladet for hvert stoff før forsøket.</p>
+</div>
+
+<h2>Oppdrag</h2>
+<ol>
+  <li>Løs 10 g av hvert stoff. Sorter stoffene i endoterme og eksoterme.</li>
+  <li>Hvilket stoff passer best i en kuldepose? Hvilket passer i en varmepose? Begrunn svaret.</li>
+  <li>Løs 5, 10 og 20 g ammoniumnitrat. Hva skjer med temperaturendringen når du dobler massen?</li>
+  <li>Natriumklorid gir nesten ingen endring her. Hvorfor kjøler salt likevel godt når det strøs på is? Se siden «Salt på is».</li>
+  <li>Regn selv: Hvor mye endres temperaturen når 10,0 g NH<sub>4</sub>NO<sub>3</sub> (M = 80,04 g/mol, ΔH = +25,7 kJ/mol) løses i 100 g vann? Kontroller med simuleringen.</li>
+</ol>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <ol>
+    <li>Endoterme: ammoniumnitrat, ammoniumklorid og (svakt) natriumklorid. Eksoterme: natriumhydroksid og kalsiumklorid.</li>
+    <li>Kuldepose: ammoniumnitrat, som gir størst temperaturfall og er lite farlig å ha i en lukket pose. Varmepose: kalsiumklorid, som gir god oppvarming og ikke er så etsende som natriumhydroksid.</li>
+    <li>Temperaturendringen blir omtrent dobbelt så stor, fordi det løses dobbelt så mange mol. (Den blir litt mindre enn dobbelt, fordi det også blir mer løsning å varme opp eller kjøle ned.)</li>
+    <li>På is er det smeltingen av isen som tar opp mest energi. Saltet senker frysepunktet, slik at isen kan smelte under 0 °C.</li>
+    <li>n = 10,0 / 80,04 = 0,125 mol. q = 0,125 · 25 700 J = 3210 J. ΔT = −3210 / (110 · 4,18) = −7,0 °C. Temperaturen blir ca. 13,0 °C.</li>
+  </ol>
+</details>
+
+<p><small>Om kildene: Simuleringen er laget for dette nettstedet. Oppløsningsentalpiene er vanlige tabellverdier ved 25 °C. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs.</small></p>
+
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  // navn, formel, molmasse (g/mol), oppløsningsentalpi (kJ/mol)
+  var STOFFER = [
+    ["ammoniumnitrat", "NH₄NO₃", 80.04, 25.7],
+    ["ammoniumklorid", "NH₄Cl", 53.49, 14.8],
+    ["natriumklorid", "NaCl", 58.44, 3.9],
+    ["kalsiumklorid", "CaCl₂", 110.98, -81.3],
+    ["natriumhydroksid", "NaOH", 40.00, -44.5]
+  ];
+  var VANN = 100, C = 4.18, T0 = 20.0;
+  var velg = document.getElementById("stoff"), masse = document.getElementById("masse");
+  STOFFER.forEach(function (s, i) { var o = document.createElement("option"); o.value = i; o.textContent = s[0] + " (" + s[1] + ")"; velg.appendChild(o); });
+  masse.addEventListener("input", function () { document.getElementById("masse-tall").textContent = masse.value; });
+  function el(tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function tall(x, d) { return x.toFixed(d).replace(".", ",").replace("-", "−"); }
+
+  var TMIN = 0, TMAX = 70;
+  function tegn(T) {
+    var svg = el("svg", { viewBox: "0 0 200 300", width: 200, height: 300, style: "max-width:100%;height:auto" });
+    var y = function (t) { return 250 - (t - TMIN) / (TMAX - TMIN) * 220; };
+    svg.appendChild(el("rect", { x: 85, y: 20, width: 30, height: 235, rx: 15, fill: "#ffffff", stroke: "#586868", "stroke-width": 2 }));
+    svg.appendChild(el("circle", { cx: 100, cy: 265, r: 24, fill: T < T0 ? "#1e6fb8" : "#d9534f", stroke: "#586868", "stroke-width": 2 }));
+    svg.appendChild(el("rect", { x: 92, y: y(T), width: 16, height: 265 - y(T), fill: T < T0 ? "#1e6fb8" : "#d9534f" }));
+    for (var t = 0; t <= 70; t += 10) {
+      svg.appendChild(el("line", { x1: 115, x2: 125, y1: y(t), y2: y(t), stroke: "#586868" }));
+      var tx = el("text", { x: 130, y: y(t) + 4, "font-size": 13, style: "fill:var(--tekst)" }); tx.textContent = t + " °C"; svg.appendChild(tx);
+    }
+    svg.appendChild(el("line", { x1: 70, x2: 85, y1: y(T0), y2: y(T0), stroke: "#b5530f", "stroke-width": 2, "stroke-dasharray": "3 2" }));
+    var st = el("text", { x: 66, y: y(T0) + 4, "font-size": 11, "text-anchor": "end", fill: "#b5530f" }); st.textContent = "start"; svg.appendChild(st);
+    var vt = el("text", { x: 100, y: 15, "font-size": 15, "font-weight": "bold", "text-anchor": "middle", style: "fill:var(--tekst)" }); vt.textContent = tall(T, 1) + " °C"; svg.appendChild(vt);
+    var d = document.getElementById("termometer"); d.innerHTML = ""; d.appendChild(svg);
+    d.setAttribute("aria-label", "Termometer som viser " + tall(T, 1) + " grader celsius.");
+  }
+
+  var anim = null;
+  document.getElementById("los").addEventListener("click", function () {
+    if (anim) clearInterval(anim);
+    var s = STOFFER[Number(velg.value)], m = Number(masse.value);
+    var n = m / s[2], q = n * s[3] * 1000, dT = -q / ((VANN + m) * C), Tslutt = T0 + dT;
+    var start = Date.now();
+    anim = setInterval(function () {
+      var f = Math.min(1, (Date.now() - start) / 2500), T = T0 + dT * (1 - Math.pow(1 - f, 3));
+      tegn(T);
+      if (f >= 1) { clearInterval(anim); anim = null; }
+    }, 40);
+    var type = s[3] > 0 ? "endoterm" : "eksoterm";
+    document.getElementById("resultat").innerHTML =
+      '<div class="boks-tittel">' + m + " g " + s[0] + " (" + s[1] + ")</div>" +
+      "<p>n = " + m + " g / " + tall(s[2], 2) + " g/mol = " + tall(n, 3) + " mol. " +
+      "ΔH = " + (s[3] > 0 ? "+" : "") + tall(s[3], 1) + " kJ/mol, så q = " + tall(n * s[3], 2) + " kJ.</p>" +
+      "<p>Temperaturen endres med " + (dT > 0 ? "+" : "") + tall(dT, 1) + " °C, fra 20,0 °C til <strong>" + tall(Tslutt, 1) + " °C</strong>. " +
+      "Oppløsningen er <strong>" + type + "</strong>: den " + (type === "endoterm" ? "tar opp energi fra vannet, som blir kaldere." : "gir fra seg energi til vannet, som blir varmere.") + "</p>";
+  });
+  document.getElementById("nullstill").addEventListener("click", function () {
+    if (anim) clearInterval(anim); anim = null; tegn(T0);
+    document.getElementById("resultat").innerHTML = '<div class="boks-tittel">Resultat</div><p>Velg stoff og trykk «Løs opp».</p>';
+  });
+  tegn(T0);
+})();
+</script>
+</body>
+</html>

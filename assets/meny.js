@@ -46,21 +46,22 @@
   // «Nå jobber vi med» på forsiden. Oppdateres når en ny periode starter.
   var NAA = {
     overskrift: "Kjemiske reaksjoner og reaksjonsligninger",
-    tekst: "Vi repeterer atomer og bindinger og går videre til reaksjoner. Start i tema 2.",
+    tekst: "Vi repeterer atomer og bindinger og går videre til reaksjoner. Start i Kjemiske prinsipper.",
     temaer: ["02-kjemi-og-beregninger"]
   };
 
   var TEMAER = [
-    { mappe: "01-hms", nr: 1, tittel: "HMS og sikkerhet", farge: "#c2410c", ikon: "skjold", fag: ["PT", "ADK"] },
-    { mappe: "02-kjemi-og-beregninger", nr: 2, tittel: "Kjemi og beregninger", farge: "#2563eb", ikon: "kolbe", fag: ["KT", "ADK"], periodesystem: true },
-    { mappe: "03-enhetsoperasjoner", nr: 3, tittel: "Enhetsoperasjoner og prosessanlegg", farge: "#0f766e", ikon: "kolonne", fag: ["KT", "PT"] },
-    { mappe: "04-masse-og-energibalanser", nr: 4, tittel: "Masse- og energibalanser", farge: "#7c3aed", ikon: "vekt", fag: ["KT"], periodesystem: true },
-    { mappe: "05-maling-styring-regulering", nr: 5, tittel: "Måling, styring og regulering", farge: "#b45309", ikon: "maler", fag: ["PT"] },
+    // Rekkefølgen her er rekkefølgen elevene ser. Mappenavnene er faste (de er nettadresser)
+    // og trenger ikke stemme med navn eller rekkefølge. Nummer vises ikke for elevene.
+    // Tidligere tema 8 (rapportering og kvalitet) og 9 (miljø) er slått inn i Laboratorium og analyse og Bransjelære.
+    { mappe: "01-hms", nr: 1, tittel: "HMS", farge: "#c2410c", ikon: "skjold", fag: ["PT", "ADK"] },
+    { mappe: "02-kjemi-og-beregninger", nr: 2, tittel: "Kjemiske prinsipper", farge: "#2563eb", ikon: "kolbe", fag: ["KT", "ADK"], periodesystem: true },
+    { mappe: "04-masse-og-energibalanser", nr: 3, tittel: "Fysiske prinsipper", farge: "#7c3aed", ikon: "vekt", fag: ["KT"], periodesystem: true },
+    { mappe: "03-enhetsoperasjoner", nr: 4, tittel: "Enhetsoperasjoner", farge: "#0f766e", ikon: "kolonne", fag: ["KT", "PT"] },
+    { mappe: "05-maling-styring-regulering", nr: 5, tittel: "Automasjon", farge: "#b45309", ikon: "maler", fag: ["PT"] },
     { mappe: "06-drift-og-vedlikehold", nr: 6, tittel: "Drift og vedlikehold", farge: "#475569", ikon: "tannhjul", fag: ["PT", "ADK"] },
     { mappe: "07-laboratorium-og-analyse", nr: 7, tittel: "Laboratorium og analyse", farge: "#0e7490", ikon: "reagensror", fag: ["ADK"], periodesystem: true },
-    { mappe: "08-rapportering-og-kvalitet", nr: 8, tittel: "Rapportering og kvalitet", farge: "#4f46e5", ikon: "skjema", fag: ["ADK"] },
-    { mappe: "09-miljo-og-barekraft", nr: 9, tittel: "Miljø og bærekraft", farge: "#15803d", ikon: "blad", fag: ["KT", "ADK"] },
-    { mappe: "10-yrket-og-arbeidslivet", nr: 10, tittel: "Yrket og arbeidslivet", farge: "#be185d", ikon: "hjelm", fag: ["PT", "ADK"] }
+    { mappe: "10-yrket-og-arbeidslivet", nr: 8, tittel: "Bransjelære", farge: "#be185d", ikon: "hjelm", fag: ["PT", "KT", "ADK"] }
   ];
 
   var HOVEDLENKER = [
@@ -241,7 +242,7 @@
     FAGSIDER.forEach(function (f) { liste.push({ tittel: f.tittel, fil: f.fil, sted: "Fagoversikt" }); });
     TEMAER.forEach(function (t) {
       steg(t).forEach(function (s) {
-        liste.push({ tittel: s.type === "oversikt" ? t.nr + " " + t.tittel : s.tittel, fil: s.fil, sted: s.type === "oversikt" ? "Tema" : t.nr + " " + t.tittel, utkast: s.utkast });
+        liste.push({ tittel: s.type === "oversikt" ? t.tittel : s.tittel, fil: s.fil, sted: s.type === "oversikt" ? "Tema" : t.tittel, utkast: s.utkast });
       });
     });
     return liste;
@@ -326,8 +327,8 @@
     if (TEMA) {
       ledd("temaer/index.html", "Temaer");
       var erOversikt = /\/index\.html$/.test(HER);
-      if (erOversikt) ledd(null, TEMA.nr + " " + TEMA.tittel);
-      else { ledd("temaer/" + TEMA.mappe + "/index.html", TEMA.nr + " " + TEMA.tittel); ledd(null, sidetittel); }
+      if (erOversikt) ledd(null, TEMA.tittel);
+      else { ledd("temaer/" + TEMA.mappe + "/index.html", TEMA.tittel); ledd(null, sidetittel); }
     } else if (/^fag\//.test(HER) && HER !== "fag/index.html") {
       ledd("fag/index.html", "Fagoversikt"); ledd(null, sidetittel);
     } else {
@@ -338,7 +339,7 @@
 
     if (TEMA) {
       var tittel = lag("div", "banner-tema");
-      tittel.innerHTML = '<span class="banner-ikon">' + ikon(TEMA.ikon) + '</span><span><small>Tema ' + TEMA.nr + "</small>" + TEMA.tittel + "</span>";
+      tittel.innerHTML = '<span class="banner-ikon">' + ikon(TEMA.ikon) + '</span><span><small>Tema</small>' + TEMA.tittel + "</span>";
       var fr = fremdrift(TEMA);
       if (fr.totalt) {
         var maler = lag("div", "fremdrift");
@@ -432,7 +433,7 @@
         var li = lag("li");
         var a = lenke("temaer/" + t.mappe + "/index.html", "");
         temaFarge(a, t);
-        a.innerHTML = '<span class="liten-ikon">' + ikon(t.ikon) + "</span><span>" + t.nr + " " + t.tittel + "</span>";
+        a.innerHTML = '<span class="liten-ikon">' + ikon(t.ikon) + "</span><span>" + t.tittel + "</span>";
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -840,7 +841,7 @@
       var fr = fremdrift(t);
       var antall = steg(t).filter(function (s) { return s.type === "fagstoff"; }).length;
       a.innerHTML = '<span class="temakort-ikon">' + ikon(t.ikon) + "</span>" +
-        '<span class="temakort-nr">Tema ' + t.nr + "</span>" +
+        '<span class="temakort-nr">Tema</span>' +
         '<span class="temakort-tittel">' + t.tittel + "</span>" +
         '<span class="temakort-fag">' + t.fag.map(function (f) { return '<span class="fag">' + f + "</span>"; }).join(" ") + "</span>" +
         '<span class="temakort-bunn">' + (antall ? antall + (antall === 1 ? " side" : " sider") : "Kommer") +
@@ -909,7 +910,7 @@
       if (!t) return;
       var a = lenke("temaer/" + t.mappe + "/index.html", "", "knapp");
       temaFarge(a, t);
-      a.innerHTML = ikon(t.ikon) + "Gå til tema " + t.nr + ": " + t.tittel;
+      a.innerHTML = ikon(t.ikon) + "Gå til " + t.tittel;
       knapper.appendChild(a);
     });
     knapper.appendChild(lenke("arsplan.html", "Se hele årsplanen", "knapp sekundar"));

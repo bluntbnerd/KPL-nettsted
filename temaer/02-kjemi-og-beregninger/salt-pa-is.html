@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salt på is – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Salt på is – en kuldeblanding</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">KT</span> <strong>Kompetansemål:</strong> KT3, KT4</div>
+
+<p class="ingress">Når du strør salt i isvann, blir blandingen mye kaldere enn 0 °C, selv om du ikke kjøler den. I denne simuleringen ser du hvor kaldt det blir med ulike mengder salt. Etterpå kan du gjøre forsøket på laben.</p>
+
+<h2>Hva skjer?</h2>
+<p>To <strong>endoterme</strong> prosesser skjer samtidig:</p>
+<ol>
+  <li><strong>Isen smelter.</strong> Smelting tar opp energi.</li>
+  <li><strong>Saltet løser seg i vannet.</strong> Når natriumklorid løses, tas det også opp litt energi.</li>
+</ol>
+<p>Energien tas fra blandingen selv, og derfor synker temperaturen. Samtidig endres en egenskap: saltvann fryser ved en lavere temperatur enn rent vann. Det kalles <strong>frysepunktsenkning</strong>. Isen fortsetter derfor å smelte under 0 °C, helt til blandingen når frysepunktet for saltvannet.</p>
+<p>Uten salt stopper temperaturen på 0 °C. Da smelter isen bare så fort som varme kommer inn fra rommet.</p>
+
+<h2>Simulering</h2>
+<p>Du har 100 g knust is (slush) som er 0 °C. Velg hvor mye salt du strør i, og trykk «Start».</p>
+<p>
+  <label for="salt"><strong>Salt (NaCl):</strong> <span id="salt-tall">20</span> g</label><br>
+  <input type="range" id="salt" min="0" max="30" step="5" value="20" style="width:100%;max-width:360px">
+</p>
+<p>
+  <button type="button" id="start">Start</button>
+  <button type="button" id="behold">Behold kurven og prøv en annen mengde</button>
+  <button type="button" id="nullstill">Nullstill</button>
+</p>
+
+<figure>
+  <div id="graf" role="img" aria-live="polite"></div>
+  <figcaption id="graf-tekst">Grafen viser temperaturen i blandingen de første 10 minuttene.</figcaption>
+</figure>
+<div class="boks" id="resultat" aria-live="polite"><div class="boks-tittel">Resultat</div><p>Trykk «Start».</p></div>
+
+<h3>Frysepunkt for saltvann</h3>
+<table>
+  <thead><tr><th>Salt i vannet (masseprosent)</th><th>0 %</th><th>3,5 % (sjøvann)</th><th>10 %</th><th>15 %</th><th>20 %</th><th>23 %</th></tr></thead>
+  <tbody>
+    <tr><td>Frysepunkt</td><td>0 °C</td><td>ca. −2 °C</td><td>−6,6 °C</td><td>−10,9 °C</td><td>−16,5 °C</td><td>−21 °C</td></tr>
+  </tbody>
+</table>
+<p>Mer salt enn ca. 23 % gir ikke lavere temperatur. Da løser ikke mer salt seg i det kalde vannet.</p>
+
+<div class="boks">
+  <div class="boks-tittel">Fra virkeligheten</div>
+  <ul>
+    <li><strong>Veisalt</strong> smelter is på veien fordi saltvann har lavere frysepunkt.</li>
+    <li><strong>Kuldebad på laben:</strong> is og salt i en bolle brukes til å kjøle ned prøver og reaksjoner under 0 °C.</li>
+    <li><strong>Sjøvann</strong> fryser først ved omtrent −2 °C.</li>
+  </ul>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>En kuldeblanding kan bli under −15 °C og gi frostskader på huden. Ikke hold hånda i blandingen, og bruk hansker når du rører. Bruk vernebriller hvis du knuser is.</p>
+</div>
+
+<h2>Oppdrag</h2>
+<ol>
+  <li>Kjør simuleringen uten salt. Hvorfor stopper temperaturen på 0 °C?</li>
+  <li>Kjør med 10 g og 20 g salt, og behold begge kurvene. Hvor kaldt blir det? Hvorfor blir det kaldere med mer salt?</li>
+  <li>Er det isen eller saltet som tar opp mest energi? Bruk teksten over.</li>
+  <li>Prøv 30 g. Tenk deg at du strør i 50 g salt. Kan blandingen bli kaldere enn ca. −21 °C? Bruk tabellen.</li>
+  <li>På laben: Lag blandingen med 100 g knust is og 20 g salt. Mål temperaturen hvert minutt i 10 minutter. Sammenlign med simuleringen. Hva kan forklare forskjellen?</li>
+</ol>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <ol>
+    <li>Isen smelter bare så fort som varmen fra rommet kommer inn. Is og vann sammen holder seg på smeltepunktet, 0 °C.</li>
+    <li>Ca. −6 °C med 10 g og ca. −13 °C med 20 g. Mer salt gir sterkere saltvann, som har lavere frysepunkt. Isen kan smelte og ta opp energi helt ned til dette frysepunktet.</li>
+    <li>Det er isen som smelter. Å smelte 1 g is tar opp 334 J, mens oppløsning av 1 g salt bare tar opp ca. 66 J. Saltets viktigste rolle er å senke frysepunktet.</li>
+    <li>Med 30 g blir det ca. −21 °C. Mer salt hjelper ikke: saltvannet kan ikke bli sterkere enn ca. 23 % i kulde, og det overskytende saltet blir liggende. Ca. −21 °C er det laveste du kan få med is og vanlig salt.</li>
+    <li>På laben kommer varme inn fra bollen, lufta og hånda. Saltet blandes ikke perfekt, og termometeret reagerer litt sakte. Temperaturen synker derfor ofte saktere og ikke helt like langt.</li>
+  </ol>
+</details>
+
+<p><small>Om kildene: Simuleringen er laget for dette nettstedet. Frysepunktene er vanlige tabellverdier for natriumkloridløsninger. Kurven er forenklet og viser omtrent hvordan temperaturen endrer seg. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs.</small></p>
+
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  // Frysepunkt for NaCl-løsning: [masseprosent, °C]
+  var TABELL = [[0, 0], [5, -2.96], [10, -6.56], [15, -10.89], [20, -16.46], [23.3, -21.1]];
+  function frysepunkt(w) {
+    if (w >= 23.3) return -21.1;
+    for (var i = 1; i < TABELL.length; i++) {
+      if (w <= TABELL[i][0]) {
+        var a = TABELL[i - 1], b = TABELL[i];
+        return a[1] + (w - a[0]) / (b[0] - a[0]) * (b[1] - a[1]);
+      }
+    }
+    return -21.1;
+  }
+  function temp(salt, t) {
+    var tf = frysepunkt(100 * salt / (salt + 100));
+    return tf * (1 - Math.exp(-t / 1.6));
+  }
+  function el(tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function tall(x) { return x.toFixed(1).replace(".", ",").replace("-", "−"); }
+
+  var X0 = 55, Y0 = 20, B = 480, H = 240, TMIN = -25, TMAX = 5, TID = 10;
+  function x(t) { return X0 + t / TID * B; }
+  function y(T) { return Y0 + (TMAX - T) / (TMAX - TMIN) * H; }
+  var FARGER = ["#1e6fb8", "#b5530f", "#00796b", "#6a3fb5", "#9a2b2b"];
+  var kurver = [];
+
+  function tegn(aktiv, tNa) {
+    var svg = el("svg", { viewBox: "0 0 560 300", width: 560, height: 300, style: "max-width:100%;height:auto" });
+    for (var T = TMIN; T <= TMAX; T += 5) {
+      svg.appendChild(el("line", { x1: X0, x2: X0 + B, y1: y(T), y2: y(T), style: "stroke:var(--linje)", "stroke-width": T === 0 ? 2 : 1 }));
+      var tt = el("text", { x: X0 - 8, y: y(T) + 4, "text-anchor": "end", "font-size": 12, style: "fill:var(--tekst)" }); tt.textContent = T + " °C"; svg.appendChild(tt);
+    }
+    for (var m = 0; m <= TID; m += 2) {
+      var tx = el("text", { x: x(m), y: Y0 + H + 18, "text-anchor": "middle", "font-size": 12, style: "fill:var(--tekst)" }); tx.textContent = m; svg.appendChild(tx);
+    }
+    var lab = el("text", { x: X0 + B / 2, y: Y0 + H + 36, "text-anchor": "middle", "font-size": 13, style: "fill:var(--tekst)" }); lab.textContent = "tid (minutter)"; svg.appendChild(lab);
+    var alle = kurver.slice(); if (aktiv !== null) alle.push({ salt: aktiv, slutt: tNa });
+    alle.forEach(function (k, i) {
+      var d = "", slutt = k.slutt === undefined ? TID : k.slutt;
+      for (var t = 0; t <= slutt + 1e-9; t += 0.1) d += (t === 0 ? "M" : "L") + x(t).toFixed(1) + " " + y(temp(k.salt, t)).toFixed(1);
+      var f = FARGER[i % FARGER.length];
+      svg.appendChild(el("path", { d: d, fill: "none", stroke: f, "stroke-width": 3 }));
+      var et = el("text", { x: x(slutt) + 4, y: y(temp(k.salt, slutt)) + 4, "font-size": 12, fill: f, "font-weight": "bold" }); et.textContent = k.salt + " g"; svg.appendChild(et);
+    });
+    var g = document.getElementById("graf"); g.innerHTML = ""; g.appendChild(svg);
+  }
+
+  var slider = document.getElementById("salt"), animasjon = null, gjeldende = null;
+  slider.addEventListener("input", function () { document.getElementById("salt-tall").textContent = slider.value; });
+
+  function visResultat(salt) {
+    var w = 100 * salt / (salt + 100), tf = frysepunkt(w), slutt = temp(salt, TID);
+    var html = '<div class="boks-tittel">Resultat: ' + salt + ' g salt</div>';
+    if (salt === 0) {
+      html += "<p>Uten salt holder blandingen seg på 0 °C. Is og vann er i likevekt ved smeltepunktet.</p>";
+    } else {
+      html += "<p>Saltvannet blir ca. " + tall(w) + " % salt og har frysepunkt ca. " + tall(tf) + " °C. Etter 10 minutter er temperaturen ca. " + tall(slutt) + " °C.</p>";
+      html += "<p>Isen smelter og tar opp energi fra blandingen (endotermt). Saltet senker frysepunktet, slik at smeltingen kan fortsette under 0 °C.</p>";
+    }
+    document.getElementById("resultat").innerHTML = html;
+    document.getElementById("graf").setAttribute("aria-label", "Graf over temperaturen med " + salt + " g salt. Temperaturen synker fra 0 °C til ca. " + tall(slutt) + " °C på 10 minutter.");
+  }
+
+  document.getElementById("start").addEventListener("click", function () {
+    if (animasjon) clearInterval(animasjon);
+    gjeldende = Number(slider.value);
+    var start = Date.now();
+    animasjon = setInterval(function () {
+      var tSim = Math.min(TID, (Date.now() - start) / 600);
+      tegn(gjeldende, tSim);
+      if (tSim >= TID) { clearInterval(animasjon); animasjon = null; visResultat(gjeldende); }
+    }, 40);
+  });
+  document.getElementById("behold").addEventListener("click", function () {
+    if (gjeldende !== null && !animasjon) { kurver.push({ salt: gjeldende }); gjeldende = null; tegn(null); }
+  });
+  document.getElementById("nullstill").addEventListener("click", function () {
+    if (animasjon) clearInterval(animasjon); animasjon = null;
+    kurver = []; gjeldende = null; tegn(null);
+    document.getElementById("resultat").innerHTML = '<div class="boks-tittel">Resultat</div><p>Trykk «Start».</p>';
+  });
+  tegn(null);
+})();
+</script>
+</body>
+</html>
