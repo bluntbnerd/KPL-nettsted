@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 200" width="440" height="200" font-family="Segoe UI, Arial, sans-serif">
+  <title>Molekyl A er rett: O=C=O. Molekyl B er vinklet: H–O–H.</title>
+  <rect x="0" y="0" width="440" height="200" rx="10" fill="#ffffff"/>
+  <g stroke="#1c2828" stroke-width="3">
+    <line x1="58" y1="95" x2="98" y2="95"/><line x1="58" y1="105" x2="98" y2="105"/>
+    <line x1="122" y1="95" x2="162" y2="95"/><line x1="122" y1="105" x2="162" y2="105"/>
+  </g>
+  <circle cx="40" cy="100" r="24" fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5"/>
+  <circle cx="110" cy="100" r="20" fill="#c9d1d1" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="180" cy="100" r="24" fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5"/>
+  <g stroke="#1c2828" stroke-width="4"><line x1="320" y1="80" x2="282" y2="125"/><line x1="320" y1="80" x2="358" y2="125"/></g>
+  <circle cx="320" cy="80" r="26" fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5"/>
+  <circle cx="282" cy="125" r="17" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="358" cy="125" r="17" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <g font-size="17" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="40" y="106">O</text><text x="110" y="106">C</text><text x="180" y="106">O</text>
+    <text x="320" y="86">O</text><text x="282" y="131">H</text><text x="358" y="131">H</text>
+  </g>
+  <g font-size="20" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="110" y="175">A</text><text x="320" y="175">B</text>
+  </g>
+</svg>

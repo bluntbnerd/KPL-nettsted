@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" width="560" height="250" font-family="Segoe UI, Arial, sans-serif">
+  <title>Ionegitteret i natriumklorid</title>
+  <rect x="0" y="0" width="560" height="250" rx="10" fill="#ffffff"/>
+  <g stroke="#b8c4c4" stroke-width="1.5">
+    <line x1="40" y1="40" x2="300" y2="40"/><line x1="40" y1="92" x2="300" y2="92"/><line x1="40" y1="144" x2="300" y2="144"/><line x1="40" y1="196" x2="300" y2="196"/>
+    <line x1="40" y1="40" x2="40" y2="196"/><line x1="92" y1="40" x2="92" y2="196"/><line x1="144" y1="40" x2="144" y2="196"/><line x1="196" y1="40" x2="196" y2="196"/><line x1="248" y1="40" x2="248" y2="196"/><line x1="300" y1="40" x2="300" y2="196"/>
+  </g>
+  <!-- Rad 1 -->
+  <g stroke="#586868" stroke-width="1.2">
+    <circle cx="40" cy="40" r="13" fill="#cfe3f7"/><circle cx="92" cy="40" r="20" fill="#d9efd9"/><circle cx="144" cy="40" r="13" fill="#cfe3f7"/><circle cx="196" cy="40" r="20" fill="#d9efd9"/><circle cx="248" cy="40" r="13" fill="#cfe3f7"/><circle cx="300" cy="40" r="20" fill="#d9efd9"/>
+    <circle cx="40" cy="92" r="20" fill="#d9efd9"/><circle cx="92" cy="92" r="13" fill="#cfe3f7"/><circle cx="144" cy="92" r="20" fill="#d9efd9"/><circle cx="196" cy="92" r="13" fill="#cfe3f7"/><circle cx="248" cy="92" r="20" fill="#d9efd9"/><circle cx="300" cy="92" r="13" fill="#cfe3f7"/>
+    <circle cx="40" cy="144" r="13" fill="#cfe3f7"/><circle cx="92" cy="144" r="20" fill="#d9efd9"/><circle cx="144" cy="144" r="13" fill="#cfe3f7"/><circle cx="196" cy="144" r="20" fill="#d9efd9"/><circle cx="248" cy="144" r="13" fill="#cfe3f7"/><circle cx="300" cy="144" r="20" fill="#d9efd9"/>
+    <circle cx="40" cy="196" r="20" fill="#d9efd9"/><circle cx="92" cy="196" r="13" fill="#cfe3f7"/><circle cx="144" cy="196" r="20" fill="#d9efd9"/><circle cx="196" cy="196" r="13" fill="#cfe3f7"/><circle cx="248" cy="196" r="20" fill="#d9efd9"/><circle cx="300" cy="196" r="13" fill="#cfe3f7"/>
+  </g>
+  <!-- Fremhevet nabolag -->
+  <circle cx="144" cy="144" r="30" fill="none" stroke="#f28c28" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <!-- Forklaring -->
+  <g font-size="14" fill="#1c2828">
+    <circle cx="345" cy="50" r="13" fill="#cfe3f7" stroke="#586868"/><text x="368" y="55">natriumion, Na⁺</text>
+    <circle cx="345" cy="92" r="20" fill="#d9efd9" stroke="#586868"/><text x="375" y="97">kloridion, Cl⁻</text>
+    <text x="330" y="140">Hvert Na⁺ er omgitt av Cl⁻,</text>
+    <text x="330" y="158">og hvert Cl⁻ av Na⁺ (oransje ring).</text>
+    <text x="330" y="186">Mønsteret gjentar seg i alle</text>
+    <text x="330" y="204">retninger og gir en krystall.</text>
+  </g>
+</svg>

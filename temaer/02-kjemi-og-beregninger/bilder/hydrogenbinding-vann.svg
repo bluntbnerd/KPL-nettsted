@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290" width="560" height="290" font-family="Segoe UI, Arial, sans-serif">
+  <title>Hydrogenbindinger mellom vannmolekyler</title>
+  <rect x="0" y="0" width="560" height="290" rx="10" fill="#ffffff"/>
+
+  <!-- Hydrogenbindinger (stiplet) -->
+  <g stroke="#1e6fb8" stroke-width="2.5" stroke-dasharray="5 4">
+    <line x1="300" y1="56" x2="284" y2="96"/>
+    <line x1="258" y1="130" x2="212" y2="186"/>
+    <line x1="302" y1="130" x2="348" y2="186"/>
+  </g>
+
+  <!-- Kovalente bindinger (heltrukne) -->
+  <g stroke="#1c2828" stroke-width="4">
+    <line x1="280" y1="30" x2="258" y2="50"/><line x1="280" y1="30" x2="302" y2="50"/>
+    <line x1="280" y1="110" x2="258" y2="130"/><line x1="280" y1="110" x2="302" y2="130"/>
+    <line x1="200" y1="200" x2="178" y2="220"/><line x1="200" y1="200" x2="222" y2="220"/>
+    <line x1="360" y1="200" x2="338" y2="220"/><line x1="360" y1="200" x2="382" y2="220"/>
+  </g>
+
+  <!-- Oksygen -->
+  <g fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5">
+    <circle cx="280" cy="30" r="16"/><circle cx="280" cy="110" r="16"/>
+    <circle cx="200" cy="200" r="16"/><circle cx="360" cy="200" r="16"/>
+  </g>
+  <!-- Hydrogen -->
+  <g fill="#eef3f3" stroke="#586868" stroke-width="1.5">
+    <circle cx="258" cy="50" r="10"/><circle cx="302" cy="50" r="10"/>
+    <circle cx="258" cy="130" r="10"/><circle cx="302" cy="130" r="10"/>
+    <circle cx="178" cy="220" r="10"/><circle cx="222" cy="220" r="10"/>
+    <circle cx="338" cy="220" r="10"/><circle cx="382" cy="220" r="10"/>
+  </g>
+  <g font-size="13" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="280" y="35">O</text><text x="280" y="115">O</text><text x="200" y="205">O</text><text x="360" y="205">O</text>
+    <text x="258" y="55">H</text><text x="302" y="55">H</text><text x="258" y="135">H</text><text x="302" y="135">H</text>
+    <text x="178" y="225">H</text><text x="222" y="225">H</text><text x="338" y="225">H</text><text x="382" y="225">H</text>
+  </g>
+
+  <!-- Forklaring -->
+  <g font-size="14" fill="#1c2828">
+    <line x1="40" y1="262" x2="80" y2="262" stroke="#1c2828" stroke-width="4"/>
+    <text x="90" y="267">kovalent binding (sterk), inne i molekylet</text>
+    <line x1="40" y1="282" x2="80" y2="282" stroke="#1e6fb8" stroke-width="2.5" stroke-dasharray="5 4"/>
+    <text x="90" y="287">hydrogenbinding (svak), mellom molekylene</text>
+  </g>
+</svg>

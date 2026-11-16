@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200" font-family="Segoe UI, Arial, sans-serif">
+  <title>To vannmolekyler. Mellom hydrogenatomet i det ene og oksygenatomet i det andre går en stiplet linje merket med spørsmålstegn.</title>
+  <rect x="0" y="0" width="400" height="200" rx="10" fill="#ffffff"/>
+  <g stroke="#1c2828" stroke-width="4">
+    <line x1="100" y1="80" x2="70" y2="115"/><line x1="100" y1="80" x2="135" y2="110"/>
+    <line x1="290" y1="110" x2="320" y2="145"/><line x1="290" y1="110" x2="330" y2="90"/>
+  </g>
+  <line x1="148" y1="112" x2="266" y2="110" stroke="#1e6fb8" stroke-width="3" stroke-dasharray="6 5"/>
+  <circle cx="100" cy="80" r="22" fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5"/>
+  <circle cx="70" cy="115" r="14" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="135" cy="110" r="14" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="290" cy="110" r="22" fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5"/>
+  <circle cx="320" cy="145" r="14" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="330" cy="90" r="14" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <g font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="100" y="86">O</text><text x="70" y="120">H</text><text x="135" y="115">H</text>
+    <text x="290" y="116">O</text><text x="320" y="150">H</text><text x="330" y="95">H</text>
+  </g>
+  <text x="207" y="98" font-size="26" font-weight="bold" text-anchor="middle" fill="#1e6fb8">?</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 230" width="560" height="230" font-family="Segoe UI, Arial, sans-serif">
+  <title>Delene i en kjemisk formel: 2 H2SO4</title>
+  <rect x="0" y="0" width="560" height="230" rx="10" fill="#ffffff"/>
+
+  <!-- Formelen 2 H2SO4 -->
+  <text x="110" y="125" font-size="60" font-weight="bold" fill="#6a3fb5">2</text>
+  <g font-size="60" font-weight="bold" fill="#00796b">
+    <text x="170" y="125">H</text>
+    <text x="238" y="125">S</text>
+    <text x="276" y="125">O</text>
+  </g>
+  <g font-size="34" font-weight="bold" fill="#b5530f">
+    <text x="214" y="140">2</text>
+    <text x="323" y="140">4</text>
+  </g>
+
+  <!-- Koeffisient -->
+  <text x="20" y="35" font-size="16" font-weight="bold" fill="#6a3fb5">koeffisient</text>
+  <line x1="75" y1="44" x2="124" y2="78" stroke="#6a3fb5" stroke-width="2"/>
+
+  <!-- Symboler -->
+  <text x="245" y="28" font-size="16" font-weight="bold" fill="#00796b" text-anchor="middle">symboler</text>
+  <g stroke="#00796b" stroke-width="2">
+    <line x1="245" y1="36" x2="191" y2="76"/>
+    <line x1="245" y1="36" x2="255" y2="76"/>
+    <line x1="245" y1="36" x2="299" y2="76"/>
+  </g>
+
+  <!-- Indekser -->
+  <text x="278" y="210" font-size="16" font-weight="bold" fill="#b5530f" text-anchor="middle">indekser</text>
+  <g stroke="#b5530f" stroke-width="2">
+    <line x1="278" y1="192" x2="223" y2="150"/>
+    <line x1="278" y1="192" x2="332" y2="150"/>
+  </g>
+
+  <!-- Opptelling -->
+  <g font-size="16" fill="#1c2828">
+    <text x="395" y="80" font-weight="bold">Til sammen:</text>
+    <text x="395" y="108">4 H-atomer</text>
+    <text x="395" y="134">2 S-atomer</text>
+    <text x="395" y="160">8 O-atomer</text>
+  </g>
+</svg>

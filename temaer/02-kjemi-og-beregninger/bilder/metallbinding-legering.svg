@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 270" width="560" height="270" font-family="Segoe UI, Arial, sans-serif">
+  <title>Metallbinding i et rent metall og i en legering</title>
+  <rect x="0" y="0" width="560" height="270" rx="10" fill="#ffffff"/>
+
+  <!-- Rent metall -->
+  <rect x="35" y="35" width="190" height="150" rx="8" fill="#e9f2fb"/>
+  <g fill="#cfd6d6" stroke="#586868" stroke-width="1.5">
+    <circle cx="60" cy="60" r="18"/><circle cx="104" cy="60" r="18"/><circle cx="148" cy="60" r="18"/><circle cx="192" cy="60" r="18"/>
+    <circle cx="60" cy="104" r="18"/><circle cx="104" cy="104" r="18"/><circle cx="148" cy="104" r="18"/><circle cx="192" cy="104" r="18"/>
+    <circle cx="60" cy="148" r="18"/><circle cx="104" cy="148" r="18"/><circle cx="148" cy="148" r="18"/><circle cx="192" cy="148" r="18"/>
+  </g>
+  <g font-size="16" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="60" y="65">+</text><text x="104" y="65">+</text><text x="148" y="65">+</text><text x="192" y="65">+</text>
+    <text x="60" y="109">+</text><text x="104" y="109">+</text><text x="148" y="109">+</text><text x="192" y="109">+</text>
+    <text x="60" y="153">+</text><text x="104" y="153">+</text><text x="148" y="153">+</text><text x="192" y="153">+</text>
+  </g>
+  <g fill="#1e6fb8">
+    <circle cx="82" cy="82" r="4"/><circle cx="126" cy="80" r="4"/><circle cx="170" cy="84" r="4"/>
+    <circle cx="84" cy="126" r="4"/><circle cx="124" cy="128" r="4"/><circle cx="170" cy="124" r="4"/>
+    <circle cx="82" cy="172" r="4"/><circle cx="170" cy="40" r="4"/><circle cx="213" cy="104" r="4"/>
+  </g>
+
+  <!-- Legering -->
+  <rect x="335" y="35" width="190" height="150" rx="8" fill="#e9f2fb"/>
+  <g fill="#cfd6d6" stroke="#586868" stroke-width="1.5">
+    <circle cx="360" cy="60" r="18"/><circle cx="404" cy="60" r="18"/><circle cx="492" cy="60" r="18"/>
+    <circle cx="360" cy="104" r="18"/><circle cx="448" cy="104" r="18"/><circle cx="492" cy="104" r="18"/>
+    <circle cx="360" cy="148" r="18"/><circle cx="404" cy="148" r="18"/><circle cx="448" cy="148" r="18"/><circle cx="492" cy="148" r="18"/>
+  </g>
+  <g fill="#f6d8a8" stroke="#b5530f" stroke-width="1.5">
+    <circle cx="448" cy="58" r="23"/><circle cx="404" cy="104" r="23"/>
+  </g>
+  <g font-size="16" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="360" y="65">+</text><text x="404" y="65">+</text><text x="448" y="63">+</text><text x="492" y="65">+</text>
+    <text x="360" y="109">+</text><text x="404" y="109">+</text><text x="448" y="109">+</text><text x="492" y="109">+</text>
+    <text x="360" y="153">+</text><text x="404" y="153">+</text><text x="448" y="153">+</text><text x="492" y="153">+</text>
+  </g>
+  <g fill="#1e6fb8">
+    <circle cx="382" cy="82" r="4"/><circle cx="470" cy="84" r="4"/>
+    <circle cx="384" cy="128" r="4"/><circle cx="426" cy="130" r="4"/><circle cx="470" cy="124" r="4"/>
+    <circle cx="382" cy="172" r="4"/><circle cx="426" cy="172" r="4"/><circle cx="513" cy="104" r="4"/>
+  </g>
+
+  <g font-size="14" text-anchor="middle" fill="#1c2828">
+    <text x="130" y="212" font-weight="bold">Rent metall</text>
+    <text x="130" y="231">like store ioner i ordnede lag</text>
+    <text x="130" y="249">lagene glir lett: mykt og formbart</text>
+    <text x="430" y="212" font-weight="bold">Legering</text>
+    <text x="430" y="231">andre atomer forstyrrer lagene</text>
+    <text x="430" y="249">lagene glir dårligere: hardere</text>
+  </g>
+</svg>

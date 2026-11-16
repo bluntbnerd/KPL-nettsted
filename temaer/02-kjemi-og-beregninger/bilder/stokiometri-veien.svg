@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 170" width="600" height="170" font-family="Segoe UI, Arial, sans-serif">
+  <title>Veien fra masse av ett stoff til masse av et annet stoff: masse, mol, molforhold, mol, masse</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker></defs>
+  <rect x="0" y="0" width="600" height="170" rx="10" fill="#ffffff"/>
+  <g stroke="#586868" stroke-width="1.5">
+    <rect x="15" y="50" width="110" height="56" rx="8" fill="#e9f2fb"/>
+    <rect x="170" y="50" width="100" height="56" rx="8" fill="#fde3a7"/>
+    <rect x="330" y="50" width="100" height="56" rx="8" fill="#fde3a7"/>
+    <rect x="475" y="50" width="110" height="56" rx="8" fill="#e9f2fb"/>
+  </g>
+  <g font-size="16" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="70" y="75">masse</text><text x="70" y="95">stoff A (g)</text>
+    <text x="220" y="75">mol</text><text x="220" y="95">stoff A</text>
+    <text x="380" y="75">mol</text><text x="380" y="95">stoff B</text>
+    <text x="530" y="75">masse</text><text x="530" y="95">stoff B (g)</text>
+  </g>
+  <g stroke="#1c2828" stroke-width="2" marker-end="url(#pil)">
+    <line x1="127" y1="78" x2="166" y2="78"/><line x1="272" y1="78" x2="326" y2="78"/><line x1="432" y1="78" x2="471" y2="78"/>
+  </g>
+  <g font-size="13" text-anchor="middle" fill="#1c2828">
+    <text x="147" y="135">del på M<tspan font-size="10" dy="3">A</tspan></text>
+    <text x="300" y="130">gang med</text><text x="300" y="147">molforholdet</text>
+    <text x="453" y="135">gang med M<tspan font-size="10" dy="3">B</tspan></text>
+    <text x="300" y="30" fill="#586868">Molforholdet leser du av koeffisientene i den balanserte reaksjonsligningen.</text>
+  </g>
+</svg>

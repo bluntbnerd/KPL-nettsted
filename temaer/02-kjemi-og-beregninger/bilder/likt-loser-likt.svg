@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" width="560" height="250" font-family="Segoe UI, Arial, sans-serif">
+  <title>Olje og vann blander seg ikke, men salt løser seg i vann</title>
+  <rect x="0" y="0" width="560" height="250" rx="10" fill="#ffffff"/>
+  <!-- Begerglass 1: olje på vann -->
+  <rect x="62" y="95" width="136" height="35" fill="#f6e3a8"/>
+  <rect x="62" y="130" width="136" height="58" fill="#d6e9f8"/>
+  <path d="M60 30 V190 H200 V30" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <g font-size="13" fill="#1c2828">
+    <text x="210" y="117">olje (upolar)</text>
+    <text x="210" y="163">vann (polart)</text>
+  </g>
+  <!-- Begerglass 2: salt løst i vann -->
+  <rect x="352" y="95" width="136" height="93" fill="#d6e9f8"/>
+  <path d="M350 30 V190 H490 V30" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <g stroke="#586868" stroke-width="1">
+    <circle cx="375" cy="115" r="7" fill="#cfe3f7"/><circle cx="410" cy="140" r="10" fill="#d9efd9"/><circle cx="450" cy="112" r="7" fill="#cfe3f7"/>
+    <circle cx="470" cy="160" r="10" fill="#d9efd9"/><circle cx="385" cy="168" r="10" fill="#d9efd9"/><circle cx="435" cy="172" r="7" fill="#cfe3f7"/>
+  </g>
+  <g font-size="10" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="375" y="119">+</text><text x="410" y="144">−</text><text x="450" y="116">+</text><text x="470" y="164">−</text><text x="385" y="172">−</text><text x="435" y="176">+</text>
+  </g>
+  <g font-size="14" text-anchor="middle" fill="#1c2828">
+    <text x="130" y="215" font-weight="bold">Olje i vann</text>
+    <text x="130" y="234">blander seg ikke: olje legger seg øverst</text>
+    <text x="420" y="215" font-weight="bold">Salt i vann</text>
+    <text x="420" y="234">ionene løser seg i det polare vannet</text>
+  </g>
+</svg>

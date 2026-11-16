@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" font-family="Segoe UI, Arial, sans-serif">
+  <title>Natrium gir ett elektron til klor, og det dannes et natriumion og et kloridion</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/>
+    </marker>
+    <marker id="pil-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b5530f"/>
+    </marker>
+    <marker id="pil-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#1c2828"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="560" height="420" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Øverst: atomene ===== -->
+  <g fill="none" stroke="#8a9a9a" stroke-width="1.5">
+    <circle cx="130" cy="105" r="30"/><circle cx="130" cy="105" r="46"/><circle cx="130" cy="105" r="62"/>
+    <circle cx="400" cy="105" r="30"/><circle cx="400" cy="105" r="46"/><circle cx="400" cy="105" r="62"/>
+  </g>
+  <circle cx="130" cy="105" r="18" fill="#fde3a7" stroke="#b5530f" stroke-width="1.5"/>
+  <circle cx="400" cy="105" r="18" fill="#fde3a7" stroke="#b5530f" stroke-width="1.5"/>
+  <g font-size="11" text-anchor="middle" fill="#1c2828">
+    <text x="130" y="109">11 p⁺</text><text x="400" y="109">17 p⁺</text>
+  </g>
+  <g fill="#1e6fb8">
+    <!-- Na: 2, 8 -->
+    <circle cx="130" cy="75" r="5"/><circle cx="130" cy="135" r="5"/>
+    <circle cx="172.5" cy="87.4" r="5"/><circle cx="172.5" cy="122.6" r="5"/><circle cx="87.5" cy="87.4" r="5"/><circle cx="87.5" cy="122.6" r="5"/>
+    <circle cx="147.6" cy="62.5" r="5"/><circle cx="147.6" cy="147.5" r="5"/><circle cx="112.4" cy="62.5" r="5"/><circle cx="112.4" cy="147.5" r="5"/>
+    <!-- Cl: 2, 8, 7 -->
+    <circle cx="400" cy="75" r="5"/><circle cx="400" cy="135" r="5"/>
+    <circle cx="442.5" cy="87.4" r="5"/><circle cx="442.5" cy="122.6" r="5"/><circle cx="357.5" cy="87.4" r="5"/><circle cx="357.5" cy="122.6" r="5"/>
+    <circle cx="417.6" cy="62.5" r="5"/><circle cx="417.6" cy="147.5" r="5"/><circle cx="382.4" cy="62.5" r="5"/><circle cx="382.4" cy="147.5" r="5"/>
+    <circle cx="462" cy="105" r="5"/><circle cx="443.8" cy="61.2" r="5"/><circle cx="400" cy="43" r="5"/><circle cx="356.2" cy="61.2" r="5"/>
+    <circle cx="356.2" cy="148.8" r="5"/><circle cx="400" cy="167" r="5"/><circle cx="443.8" cy="148.8" r="5"/>
+  </g>
+  <!-- Ytterelektronet til natrium og den ledige plassen hos klor -->
+  <circle cx="192" cy="105" r="6" fill="#f28c28"/>
+  <circle cx="338" cy="105" r="6" fill="none" stroke="#b5530f" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="202" y1="105" x2="328" y2="105" stroke="#b5530f" stroke-width="2.5" marker-end="url(#pil-o)"/>
+  <text x="265" y="95" font-size="13" text-anchor="middle" fill="#b5530f">1 elektron</text>
+
+  <g font-size="14" text-anchor="middle" fill="#1c2828">
+    <text x="130" y="192" font-weight="bold">Natriumatom, Na</text>
+    <text x="400" y="192" font-weight="bold">Kloratom, Cl</text>
+    <text x="130" y="210">11 p⁺, 11 e⁻ (2, 8, 1)</text>
+    <text x="400" y="210">17 p⁺, 17 e⁻ (2, 8, 7)</text>
+  </g>
+
+  <!-- Piler ned -->
+  <line x1="130" y1="218" x2="130" y2="244" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <line x1="400" y1="218" x2="400" y2="232" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+
+  <!-- ===== Nederst: ionene ===== -->
+  <g fill="none" stroke="#8a9a9a" stroke-width="1.5">
+    <circle cx="130" cy="300" r="30"/><circle cx="130" cy="300" r="46"/>
+    <circle cx="400" cy="300" r="30"/><circle cx="400" cy="300" r="46"/><circle cx="400" cy="300" r="62"/>
+  </g>
+  <circle cx="130" cy="300" r="18" fill="#fde3a7" stroke="#b5530f" stroke-width="1.5"/>
+  <circle cx="400" cy="300" r="18" fill="#fde3a7" stroke="#b5530f" stroke-width="1.5"/>
+  <g font-size="11" text-anchor="middle" fill="#1c2828">
+    <text x="130" y="304">11 p⁺</text><text x="400" y="304">17 p⁺</text>
+  </g>
+  <g fill="#1e6fb8">
+    <!-- Na+: 2, 8 -->
+    <circle cx="130" cy="270" r="5"/><circle cx="130" cy="330" r="5"/>
+    <circle cx="172.5" cy="282.4" r="5"/><circle cx="172.5" cy="317.6" r="5"/><circle cx="87.5" cy="282.4" r="5"/><circle cx="87.5" cy="317.6" r="5"/>
+    <circle cx="147.6" cy="257.5" r="5"/><circle cx="147.6" cy="342.5" r="5"/><circle cx="112.4" cy="257.5" r="5"/><circle cx="112.4" cy="342.5" r="5"/>
+    <!-- Cl-: 2, 8, 8 -->
+    <circle cx="400" cy="270" r="5"/><circle cx="400" cy="330" r="5"/>
+    <circle cx="442.5" cy="282.4" r="5"/><circle cx="442.5" cy="317.6" r="5"/><circle cx="357.5" cy="282.4" r="5"/><circle cx="357.5" cy="317.6" r="5"/>
+    <circle cx="417.6" cy="257.5" r="5"/><circle cx="417.6" cy="342.5" r="5"/><circle cx="382.4" cy="257.5" r="5"/><circle cx="382.4" cy="342.5" r="5"/>
+    <circle cx="462" cy="300" r="5"/><circle cx="443.8" cy="256.2" r="5"/><circle cx="400" cy="238" r="5"/><circle cx="356.2" cy="256.2" r="5"/>
+    <circle cx="356.2" cy="343.8" r="5"/><circle cx="400" cy="362" r="5"/><circle cx="443.8" cy="343.8" r="5"/>
+  </g>
+  <circle cx="338" cy="300" r="6" fill="#f28c28"/>
+
+  <!-- Ladninger -->
+  <text x="186" y="262" font-size="30" font-weight="bold" fill="#1c2828">+</text>
+  <text x="466" y="250" font-size="34" font-weight="bold" fill="#1c2828">−</text>
+
+  <!-- Tiltrekning -->
+  <line x1="190" y1="300" x2="322" y2="300" stroke="#1c2828" stroke-width="2" stroke-dasharray="6 4" marker-start="url(#pil-start)" marker-end="url(#pil)"/>
+  <text x="256" y="290" font-size="13" text-anchor="middle" fill="#1c2828">tiltrekning</text>
+
+  <g font-size="14" text-anchor="middle" fill="#1c2828">
+    <text x="130" y="390" font-weight="bold">Natriumion, Na⁺</text>
+    <text x="400" y="390" font-weight="bold">Kloridion, Cl⁻</text>
+    <text x="130" y="408">11 p⁺, 10 e⁻ (2, 8)</text>
+    <text x="400" y="408">17 p⁺, 18 e⁻ (2, 8, 8)</text>
+  </g>
+</svg>

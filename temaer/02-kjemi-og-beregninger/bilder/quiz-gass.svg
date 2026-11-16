@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 180" width="220" height="180" font-family="Segoe UI, Arial, sans-serif">
+  <title>En beholder med få partikler som er langt fra hverandre og beveger seg i alle retninger</title>
+  <rect x="0" y="0" width="220" height="180" rx="10" fill="#ffffff"/>
+  <path d="M30 20 V160 H190 V20" fill="none" stroke="#586868" stroke-width="2"/>
+  <g fill="#cfe3f7" stroke="#1e6fb8" stroke-width="1.2">
+    <circle cx="60" cy="45" r="11"/><circle cx="150" cy="60" r="11"/><circle cx="90" cy="115" r="11"/><circle cx="165" cy="135" r="11"/><circle cx="115" cy="75" r="11"/>
+  </g>
+  <g stroke="#8a9a9a" stroke-width="1.5">
+    <line x1="46" y1="40" x2="36" y2="36"/><line x1="164" y1="62" x2="178" y2="66"/><line x1="78" y1="124" x2="68" y2="132"/><line x1="156" y1="148" x2="149" y2="157"/><line x1="124" y1="63" x2="132" y2="53"/>
+  </g>
+</svg>

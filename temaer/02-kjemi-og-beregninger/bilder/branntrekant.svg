@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260" font-family="Segoe UI, Arial, sans-serif">
+  <title>Branntrekanten: brensel, oksygen og varme</title>
+  <rect x="0" y="0" width="360" height="260" rx="10" fill="#ffffff"/>
+  <polygon points="180,30 320,220 40,220" fill="#fdf1e7" stroke="#b5530f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M180 175 C160 150, 170 130, 182 112 C188 132, 205 140, 196 165 C192 176, 186 180, 180 175 Z" fill="#f28c28"/>
+  <path d="M181 172 C174 160, 177 148, 183 138 C186 150, 192 156, 188 166 Z" fill="#fde3a7"/>
+  <g font-size="16" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="85" y="115" transform="rotate(-54 85 115)">BRENSEL</text>
+    <text x="275" y="115" transform="rotate(54 275 115)">OKSYGEN</text>
+    <text x="180" y="245">VARME (TENNING)</text>
+  </g>
+</svg>

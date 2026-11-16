@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Støkiometriske beregninger – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Støkiometriske beregninger</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">KT</span> <strong>Kompetansemål:</strong> ADK5, KT3</div>
+
+<p class="ingress">Hvor mye råstoff trenger reaktoren? Hvor mye produkt kan du få? Hvor mye lut trengs for å nøytralisere en syretank? Slike spørsmål løser du med <strong>støkiometri</strong>: beregninger som bygger på en balansert reaksjonsligning.</p>
+
+<h2>Koeffisientene gir molforholdet</h2>
+<p>Koeffisientene i en balansert reaksjonsligning forteller hvor mange <strong>mol</strong> av hvert stoff som reagerer med hverandre. Det kalles <strong>molforholdet</strong>.</p>
+<p>\[ \ce{2Cu + O2 -> 2CuO} \]</p>
+<p>Ligningen betyr: 2 mol kobber reagerer med 1 mol oksygen og gir 2 mol kobberoksid. Molforholdet mellom Cu og CuO er 2 : 2, altså 1 : 1.</p>
+<p>Molforholdet gjelder antall mol, ikke gram. 2 g kobber gir ikke 2 g kobberoksid. Derfor må du alltid regne om til mol først.</p>
+
+<figure>
+  <img src="bilder/stokiometri-veien.svg" alt="Fire bokser med piler mellom: masse av stoff A, del på molmassen til A, mol av stoff A, gang med molforholdet, mol av stoff B, gang med molmassen til B, masse av stoff B." width="600">
+  <figcaption>Figur: Veien fra masse av ett stoff til masse av et annet. Du går alltid via mol. Molmassen finner du med <span class="periodesystem-lenke">periodesystemet</span>.</figcaption>
+</figure>
+
+<h2>Eksempel 1: Fra laben</h2>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Kobber reagerer med oksygen</div>
+  <p><strong>Oppgave:</strong> Du varmer 5,00 g kobberpulver slik at alt reagerer med oksygen i lufta. Hvor mye kobberoksid kan du få? \( \ce{2Cu + O2 -> 2CuO} \)</p>
+  <ol>
+    <li><strong>Mol Cu:</strong> \( n = \dfrac{5{,}00 \text{ g}}{63{,}55 \text{ g/mol}} = 0{,}0787 \text{ mol} \)</li>
+    <li><strong>Molforhold:</strong> Cu : CuO = 2 : 2. Det dannes like mange mol CuO: 0,0787 mol.</li>
+    <li><strong>Molmasse CuO:</strong> \( 63{,}55 + 16{,}00 = 79{,}55 \text{ g/mol} \)</li>
+    <li><strong>Masse CuO:</strong> \( m = 0{,}0787 \text{ mol} \cdot 79{,}55 \text{ g/mol} = 6{,}26 \text{ g} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Du kan få 6,26 g kobberoksid. Massen øker med 1,26 g, som er oksygenet fra lufta.</p>
+</div>
+
+<h2>Eksempel 2: Fra prosessen</h2>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Nøytralisering av en syretank</div>
+  <p><strong>Oppgave:</strong> En tank med avfallssyre inneholder 10,0 kg svovelsyre. Den skal nøytraliseres med natriumhydroksid. Hvor mange kilo NaOH trengs?</p>
+  <p>\[ \ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O} \]</p>
+  <ol>
+    <li><strong>Mol H<sub>2</sub>SO<sub>4</sub>:</strong> \( n = \dfrac{10\,000 \text{ g}}{98{,}09 \text{ g/mol}} = 101{,}9 \text{ mol} \)</li>
+    <li><strong>Molforhold:</strong> H<sub>2</sub>SO<sub>4</sub> : NaOH = 1 : 2. Det trengs \( 2 \cdot 101{,}9 = 203{,}9 \text{ mol NaOH} \)</li>
+    <li><strong>Masse NaOH:</strong> \( m = 203{,}9 \text{ mol} \cdot 40{,}00 \text{ g/mol} = 8156 \text{ g} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Det trengs 8,16 kg NaOH.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Antall sifre i svaret</div>
+  <p>Svaret skal ikke være mer nøyaktig enn målingene. Har du målt 5,00 g (tre gjeldende sifre), oppgir du svaret med tre gjeldende sifre: 6,26 g, ikke 6,259 g. Regn med alle sifrene underveis, og rund av til slutt.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Svovelsyre og natriumhydroksid er etsende. Nøytralisering gir mye varme. Tilsett luten langsomt og med omrøring, og bruk vernebriller, hansker og frakk. I anlegget gjøres dette etter en egen prosedyre.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva må du gjøre for å komme fra masse i gram til mol?<br><img src="bilder/quiz-stokiometri.svg" alt="En pil fra masse i gram til stoffmengde i mol, med et spørsmålstegn over pilen." width="260"></p>
+  <ul>
+    <li>gange med molmassen</li>
+    <li data-riktig>dele på molmassen</li>
+    <li>gange med molforholdet</li>
+  </ul>
+  <p class="forklaring">\( n = \dfrac{m}{M} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Hva forteller koeffisientene i en balansert reaksjonsligning?</p>
+  <ul>
+    <li>hvor mange gram som reagerer</li>
+    <li data-riktig>hvor mange mol som reagerer med hverandre</li>
+    <li>hvor raskt reaksjonen går</li>
+  </ul>
+  <p class="forklaring">Koeffisientene gir molforholdet, ikke masseforholdet.</p>
+</div>
+
+<div class="quiz">
+  <p>\( \ce{N2 + 3H2 -> 2NH3} \). Hvor mange mol NH<sub>3</sub> dannes av 6 mol H<sub>2</sub>?</p>
+  <ul>
+    <li>2 mol</li>
+    <li data-riktig>4 mol</li>
+    <li>6 mol</li>
+  </ul>
+  <p class="forklaring">H<sub>2</sub> : NH<sub>3</sub> = 3 : 2. 6 mol · 2/3 = 4 mol.</p>
+</div>
+
+<div class="quiz">
+  <p>\( \ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O} \). Hvor mange mol NaOH trengs for 0,50 mol H<sub>2</sub>SO<sub>4</sub>?</p>
+  <ul>
+    <li>0,25 mol</li>
+    <li>0,50 mol</li>
+    <li data-riktig>1,0 mol</li>
+  </ul>
+  <p class="forklaring">Molforholdet er 1 : 2.</p>
+</div>
+
+<div class="quiz">
+  <p>Du har målt 2,50 g. Hvordan oppgir du svaret 3,8146 g?</p>
+  <ul>
+    <li>3,8146 g</li>
+    <li data-riktig>3,81 g</li>
+    <li>4 g</li>
+  </ul>
+  <p class="forklaring">2,50 g har tre gjeldende sifre, så svaret får også tre.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>støkiometri</td><td>Beregning av mengder av stoffer som reagerer og dannes, ut fra en balansert reaksjonsligning.</td><td></td></tr>
+    <tr><td>molforhold</td><td>Forholdet mellom antall mol av stoffene i en reaksjon. Det leses av koeffisientene.</td><td></td></tr>
+    <tr><td>nøytralisering</td><td>Reaksjon mellom en syre og en base, der det dannes et salt og vann.</td><td>neutralization</td></tr>
+    <tr><td>gjeldende sifre</td><td>Sifrene i et måletall som er sikre, pluss det første usikre. De viser hvor nøyaktig tallet er.</td><td>significant figures</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><em>Kjemien stemmer</em>, kapittelet om støkiometri.</li>
+  <li>Fagstoff: «Mol og molmasse» i emne 2B.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

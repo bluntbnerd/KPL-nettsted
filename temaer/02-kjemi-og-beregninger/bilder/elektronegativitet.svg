@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 270" width="600" height="270" font-family="Segoe UI, Arial, sans-serif">
+  <title>Elektronegativitet for grunnstoffene i periode 1 til 3</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="270" rx="10" fill="#ffffff"/>
+  <!-- Farger: lys = lav, mørk = høy -->
+  <g stroke="#586868" stroke-width="1">
+    <rect x="30" y="20" width="56" height="56" rx="4" fill="#f9e3cf"/>
+    <rect x="450" y="20" width="56" height="56" rx="4" fill="#eef3f3"/>
+    <rect x="30" y="80" width="56" height="56" rx="4" fill="#fdf3ea"/><rect x="90" y="80" width="56" height="56" rx="4" fill="#fbe9d8"/><rect x="150" y="80" width="56" height="56" rx="4" fill="#f9e3cf"/><rect x="210" y="80" width="56" height="56" rx="4" fill="#f3c9a3"/><rect x="270" y="80" width="56" height="56" rx="4" fill="#eba873"/><rect x="330" y="80" width="56" height="56" rx="4" fill="#e18d4c"/><rect x="390" y="80" width="56" height="56" rx="4" fill="#c9631f"/>
+    <rect x="450" y="80" width="56" height="56" rx="4" fill="#eef3f3"/>
+    <rect x="30" y="140" width="56" height="56" rx="4" fill="#fdf3ea"/><rect x="90" y="140" width="56" height="56" rx="4" fill="#fdf3ea"/><rect x="150" y="140" width="56" height="56" rx="4" fill="#fbe9d8"/><rect x="210" y="140" width="56" height="56" rx="4" fill="#fbe9d8"/><rect x="270" y="140" width="56" height="56" rx="4" fill="#f9e3cf"/><rect x="330" y="140" width="56" height="56" rx="4" fill="#f3c9a3"/><rect x="390" y="140" width="56" height="56" rx="4" fill="#e9a16a"/>
+    <rect x="450" y="140" width="56" height="56" rx="4" fill="#eef3f3"/>
+  </g>
+  <g font-size="17" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="58" y="44">H</text><text x="478" y="44">He</text>
+    <text x="58" y="104">Li</text><text x="118" y="104">Be</text><text x="178" y="104">B</text><text x="238" y="104">C</text><text x="298" y="104">N</text><text x="358" y="104">O</text><text x="418" y="104" fill="#ffffff">F</text><text x="478" y="104">Ne</text>
+    <text x="58" y="164">Na</text><text x="118" y="164">Mg</text><text x="178" y="164">Al</text><text x="238" y="164">Si</text><text x="298" y="164">P</text><text x="358" y="164">S</text><text x="418" y="164">Cl</text><text x="478" y="164">Ar</text>
+  </g>
+  <g font-size="14" text-anchor="middle" fill="#1c2828">
+    <text x="58" y="66">2,2</text><text x="478" y="66">–</text>
+    <text x="58" y="126">1,0</text><text x="118" y="126">1,6</text><text x="178" y="126">2,0</text><text x="238" y="126">2,6</text><text x="298" y="126">3,0</text><text x="358" y="126">3,4</text><text x="418" y="126" fill="#ffffff">4,0</text><text x="478" y="126">–</text>
+    <text x="58" y="186">0,9</text><text x="118" y="186">1,3</text><text x="178" y="186">1,6</text><text x="238" y="186">1,9</text><text x="298" y="186">2,2</text><text x="358" y="186">2,6</text><text x="418" y="186">3,2</text><text x="478" y="186">–</text>
+  </g>
+  <line x1="30" y1="220" x2="440" y2="220" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="235" y="240" font-size="13" text-anchor="middle" fill="#1c2828">øker mot høyre i hver periode</text>
+  <line x1="530" y1="196" x2="530" y2="86" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="545" y="140" font-size="13" fill="#1c2828">øker</text>
+  <text x="545" y="156" font-size="13" fill="#1c2828">oppover</text>
+  <text x="30" y="262" font-size="12" fill="#586868">Edelgassene (He, Ne, Ar) lager nesten ikke bindinger og har ingen vanlig verdi.</text>
+</svg>

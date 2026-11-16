@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260" font-family="Segoe UI, Arial, sans-serif">
+  <title>De tre sterke bindingstypene: ionebinding, kovalent binding og metallbinding</title>
+  <rect x="0" y="0" width="600" height="260" rx="10" fill="#ffffff"/>
+
+  <!-- Ionebinding: gitter -->
+  <rect x="15" y="15" width="180" height="150" rx="8" fill="#f3f6f6"/>
+  <g stroke="#586868" stroke-width="1.2">
+    <circle cx="55" cy="50" r="16" fill="#cfe3f7"/><circle cx="105" cy="50" r="20" fill="#d9efd9"/><circle cx="155" cy="50" r="16" fill="#cfe3f7"/>
+    <circle cx="55" cy="95" r="20" fill="#d9efd9"/><circle cx="105" cy="95" r="16" fill="#cfe3f7"/><circle cx="155" cy="95" r="20" fill="#d9efd9"/>
+    <circle cx="55" cy="140" r="16" fill="#cfe3f7"/><circle cx="105" cy="140" r="20" fill="#d9efd9"/><circle cx="155" cy="140" r="16" fill="#cfe3f7"/>
+  </g>
+  <g font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="55" y="55">+</text><text x="105" y="55">−</text><text x="155" y="55">+</text>
+    <text x="55" y="100">−</text><text x="105" y="100">+</text><text x="155" y="100">−</text>
+    <text x="55" y="145">+</text><text x="105" y="145">−</text><text x="155" y="145">+</text>
+  </g>
+
+  <!-- Kovalent: vannmolekyl -->
+  <rect x="210" y="15" width="180" height="150" rx="8" fill="#f3f6f6"/>
+  <g stroke="#1c2828" stroke-width="4"><line x1="300" y1="70" x2="262" y2="112"/><line x1="300" y1="70" x2="338" y2="112"/></g>
+  <circle cx="300" cy="70" r="24" fill="#f6c4c4" stroke="#9a2b2b" stroke-width="1.5"/>
+  <circle cx="262" cy="112" r="16" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="338" cy="112" r="16" fill="#eef3f3" stroke="#586868" stroke-width="1.5"/>
+  <g font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="300" y="76">O</text><text x="262" y="117">H</text><text x="338" y="117">H</text>
+  </g>
+  <g fill="#1e6fb8"><circle cx="276" cy="88" r="4"/><circle cx="284" cy="96" r="4"/><circle cx="324" cy="88" r="4"/><circle cx="316" cy="96" r="4"/></g>
+
+  <!-- Metallbinding -->
+  <rect x="405" y="15" width="180" height="150" rx="8" fill="#f3f6f6"/>
+  <g fill="#cfd6d6" stroke="#586868" stroke-width="1.2">
+    <circle cx="445" cy="50" r="16"/><circle cx="495" cy="50" r="16"/><circle cx="545" cy="50" r="16"/>
+    <circle cx="445" cy="95" r="16"/><circle cx="495" cy="95" r="16"/><circle cx="545" cy="95" r="16"/>
+    <circle cx="445" cy="140" r="16"/><circle cx="495" cy="140" r="16"/><circle cx="545" cy="140" r="16"/>
+  </g>
+  <g font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="445" y="55">+</text><text x="495" y="55">+</text><text x="545" y="55">+</text>
+    <text x="445" y="100">+</text><text x="495" y="100">+</text><text x="545" y="100">+</text>
+    <text x="445" y="145">+</text><text x="495" y="145">+</text><text x="545" y="145">+</text>
+  </g>
+  <g fill="#1e6fb8">
+    <circle cx="470" cy="72" r="4"/><circle cx="520" cy="70" r="4"/><circle cx="468" cy="118" r="4"/><circle cx="522" cy="120" r="4"/>
+    <circle cx="420" cy="72" r="4"/><circle cx="570" cy="118" r="4"/><circle cx="495" cy="27" r="4"/><circle cx="470" cy="160" r="4"/>
+  </g>
+
+  <g font-size="14" text-anchor="middle" fill="#1c2828">
+    <text x="105" y="190" font-weight="bold">Ionebinding</text>
+    <text x="105" y="208">metall + ikke-metall</text>
+    <text x="105" y="226">+ og − ioner i et gitter</text>
+    <text x="105" y="244">eksempel: salt, NaCl</text>
+    <text x="300" y="190" font-weight="bold">Kovalent binding</text>
+    <text x="300" y="208">ikke-metall + ikke-metall</text>
+    <text x="300" y="226">delte elektronpar</text>
+    <text x="300" y="244">eksempel: vann, H₂O</text>
+    <text x="495" y="190" font-weight="bold">Metallbinding</text>
+    <text x="495" y="208">metall + metall</text>
+    <text x="495" y="226">+ ioner i elektronsjø</text>
+    <text x="495" y="244">eksempel: jern, Fe</text>
+  </g>
+</svg>

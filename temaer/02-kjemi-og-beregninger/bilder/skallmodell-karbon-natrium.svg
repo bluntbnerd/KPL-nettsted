@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 310" width="560" height="310" font-family="Segoe UI, Arial, sans-serif">
+  <title>Skallmodell av karbon og natrium</title>
+  <rect x="0" y="0" width="560" height="310" rx="10" fill="#ffffff"/>
+
+  <!-- Forklaring -->
+  <circle cx="24" cy="20" r="6" fill="#1e6fb8"/>
+  <text x="36" y="25" font-size="14" fill="#1c2828">= elektron</text>
+
+  <!-- Karbon -->
+  <g fill="none" stroke="#8a9a9a" stroke-width="1.5">
+    <circle cx="140" cy="140" r="45"/>
+    <circle cx="140" cy="140" r="75"/>
+  </g>
+  <circle cx="140" cy="140" r="24" fill="#fde3a7" stroke="#b5530f" stroke-width="1.5"/>
+  <text x="140" y="137" font-size="12" text-anchor="middle" fill="#1c2828">6 p⁺</text>
+  <text x="140" y="152" font-size="12" text-anchor="middle" fill="#1c2828">6 n</text>
+  <g fill="#1e6fb8">
+    <circle cx="95" cy="140" r="6"/><circle cx="185" cy="140" r="6"/>
+    <circle cx="193" cy="87" r="6"/><circle cx="87" cy="87" r="6"/>
+    <circle cx="87" cy="193" r="6"/><circle cx="193" cy="193" r="6"/>
+  </g>
+  <text x="140" y="272" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">Karbon, C (atomnummer 6)</text>
+  <text x="140" y="294" font-size="14" text-anchor="middle" fill="#1c2828">Elektroner: 2, 4</text>
+
+  <!-- Natrium -->
+  <g fill="none" stroke="#8a9a9a" stroke-width="1.5">
+    <circle cx="410" cy="140" r="45"/>
+    <circle cx="410" cy="140" r="75"/>
+    <circle cx="410" cy="140" r="105"/>
+  </g>
+  <circle cx="410" cy="140" r="24" fill="#fde3a7" stroke="#b5530f" stroke-width="1.5"/>
+  <text x="410" y="137" font-size="12" text-anchor="middle" fill="#1c2828">11 p⁺</text>
+  <text x="410" y="152" font-size="12" text-anchor="middle" fill="#1c2828">11 n</text>
+  <g fill="#1e6fb8">
+    <circle cx="365" cy="140" r="6"/><circle cx="455" cy="140" r="6"/>
+    <circle cx="485" cy="140" r="6"/><circle cx="463" cy="87" r="6"/>
+    <circle cx="410" cy="65" r="6"/><circle cx="357" cy="87" r="6"/>
+    <circle cx="335" cy="140" r="6"/><circle cx="357" cy="193" r="6"/>
+    <circle cx="410" cy="215" r="6"/><circle cx="463" cy="193" r="6"/>
+    <circle cx="410" cy="35" r="6"/>
+  </g>
+  <text x="410" y="272" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">Natrium, Na (atomnummer 11)</text>
+  <text x="410" y="294" font-size="14" text-anchor="middle" fill="#1c2828">Elektroner: 2, 8, 1</text>
+</svg>

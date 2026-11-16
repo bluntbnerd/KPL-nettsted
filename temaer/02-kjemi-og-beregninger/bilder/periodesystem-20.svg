@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 390" width="600" height="390" font-family="Segoe UI, Arial, sans-serif">
+  <title>De 20 første grunnstoffene i periodesystemet</title>
+  <rect x="0" y="0" width="600" height="390" rx="10" fill="#ffffff"/>
+
+  <!-- Gruppenummer -->
+  <g font-size="13" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="300" y="20">Gruppe</text>
+    <text x="108" y="50">1</text><text x="168" y="50">2</text>
+    <text x="248" y="50">13</text><text x="308" y="50">14</text>
+    <text x="368" y="50">15</text><text x="428" y="50">16</text>
+    <text x="488" y="50">17</text><text x="548" y="50">18</text>
+  </g>
+
+  <!-- Periodenummer -->
+  <g font-size="13" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="30" y="40">Periode</text>
+    <text x="50" y="93">1</text><text x="50" y="153">2</text>
+    <text x="50" y="213">3</text><text x="50" y="273">4</text>
+  </g>
+
+  <!-- Ruter: blå = metall, gul = ikke-metall, grønn = halvmetall -->
+  <g stroke="#586868" stroke-width="1">
+    <rect x="80"  y="60"  width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="520" y="60"  width="56" height="56" rx="4" fill="#fde3a7"/>
+
+    <rect x="80"  y="120" width="56" height="56" rx="4" fill="#cfe3f7"/>
+    <rect x="140" y="120" width="56" height="56" rx="4" fill="#cfe3f7"/>
+    <rect x="220" y="120" width="56" height="56" rx="4" fill="#d9efd9"/>
+    <rect x="280" y="120" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="340" y="120" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="400" y="120" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="460" y="120" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="520" y="120" width="56" height="56" rx="4" fill="#fde3a7"/>
+
+    <rect x="80"  y="180" width="56" height="56" rx="4" fill="#cfe3f7"/>
+    <rect x="140" y="180" width="56" height="56" rx="4" fill="#cfe3f7"/>
+    <rect x="220" y="180" width="56" height="56" rx="4" fill="#cfe3f7"/>
+    <rect x="280" y="180" width="56" height="56" rx="4" fill="#d9efd9"/>
+    <rect x="340" y="180" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="400" y="180" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="460" y="180" width="56" height="56" rx="4" fill="#fde3a7"/>
+    <rect x="520" y="180" width="56" height="56" rx="4" fill="#fde3a7"/>
+
+    <rect x="80"  y="240" width="56" height="56" rx="4" fill="#cfe3f7"/>
+    <rect x="140" y="240" width="56" height="56" rx="4" fill="#cfe3f7"/>
+  </g>
+
+  <!-- Atomnummer -->
+  <g font-size="11" fill="#1c2828">
+    <text x="85" y="75">1</text><text x="525" y="75">2</text>
+    <text x="85" y="135">3</text><text x="145" y="135">4</text><text x="225" y="135">5</text><text x="285" y="135">6</text>
+    <text x="345" y="135">7</text><text x="405" y="135">8</text><text x="465" y="135">9</text><text x="525" y="135">10</text>
+    <text x="85" y="195">11</text><text x="145" y="195">12</text><text x="225" y="195">13</text><text x="285" y="195">14</text>
+    <text x="345" y="195">15</text><text x="405" y="195">16</text><text x="465" y="195">17</text><text x="525" y="195">18</text>
+    <text x="85" y="255">19</text><text x="145" y="255">20</text>
+  </g>
+
+  <!-- Symboler -->
+  <g font-size="20" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="108" y="100">H</text><text x="548" y="100">He</text>
+    <text x="108" y="160">Li</text><text x="168" y="160">Be</text><text x="248" y="160">B</text><text x="308" y="160">C</text>
+    <text x="368" y="160">N</text><text x="428" y="160">O</text><text x="488" y="160">F</text><text x="548" y="160">Ne</text>
+    <text x="108" y="220">Na</text><text x="168" y="220">Mg</text><text x="248" y="220">Al</text><text x="308" y="220">Si</text>
+    <text x="368" y="220">P</text><text x="428" y="220">S</text><text x="488" y="220">Cl</text><text x="548" y="220">Ar</text>
+    <text x="108" y="280">K</text><text x="168" y="280">Ca</text>
+  </g>
+
+  <!-- Ytterelektroner -->
+  <text x="20" y="325" font-size="12" fill="#1c2828">Ytter-</text>
+  <text x="20" y="340" font-size="12" fill="#1c2828">elektroner:</text>
+  <g font-size="15" font-weight="bold" fill="#1e6fb8" text-anchor="middle">
+    <text x="108" y="333">1</text><text x="168" y="333">2</text>
+    <text x="248" y="333">3</text><text x="308" y="333">4</text>
+    <text x="368" y="333">5</text><text x="428" y="333">6</text>
+    <text x="488" y="333">7</text><text x="548" y="333">8</text>
+  </g>
+
+  <!-- Forklaring -->
+  <g font-size="13" fill="#1c2828">
+    <rect x="80"  y="360" width="16" height="16" rx="3" fill="#cfe3f7" stroke="#586868"/>
+    <text x="102" y="373">metall</text>
+    <rect x="190" y="360" width="16" height="16" rx="3" fill="#fde3a7" stroke="#586868"/>
+    <text x="212" y="373">ikke-metall</text>
+    <rect x="330" y="360" width="16" height="16" rx="3" fill="#d9efd9" stroke="#586868"/>
+    <text x="352" y="373">halvmetall</text>
+  </g>
+</svg>
