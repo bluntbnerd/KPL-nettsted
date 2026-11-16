@@ -144,6 +144,36 @@ h2::before { display: none; }
 @keyframes kl-rorer { from { transform: scaleX(1); } to { transform: scaleX(.3); } }
 @media (prefers-reduced-motion: reduce) { .anlegg *, .kr-led { animation: none !important; } }
 
+/* Forsiden: hele siden er kontrollrom, temaene ligger i det mørke feltet */
+body[data-side="forside"] {
+  background-color: var(--kr-bg);
+  background-image:
+    linear-gradient(var(--kr-rute) 1px, transparent 1px),
+    linear-gradient(90deg, var(--kr-rute) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--kr-tekst);
+}
+body[data-side="forside"] .helt { background: none; border-bottom: 0; }
+body[data-side="forside"] h2 { color: #fff; }
+body[data-side="forside"] .seksjon-tittel h2::after { content: ""; display: block; width: 48px; height: 3px; background: var(--aksent); margin-top: 6px; }
+body[data-side="forside"] .seksjon-tittel a { color: var(--kr-oransje); }
+body[data-side="forside"] .temakort-kort {
+  background: rgba(23, 35, 42, .88);
+  border: 1px solid #2c3b44;
+  color: var(--kr-tekst);
+  box-shadow: none;
+  backdrop-filter: blur(2px);
+}
+body[data-side="forside"] .temakort-kort:hover { border-color: var(--tema); background: rgba(30, 45, 54, .95); }
+body[data-side="forside"] .temakort-ikon { background: color-mix(in srgb, var(--tema) 25%, transparent); color: #fff; }
+body[data-side="forside"] .temakort-bunn { color: var(--kr-dempet); }
+body[data-side="forside"] .temakort-kort .fremdrift-bar { background: #26343c; }
+body[data-side="forside"] .fag { background: #26343c; color: var(--kr-tekst); border-color: #3a4a54; }
+body[data-side="forside"] .snarveier a { background: rgba(23, 35, 42, .88); border-color: #2c3b44; }
+body[data-side="forside"] main > ul { color: var(--kr-dempet); }
+body[data-side="forside"] main > ul strong { color: var(--kr-tekst); }
+body[data-side="forside"] .bunn { border-top-color: #2c3b44; }
+
 @media (max-width: 860px) {
   .helt.med-anlegg .helt-indre { grid-template-columns: 1fr; }
   .anlegg-wrap { grid-column: 1; grid-row: auto; margin-top: 18px; }
