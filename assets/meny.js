@@ -48,7 +48,7 @@
   // En variant velges også med ?design=<id> i adressen, og huskes i nettleseren.
   var DESIGNER = [
     { id: "standard", navn: "Standard" },
-    { id: "laeringslab", navn: "Læringslab" }
+    { id: "laeringslab", navn: "Læringslab", js: true }
   ];
 
   // «Nå jobber vi med» på forsiden. Oppdateres når en ny periode starter.
