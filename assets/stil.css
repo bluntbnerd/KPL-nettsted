@@ -254,15 +254,17 @@ li.sti-planlagt .sti-nr { border-style: dashed; color: var(--dempet); background
 .kommer-merke { margin-left: auto; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--dempet); }
 
 /* Sidetype: merke i læringsstien og over overskriften */
+/* Diskret: liten grå tekst med en liten fargeprikk */
 .type-merke {
-  margin-left: auto; padding: 0 6px; border-radius: 4px; flex: none;
-  font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
-  color: var(--tf); background: color-mix(in srgb, var(--tf) 14%, transparent);
+  margin-left: auto; flex: none; display: inline-flex; align-items: center; gap: 4px;
+  font-size: .68rem; font-weight: 400; color: var(--dempet);
+}
+.type-merke::before, .sidetype::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--tf); opacity: .8;
 }
 .sidetype {
-  display: inline-block; margin-bottom: 4px; padding: 2px 10px; border-radius: 99px;
-  font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
-  color: var(--tf); background: color-mix(in srgb, var(--tf) 13%, transparent);
+  display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2px;
+  font-size: .78rem; font-weight: 600; color: var(--dempet); letter-spacing: .02em;
 }
 .type-oversikt, .type-fagstoff { --tf: var(--tema); }
 .type-simulering { --tf: #7c3aed; }
