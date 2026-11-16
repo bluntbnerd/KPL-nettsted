@@ -192,6 +192,27 @@ body[data-side="forside"] .temakort-fag { margin: 2px 0 0; grid-column: 2; }
 body[data-side="forside"] .temakort-bunn { margin: 0; grid-column: 2; }
 body[data-side="forside"] .temakort-kort .fremdrift-bar { grid-column: 1 / -1; margin-top: 8px; height: 4px; }
 
+/* Temaene som brikker i toppfeltet (lages av laeringslab.js) */
+.helt h1 .oransje { color: var(--kr-oransje); }
+.temabrikker { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.temabrikke {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 16px 6px 6px; border-radius: 99px;
+  background: #1a262d; border: 1px solid #26343c;
+  color: var(--kr-tekst); text-decoration: none; font-size: 1.02rem;
+  transition: border-color .15s, background .15s;
+}
+.temabrikke:hover { border-color: var(--tema); background: #22313a; }
+.brikke-ikon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--tema); color: #fff; flex: none; }
+.brikke-ikon .ikon { width: 18px; height: 18px; }
+.temabrikke small { color: var(--kr-dempet); font-family: var(--f-mono); font-size: .85rem; }
+.temabrikke.tom > span:not(.brikke-ikon) { opacity: .8; }
+.temabrikke.alle { padding: 6px 16px; background: none; border-style: dashed; color: var(--kr-oransje); font-family: var(--f-mono); font-size: .85rem; }
+body.med-temabrikker[data-side="forside"] .helt { padding-bottom: 28px; }
+body.med-temabrikker .helt-indre > .seksjon-tittel:first-of-type,
+body.med-temabrikker #temakort,
+body.med-temabrikker main > .seksjon-tittel:first-of-type { display: none; }
+
 @media (max-width: 860px) {
   .helt.med-anlegg .helt-indre { grid-template-columns: 1fr; }
   .anlegg-wrap { grid-column: 1; grid-row: auto; margin-top: 18px; }

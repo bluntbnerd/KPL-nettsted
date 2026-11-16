@@ -61,7 +61,47 @@
     wrap.className = "anlegg-wrap";
     wrap.innerHTML = svg;
     helt.classList.add("med-anlegg");
-    helt.querySelector(".helt-indre").appendChild(wrap);
+    var indre = helt.querySelector(".helt-indre");
+    indre.appendChild(wrap);
+
+    // Siste del av tittelen i oransje, som på læringslab
+    var h1 = indre.querySelector("h1");
+    if (h1 && h1.textContent.indexOf(" og ") > 0) {
+      var deler = h1.textContent.split(" og ");
+      h1.innerHTML = deler[0] + " og<br><span class=\"oransje\">" + deler.slice(1).join(" og ") + "</span>";
+    }
+    lagTemabrikker(indre, 0);
+  }
+
+  // Temaene som runde «brikker» i toppfeltet (bygd fra temakortene som meny.js lager)
+  function lagTemabrikker(indre, forsok) {
+    var kort = document.querySelectorAll("#temakort .temakort-kort");
+    if (!kort.length) { if (forsok < 40) setTimeout(function () { lagTemabrikker(indre, forsok + 1); }, 50); return; }
+    var rad = document.createElement("nav");
+    rad.className = "temabrikker";
+    rad.setAttribute("aria-label", "Temaer");
+    Array.prototype.forEach.call(kort, function (k) {
+      var a = document.createElement("a");
+      a.className = "temabrikke";
+      a.href = k.getAttribute("href");
+      a.setAttribute("style", k.getAttribute("style") || "");
+      var ikon = k.querySelector(".temakort-ikon");
+      var tittel = k.querySelector(".temakort-tittel");
+      var bunn = k.querySelector(".temakort-bunn");
+      var tall = bunn ? (bunn.textContent.match(/\d+/) || [""])[0] : "";
+      a.innerHTML = '<span class="brikke-ikon">' + (ikon ? ikon.innerHTML : "") + '</span>' +
+        '<span>' + (tittel ? tittel.textContent : "") + '</span>' +
+        (tall ? '<small>' + tall + '</small>' : '<small class="snart">kommer</small>');
+      if (!tall) a.classList.add("tom");
+      rad.appendChild(a);
+    });
+    var alle = document.createElement("a");
+    alle.className = "temabrikke alle";
+    alle.href = "temaer/index.html";
+    alle.textContent = "Alle temaer og kompetansemål →";
+    rad.appendChild(alle);
+    indre.appendChild(rad);
+    document.body.classList.add("med-temabrikker");
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
