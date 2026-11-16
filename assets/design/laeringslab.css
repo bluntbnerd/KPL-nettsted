@@ -1,0 +1,117 @@
+/*
+ * DESIGNVARIANT «Læringslab»
+ * Idéer fra kollegaens læringslab: mørkt «kontrollrom» med rutenett øverst, smale store
+ * overskrifter, oransje aksent, små etiketter i maskinskrift og kort med farget kant.
+ * Skrifter fra Google Fonts (krever internett, ellers brukes vanlige reserveskrifter).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --bakgrunn: #f2f4f3;
+  --flate: #ffffff;
+  --tekst: #18232b;
+  --dempet: #55636b;
+  --linje: #d3dadb;
+  --hoved: #2f5d73;
+  --hoved-mork: #111a20;
+  --lenke: #2f5d73;
+  --aksent: #c2410c;
+  --radius: 10px;
+  --kr-bg: #111a20;
+  --kr-rute: #1e2a32;
+  --kr-tekst: #e6ecee;
+  --kr-dempet: #8fa0a8;
+  --kr-oransje: #f08a4b;
+  --f-tittel: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --f-tekst: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bakgrunn: #0d1418;
+    --flate: #151f25;
+    --tekst: #e6ecee;
+    --dempet: #8fa0a8;
+    --linje: #26343c;
+    --lenke: #8cc3db;
+    --aksent: #f08a4b;
+  }
+}
+
+body { font-family: var(--f-tekst); }
+
+/* Overskrifter: smale, store bokstaver */
+h1, h2, .helt h1, .temakort-tittel, .emnekort-tittel, .undertema-tekst strong {
+  font-family: var(--f-tittel);
+  letter-spacing: .01em;
+}
+h1, h2 { text-transform: uppercase; font-weight: 700; }
+h1 { font-size: 2.5rem; line-height: 1.05; }
+h2 { font-size: 1.7rem; }
+h3 { font-family: var(--f-tittel); font-size: 1.3rem; font-weight: 700; }
+h2::before { display: none; }
+
+/* Topplinja som kontrollrom */
+.topp { background: var(--kr-bg); border-bottom: 2px solid var(--aksent); }
+.merke-logo { background: var(--aksent); border-radius: 6px; }
+.merke-tekst strong { font-family: var(--f-tittel); font-size: 1.35rem; letter-spacing: .06em; }
+.hovedlenker a { font-family: var(--f-mono); font-size: .82rem; text-transform: uppercase; letter-spacing: .05em; }
+.hovedlenker a.aktiv { background: none; color: var(--kr-oransje); box-shadow: inset 0 -2px 0 var(--kr-oransje); border-radius: 0; }
+.sok input { background: var(--kr-rute); color: var(--kr-tekst); border-color: #2c3b44; font-family: var(--f-mono); }
+
+/* Små etiketter i maskinskrift */
+.sidetype, .type-merke, .sidemeny-overskrift, .toc-tittel, .temakort-bunn, .emnekort-info,
+.brodsmuler ol, .fremdrift-tekst, .sti-hode small, .helt .etikett {
+  font-family: var(--f-mono);
+  letter-spacing: .06em;
+}
+.sidetype { text-transform: uppercase; }
+
+/* Forsiden: mørk helt med rutenett */
+.helt {
+  background-color: var(--kr-bg);
+  background-image:
+    linear-gradient(var(--kr-rute) 1px, transparent 1px),
+    linear-gradient(90deg, var(--kr-rute) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--kr-tekst);
+  border-bottom: 3px solid var(--aksent);
+}
+.helt .etikett { background: none; padding: 0; border-radius: 0; color: var(--kr-oransje); text-transform: uppercase; font-size: .8rem; }
+.helt h1 { font-size: 3.4rem; text-transform: uppercase; }
+.helt p { color: var(--kr-dempet); opacity: 1; }
+
+/* Temakort: hvite kort med farget kant og etikett */
+.temakort-kort { border-radius: var(--radius); border-top: 0; }
+.temakort-kort::before { height: 3px; }
+.temakort-ikon { border-radius: 8px; }
+.temakort-tittel { font-size: 1.4rem; }
+.temakort-bunn { font-size: .78rem; }
+.seksjon-tittel a { font-family: var(--f-mono); font-size: .82rem; text-transform: uppercase; color: var(--aksent); }
+
+.snarveier a { background: var(--kr-bg); border-color: var(--kr-bg); }
+.snarveier strong { color: #fff; font-family: var(--f-tittel); font-size: 1.25rem; text-transform: uppercase; letter-spacing: .03em; }
+.snarveier span { color: var(--kr-dempet); }
+.snarveier .ikon { color: var(--kr-oransje); }
+.snarveier a:hover { border-color: var(--aksent); }
+
+/* Emnekort og oppslagskort */
+.emnekort-kort, .undertema-kort { border-top: 3px solid var(--tema); }
+.emnekort-tittel { font-size: 1.25rem; }
+.undertema-tekst strong { font-size: 1.25rem; }
+
+/* Læringsstien: firkantede nummer som målepunkter */
+.sti-nr { border-radius: 6px; font-family: var(--f-mono); }
+.sti-hode { border-left: 3px solid var(--tema); border-radius: 6px; }
+
+/* Bokser med kantlinje til venstre */
+.boks { border-radius: 6px; }
+.boks .boks-tittel { font-family: var(--f-mono); text-transform: uppercase; font-size: .8rem; letter-spacing: .06em; }
+
+.bunn { background: var(--kr-bg); color: var(--kr-dempet); border-top: 2px solid var(--aksent); font-family: var(--f-mono); }
+.bunn a { color: var(--kr-tekst); }
+
+@media (max-width: 700px) {
+  h1 { font-size: 2rem; }
+  .helt h1 { font-size: 2.4rem; }
+}

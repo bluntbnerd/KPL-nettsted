@@ -47,7 +47,8 @@
   // «standard» er dagens utseende. Velgeren nederst på siden vises når det finnes mer enn én.
   // En variant velges også med ?design=<id> i adressen, og huskes i nettleseren.
   var DESIGNER = [
-    { id: "standard", navn: "Standard" }
+    { id: "standard", navn: "Standard" },
+    { id: "laeringslab", navn: "Læringslab" }
   ];
 
   // «Nå jobber vi med» på forsiden. Oppdateres når en ny periode starter.
@@ -507,7 +508,7 @@
     if (erOppslag(TEMA) && i > 0 && liste[i].type === "fagstoff" && liste[i].emne) {
       var mine = liste.filter(function (s) { return s.type === "fagstoff" && s.emne === liste[i].emne; });
       var j = mine.indexOf(liste[i]);
-      var oversikt = { tittel: "Alle undertemaer i " + TEMA.tittel, fil: "temaer/" + TEMA.mappe + "/index.html" };
+      var oversikt = { tittel: "Alle emner i " + TEMA.tittel, fil: "temaer/" + TEMA.mappe + "/index.html" };
       liste = [j > 0 ? mine[j - 1] : oversikt, liste[i], j < mine.length - 1 ? mine[j + 1] : oversikt];
       i = 1;
     } else if (erOppslag(TEMA) && i > 0 && liste[i].type === "fagstoff") {
@@ -522,7 +523,7 @@
       var nav0 = lag("nav", "bla");
       var tilbake = lenke("temaer/" + TEMA.mappe + "/index.html", "", "bla-forrige");
       tilbake.innerHTML = "<small>← Tilbake</small>";
-      tilbake.appendChild(lag("span", "", "Alle undertemaer i " + TEMA.tittel));
+      tilbake.appendChild(lag("span", "", "Alle emner i " + TEMA.tittel));
       nav0.appendChild(tilbake);
       felt0.appendChild(nav0);
       main.appendChild(felt0);
@@ -957,7 +958,7 @@
     }
     if (!raa.length) return;
     var seksjon = lag("section", "undertema-seksjon");
-    seksjon.appendChild(lag("h2", "", "Undertemaer"));
+    seksjon.appendChild(lag("h2", "", "Emner i temaet"));
     var rutenett = lag("div", "undertemakort");
     raa.forEach(function (s) {
       var filer = s.alle ? s.alle.filter(function (x) { return x.fil; }).map(function (x) { return b + x.fil; }) : [b + s.fil];
@@ -976,7 +977,7 @@
   }
 
   function byggEmnekort() {
-    if (!TEMA || !/\/index\.html$/.test(HER)) return;
+    if (!TEMA || !/\/index\.html$/.test(HER) || erOppslag(TEMA)) return;
     var grupper = emner(TEMA).filter(function (e) { return e.navn; });
     if (!grupper.length) return;
     var seksjon = lag("section", "emnekort-seksjon");

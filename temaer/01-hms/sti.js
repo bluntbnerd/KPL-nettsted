@@ -1,8 +1,8 @@
 /*
- * HMS er et oppslagstema med deltemaer. Hvert deltema vises som ett kort på temasiden,
- * og kortet går til første side. Forrige/Neste går bare innenfor deltemaet.
+ * HMS er et oppslagstema med emner. Hvert emne vises som ett kort på temasiden,
+ * og kortet går til første side. Forrige/Neste går bare innenfor emnet.
  *
- * Deltema: { emne: "Navn", beskrivelse: "Én linje", ikon: "bilder/…", sider: [ … ] }
+ * Emne: { emne: "Navn", beskrivelse: "Én linje", ikon: "bilder/…", sider: [ … ] }
  * Side:    { fil, tittel, meny: "Kort tittel", status }
  * Sider med tittel «Øv: …» vises som Simulering.
  * Når læreren godkjenner en side: endre status til "ferdig".
