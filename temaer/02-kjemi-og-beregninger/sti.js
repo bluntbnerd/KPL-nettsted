@@ -41,11 +41,11 @@ KPL.sti("02-kjemi-og-beregninger", [
       { fil: "reaksjoner.html", tittel: "Kjemiske reaksjoner og reaksjonsligninger", status: "utkast" },
       { fil: "balansere-ligninger.html", tittel: "Øv: balanser ligninger (PhET)", status: "utkast" },
       { fil: "stokiometri.html", tittel: "Støkiometriske beregninger", status: "utkast" },
-      { fil: "begrensende-reaktant-utbytte.html", tittel: "Begrensende reaktant og utbytte", status: "utkast" },
-      { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "utkast" },
       { fil: "forbrenning.html", tittel: "Forbrenning – fullstendig og ufullstendig", status: "utkast" },
       { fil: "energi-i-reaksjoner.html", tittel: "Energi i reaksjoner – endoterm og eksoterm", status: "utkast" },
-      { fil: "hva-kan-du-na-2c.html", tittel: "Hva kan du nå?", status: "utkast" }
+      { fil: "hva-kan-du-na-2c.html", tittel: "Hva kan du nå?", status: "utkast" },
+      { fil: "begrensende-reaktant-utbytte.html", tittel: "Begrensende reaktant og utbytte", status: "utkast", fordypning: true },
+      { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "utkast", fordypning: true }
     ]
   },
   {

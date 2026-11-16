@@ -276,6 +276,9 @@ li.sti-planlagt .sti-nr { border-style: dashed; color: var(--dempet); background
 .type-oppgaver { --tf: #2e7d32; }
 .type-ressurser { --tf: #55666c; }
 .type-video { --tf: #be185d; }
+.type-fordypning { --tf: #0f766e; }
+li.sti-fordypning { margin-top: 6px; padding-top: 4px; border-top: 1px dashed var(--linje); }
+li.sti-fordypning .sti-nr { border-style: dashed; }
 @media (prefers-color-scheme: dark) {
   .type-simulering { --tf: #b9a0ec; } .type-lab { --tf: #5fc7dd; } .type-sjekk { --tf: #f0a46a; }
   .type-oppgaver { --tf: #86c98a; } .type-ressurser { --tf: #9db0b5; } .type-video { --tf: #f48fb1; }

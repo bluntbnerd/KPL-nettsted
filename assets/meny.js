@@ -23,7 +23,7 @@
   // Sidetyper. Settes med type: "…" i sti.js, ellers gjettes den ut fra tittelen.
   var SIDETYPER = {
     oversikt: "Oversikt", fagstoff: "Teori", simulering: "Simulering", lab: "Lab",
-    sjekk: "Quiz", oppgaver: "Oppgaver", ressurser: "Ressurser", video: "Video"
+    sjekk: "Quiz", oppgaver: "Oppgaver", ressurser: "Ressurser", video: "Video", fordypning: "Fordypning"
   };
   function gjettType(s) {
     if (s.type && SIDETYPER[s.type]) return s.type;
@@ -149,8 +149,10 @@
       }).map(function (s) {
         return s.status === "planlagt"
           ? { tittel: s.tittel, type: "planlagt" }
-          : { tittel: s.tittel, fil: b + s.fil, type: "fagstoff", sidetype: gjettType(s), utkast: s.status === "utkast" };
+          : { tittel: s.tittel, fil: b + s.fil, type: "fagstoff", sidetype: s.fordypning ? "fordypning" : gjettType(s), utkast: s.status === "utkast", fordypning: !!s.fordypning };
       });
+      // Fordypningssider (ekstrastoff utenfor hovedstien) står nederst i emnet
+      sider = sider.filter(function (s) { return !s.fordypning; }).concat(sider.filter(function (s) { return s.fordypning; }));
       // Nummerering som «2A» vises ikke for elevene
       var navn = g.emne ? g.emne.replace(/^\s*\d+\s*[A-Za-zÆØÅæøå]?\s*[.:–-]?\s+/, "") : g.emne;
       return { navn: navn, vurdering: g.vurdering, sider: sider };
@@ -160,7 +162,8 @@
     var b = "temaer/" + tema.mappe + "/";
     var sider = [];
     emner(tema).forEach(function (e) {
-      e.sider.forEach(function (s) { if (s.type === "fagstoff") { s.emne = e.navn; sider.push(s); } });
+      // Fordypning er utenfor hovedstien: ikke i Forrige/Neste og ikke i fremdriften
+      e.sider.forEach(function (s) { if (s.type === "fagstoff" && !s.fordypning) { s.emne = e.navn; sider.push(s); } });
     });
     return [{ tittel: "Oversikt", fil: b + "index.html", type: "oversikt" }]
       .concat(sider)
@@ -388,10 +391,15 @@
       if (mittEmne.length) grupper = mittEmne;
       grupper.forEach(function (e) {
         var ol = lag("ol", "sti");
-        e.sider.forEach(function (s, n) { ol.appendChild(stegLi(s, String(n + 1))); });
+        var nr = 0;
+        e.sider.forEach(function (s) {
+          var li = stegLi(s, s.fordypning ? "+" : String(++nr));
+          if (s.fordypning) li.classList.add("sti-fordypning");
+          ol.appendChild(li);
+        });
         if (!e.navn) { sidemeny.appendChild(ol); return; }
         var her = e.sider.some(function (s) { return s.fil === HER; });
-        var tellbare = e.sider.filter(function (s) { return s.type === "fagstoff"; });
+        var tellbare = e.sider.filter(function (s) { return s.type === "fagstoff" && !s.fordypning; });
         var ferdige = tellbare.filter(function (s) { return erFerdig(s.fil); }).length;
         var d = lag("details", "emne");
         d.open = her;
@@ -737,7 +745,7 @@
     if (/\/index\.html$/.test(HER)) type = "oversikt";
     else if (/\/oppgaver\.html$/.test(HER)) type = "oppgaver";
     else if (/\/ressurser\.html$/.test(HER)) type = "ressurser";
-    else steg(TEMA).forEach(function (s) { if (s.fil === HER) type = s.sidetype; });
+    else emner(TEMA).forEach(function (e) { e.sider.forEach(function (s) { if (s.fil === HER) type = s.sidetype; }); });
     if (!type) type = "fagstoff";
     var h1 = main.querySelector("h1");
     if (!h1) return;
@@ -757,7 +765,7 @@
     seksjon.appendChild(lag("h2", "", "Emner i temaet"));
     var rutenett = lag("div", "emnekort");
     grupper.forEach(function (e) {
-      var tellbare = e.sider.filter(function (s) { return s.type === "fagstoff"; });
+      var tellbare = e.sider.filter(function (s) { return s.type === "fagstoff" && !s.fordypning; });
       var ferdige = tellbare.filter(function (s) { return erFerdig(s.fil); }).length;
       var forste = tellbare[0];
       var kort = forste ? lenke(forste.fil, "", "emnekort-kort") : lag("div", "emnekort-kort tomt");
