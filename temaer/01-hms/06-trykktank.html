@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Trykktanken – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.trekant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:640px){.trekant{grid-template-columns:1fr}}
+.side-knapp{display:grid;gap:8px}
+.eks-bar{position:relative;height:46px;border-radius:8px;overflow:hidden;margin:16px 0 6px;background:#9aa3ad}
+.eks-bar div{position:absolute;top:0;bottom:0}
+.eks-bar .mk{width:4px;background:var(--ink);top:-4px;bottom:-4px;box-shadow:0 0 0 2px var(--bg)}
+.eks-akse{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.loto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:640px){.loto{grid-template-columns:1fr}}
+.loto button{display:block;width:100%;text-align:left;margin-bottom:8px;font-weight:400}
+.loto ol{margin:0;padding-left:24px;min-height:120px}
+.loto ol li{padding:6px 4px;border-bottom:1px solid var(--line)}
+.loto ol li.r{color:var(--ok);font-weight:600}.loto ol li.f{color:var(--bad);font-weight:600}
+.ost label{display:flex;gap:8px;align-items:center;font-weight:400;margin:4px 0}
+/* Trykk, nivå og reaktor (fra Prosessikkerhet Vg2, modul 4) */
+:root{--c-reg:var(--blue);--c-alm:light-dark(#a87400,#f5c400);--c-trp:var(--red);--c-psv:light-dark(#c2410c,#f08a4b);--water:light-dark(#a9d3e8,#2a5c74);--reg-soft:light-dark(#e1ecf6,#1c2f38)}
+.innhold{display:flex;flex-wrap:wrap;gap:6px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:15px}
+.innhold a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+.innhold a:hover{border-color:var(--ink)}
+.pid-wrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.pid{display:block;width:100%;min-width:620px;height:auto;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace}
+.pid text{fill:var(--ink);font-size:11px}
+.pid .lbl2{fill:var(--dim);font-size:10.5px}
+.pid .ln{stroke:var(--ink);stroke-width:2;fill:none}
+.pid .vessel{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+.pid .valve{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid g.lay{--c:var(--ink)}
+.pid g.reg{--c:var(--c-reg)}.pid g.alm{--c:var(--c-alm)}.pid g.trp{--c:var(--c-trp)}.pid g.psv{--c:var(--c-psv)}
+.pid g.lay .sig{stroke:var(--c);stroke-width:1.8;stroke-dasharray:5 4;fill:none}
+.pid g.lay .imp{stroke:var(--c);stroke-width:2;fill:none}
+.pid g.lay .bub,.pid g.lay .box,.pid g.lay .vl{fill:var(--bg);stroke:var(--c);stroke-width:2}
+.pid g.lay .bt,.pid g.lay .tg{fill:var(--c);font-size:10.5px;font-weight:600}
+.pid g.lay.on .bub,.pid g.lay.on .box,.pid g.lay.on .vl{fill:var(--c)}
+.pid g.lay.on .bt{fill:var(--bg)}
+.pid g.lay.on .sig{stroke-width:3}
+.pid g.lay.on .imp{stroke-width:3.5}
+.pid g.lay.dead{opacity:.35}
+.pid .pv{font-family:var(--head);font-size:26px;font-weight:700}
+.pid .water{fill:var(--water)}
+.pid .tankbg{fill:var(--bg)}
+.pid .tankol{fill:none;stroke:var(--ink);stroke-width:2.5}
+.pid .mark{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 3}
+.pid .flow{stroke:var(--water);stroke-width:5;fill:none;stroke-dasharray:8 8;animation:fl .8s linear infinite}
+.pid .off{display:none}
+.pid .pump{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid .pump.run{fill:var(--reg-soft);stroke:var(--c-reg)}
+.pid .pump.trip{stroke:var(--c-trp)}
+.pid .pvs{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+@keyframes fl{to{stroke-dashoffset:-16}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:var(--dim)}
+.legend i{display:inline-block;width:22px;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+.ladder{display:flex;flex-direction:column;gap:4px;margin-top:14px;font-size:15px}
+.ladder div{display:grid;grid-template-columns:70px 14px 1fr;gap:10px;align-items:center;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ladder .sw{width:14px;height:14px;border-radius:3px}
+.ladder div.hit{border-color:var(--ink);font-weight:700}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:16px;background:var(--bg)}
+.fb.ok{border-left:5px solid var(--ok)}.fb.mid{border-left:5px solid var(--c-alm)}.fb.bad{border-left:5px solid var(--c-trp)}
+.state{display:inline-block;font:700 15px/1.2 var(--head);padding:4px 10px;border-radius:5px;vertical-align:middle}
+.state.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.state.mid{background:color-mix(in srgb,var(--yel) 28%,transparent);color:var(--warn)}
+.state.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.nv-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:14px}
+.nv-ctl fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.nv-ctl legend{font-weight:700;font-size:14px;color:var(--dim);padding:0 4px}
+.nv-ctl label.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.35}
+.nv-ctl label.cb input{margin-top:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.nv-status{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-top:14px;font-size:15px}
+.nv-status .state{justify-self:start}
+.nv-log{list-style:none;margin:6px 0 0;padding:8px 10px;max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14px;display:flex;flex-direction:column;gap:3px}
+.nv-log:empty::before{content:"Ingen hendelser ennå. Start simuleringen.";color:var(--dim)}
+.nv-log .tid{color:var(--dim);margin-right:6px;font-variant-numeric:tabular-nums}
+.readout{font:700 28px/1.2 var(--head);margin-top:10px;display:flex;gap:12px;align-items:center}
+.bars{display:grid;grid-template-columns:120px 1fr 48px;gap:8px 10px;align-items:center;margin-top:12px;font-size:15px}
+.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;transition:width .2s}
+details.mer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+.ws-tbl input[type=text]{width:100%;min-width:110px;font:15px 'Source Sans 3',system-ui,sans-serif;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ws-tbl select{min-height:36px}
+.ws-tbl td.c,.ws-tbl th.c{text-align:center}
+.ws textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.pid .flow{animation:none}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Trykktanken</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1</div>
+<p class="ingress">En trykktank er sikret med fire lag: regulering, høy alarm, høy-høy-alarm med nedstengning og sikkerhetsventil. Øk trykket og se hvilke lag som slår inn.</p>
+
+<div class="sim" id="trykktank">
+  <h2>Simulering: øk trykket i tanken</h2>
+  <p class="hint">Flytt glideren og se hvilke lag som slår inn. Kryss deretter av for at PT-101 svikter, og øk trykket igjen.</p>
+  <div class="pid-wrap"><svg class="pid" id="pid" viewBox="0 0 720 340" role="img" aria-label="Flytskjema av trykktank V-101 med regulering, høy alarm, høy-høy-alarm med nedstengning og sikkerhetsventil">
+        <!-- Prosesslinjer -->
+        <line class="ln" x1="20" y1="290" x2="300" y2="290"/>
+        <polygon class="ln" points="294,285 300,290 294,295" style="fill:var(--ink)"/>
+        <text x="20" y="282">Innløp</text>
+        <polyline class="ln" points="410,100 410,80 700,80"/>
+        <polygon class="ln" points="694,75 700,80 694,85" style="fill:var(--ink)"/>
+        <text x="712" y="70" text-anchor="end">Til prosess</text>
+        <line class="ln" x1="330" y1="100" x2="330" y2="72"/>
+        <!-- Tank -->
+        <rect class="vessel" x="300" y="100" width="140" height="220" rx="28"/>
+        <text x="370" y="140" text-anchor="middle" style="font-weight:500">V-101</text>
+        <text x="370" y="208" text-anchor="middle" class="pv" id="pvText">5,0 bar</text>
+        <text x="370" y="226" text-anchor="middle" class="lbl2">faktisk trykk</text>
+
+        <!-- PSV -->
+        <g class="lay psv" id="gPsv">
+          <line class="imp" x1="318" y1="60" x2="110" y2="60"/>
+          <polygon class="imp" points="116,55 110,60 116,65" style="fill:var(--c)"/>
+          <polygon class="vl" points="322,72 338,72 330,60"/>
+          <polygon class="vl" points="318,52 318,68 330,60"/>
+          <polyline class="imp" points="330,60 330,52 324,48 336,44 324,40 336,36 330,32 330,26"/>
+          <text x="344" y="44" class="tg">PSV-101</text>
+          <text x="344" y="57" class="lbl2">åpner ved 10 bar</text>
+          <text x="110" y="52" class="lbl2">Til fakkel</text>
+        </g>
+
+        <!-- Regulering -->
+        <g class="lay reg" id="gReg">
+          <line class="imp" x1="440" y1="150" x2="488" y2="150"/>
+          <circle class="bub" cx="510" cy="150" r="22"/>
+          <text class="bt" x="510" y="147" text-anchor="middle">PT</text><text class="bt" x="510" y="160" text-anchor="middle">101</text>
+          <line class="sig" x1="532" y1="150" x2="618" y2="150"/>
+          <circle class="bub" cx="640" cy="150" r="22"/>
+          <line class="imp" x1="618" y1="150" x2="662" y2="150"/>
+          <text class="bt" x="640" y="145" text-anchor="middle">PIC</text><text class="bt" x="640" y="164" text-anchor="middle">101</text>
+          <line class="sig" x1="640" y1="128" x2="640" y2="104"/>
+          <polygon class="vl" points="628,72 628,88 640,80"/><polygon class="vl" points="652,72 652,88 640,80"/>
+          <line class="imp" x1="640" y1="80" x2="640" y2="94"/>
+          <rect class="box" x="632" y="94" width="16" height="10"/>
+          <text x="620" y="72" text-anchor="end" class="tg">PCV-101</text>
+          <text x="575" y="190" class="lbl2" id="picRead">PIC viser 5,0 bar</text>
+        </g>
+
+        <!-- Høy alarm -->
+        <g class="lay alm" id="gAlm">
+          <line class="imp" x1="440" y1="250" x2="488" y2="250"/>
+          <circle class="bub" cx="510" cy="250" r="22"/>
+          <text class="bt" x="510" y="247" text-anchor="middle">PAH</text><text class="bt" x="510" y="260" text-anchor="middle">102</text>
+          <line class="sig" x1="532" y1="250" x2="588" y2="250"/>
+          <rect class="box" x="588" y="236" width="124" height="28" rx="4"/>
+          <text class="bt" x="650" y="254" text-anchor="middle">Alarm til operatør</text>
+        </g>
+
+        <!-- Høy-høy med nedstengning -->
+        <g class="lay trp" id="gTrp">
+          <line class="imp" x1="252" y1="190" x2="300" y2="190"/>
+          <circle class="bub" cx="230" cy="190" r="22"/>
+          <text class="bt" x="230" y="187" text-anchor="middle">PAHH</text><text class="bt" x="230" y="200" text-anchor="middle">103</text>
+          <line class="sig" x1="208" y1="190" x2="180" y2="190"/>
+          <rect class="box" x="110" y="176" width="70" height="28" rx="4"/>
+          <text class="bt" x="145" y="194" text-anchor="middle">SIS</text>
+          <text class="lbl2" x="145" y="168" text-anchor="middle">sikkerhetssystem</text>
+          <line class="sig" x1="145" y1="204" x2="145" y2="262"/>
+          <rect class="box" x="137" y="262" width="16" height="10"/>
+          <line class="imp" x1="145" y1="272" x2="145" y2="290"/>
+          <polygon class="vl" points="133,282 133,298 145,290"/><polygon class="vl" points="157,282 157,298 145,290"/>
+          <text class="tg" x="145" y="315" text-anchor="middle">XV-101</text>
+          <text class="lbl2" x="145" y="328" text-anchor="middle">nødavstengning</text>
+        </g>
+      </svg></div>
+  <div class="legend">
+    <span><i style="border-color:var(--c-reg)"></i>Regulering</span>
+    <span><i style="border-color:var(--c-alm)"></i>Høy alarm</span>
+    <span><i style="border-color:var(--c-trp)"></i>Høy-høy og nedstengning</span>
+    <span><i style="border-color:var(--c-psv);border-top-style:solid"></i>Mekanisk sikring</span>
+    <span><i style="border-color:var(--dim)"></i>Stiplet = elektrisk signal</span>
+  </div>
+  <label for="tankP" style="margin-top:16px;display:block">Trykk i tanken</label>
+  <input type="range" id="tankP" min="0" max="11" step="0.1" value="5">
+  <label style="display:flex;gap:8px;align-items:center;margin-top:6px;font-weight:400"><input type="checkbox" id="ptFail"> PT-101 svikter og viser fast 5,0 bar</label>
+  <div class="ladder" id="ladder">
+    <div data-p="10"><span>10,0 bar</span><span class="sw" style="background:var(--c-psv)"></span><span>Designtrykk. PSV-101 åpner mot fakkel</span></div>
+    <div data-p="8.5"><span>8,5 bar</span><span class="sw" style="background:var(--c-trp)"></span><span>PAHH-103: SIS stenger XV-101</span></div>
+    <div data-p="7.5"><span>7,5 bar</span><span class="sw" style="background:var(--c-alm)"></span><span>PAH-102: alarm til operatør</span></div>
+    <div data-p="5"><span>5,0 bar</span><span class="sw" style="background:var(--c-reg)"></span><span>Settpunkt for PIC-101</span></div>
+  </div>
+  <div class="fb ok" id="pidFb"></div>
+  <details class="mer"><summary>Hva betyr bokstavene i taggene?</summary>
+    <div class="scroll"><table>
+      <thead><tr><th>Bokstav</th><th>Betydning</th><th>Eksempel</th></tr></thead>
+      <tbody>
+        <tr><td><strong>P</strong></td><td>Trykk (pressure)</td><td>Første bokstav sier hva som måles</td></tr>
+        <tr><td><strong>T</strong></td><td>Transmitter, sender målesignalet</td><td>PT-101</td></tr>
+        <tr><td><strong>I</strong></td><td>Indikering, verdien vises</td><td>PIC-101</td></tr>
+        <tr><td><strong>C</strong></td><td>Kontroll, regulering</td><td>PIC-101</td></tr>
+        <tr><td><strong>A</strong></td><td>Alarm</td><td>PAH-102</td></tr>
+        <tr><td><strong>H / HH</strong></td><td>Høy / høy-høy</td><td>PAHH-103</td></tr>
+        <tr><td><strong>V / XV / PSV</strong></td><td>Ventil / avstengningsventil / trykksikkerhetsventil</td><td>PCV-101, XV-101, PSV-101</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin:0">Tallene er løpenumre som binder instrumentene sammen i en sløyfe. Første bokstav for nivå er <strong>L</strong> (level), som i LT og LAH i neste simulering.</p>
+  </details>
+  <details class="mer"><summary>Spørsmål til diskusjon</summary>
+    <ol style="margin:0">
+      <li>Hvorfor skal ikke XV-101 åpne seg igjen av seg selv når trykket faller?</li>
+      <li>Hvorfor er settpunktene lagt i rekkefølgen 5 – 7,5 – 8,5 – 10 bar? Hva skjer hvis PAHH ligger over åpningstrykket til PSV-en?</li>
+      <li>Hvilket lag er det eneste som virker ved strømbrudd?</li>
+      <li>Hvilke av lagene er forebyggende barrierer, og hvilke er konsekvensreduserende, hvis topphendelsen er «tanken revner»?</li>
+    </ol>
+  </details>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Hvorfor har hvert lag sin egen trykkmåler?</summary><p>Hvis alle lagene brukte samme måler, ville én feil på måleren slå ut alle lagene samtidig. Det kalles en felles feil.</p></details>
+<details><summary>2. Hvilket lag er det eneste som virker ved strømbrudd?</summary><p>Sikkerhetsventilen PSV-101. Den åpner av fjærkraft.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>settpunkt</td><td>Verdien reguleringen prøver å holde, for eksempel 5,0 bar.</td><td>setpoint</td></tr>
+    <tr><td>nødavstengning</td><td>Automatisk stenging av ventiler eller utstyr når en farlig grense er nådd.</td><td>emergency shutdown (ESD)</td></tr>
+    <tr><td>felles feil</td><td>Én feil som slår ut flere sikringslag samtidig, for eksempel fordi de bruker samme måler.</td><td>common cause failure</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="06-trykk.html">Trykk og løpske reaksjoner</a>.</li>
+  <li>Instrumenter og flytskjema i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const E = id => document.getElementById(id);
+  const nb = v => v.toFixed(1).replace('.', ',');
+  /* Trykktank */
+  const tP = E('tankP'), pf = E('ptFail');
+  function upTank() {
+    const p = +tP.value, fail = pf.checked;
+    E('pvText').textContent = nb(p) + ' bar';
+    E('picRead').textContent = 'PIC viser ' + (fail ? '5,0' : nb(p)) + ' bar';
+    const reg = E('gReg');
+    reg.classList.toggle('dead', fail); reg.classList.toggle('on', !fail && p > 6);
+    E('gAlm').classList.toggle('on', p >= 7.5);
+    E('gTrp').classList.toggle('on', p >= 8.5);
+    E('gPsv').classList.toggle('on', p >= 10);
+    document.querySelectorAll('#ladder div').forEach(d => d.classList.toggle('hit', p >= +d.dataset.p));
+    let t;
+    if (p < 6) t = 'Normal drift. PIC-101 holder trykket nær settpunktet ved å åpne eller strupe PCV-101.';
+    else if (p < 7.5) t = 'Trykket stiger. PIC-101 åpner PCV-101 mer for å slippe ut gass. Ingen alarm ennå.';
+    else if (p < 8.5) t = 'PAH-102 gir alarm. Operatøren må finne årsaken og gripe inn, for eksempel redusere tilførselen.';
+    else if (p < 10) t = 'PAHH-103 har løst ut. SIS stenger XV-101 automatisk, uavhengig av operatøren og reguleringen. Ventilen må tilbakestilles manuelt etter at årsaken er funnet.';
+    else t = 'PSV-101 åpner av fjærkraft og slipper gass til fakkel. Den trenger verken strøm, signal eller instrumentluft.' + (p > 10.5 ? ' Trykket er nå over designtrykket. Hvis PSV-en ikke åpner, kan tanken revne. Derfor testes sikkerhetsventiler jevnlig.' : '');
+    if (fail && p > 5.5) t = 'PT-101 viser fortsatt 5,0 bar, så PIC-101 tror alt er normalt og gjør ingenting. ' + (p < 7.5 ? 'Ingen andre lag har slått inn ennå.' : 'Men de andre lagene har egne målere og ser det faktiske trykket. ') + (p >= 7.5 ? t : '');
+    const fb = E('pidFb');
+    fb.className = 'fb ' + (p < 7.5 && !(fail && p > 5.5) ? 'ok' : p < 8.5 ? 'mid' : 'bad');
+    fb.textContent = t;
+  }
+  tP.addEventListener('input', upTank); pf.addEventListener('change', upTank); upTank();
+}
+</script>
+</body>
+</html>

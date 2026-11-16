@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risikovurdering på skolelaben – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.matrise{display:grid;grid-template-columns:auto repeat(5,minmax(0,1fr));gap:4px;max-width:520px}
+.matrise .ax{font-size:13px;font-weight:600;color:var(--dim);display:grid;place-items:center;text-align:center;padding:2px}
+.matrise button{min-height:52px;padding:0;border:2px solid transparent;font-weight:700;color:#17191c;border-radius:6px}
+.matrise button.l{background:#7fcf9c}.matrise button.m{background:#f5d65a}.matrise button.h{background:#f08a7e}
+.matrise button.valgt{border-color:var(--ink);outline:3px solid var(--ink);outline-offset:1px}
+.mwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+@media(max-width:700px){.mwrap{grid-template-columns:1fr}}
+.pyr{display:grid;gap:6px;margin:14px auto;max-width:560px}
+.pyr div{color:#fff;font-weight:700;text-align:center;padding:10px 8px;border-radius:6px;font-family:var(--head);font-size:19px;margin:0 auto}
+.pyr small{display:block;font:400 14px 'Source Sans 3';opacity:.95}
+.tiltak li{display:grid;grid-template-columns:1fr minmax(160px,220px);gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.tiltak{padding:0;margin:0}
+.tiltak li.r{box-shadow:inset 4px 0 0 var(--ok);padding-left:10px}.tiltak li.f{box-shadow:inset 4px 0 0 var(--bad);padding-left:10px}
+@media(max-width:560px){.tiltak li{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Risikovurdering på skolelaben</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK9, ADK10, PT1</div>
+<p class="ingress">Før hver labøvelse skal det finnes en skriftlig risikovurdering. Her lærer du å lese og fylle ut skjemaet vi bruker, med et ferdig eksempel.</p>
+
+<h2>Skjemaet vi bruker</h2>
+<p>Skolen bruker en mal fra <strong>CHESSE</strong>, et nettsted for sikkerhet i kjemi- og naturfagundervisningen. Du finner malen og veiledning på <a href="https://chesse.org/no/risikovurdering">chesse.org/no/risikovurdering</a>. Skjemaet har disse delene:</p>
+<ol>
+  <li><strong>Beskrivelse:</strong> kort om hva som skjer i forsøket.</li>
+  <li><strong>Faremomenter:</strong> alt som kan skade helse, miljø eller sikkerhet: kjemikaliene du bruker, stoffene som dannes, utstyret og selve arbeidet.</li>
+  <li><strong>Hva kan skje?</strong> For kjemikalier skriver du H-setningene fra sikkerhetsdatabladet.</li>
+  <li><strong>Forebyggende tiltak:</strong> hva du gjør for å fjerne faren eller redusere risikoen.</li>
+  <li><strong>Tiltak ved uhell:</strong> hva du gjør hvis noe går galt, og hvilket utstyr som må være klart. Svaret finner du i seksjon 4, 5 og 6 i sikkerhetsdatabladet.</li>
+  <li><strong>Avfallshåndtering:</strong> hvor restene skal. Se seksjon 13 i sikkerhetsdatabladet.</li>
+  <li><strong>Dato, vurdert av og klasse.</strong></li>
+</ol>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips</div>
+  <p>Husk stoffene som <em>dannes</em> i forsøket, ikke bare de du heller i. I eksempelet under er klorgassen den største faren, og den står ikke på noen flaske.</p>
+</div>
+
+<h2>Eksempel: elektrolyse av kobber(II)klorid</h2>
+<p><strong>Beskrivelse:</strong> To grafittelektroder koblet til en strømkilde med lav likespenning settes ned i en løsning av kobber(II)klorid, CuCl<sub>2</sub>(aq), på 1 mol/L. Kobber legger seg på den negative elektroden, og det dannes klorgass ved den positive elektroden.</p>
+<div class="scroll"><table>
+  <thead><tr><th>Faremoment</th><th>Hva kan skje?</th><th>Forebyggende tiltak</th><th>Tiltak ved uhell</th></tr></thead>
+  <tbody>
+    <tr><td>Kobber(II)kloridløsning, 1 mol/L</td><td>Irriterer huden (H315). Gir alvorlig øyeirritasjon (H319). Meget giftig, med langtidsvirkning, for liv i vann (H410).</td><td>Vernebriller, labfrakk og hansker. Hell forsiktig og bruk lite løsning.</td><td>Sprut i øyet: skyll med vann i øyeskylleren i minst 15 minutter og si fra. Søl: tørk opp og legg tørkepapiret i avfall for tungmetaller.</td></tr>
+    <tr><td>Klorgass som dannes ved den positive elektroden</td><td>Giftig ved innånding og irriterer øyne og luftveier.</td><td>Gjør forsøket i avtrekksskap. Kort tid og lav spenning, slik at det dannes lite gass.</td><td>Slå av strømmen. Kjenner du lukt eller får hoste, går du ut i frisk luft og sier fra.</td></tr>
+    <tr><td>Strømkilde og ledninger</td><td>Kortslutning eller støt hvis ledninger er skadet eller våte.</td><td>Lav spenning. Sjekk ledningene før bruk. Hold elektrodene fra hverandre.</td><td>Slå av strømmen før du rører utstyret.</td></tr>
+  </tbody>
+</table></div>
+<p><strong>Avfallshåndtering:</strong> Rester av kobber(II)kloridløsning tømmes på restflaske for tungmetaller. De skal ikke i vasken. Kobberet på elektroden tørkes av og legges i tungmetallavfall.</p>
+<p><strong>Kommentarer:</strong> Sjekk at avtrekket virker før dere starter.</p>
+<p class="liten">H-setningene er hentet fra risikovurderingen i skolens forsøksmappe. Sjekk alltid sikkerhetsdatabladet for løsningen dere faktisk bruker, for klassifiseringen avhenger av konsentrasjonen.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>En ferdig risikovurdering fra en kollega eller en forsøksbeskrivelse er et godt utgangspunkt, men den må alltid sjekkes for din gruppe, ditt rom og dine kjemikalier. Står det et stoff du ikke har sjekket i databladet, er risikovurderingen ikke ferdig.</p>
+</div>
+
+<h2>Skjema til eget bruk</h2>
+<p>Skriv av tabellen, eller last ned malen fra CHESSE. Fyll ut én rad per faremoment.</p>
+<div class="scroll"><table>
+  <thead><tr><th>Faremoment</th><th>Hva kan skje?</th><th>Forebyggende tiltak</th><th>Tiltak ved uhell</th></tr></thead>
+  <tbody>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </tbody>
+</table></div>
+<p>Under tabellen skriver du avfallshåndtering, kommentarer, dato, hvem som har vurdert og klasse.</p>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hvor i sikkerhetsdatabladet finner du H-setningene til skjemaet?</p>
+  <ul>
+    <li data-riktig>Seksjon 2</li>
+    <li>Seksjon 8</li>
+    <li>Seksjon 13</li>
+  </ul>
+  <p class="forklaring">Seksjon 2, fareidentifikasjon, har klassifisering, faresymboler, H- og P-setninger.</p>
+</div>
+<div class="quiz">
+  <p>2. Hvorfor gjøres elektrolysen av kobber(II)klorid i avtrekksskap?</p>
+  <ul>
+    <li>Fordi kobber(II)kloridløsningen er brannfarlig</li>
+    <li data-riktig>Fordi det dannes klorgass ved den positive elektroden</li>
+    <li>Fordi strømkilden kan bli varm</li>
+  </ul>
+  <p class="forklaring">Klorgass er giftig og irriterer luftveiene. Avtrekket fører gassen bort fra deg.</p>
+</div>
+<details><summary>3. Du har fått en ferdig risikovurdering fra læreren. Hva må du likevel sjekke?</summary><p>At den passer for din gruppe, ditt rom og de kjemikaliene og konsentrasjonene du faktisk bruker. At du vet hvor nødutstyret er. Og at avfallet har en plass.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>faremoment</td><td>En ting i forsøket som kan gi skade, for eksempel et kjemikalie, en gass som dannes eller et elektrisk apparat.</td><td>hazard</td></tr>
+    <tr><td>forebyggende tiltak</td><td>Det du gjør på forhånd for å hindre at noe går galt.</td><td>preventive measure</td></tr>
+    <tr><td>restflaske</td><td>En merket flaske der kjemikalierester samles før de leveres som farlig avfall.</td><td>waste container</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>CHESSE: <a href="https://chesse.org/no/risikovurdering">chesse.org/no/risikovurdering</a>. Mal og veiledning for risikovurdering.</li>
+  <li><a href="02-sikkerhetsdatablad.html">Sikkerhetsdatablad og eksponering</a>: slik finner du fram i databladet.</li>
+  <li>Risikovurderingene til labøvelsene i <a href="../07-laboratorium-og-analyse/index.html">Laboratorium og analyse</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+</body>
+</html>

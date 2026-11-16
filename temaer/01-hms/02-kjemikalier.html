@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faremerking av kjemikalier – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.picto{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:10px}
+.picto button{padding:6px;background:var(--bg);border:2px solid var(--line);border-radius:10px;min-height:auto}
+.picto button[aria-pressed=true]{border-color:var(--ink);background:var(--bg)}
+.picto img{width:100%;height:auto;display:block}
+.picto span{display:block;overflow-wrap:normal;hyphens:manual;font-size:12.5px;font-weight:600;color:var(--dim)}
+#p-info{margin-top:14px}
+#p-info h3{margin:0 0 4px}
+.sds details{border-bottom:1px solid var(--line)}
+.sds summary{cursor:pointer;padding:10px 4px;font-weight:600;min-height:44px;display:flex;gap:10px;align-items:center}
+.sds summary b{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:6px;background:var(--line);font-size:14px}
+.sds .ofte summary b{background:var(--red);color:#fff}
+.sds details>p{padding:0 4px 10px 44px;margin:0}
+.lager{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.lager{grid-template-columns:1fr}}
+.etikettbilde{display:grid;grid-template-columns:auto 1fr;gap:14px;border:2px solid var(--ink);border-radius:8px;padding:14px;background:#fff;color:#17191c;font-size:15px}
+.etikettbilde img{width:72px;height:72px}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Faremerking av kjemikalier</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK9, PT1</div>
+<p class="ingress">Før du åpner en flaske eller starter en pumpe, må du vite hva stoffet kan gjøre med deg. Den første informasjonen du får, står på etiketten.</p>
+
+<h2>Faremerking etter CLP</h2>
+<p><strong>CLP</strong> er regelverket som bestemmer hvordan farlige kjemikalier skal klassifiseres og merkes i EU og Norge. Alle som selger et farlig kjemikalie, må merke emballasjen med en etikett. Den inneholder alltid:</p>
+<div class="etikettbilde" aria-label="Eksempel på etikett">
+  <img src="bilder/ghs02.png" alt="Farepiktogram: brannfarlig">
+  <div><strong style="font-size:18px">ACETON</strong> · Eksempel på etikett<br>
+  <strong>Signalord: FARE</strong><br>
+  H225 Meget brannfarlig væske og damp.<br>
+  P210 Holdes vekk fra varme, varme overflater, gnister, åpen flamme og andre antennelseskilder. Røyking forbudt.<br>
+  <span style="color:#555">Leverandør: navn, adresse og telefonnummer</span></div>
+</div>
+<p style="margin-top:14px">Etiketten forteller deg dette:</p>
+<ul>
+  <li><strong>Farepiktogram:</strong> et rødt rutersymbol som viser hvilken type fare stoffet har.</li>
+  <li><strong>Signalord:</strong> <em>Fare</em> brukes for de alvorligste farene, <em>Advarsel</em> for de mindre alvorlige.</li>
+  <li><strong>H-setninger</strong> (fareutsagn) beskriver faren, for eksempel H314 «Gir alvorlige etseskader på hud og øyne».</li>
+  <li><strong>P-setninger</strong> (sikkerhetssetninger) sier hva du skal gjøre, for eksempel P280 «Benytt vernehansker/verneklær/vernebriller/ansiktsskjerm».</li>
+</ul>
+
+<div class="boks tips">
+  <div class="boks-tittel">Slik leser du koden</div>
+  <p>Tallet i en H-setning forteller hvilken type fare det gjelder: <strong>H2xx</strong> er fysiske farer (for eksempel brann og eksplosjon), <strong>H3xx</strong> er helsefarer og <strong>H4xx</strong> er miljøfarer. P-setningene følger samme tankegang: <strong>P2xx</strong> handler om forebygging, <strong>P3xx</strong> om hva du gjør ved uhell, <strong>P4xx</strong> om lagring og <strong>P5xx</strong> om avfall.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Faren avhenger av konsentrasjonen. Konsentrert natriumhydroksid er etsende (H314), mens en fortynnet løsning på 0,1 mol/L ikke trenger faremerking. Når du lager en løsning selv, skal du merke flasken med innhold, konsentrasjon, dato og faresymbol hvis løsningen er farlig.</p>
+</div>
+
+<p>På neste side kan du utforske alle de ni farepiktogrammene.</p>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hvilket signalord brukes for de alvorligste farene?</p>
+  <ul>
+    <li>Advarsel</li>
+    <li data-riktig>Fare</li>
+    <li>Forsiktig</li>
+  </ul>
+  <p class="forklaring">«Fare» brukes for de alvorligste farene, «Advarsel» for de mindre alvorlige.</p>
+</div>
+<div class="quiz">
+  <p>2. En etikett har koden H314. Hva slags informasjon er det?</p>
+  <ul>
+    <li>Hva du skal gjøre for å beskytte deg</li>
+    <li data-riktig>Hvilken fare stoffet har</li>
+    <li>Hvordan stoffet skal transporteres</li>
+  </ul>
+  <p class="forklaring">H betyr «hazard», altså fare. H314 betyr at stoffet gir alvorlige etseskader på hud og øyne. H3xx er helsefarer.</p>
+</div>
+<div class="quiz">
+  <p>3. Hvilken setning er en P-setning?</p>
+  <ul>
+    <li>Meget brannfarlig væske og damp.</li>
+    <li>Gir alvorlige etseskader på hud og øyne.</li>
+    <li data-riktig>Benytt vernehansker og vernebriller.</li>
+  </ul>
+  <p class="forklaring">P-setninger (sikkerhetssetninger) sier hva du skal gjøre. De to andre beskriver en fare og er H-setninger.</p>
+</div>
+<details><summary>4. Hva er forskjellen på en H-setning og en P-setning?</summary><p>H-setningen beskriver faren, altså hva stoffet kan gjøre. P-setningen sier hva du skal gjøre for å beskytte deg: forholdsregler, førstehjelp, lagring og avfall.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>CLP</td><td>EU-regelverket som bestemmer hvordan farlige kjemikalier skal klassifiseres og merkes. Det gjelder også i Norge.</td><td>CLP Regulation</td></tr>
+    <tr><td>farepiktogram</td><td>Et rødt rutersymbol på etiketten som viser hvilken type fare et kjemikalie har.</td><td>hazard pictogram</td></tr>
+    <tr><td>signalord</td><td>Ordet «Fare» eller «Advarsel» på etiketten. Det viser hvor alvorlig faren er.</td><td>signal word</td></tr>
+    <tr><td>H-setning</td><td>En standard setning med kode som beskriver faren ved et kjemikalie, for eksempel H225.</td><td>hazard statement</td></tr>
+    <tr><td>P-setning</td><td>En standard setning med kode som sier hvordan du skal beskytte deg, for eksempel P280.</td><td>precautionary statement</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="02-sikkerhetsdatablad.html">Sikkerhetsdatablad og eksponering</a>: der finner du alle H- og P-setningene for et stoff.</li>
+  <li>Etikettene på flaskene på skolelaben. Finn signalord, H- og P-setninger på tre ulike kjemikalier.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+</body>
+</html>

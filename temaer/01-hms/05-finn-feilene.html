@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Finn feilene på labbenken – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.avtrekk{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:680px){.avtrekk{grid-template-columns:1fr}}
+.stor{font:700 clamp(32px,6vw,48px)/1 var(--head)}
+#lab svg{cursor:crosshair}
+#lab .hot{fill:transparent;cursor:pointer}
+#lab .hot.funnet{stroke:#0d7f45;stroke-width:5;fill:#0d7f4522}
+#funn{columns:2 260px;margin:12px 0 0;padding-left:20px}
+#funn li.skjult{color:var(--dim)}
+@keyframes flyt{to{stroke-dashoffset:-20}}
+.luft{stroke-dasharray:6 4;animation:flyt .8s linear infinite}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Finn feilene på labbenken</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Øv deg på å se farer. På laben og i anlegget er det ofte små ting som er feil.</p>
+
+<div class="sim" id="lab">
+  <h2>Finn feilene på labbenken</h2>
+  <p class="hint">Det er seks HMS-feil på bildet. Trykk der du ser en feil.</p>
+  <div class="fig panel" style="padding:6px">
+  <svg viewBox="0 0 760 400" role="img" aria-label="Tegning av en labbenk med seks feil">
+    <rect width="760" height="400" fill="#e9eef2"/>
+    <rect y="372" width="760" height="28" fill="#c9cdd2"/>
+    <rect x="20" y="70" width="520" height="10" fill="#9aa3ad"/>
+    <g><rect x="40" y="30" width="26" height="40" rx="3" fill="#c8a35a"/><rect x="80" y="36" width="22" height="34" rx="3" fill="#7aa6c9"/><rect x="40" y="44" width="26" height="12" fill="#fff"/><rect x="80" y="48" width="22" height="10" fill="#fff"/></g>
+    <rect x="20" y="250" width="540" height="16" fill="#3d4651"/>
+    <rect x="30" y="266" width="520" height="106" fill="#b7bec6"/>
+    <g stroke="#9aa3ad" stroke-width="2"><line x1="203" y1="270" x2="203" y2="368"/><line x1="376" y1="270" x2="376" y2="368"/></g>
+    <!-- 1 kaffekopp -->
+    <rect x="92" y="216" width="32" height="34" rx="4" fill="#c0392b"/><path d="M124 224q14 4 0 18" fill="none" stroke="#c0392b" stroke-width="5"/>
+    <path d="M100 208q-6-10 2-18M114 208q-6-10 2-18" stroke="#888" stroke-width="2.5" fill="none"/>
+    <!-- 2 flaske uten etikett + merket flaske -->
+    <rect x="166" y="180" width="30" height="70" rx="5" fill="#7fa7c4"/><rect x="174" y="166" width="14" height="16" fill="#555"/>
+    <rect x="216" y="180" width="30" height="70" rx="5" fill="#7fa7c4"/><rect x="224" y="166" width="14" height="16" fill="#555"/><rect x="216" y="200" width="30" height="26" fill="#fff"/><text x="231" y="217" font-size="10" text-anchor="middle" font-family="Arial">HCl 2M</text>
+    <!-- 3 bunsenbrenner + åpen acetonflaske -->
+    <rect x="300" y="238" width="44" height="12" rx="3" fill="#555"/><rect x="316" y="196" width="12" height="44" fill="#777"/>
+    <path d="M322 196c-10-14 2-26 0-38 8 12 10 24 0 38z" fill="#f39c12"/><path d="M322 194c-5-8 1-14 0-22 4 7 5 14 0 22z" fill="#3b82f6"/>
+    <rect x="364" y="192" width="34" height="58" rx="5" fill="#d9c27a"/><rect x="373" y="178" width="16" height="16" fill="#d9c27a"/>
+    <rect x="364" y="210" width="34" height="22" fill="#fff"/><text x="381" y="225" font-size="10" text-anchor="middle" font-family="Arial">Aceton</text>
+    <path d="M378 172q-6-10 2-18q6-8 0-16M388 172q6-10-2-18" stroke="#9a8a4a" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+    <!-- 4 kokeplate med ledning i søl -->
+    <rect x="438" y="226" width="70" height="24" rx="4" fill="#4b5563"/><circle cx="473" cy="226" r="18" fill="#9ca3af"/>
+    <ellipse cx="520" cy="250" rx="40" ry="5" fill="#60a5fa" opacity=".8"/>
+    <path d="M508 240q20 4 22 10t20 30q10 30 -10 60" fill="none" stroke="#111" stroke-width="4"/>
+    <!-- 5 avfallsbøtte med knust glass -->
+    <path d="M580 300h64l-8 72h-48z" fill="#6b7280"/>
+    <path d="M592 300l6-22 6 22M610 300l4-30 8 30M626 300l6-16 4 16" fill="#cfe8f7" stroke="#7aa6c9" stroke-width="2"/>
+    <!-- 6 gassflaske uten sikring -->
+    <g transform="rotate(-7 700 372)"><rect x="680" y="140" width="42" height="232" rx="18" fill="#2f855a"/><rect x="692" y="120" width="18" height="24" fill="#555"/><rect x="684" y="180" width="34" height="18" fill="#fff"/><text x="701" y="193" font-size="10" text-anchor="middle" font-family="Arial">N₂</text></g>
+    <rect x="740" y="0" width="20" height="372" fill="#d5dbe1"/>
+    <!-- treffområder -->
+    <g id="hots">
+      <circle class="hot" data-i="0" cx="110" cy="225" r="40"/>
+      <circle class="hot" data-i="1" cx="181" cy="210" r="38"/>
+      <circle class="hot" data-i="2" cx="355" cy="200" r="58"/>
+      <circle class="hot" data-i="3" cx="520" cy="262" r="46"/>
+      <circle class="hot" data-i="4" cx="612" cy="320" r="46"/>
+      <circle class="hot" data-i="5" cx="704" cy="250" r="60"/>
+    </g>
+  </svg>
+  </div>
+  <p id="lab-status" style="font-weight:700;margin:10px 0 0" aria-live="polite"></p>
+  <ol id="funn"></ol>
+  <div class="rad" style="margin-top:10px"><button type="button" id="lab-vis">Vis alle</button><button type="button" id="lab-reset">Start på nytt</button></div>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Hvorfor er en åpen acetonflaske ved siden av en bunsenbrenner så farlig?</summary><p>Aceton fordamper lett, og dampen er meget brannfarlig (H225). Dampen kan nå flammen og antennes, og brannen kan slå tilbake til flasken.</p></details>
+<details><summary>2. Se deg rundt på labbenken din neste gang dere har lab. Finner du noe som burde vært annerledes?</summary><p>Typiske ting er umerkede kolber, kjemikalier som ikke er satt tilbake, ledninger nær vann, og vesker eller jakker på benken.</p></details>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="05-laboratoriet.html">Grunnreglene på laben</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const F = [
+    ['Kaffekopp på labbenken', 'Mat og drikke er forbudt på laben. Kjemikalier kan havne i koppen eller på hendene og videre i munnen.'],
+    ['Flaske uten etikett', 'Alt skal være merket med innhold, konsentrasjon, dato og fare. En umerket flaske kan forveksles med noe annet.'],
+    ['Åpen acetonflaske ved siden av en bunsenbrenner', 'Acetondamp er meget brannfarlig og kan antennes av flammen. Sett på korken og hold brannfarlige væsker unna åpen flamme.'],
+    ['Strømledning i søl', 'Væske og strøm er en farlig kombinasjon. Tørk opp sølet og legg ledninger slik at de ikke ligger i væske.'],
+    ['Knust glass i vanlig søppel', 'Knust glass skal i egen beholder for glassavfall. Ellers kan renholderen skjære seg.'],
+    ['Gassflasken står ikke sikret', 'Gassflasker skal være festet med kjetting eller stropp. Velter flasken og ventilen knekker, kan den bli som en rakett.']
+  ];
+  const hots = [...document.querySelectorAll('#hots .hot')], funn = document.getElementById('funn'), st = document.getElementById('lab-status');
+  let fun = new Set();
+  const tegn = () => {
+    hots.forEach(h => h.classList.toggle('funnet', fun.has(+h.dataset.i)));
+    funn.innerHTML = F.map((f, i) => fun.has(i) ? `<li><strong>${f[0]}.</strong> ${f[1]}</li>` : `<li class="skjult">Ikke funnet ennå</li>`).join('');
+    st.textContent = fun.size === F.length ? 'Du fant alle seks feilene!' : `Du har funnet ${fun.size} av ${F.length} feil.`;
+  };
+  hots.forEach(h => h.addEventListener('click', () => { fun.add(+h.dataset.i); tegn(); }));
+  document.getElementById('lab-vis').addEventListener('click', () => { F.forEach((f, i) => fun.add(i)); tegn(); });
+  document.getElementById('lab-reset').addEventListener('click', () => { fun = new Set(); tegn(); });
+  tegn();
+}
+</script>
+</body>
+</html>

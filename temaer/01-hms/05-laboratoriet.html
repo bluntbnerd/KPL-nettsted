@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grunnreglene på laben – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.avtrekk{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:680px){.avtrekk{grid-template-columns:1fr}}
+.stor{font:700 clamp(32px,6vw,48px)/1 var(--head)}
+#lab svg{cursor:crosshair}
+#lab .hot{fill:transparent;cursor:pointer}
+#lab .hot.funnet{stroke:#0d7f45;stroke-width:5;fill:#0d7f4522}
+#funn{columns:2 260px;margin:12px 0 0;padding-left:20px}
+#funn li.skjult{color:var(--dim)}
+@keyframes flyt{to{stroke-dashoffset:-20}}
+.luft{stroke-dasharray:6 4;animation:flyt .8s linear infinite}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Grunnreglene på laben</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">På laben jobber du nært kjemikaliene, ofte med små mengder, men med mange ulike stoffer. Gode vaner er det som holder deg trygg. Disse reglene må du kunne før første labøvelse.</p>
+
+<h2>Grunnreglene på laben</h2>
+<ul>
+  <li><strong>Vernebriller og labfrakk</strong> hele tiden. Langt hår settes opp.</li>
+  <li><strong>Ingen mat, drikke eller snus</strong> på laben. Ingen kjemikalier i kjøleskap for mat.</li>
+  <li><strong>Aldri pipetter med munnen.</strong> Bruk peleusball eller pipettepumpe.</li>
+  <li><strong>Merk alt</strong> du lager: innhold, konsentrasjon, dato, navn og farepiktogram.</li>
+  <li><strong>Vit hvor nødutstyret er:</strong> øyeskyll, nøddusj, brannteppe, slokkeapparat og førstehjelpsutstyr.</li>
+  <li><strong>Hold orden.</strong> Rydd underveis og sett kjemikalier tilbake på plass når du er ferdig.</li>
+  <li><strong>Først vann, så syre.</strong> Når du fortynner konsentrert syre, heller du alltid syren langsomt i vannet. Hvis du heller vann i syre, kan blandingen koke opp og sprute.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Før hver øvelse: les fremgangsmåten og risikovurderingen, sjekk sikkerhetsdatabladet for stoffene du skal bruke, og finn nødutstyret. Er du usikker, spør læreren før du begynner.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Du skal fortynne konsentrert svovelsyre. Hva gjør du?</p>
+  <ul>
+    <li>Heller vann raskt i syren</li>
+    <li data-riktig>Heller syren langsomt i vannet</li>
+    <li>Blander dem i like store mengder samtidig</li>
+  </ul>
+  <p class="forklaring">Fortynning av konsentrert syre utvikler mye varme. Heller du syren i mye vann, fordeles varmen. Heller du vann i syre, kan blandingen koke og sprute.</p>
+</div>
+<div class="quiz">
+  <p>2. Hva skal stå på en flaske med en løsning du har laget selv?</p>
+  <ul>
+    <li>Bare navnet på stoffet</li>
+    <li>Navnet ditt og datoen</li>
+    <li data-riktig>Innhold, konsentrasjon, dato, hvem som har laget den og faresymbol hvis løsningen er farlig</li>
+  </ul>
+  <p class="forklaring">En umerket eller dårlig merket flaske kan forveksles. Den som finner den, må vite hva den inneholder og hvor farlig den er.</p>
+</div>
+<details><summary>3. Nevn fem typer nødutstyr som skal finnes på laben. Vet du hvor de står på skolelaben?</summary><p>Øyeskyll, nøddusj, brannteppe, brannslukningsapparat og førstehjelpsutstyr.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>verneutstyr</td><td>Utstyr du har på deg for å beskytte deg, for eksempel vernebriller, labfrakk og hansker.</td><td>personal protective equipment (PPE)</td></tr>
+    <tr><td>peleusball</td><td>En gummiballong som suger væske opp i en pipette, slik at du aldri trenger å pipettere med munnen.</td><td>pipette bulb</td></tr>
+    <tr><td>øyeskyll</td><td>Nødutstyr som skyller øynene med rent vann etter sprut av kjemikalier.</td><td>eyewash station</td></tr>
+    <tr><td>nøddusj</td><td>En dusj som raskt skyller kjemikalier av kroppen ved store søl.</td><td>safety shower</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="04-verneutstyr.html">Personlig verneutstyr</a>: hvilke briller og hansker du trenger.</li>
+  <li><a href="03-risikovurdering-lab.html">Risikovurdering på skolelaben</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+</body>
+</html>

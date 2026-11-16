@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sikkerhetsdatablad og eksponering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.picto{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:10px}
+.picto button{padding:6px;background:var(--bg);border:2px solid var(--line);border-radius:10px;min-height:auto}
+.picto button[aria-pressed=true]{border-color:var(--ink);background:var(--bg)}
+.picto img{width:100%;height:auto;display:block}
+.picto span{display:block;overflow-wrap:normal;hyphens:manual;font-size:12.5px;font-weight:600;color:var(--dim)}
+#p-info{margin-top:14px}
+#p-info h3{margin:0 0 4px}
+.sds details{border-bottom:1px solid var(--line)}
+.sds summary{cursor:pointer;padding:10px 4px;font-weight:600;min-height:44px;display:flex;gap:10px;align-items:center}
+.sds summary b{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:6px;background:var(--line);font-size:14px}
+.sds .ofte summary b{background:var(--red);color:#fff}
+.sds details>p{padding:0 4px 10px 44px;margin:0}
+.lager{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.lager{grid-template-columns:1fr}}
+.etikettbilde{display:grid;grid-template-columns:auto 1fr;gap:14px;border:2px solid var(--ink);border-radius:8px;padding:14px;background:#fff;color:#17191c;font-size:15px}
+.etikettbilde img{width:72px;height:72px}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Sikkerhetsdatablad og eksponering</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK9, PT1</div>
+<p class="ingress">Etiketten er kortversjonen. Sikkerhetsdatabladet er den lange versjonen. Her lærer du å finne fram i det, og hvordan kjemikalier kan skade kroppen.</p>
+
+<h2>Sikkerhetsdatabladet (SDS)</h2>
+<p>Etiketten er kortversjonen. <strong>Sikkerhetsdatabladet</strong> er den lange versjonen. Det skal følge med alle farlige kjemikalier, og det har alltid de samme 16 seksjonene. Når du vet hvor ting står, finner du raskt svar. De røde seksjonene er de du bruker oftest.</p>
+<div class="panel sds" id="sds"></div>
+
+<h2>Stoffkartoteket</h2>
+<p>Arbeidsgiveren skal ha et <strong>stoffkartotek</strong>: en oversikt over alle farlige kjemikalier i bedriften, med oppdaterte sikkerhetsdatablader. De fleste bedrifter bruker et digitalt system. Kartoteket skal være lett tilgjengelig for alle som jobber med kjemikaliene. Sjekk at du vet hvor det finnes på skolelaben.</p>
+
+<h2>Hvordan kjemikalier kommer inn i kroppen</h2>
+<div class="to">
+  <div><h3>Innånding</h3><p>Den vanligste veien. Gasser, damp, støv og aerosoler går rett ned i lungene. Avtrekk og åndedrettsvern beskytter.</p></div>
+  <div><h3>Hud</h3><p>Mange løsemidler trenger gjennom huden og ut i blodet. Etsende stoffer skader huden direkte.</p></div>
+  <div><h3>Øyne</h3><p>Sprut kan gi varige skader på sekunder. Bruk alltid vernebriller.</p></div>
+  <div><h3>Svelging</h3><p>Skjer oftest via skitne hender. Derfor er mat og drikke forbudt på laben og i anlegget.</p></div>
+</div>
+<p><strong>Akutte effekter</strong> kommer raskt, for eksempel etseskader, svimmelhet eller forgiftning. <strong>Langtidseffekter</strong> kommer etter måneder eller år med eksponering, for eksempel allergi, skader på organer eller kreft. Langtidseffektene er lumske, fordi du ikke merker noe med en gang.</p>
+
+<h3>Grenseverdier</h3>
+<p>I <em>forskrift om tiltaks- og grenseverdier</em> finnes en liste over hvor høy konsentrasjon av et stoff du kan utsettes for i luften du puster inn. Grenseverdien gjelder som regel et <strong>gjennomsnitt over 8 timer</strong>. Noen stoffer har i tillegg en <strong>korttidsverdi</strong> (15 minutter) eller en <strong>takverdi</strong> som aldri skal overskrides. Anmerkninger i listen gir ekstra informasjon. <strong>H</strong> betyr for eksempel at stoffet lett tas opp gjennom huden, og <strong>K</strong> at det er kreftfremkallende. Tidligere ble grenseverdiene kalt «administrative normer», og det ordet hører du fortsatt.</p>
+<div class="boks viktig"><strong>Husk:</strong> En grenseverdi er ikke en grense mellom «farlig» og «ufarlig». Målet er alltid å holde eksponeringen så lav som mulig.</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Før elektrolyse av kobber(II)klorid</div>
+  <p>Du skal gjøre elektrolyse av en kobber(II)kloridløsning. Slik bruker du databladet:</p>
+  <ol>
+    <li><strong>Seksjon 2:</strong> Hvilke farer har løsningen? Her finner du H-setningene, for eksempel at den irriterer huden og er giftig for liv i vann.</li>
+    <li><strong>Seksjon 8:</strong> Hvilket verneutstyr trenger du? Vernebriller og hansker.</li>
+    <li><strong>Seksjon 4:</strong> Hva gjør du hvis du får løsningen i øyet? Skyll med vann i lang tid.</li>
+    <li><strong>Seksjon 13:</strong> Hvor skal restene? Ikke i vasken, men på restflaske for tungmetaller.</li>
+  </ol>
+  <p>Svarene bruker du når du lager risikovurderingen. Se <a href="03-risikovurdering-lab.html">Risikovurdering på skolelaben</a>.</p>
+</div>
+
+<div class="boks yrkesboks">
+  <h3>I yrket</h3>
+  <p><strong>Laboranten</strong> leser sikkerhetsdatabladet før en ny analyse, merker egne løsninger med innhold, konsentrasjon, dato og farepiktogram, og sørger for riktig lagring. <strong>Prosessoperatøren</strong> må kjenne farene ved stoffene i anlegget, for eksempel hvilke gasser som kan lekke ut og hvilke stoffer som ikke må komme i kontakt med hverandre.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Du har fått lut i øyet. Hvilken seksjon i sikkerhetsdatabladet forteller hva du skal gjøre?</p>
+  <ul>
+    <li>Seksjon 2</li>
+    <li data-riktig>Seksjon 4</li>
+    <li>Seksjon 8</li>
+    <li>Seksjon 13</li>
+  </ul>
+  <p class="forklaring">Seksjon 4 er førstehjelpstiltak. Les den før du starter, ikke etter at uhellet har skjedd.</p>
+</div>
+<div class="quiz">
+  <p>2. Hva er den vanligste veien kjemikalier tar inn i kroppen på jobb?</p>
+  <ul>
+    <li data-riktig>Innånding</li>
+    <li>Svelging</li>
+    <li>Gjennom øynene</li>
+  </ul>
+  <p class="forklaring">Gasser, damp og støv går rett ned i lungene. Derfor er avtrekk det viktigste vernet på laben.</p>
+</div>
+<div class="quiz">
+  <p>3. Hva betyr anmerkningen H i listen over grenseverdier?</p>
+  <ul>
+    <li>Stoffet er helsefarlig ved svelging.</li>
+    <li data-riktig>Stoffet tas lett opp gjennom huden.</li>
+    <li>Stoffet er brannfarlig.</li>
+  </ul>
+  <p class="forklaring">H i grenseverdilisten betyr hudopptak. Da hjelper det ikke bare å ha god ventilasjon. Du må også beskytte huden.</p>
+</div>
+<details><summary>4. Du skal bruke et nytt løsemiddel og lurer på hvilke hansker du trenger. Hvilken seksjon i sikkerhetsdatabladet leser du?</summary><p>Seksjon 8, eksponeringskontroll og personlig verneutstyr.</p></details>
+<details><summary>5. Hvorfor er langtidseffekter av kjemikalier ekstra lumske?</summary><p>Fordi du ikke merker noe med en gang. Skaden bygger seg opp over tid, og når den oppdages, kan den være varig.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>sikkerhetsdatablad</td><td>Et dokument fra leverandøren med 16 faste seksjoner som forteller hvor farlig et stoff er og hvordan du håndterer det trygt.</td><td>safety data sheet (SDS)</td></tr>
+    <tr><td>stoffkartotek</td><td>Bedriftens oversikt over alle farlige kjemikalier, med oppdaterte sikkerhetsdatablader.</td><td>chemical register</td></tr>
+    <tr><td>eksponering</td><td>At du blir utsatt for et stoff, for eksempel ved å puste det inn eller få det på huden.</td><td>exposure</td></tr>
+    <tr><td>grenseverdi</td><td>Den høyeste konsentrasjonen av et stoff i luften du kan utsettes for, som regel i gjennomsnitt over 8 timer.</td><td>occupational exposure limit</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Sikkerhetsdatabladene for kjemikaliene på skolelaben. Spør læreren hvor de finnes.</li>
+  <li>Arbeidstilsynet (arbeidstilsynet.no) har veiledning om kjemikalier, stoffkartotek og grenseverdier.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const SDS = [
+    [1,'Identifikasjon av stoffet og leverandøren','Produktnavn, bruksområde og leverandør, med nødtelefon.'],
+    [2,'Fareidentifikasjon','Klassifisering, farepiktogram, signalord, H- og P-setninger. Det samme som på etiketten.',1],
+    [3,'Sammensetning','Hvilke stoffer produktet inneholder, og i hvilke mengder.'],
+    [4,'Førstehjelpstiltak','Hva du gjør ved innånding, hudkontakt, øyekontakt og svelging. Les denne <em>før</em> noe skjer.',1],
+    [5,'Brannslokkingstiltak','Egnede slokkemidler og farlige gasser som kan dannes ved brann.'],
+    [6,'Tiltak ved utilsiktet utslipp','Hvordan du håndterer søl og lekkasjer.',1],
+    [7,'Håndtering og oppbevaring','Hvordan stoffet skal brukes og lagres, og hva det ikke må lagres sammen med.',1],
+    [8,'Eksponeringskontroll og personlig verneutstyr','Grenseverdier og riktig verneutstyr: hansker, briller, åndedrettsvern.',1],
+    [9,'Fysiske og kjemiske egenskaper','Kokepunkt, flammepunkt, damptrykk, eksplosjonsgrenser, pH med mer.'],
+    [10,'Stabilitet og reaktivitet','Hva stoffet reagerer farlig med, og hvilke forhold som må unngås.',1],
+    [11,'Toksikologiske opplysninger','Hvordan stoffet påvirker kroppen, både akutt og over tid.'],
+    [12,'Økologiske opplysninger','Hvordan stoffet påvirker miljøet.'],
+    [13,'Disponering','Hvordan rester og avfall skal håndteres.'],
+    [14,'Transportopplysninger','UN-nummer og fareklasse for transport (ADR).'],
+    [15,'Opplysninger om bestemmelser','Lover og regler som gjelder for stoffet.'],
+    [16,'Andre opplysninger','Endringer siden forrige versjon, forkortelser og kilder.']
+  ];
+  document.getElementById('sds').innerHTML = SDS.map(s => `<details class="${s[3] ? 'ofte' : ''}"><summary><b>${s[0]}</b>${s[1]}</summary><p>${s[2]}</p></details>`).join('');
+}
+</script>
+</body>
+</html>

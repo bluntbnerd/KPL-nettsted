@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grunnlaget for HMS-arbeid – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  
+</head>
+<body data-status="utkast">
+<main>
+
+
+<h1>Grunnlaget for HMS-arbeid</h1>
+<p class="ingress">Hvorfor har vi HMS, hvilke lover gjelder, og hvem har ansvar for hva? Dette er grunnmuren for resten av temaet.</p>
+
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+
+<h2>Hva er HMS?</h2>
+<p>HMS står for <strong>helse, miljø og sikkerhet</strong>.</p>
+<ul>
+  <li><strong>Helse</strong> handler om å unngå at arbeidet gjør deg syk, både på kort og lang sikt. Eksempler er hudskader fra løsemidler, hørselsskader fra støy og belastningsskader fra tunge løft.</li>
+  <li><strong>Miljø</strong> betyr både arbeidsmiljøet (luft, lys, støy, samarbeid) og det <em>ytre miljøet</em>: utslipp til luft, vann og jord.</li>
+  <li><strong>Sikkerhet</strong> handler om å hindre ulykker som brann, eksplosjon, lekkasjer og personskader.</li>
+</ul>
+<p>I kjemisk industri og på laboratorier håndteres store mengder farlige stoffer, ofte under høyt trykk eller høy temperatur. En liten feil kan få store følger. Derfor er HMS ikke noe som kommer i tillegg til jobben. Det er en del av å gjøre jobben riktig.</p>
+
+<h2>Lovene du må kjenne til</h2>
+<p>Du trenger ikke kunne lovtekstene utenat, men du må vite hva de viktigste lovene handler om og hvem som passer på at de følges.</p>
+<div class="to">
+  <div><h3>Arbeidsmiljøloven</h3><p>Krav til et fullt forsvarlig arbeidsmiljø, arbeidstid, verneombud og arbeidsmiljøutvalg. Arbeidstilsynet fører tilsyn.</p></div>
+  <div><h3>Internkontrollforskriften</h3><p>Krever at bedriften jobber <em>systematisk</em> med HMS: mål, risikokartlegging, rutiner, avvikshåndtering og jevnlig gjennomgang.</p></div>
+  <div><h3>Forurensningsloven</h3><p>Ingen får forurense uten tillatelse. Bedriften får en utslippstillatelse med grenser den må holde seg innenfor. Miljødirektoratet og statsforvalteren følger opp.</p></div>
+  <div><h3>Storulykkeforskriften</h3><p>Gjelder anlegg med store mengder farlige stoffer. De må ha egne planer for å hindre og begrense storulykker. DSB og flere etater følger opp.</p></div>
+  <div><h3>CLP og REACH</h3><p>EU-regler (gjelder også i Norge) om klassifisering, merking og registrering av kjemikalier. Mer om dette under <a href="02-kjemikalier.html">Kjemikaliesikkerhet</a>.</p></div>
+  <div><h3>Forskrift om tiltaks- og grenseverdier</h3><p>Grenser for hvor mye støy og hvor høye konsentrasjoner av kjemikalier du kan utsettes for på jobb.</p></div>
+</div>
+
+<h2>Hvem har ansvaret?</h2>
+<p><strong>Arbeidsgiveren</strong> har hovedansvaret for at arbeidsmiljøet er forsvarlig. Det betyr blant annet å kartlegge farer, lage rutiner, gi opplæring og skaffe riktig verneutstyr.</p>
+<p><strong>Du som arbeidstaker</strong> har <em>medvirkningsplikt</em>. Du skal følge rutinene, bruke verneutstyret, melde fra om feil og farer og avbryte arbeidet hvis du mener det ikke kan fortsette uten fare for liv eller helse.</p>
+<div class="to">
+  <div><h3>Verneombud</h3><p>Er valgt av de ansatte og passer på arbeidsmiljøet på vegne av dem. Verneombudet kan <strong>stanse farlig arbeid</strong> når det er umiddelbar fare. Det kreves verneombud når en virksomhet har minst 10 ansatte.</p></div>
+  <div><h3>Arbeidsmiljøutvalg (AMU)</h3><p>Et utvalg med like mange representanter fra ledelsen og de ansatte, og med bedriftshelsetjenesten til stede. Behandler store saker som påvirker arbeidsmiljøet. Kreves når en virksomhet har minst 50 ansatte.</p></div>
+  <div><h3>Bedriftshelsetjeneste (BHT)</h3><p>Fagfolk som kartlegger helsefarer, måler eksponering og gir råd. Kjemisk industri er pålagt å ha BHT.</p></div>
+</div>
+<p>Som elev i praksis og som lærling er du omfattet av mange av de samme reglene. Du har like stor rett til å si fra som de andre som jobber der.</p>
+
+<div class="sim" id="ansvar">
+  <h2>Prøv selv: Hvem har ansvaret?</h2>
+  <p class="hint">Les situasjonen og velg hvem som først og fremst har ansvaret.</p>
+  <div class="panel">
+    <p id="ans-tekst" style="font-size:19px;font-weight:600;min-height:3em"></p>
+    <div class="rad" id="ans-valg"></div>
+    <div id="ans-svar" aria-live="polite"></div>
+    <div class="rad" style="margin-top:12px;justify-content:space-between">
+      <span id="ans-teller" class="etikett"></span>
+      <button type="button" id="ans-neste">Neste situasjon →</button>
+    </div>
+  </div>
+</div>
+
+<h2>Internkontroll: HMS som en sirkel</h2>
+<p>Internkontroll betyr at bedriften selv må kontrollere at den følger regelverket. Arbeidet går i en sirkel som aldri stopper:</p>
+<div class="fig" style="max-width:520px;margin:0 auto">
+<svg viewBox="0 0 520 300" role="img" aria-label="Sirkel: Planlegge, Utføre, Kontrollere, Forbedre">
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+  <g fill="none" stroke="currentColor" stroke-width="3" marker-end="url(#pil)" opacity=".55">
+    <path d="M300 52 A110 110 0 0 1 368 120"/><path d="M372 180 A110 110 0 0 1 304 248"/>
+    <path d="M220 248 A110 110 0 0 1 152 180"/><path d="M148 120 A110 110 0 0 1 216 52"/>
+  </g>
+  <g font-family="Barlow Semi Condensed,sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="currentColor">
+    <text x="260" y="42">1 Planlegge</text><text x="420" y="157">2 Utføre</text>
+    <text x="260" y="282">3 Kontrollere</text><text x="96" y="157">4 Forbedre</text>
+  </g>
+  <g font-family="Source Sans 3,sans-serif" font-size="15" text-anchor="middle" fill="currentColor" opacity=".8">
+    <text x="260" y="140">Mål, kartlegging,</text><text x="260" y="160">rutiner, tiltak,</text><text x="260" y="180">avvik, vernerunder</text>
+  </g>
+</svg>
+</div>
+<ol>
+  <li><strong>Planlegge:</strong> sette mål, kartlegge farer og vurdere risiko, lage rutiner.</li>
+  <li><strong>Utføre:</strong> gjennomføre arbeidet etter rutinene og gi opplæring.</li>
+  <li><strong>Kontrollere:</strong> vernerunder, målinger, revisjoner og avviksrapporter.</li>
+  <li><strong>Forbedre:</strong> rette feil, endre rutiner og lære av hendelser.</li>
+</ol>
+
+<div class="boks yrkesboks">
+  <h3>I yrket</h3>
+  <p><strong>Prosessoperatøren</strong> følger driftsprosedyrer, går runder i anlegget, fyller ut sjekklister og melder fra om avvik i bedriftens avvikssystem. <strong>Laboranten</strong> jobber etter analyseprosedyrer, holder stoffkartoteket oppdatert og dokumenterer det som avviker. Begge er en viktig del av internkontrollen hver dag.</p>
+</div>
+
+<section class="test">
+  <h2>Test deg selv</h2>
+  <details><summary>Hva er forskjellen på arbeidsmiljø og ytre miljø?</summary><div><p>Arbeidsmiljøet er forholdene der du jobber: luft, støy, lys, kjemikalier og samarbeid. Det ytre miljøet er naturen rundt bedriften: luft, vann og jord som kan bli forurenset av utslipp.</p></div></details>
+  <details><summary>Hva betyr det at arbeidstakeren har medvirkningsplikt?</summary><div><p>At du har plikt til å bidra til et trygt arbeidsmiljø: følge rutiner, bruke verneutstyr, melde fra om feil, farer og skader, og avbryte arbeid som ikke kan fortsette uten fare.</p></div></details>
+  <details><summary>Hvorfor er internkontroll tegnet som en sirkel og ikke en liste?</summary><div><p>Fordi HMS-arbeidet aldri blir ferdig. Det du lærer når du kontrollerer, brukes til å forbedre rutinene. Deretter planlegger du på nytt, og slik fortsetter det.</p></div></details>
+</section>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>HMS</td><td>Helse, miljø og sikkerhet: arbeidet med å hindre at folk blir syke eller skadet, og at naturen blir forurenset.</td><td>HSE (health, safety and environment)</td></tr>
+    <tr><td>internkontroll</td><td>Bedriftens egen, systematiske kontroll av at HMS-reglene følges: planlegge, utføre, kontrollere og forbedre.</td><td>internal control</td></tr>
+    <tr><td>medvirkningsplikt</td><td>Plikten du som arbeidstaker har til å følge rutiner, bruke verneutstyr og si fra om feil og farer.</td><td>duty to cooperate</td></tr>
+    <tr><td>verneombud</td><td>En ansatt som er valgt til å passe på arbeidsmiljøet for kollegene, og som kan stanse farlig arbeid.</td><td>safety representative</td></tr>
+    <tr><td>avvik</td><td>Noe som ikke gikk som det skulle, eller som bryter med en regel eller prosedyre.</td><td>deviation / non-conformity</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Arbeidstilsynet (arbeidstilsynet.no) har informasjon om arbeidsmiljøloven, verneombud og internkontroll.</li>
+  <li>Kvalitet og avvik i laboratoriet i <a href="../07-laboratorium-og-analyse/index.html">Laboratorium og analyse</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+<script>
+{
+  const ROLLER = ['Arbeidsgiver','Arbeidstaker','Verneombud','AMU','BHT'];
+  const S = [
+    ['Sørge for at stoffkartoteket er oppdatert og tilgjengelig for alle.', 'Arbeidsgiver', 'Arbeidsgiveren skal sørge for at det finnes et stoffkartotek med sikkerhetsdatablad for alle farlige kjemikalier.'],
+    ['Bruke vernebriller når prosedyren krever det.', 'Arbeidstaker', 'Arbeidsgiveren skaffer vernebrillene, men det er du som har plikt til å bruke dem.'],
+    ['Stanse arbeidet i en tank når det er umiddelbar fare for liv og helse.', 'Verneombud', 'Verneombudet har rett til å stanse farlig arbeid. Du kan også selv avbryte ditt eget arbeid hvis du mener det er farlig.'],
+    ['Behandle planene for et nytt prosessanlegg før det bygges.', 'AMU', 'AMU skal behandle store endringer som påvirker arbeidsmiljøet, for eksempel nye anlegg og ny teknologi.'],
+    ['Måle støy og kjemikalieeksponering og gi råd om tiltak.', 'BHT', 'Bedriftshelsetjenesten har fagkunnskapen til å kartlegge helsefarer og gi råd. Arbeidsgiveren må deretter sette i gang tiltakene.'],
+    ['Melde fra om en lekk pakning du oppdager på en pumpe.', 'Arbeidstaker', 'Å melde fra om feil og farer er en del av medvirkningsplikten.'],
+    ['Gi alle ansatte opplæring i en ny prosedyre for prøvetaking.', 'Arbeidsgiver', 'Arbeidsgiveren skal sørge for at alle får den opplæringen de trenger for å jobbe sikkert.']
+  ];
+  let i = 0, poeng = 0, svart = false;
+  const tekst = document.getElementById('ans-tekst'), valg = document.getElementById('ans-valg'),
+        svar = document.getElementById('ans-svar'), teller = document.getElementById('ans-teller'),
+        neste = document.getElementById('ans-neste');
+  function vis() {
+    svart = false;
+    tekst.textContent = S[i][0];
+    valg.innerHTML = ROLLER.map(r => `<button type="button" data-r="${r}">${r}</button>`).join('');
+    svar.innerHTML = '';
+    teller.textContent = `Situasjon ${i + 1} av ${S.length} · ${poeng} riktige`;
+    neste.textContent = i === S.length - 1 ? 'Start på nytt' : 'Neste situasjon →';
+  }
+  valg.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b || svart) return;
+    svart = true;
+    const rett = b.dataset.r === S[i][1];
+    if (rett) poeng++;
+    b.classList.add('valgt');
+    svar.innerHTML = `<div class="status ${rett ? 'ok' : 'bad'}">${rett ? 'Riktig!' : 'Ikke helt. Riktig svar er: ' + S[i][1] + '.'}</div><p style="margin:8px 0 0">${S[i][2]}</p>`;
+    teller.textContent = `Situasjon ${i + 1} av ${S.length} · ${poeng} riktige`;
+  });
+  neste.addEventListener('click', () => {
+    if (i === S.length - 1) { i = 0; poeng = 0; } else i++;
+    vis();
+  });
+  vis();
+}
+</script>
+</body>
+</html>

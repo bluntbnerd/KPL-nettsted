@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Avtrekksskapet – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.avtrekk{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:680px){.avtrekk{grid-template-columns:1fr}}
+.stor{font:700 clamp(32px,6vw,48px)/1 var(--head)}
+#lab svg{cursor:crosshair}
+#lab .hot{fill:transparent;cursor:pointer}
+#lab .hot.funnet{stroke:#0d7f45;stroke-width:5;fill:#0d7f4522}
+#funn{columns:2 260px;margin:12px 0 0;padding-left:20px}
+#funn li.skjult{color:var(--dim)}
+@keyframes flyt{to{stroke-dashoffset:-20}}
+.luft{stroke-dasharray:6 4;animation:flyt .8s linear infinite}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Avtrekksskapet</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Avtrekksskapet beskytter deg bare hvis du bruker det riktig. Prøv selv hva som skjer når du endrer frontluken.</p>
+
+<h2>Avtrekksskapet</h2>
+<p>Avtrekksskapet er det viktigste vernet på laben. En vifte suger luft inn gjennom åpningen foran og ut av bygget, slik at gasser og damp ikke kommer ut i rommet. For at avtrekket skal virke, må lufthastigheten inn gjennom åpningen være høy nok. Jo lavere du har frontluken, jo høyere blir hastigheten, og jo bedre blir du beskyttet mot sprut.</p>
+
+<div class="sim">
+  <h2>Simulering: frontluke og lufthastighet</h2>
+  <div class="avtrekk">
+    <div class="fig"><svg id="hood" viewBox="0 0 360 300" role="img" aria-label="Avtrekksskap med justerbar frontluke"></svg></div>
+    <div>
+      <label for="luke">Frontlukens åpning: <span id="luke-v"></span> cm</label>
+      <input type="range" id="luke" min="10" max="80" value="45">
+      <p style="margin:8px 0 4px">Lufthastighet i åpningen</p>
+      <div class="stor"><span id="hast"></span> <span style="font-size:20px">m/s</span></div>
+      <label style="display:flex;gap:8px;align-items:center;margin-top:12px;font-weight:400"><input type="checkbox" id="kant"> Utstyret står helt ytterst ved kanten</label>
+      <label style="display:flex;gap:8px;align-items:center;font-weight:400"><input type="checkbox" id="trafikk"> Folk går raskt forbi skapet</label>
+      <div id="hood-status" aria-live="polite"></div>
+    </div>
+  </div>
+  <p class="liten">Forenklet modell: konstant luftmengde på 0,30 m³/s og en åpning som er 1,2 m bred. Typisk anbefalt hastighet er rundt 0,4–0,6 m/s. Følg merkingen og alarmen på skapet dere bruker.</p>
+</div>
+<ul>
+  <li>Arbeid med frontluken så lavt som mulig, og aldri over merket arbeidshøyde.</li>
+  <li>Plasser utstyret minst 15 cm innenfor kanten.</li>
+  <li>Avtrekket er ikke et lager. Mange flasker og mye utstyr forstyrrer luftstrømmen.</li>
+  <li>Hvis alarmen går, stopper du arbeidet, lukker luken og sier fra.</li>
+</ul>
+<div class="boks"><strong>LAF-benk er ikke et avtrekk!</strong> En LAF-benk blåser renset luft <em>ut mot deg</em> for å beskytte prøven mot forurensning. Den beskytter ikke deg mot kjemikalier eller mikroorganismer. Til mikroorganismer som kan gi sykdom brukes en <strong>mikrobiologisk sikkerhetsbenk</strong>, som beskytter både deg og prøven.</div>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hva skjer med lufthastigheten i åpningen når du åpner frontluken mer?</p>
+  <ul>
+    <li>Den øker</li>
+    <li data-riktig>Den synker</li>
+    <li>Den er den samme</li>
+  </ul>
+  <p class="forklaring">Viften flytter omtrent den samme luftmengden. Når åpningen blir større, fordeles luften på et større areal, og hastigheten synker. Blir den for lav, kan damp slippe ut i rommet.</p>
+</div>
+<details><summary>2. Hva er forskjellen på en LAF-benk og en mikrobiologisk sikkerhetsbenk?</summary><p>LAF-benken beskytter bare prøven. Sikkerhetsbenken beskytter både prøven og deg.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>avtrekksskap</td><td>Et skap med vifte som suger gasser og damp bort fra deg og ut av bygget.</td><td>fume hood</td></tr>
+    <tr><td>frontluke</td><td>Glassluken foran på avtrekksskapet. Jo lavere den står, jo bedre beskytter avtrekket.</td><td>sash</td></tr>
+    <tr><td>LAF-benk</td><td>En arbeidsbenk som blåser renset luft over prøven for å holde den ren. Den beskytter ikke deg.</td><td>laminar flow cabinet</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="05-laboratoriet.html">Grunnreglene på laben</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const sv = document.getElementById('hood'), luke = document.getElementById('luke'), kant = document.getElementById('kant'), traf = document.getElementById('trafikk');
+  function hood() {
+    const h = +luke.value, v = 0.30 / (1.2 * h / 100);
+    document.getElementById('luke-v').textContent = h;
+    document.getElementById('hast').textContent = v.toFixed(2).replace('.', ',');
+    const top = 40, bunn = 250, lukeY = bunn - h * 2.4;
+    const n = Math.max(2, Math.min(7, Math.round(v * 6)));
+    let piler = '';
+    for (let i = 0; i < n; i++) {
+      const y = lukeY + (bunn - lukeY) * (i + 0.5) / n;
+      piler += `<path class="luft" d="M10 ${y} H120 Q170 ${y} 200 ${y - 20} T260 70" fill="none" stroke="#0f56a3" stroke-width="2.5" opacity=".75"/>`;
+    }
+    let damp = '';
+    const lekk = v < 0.3 || kant.checked || traf.checked;
+    if (lekk) damp = `<g fill="#c8a35a" opacity=".55"><circle cx="70" cy="${bunn - 30}" r="12"/><circle cx="48" cy="${bunn - 52}" r="9"/><circle cx="30" cy="${bunn - 70}" r="7"/></g>`;
+    sv.innerHTML = `
+      <rect x="110" y="${top}" width="230" height="${bunn - top + 30}" rx="6" fill="#d7dde3" stroke="#6b7280" stroke-width="3"/>
+      <rect x="250" y="10" width="40" height="${top}" fill="#9aa3ad"/>
+      <rect x="110" y="${bunn}" width="230" height="10" fill="#4b5563"/>
+      <rect x="${kant.checked ? 118 : 170}" y="${bunn - 40}" width="26" height="40" rx="4" fill="#d9c27a"/>
+      ${piler}${damp}
+      <rect x="104" y="${top}" width="12" height="${lukeY - top}" fill="#93c5fd" opacity=".6" stroke="#3b82f6"/>
+      <rect x="98" y="${lukeY - 8}" width="24" height="8" rx="2" fill="#374151"/>
+      <text x="58" y="${(lukeY + bunn) / 2 + 5}" font-size="14" font-family="Source Sans 3,sans-serif" text-anchor="middle" fill="currentColor">${h} cm</text>
+      ${traf.checked ? '<path d="M20 290h62M74 283l10 7-10 7" fill="none" stroke="#c81d17" stroke-width="4"/><text x="20" y="284" font-size="13" fill="#c81d17" font-family="Source Sans 3,sans-serif">rask bevegelse</text>' : ''}`;
+    let kl, t;
+    if (v < 0.3) { kl = 'bad'; t = 'For lav hastighet. Damp kan slippe ut av skapet. Senk frontluken.'; }
+    else if (kant.checked) { kl = 'bad'; t = 'Utstyr helt ytterst gir virvler rett ved åpningen, og damp kan slippe ut. Flytt det minst 15 cm innover.'; }
+    else if (traf.checked) { kl = 'warn'; t = 'Raske bevegelser foran skapet lager trekk som kan dra damp ut. Unngå trafikk forbi avtrekket.'; }
+    else if (v < 0.4) { kl = 'warn'; t = 'I nedre kant. Senk luken litt for bedre beskyttelse.'; }
+    else if (v > 0.8) { kl = 'warn'; t = 'Høy hastighet og god skjerming mot sprut, men så lav luke kan være upraktisk å jobbe med. Svært høy hastighet kan gi virvler rundt utstyret.'; }
+    else { kl = 'ok'; t = 'God arbeidsstilling for luken. Avtrekket fanger dampen.'; }
+    document.getElementById('hood-status').innerHTML = `<div class="status ${kl}">${t}</div>`;
+  }
+  [luke, kant, traf].forEach(el => el.addEventListener('input', hood));
+  hood();
+}
+</script>
+</body>
+</html>

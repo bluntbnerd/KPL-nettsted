@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Reaktoren – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.trekant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:640px){.trekant{grid-template-columns:1fr}}
+.side-knapp{display:grid;gap:8px}
+.eks-bar{position:relative;height:46px;border-radius:8px;overflow:hidden;margin:16px 0 6px;background:#9aa3ad}
+.eks-bar div{position:absolute;top:0;bottom:0}
+.eks-bar .mk{width:4px;background:var(--ink);top:-4px;bottom:-4px;box-shadow:0 0 0 2px var(--bg)}
+.eks-akse{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.loto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:640px){.loto{grid-template-columns:1fr}}
+.loto button{display:block;width:100%;text-align:left;margin-bottom:8px;font-weight:400}
+.loto ol{margin:0;padding-left:24px;min-height:120px}
+.loto ol li{padding:6px 4px;border-bottom:1px solid var(--line)}
+.loto ol li.r{color:var(--ok);font-weight:600}.loto ol li.f{color:var(--bad);font-weight:600}
+.ost label{display:flex;gap:8px;align-items:center;font-weight:400;margin:4px 0}
+/* Trykk, nivå og reaktor (fra Prosessikkerhet Vg2, modul 4) */
+:root{--c-reg:var(--blue);--c-alm:light-dark(#a87400,#f5c400);--c-trp:var(--red);--c-psv:light-dark(#c2410c,#f08a4b);--water:light-dark(#a9d3e8,#2a5c74);--reg-soft:light-dark(#e1ecf6,#1c2f38)}
+.innhold{display:flex;flex-wrap:wrap;gap:6px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:15px}
+.innhold a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+.innhold a:hover{border-color:var(--ink)}
+.pid-wrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.pid{display:block;width:100%;min-width:620px;height:auto;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace}
+.pid text{fill:var(--ink);font-size:11px}
+.pid .lbl2{fill:var(--dim);font-size:10.5px}
+.pid .ln{stroke:var(--ink);stroke-width:2;fill:none}
+.pid .vessel{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+.pid .valve{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid g.lay{--c:var(--ink)}
+.pid g.reg{--c:var(--c-reg)}.pid g.alm{--c:var(--c-alm)}.pid g.trp{--c:var(--c-trp)}.pid g.psv{--c:var(--c-psv)}
+.pid g.lay .sig{stroke:var(--c);stroke-width:1.8;stroke-dasharray:5 4;fill:none}
+.pid g.lay .imp{stroke:var(--c);stroke-width:2;fill:none}
+.pid g.lay .bub,.pid g.lay .box,.pid g.lay .vl{fill:var(--bg);stroke:var(--c);stroke-width:2}
+.pid g.lay .bt,.pid g.lay .tg{fill:var(--c);font-size:10.5px;font-weight:600}
+.pid g.lay.on .bub,.pid g.lay.on .box,.pid g.lay.on .vl{fill:var(--c)}
+.pid g.lay.on .bt{fill:var(--bg)}
+.pid g.lay.on .sig{stroke-width:3}
+.pid g.lay.on .imp{stroke-width:3.5}
+.pid g.lay.dead{opacity:.35}
+.pid .pv{font-family:var(--head);font-size:26px;font-weight:700}
+.pid .water{fill:var(--water)}
+.pid .tankbg{fill:var(--bg)}
+.pid .tankol{fill:none;stroke:var(--ink);stroke-width:2.5}
+.pid .mark{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 3}
+.pid .flow{stroke:var(--water);stroke-width:5;fill:none;stroke-dasharray:8 8;animation:fl .8s linear infinite}
+.pid .off{display:none}
+.pid .pump{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid .pump.run{fill:var(--reg-soft);stroke:var(--c-reg)}
+.pid .pump.trip{stroke:var(--c-trp)}
+.pid .pvs{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+@keyframes fl{to{stroke-dashoffset:-16}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:var(--dim)}
+.legend i{display:inline-block;width:22px;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+.ladder{display:flex;flex-direction:column;gap:4px;margin-top:14px;font-size:15px}
+.ladder div{display:grid;grid-template-columns:70px 14px 1fr;gap:10px;align-items:center;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ladder .sw{width:14px;height:14px;border-radius:3px}
+.ladder div.hit{border-color:var(--ink);font-weight:700}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:16px;background:var(--bg)}
+.fb.ok{border-left:5px solid var(--ok)}.fb.mid{border-left:5px solid var(--c-alm)}.fb.bad{border-left:5px solid var(--c-trp)}
+.state{display:inline-block;font:700 15px/1.2 var(--head);padding:4px 10px;border-radius:5px;vertical-align:middle}
+.state.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.state.mid{background:color-mix(in srgb,var(--yel) 28%,transparent);color:var(--warn)}
+.state.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.nv-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:14px}
+.nv-ctl fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.nv-ctl legend{font-weight:700;font-size:14px;color:var(--dim);padding:0 4px}
+.nv-ctl label.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.35}
+.nv-ctl label.cb input{margin-top:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.nv-status{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-top:14px;font-size:15px}
+.nv-status .state{justify-self:start}
+.nv-log{list-style:none;margin:6px 0 0;padding:8px 10px;max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14px;display:flex;flex-direction:column;gap:3px}
+.nv-log:empty::before{content:"Ingen hendelser ennå. Start simuleringen.";color:var(--dim)}
+.nv-log .tid{color:var(--dim);margin-right:6px;font-variant-numeric:tabular-nums}
+.readout{font:700 28px/1.2 var(--head);margin-top:10px;display:flex;gap:12px;align-items:center}
+.bars{display:grid;grid-template-columns:120px 1fr 48px;gap:8px 10px;align-items:center;margin-top:12px;font-size:15px}
+.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;transition:width .2s}
+details.mer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+.ws-tbl input[type=text]{width:100%;min-width:110px;font:15px 'Source Sans 3',system-ui,sans-serif;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ws-tbl select{min-height:36px}
+.ws-tbl td.c,.ws-tbl th.c{text-align:center}
+.ws textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.pid .flow{animation:none}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Reaktoren</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1</div>
+<p class="ingress">I en reaktor med en eksoterm reaksjon er det bare noen få grader mellom stabil drift og en løpsk reaksjon. Finn grensen selv.</p>
+
+<div class="sim">
+  <h2>Simulering: hold reaktoren under kontroll</h2>
+  <p class="hint">En forenklet modell: Varmen fra reaksjonen dobles for hver 10 °C. Kjølesystemet kan fjerne opptil 10 varmeenheter. Flytt glideren og finn temperaturen der reaktoren går over i løpsk tilstand.</p>
+  <label for="temp">Reaktortemperatur</label>
+  <input type="range" id="temp" min="20" max="90" step="1" value="40">
+  <div class="readout"><span id="tempVal">40 °C</span> <span class="state ok" id="tempState">Stabil</span></div>
+  <div class="bars">
+    <div>Varme produsert</div><div class="bar"><i id="barGen" style="background:var(--c-psv)"></i></div><div id="genVal">4,0</div>
+    <div>Kjølekapasitet</div><div class="bar"><i id="barCool" style="background:var(--c-reg)"></i></div><div>10,0</div>
+  </div>
+  <p id="tempTxt" style="margin:12px 0 0"></p>
+  <details class="mer"><summary>Hva lærer vi av dette?</summary>
+    <p style="margin:0">Det er liten forskjell mellom «stabil» og «ute av kontroll», bare noen få grader. Derfor har reaktorer høytemperaturalarm, automatisk stopp av tilførsel (forrigling), nødkjøling og ofte mulighet for å tilsette et stoff som stopper reaksjonen. Som operatør må du reagere raskt på en temperatur som stiger, og aldri tilsette reaktanter fortere enn prosedyren sier. Hvis for mye reaktant samles opp uten å reagere, for eksempel fordi temperaturen er for lav, kan alt reagere på en gang senere.</p>
+  </details>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Ved hvilken temperatur går reaktoren i simuleringen over i løpsk tilstand, og hvorfor akkurat der?</summary><p>Ved 54 °C. Der blir varmen fra reaksjonen (2<sup>3,4</sup> ≈ 10,6 enheter) større enn kjølekapasiteten på 10 enheter. Ved 53 °C er varmen 9,8 enheter, og kjølingen klarer så vidt å følge med.</p></details>
+<details><summary>2. Hvorfor er det farlig å tilsette reaktant fortere enn prosedyren sier, særlig hvis temperaturen er lav?</summary><p>Reaktanten kan samle seg opp uten å reagere. Når temperaturen stiger, kan alt reagere på en gang og gi mer varme enn kjølingen klarer.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>eksoterm</td><td>En reaksjon som avgir varme til omgivelsene.</td><td></td></tr>
+    <tr><td>kjølekapasitet</td><td>Hvor mye varme kjølesystemet klarer å fjerne fra reaktoren.</td><td>cooling capacity</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="06-trykk.html">Trykk og løpske reaksjoner</a>.</li>
+  <li>Energi i reaksjoner i <a href="../02-kjemi-og-beregninger/index.html">Kjemiske prinsipper</a>.</li>
+  <li><a href="10-storulykker.html">Storulykker – hva kan vi lære?</a>: Bhopal.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const E = id => document.getElementById(id);
+  const nb = v => v.toFixed(1).replace('.', ',');
+  /* Reaktor */
+  const tp = E('temp');
+  function upTemp() {
+    const T = +tp.value, gen = Math.pow(2, (T - 20) / 10), cool = 10;
+    E('tempVal').textContent = T + ' °C';
+    E('genVal').textContent = nb(gen);
+    E('barGen').style.width = Math.min(100, gen / 20 * 100) + '%';
+    E('barCool').style.width = (cool / 20 * 100) + '%';
+    const st = E('tempState'), tx = E('tempTxt');
+    if (gen < cool * 0.7) { st.className = 'state ok'; st.textContent = 'Stabil'; tx.textContent = 'Kjølingen fjerner mer enn nok varme. Temperaturen er under kontroll.'; }
+    else if (gen <= cool) { st.className = 'state mid'; st.textContent = 'Lite margin'; tx.textContent = 'Kjølingen klarer så vidt å følge med. En liten forstyrrelse, som lavere kjølevannsstrøm, kan være nok til å miste kontrollen.'; }
+    else { st.className = 'state bad'; st.textContent = 'Løpsk'; tx.textContent = 'Reaksjonen lager mer varme enn kjølingen fjerner. Temperaturen stiger, reaksjonen går fortere, og det blir enda varmere. Trykket kan stige raskt.'; }
+  }
+  tp.addEventListener('input', upTemp); upTemp();
+}
+</script>
+</body>
+</html>

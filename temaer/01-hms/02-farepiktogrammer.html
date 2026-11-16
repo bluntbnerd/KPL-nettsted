@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Farepiktogrammene – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.picto{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:10px}
+.picto button{padding:6px;background:var(--bg);border:2px solid var(--line);border-radius:10px;min-height:auto}
+.picto button[aria-pressed=true]{border-color:var(--ink);background:var(--bg)}
+.picto img{width:100%;height:auto;display:block}
+.picto span{display:block;overflow-wrap:normal;hyphens:manual;font-size:12.5px;font-weight:600;color:var(--dim)}
+#p-info{margin-top:14px}
+#p-info h3{margin:0 0 4px}
+.sds details{border-bottom:1px solid var(--line)}
+.sds summary{cursor:pointer;padding:10px 4px;font-weight:600;min-height:44px;display:flex;gap:10px;align-items:center}
+.sds summary b{display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:6px;background:var(--line);font-size:14px}
+.sds .ofte summary b{background:var(--red);color:#fff}
+.sds details>p{padding:0 4px 10px 44px;margin:0}
+.lager{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.lager{grid-template-columns:1fr}}
+.etikettbilde{display:grid;grid-template-columns:auto 1fr;gap:14px;border:2px solid var(--ink);border-radius:8px;padding:14px;background:#fff;color:#17191c;font-size:15px}
+.etikettbilde img{width:72px;height:72px}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Farepiktogrammene</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK9, PT1</div>
+<p class="ingress">Det finnes ni farepiktogrammer. Du skal kjenne dem igjen med en gang, både på laben og i anlegget.</p>
+
+<div class="sim">
+  <h2>Utforsk farepiktogrammene</h2>
+  <p class="hint">Trykk på et piktogram for å se hva det betyr.</p>
+  <div class="picto" id="picto"></div>
+  <div class="panel" id="p-info" aria-live="polite"></div>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Lukk øynene og prøv å nevne alle de ni farepiktogrammene. Hvor mange klarte du?</summary><p>Eksplosjonsfarlig, brannfarlig, oksiderende, gass under trykk, etsende, akutt giftig, helsefare, kronisk helsefare og miljøfare.</p></details>
+<details><summary>2. Hva er forskjellen på piktogrammet for akutt giftig (hodeskalle) og kronisk helsefare (person med stjerne)?</summary><p>Akutt giftig betyr at stoffet kan gi alvorlig skade raskt, selv i små mengder. Kronisk helsefare betyr at skaden kommer etter lang tid, for eksempel kreft eller skade på arvestoffet.</p></details>
+<details><summary>3. Hvilke to piktogrammer kan du vente å finne på en flaske med konsentrert saltsyre?</summary><p>Etsende (GHS05) og ofte helsefare (GHS07), fordi damp fra konsentrert saltsyre irriterer luftveiene. Sjekk alltid etiketten og databladet.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>etsende</td><td>Et stoff som ødelegger hud, øyne eller metall ved kontakt.</td><td>corrosive</td></tr>
+    <tr><td>oksiderende</td><td>Et stoff som gir fra seg oksygen og kan starte eller forsterke en brann.</td><td>oxidising</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="02-kjemikalier.html">Faremerking av kjemikalier</a>: signalord, H- og P-setninger.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const I = k => `<img src="bilder/${k.toLowerCase()}.png" alt="">`;
+  const P = [
+    {k:'GHS01', n:'Eksplosjonsfarlig', b:'Kjemikalier og gjenstander som kan eksplodere hvis de utsettes for slag, friksjon, gnister eller varme.', e:'Enkelte organiske peroksider, nitroglyserin, pikrinsyre (tørr).'},
+    {k:'GHS02', n:'Brannfarlig', b:'Kjemikalier som er brannfarlige og kan brenne voldsomt ved antenning eller oppvarming. Enkelte utvikler brannfarlig gass i kontakt med vann, eller selvantenner i luft.', e:'Aceton, etanol, heptan, hydrogen, propan.'},
+    {k:'GHS03', n:'Oksiderende', b:'Kjemikalier som gir fra seg oksygen og kan starte en brann eller gjøre en brann kraftigere.', e:'Hydrogenperoksid (konsentrert), kaliumpermanganat, konsentrert salpetersyre, oksygen.'},
+    {k:'GHS04', n:'Gass under trykk', b:'Gass i en trykkbeholder, eller flytende gass ved svært lav temperatur. Beholderen kan eksplodere ved oppvarming, og nedkjølt gass kan gi frostskader.', e:'Nitrogen, argon, karbondioksid og oksygen på flaske.'},
+    {k:'GHS05', n:'Etsende', b:'Gir etseskader på hud og alvorlige øyeskader. Brukes også for kjemikalier som tærer på metall.', e:'Saltsyre, svovelsyre, natriumhydroksid (lut), konsentrert ammoniakk.'},
+    {k:'GHS06', n:'Akutt giftig', b:'Kan gi livstruende skader ved svelging, hudkontakt eller innånding, selv i små mengder.', e:'Metanol, hydrogensulfid, kaliumcyanid.'},
+    {k:'GHS07', n:'Helsefare', b:'Farlig ved innånding, hudkontakt eller svelging. Brukes også for kjemikalier som irriterer hud, øyne eller luftveier, eller gir allergi ved hudkontakt, døsighet eller svimmelhet.', e:'Isopropanol, fortynnet eddiksyre.'},
+    {k:'GHS08', n:'Kronisk helsefare', b:'Kan gi langvarige helseskader, for eksempel kreft, skade på arvestoffet eller nedsatt forplantningsevne. Brukes også for stoffer som gir allergi ved innånding eller kan gi kjemisk lungebetennelse.', e:'Benzen, formaldehyd, metanol (skader synsnerven).'},
+    {k:'GHS09', n:'Miljøfare', b:'Giftig for livet i vann, på kort eller lang sikt. Skal håndteres slik at det ikke skader miljøet, verken ved bruk eller som avfall.', e:'Kobbersulfat, mange tungmetallforbindelser, noen løsemidler.'}
+  ].map(p => ({...p, s: I(p.k)}));
+  const g = document.getElementById('picto'), info = document.getElementById('p-info');
+  g.innerHTML = P.map((p, i) => `<button type="button" data-i="${i}" aria-pressed="false" aria-label="${p.n}">${p.s}<span>${p.n}</span></button>`).join('');
+  const vis = i => {
+    const p = P[i];
+    g.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.i == i));
+    info.innerHTML = `<h3>${p.n} <span class="etikett">(${p.k})</span></h3><p>${p.b}</p><p style="margin:0"><strong>Eksempler:</strong> ${p.e}</p>`;
+  };
+  g.addEventListener('click', e => { const b = e.target.closest('button'); if (b) vis(+b.dataset.i); });
+  vis(4);
+}
+</script>
+</body>
+</html>

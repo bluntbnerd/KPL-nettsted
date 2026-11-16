@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lås og merk og lukkede rom – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.trekant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:640px){.trekant{grid-template-columns:1fr}}
+.side-knapp{display:grid;gap:8px}
+.eks-bar{position:relative;height:46px;border-radius:8px;overflow:hidden;margin:16px 0 6px;background:#9aa3ad}
+.eks-bar div{position:absolute;top:0;bottom:0}
+.eks-bar .mk{width:4px;background:var(--ink);top:-4px;bottom:-4px;box-shadow:0 0 0 2px var(--bg)}
+.eks-akse{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.loto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:640px){.loto{grid-template-columns:1fr}}
+.loto button{display:block;width:100%;text-align:left;margin-bottom:8px;font-weight:400}
+.loto ol{margin:0;padding-left:24px;min-height:120px}
+.loto ol li{padding:6px 4px;border-bottom:1px solid var(--line)}
+.loto ol li.r{color:var(--ok);font-weight:600}.loto ol li.f{color:var(--bad);font-weight:600}
+.ost label{display:flex;gap:8px;align-items:center;font-weight:400;margin:4px 0}
+/* Trykk, nivå og reaktor (fra Prosessikkerhet Vg2, modul 4) */
+:root{--c-reg:var(--blue);--c-alm:light-dark(#a87400,#f5c400);--c-trp:var(--red);--c-psv:light-dark(#c2410c,#f08a4b);--water:light-dark(#a9d3e8,#2a5c74);--reg-soft:light-dark(#e1ecf6,#1c2f38)}
+.innhold{display:flex;flex-wrap:wrap;gap:6px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:15px}
+.innhold a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+.innhold a:hover{border-color:var(--ink)}
+.pid-wrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.pid{display:block;width:100%;min-width:620px;height:auto;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace}
+.pid text{fill:var(--ink);font-size:11px}
+.pid .lbl2{fill:var(--dim);font-size:10.5px}
+.pid .ln{stroke:var(--ink);stroke-width:2;fill:none}
+.pid .vessel{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+.pid .valve{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid g.lay{--c:var(--ink)}
+.pid g.reg{--c:var(--c-reg)}.pid g.alm{--c:var(--c-alm)}.pid g.trp{--c:var(--c-trp)}.pid g.psv{--c:var(--c-psv)}
+.pid g.lay .sig{stroke:var(--c);stroke-width:1.8;stroke-dasharray:5 4;fill:none}
+.pid g.lay .imp{stroke:var(--c);stroke-width:2;fill:none}
+.pid g.lay .bub,.pid g.lay .box,.pid g.lay .vl{fill:var(--bg);stroke:var(--c);stroke-width:2}
+.pid g.lay .bt,.pid g.lay .tg{fill:var(--c);font-size:10.5px;font-weight:600}
+.pid g.lay.on .bub,.pid g.lay.on .box,.pid g.lay.on .vl{fill:var(--c)}
+.pid g.lay.on .bt{fill:var(--bg)}
+.pid g.lay.on .sig{stroke-width:3}
+.pid g.lay.on .imp{stroke-width:3.5}
+.pid g.lay.dead{opacity:.35}
+.pid .pv{font-family:var(--head);font-size:26px;font-weight:700}
+.pid .water{fill:var(--water)}
+.pid .tankbg{fill:var(--bg)}
+.pid .tankol{fill:none;stroke:var(--ink);stroke-width:2.5}
+.pid .mark{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 3}
+.pid .flow{stroke:var(--water);stroke-width:5;fill:none;stroke-dasharray:8 8;animation:fl .8s linear infinite}
+.pid .off{display:none}
+.pid .pump{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid .pump.run{fill:var(--reg-soft);stroke:var(--c-reg)}
+.pid .pump.trip{stroke:var(--c-trp)}
+.pid .pvs{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+@keyframes fl{to{stroke-dashoffset:-16}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:var(--dim)}
+.legend i{display:inline-block;width:22px;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+.ladder{display:flex;flex-direction:column;gap:4px;margin-top:14px;font-size:15px}
+.ladder div{display:grid;grid-template-columns:70px 14px 1fr;gap:10px;align-items:center;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ladder .sw{width:14px;height:14px;border-radius:3px}
+.ladder div.hit{border-color:var(--ink);font-weight:700}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:16px;background:var(--bg)}
+.fb.ok{border-left:5px solid var(--ok)}.fb.mid{border-left:5px solid var(--c-alm)}.fb.bad{border-left:5px solid var(--c-trp)}
+.state{display:inline-block;font:700 15px/1.2 var(--head);padding:4px 10px;border-radius:5px;vertical-align:middle}
+.state.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.state.mid{background:color-mix(in srgb,var(--yel) 28%,transparent);color:var(--warn)}
+.state.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.nv-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:14px}
+.nv-ctl fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.nv-ctl legend{font-weight:700;font-size:14px;color:var(--dim);padding:0 4px}
+.nv-ctl label.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.35}
+.nv-ctl label.cb input{margin-top:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.nv-status{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-top:14px;font-size:15px}
+.nv-status .state{justify-self:start}
+.nv-log{list-style:none;margin:6px 0 0;padding:8px 10px;max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14px;display:flex;flex-direction:column;gap:3px}
+.nv-log:empty::before{content:"Ingen hendelser ennå. Start simuleringen.";color:var(--dim)}
+.nv-log .tid{color:var(--dim);margin-right:6px;font-variant-numeric:tabular-nums}
+.readout{font:700 28px/1.2 var(--head);margin-top:10px;display:flex;gap:12px;align-items:center}
+.bars{display:grid;grid-template-columns:120px 1fr 48px;gap:8px 10px;align-items:center;margin-top:12px;font-size:15px}
+.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;transition:width .2s}
+details.mer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+.ws-tbl input[type=text]{width:100%;min-width:110px;font:15px 'Source Sans 3',system-ui,sans-serif;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ws-tbl select{min-height:36px}
+.ws-tbl td.c,.ws-tbl th.c{text-align:center}
+.ws textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.pid .flow{animation:none}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Lås og merk og lukkede rom</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1</div>
+<p class="ingress">Mange alvorlige ulykker skjer under vedlikehold, ikke under vanlig drift. Før noen åpner utstyr eller går inn i en tank, må anlegget gjøres trygt.</p>
+
+<h2 id="loto">Sikring før vedlikehold: lås og merk (LOTO)</h2>
+<p>Før noen åpner eller reparerer utstyr, må all energi være fjernet: strøm, trykk, varme, fjærkraft og farlige stoffer. Metoden kalles ofte <strong>LOTO</strong> (lockout/tagout, på norsk «lås og merk»). Hver person som skal jobbe på utstyret, setter sin egen hengelås på bryteren eller ventilen. Utstyret kan ikke startes igjen før alle låsene er fjernet.</p>
+
+<h2 id="lukkede">Arbeid i lukkede rom</h2>
+<p>Tanker, kummer, siloer og rørgater er <strong>lukkede rom</strong>. Der kan det være for lite oksygen, giftige gasser som hydrogensulfid og karbonmonoksid, eller brennbar gass. Mange ulykker skjer når en kollega går inn for å redde noen og selv blir skadet. Derfor gjelder dette:</p>
+<ul>
+  <li>Arbeidstillatelse og sikker jobb-analyse før start.</li>
+  <li>Tanken tømmes, spyles, isoleres (blindes) og ventileres.</li>
+  <li>Gassmåling av oksygen, brennbar gass og giftige gasser før du går inn og underveis.</li>
+  <li>En <strong>vakt</strong> står utenfor hele tiden, og redningsutstyr og redningsplan er klare.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Gå aldri inn i en tank eller kum for å hjelpe en kollega som har falt om. Varsle, og vent på redningsmannskap med pusteutstyr. Det samme som slo ut kollegaen, kan slå ut deg.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hvorfor skal hver person ha sin egen lås ved lås og merk?</p>
+  <ul>
+    <li>For at alle skal vite hvem som har jobbet der</li>
+    <li data-riktig>For at utstyret ikke kan startes igjen før alle er ferdige og har fjernet låsen sin</li>
+    <li>Fordi det står i forskriften at alle skal ha lås</li>
+  </ul>
+  <p class="forklaring">Så lenge én lås henger på, kan ingen starte utstyret. Det beskytter hver enkelt som jobber der.</p>
+</div>
+<div class="quiz">
+  <p>2. Hva må måles før noen går inn i et lukket rom?</p>
+  <ul>
+    <li>Bare temperaturen</li>
+    <li data-riktig>Oksygen, brennbar gass og giftige gasser</li>
+    <li>Bare oksygen</li>
+  </ul>
+  <p class="forklaring">I et lukket rom kan det være for lite oksygen, giftige gasser som hydrogensulfid eller brennbar gass. Alle tre må måles før og underveis.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>LOTO</td><td>Lås og merk: metoden der all energi fjernes og hver person setter sin egen lås før arbeid på utstyr.</td><td>lockout/tagout (LOTO)</td></tr>
+    <tr><td>lukket rom</td><td>Et rom med dårlig ventilasjon og trang adkomst, for eksempel en tank, kum eller silo.</td><td>confined space</td></tr>
+    <tr><td>blinding</td><td>Å isolere utstyr fra resten av anlegget ved å sette inn en tett plate (blindflens) i røret.</td><td>blinding</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Vedlikehold i <a href="../06-drift-og-vedlikehold/index.html">Drift og vedlikehold</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+</body>
+</html>

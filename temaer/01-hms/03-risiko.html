@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fare og risiko – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.matrise{display:grid;grid-template-columns:auto repeat(5,minmax(0,1fr));gap:4px;max-width:520px}
+.matrise .ax{font-size:13px;font-weight:600;color:var(--dim);display:grid;place-items:center;text-align:center;padding:2px}
+.matrise button{min-height:52px;padding:0;border:2px solid transparent;font-weight:700;color:#17191c;border-radius:6px}
+.matrise button.l{background:#7fcf9c}.matrise button.m{background:#f5d65a}.matrise button.h{background:#f08a7e}
+.matrise button.valgt{border-color:var(--ink);outline:3px solid var(--ink);outline-offset:1px}
+.mwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+@media(max-width:700px){.mwrap{grid-template-columns:1fr}}
+.pyr{display:grid;gap:6px;margin:14px auto;max-width:560px}
+.pyr div{color:#fff;font-weight:700;text-align:center;padding:10px 8px;border-radius:6px;font-family:var(--head);font-size:19px;margin:0 auto}
+.pyr small{display:block;font:400 14px 'Source Sans 3';opacity:.95}
+.tiltak li{display:grid;grid-template-columns:1fr minmax(160px,220px);gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.tiltak{padding:0;margin:0}
+.tiltak li.r{box-shadow:inset 4px 0 0 var(--ok);padding-left:10px}.tiltak li.f{box-shadow:inset 4px 0 0 var(--bad);padding-left:10px}
+@media(max-width:560px){.tiltak li{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Fare og risiko</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK9, ADK10, PT1</div>
+<p class="ingress">Ulykker skjer sjelden «helt plutselig». Det finnes nesten alltid farer som kunne vært oppdaget og håndtert på forhånd. Det er det risikovurdering handler om.</p>
+
+<h2>Fare og risiko er ikke det samme</h2>
+<p>En <strong>fare</strong> er noe som <em>kan</em> gjøre skade, for eksempel konsentrert svovelsyre, en varm overflate eller en tank under trykk. <strong>Risiko</strong> sier noe om hvor sannsynlig det er at faren faktisk fører til skade, og hvor alvorlig skaden blir.</p>
+<div class="boks"><strong>Risiko = sannsynlighet × konsekvens</strong><br>Svovelsyre i en lukket flaske i et syreskap er en stor fare, men risikoen er lav. Den samme syren i et åpent beger på kanten av benken gir høy risiko.</div>
+
+<h2>Slik gjør du en risikovurdering</h2>
+<ol>
+  <li><strong>Hva kan gå galt?</strong> Gå gjennom arbeidsoppgaven og finn farene: kjemikalier, trykk, varme, strøm, løft, støy.</li>
+  <li><strong>Hvor sannsynlig er det?</strong> Skjer det nesten aldri, eller kan det skje hver uke?</li>
+  <li><strong>Hvor alvorlig blir det?</strong> Fra en liten skade til dødsfall eller et stort utslipp.</li>
+  <li><strong>Hva gjør vi med det?</strong> Bestem tiltak som reduserer sannsynligheten, konsekvensen eller begge.</li>
+  <li><strong>Dokumenter og følg opp.</strong> Skriv ned vurderingen og tiltakene, og sjekk at tiltakene virker.</li>
+</ol>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Du skal aldri starte en labøvelse eller en jobb i anlegget før risikovurderingen er gjort og tiltakene er på plass. Ser du en fare som ikke står i risikovurderingen, stopper du og sier fra.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hva er risiko?</p>
+  <ul>
+    <li>Alt som kan gjøre skade</li>
+    <li data-riktig>Hvor sannsynlig det er at en fare fører til skade, og hvor alvorlig skaden blir</li>
+    <li>Hvor giftig et stoff er</li>
+  </ul>
+  <p class="forklaring">Risiko = sannsynlighet × konsekvens. En fare er selve tingen som kan gjøre skade.</p>
+</div>
+<div class="quiz">
+  <p>2. Hva er det siste steget i en risikovurdering?</p>
+  <ul>
+    <li>Finne farene</li>
+    <li>Bestemme tiltak</li>
+    <li data-riktig>Dokumentere og følge opp at tiltakene virker</li>
+  </ul>
+  <p class="forklaring">En risikovurdering som ikke skrives ned og følges opp, er lett å glemme. Dokumentasjonen gjør også at neste person kan bruke den.</p>
+</div>
+<details><summary>3. Gi et eksempel på noe med høy fare, men lav risiko.</summary><p>For eksempel konsentrert syre som står lukket og merket i et syreskap, eller en høyspentlinje som er godt sikret og utilgjengelig.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>fare</td><td>Noe som kan gjøre skade, for eksempel et etsende stoff, en varm overflate eller en tank under trykk.</td><td>hazard</td></tr>
+    <tr><td>risiko</td><td>Hvor sannsynlig det er at en fare fører til skade, og hvor alvorlig skaden blir.</td><td>risk</td></tr>
+    <tr><td>risikovurdering</td><td>Du tenker gjennom hva som kan gå galt i en jobb, og bestemmer hva du gjør for å hindre det.</td><td>risk assessment</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="03-risikovurdering-lab.html">Risikovurdering på skolelaben</a>: slik fyller du ut skjemaet før en labøvelse.</li>
+  <li>Arbeidstilsynet (arbeidstilsynet.no) har veiledning om risikovurdering på arbeidsplassen.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+</body>
+</html>

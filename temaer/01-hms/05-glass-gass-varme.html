@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glass, gass, varme og biologiske farer – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.avtrekk{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:680px){.avtrekk{grid-template-columns:1fr}}
+.stor{font:700 clamp(32px,6vw,48px)/1 var(--head)}
+#lab svg{cursor:crosshair}
+#lab .hot{fill:transparent;cursor:pointer}
+#lab .hot.funnet{stroke:#0d7f45;stroke-width:5;fill:#0d7f4522}
+#funn{columns:2 260px;margin:12px 0 0;padding-left:20px}
+#funn li.skjult{color:var(--dim)}
+@keyframes flyt{to{stroke-dashoffset:-20}}
+.luft{stroke-dasharray:6 4;animation:flyt .8s linear infinite}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Glass, gass, varme og biologiske farer</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Ikke alle farer på laben kommer fra kjemikaliene. Glass kan kutte, gassflasker kan velte og varmekilder kan antenne damp. Når du jobber med mikroorganismer, gjelder egne regler.</p>
+
+<h2>Glass, gass og varme</h2>
+<div class="to">
+  <div><h3>Glassutstyr</h3><p>Sjekk for sprekker før bruk. Knust glass legges i egen beholder for glassavfall, aldri i vanlig søppel. Bruk hansker eller klut når du setter glassrør i propper.</p></div>
+  <div><h3>Gassflasker</h3><p>Skal alltid stå sikret med kjetting eller stropp. Flytt dem på tralle med beskyttelseshetten på. Bruk riktig reduksjonsventil, og lukk flasken når du er ferdig.</p></div>
+  <div><h3>Varmekilder</h3><p>Ingen åpen flamme i nærheten av brannfarlige væsker. Bruk varmeplate eller varmebad. Bruk kokestein, og varm aldri opp et lukket system.</p></div>
+</div>
+
+<h2>Biologiske farer</h2>
+<p>Når du jobber med mikrobiologi, gjelder egne regler. Mikroorganismer deles inn i <strong>smitterisikogrupper</strong> fra 1 (ufarlig for friske mennesker) til 4 (alvorlig sykdom uten behandling). På skolelaben brukes normalt bare gruppe 1. Vask hendene, desinfiser arbeidsflaten før og etter arbeidet, og steriliser (autoklaver) kulturer før de kastes.</p>
+
+<div class="boks yrkesboks">
+  <h3>I yrket</h3>
+  <p>På et industrilaboratorium analyserer <strong>laboranten</strong> prøver fra prosessen, for eksempel produktkvalitet, avløpsvann eller råvarer. Prøvene kan være varme, under trykk eller inneholde ukjente stoffer. Derfor er risikovurdering før analysen og god orden underveis en fast del av jobben.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Varm aldri opp et lukket system. Trykket stiger når temperaturen stiger, og glasset kan sprekke.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hvor skal knust glass?</p>
+  <ul>
+    <li>I vanlig søppel, pakket inn i papir</li>
+    <li data-riktig>I egen beholder for glassavfall</li>
+    <li>I vasken</li>
+  </ul>
+  <p class="forklaring">Glass i vanlig søppel kan skade renholderen. Glass med kjemikalierester skal rengjøres eller leveres som farlig avfall.</p>
+</div>
+<div class="quiz">
+  <p>2. Hvorfor skal gassflasker alltid stå sikret med kjetting eller stropp?</p>
+  <ul>
+    <li>For at de ikke skal bli stjålet</li>
+    <li data-riktig>Fordi ventilen kan knekke hvis flasken velter, og flasken kan bli som en rakett</li>
+    <li>Fordi gassen ellers lekker ut</li>
+  </ul>
+  <p class="forklaring">En full gassflaske har svært høyt trykk. Knekker ventilen, strømmer gassen ut med stor kraft.</p>
+</div>
+<details><summary>3. Hvilken smitterisikogruppe brukes normalt på skolelaben, og hva betyr det?</summary><p>Gruppe 1. Det er mikroorganismer som normalt ikke gir sykdom hos friske mennesker.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>reduksjonsventil</td><td>Ventilen på gassflasken som senker det høye trykket i flasken til et trygt arbeidstrykk.</td><td>pressure regulator</td></tr>
+    <tr><td>smitterisikogruppe</td><td>En inndeling av mikroorganismer fra 1 til 4 etter hvor farlige de er for mennesker.</td><td>risk group</td></tr>
+    <tr><td>autoklavere</td><td>Å drepe mikroorganismer med damp under trykk ved høy temperatur.</td><td>autoclave</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Mikrobiologi på laben i <a href="../07-laboratorium-og-analyse/index.html">Laboratorium og analyse</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+</body>
+</html>

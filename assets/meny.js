@@ -43,8 +43,16 @@
   var KORTNAVN = "KPL";
   var BUNNTEKST = "Sauda vgs · Vg2 kjemiprosess- og laboratoriefag";
 
+  // Designvarianter til utprøving. Hver variant er assets/design/<id>.css (og eventuelt <id>.js).
+  // «standard» er dagens utseende. Velgeren nederst på siden vises når det finnes mer enn én.
+  // En variant velges også med ?design=<id> i adressen, og huskes i nettleseren.
+  var DESIGNER = [
+    { id: "standard", navn: "Standard" }
+  ];
+
   // «Nå jobber vi med» på forsiden. Oppdateres når en ny periode starter.
-  var NAA = {
+  // Slått av 16.11.2026: klassen hopper mellom temaer i samme uke. Sett tilbake ved behov.
+  var NAA = null && {
     overskrift: "Kjemiske reaksjoner og reaksjonsligninger",
     tekst: "Vi repeterer atomer og bindinger og går videre til reaksjoner. Start i Kjemiske prinsipper.",
     temaer: ["02-kjemi-og-beregninger"]
@@ -110,6 +118,26 @@
     return rel;
   }
   var HER = relativ(location.href);
+
+  // ---------- Designvariant ----------
+  var DESIGN = "standard";
+  (function () {
+    var fraAdresse = new URLSearchParams(location.search).get("design");
+    var lagret = null;
+    try { lagret = localStorage.getItem("kpl-design"); } catch (e) { /* privat modus */ }
+    var onsket = fraAdresse || lagret || "standard";
+    if (DESIGNER.some(function (d) { return d.id === onsket; })) DESIGN = onsket;
+    if (fraAdresse) { try { localStorage.setItem("kpl-design", DESIGN); } catch (e) { /* */ } }
+    document.documentElement.classList.add("design-" + DESIGN);
+    if (DESIGN !== "standard") {
+      var l = document.createElement("link");
+      l.rel = "stylesheet";
+      l.href = adresse("assets/design/" + DESIGN + ".css");
+      document.head.appendChild(l);
+      var d = DESIGNER.filter(function (x) { return x.id === DESIGN; })[0];
+      if (d && d.js) { var s = document.createElement("script"); s.src = adresse("assets/design/" + DESIGN + ".js"); document.head.appendChild(s); }
+    }
+  })();
   var temaTreff = HER.match(/^temaer\/([^/]+)\/(.+)$/);
   var TEMA = temaTreff ? TEMAER.filter(function (t) { return t.mappe === temaTreff[1]; })[0] : null;
 
@@ -128,7 +156,11 @@
   // ---------- Læringsstier fra sti.js ----------
   var STIER = {};
   window.KPL = window.KPL || {};
-  window.KPL.sti = function (mappe, sider) { STIER[mappe] = sider || []; };
+  // Valg: { oppslag: true } gjør temaet til et oppslagstema med undertemaer som kort
+  // (ingen nummer og ingen Forrige/Neste). Sider kan da ha beskrivelse og ikon.
+  var STIVALG = {};
+  window.KPL.sti = function (mappe, sider, valg) { STIER[mappe] = sider || []; STIVALG[mappe] = valg || {}; };
+  function erOppslag(tema) { return !!(tema && STIVALG[tema.mappe] && STIVALG[tema.mappe].oppslag); }
 
   function lastSti(mappe) {
     return new Promise(function (ok) {
@@ -216,7 +248,8 @@
   knapp.addEventListener("click", function () { body.classList.toggle("meny-apen"); });
 
   var merke = lenke("index.html", "", "merke");
-  merke.innerHTML = '<span class="merke-logo">' + ikon("kolbe") + '</span><span class="merke-tekst"><strong>' + KORTNAVN + '</strong><span>' + NETTSTED + "</span></span>";
+  merke.innerHTML = '<span class="merke-tekst"><strong>' + KORTNAVN + "</strong></span>";
+  merke.title = NETTSTED;
 
   var hovednav = lag("nav", "hovedlenker");
   hovednav.setAttribute("aria-label", "Hovedmeny");
@@ -280,13 +313,26 @@
 
   // ---------- Oppsett ----------
   // Sidepanelet vises bare inne i et tema (læringsstien). Ellers brukes det bare som mobilmeny.
-  var oppsett = lag("div", "oppsett" + (erForside ? " uten-sidemeny" : TEMA ? "" : " ingen-sti"));
+  // Sidemeny bare inne på sidene i et tema, ikke på temaets oversiktsside (der er det kort)
+  var erTemaOversikt = TEMA && /\/index\.html$/.test(HER);
+  var oppsett = lag("div", "oppsett" + (erForside ? " uten-sidemeny" : (TEMA && !erTemaOversikt) ? "" : " ingen-sti"));
   var sidemeny = lag("nav", "sidemeny");
   sidemeny.setAttribute("aria-label", TEMA ? "Læringssti" : "Temaer");
   var toc = lag("aside", "toc");
   toc.setAttribute("aria-label", "På denne siden");
   var bunn = lag("footer", "bunn");
-  bunn.textContent = BUNNTEKST;
+  bunn.appendChild(lag("span", "", BUNNTEKST));
+  if (DESIGNER.length > 1) {
+    var dv = lag("label", "designvelger", "Utseende: ");
+    var sel = lag("select");
+    DESIGNER.forEach(function (d) { var o = lag("option", "", d.navn); o.value = d.id; if (d.id === DESIGN) o.selected = true; sel.appendChild(o); });
+    sel.addEventListener("change", function () {
+      try { localStorage.setItem("kpl-design", sel.value); } catch (e) { /* privat modus */ }
+      var u = new URL(location.href); u.searchParams.set("design", sel.value); location.href = u.href;
+    });
+    dv.appendChild(sel);
+    bunn.appendChild(dv);
+  }
 
   main.parentNode.insertBefore(topp, main);
   var banner = null;
@@ -339,7 +385,7 @@
 
     if (TEMA) {
       var tittel = lag("div", "banner-tema");
-      tittel.innerHTML = '<span class="banner-ikon">' + ikon(TEMA.ikon) + '</span><span><small>Tema</small>' + TEMA.tittel + "</span>";
+      // Temanavnet står allerede i brødsmulestien, så banneret viser bare fremdriften
       var fr = fremdrift(TEMA);
       if (fr.totalt) {
         var maler = lag("div", "fremdrift");
@@ -401,7 +447,7 @@
         var ol = lag("ol", "sti");
         var nr = 0;
         e.sider.forEach(function (s) {
-          var li = stegLi(s, s.fordypning ? "+" : String(++nr));
+          var li = stegLi(s, s.fordypning ? "+" : (erOppslag(TEMA) && !e.navn) ? "•" : String(++nr));
           if (s.fordypning) li.classList.add("sti-fordypning");
           ol.appendChild(li);
         });
@@ -457,6 +503,31 @@
     var liste = steg(TEMA);
     var i = -1;
     liste.forEach(function (s, n) { if (s.fil === HER) i = n; });
+    // Oppslagstema med deltemaer: Forrige/Neste går bare innenfor deltemaet
+    if (erOppslag(TEMA) && i > 0 && liste[i].type === "fagstoff" && liste[i].emne) {
+      var mine = liste.filter(function (s) { return s.type === "fagstoff" && s.emne === liste[i].emne; });
+      var j = mine.indexOf(liste[i]);
+      var oversikt = { tittel: "Alle undertemaer i " + TEMA.tittel, fil: "temaer/" + TEMA.mappe + "/index.html" };
+      liste = [j > 0 ? mine[j - 1] : oversikt, liste[i], j < mine.length - 1 ? mine[j + 1] : oversikt];
+      i = 1;
+    } else if (erOppslag(TEMA) && i > 0 && liste[i].type === "fagstoff") {
+      // Oppslagstema: «Merk som ferdig» og tilbake til oversikten, ingen Forrige/Neste
+      var felt0 = lag("div", "slutt-felt");
+      var her0 = liste[i];
+      var fk = lag("button", "ferdig-knapp"); fk.type = "button";
+      var oppd = function () { var f = erFerdig(her0.fil); fk.classList.toggle("er-ferdig", f); fk.innerHTML = ikon("hake") + (f ? "Ferdig – klikk for å angre" : "Merk siden som ferdig"); };
+      fk.addEventListener("click", function () { settFerdig(her0.fil, !erFerdig(her0.fil)); oppd(); byggSidemeny(); byggBanner(); });
+      oppd();
+      felt0.appendChild(fk);
+      var nav0 = lag("nav", "bla");
+      var tilbake = lenke("temaer/" + TEMA.mappe + "/index.html", "", "bla-forrige");
+      tilbake.innerHTML = "<small>← Tilbake</small>";
+      tilbake.appendChild(lag("span", "", "Alle undertemaer i " + TEMA.tittel));
+      nav0.appendChild(tilbake);
+      felt0.appendChild(nav0);
+      main.appendChild(felt0);
+      return;
+    }
     if (i === -1) return;
     var gammel = main.querySelector(".slutt-felt");
     if (gammel) gammel.remove();
@@ -870,6 +941,40 @@
   }
 
   // ---------- Emnekort på temaets oversiktsside ----------
+  // Undertemaer som kort på oversiktssiden til et oppslagstema
+  function byggUndertemakort() {
+    if (!TEMA || !erOppslag(TEMA) || !/\/index\.html$/.test(HER)) return;
+    var b = "temaer/" + TEMA.mappe + "/";
+    var raa = STIER[TEMA.mappe] || [];
+    if (raa.length && raa[0].emne) {
+      // Deltemaer: ett kort per deltema, som lenker til første side
+      raa = raa.map(function (g) {
+        var forste = (g.sider || []).filter(function (s) { return s.fil && (VIS_UTKAST || s.status !== "utkast"); })[0];
+        return forste ? { fil: forste.fil, tittel: String(g.emne).replace(/^\s*\d+\s*[A-Za-zÆØÅæøå]?\s*[.:–-]?\s+/, ""), beskrivelse: g.beskrivelse, ikon: g.ikon, alle: g.sider } : null;
+      }).filter(Boolean);
+    } else {
+      raa = raa.filter(function (s) { return s.fil && (VIS_UTKAST || s.status !== "utkast"); });
+    }
+    if (!raa.length) return;
+    var seksjon = lag("section", "undertema-seksjon");
+    seksjon.appendChild(lag("h2", "", "Undertemaer"));
+    var rutenett = lag("div", "undertemakort");
+    raa.forEach(function (s) {
+      var filer = s.alle ? s.alle.filter(function (x) { return x.fil; }).map(function (x) { return b + x.fil; }) : [b + s.fil];
+      var ferdig = filer.length && filer.every(erFerdig);
+      var a = lenke(b + s.fil, "", "undertema-kort" + (ferdig ? " er-ferdig" : ""));
+      a.innerHTML = (s.ikon ? '<img class="undertema-ikon" alt="" src="' + adresse(b + s.ikon) + '">' : "") +
+        '<span class="undertema-tekst"><strong></strong><small></small></span>' +
+        (ferdig ? '<span class="undertema-hake">' + ikon("hake") + "</span>" : "");
+      a.querySelector("strong").textContent = s.tittel;
+      a.querySelector("small").textContent = s.beskrivelse || "";
+      rutenett.appendChild(a);
+    });
+    seksjon.appendChild(rutenett);
+    var etter = main.querySelector(".ingress") || main.querySelector("h1");
+    etter.parentNode.insertBefore(seksjon, etter.nextSibling);
+  }
+
   function byggEmnekort() {
     if (!TEMA || !/\/index\.html$/.test(HER)) return;
     var grupper = emner(TEMA).filter(function (e) { return e.navn; });
@@ -962,6 +1067,7 @@
     byggBanner();
     byggSidetype();
     byggEmnekort();
+    byggUndertemakort();
     if (!erForside) { byggSidemeny(); byggBla(); byggToc(); }
     byggTemakort();
     byggNaa();

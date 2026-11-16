@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Sveitserostmodellen – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.trekant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:640px){.trekant{grid-template-columns:1fr}}
+.side-knapp{display:grid;gap:8px}
+.eks-bar{position:relative;height:46px;border-radius:8px;overflow:hidden;margin:16px 0 6px;background:#9aa3ad}
+.eks-bar div{position:absolute;top:0;bottom:0}
+.eks-bar .mk{width:4px;background:var(--ink);top:-4px;bottom:-4px;box-shadow:0 0 0 2px var(--bg)}
+.eks-akse{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.loto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:640px){.loto{grid-template-columns:1fr}}
+.loto button{display:block;width:100%;text-align:left;margin-bottom:8px;font-weight:400}
+.loto ol{margin:0;padding-left:24px;min-height:120px}
+.loto ol li{padding:6px 4px;border-bottom:1px solid var(--line)}
+.loto ol li.r{color:var(--ok);font-weight:600}.loto ol li.f{color:var(--bad);font-weight:600}
+.ost label{display:flex;gap:8px;align-items:center;font-weight:400;margin:4px 0}
+/* Trykk, nivå og reaktor (fra Prosessikkerhet Vg2, modul 4) */
+:root{--c-reg:var(--blue);--c-alm:light-dark(#a87400,#f5c400);--c-trp:var(--red);--c-psv:light-dark(#c2410c,#f08a4b);--water:light-dark(#a9d3e8,#2a5c74);--reg-soft:light-dark(#e1ecf6,#1c2f38)}
+.innhold{display:flex;flex-wrap:wrap;gap:6px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:15px}
+.innhold a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+.innhold a:hover{border-color:var(--ink)}
+.pid-wrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.pid{display:block;width:100%;min-width:620px;height:auto;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace}
+.pid text{fill:var(--ink);font-size:11px}
+.pid .lbl2{fill:var(--dim);font-size:10.5px}
+.pid .ln{stroke:var(--ink);stroke-width:2;fill:none}
+.pid .vessel{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+.pid .valve{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid g.lay{--c:var(--ink)}
+.pid g.reg{--c:var(--c-reg)}.pid g.alm{--c:var(--c-alm)}.pid g.trp{--c:var(--c-trp)}.pid g.psv{--c:var(--c-psv)}
+.pid g.lay .sig{stroke:var(--c);stroke-width:1.8;stroke-dasharray:5 4;fill:none}
+.pid g.lay .imp{stroke:var(--c);stroke-width:2;fill:none}
+.pid g.lay .bub,.pid g.lay .box,.pid g.lay .vl{fill:var(--bg);stroke:var(--c);stroke-width:2}
+.pid g.lay .bt,.pid g.lay .tg{fill:var(--c);font-size:10.5px;font-weight:600}
+.pid g.lay.on .bub,.pid g.lay.on .box,.pid g.lay.on .vl{fill:var(--c)}
+.pid g.lay.on .bt{fill:var(--bg)}
+.pid g.lay.on .sig{stroke-width:3}
+.pid g.lay.on .imp{stroke-width:3.5}
+.pid g.lay.dead{opacity:.35}
+.pid .pv{font-family:var(--head);font-size:26px;font-weight:700}
+.pid .water{fill:var(--water)}
+.pid .tankbg{fill:var(--bg)}
+.pid .tankol{fill:none;stroke:var(--ink);stroke-width:2.5}
+.pid .mark{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 3}
+.pid .flow{stroke:var(--water);stroke-width:5;fill:none;stroke-dasharray:8 8;animation:fl .8s linear infinite}
+.pid .off{display:none}
+.pid .pump{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid .pump.run{fill:var(--reg-soft);stroke:var(--c-reg)}
+.pid .pump.trip{stroke:var(--c-trp)}
+.pid .pvs{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+@keyframes fl{to{stroke-dashoffset:-16}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:var(--dim)}
+.legend i{display:inline-block;width:22px;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+.ladder{display:flex;flex-direction:column;gap:4px;margin-top:14px;font-size:15px}
+.ladder div{display:grid;grid-template-columns:70px 14px 1fr;gap:10px;align-items:center;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ladder .sw{width:14px;height:14px;border-radius:3px}
+.ladder div.hit{border-color:var(--ink);font-weight:700}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:16px;background:var(--bg)}
+.fb.ok{border-left:5px solid var(--ok)}.fb.mid{border-left:5px solid var(--c-alm)}.fb.bad{border-left:5px solid var(--c-trp)}
+.state{display:inline-block;font:700 15px/1.2 var(--head);padding:4px 10px;border-radius:5px;vertical-align:middle}
+.state.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.state.mid{background:color-mix(in srgb,var(--yel) 28%,transparent);color:var(--warn)}
+.state.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.nv-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:14px}
+.nv-ctl fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.nv-ctl legend{font-weight:700;font-size:14px;color:var(--dim);padding:0 4px}
+.nv-ctl label.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.35}
+.nv-ctl label.cb input{margin-top:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.nv-status{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-top:14px;font-size:15px}
+.nv-status .state{justify-self:start}
+.nv-log{list-style:none;margin:6px 0 0;padding:8px 10px;max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14px;display:flex;flex-direction:column;gap:3px}
+.nv-log:empty::before{content:"Ingen hendelser ennå. Start simuleringen.";color:var(--dim)}
+.nv-log .tid{color:var(--dim);margin-right:6px;font-variant-numeric:tabular-nums}
+.readout{font:700 28px/1.2 var(--head);margin-top:10px;display:flex;gap:12px;align-items:center}
+.bars{display:grid;grid-template-columns:120px 1fr 48px;gap:8px 10px;align-items:center;margin-top:12px;font-size:15px}
+.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;transition:width .2s}
+details.mer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+.ws-tbl input[type=text]{width:100%;min-width:110px;font:15px 'Source Sans 3',system-ui,sans-serif;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ws-tbl select{min-height:36px}
+.ws-tbl td.c,.ws-tbl th.c{text-align:center}
+.ws textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.pid .flow{animation:none}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Sveitserostmodellen</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1</div>
+<p class="ingress">Ingen sikring er perfekt. Derfor har et anlegg mange barrierer etter hverandre. En ulykke skjer når flere av dem svikter samtidig.</p>
+
+<h2 id="barrierer">Barrierer: sveitserostmodellen</h2>
+<p>Et anlegg har flere <strong>sikkerhetsbarrierer</strong> som hver skal stoppe en hendelse: riktig konstruksjon, alarmer, forriglinger, nødavstengning, prosedyrer og opplæring. Lagene i simuleringene med <a href="06-trykktank.html">trykktanken</a> og <a href="06-overfylling.html">vanntanken</a> er eksempler på slike barrierer. Ingen barriere er perfekt. Alle har «hull». En ulykke skjer når hullene i flere barrierer står på linje samtidig.</p>
+<p><strong>Forriglinger</strong> er automatiske sperrer, for eksempel at en pumpe stopper når tanken er tom. En <strong>forriglingsmatrise</strong> viser hvilke signaler som utløser hvilke handlinger. <strong>Nødavstengning (ESD)</strong> stenger ned hele eller deler av anlegget ved alvorlige hendelser.</p>
+
+<div class="sim ost">
+  <h2>Simulering: når hullene står på linje</h2>
+  <p class="hint">Huk av for barrierer som er svekket. Hva skal til før faren slipper gjennom?</p>
+  <div class="fig panel" style="padding:6px"><svg id="ost" viewBox="0 0 640 220" role="img" aria-label="Fire barrierer med hull"></svg></div>
+  <div id="ost-k" style="margin-top:10px"></div>
+  <div id="ost-svar" aria-live="polite"></div>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. En barriere er svekket, men ingenting har skjedd. Hvorfor skal det likevel rapporteres?</summary><p>Fordi de andre barrierene kan svikte senere. Hver svekkelse gjør at det skal mindre til før hullene står på linje.</p></details>
+<details><summary>2. Velg en av storulykkene du har lest om. Hvilke barrierer sviktet?</summary><p>For eksempel Buncefield: nivåmåleren hang, og den uavhengige høynivåbryteren virket ikke. To barrierer sviktet samtidig, og bensinen rant over.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>barriere</td><td>Et teknisk, organisatorisk eller menneskelig tiltak som skal stoppe en farlig hendelse eller begrense skaden.</td><td>barrier</td></tr>
+    <tr><td>forrigling</td><td>En automatisk sperre i anlegget, for eksempel at en pumpe stopper når en tank er tom.</td><td>interlock</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="10-storulykker.html">Storulykker – hva kan vi lære?</a></li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  /* Sveitserost */
+  const B = ['Konstruksjon: riktig materiale og sikkerhetsventil', 'Gassdetektor og alarm', 'Prosedyre og arbeidstillatelse', 'Opplæring og årvåkne operatører'];
+  const svekket = [false, false, false, false];
+  const ost = document.getElementById('ost'), ok = document.getElementById('ost-k');
+  ok.innerHTML = B.map((b, i) => `<label><input type="checkbox" data-i="${i}"> ${i + 1}. ${b} er svekket</label>`).join('');
+  const HULL = [[60, 150], [40, 120], [70, 160], [50, 140]];
+  function tegnOst() {
+    let s = '', stopp = -1;
+    for (let i = 0; i < 4; i++) {
+      const x = 150 + i * 120;
+      const hull = svekket[i] ? [110] : HULL[i];
+      s += `<rect x="${x}" y="20" width="34" height="180" rx="6" fill="#f5c400" stroke="#a88a00" stroke-width="2"/>`;
+      s += hull.map(y => `<ellipse cx="${x + 17}" cy="${y}" rx="11" ry="14" style="fill:var(--bg)" stroke="#a88a00"/>`).join('');
+      s += `<text x="${x + 17}" y="216" font-size="13" text-anchor="middle" font-family="Source Sans 3,sans-serif" fill="currentColor">${i + 1}</text>`;
+      if (!svekket[i] && stopp < 0) stopp = i;
+    }
+    const slutt = stopp < 0 ? 620 : 150 + stopp * 120;
+    s = `<text x="20" y="104" font-family="Barlow Semi Condensed,sans-serif" font-weight="700" font-size="18" fill="#c81d17">Fare</text>
+         <line x1="20" y1="110" x2="${slutt - 6}" y2="110" stroke="#c81d17" stroke-width="5"/>
+         <path d="M${slutt - 14} 100 L${slutt} 110 L${slutt - 14} 120z" fill="#c81d17"/>` + s +
+         (stopp < 0 ? '<text x="560" y="96" font-family="Barlow Semi Condensed,sans-serif" font-weight="700" font-size="18" fill="#c81d17" text-anchor="middle">Ulykke</text>' : '');
+    ost.innerHTML = s;
+    const n = svekket.filter(Boolean).length;
+    document.getElementById('ost-svar').innerHTML = stopp < 0
+      ? '<div class="status bad">Alle barrierene har svikt samtidig, og faren slipper gjennom. Slik oppstår de fleste store ulykker: flere små svakheter på én gang.</div>'
+      : `<div class="status ${n ? 'warn' : 'ok'}">Faren stoppes av barriere ${stopp + 1}. ${n ? `${n} barriere${n > 1 ? 'r er' : ' er'} svekket. Svekkelser skal rapporteres og rettes, selv om ingenting har skjedd.` : 'Alle barrierene er intakte.'}</div>`;
+  }
+  ok.addEventListener('change', e => { const c = e.target.closest('input'); if (c) { svekket[c.dataset.i] = c.checked; tegnOst(); } });
+  tegnOst();
+}
+</script>
+</body>
+</html>

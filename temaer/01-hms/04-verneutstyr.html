@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personlig verneutstyr – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.skiltbilde{float:right;width:min(42%,260px);height:auto;margin:6px 0 12px 20px;border-radius:6px}
+@media(max-width:520px){.skiltbilde{float:none;display:block;width:min(100%,280px);margin:0 auto 14px}}
+h2{clear:both}
+.hansker{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));gap:10px;margin-top:14px}
+.hansker div{background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+.hansker b{display:block;font-family:var(--head);font-size:19px}
+.hansker span{display:inline-block;margin-top:6px;font-weight:700;padding:3px 10px;border-radius:20px;font-size:14px}
+.hansker .G{border-color:var(--ok)}.hansker .G span{background:var(--ok);color:#fff}
+.hansker .M span{background:var(--yel);color:#17191c}
+.hansker .D{opacity:.7}.hansker .D span{background:var(--bad);color:#fff}
+.filter{display:inline-block;width:22px;height:22px;border-radius:4px;vertical-align:middle;margin-right:8px;border:1px solid #0003}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+
+<h1>Personlig verneutstyr</h1>
+<p class="ingress">Verneutstyr er den siste barrieren mellom deg og faren. Det virker bare hvis du velger riktig utstyr, bruker det riktig og bruker det hver gang.</p>
+
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK9</div>
+
+<img class="skiltbilde" src="bilder/skilt-verneutstyr.png" alt="Blått påbudsskilt: Påbudt med verneutstyr" width="434" height="295">
+<p>Der du ser et blått, rundt <strong>påbudsskilt</strong>, er det påbudt å bruke verneutstyr. Ofte viser skiltet hvilket utstyr det gjelder, for eksempel briller, hørselvern eller hjelm.</p>
+<p>Arbeidsgiveren skal skaffe verneutstyret og gi deg opplæring i hvordan det brukes. Du har plikt til å bruke det. Hva som trengs, står i risikovurderingen, i prosedyren og i <strong>seksjon 8</strong> i sikkerhetsdatabladet. Godkjent verneutstyr er CE-merket.</p>
+
+<h2>Fra topp til tå</h2>
+<div class="to">
+  <div><h3>Øyne og ansikt</h3><p><strong>Vernebriller</strong> med sideskjerm er minimum på laben. <strong>Tettsluttende briller</strong> brukes mot sprut og damp. <strong>Ansiktsskjerm</strong> brukes i tillegg ved stor sprutfare, for eksempel ved tømming av syre eller lut.</p></div>
+  <div><h3>Hender</h3><p>Det finnes ingen hanske som tåler alt. Materialet må passe til kjemikaliet. Se hanskevelgeren under.</p></div>
+  <div><h3>Kropp</h3><p>Labfrakk på laben. I prosessanlegg brukes ofte <strong>flammehemmende og antistatisk</strong> arbeidstøy. Ved arbeid med syrer og lut kan det være nødvendig med kjemikalieforkle eller kjemikaliedress.</p></div>
+  <div><h3>Føtter og hode</h3><p><strong>Vernesko</strong> med tåhette og gli-sikker såle. I anlegget brukes <strong>hjelm</strong> der det er fare for fallende gjenstander eller for å slå hodet.</p></div>
+  <div><h3>Hørsel</h3><p>Ørepropper eller øreklokker der støyen er høy. Mer om støy i <a href="07-arbeidsmiljo.html">Arbeidsmiljø</a>.</p></div>
+  <div><h3>Fall</h3><p>Ved arbeid i høyden, for eksempel på tanker og i rørgater, brukes <strong>fallsikring</strong> med sele og line festet i et godkjent forankringspunkt.</p></div>
+</div>
+
+<h2>Hansker: gjennombrudd og riktig materiale</h2>
+<p>Kjemikalier kan trenge gjennom hanskematerialet uten at du ser det. Dette kalles <strong>permeasjon</strong>. <strong>Gjennombruddstiden</strong> er hvor lang tid det tar før kjemikaliet kommer gjennom hansken. Den avhenger av materiale, tykkelse og kjemikalie. Tynne engangshansker av nitril beskytter mot sprut, men må byttes straks de er tilsølt.</p>
+
+<div class="sim">
+  <h2>Hanskevelgeren</h2>
+  <p class="hint">Velg kjemikalie og se hvor godt ulike hanskematerialer beskytter.</p>
+  <label for="kj">Kjemikalie</label><br>
+  <select id="kj" style="min-width:min(100%,320px)"></select>
+  <div class="hansker" id="hk" aria-live="polite"></div>
+  <p id="hk-tips" style="margin:12px 0 0"></p>
+  <p class="liten">Veiledende vurdering for vanlige hansketyper og sprut eller kort kontakt. Gjennombruddstiden varierer mellom produsenter og tykkelser. Sjekk alltid seksjon 8 i sikkerhetsdatabladet og hanskeprodusentens tabell.</p>
+</div>
+
+<h3>Slik tar du av engangshansker uten å forurense deg selv</h3>
+<ol>
+  <li>Klyp tak i utsiden av den ene hansken ved håndleddet og trekk den av, slik at den vrenges.</li>
+  <li>Hold den avtatte hansken i den hanskekledde hånden.</li>
+  <li>Stikk fingrene på den bare hånden inn <em>under</em> kanten på den andre hansken og vreng den av over den første.</li>
+  <li>Kast hanskene i riktig avfall og vask hendene.</li>
+</ol>
+
+<h2>Åndedrettsvern</h2>
+<p><strong>Filtermasker</strong> renser luften du puster inn. Filteret må passe til stoffet, og det har en fargekode. <strong>Friskluftutstyr</strong> (luft fra flaske eller slange) må brukes når det er for lite oksygen, når du ikke vet hvilken gass det er, eller når konsentrasjonen er svært høy. Filteret lager ikke oksygen.</p>
+<div class="scroll">
+<table class="stack">
+  <thead><tr><th>Filter</th><th>Beskytter mot</th><th>Eksempel</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Filter"><span class="filter" style="background:#8a5a2b"></span>A (brun)</td><td data-l="Mot">Organiske gasser og damper med kokepunkt over 65 °C</td><td data-l="Eksempel">Toluen, xylen</td></tr>
+    <tr><td data-l="Filter"><span class="filter" style="background:#8a5a2b"></span>AX (brun)</td><td data-l="Mot">Organiske stoffer med lavt kokepunkt (under 65 °C)</td><td data-l="Eksempel">Aceton, diklormetan</td></tr>
+    <tr><td data-l="Filter"><span class="filter" style="background:#9a9a9a"></span>B (grå)</td><td data-l="Mot">Uorganiske gasser</td><td data-l="Eksempel">Klor, hydrogensulfid</td></tr>
+    <tr><td data-l="Filter"><span class="filter" style="background:#f5c400"></span>E (gul)</td><td data-l="Mot">Sure gasser</td><td data-l="Eksempel">Svoveldioksid, hydrogenklorid</td></tr>
+    <tr><td data-l="Filter"><span class="filter" style="background:#2e8b3a"></span>K (grønn)</td><td data-l="Mot">Ammoniakk og aminer</td><td data-l="Eksempel">Ammoniakk</td></tr>
+    <tr><td data-l="Filter"><span class="filter" style="background:#fff"></span>P (hvit)</td><td data-l="Mot">Partikler: støv, røyk, aerosoler (P1–P3, der P3 er best)</td><td data-l="Eksempel">Pulverstoffer, slipestøv</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Kombinasjonsfiltre finnes, for eksempel <strong>ABEK-P3</strong>. Masken må sitte tett: skjegg og skjeggstubb gjør at den lekker. Filteret må byttes etter brukstid eller når du kjenner lukt eller smak.</p>
+
+<div class="boks yrkesboks">
+  <h3>I yrket</h3>
+  <p><strong>Prosessoperatøren</strong> har ofte flammehemmende arbeidstøy, hjelm, vernesko, vernebriller, hørselvern og gassdetektor som fast utstyr, og tar på ekstra vern ved prøvetaking og åpning av utstyr. <strong>Laboranten</strong> bruker labfrakk, vernebriller og hansker som passer til kjemikaliet. Avtrekksskapet er likevel det viktigste vernet på laben.</p>
+</div>
+
+<section class="test">
+  <h2>Test deg selv</h2>
+  <details><summary>Hva betyr gjennombruddstid?</summary><div><p>Tiden det tar før et kjemikalie trenger gjennom hanskematerialet og kommer i kontakt med huden.</p></div></details>
+  <details><summary>Hvorfor er ikke nitrilhansker et godt valg når du arbeider med aceton?</summary><div><p>Aceton trenger raskt gjennom nitril. Butylhansker beskytter mye bedre mot aceton.</p></div></details>
+  <details><summary>Når holder det ikke med filtermaske?</summary><div><p>Når det er for lite oksygen, når du ikke vet hvilken gass det er, eller når konsentrasjonen er svært høy, for eksempel ved arbeid i en tank. Da må du bruke friskluftutstyr.</p></div></details>
+</section>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>verneutstyr</td><td>Utstyr du har på deg for å beskytte deg, for eksempel vernebriller, labfrakk og hansker.</td><td>personal protective equipment (PPE)</td></tr>
+    <tr><td>påbudsskilt</td><td>Et blått, rundt skilt som viser at det er påbudt å bruke et bestemt verneutstyr.</td><td>mandatory sign</td></tr>
+    <tr><td>gjennombruddstid</td><td>Tiden det tar før et kjemikalie trenger gjennom hanskematerialet og når huden.</td><td>breakthrough time</td></tr>
+    <tr><td>filtermaske</td><td>Åndedrettsvern med et filter som renser luften du puster inn. Det lager ikke oksygen.</td><td>filter respirator</td></tr>
+    <tr><td>friskluftutstyr</td><td>Åndedrettsvern som gir deg ren luft fra flaske eller slange.</td><td>supplied-air respirator</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="03-tiltakshierarkiet.html">Øv: Tiltakshierarkiet</a>: hvorfor verneutstyr er det siste tiltaket.</li>
+  <li>Seksjon 8 i sikkerhetsdatabladet for kjemikaliene du bruker.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+<script>
+{
+  const M = ['Nitril','Neopren','Butyl','Viton','Laminat','Lateks'];
+  const K = [
+    ['Aceton (keton)',            'DMGDGM', 'Ketoner trenger raskt gjennom nitril. Butyl eller laminat er riktig valg.'],
+    ['Etanol (alkohol)',          'GGGGGM', 'De fleste materialer fungerer. Nitril er et godt hverdagsvalg.'],
+    ['Heptan/heksan (alifatiske hydrokarboner)', 'GMDGGD', 'Nitril eller Viton. Butyl og lateks sveller og slipper gjennom.'],
+    ['Toluen (aromatisk løsemiddel)', 'DDDGGD', 'Bare Viton og laminat holder lenge. Vanlige engangshansker gir bare kort sprutbeskyttelse.'],
+    ['Diklormetan (klorert løsemiddel)', 'DDDMGD', 'Svært vanskelig. Laminat er det sikreste. Arbeid alltid i avtrekk.'],
+    ['Saltsyre, fortynnet',       'GGGGGM', 'Nitril, neopren og butyl beskytter godt mot fortynnede syrer.'],
+    ['Natriumhydroksid (lut)',    'GGGMGM', 'Nitril og neopren er gode valg. Lut skader øynene alvorlig, så bruk tettsluttende briller.'],
+    ['Mineralolje og diesel',     'GGDGGD', 'Nitril er et godt valg. Lateks tåler ikke oljer.']
+  ];
+  const TXT = {G:'God', M:'Middels', D:'Dårlig'};
+  const sel = document.getElementById('kj'), hk = document.getElementById('hk'), tips = document.getElementById('hk-tips');
+  sel.innerHTML = K.map((k, i) => `<option value="${i}">${k[0]}</option>`).join('');
+  const vis = () => {
+    const k = K[sel.value];
+    hk.innerHTML = M.map((m, i) => `<div class="${k[1][i]}"><b>${m}</b><span>${TXT[k[1][i]]}</span></div>`).join('');
+    tips.innerHTML = `<strong>Tips:</strong> ${k[2]}${k[1][4] === 'G' ? ' Laminathansker er stive og upraktiske. De brukes ofte <em>under</em> en annen hanske.' : ''}`;
+  };
+  sel.addEventListener('change', vis); vis();
+}
+</script>
+</body>
+</html>

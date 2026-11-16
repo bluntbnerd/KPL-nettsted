@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beredskap og avvikshåndtering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.valg{display:grid;gap:8px;margin-top:12px}
+.valg button{text-align:left;font-weight:400}
+.scen-tekst{font-size:19px;font-weight:600}
+.trinn{display:flex;gap:6px;margin-bottom:10px}
+.trinn span{flex:1;height:6px;border-radius:3px;background:var(--line)}
+.trinn span.ok{background:var(--grn)}.trinn span.her{background:var(--ink)}
+.pyramide{display:grid;gap:6px;max-width:560px;margin:14px auto}
+.pyramide div{margin:0 auto;text-align:center;color:#fff;border-radius:6px;padding:8px;font-weight:600}
+.pyramide b{font-family:var(--head);font-size:22px;margin-right:8px}
+.nod{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.nod div{border-radius:10px;padding:14px;color:#fff;text-align:center}
+.nod b{display:block;font:700 40px/1 var(--head)}
+@media(max-width:480px){.nod{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+
+<h1>Beredskap og avvikshåndtering</h1>
+<p class="ingress">Selv med gode barrierer kan noe gå galt. Da avgjør de første minuttene hvor stor skaden blir. Etterpå handler det om å lære, slik at det ikke skjer igjen.</p>
+
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK9, ADK10</div>
+
+<h2>Beredskap: vær forberedt</h2>
+<p>Alle bedrifter skal ha en <strong>beredskapsplan</strong> som beskriver hva som skal skje ved brann, gasslekkasje, kjemikaliesøl og personskade. Du må vite:</p>
+<ul>
+  <li>hvordan du <strong>varsler</strong>: alarm, internt nødnummer og nødetatene,</li>
+  <li>hvor <strong>rømningsveiene</strong> og <strong>møteplassen</strong> er, slik at alle kan telles opp,</li>
+  <li>hvor <strong>nødutstyret</strong> er: øyeskyll, nøddusj, slokkeapparat, brannteppe, førstehjelpsutstyr og spillsett.</li>
+</ul>
+<div class="nod">
+  <div style="background:#c81d17"><b>110</b>Brann</div>
+  <div style="background:#0f56a3"><b>112</b>Politi</div>
+  <div style="background:#0d7f45"><b>113</b>Medisinsk nødhjelp</div>
+</div>
+<p><strong>Giftinformasjonen: 22 59 13 00</strong> (døgnåpen). Her får du råd om hva du skal gjøre hvis noen har fått i seg eller blitt utsatt for et kjemikalie.</p>
+
+<h2>Førstehjelp ved kjemikalieskader</h2>
+<p>Tid er det viktigste. Start førstehjelpen straks, og les seksjon 4 i sikkerhetsdatabladet så snart som mulig. Helst bør du ha lest den <em>før</em> du begynte å jobbe med stoffet.</p>
+<div class="to">
+  <div><h3>Øyne</h3><p>Skyll straks med øyeskyll eller rent vann i minst 15 minutter. Hold øyelokkene åpne. Lut krever ekstra lang skylling. Kontakt lege.</p></div>
+  <div><h3>Hud</h3><p>Fjern tilsølte klær og skyll med mye vann, gjerne i nøddusjen. Ved store skader skal skyllingen fortsette til legen tar over.</p></div>
+  <div><h3>Innånding</h3><p>Få personen ut i frisk luft, men tenk på din egen sikkerhet først. Hold vedkommende i ro og varm.</p></div>
+  <div><h3>Svelging</h3><p>Skyll munnen. Ikke framkall brekninger. Ring Giftinformasjonen eller 113.</p></div>
+</div>
+
+<div class="sim">
+  <h2>Scenario: lut i øyet</h2>
+  <div class="trinn" id="sc-trinn"></div>
+  <div class="panel">
+    <p class="scen-tekst" id="sc-tekst"></p>
+    <div class="valg" id="sc-valg"></div>
+    <div id="sc-svar" aria-live="polite"></div>
+    <div class="rad" style="margin-top:12px"><button type="button" id="sc-neste" hidden>Fortsett →</button></div>
+  </div>
+</div>
+
+<h2>Søl og lekkasjer</h2>
+<ol>
+  <li><strong>Varsle</strong> dem rundt deg, og varsle videre etter prosedyren.</li>
+  <li><strong>Vurder faren.</strong> Er stoffet brannfarlig, giftig eller etsende? Fjern tennkilder og sørg for ventilasjon. Ved store utslipp: evakuer.</li>
+  <li><strong>Ta på verneutstyr</strong> før du rydder.</li>
+  <li><strong>Stopp og avgrens</strong> sølet med absorbenter eller lenser fra spillsettet. Hindre at det renner til sluk.</li>
+  <li><strong>Samle opp</strong> og lever det som farlig avfall. Syrer og baser kan nøytraliseres med egne nøytraliseringsmidler.</li>
+  <li><strong>Rapporter</strong> hendelsen.</li>
+</ol>
+
+<h2>Avvik og uønskede hendelser</h2>
+<p>Et <strong>avvik</strong> er når noe ikke er som det skal være: en prosedyre som ikke ble fulgt, utstyr som ikke virker, eller en måling utenfor kravene. En <strong>uønsket hendelse</strong> er noe som førte til, eller kunne ført til, skade på folk, miljø eller utstyr. En <strong>nesten-ulykke</strong> er en hendelse der det gikk bra, men som kunne gått galt.</p>
+<p>Også en defekt <strong>måler, alarm eller regulator</strong> er et avvik. Viser en trykkmåler feil eller en nivåbryter henger seg opp, er en barriere svekket, selv om ingen har merket noe ennå.</p>
+
+<h3>Hvorfor rapportere nesten-ulykker?</h3>
+<p>Undersøkelser av mange tusen hendelser viser et mønster: for hver alvorlige ulykke finnes det mange mindre hendelser og svært mange nesten-ulykker med de samme årsakene. Den kjente «ulykkespyramiden» etter Frank Bird viser forholdet under. Tallene er ikke eksakte for alle bedrifter, men poenget er at hver nesten-ulykke er en gratis advarsel.</p>
+<div class="pyramide" aria-label="Ulykkespyramiden">
+  <div style="background:#8b0f0b;width:30%"><b>1</b>alvorlig skade</div>
+  <div style="background:#c81d17;width:48%"><b>10</b>mindre skader</div>
+  <div style="background:#c96a12;width:68%"><b>30</b>materielle skader</div>
+  <div style="background:#a88a00;width:100%"><b>600</b>nesten-ulykker</div>
+</div>
+<p>Når en hendelse blir rapportert, gjør bedriften en <strong>årsaksanalyse</strong>. Målet er å finne de <em>bakenforliggende årsakene</em>, ikke å finne noen å skylde på. En enkel metode er å spørre «hvorfor?» flere ganger, til du kommer til en årsak som kan rettes. Så settes det i gang tiltak, og tiltakene følges opp. Det er slik sirkelen i internkontrollen (<a href="01-grunnlag.html">Grunnlaget for HMS-arbeid</a>) lukkes.</p>
+
+<div class="boks"><strong>Les mer om store ulykker i <a href="10-storulykker.html">Storulykker – hva kan vi lære?</a></strong> Der går du gjennom Piper Alpha, Bhopal, Texas City og Vest Tank i Sløvåg og finner ut hvilke barrierer som sviktet.</div>
+
+<div class="boks yrkesboks">
+  <h3>I yrket</h3>
+  <p><strong>Prosessoperatører</strong> deltar ofte i bedriftens beredskapslag og øver jevnlig på brann, gasslekkasje og redning. <strong>Laboranter</strong> kontrollerer øyeskyll og nøddusj, holder spillsettet komplett og rapporterer analyseresultater som avviker, fordi de kan være et tidlig tegn på at noe er galt i prosessen.</p>
+</div>
+
+<section class="test">
+  <h2>Test deg selv</h2>
+  <details><summary>Hva er det første du gjør når en kollega får kjemikalier i øyet?</summary><div><p>Starter skyllingen umiddelbart med øyeskyll eller rent vann. Varsling og henting av sikkerhetsdatablad gjør du samtidig, eller ber noen andre gjøre det.</p></div></details>
+  <details><summary>Hvorfor er det viktig å rapportere nesten-ulykker?</summary><div><p>Fordi de har de samme årsakene som alvorlige ulykker. Rapporterer du dem, kan årsaken rettes før noen blir skadet.</p></div></details>
+  <details><summary>En nivåmåler på en tank viser litt feil. Er det et avvik?</summary><div><p>Ja. Måleren er en del av barrierene. Viser den feil, kan tanken bli overfylt uten at alarmen går. Feilen skal rapporteres og rettes.</p></div></details>
+</section>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>beredskapsplan</td><td>Bedriftens plan for hva som skal skje ved brann, lekkasje, søl og personskade.</td><td>emergency response plan</td></tr>
+    <tr><td>spillsett</td><td>Utstyr for å stoppe og samle opp søl, for eksempel absorbenter og lenser.</td><td>spill kit</td></tr>
+    <tr><td>nesten-ulykke</td><td>En hendelse der det gikk bra, men som kunne ført til skade.</td><td>near miss</td></tr>
+    <tr><td>årsaksanalyse</td><td>En undersøkelse av hvorfor en hendelse skjedde, for å finne årsaker som kan rettes.</td><td>root cause analysis</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="02-sikkerhetsdatablad.html">Sikkerhetsdatablad og eksponering</a>: seksjon 4 om førstehjelp.</li>
+  <li>Finn beredskapsplanen og nødutstyret på skolens lab og anlegg.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+<script>
+{
+  const SC = [
+    {t:'Dere tømmer natronlut fra en kanne. Kollegaen din får sprut i øyet. Hun roper og holder hånden over øyet. Hva gjør du <em>først</em>?',
+     v:[['Henter sikkerhetsdatabladet for å se hva som står i seksjon 4.', 0, 'Tiden er avgjørende. Lut skader øyet på sekunder. Skyll først, og la andre hente databladet.'],
+        ['Fører henne straks til øyeskyllen og begynner å skylle.', 1, 'Riktig! Rask skylling er det viktigste du kan gjøre.'],
+        ['Ringer 113 før du gjør noe annet.', 0, 'Det skal ringes, men skyllingen må starte med en gang. Be en annen ringe.']]},
+    {t:'Dere skyller. Hvor lenge bør hun skylle øyet?',
+     v:[['Til det slutter å svi, ofte etter et par minutter.', 0, 'Nei. Lut fortsetter å skade selv om smerten avtar. Skyllingen må vare mye lenger.'],
+        ['I minst 15 minutter, og gjerne lenger for lut. Fortsett til helsepersonell tar over.', 1, 'Riktig! Baser trenger dypt inn i vevet og krever lang skylling.'],
+        ['Ett minutt, så kjører dere til legevakten.', 0, 'For kort. Skyllingen er viktigere enn å komme raskt til lege.']]},
+    {t:'Mens hun skyller, hva gjør du og de andre?',
+     v:[['Lar henne skylle alene mens du tørker opp sølet.', 0, 'Hun trenger hjelp til å holde øyet åpent og trenger noen hos seg. Sølet kan vente eller tas av andre.'],
+        ['Du holder øyelokkene hennes åpne, en kollega ringer 113, og en annen henter sikkerhetsdatabladet til ambulansen.', 1, 'Riktig! Fordel oppgavene. Databladet gir helsepersonellet viktig informasjon.'],
+        ['Du gir henne noe å drikke for å roe henne ned.', 0, 'Det hjelper ikke på øyeskaden. Fokuser på skylling og varsling.']]},
+    {t:'Det gikk heldigvis bra, og øyet ble ikke varig skadet. Hva skjer nå?',
+     v:[['Ingenting. Alt gikk jo bra.', 0, 'Nettopp fordi det gikk bra, er det en viktig advarsel. Neste gang kan det gå verre.'],
+        ['Du nevner det for læreren eller lederen i en pause.', 0, 'Bedre enn ingenting, men muntlige beskjeder blir lett glemt og fører sjelden til tiltak.'],
+        ['Dere rapporterer hendelsen i avvikssystemet og finner ut hvorfor den skjedde, for eksempel manglende ansiktsskjerm eller feil tømmeutstyr.', 1, 'Riktig! Rapport og årsaksanalyse gjør at hele bedriften lærer av hendelsen.']]}
+  ];
+  let i = 0, riktige = 0, forsok = 0;
+  const tekst = document.getElementById('sc-tekst'), valg = document.getElementById('sc-valg'), svar = document.getElementById('sc-svar'),
+        nes = document.getElementById('sc-neste'), trinn = document.getElementById('sc-trinn');
+  function vis() {
+    trinn.innerHTML = SC.map((s, j) => `<span class="${j < i ? 'ok' : j === i ? 'her' : ''}"></span>`).join('');
+    svar.innerHTML = ''; nes.hidden = true; forsok = 0;
+    if (i >= SC.length) {
+      tekst.innerHTML = `Scenarioet er ferdig. Du valgte riktig på første forsøk ${riktige} av ${SC.length} ganger.`;
+      valg.innerHTML = ''; nes.hidden = false; nes.textContent = 'Spill på nytt'; return;
+    }
+    tekst.innerHTML = SC[i].t;
+    valg.innerHTML = SC[i].v.map((v, j) => `<button type="button" data-j="${j}">${v[0]}</button>`).join('');
+  }
+  valg.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b || b.disabled) return;
+    const v = SC[i].v[b.dataset.j]; forsok++;
+    b.disabled = true;
+    svar.innerHTML = `<div class="status ${v[1] ? 'ok' : 'bad'}">${v[2]}</div>`;
+    if (v[1]) {
+      if (forsok === 1) riktige++;
+      valg.querySelectorAll('button').forEach(x => x.disabled = true);
+      b.classList.add('valgt');
+      nes.hidden = false; nes.textContent = i === SC.length - 1 ? 'Se resultat →' : 'Fortsett →';
+    }
+  });
+  nes.addEventListener('click', () => { if (i >= SC.length) { i = 0; riktige = 0; } else i++; vis(); });
+  vis();
+}
+</script>
+</body>
+</html>

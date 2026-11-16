@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Tiltakshierarkiet – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.matrise{display:grid;grid-template-columns:auto repeat(5,minmax(0,1fr));gap:4px;max-width:520px}
+.matrise .ax{font-size:13px;font-weight:600;color:var(--dim);display:grid;place-items:center;text-align:center;padding:2px}
+.matrise button{min-height:52px;padding:0;border:2px solid transparent;font-weight:700;color:#17191c;border-radius:6px}
+.matrise button.l{background:#7fcf9c}.matrise button.m{background:#f5d65a}.matrise button.h{background:#f08a7e}
+.matrise button.valgt{border-color:var(--ink);outline:3px solid var(--ink);outline-offset:1px}
+.mwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+@media(max-width:700px){.mwrap{grid-template-columns:1fr}}
+.pyr{display:grid;gap:6px;margin:14px auto;max-width:560px}
+.pyr div{color:#fff;font-weight:700;text-align:center;padding:10px 8px;border-radius:6px;font-family:var(--head);font-size:19px;margin:0 auto}
+.pyr small{display:block;font:400 14px 'Source Sans 3';opacity:.95}
+.tiltak li{display:grid;grid-template-columns:1fr minmax(160px,220px);gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.tiltak{padding:0;margin:0}
+.tiltak li.r{box-shadow:inset 4px 0 0 var(--ok);padding-left:10px}.tiltak li.f{box-shadow:inset 4px 0 0 var(--bad);padding-left:10px}
+@media(max-width:560px){.tiltak li{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Tiltakshierarkiet</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK9, ADK10, PT1</div>
+<p class="ingress">Når du har funnet en risiko, må du velge tiltak. Noen tiltak virker mye bedre enn andre.</p>
+
+<h2>Tiltakshierarkiet</h2>
+<p>Når du har funnet en risiko, skal du velge tiltak i en bestemt rekkefølge. Tiltakene øverst er mest effektive, fordi de fjerner eller reduserer selve faren. Verneutstyr er det <em>siste</em> du tyr til, fordi det bare virker når det brukes riktig hver gang.</p>
+<div class="pyr" aria-label="Tiltakshierarkiet">
+  <div style="background:#0d7f45;width:100%">1 Eliminere<small>Fjern faren helt</small></div>
+  <div style="background:#3c8f3a;width:88%">2 Substituere<small>Bytt til noe mindre farlig</small></div>
+  <div style="background:#a88a00;width:76%">3 Tekniske tiltak<small>Avtrekk, lukkede systemer, skjerming</small></div>
+  <div style="background:#c96a12;width:64%">4 Organisatoriske tiltak<small>Prosedyrer, opplæring, kortere tid</small></div>
+  <div style="background:#c81d17;width:52%">5 Verneutstyr<small>Hansker, briller, åndedrettsvern</small></div>
+</div>
+<p><strong>Substitusjonsplikten</strong> betyr at bedriften har plikt til å vurdere om et farlig kjemikalie kan byttes ut med et mindre farlig, og til å bytte hvis det kan gjøres uten urimelig kostnad eller ulempe.</p>
+
+<div class="sim">
+  <h2>Plasser tiltakene</h2>
+  <p class="hint"><strong>Situasjon:</strong> Utstyr rengjøres hver dag med et helseskadelig løsemiddel. Hvilket nivå i tiltakshierarkiet hører hvert tiltak til?</p>
+  <ul class="tiltak" id="tl"></ul>
+  <div class="rad" style="margin-top:14px"><button type="button" id="tl-sjekk">Sjekk svarene</button><span id="tl-res" aria-live="polite" style="font-weight:700"></span></div>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Hvorfor står verneutstyr nederst i tiltakshierarkiet?</summary><p>Fordi det ikke gjør noe med selve faren. Det beskytter bare den som bruker det, og bare hvis det er riktig valgt, sitter riktig og brukes hele tiden.</p></details>
+<details><summary>2. På laben bytter dere fra et klorert løsemiddel til et mindre farlig løsemiddel som gir like gode resultater. Hvilket nivå i hierarkiet er det?</summary><p>Substituere (nivå 2). Bedriften har plikt til å vurdere slike bytter (substitusjonsplikten).</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>tiltakshierarkiet</td><td>Rekkefølgen du velger tiltak i: eliminere, substituere, tekniske tiltak, organisatoriske tiltak og til slutt verneutstyr.</td><td>hierarchy of controls</td></tr>
+    <tr><td>substitusjonsplikten</td><td>Plikten bedriften har til å bytte ut et farlig kjemikalie med et mindre farlig når det er mulig.</td><td>substitution principle</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="04-verneutstyr.html">Personlig verneutstyr</a>: det siste trinnet i hierarkiet.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const NIV = ['Velg nivå …','1 Eliminere','2 Substituere','3 Tekniske tiltak','4 Organisatoriske tiltak','5 Verneutstyr'];
+  const T = [
+    ['Endre prosessen slik at utstyret ikke trenger denne rengjøringen', 1],
+    ['Bruke hansker og åndedrettsvern med riktig filter', 5],
+    ['Rengjøre i et lukket vaskeanlegg med punktavsug', 3],
+    ['Bytte til et vannbasert rengjøringsmiddel', 2],
+    ['Begrense arbeidet til maks én time per person per dag', 4],
+    ['Lage en skriftlig prosedyre og gi alle opplæring', 4]
+  ];
+  const tl = document.getElementById('tl');
+  tl.innerHTML = T.map((t, i) => `<li><span>${t[0]}</span><select data-i="${i}" aria-label="Nivå for: ${t[0]}">${NIV.map((n, j) => `<option value="${j}">${n}</option>`).join('')}</select></li>`).join('');
+  document.getElementById('tl-sjekk').addEventListener('click', () => {
+    let r = 0;
+    tl.querySelectorAll('select').forEach(s => { const ok = +s.value === T[s.dataset.i][1]; if (ok) r++; s.parentElement.className = ok ? 'r' : 'f'; });
+    document.getElementById('tl-res').textContent = r === T.length ? 'Alle riktige! Start alltid så høyt opp i hierarkiet som mulig.' : `${r} av ${T.length} riktige. Prøv igjen på de røde.`;
+  });
+}
+</script>
+</body>
+</html>

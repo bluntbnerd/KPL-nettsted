@@ -284,6 +284,20 @@ li.sti-fordypning .sti-nr { border-style: dashed; }
   .type-oppgaver { --tf: #86c98a; } .type-ressurser { --tf: #9db0b5; } .type-video { --tf: #f48fb1; }
 }
 
+/* Undertemaer som kort (oppslagstema) */
+.undertemakort { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-bottom: 1.5em; }
+.undertema-kort {
+  position: relative; display: flex; gap: 14px; align-items: center; padding: 14px 16px;
+  border-radius: 12px; background: var(--flate); border: 1px solid var(--linje); box-shadow: var(--skygge);
+  color: var(--tekst); text-decoration: none; transition: box-shadow .15s, transform .15s, border-color .15s;
+}
+.undertema-kort:hover { box-shadow: var(--skygge-hover); transform: translateY(-2px); border-color: var(--tema); }
+.undertema-ikon { width: 52px; height: 52px; flex: none; }
+.undertema-tekst strong { display: block; line-height: 1.25; }
+.undertema-tekst small { display: block; color: var(--dempet); font-size: .85rem; line-height: 1.35; margin-top: 2px; }
+.undertema-hake { position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; border-radius: 50%; background: var(--tema); color: #fff; display: grid; place-items: center; }
+.undertema-hake .ikon { width: 14px; height: 14px; stroke-width: 3; }
+
 /* Emnekort på temasiden */
 .emnekort-seksjon h2 { margin-top: 1.2em; }
 .emnekort { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-bottom: 1.5em; }
@@ -519,7 +533,7 @@ ul.sjekk li::before { content: "☐"; position: absolute; left: 0; color: var(--
 /* ================= Forside ================= */
 html { overflow-x: clip; }
 .helt {
-  margin: 0 calc(50% - 50vw) 32px; padding: 52px 28px 84px;
+  margin: 0 calc(50% - 50vw) 32px; padding: 44px 28px 44px;
   background:
     radial-gradient(circle at 85% 20%, rgba(242,169,0,.22), transparent 40%),
     linear-gradient(135deg, var(--hoved) 0%, var(--hoved-mork) 100%);
@@ -558,7 +572,7 @@ html { overflow-x: clip; }
 .temakort-kort:hover { box-shadow: var(--skygge-hover); transform: translateY(-3px); border-color: var(--tema); }
 .temakort-ikon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: var(--tema-lys); color: var(--tema); margin-bottom: 8px; }
 .temakort-ikon .ikon { width: 26px; height: 26px; }
-.temakort-nr { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--tema); }
+.temakort-nr { display: none; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--tema); }
 .temakort-tittel { font-size: 1.1rem; font-weight: 700; line-height: 1.25; }
 .temakort-fag { margin: 4px 0 8px; }
 .temakort-bunn { margin-top: auto; font-size: .85rem; color: var(--dempet); }
@@ -648,6 +662,9 @@ body.ps-apent { overflow: hidden; }
 /* ================= Bunntekst ================= */
 .bunn { padding: 26px 28px 34px; color: var(--dempet); font-size: .85rem; text-align: center; border-top: 1px solid var(--linje); background: var(--flate); }
 .slor { display: none; }
+.bunn { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 24px; }
+.designvelger { font-size: .85rem; color: var(--dempet); }
+.designvelger select { font: inherit; padding: 3px 6px; border-radius: 6px; border: 1px solid var(--linje); background: var(--flate); color: var(--tekst); }
 
 /* ================= Mellomstore skjermer ================= */
 @media (max-width: 1240px) {
@@ -681,7 +698,7 @@ body.ps-apent { overflow: hidden; }
   main { padding: 18px 0 40px; }
   table { display: block; overflow-x: auto; }
   h1 { font-size: 1.7rem; }
-  .helt { padding: 36px 16px 72px; }
+  .helt { padding: 32px 16px 32px; }
   .helt h1 { font-size: 2rem; }
   .naa { padding: 18px; }
   .banner-indre { gap: 4px 12px; min-height: 0; }

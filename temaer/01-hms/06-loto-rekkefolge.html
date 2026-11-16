@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Lås og merk i riktig rekkefølge – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.trekant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:640px){.trekant{grid-template-columns:1fr}}
+.side-knapp{display:grid;gap:8px}
+.eks-bar{position:relative;height:46px;border-radius:8px;overflow:hidden;margin:16px 0 6px;background:#9aa3ad}
+.eks-bar div{position:absolute;top:0;bottom:0}
+.eks-bar .mk{width:4px;background:var(--ink);top:-4px;bottom:-4px;box-shadow:0 0 0 2px var(--bg)}
+.eks-akse{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.loto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:640px){.loto{grid-template-columns:1fr}}
+.loto button{display:block;width:100%;text-align:left;margin-bottom:8px;font-weight:400}
+.loto ol{margin:0;padding-left:24px;min-height:120px}
+.loto ol li{padding:6px 4px;border-bottom:1px solid var(--line)}
+.loto ol li.r{color:var(--ok);font-weight:600}.loto ol li.f{color:var(--bad);font-weight:600}
+.ost label{display:flex;gap:8px;align-items:center;font-weight:400;margin:4px 0}
+/* Trykk, nivå og reaktor (fra Prosessikkerhet Vg2, modul 4) */
+:root{--c-reg:var(--blue);--c-alm:light-dark(#a87400,#f5c400);--c-trp:var(--red);--c-psv:light-dark(#c2410c,#f08a4b);--water:light-dark(#a9d3e8,#2a5c74);--reg-soft:light-dark(#e1ecf6,#1c2f38)}
+.innhold{display:flex;flex-wrap:wrap;gap:6px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:15px}
+.innhold a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+.innhold a:hover{border-color:var(--ink)}
+.pid-wrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.pid{display:block;width:100%;min-width:620px;height:auto;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace}
+.pid text{fill:var(--ink);font-size:11px}
+.pid .lbl2{fill:var(--dim);font-size:10.5px}
+.pid .ln{stroke:var(--ink);stroke-width:2;fill:none}
+.pid .vessel{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+.pid .valve{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid g.lay{--c:var(--ink)}
+.pid g.reg{--c:var(--c-reg)}.pid g.alm{--c:var(--c-alm)}.pid g.trp{--c:var(--c-trp)}.pid g.psv{--c:var(--c-psv)}
+.pid g.lay .sig{stroke:var(--c);stroke-width:1.8;stroke-dasharray:5 4;fill:none}
+.pid g.lay .imp{stroke:var(--c);stroke-width:2;fill:none}
+.pid g.lay .bub,.pid g.lay .box,.pid g.lay .vl{fill:var(--bg);stroke:var(--c);stroke-width:2}
+.pid g.lay .bt,.pid g.lay .tg{fill:var(--c);font-size:10.5px;font-weight:600}
+.pid g.lay.on .bub,.pid g.lay.on .box,.pid g.lay.on .vl{fill:var(--c)}
+.pid g.lay.on .bt{fill:var(--bg)}
+.pid g.lay.on .sig{stroke-width:3}
+.pid g.lay.on .imp{stroke-width:3.5}
+.pid g.lay.dead{opacity:.35}
+.pid .pv{font-family:var(--head);font-size:26px;font-weight:700}
+.pid .water{fill:var(--water)}
+.pid .tankbg{fill:var(--bg)}
+.pid .tankol{fill:none;stroke:var(--ink);stroke-width:2.5}
+.pid .mark{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 3}
+.pid .flow{stroke:var(--water);stroke-width:5;fill:none;stroke-dasharray:8 8;animation:fl .8s linear infinite}
+.pid .off{display:none}
+.pid .pump{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid .pump.run{fill:var(--reg-soft);stroke:var(--c-reg)}
+.pid .pump.trip{stroke:var(--c-trp)}
+.pid .pvs{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+@keyframes fl{to{stroke-dashoffset:-16}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:var(--dim)}
+.legend i{display:inline-block;width:22px;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+.ladder{display:flex;flex-direction:column;gap:4px;margin-top:14px;font-size:15px}
+.ladder div{display:grid;grid-template-columns:70px 14px 1fr;gap:10px;align-items:center;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ladder .sw{width:14px;height:14px;border-radius:3px}
+.ladder div.hit{border-color:var(--ink);font-weight:700}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:16px;background:var(--bg)}
+.fb.ok{border-left:5px solid var(--ok)}.fb.mid{border-left:5px solid var(--c-alm)}.fb.bad{border-left:5px solid var(--c-trp)}
+.state{display:inline-block;font:700 15px/1.2 var(--head);padding:4px 10px;border-radius:5px;vertical-align:middle}
+.state.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.state.mid{background:color-mix(in srgb,var(--yel) 28%,transparent);color:var(--warn)}
+.state.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.nv-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:14px}
+.nv-ctl fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.nv-ctl legend{font-weight:700;font-size:14px;color:var(--dim);padding:0 4px}
+.nv-ctl label.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.35}
+.nv-ctl label.cb input{margin-top:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.nv-status{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-top:14px;font-size:15px}
+.nv-status .state{justify-self:start}
+.nv-log{list-style:none;margin:6px 0 0;padding:8px 10px;max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14px;display:flex;flex-direction:column;gap:3px}
+.nv-log:empty::before{content:"Ingen hendelser ennå. Start simuleringen.";color:var(--dim)}
+.nv-log .tid{color:var(--dim);margin-right:6px;font-variant-numeric:tabular-nums}
+.readout{font:700 28px/1.2 var(--head);margin-top:10px;display:flex;gap:12px;align-items:center}
+.bars{display:grid;grid-template-columns:120px 1fr 48px;gap:8px 10px;align-items:center;margin-top:12px;font-size:15px}
+.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;transition:width .2s}
+details.mer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+.ws-tbl input[type=text]{width:100%;min-width:110px;font:15px 'Source Sans 3',system-ui,sans-serif;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ws-tbl select{min-height:36px}
+.ws-tbl td.c,.ws-tbl th.c{text-align:center}
+.ws textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.pid .flow{animation:none}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Lås og merk i riktig rekkefølge</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1</div>
+<p class="ingress">Rekkefølgen er viktig når utstyr skal gjøres trygt. Hvert steg må være på plass før det neste er trygt.</p>
+
+<div class="sim">
+  <h2>Sett stegene i riktig rekkefølge</h2>
+  <p class="hint">En pumpe skal skiftes. Trykk på stegene i den rekkefølgen du mener er riktig.</p>
+  <div class="loto">
+    <div id="loto-pool"></div>
+    <div class="panel"><strong>Din rekkefølge</strong><ol id="loto-valgt"></ol></div>
+  </div>
+  <div class="rad" style="margin-top:12px"><button type="button" id="loto-sjekk">Sjekk</button><button type="button" id="loto-reset">Start på nytt</button></div>
+  <div id="loto-svar" aria-live="polite"></div>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Hvorfor kommer «Kontroller at utstyret er energifritt» før «Utfør arbeidet»?</summary><p>Fordi en ventil kan lekke, eller du kan ha låst feil bryter. Du må prøve å starte og lese av trykket for å være sikker på at all energi faktisk er borte.</p></details>
+<details><summary>2. Hva gjør du når jobben er ferdig?</summary><p>Du går baklengs: fjern verktøy, sett utstyret sammen, fjern låsene og start opp etter prosedyren.</p></details>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="06-loto.html">Lås og merk og lukkede rom</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  /* LOTO */
+  const STEG = ['Planlegg jobben og informer kontrollrommet og de berørte',
+    'Stopp pumpen på vanlig måte',
+    'Isoler energikildene: bryt strømmen og steng ventilene inn og ut',
+    'Sett på personlig lås og merkelapp',
+    'Fjern restenergi: trykkavlast, tøm og spyl pumpen',
+    'Kontroller at utstyret er energifritt: prøv å starte og les av trykket',
+    'Utfør arbeidet'];
+  let valgt = [];
+  const pool = document.getElementById('loto-pool'), vl = document.getElementById('loto-valgt'), lsv = document.getElementById('loto-svar');
+  const blandet = STEG.map((s, i) => i).sort((a, b) => ((a * 7 + 3) % 11) - ((b * 7 + 3) % 11));
+  function loto(sjekk) {
+    pool.innerHTML = blandet.filter(i => !valgt.includes(i)).map(i => `<button type="button" data-i="${i}">${STEG[i]}</button>`).join('') || '<p class="etikett">Alle stegene er plassert.</p>';
+    vl.innerHTML = valgt.map((i, p) => `<li class="${sjekk ? (i === p ? 'r' : 'f') : ''}">${STEG[i]}</li>`).join('');
+    if (sjekk) {
+      const r = valgt.filter((i, p) => i === p).length;
+      lsv.innerHTML = r === STEG.length ? '<div class="status ok">Helt riktig! Når jobben er ferdig, går du baklengs: fjern verktøy, sett utstyret sammen, fjern låsene og start opp etter prosedyren.</div>'
+        : `<div class="status warn">${r} av ${STEG.length} på riktig plass. De røde stegene står feil. Tenk: hva må være på plass før neste steg er trygt?</div>`;
+    } else lsv.innerHTML = '';
+  }
+  pool.addEventListener('click', e => { const b = e.target.closest('button'); if (b) { valgt.push(+b.dataset.i); loto(false); } });
+  document.getElementById('loto-sjekk').addEventListener('click', () => loto(true));
+  document.getElementById('loto-reset').addEventListener('click', () => { valgt = []; loto(false); });
+  loto(false);
+}
+</script>
+</body>
+</html>

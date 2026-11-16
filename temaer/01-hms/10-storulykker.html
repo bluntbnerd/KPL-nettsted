@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Storulykker – hva kan vi lære? – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.tidslinje{list-style:none;margin:16px 0;padding:0;position:relative}
+.tidslinje::before{content:'';position:absolute;left:58px;top:6px;bottom:6px;width:3px;background:var(--line)}
+.tidslinje li{display:grid;grid-template-columns:48px 24px 1fr;gap:10px;align-items:start;margin-bottom:12px}
+.tidslinje b{font:700 18px/1.4 var(--head);text-align:right}
+.tidslinje i{width:16px;height:16px;border-radius:50%;background:var(--red);margin:4px 0 0 3px;box-shadow:0 0 0 4px var(--bg);z-index:1}
+.tidslinje li.regel i{background:var(--blue)}
+.tidslinje a{font-weight:600}
+.case{border:1px solid var(--line);border-radius:14px;margin:26px 0;overflow:hidden;background:var(--bg)}
+.case-h{background:var(--ink);color:var(--bg);padding:14px 20px;display:flex;justify-content:space-between;gap:6px 14px;flex-wrap:wrap;align-items:baseline}
+.case-h h2{margin:0;font-size:28px;color:var(--bg)}
+.case-h span{font-size:15px;opacity:.85}
+.case-b{padding:18px 20px}
+.fakta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;margin-bottom:14px}
+.fakta div{background:var(--soft);border-radius:10px;padding:10px 14px}
+.fakta b{display:block;font:700 26px/1.1 var(--head);color:var(--red)}
+.fakta span{font-size:15px;color:var(--dim)}
+.case h3{margin-top:18px}
+.chk{display:grid;gap:2px;margin:6px 0 12px}
+.chk label{display:flex;gap:10px;align-items:flex-start;padding:6px 8px;border-radius:6px;font-weight:400;cursor:pointer}
+.chk label:hover{background:var(--soft)}
+.chk input{margin-top:5px;width:18px;height:18px;flex:none}
+.chk label.r{color:var(--ok);font-weight:600}.chk label.f{color:var(--bad);text-decoration:line-through}
+.ost{display:flex;gap:6px;align-items:center;margin:12px 0 0;flex-wrap:wrap}
+.ost span{width:22px;height:46px;border-radius:5px;background:var(--yel);border:2px solid #a88a00;position:relative}
+.ost span.hull::after{content:'';position:absolute;left:3px;right:3px;top:14px;height:14px;border-radius:50%;background:var(--bg);border:1.5px solid #a88a00}
+.ost em{font-style:normal;font-size:14px;color:var(--dim);margin-left:6px}
+details.laer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.laer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+
+<h1>Storulykker – hva kan vi lære?</h1>
+<p class="ingress">Mye av regelverket og mange av rutinene du skal følge i jobben din, finnes fordi noen har lært av en ulykke. Her ser vi på fire av dem.</p>
+
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+
+<p><strong>Etter dette undertemaet skal du kunne</strong> beskrive hendelsesforløpet i kjente storulykker, peke på hvilke barrierer som sviktet ved hjelp av <a href="06-barrierer.html">sveitserostmodellen</a>, og knytte lærdommene til ditt eget arbeid som operatør eller laborant.</p>
+
+<h2>Hva er en storulykke?</h2>
+<p>En <strong>storulykke</strong> er et stort utslipp, en brann eller en eksplosjon som gir alvorlig fare for mennesker, miljø eller verdier, ofte også utenfor bedriftens gjerde. Slike ulykker skjer sjelden, men konsekvensene kan bli enorme. Derfor kan ikke sikkerheten bare måles i hvor mange som skader seg i hverdagen. Den må også måles i hvor godt barrierene mot de store hendelsene holdes ved like. Dette kalles <strong>prosessikkerhet</strong>.</p>
+<p>I Norge gjelder <strong>storulykkeforskriften</strong> for virksomheter som har store mengder farlige stoffer. De må kartlegge hva som kan gå galt, ha sikkerhetsrapport og beredskapsplaner, og informere naboene om hva de skal gjøre hvis noe skjer. Forskriften bygger på EUs Seveso-direktiv.</p>
+
+<h3>Ulykker som har endret regelverket</h3>
+<ol class="tidslinje">
+  <li><b>1976</b><i></i><span><strong>Seveso, Italia.</strong> En reaktor går løpsk, og en sky med dioksin legger seg over et boligområde.</span></li>
+  <li class="regel"><b>1982</b><i></i><span>EU vedtar det første <strong>Seveso-direktivet</strong> om storulykker.</span></li>
+  <li><b>1984</b><i></i><span><a href="#bhopal">Bhopal, India.</a> Giftig gass fra en kjemisk fabrikk over en sovende by.</span></li>
+  <li><b>1988</b><i></i><span><a href="#piper">Piper Alpha, Nordsjøen.</a> Eksplosjon og brann på en produksjonsplattform.</span></li>
+  <li class="regel"><b>1990</b><i></i><span>Granskingen etter Piper Alpha gir strengere krav til arbeidstillatelser, sikkerhetsdokumentasjon og evakuering offshore.</span></li>
+  <li><b>2005</b><i></i><span><a href="#texas">Texas City, USA.</a> Overfylling under oppstart på et raffineri. Samme år: Buncefield (se <a href="06-overfylling.html">Øv: Overfylling av tank</a>).</span></li>
+  <li><b>2007</b><i></i><span><a href="#vest">Vest Tank, Sløvåg.</a> Eksplosjon i tanker med kjemikalieavfall i Gulen.</span></li>
+</ol>
+<p class="liten etikett">Røde punkter er ulykker. Blå punkter er endringer i regelverket.</p>
+
+<div class="boks yrkesboks">
+  <h3>Slik jobber du med casene</h3>
+  <p style="margin:0">Les casene. For hvert case: kryss av for barrierene du mener sviktet, og trykk «Sjekk». <strong>Tips til læreren:</strong> Del klassen i fire ekspertgrupper som presenterer hvert sitt case.</p>
+</div>
+
+<article class="case" id="piper">
+  <div class="case-h"><h2>Piper Alpha</h2><span>Nordsjøen, britisk sektor · 6. juli 1988</span></div>
+  <div class="case-b">
+    <div class="fakta"><div><b>167</b><span>omkom</span></div><div><b>Olje og gass</b><span>Produksjonsplattform</span></div></div>
+    <p>På dagskiftet ble sikkerhetsventilen på kondensatpumpe A fjernet for vedlikehold. Åpningen ble dekket med en midlertidig blindflens som ikke var helt tett. Arbeidet ble ikke ferdig, og arbeidstillatelsen ble lagt på kontrollrommet uten at nattskiftet fikk tydelig beskjed om at sikkerhetsventilen manglet.</p>
+    <p>Om kvelden stoppet pumpe B. Nattskiftet startet pumpe A for å holde produksjonen i gang. Kondensat lekket ut ved blindflensen og antente. Eksplosjonen ødela brannvegger. Rørledninger fra nabofelt fortsatte å sende gass til plattformen, og høytrykks gassrør revnet i brannen. Mange av dem som omkom, hadde samlet seg i boligmodulen i påvente av evakueringsordre.</p>
+    <h3>Hvilke barrierer sviktet?</h3>
+    <div class="chk" data-case="piper">
+      <label><input type="checkbox" value="1"> Arbeidstillatelsessystemet og skiftoverleveringen</label>
+      <label><input type="checkbox" value="1"> Kontroll av at utstyr var klart før oppstart</label>
+      <label><input type="checkbox" value="0"> Merking av kjemikalier med CLP-piktogrammer</label>
+      <label><input type="checkbox" value="1"> Brannvegger dimensjonert for eksplosjon</label>
+      <label><input type="checkbox" value="1"> Nedstenging av gasstilførsel fra andre plattformer</label>
+    </div>
+    <button type="button" data-check="piper">Sjekk</button><div class="svar" aria-live="polite"></div>
+    <details class="laer"><summary>Lærdom for deg</summary><p style="margin:0">Skiftoverlevering er en barriere. Du skal alltid vite status på utstyr før du starter det. Etter Piper Alpha ble arbeidstillatelsessystemer og krav til sikker evakuering kraftig skjerpet i hele Nordsjøen.</p></details>
+  </div>
+</article>
+
+<article class="case" id="bhopal">
+  <div class="case-h"><h2>Bhopal</h2><span>India · 2.–3. desember 1984</span></div>
+  <div class="case-b">
+    <div class="fakta"><div><b>Tusenvis</b><span>omkom de første dagene</span></div><div><b>MIC</b><span>metylisocyanat, svært giftig</span></div></div>
+    <p>Fabrikken til Union Carbide produserte plantevernmidler og lagret store mengder metylisocyanat (MIC) i tanker. Om natten kom vann inn i en av tankene. MIC reagerer eksotermt med vann. Temperaturen og trykket steg raskt, og omkring 40 tonn giftig gass slapp ut over byen der folk sov.</p>
+    <p>Flere sikkerhetssystemer var ute av drift eller for små: kjøleanlegget for tanken var slått av, skrubberen som skulle nøytralisere gassen, var ikke i drift eller for liten, og fakkelen var ute av drift for vedlikehold. Fabrikken hadde også kuttet i bemanning og opplæring, og folk i byen visste ikke hva de skulle gjøre.</p>
+    <h3>Hvilke barrierer sviktet?</h3>
+    <div class="chk" data-case="bhopal">
+      <label><input type="checkbox" value="1"> Kjøling av lagertanken</label>
+      <label><input type="checkbox" value="1"> Skrubber og fakkel</label>
+      <label><input type="checkbox" value="1"> Bemanning, opplæring og vedlikehold</label>
+      <label><input type="checkbox" value="0"> Jording av fat for å hindre statisk elektrisitet</label>
+      <label><input type="checkbox" value="1"> Varsling og beredskap for befolkningen</label>
+    </div>
+    <button type="button" data-check="bhopal">Sjekk</button><div class="svar" aria-live="polite"></div>
+    <details class="laer"><summary>Lærdom for deg</summary><p style="margin:0">En barriere som er slått av eller ute av drift, finnes ikke. Det er farlig å lagre store mengder av et svært farlig mellomprodukt. Bhopal er en viktig grunn til at storulykkeregelverket krever informasjon til naboer og beredskapsplaner. Koblingen til <a href="06-trykk.html">løpske reaksjoner</a> er tydelig: en eksoterm reaksjon uten kjøling kan løpe løpsk.</p></details>
+  </div>
+</article>
+
+<article class="case" id="texas">
+  <div class="case-h"><h2>Texas City</h2><span>USA, BP-raffineri · 23. mars 2005</span></div>
+  <div class="case-b">
+    <div class="fakta"><div><b>15</b><span>omkom</span></div><div><b>ca. 180</b><span>skadet</span></div></div>
+    <p>Under oppstart av en destillasjonskolonne (raffinatsplitter) ble kolonnen fylt med brennbar væske langt over normalt nivå. Nivåmåleren viste feil, og en høynivåalarm virket ikke. Ventilen på utløpet var stengt i flere timer, i strid med prosedyren. Operatørene hadde jobbet mange dager på rad med lange skift.</p>
+    <p>Da kolonnen ble full, gikk væske ut gjennom trykkavlastningen til en gammel avblåsningstank med åpent utløp rett til luft, ikke til fakkel. Det kom en fontene av brennbar væske ut av toppen. Gasskyen ble antent, trolig av en bil som sto på tomgang. De som omkom, satt i midlertidige brakker som var plassert for nær anlegget.</p>
+    <h3>Hvilke barrierer sviktet?</h3>
+    <div class="chk" data-case="texas">
+      <label><input type="checkbox" value="1"> Nivåmåling og høynivåalarm</label>
+      <label><input type="checkbox" value="1"> Å følge oppstartsprosedyren</label>
+      <label><input type="checkbox" value="1"> Trygg avlastning (til fakkel i stedet for åpent til luft)</label>
+      <label><input type="checkbox" value="1"> Plassering av brakker langt fra fareområdet</label>
+      <label><input type="checkbox" value="1"> Arbeidstid og hviletid for operatørene</label>
+    </div>
+    <button type="button" data-check="texas">Sjekk</button><div class="svar" aria-live="polite"></div>
+    <details class="laer"><summary>Lærdom for deg</summary><p style="margin:0">Oppstart og nedkjøring er de farligste fasene, selv om de varer kort. Stol ikke blindt på ett instrument: sammenlign med andre målinger og med det du forventer ut fra hvor mye du har pumpet inn. Granskingen viste også at BP hadde målt sikkerhet med personskadestatistikk og oversett prosessikkerheten.</p></details>
+  </div>
+</article>
+
+<article class="case" id="vest">
+  <div class="case-h"><h2>Vest Tank, Sløvåg</h2><span>Gulen, Vestland · 24. mai 2007</span></div>
+  <div class="case-b">
+    <div class="fakta"><div><b>0</b><span>omkom</span></div><div><b>Mange</b><span>naboer meldte om helseplager</span></div></div>
+    <p>Bedriften behandlet en type bensin (kokerbensin) med natronlut for å fjerne svovelforbindelser, i tanker som ikke var bygd for prosessen. Prosessen ga sterk lukt og avgasser, og det ble gjort endringer uten god risikovurdering. Under arbeid i en tank oppsto det en eksplosjon og brann i to tanker. Ingen omkom, men mange i nærområdet meldte senere om helseplager.</p>
+    <p>Granskingen viste at det manglet forståelse for kjemien og farene i prosessen, at endringene ikke var risikovurdert, og at myndighetene ikke hadde fanget opp hva som foregikk. Ulykken førte til skjerpet tilsyn med slike virksomheter i Norge.</p>
+    <h3>Hvilke barrierer sviktet?</h3>
+    <div class="chk" data-case="vest">
+      <label><input type="checkbox" value="1"> Risikovurdering før endring i prosessen (endringsledelse)</label>
+      <label><input type="checkbox" value="1"> Kjemisk kompetanse om stoffene og reaksjonene</label>
+      <label><input type="checkbox" value="1"> Utstyr egnet for prosessen</label>
+      <label><input type="checkbox" value="0"> Hviletidsbestemmelser for offshorearbeidere</label>
+    </div>
+    <button type="button" data-check="vest">Sjekk</button><div class="svar" aria-live="polite"></div>
+    <details class="laer"><summary>Lærdom for deg</summary><p style="margin:0">Det er ikke bare store, avanserte anlegg som kan få alvorlige ulykker. Hver gang noe endres – nye stoffer, nye mengder, nytt utstyr, ny fremgangsmåte – må risikoen vurderes på nytt. Kjemikompetansen du får i dette faget, er en del av barrieren.</p></details>
+  </div>
+</article>
+
+<div class="sim">
+  <h2>Refleksjon: fellesnevnere</h2>
+  <p class="hint">Hva har disse ulykkene til felles? Skriv minst tre punkter, og ta med ett du kan bruke på skolens anlegg eller laboratorium.</p>
+  <label for="r10">Ditt svar</label>
+  <textarea id="r10"></textarea>
+  <p class="liten">Svaret lagres bare i denne nettleseren.</p>
+  <details class="laer"><summary>Vis forslag</summary>
+    <ul style="margin:0">
+      <li>Ingen av ulykkene hadde én enkelt årsak. Flere barrierer sviktet samtidig.</li>
+      <li>Mange av svakhetene var kjent på forhånd, men ble ikke fulgt opp.</li>
+      <li>Vedlikehold, oppstart og endringer var kritiske øyeblikk.</li>
+      <li>Kommunikasjon og overlevering var ofte et svakt punkt.</li>
+      <li>Press for å holde produksjonen i gang eller spare penger påvirket valgene.</li>
+    </ul>
+  </details>
+</div>
+
+<div class="boks yrkesboks">
+  <h3>I yrket</h3>
+  <p><strong>Prosessoperatøren</strong> er til stede når de kritiske øyeblikkene skjer: ved skiftbytte, oppstart, nedkjøring og vedlikehold. Å stille spørsmål ved uklar status, sammenligne instrumenter og si fra er barrierer du selv har ansvaret for. <strong>Laboranten</strong> bidrar med kjemikompetanse og analyser som avslører at noe er feil, for eksempel uventede stoffer i en prosesstrøm.</p>
+</div>
+
+<section class="test">
+  <h2>Test deg selv</h2>
+  <details><summary>Hva startet ulykken på Piper Alpha?</summary><div><p>Nattskiftet startet pumpe A uten å vite at sikkerhetsventilen var fjernet for vedlikehold. Kondensat lekket ut ved en blindflens som ikke var tett, og antente.</p></div></details>
+  <details><summary>Hvorfor ble Bhopal-ulykken så alvorlig?</summary><div><p>Flere sikkerhetssystemer var ute av drift samtidig: kjøling, skrubber og fakkel. I tillegg var beredskapen for befolkningen svak, og folk visste ikke hva de skulle gjøre.</p></div></details>
+  <details><summary>Hva var et viktig problem i Texas City?</summary><div><p>Kolonnen ble overfylt under oppstart fordi nivåmålingen viste feil og alarmen ikke virket, og avlastningen gikk åpent til luft i stedet for til fakkel.</p></div></details>
+  <details><summary>Hva er den viktigste lærdommen fra Vest Tank i Sløvåg?</summary><div><p>At endringer i en prosess må risikovurderes, og at det krever god kjemisk forståelse av stoffene og reaksjonene.</p></div></details>
+  <details><summary>En nivåmåler i en kolonne står stille på samme verdi mens det pumpes inn. Hva gjør du?</summary><div><p>Sammenligner med andre målinger og med mengden som er pumpet inn, og sier fra. Et instrument kan vise feil, slik Texas City og Buncefield viser.</p></div></details>
+</section>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>storulykke</td><td>Et stort utslipp, en brann eller en eksplosjon som gir alvorlig fare for mennesker, miljø eller verdier, ofte også utenfor bedriften.</td><td>major accident</td></tr>
+    <tr><td>prosessikkerhet</td><td>Arbeidet med å hindre lekkasjer, branner og eksplosjoner ved å holde barrierene i prosessen ved like.</td><td>process safety</td></tr>
+    <tr><td>skiftoverlevering</td><td>Når ett skift gir beskjed til neste skift om status på anlegget og utstyret.</td><td>shift handover</td></tr>
+    <tr><td>endringsledelse</td><td>Å vurdere risikoen på nytt hver gang noe endres i prosessen, utstyret eller fremgangsmåten.</td><td>management of change (MOC)</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="06-barrierer.html">Øv: Sveitserostmodellen</a>.</li>
+  <li>Casene bygger på modul 6 i <a href="https://eirikaas74-droid.github.io/kjemiprosess-laeringslab/prosessikkerhet/#m6">Prosessikkerhet Vg2</a>.</li>
+</ul>
+<p><small>Om kildene: Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs og på offentlige granskingsrapporter etter ulykkene.</small></p>
+
+</main>
+<script>
+{
+  document.querySelectorAll('[data-check]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const list = document.querySelector('.chk[data-case="' + btn.dataset.check + '"]');
+      let right = 0, total = 0, wrong = 0;
+      list.querySelectorAll('input').forEach(i => {
+        const skal = i.value === '1';
+        if (skal) total++;
+        if (i.checked && skal) right++;
+        if (i.checked && !skal) wrong++;
+        i.parentElement.className = skal ? 'r' : (i.checked ? 'f' : '');
+      });
+      const ok = right === total && !wrong;
+      const ost = Array.from({length: total}, () => '<span class="hull"></span>').join('');
+      btn.nextElementSibling.innerHTML = `<div class="status ${ok ? 'ok' : 'warn'}">${ok ? 'Riktig! Du fant alle barrierene som sviktet.' : `Du fant ${right} av ${total} barrierer${wrong ? `, og krysset av for ${wrong} som ikke var en del av denne ulykken` : ''}. Grønn tekst er barrierer som sviktet.`}</div>
+        <div class="ost" aria-hidden="true">${ost}<em>${total} barrierer med hull på linje – derfor slapp faren gjennom.</em></div>`;
+    });
+  });
+  const r = document.getElementById('r10');
+  try { r.value = localStorage.getItem('kpl-hms-r10') || ''; } catch (e) {}
+  r.addEventListener('input', () => { try { localStorage.setItem('kpl-hms-r10', r.value); } catch (e) {} });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Overfylling av tank – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.trekant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+@media(max-width:640px){.trekant{grid-template-columns:1fr}}
+.side-knapp{display:grid;gap:8px}
+.eks-bar{position:relative;height:46px;border-radius:8px;overflow:hidden;margin:16px 0 6px;background:#9aa3ad}
+.eks-bar div{position:absolute;top:0;bottom:0}
+.eks-bar .mk{width:4px;background:var(--ink);top:-4px;bottom:-4px;box-shadow:0 0 0 2px var(--bg)}
+.eks-akse{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)}
+.loto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media(max-width:640px){.loto{grid-template-columns:1fr}}
+.loto button{display:block;width:100%;text-align:left;margin-bottom:8px;font-weight:400}
+.loto ol{margin:0;padding-left:24px;min-height:120px}
+.loto ol li{padding:6px 4px;border-bottom:1px solid var(--line)}
+.loto ol li.r{color:var(--ok);font-weight:600}.loto ol li.f{color:var(--bad);font-weight:600}
+.ost label{display:flex;gap:8px;align-items:center;font-weight:400;margin:4px 0}
+/* Trykk, nivå og reaktor (fra Prosessikkerhet Vg2, modul 4) */
+:root{--c-reg:var(--blue);--c-alm:light-dark(#a87400,#f5c400);--c-trp:var(--red);--c-psv:light-dark(#c2410c,#f08a4b);--water:light-dark(#a9d3e8,#2a5c74);--reg-soft:light-dark(#e1ecf6,#1c2f38)}
+.innhold{display:flex;flex-wrap:wrap;gap:6px 8px;margin:14px 0 0;padding:0;list-style:none;font-size:15px}
+.innhold a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+.innhold a:hover{border-color:var(--ink)}
+.pid-wrap{overflow-x:auto;margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.pid{display:block;width:100%;min-width:620px;height:auto;font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace}
+.pid text{fill:var(--ink);font-size:11px}
+.pid .lbl2{fill:var(--dim);font-size:10.5px}
+.pid .ln{stroke:var(--ink);stroke-width:2;fill:none}
+.pid .vessel{fill:var(--bg);stroke:var(--ink);stroke-width:2.5}
+.pid .valve{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid g.lay{--c:var(--ink)}
+.pid g.reg{--c:var(--c-reg)}.pid g.alm{--c:var(--c-alm)}.pid g.trp{--c:var(--c-trp)}.pid g.psv{--c:var(--c-psv)}
+.pid g.lay .sig{stroke:var(--c);stroke-width:1.8;stroke-dasharray:5 4;fill:none}
+.pid g.lay .imp{stroke:var(--c);stroke-width:2;fill:none}
+.pid g.lay .bub,.pid g.lay .box,.pid g.lay .vl{fill:var(--bg);stroke:var(--c);stroke-width:2}
+.pid g.lay .bt,.pid g.lay .tg{fill:var(--c);font-size:10.5px;font-weight:600}
+.pid g.lay.on .bub,.pid g.lay.on .box,.pid g.lay.on .vl{fill:var(--c)}
+.pid g.lay.on .bt{fill:var(--bg)}
+.pid g.lay.on .sig{stroke-width:3}
+.pid g.lay.on .imp{stroke-width:3.5}
+.pid g.lay.dead{opacity:.35}
+.pid .pv{font-family:var(--head);font-size:26px;font-weight:700}
+.pid .water{fill:var(--water)}
+.pid .tankbg{fill:var(--bg)}
+.pid .tankol{fill:none;stroke:var(--ink);stroke-width:2.5}
+.pid .mark{stroke:var(--dim);stroke-width:1;stroke-dasharray:3 3}
+.pid .flow{stroke:var(--water);stroke-width:5;fill:none;stroke-dasharray:8 8;animation:fl .8s linear infinite}
+.pid .off{display:none}
+.pid .pump{fill:var(--bg);stroke:var(--ink);stroke-width:2}
+.pid .pump.run{fill:var(--reg-soft);stroke:var(--c-reg)}
+.pid .pump.trip{stroke:var(--c-trp)}
+.pid .pvs{paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round}
+@keyframes fl{to{stroke-dashoffset:-16}}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:14px;color:var(--dim)}
+.legend i{display:inline-block;width:22px;border-top:3px dashed;vertical-align:middle;margin-right:6px}
+.ladder{display:flex;flex-direction:column;gap:4px;margin-top:14px;font-size:15px}
+.ladder div{display:grid;grid-template-columns:70px 14px 1fr;gap:10px;align-items:center;padding:6px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.ladder .sw{width:14px;height:14px;border-radius:3px}
+.ladder div.hit{border-color:var(--ink);font-weight:700}
+.fb{margin-top:12px;padding:10px 14px;border-radius:8px;font-size:16px;background:var(--bg)}
+.fb.ok{border-left:5px solid var(--ok)}.fb.mid{border-left:5px solid var(--c-alm)}.fb.bad{border-left:5px solid var(--c-trp)}
+.state{display:inline-block;font:700 15px/1.2 var(--head);padding:4px 10px;border-radius:5px;vertical-align:middle}
+.state.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.state.mid{background:color-mix(in srgb,var(--yel) 28%,transparent);color:var(--warn)}
+.state.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+.nv-ctl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:14px;margin-top:14px}
+.nv-ctl fieldset{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.nv-ctl legend{font-weight:700;font-size:14px;color:var(--dim);padding:0 4px}
+.nv-ctl label.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:15px;line-height:1.35}
+.nv-ctl label.cb input{margin-top:3px}
+button:disabled{opacity:.4;cursor:not-allowed}
+.nv-status{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:center;margin-top:14px;font-size:15px}
+.nv-status .state{justify-self:start}
+.nv-log{list-style:none;margin:6px 0 0;padding:8px 10px;max-height:160px;overflow:auto;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14px;display:flex;flex-direction:column;gap:3px}
+.nv-log:empty::before{content:"Ingen hendelser ennå. Start simuleringen.";color:var(--dim)}
+.nv-log .tid{color:var(--dim);margin-right:6px;font-variant-numeric:tabular-nums}
+.readout{font:700 28px/1.2 var(--head);margin-top:10px;display:flex;gap:12px;align-items:center}
+.bars{display:grid;grid-template-columns:120px 1fr 48px;gap:8px 10px;align-items:center;margin-top:12px;font-size:15px}
+.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;transition:width .2s}
+details.mer{margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:36px}
+.ws-tbl input[type=text]{width:100%;min-width:110px;font:15px 'Source Sans 3',system-ui,sans-serif;padding:6px 8px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ws-tbl select{min-height:36px}
+.ws-tbl td.c,.ws-tbl th.c{text-align:center}
+.ws textarea{display:block;width:100%;min-height:130px;margin-top:6px;font:16px 'Source Sans 3',system-ui,sans-serif;padding:10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.pid .flow{animation:none}}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Overfylling av tank</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT1</div>
+<p class="ingress">En tank som blir overfylt, kan gi utslipp, brann eller eksplosjon. Her øver du på nivåsikringen av en vanntank, først i en simulering og så ute på skolens anlegg.</p>
+
+<h2 id="nivaa">Nivåsikring av vanntank på skolens anlegg</h2>
+<p>Det samme prinsippet med lag på lag brukes for nivå. På skolens anlegg pumper en pumpe vann inn i en tank. Fire lag skal hindre at tanken blir overfylt:</p>
+<div class="scroll"><table class="stack">
+  <thead><tr><th>Lag</th><th>Instrument</th><th>Hva det gjør</th></tr></thead>
+  <tbody>
+    <tr><td data-l="Lag"><strong>Regulering</strong></td><td data-l="Instrument">LT + LIC + LCV</td><td data-l="Gjør">Måler nivået hele tiden og styrer reguleringsventilen på innløpet slik at nivået holder seg på settpunktet. Pumpen går med fast turtall.</td></tr>
+    <tr><td data-l="Lag"><strong>Høy alarm</strong></td><td data-l="Instrument">LAH</td><td data-l="Gjør">Gir alarm når nivået blir høyt. Operatøren skal finne årsaken og gripe inn.</td></tr>
+    <tr><td data-l="Lag"><strong>Høy-høy-alarm</strong></td><td data-l="Instrument">LAHH</td><td data-l="Gjør">Stopper pumpen automatisk. Pumpen kan ikke startes igjen før LAHH er tilbakestilt.</td></tr>
+    <tr><td data-l="Lag"><strong>Mekanisk sikring</strong></td><td data-l="Instrument">Overløp</td><td data-l="Gjør">Et rør i toppen av tanken leder vannet bort til sluk. Det virker uten strøm, signal eller operatør.</td></tr>
+  </tbody>
+</table></div>
+<p>Aktiviteten har to deler. Del A er en simulering du gjør i klassen. Del B er et arbeidsark du fyller ut ute på anlegget, med en funksjonstest dere gjør selv.</p>
+
+<div class="sim" id="overfylling">
+  <h2>Del A – Simulering: hold tanken unna overfylling</h2>
+  <p class="hint">Taggene i skissen er de samme som på tank 1 på skolens anlegg. Settpunktene er eksempler, og i del B finner du de ekte settpunktene. Gjør oppgavene i rekkefølge, og les hendelsesloggen underveis.</p>
+  <ol>
+    <li>Start simuleringen. Se at reguleringen holder nivået nær settpunktet.</li>
+    <li>Lukk utløpsventilen HV-201 helt. Klarer reguleringen seg alene?</li>
+    <li>Åpne HV-201 igjen til ca. 40 %, og vent til nivået er stabilt. Kryss av for at LT-12075 henger. Strup deretter HV-201 til ca. 15 %, slik at forbruket går ned. Hva skjer med nivået, og hvorfor endrer ikke LCV-12022 stilling? Når LAH gir alarm: stopp pumpen som operatør.</li>
+    <li>Start pumpen igjen uten å rette feilen, og ikke grip inn. Hvilket lag stopper pumpen nå? Prøv å starte pumpen før du har tilbakestilt LAHH.</li>
+    <li>Kryss også av for at LAHH-12076 er defekt, og start pumpen. Hva er nå den eneste barrieren som er igjen?</li>
+    <li>Trykk «Nullstill». Kryss av for at LT-12075 henger og at alle lagene bruker samme måler. Start, strup HV-201 til ca. 15 %, og ikke grip inn. Hvorfor kommer det ingen alarm?</li>
+  </ol>
+  <div class="pid-wrap"><svg class="pid" id="nvSvg" viewBox="0 0 720 395" role="img" aria-label="Flytskjema av vanntank T-12051 med pumpe P-12002 med fast turtall, nivåregulering LIC-12094 med reguleringsventil LCV-12022, høy alarm LAH-12077, høy-høy-alarm LAHH-12076 som stopper pumpen, og overløp til sluk">
+        <defs><clipPath id="nvClip"><rect x="321" y="41" width="138" height="298" rx="11"/></clipPath></defs>
+        <!-- Innløp -->
+        <line class="ln" x1="20" y1="280" x2="320" y2="280"/>
+        <polygon points="313,275 320,280 313,285" style="fill:var(--ink)"/>
+        <line class="flow off" id="nvFlowIn" x1="190" y1="280" x2="241" y2="280"/><line class="flow off" id="nvFlowIn2" x1="269" y1="280" x2="312" y2="280"/>
+        <text x="20" y="270">Fra forråd</text>
+        <!-- Pumpe -->
+        <circle class="pump" id="nvPump" cx="170" cy="280" r="18"/>
+        <polygon points="162,270 162,290 183,280" style="fill:var(--ink)"/>
+        <line class="ln" x1="170" y1="254" x2="170" y2="262"/>
+        <rect class="valve" x="158" y="236" width="24" height="18"/>
+        <text x="170" y="249" text-anchor="middle">M</text>
+        <text x="170" y="316" text-anchor="middle" style="font-weight:500">P-12002</text>
+        <text x="170" y="330" text-anchor="middle" class="lbl2" id="nvPumpTxt">går, fast turtall</text>
+        <!-- Tank -->
+        <rect class="tankbg" x="320" y="40" width="140" height="300" rx="12"/>
+        <rect class="water" id="nvWater" x="320" y="190" width="140" height="150" clip-path="url(#nvClip)"/>
+        <line class="mark" x1="326" y1="55" x2="454" y2="55"/><text x="452" y="51" text-anchor="end" class="lbl2">Overløp 95 %</text>
+        <line class="mark" x1="326" y1="70" x2="454" y2="70"/><text x="452" y="83" text-anchor="end" class="lbl2">LAHH 90 %</text>
+        <line class="mark" x1="326" y1="100" x2="454" y2="100"/><text x="452" y="113" text-anchor="end" class="lbl2">LAH 80 %</text>
+        <line class="mark" x1="326" y1="190" x2="454" y2="190"/><text x="452" y="186" text-anchor="end" class="lbl2">SP 50 %</text>
+        <rect class="tankol" x="320" y="40" width="140" height="300" rx="12"/>
+        <text x="390" y="32" text-anchor="middle" style="font-weight:500">T-12051 · Tank 1</text>
+        <text x="390" y="150" text-anchor="middle" class="pv pvs" id="nvPv">50 %</text>
+        <text x="390" y="166" text-anchor="middle" class="lbl2 pvs">faktisk nivå</text>
+        <!-- Utløp -->
+        <polyline class="ln" points="390,340 390,365 700,365"/>
+        <polygon points="693,360 700,365 693,370" style="fill:var(--ink)"/>
+        <polyline class="flow off" id="nvFlowOut" points="390,344 390,365 545,365"/>
+        <polygon class="valve" points="548,357 548,373 560,365"/><polygon class="valve" points="572,357 572,373 560,365"/>
+        <line class="ln" x1="560" y1="365" x2="560" y2="350"/><line class="ln" x1="552" y1="350" x2="568" y2="350"/>
+        <text x="560" y="342" text-anchor="middle">HV-201</text>
+        <text x="700" y="388" text-anchor="end">Til forbruk</text>
+        <text x="560" y="388" text-anchor="middle" class="lbl2" id="nvValveTxt">40 % åpen</text>
+        <!-- Overløp -->
+        <g class="lay psv" id="nvOfl">
+          <polyline class="imp" points="320,55 285,55 285,124"/>
+          <polygon points="280,118 285,127 290,118" style="fill:var(--c)"/>
+          <polyline class="flow off" id="nvFlowOfl" points="318,55 285,55 285,118"/>
+          <text x="277" y="92" text-anchor="end" class="tg">Overløp</text>
+          <text x="277" y="106" text-anchor="end" class="lbl2">til sluk</text>
+        </g>
+        <!-- Regulering -->
+        <g class="lay reg" id="nvReg">
+          <line class="imp" x1="320" y1="200" x2="272" y2="200"/>
+          <circle class="bub" cx="250" cy="200" r="21"/>
+          <text class="bt" x="250" y="197" text-anchor="middle">LT</text><text class="bt" x="250" y="210" text-anchor="middle">12075</text>
+          <line class="sig" x1="229" y1="200" x2="191" y2="200"/>
+          <circle class="bub" cx="170" cy="200" r="21"/>
+          <line class="imp" x1="149" y1="200" x2="191" y2="200"/>
+          <text class="bt" x="170" y="195" text-anchor="middle">LIC</text><text class="bt" x="170" y="213" text-anchor="middle">12094</text>
+          <polyline class="sig" points="170,221 170,228 255,228 255,258"/>
+          <rect class="box" x="247" y="258" width="16" height="9"/>
+          <line class="imp" x1="255" y1="267" x2="255" y2="280"/>
+          <polygon class="vl" points="243,272 243,288 255,280"/><polygon class="vl" points="267,272 267,288 255,280"/>
+          <text x="255" y="304" text-anchor="middle" class="tg">LCV-12022</text>
+          <text x="255" y="318" text-anchor="middle" class="lbl2" id="nvLcvTxt">40 % åpen</text>
+          <text x="216" y="172" text-anchor="middle" class="lbl2" id="nvLicTxt">LIC viser 50 %</text>
+        </g>
+        <!-- Høy alarm -->
+        <g class="lay alm" id="nvAlm">
+          <line class="imp" x1="460" y1="100" x2="489" y2="100"/>
+          <circle class="bub" cx="510" cy="100" r="21"/>
+          <text class="bt" x="510" y="97" text-anchor="middle">LAH</text><text class="bt" x="510" y="110" text-anchor="middle">12077</text>
+          <line class="sig" x1="510" y1="121" x2="510" y2="150"/>
+          <rect class="box" x="450" y="150" width="120" height="26" rx="4"/>
+          <text class="bt" x="510" y="167" text-anchor="middle">Alarm til operatør</text>
+        </g>
+        <!-- Høy-høy -->
+        <g class="lay trp" id="nvTrp">
+          <line class="imp" x1="460" y1="70" x2="579" y2="70"/>
+          <circle class="bub" cx="600" cy="70" r="21"/>
+          <text class="bt" x="600" y="67" text-anchor="middle">LAHH</text><text class="bt" x="600" y="80" text-anchor="middle">12076</text>
+          <polyline class="sig" points="600,49 600,16 100,16 100,245 158,245"/>
+          <text x="106" y="128" class="tg">Stopper</text><text x="106" y="141" class="tg">P-12002</text>
+        </g>
+      </svg></div>
+  <div class="legend">
+    <span><i style="border-color:var(--c-reg)"></i>Regulering</span>
+    <span><i style="border-color:var(--c-alm)"></i>Høy alarm</span>
+    <span><i style="border-color:var(--c-trp)"></i>Høy-høy og pumpestopp</span>
+    <span><i style="border-color:var(--c-psv);border-top-style:solid"></i>Mekanisk sikring</span>
+  </div>
+  <div class="rad" style="margin-top:14px">
+    <button type="button" class="valgt" id="nvRun">Start simulering</button>
+    <button type="button" id="nvReset">Nullstill</button>
+    <span class="etikett" id="nvTime">Simulert tid 00:00</span>
+  </div>
+  <div class="nv-ctl">
+    <fieldset>
+      <legend>Operatør</legend>
+      <label for="nvValve" style="font-weight:400">Utløpsventil HV-201: <strong id="nvValveVal">40 %</strong></label>
+      <input type="range" id="nvValve" min="0" max="100" step="5" value="40">
+      <div class="rad">
+        <button type="button" id="nvStop">Stopp pumpe</button>
+        <button type="button" id="nvStart">Start pumpe</button>
+        <button type="button" id="nvRst">Tilbakestill LAHH</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Feil i anlegget</legend>
+      <label class="cb"><input type="checkbox" id="nvFLt"> LT-12075 henger og viser fast verdi</label>
+      <label class="cb"><input type="checkbox" id="nvFLahh"> LAHH-12076 er defekt</label>
+      <label class="cb"><input type="checkbox" id="nvFCommon"> LAH og LAHH bruker samme måler som LT-12075</label>
+    </fieldset>
+  </div>
+  <div class="nv-status" aria-live="polite">
+    <span>LIC-12094 regulering</span><span class="state ok" id="nvSReg">Regulerer</span>
+    <span>LAH-12077 høy alarm</span><span class="state ok" id="nvSAlm">Normal</span>
+    <span>LAHH-12076 høy-høy</span><span class="state ok" id="nvSTrp">Normal</span>
+    <span>Overløp</span><span class="state ok" id="nvSOfl">Tørt</span>
+  </div>
+  <div class="fb ok" id="nvFb"></div>
+  <p style="margin:14px 0 0;font-weight:600">Hendelseslogg</p>
+  <ol class="nv-log" id="nvLog"></ol>
+  <details class="mer"><summary>Hva lærer vi av simuleringen?</summary>
+    <ul style="margin:0">
+      <li>Reguleringen tar seg av vanlige forstyrrelser, som at forbruket endres. Den er ikke laget for å fange opp sin egen målefeil.</li>
+      <li>En måler som henger, er lumsk fordi ingenting skjer med en gang. Nivået stiger først når noe annet endrer seg, for eksempel at forbruket går ned. Da ser LIC-12094 ingen endring og lar LCV-12022 stå som før.</li>
+      <li>LAH gir operatøren tid til å gripe inn før automatikken må gjøre det.</li>
+      <li>LAHH stopper pumpen og «låser» stoppet. Det tvinger noen til å finne årsaken før pumpen startes igjen.</li>
+      <li>Overløpet virker selv når alt annet har sviktet, men vannet havner et sted. For vann er det greit. For et kjemikalie ville det vært et utslipp.</li>
+      <li>Hvis alle lagene bruker samme måler, kan én feil slå ut alle lagene på en gang. Dette kalles en <strong>felles feil</strong>. Derfor skal LAHH ha sin egen måler.</li>
+    </ul>
+  </details>
+</div>
+
+<div class="boks"><strong>Fra virkeligheten: Buncefield, England, 11. desember 2005.</strong> En stor lagertank med bensin ble fylt i flere timer uten at noen merket det. Nivåmåleren hadde hengt seg opp og viste et fast nivå, og den uavhengige høynivåbryteren som skulle stoppe fyllingen, virket ikke. Bensin rant ut over toppen, fordampet og dannet en stor gassky som eksploderte. Over 40 personer ble skadet, og bygninger i området ble ødelagt. Det er nesten det samme som oppgave 5 i simuleringen.</div>
+
+<div class="sim ws" id="nivasikring">
+  <h2>Del B – Arbeidsark: kartlegg nivåsikringen på skolens anlegg</h2>
+  <div class="boks viktig" style="margin-top:0"><strong>Sikkerhet:</strong> Følg skolens prosedyre for anlegget. Du skal ikke endre settpunkter, koble ut sikringer eller overstyre noe.</div>
+  <h3>1. Finn instrumentene</h3>
+  <p>Finn instrumentene på anlegget og fyll inn tabellen. Bruk flytskjemaet for anlegget og skiltene på utstyret. Settpunktene finner du i styresystemet eller i dokumentasjonen.</p>
+  <div class="scroll"><table id="wsMap" class="ws-tbl"></table></div>
+  <h3>2. Tegn flytskjema</h3>
+  <p>Tegn et enkelt flytskjema av tanken på papir eller i et tegneprogram. Ta med pumpen, tanken, utløpet, overløpet og de tre instrumentene med de ekte taggene. Tegn signallinjene stiplet, og vis med pil hvor signalet fra LAHH går.</p>
+  <h3>3. Forriglingsmatrise</h3>
+  <p>Sett kryss der en årsak gir en virkning på skolens anlegg.</p>
+  <div class="scroll"><table id="wsCE" class="ws-tbl"></table></div>
+  <details class="mer"><summary>Vis typisk løsning</summary>
+    <p style="margin:0">Typisk gir LAH bare alarm. LAHH gir alarm, stopper pumpen og må tilbakestilles manuelt. En nødstopp gjør det samme som LAHH. Sammenlign med dokumentasjonen for anlegget, for skolens anlegg kan være laget annerledes. Hvis det er forskjell, diskuter hvorfor.</p>
+  </details>
+  <h3>4. Funksjonstest</h3>
+  <p>Sett reguleringen i manuell, og fyll tanken kontrollert ved å åpne LCV-12022 litt. Les av nivået når hvert lag slår inn, og sammenlign med settpunktet fra punkt 1. Én elev følger med på nivået hele tiden og er klar til å stoppe pumpen hvis et lag ikke slår inn som forventet. Sett reguleringen tilbake i automatisk når dere er ferdige.</p>
+  <div class="scroll"><table id="wsTest" class="ws-tbl"></table></div>
+  <h3>5. Refleksjon</h3>
+  <ol>
+    <li>Har LAHH sin egen måler, eller bruker den signalet fra LT? Hva betyr det for sikkerheten?</li>
+    <li>Hvor går vannet fra overløpet? Er overløpet stort nok til å ta unna alt pumpen kan levere?</li>
+    <li>Hva ville du endret hvis tanken inneholdt et brennbart eller giftig stoff i stedet for vann?</li>
+    <li>Hvor ofte bør LAH og LAHH testes, og hvorfor er det viktig?</li>
+    <li>Hvilken stilling går reguleringsventilen til hvis den mister signal eller instrumentluft? Er det den tryggeste stillingen for denne tanken?</li>
+  </ol>
+  <label for="wsRefl">Dine svar</label>
+  <textarea id="wsRefl" data-ws="refl"></textarea>
+  <details class="mer"><summary>Vis løsningsforslag</summary>
+    <ol style="margin:0">
+      <li>Hvis LAHH bruker samme måler som LT, kan én målefeil slå ut både reguleringen og pumpestoppet (felles feil). LAHH bør ha sin egen måler, gjerne med et annet måleprinsipp, for eksempel en flottør- eller vibrasjonsbryter når LT er en trykkmåler.</li>
+      <li>Overløpet må tåle minst like mye vann som pumpen kan levere på full fart, ellers stiger nivået likevel. Vannet bør gå til sluk eller oppsamling der det ikke gjør skade.</li>
+      <li>Overløp til sluk er ikke greit for kjemikalier. Da må overløpet gå til en lukket oppsamlingstank, og tanken bør stå i et oppsamlingskar som rommer hele innholdet. Det kan også trengs flere uavhengige nivåbrytere og gassdetektorer.</li>
+      <li>Sikkerhetsfunksjoner testes etter et fast program, og testen dokumenteres. En bryter som aldri testes, kan ha vært defekt lenge uten at noen vet det. Dette kalles en <strong>skjult feil</strong>, og det var en av årsakene til Buncefield-ulykken.</li>
+      <li>Ventilen bør ha en <strong>feilsikker stilling</strong>. For en ventil på innløpet til en tank er det tryggest at den stenger ved tap av signal eller luft (luft for å åpne, fjær stenger), slik at tanken ikke fylles ukontrollert. Sjekk skiltet på ventilen eller dokumentasjonen. Merk også at pumpen da går mot stengt ventil, og ikke bør gjøre det lenge.</li>
+    </ol>
+  </details>
+  <div class="rad" style="margin-top:16px">
+    <button type="button" id="wsCopy">Kopier svarene mine</button>
+    <span id="wsMsg" class="etikett">Svarene lagres bare i denne nettleseren. Kopier dem inn i loggen eller innleveringen din.</span>
+  </div>
+  <textarea id="wsOut" hidden readonly aria-label="Svarene dine som tekst"></textarea>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Hvorfor skal LAHH ha sin egen måler og ikke bruke signalet fra LT?</summary><p>For å unngå en felles feil. Hvis alle lagene bruker samme måler, kan én målefeil slå ut reguleringen, alarmen og pumpestoppet samtidig.</p></details>
+<details><summary>2. Hvorfor er en måler som henger ekstra lumsk?</summary><p>Fordi ingenting skjer med en gang. Nivået stiger først når noe annet endrer seg, og reguleringen ser ingen endring.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>overløp</td><td>Et rør i toppen av en tank som leder bort væske hvis tanken blir for full. Det virker uten strøm og signal.</td><td>overflow</td></tr>
+    <tr><td>forriglingsmatrise</td><td>En tabell som viser hvilke signaler som utløser hvilke handlinger i anlegget.</td><td>cause and effect matrix</td></tr>
+    <tr><td>skjult feil</td><td>En feil på en sikring som ikke merkes før sikringen trengs. Derfor testes sikringer jevnlig.</td><td>hidden failure</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="06-trykktank.html">Øv: Trykktanken</a>: det samme prinsippet for trykk.</li>
+  <li>Nivåmåling og regulering i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+</main>
+<script>
+{
+  const E = id => document.getElementById(id);
+  const nb = v => v.toFixed(1).replace('.', ',');
+  /* Nivåsimulering */
+  let S, timer = null;
+  const init = () => { S = {L:50, t:0, pumpOn:true, trip:false, lah:false, ofl:false, stuck:E('nvFLt').checked ? 50 : null, speed:0.4, lcv:0.4, qin:0, qout:0}; E('nvLog').innerHTML = ''; };
+  const fmt = t => String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(Math.floor(t % 60)).padStart(2, '0');
+  const log = msg => { const li = document.createElement('li'); li.innerHTML = '<span class="tid">' + fmt(S.t) + '</span>' + msg; E('nvLog').prepend(li); };
+  const meas = () => { const lt = E('nvFLt').checked ? S.stuck : S.L; const c = E('nvFCommon').checked; return {lt, lah: c ? lt : S.L, lahh: c ? lt : S.L}; };
+  function step(dt) {
+    const v = +E('nvValve').value / 100, m = meas();
+    const lcv = Math.max(0, Math.min(1, 0.4 + 0.06 * (50 - m.lt)));
+    const run = S.pumpOn && !S.trip;
+    S.lcv = lcv; S.qin = run ? 3 * lcv : 0; S.qout = S.L > 0.05 ? 1.5 * v : 0; S.speed = S.qin / 3;
+    S.L += (S.qin - S.qout) * dt; S.t += dt;
+    const was = S.ofl; S.ofl = false;
+    if (S.L > 95) { S.ofl = true; S.L = 95; } if (S.L < 0) S.L = 0;
+    if (S.ofl && !was) log('Vannet renner i overløpet til sluk.');
+    if (!S.ofl && was) log('Overløpet slutter å renne.');
+    const m2 = meas();
+    if (!S.lah && m2.lah >= 80) { S.lah = true; log('LAH-12077: Høyt nivå. Alarm til operatør.'); }
+    if (S.lah && m2.lah < 78) { S.lah = false; log('LAH-12077: Alarmen er borte.'); }
+    if (!S.trip && !E('nvFLahh').checked && m2.lahh >= 90) { S.trip = true; S.pumpOn = false; log('LAHH-12076: Høy-høy nivå. P-12002 stoppet automatisk.'); }
+  }
+  const chip = (id, cls, txt) => { const el = E(id); el.className = 'state ' + cls; el.textContent = txt; };
+  function render() {
+    const m = meas(), ltF = E('nvFLt').checked, lahhF = E('nvFLahh').checked, com = E('nvFCommon').checked;
+    const w = E('nvWater'); w.setAttribute('y', 340 - 3 * S.L); w.setAttribute('height', 3 * S.L);
+    E('nvPv').textContent = Math.round(S.L) + ' %';
+    E('nvLicTxt').textContent = 'LIC viser ' + Math.round(m.lt) + ' %';
+    const run = S.pumpOn && !S.trip;
+    const pump = E('nvPump'); pump.classList.toggle('run', run); pump.classList.toggle('trip', S.trip);
+    E('nvPumpTxt').textContent = S.trip ? 'stoppet av LAHH' : !S.pumpOn ? 'stoppet av operatør' : 'går, fast turtall';
+    E('nvLcvTxt').textContent = S.lcv < 0.005 ? 'stengt' : Math.round(S.lcv * 100) + ' % åpen';
+    E('nvFlowIn').classList.toggle('off', !(S.qin > 0.02 && timer)); E('nvFlowIn2').classList.toggle('off', !(S.qin > 0.02 && timer));
+    E('nvFlowOut').classList.toggle('off', !(S.qout > 0.02 && timer));
+    E('nvFlowOfl').classList.toggle('off', !S.ofl);
+    E('nvReg').classList.toggle('dead', ltF);
+    E('nvAlm').classList.toggle('on', S.lah);
+    E('nvTrp').classList.toggle('on', S.trip); E('nvTrp').classList.toggle('dead', lahhF);
+    E('nvOfl').classList.toggle('on', S.ofl);
+    const v = E('nvValve').value; E('nvValveVal').textContent = v + ' %'; E('nvValveTxt').textContent = v === '0' ? 'stengt' : v + ' % åpen';
+    chip('nvSReg', ltF ? 'bad' : run ? 'ok' : 'mid', ltF ? 'Målefeil' : run ? 'Regulerer' : 'Pumpe stoppet');
+    chip('nvSAlm', S.lah ? 'mid' : 'ok', S.lah ? 'Alarm' : 'Normal');
+    chip('nvSTrp', S.trip || lahhF ? 'bad' : 'ok', S.trip ? 'Utløst, pumpe stoppet' : lahhF ? 'Defekt' : 'Normal');
+    chip('nvSOfl', S.ofl ? 'bad' : 'ok', S.ofl ? 'Renner' : 'Tørt');
+    E('nvStop').disabled = !S.pumpOn; E('nvStart').disabled = S.pumpOn || S.trip; E('nvRst').disabled = !S.trip;
+    E('nvRun').textContent = timer ? 'Pause' : (S.t > 0 ? 'Fortsett' : 'Start simulering');
+    E('nvTime').textContent = 'Simulert tid ' + fmt(S.t);
+    let t, c = 'ok';
+    if (S.ofl) { c = 'bad'; t = (com && ltF) ? 'Ingen alarm har gått, fordi alle lagene ser den samme feilaktige målingen. Bare overløpet virker, fordi det ikke trenger noen måler. Dette er en felles feil.' : 'Overløpet tar unna vannet fordi både reguleringen og LAHH har sviktet. Det virker uten strøm og signal, men vannet havner i sluket. Var det et kjemikalie, ville det vært et utslipp.'; }
+    else if (S.trip) { c = 'bad'; t = 'LAHH-12076 har stoppet P-12002. Pumpen kan ikke startes før LAHH er tilbakestilt, og du bør finne årsaken før du starter igjen.'; }
+    else if (S.lah) { c = 'mid'; t = S.pumpOn ? 'LAH-12077 gir alarm. Som operatør skal du gripe inn nå: stopp pumpen og finn årsaken.' : 'Pumpen er stoppet av operatøren. Nivået synker hvis utløpet er åpent.'; }
+    else if (ltF && S.L > m.lt + 4) { c = 'mid'; t = 'LT-12075 viser ' + Math.round(m.lt) + ' %, men det faktiske nivået er ' + Math.round(S.L) + ' %. Reguleringen tror nivået er for lavt og holder LCV-12022 åpen.'; }
+    else if (!S.pumpOn) { c = 'mid'; t = 'Pumpen er stoppet av operatøren.'; }
+    else if (E('nvValve').value === '0' && S.speed < 0.05) t = 'Utløpet er stengt. LIC-12094 har stengt LCV-12022, og nivået står stille. Reguleringen klarer denne forstyrrelsen alene.';
+    else t = 'Normal drift. LIC-12094 justerer reguleringsventilen LCV-12022 slik at nivået holder seg nær settpunktet på 50 %.';
+    const fb = E('nvFb'); fb.className = 'fb ' + c; fb.textContent = t;
+  }
+  const tick = () => { for (let i = 0; i < 10; i++) step(0.05); render(); };
+  const pause = () => { if (timer) { clearInterval(timer); timer = null; } render(); };
+  E('nvRun').addEventListener('click', () => { if (timer) pause(); else { timer = setInterval(tick, 100); if (S.t === 0) log('Simuleringen er startet. Normal drift.'); render(); } });
+  E('nvReset').addEventListener('click', () => { pause(); E('nvValve').value = 40; init(); render(); });
+  E('nvValve').addEventListener('input', render);
+  E('nvValve').addEventListener('change', () => log('HV-201 satt til ' + E('nvValve').value + ' %.'));
+  E('nvStop').addEventListener('click', () => { S.pumpOn = false; log('Operatøren stopper P-12002.'); render(); });
+  E('nvStart').addEventListener('click', () => { S.pumpOn = true; log('Operatøren starter P-12002.'); render(); });
+  E('nvRst').addEventListener('click', () => { if (meas().lahh >= 90) log('Kan ikke tilbakestille: LAHH ser fortsatt høy-høy nivå.'); else { S.trip = false; log('LAHH-12076 tilbakestilt. Pumpen må startes manuelt.'); } render(); });
+  E('nvFLt').addEventListener('change', e => { if (e.target.checked) { S.stuck = S.L; log('LT-12075 henger og viser fast ' + Math.round(S.L) + ' %.'); } else log('LT-12075 virker igjen.'); render(); });
+  E('nvFLahh').addEventListener('change', e => { log(e.target.checked ? 'LAHH-12076 er defekt.' : 'LAHH-12076 virker igjen.'); render(); });
+  E('nvFCommon').addEventListener('change', e => { log(e.target.checked ? 'LAH og LAHH bruker nå signalet fra LT-12075.' : 'LAH og LAHH har egne målere igjen.'); render(); });
+  init(); render();
+
+  /* Arbeidsark */
+  const WKEY = 'kpl-hms-nivaark'; let ws = {};
+  try { ws = JSON.parse(localStorage.getItem(WKEY)) || {}; } catch (e) {}
+  const MAPR = [['Regulering', 'LT / LIC / LCV'], ['Høy alarm', 'LAH'], ['Høy-høy-alarm', 'LAHH'], ['Mekanisk sikring', 'Overløp']];
+  const MAPC = ['Tag på anlegget', 'Måleprinsipp eller type', 'Settpunkt eller høyde', 'Hva skjer når den slår inn?'];
+  const MAPP = ['Tag', 'f.eks. trykk, radar, flottør', '% eller cm', ''];
+  const CER = ['LAH', 'LAHH', 'Nødstopp (hvis anlegget har det)'];
+  const CEC = ['Alarm i styresystemet', 'Pumpen stopper', 'Må tilbakestilles manuelt'];
+  const TR = ['LAH gir alarm', 'LAHH stopper pumpen', 'Pumpen kan ikke startes før LAHH er tilbakestilt', 'Overløpet begynner å renne (hvis dere tester det)'];
+  const TC = ['Forventet nivå', 'Observert nivå'];
+  const esc = s => String(s).replace(/"/g, '&quot;');
+  E('wsMap').innerHTML = '<thead><tr><th>Funksjon</th>' + MAPC.map(c => '<th>' + c + '</th>').join('') + '</tr></thead><tbody>' + MAPR.map((r, i) => '<tr><td><strong>' + r[0] + '</strong><br><span class="etikett">' + r[1] + '</span></td>' + MAPC.map((c, j) => '<td><input type="text" id="ws-map-' + i + '-' + j + '" data-ws="map-' + i + '-' + j + '" placeholder="' + MAPP[j] + '" aria-label="' + esc(r[0] + ': ' + c) + '"></td>').join('') + '</tr>').join('') + '</tbody>';
+  E('wsCE').innerHTML = '<thead><tr><th>Årsak</th>' + CEC.map(c => '<th class="c">' + c + '</th>').join('') + '</tr></thead><tbody>' + CER.map((r, i) => '<tr><td><strong>' + r + '</strong></td>' + CEC.map((c, j) => '<td class="c"><input type="checkbox" id="ws-ce-' + i + '-' + j + '" data-ws="ce-' + i + '-' + j + '" aria-label="' + esc(r + ' gir: ' + c) + '"></td>').join('') + '</tr>').join('') + '</tbody>';
+  E('wsTest').innerHTML = '<thead><tr><th>Funksjon</th>' + TC.map(c => '<th>' + c + '</th>').join('') + '<th class="c">Ok?</th></tr></thead><tbody>' + TR.map((r, i) => '<tr><td>' + r + '</td>' + TC.map((c, j) => '<td><input type="text" id="ws-t-' + i + '-' + j + '" data-ws="t-' + i + '-' + j + '" aria-label="' + esc(r + ': ' + c) + '"></td>').join('') + '<td class="c"><select id="ws-t-' + i + '-ok" data-ws="t-' + i + '-ok" aria-label="' + esc(r + ': ok') + '"><option value="">–</option><option>Ja</option><option>Nei</option></select></td></tr>').join('') + '</tbody>';
+  document.querySelectorAll('.ws [data-ws]').forEach(el => {
+    const k = el.dataset.ws;
+    if (ws[k] !== undefined) { if (el.type === 'checkbox') el.checked = !!ws[k]; else el.value = ws[k]; }
+    el.addEventListener('input', () => { ws[k] = el.type === 'checkbox' ? el.checked : el.value; try { localStorage.setItem(WKEY, JSON.stringify(ws)); } catch (e) {} });
+  });
+  const val = id => { const el = E(id); return el.type === 'checkbox' ? el.checked : el.value.trim(); };
+  function tekst() {
+    let t = 'NIVÅSIKRING PÅ SKOLENS ANLEGG\n\n1. Instrumenter\n';
+    MAPR.forEach((r, i) => { t += '- ' + r[0] + ' (' + r[1] + '): ' + MAPC.map((c, j) => c + ': ' + (val('ws-map-' + i + '-' + j) || '–')).join('; ') + '\n'; });
+    t += '\n3. Forriglingsmatrise\n';
+    CER.forEach((r, i) => { const x = CEC.filter((c, j) => val('ws-ce-' + i + '-' + j)); t += '- ' + r + ': ' + (x.length ? x.join(', ') : 'ingen kryss') + '\n'; });
+    t += '\n4. Funksjonstest\n';
+    TR.forEach((r, i) => { t += '- ' + r + ': forventet ' + (val('ws-t-' + i + '-0') || '–') + ', observert ' + (val('ws-t-' + i + '-1') || '–') + ', ok: ' + (val('ws-t-' + i + '-ok') || '–') + '\n'; });
+    t += '\n5. Refleksjon\n' + (E('wsRefl').value.trim() || '–') + '\n';
+    return t;
+  }
+  const fallback = t => { const o = E('wsOut'); o.hidden = false; o.value = t; o.focus(); o.select(); E('wsMsg').textContent = 'Teksten er merket. Kopier den med Ctrl+C (Cmd+C på Mac).'; };
+  E('wsCopy').addEventListener('click', () => {
+    const t = tekst();
+    try { navigator.clipboard.writeText(t).then(() => { E('wsMsg').textContent = 'Kopiert. Lim inn i loggen eller innleveringen din.'; }, () => fallback(t)); } catch (e) { fallback(t); }
+  });
+}
+</script>
+</body>
+</html>

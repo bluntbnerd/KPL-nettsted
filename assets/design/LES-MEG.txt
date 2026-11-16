@@ -1,0 +1,1 @@
+Designvarianter til utprøving. Se maler\design-variant.css og «Designvarianter» i CLAUDE.md.
