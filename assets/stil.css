@@ -666,6 +666,38 @@ body.ps-apent { overflow: hidden; }
 .designvelger { font-size: .85rem; color: var(--dempet); }
 .designvelger select { font: inherit; padding: 3px 6px; border-radius: 6px; border: 1px solid var(--linje); background: var(--flate); color: var(--tekst); }
 
+/* ================= Standard: roligere, NDLA-inspirert (bestemt 17.11.2026) =================
+   Bare venstremeny, mer luft, og sidetypen som liten grå tekst under menyvalget. */
+html.design-standard .toc { display: none; }
+@media (min-width: 901px) {
+  html.design-standard .oppsett,
+  html.design-standard .oppsett.uten-toc { grid-template-columns: 280px minmax(0, 760px); gap: 0 64px; }
+  html.design-standard .oppsett.ingen-sti,
+  html.design-standard .oppsett.ingen-sti.uten-toc { grid-template-columns: minmax(0, 820px); }
+}
+html.design-standard main { padding-top: 40px; line-height: 1.7; }
+html.design-standard main p, html.design-standard main ul, html.design-standard main ol { margin-bottom: 1.2em; }
+html.design-standard h1 { margin-bottom: .6em; }
+html.design-standard h2 { margin-top: 2.4em; }
+html.design-standard .ingress { margin-bottom: 1.6em; }
+
+html.design-standard .sidemeny { padding-top: 32px; }
+html.design-standard ol.sti li { margin-bottom: 6px; }
+html.design-standard ol.sti a { display: grid; grid-template-columns: 24px 1fr; column-gap: 12px; row-gap: 1px; align-items: start; padding: 7px 8px; }
+html.design-standard ol.sti a .sti-nr { grid-row: 1 / span 2; }
+html.design-standard ol.sti a .sti-tittel { align-self: center; min-height: 24px; display: flex; align-items: center; }
+html.design-standard ol.sti a .type-merke { grid-column: 2; margin: 0; font-size: .78rem; }
+html.design-standard ol.sti a .type-merke::before { display: none; }
+html.design-standard ol.sti a .kommer-merke,
+html.design-standard ol.sti a .utkast-merke { grid-column: 2; margin: 0; justify-self: start; }
+html.design-standard ol.sti a.aktiv { box-shadow: none; background: var(--tema-lys); }
+
+/* Sidetype over overskriften: lys etikett med kant, som hos NDLA */
+html.design-standard .sidetype {
+  color: var(--tekst); background: var(--flate); border: 1px solid var(--linje);
+  border-radius: 6px; font-weight: 500; padding: .1em .7em;
+}
+
 /* ================= Mellomstore skjermer ================= */
 @media (max-width: 1240px) {
   .oppsett, .oppsett.uten-toc { grid-template-columns: var(--meny-bredde) minmax(0, 1fr); }
