@@ -31,7 +31,8 @@ KPL.sti("02-kjemi-og-beregninger", [
       { fil: "mol-og-molmasse.html", tittel: "Mol og molmasse", status: "utkast" },
       { tittel: "Konsentrasjon og molare løsninger", meny: "Konsentrasjon", status: "planlagt" },
       { tittel: "Å lage en løsning med kjent konsentrasjon", meny: "Lage løsninger", status: "planlagt" },
-      { tittel: "Fortynning", status: "planlagt" },
+      { fil: "fortynning.html", tittel: "Fortynning", status: "utkast" },
+      { fil: "fortynning-simulering.html", tittel: "Øv: fortynning (simulering og kalkulator)", meny: "Fortynning – øv", type: "simulering", status: "utkast" },
       { tittel: "Hva kan du nå?", status: "planlagt" }
     ]
   },
