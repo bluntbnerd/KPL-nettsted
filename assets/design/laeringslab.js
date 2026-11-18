@@ -98,7 +98,7 @@
     var alle = document.createElement("a");
     alle.className = "temabrikke alle";
     alle.href = "temaer/index.html";
-    alle.textContent = "Alle temaer og kompetansemål →";
+    alle.textContent = "Alle temaer →";
     rad.appendChild(alle);
     indre.appendChild(rad);
     document.body.classList.add("med-temabrikker");

@@ -194,6 +194,10 @@ body[data-side="forside"] .temakort-fag { margin: 2px 0 0; grid-column: 2; }
 body[data-side="forside"] .temakort-bunn { margin: 0; grid-column: 2; }
 body[data-side="forside"] .temakort-kort .fremdrift-bar { grid-column: 1 / -1; margin-top: 8px; height: 4px; }
 
+/* Snarveiene er fjernet fra forsiden (de finnes i toppmenyen) */
+body[data-side="forside"] .snarveier,
+body[data-side="forside"] .seksjon-tittel:has(+ .snarveier) { display: none; }
+
 /* Temaene som brikker i toppfeltet (lages av laeringslab.js) */
 .helt h1 .oransje { color: var(--kr-oransje); }
 .temabrikker { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }

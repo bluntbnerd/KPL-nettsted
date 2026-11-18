@@ -8,22 +8,21 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
   <style>
-    .fo-sim { display: grid; grid-template-columns: 260px 1fr; gap: 20px; align-items: start; }
-    @media (max-width: 820px) { .fo-sim { grid-template-columns: 1fr; } }
-    .fo-ctrl label { display: block; font-weight: 700; margin: 12px 0 0; }
+    .fo-sim { display: grid; grid-template-columns: minmax(150px, 190px) 1fr auto 1fr; gap: 10px; align-items: end; }
+    @media (max-width: 640px) { .fo-sim { grid-template-columns: 1fr auto 1fr; } .fo-ctrl { grid-column: 1 / -1; } }
+    .fo-ctrl { align-self: start; font-size: .9rem; }
+    .fo-ctrl label { display: block; font-weight: 700; margin: 8px 0 0; }
     .fo-ctrl label:first-child { margin-top: 0; }
     .fo-ctrl output { float: right; font-variant-numeric: tabular-nums; color: var(--info); }
-    .fo-ctrl input[type=range] { width: 100%; accent-color: var(--info); }
-    .fo-ctrl .fo-hint { font-size: .85rem; color: var(--dempet); margin: 0; }
-    .fo-knapper { margin-top: 14px; }
-    .fo-knapper button { margin: 0 6px 6px 0; }
-    .fo-scene { display: flex; justify-content: center; align-items: flex-end; flex-wrap: wrap; gap: 4px; }
-    .fo-beger { text-align: center; }
+    .fo-ctrl input[type=range] { width: 100%; accent-color: var(--info); margin: 2px 0; }
+    .fo-knapper { margin-top: 10px; }
+    .fo-knapper button { margin: 0 4px 4px 0; font-size: .85rem; }
+    .fo-beger { text-align: center; min-width: 0; }
     .fo-beger strong { display: block; }
-    .fo-beger span { font-size: .85rem; color: var(--dempet); }
-    .fo-beger svg { width: 200px; height: auto; max-width: 42vw; color: var(--tekst); }
-    .fo-pil { align-self: center; text-align: center; font-weight: 700; color: var(--info); padding: 0 4px; }
-    .fo-pil b { display: block; font-size: 2.2rem; line-height: 1; }
+    .fo-beger span { font-size: .8rem; color: var(--dempet); }
+    .fo-beger svg { width: 100%; max-width: 170px; height: auto; color: var(--tekst); }
+    .fo-pil { align-self: center; text-align: center; font-weight: 700; color: var(--info); font-size: .85rem; }
+    .fo-pil b { display: block; font-size: 1.8rem; line-height: 1; }
     .fo-tall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
     @media (max-width: 600px) { .fo-tall { grid-template-columns: repeat(2, 1fr); } }
     .fo-tall div { background: var(--flate-2); border-radius: 10px; padding: 8px; text-align: center; }
@@ -58,27 +57,23 @@
   <div class="fo-sim">
     <div class="fo-ctrl">
       <label for="fo-c1">c₁ – stamløsning <output id="fo-c1v"></output></label>
-      <input type="range" id="fo-c1" min="0.2" max="5" step="0.1" value="2">
-      <p class="fo-hint">Hvor sterk løsningen du starter med er.</p>
-      <label for="fo-v1">V₁ – volum du tar ut <output id="fo-v1v"></output></label>
-      <input type="range" id="fo-v1" min="10" max="250" step="5" value="100">
-      <p class="fo-hint">Det du pipetterer eller måler opp.</p>
-      <label for="fo-v2">V₂ – totalvolum etterpå <output id="fo-v2v"></output></label>
-      <input type="range" id="fo-v2" min="10" max="500" step="5" value="400">
-      <p class="fo-hint">Det du fyller opp til med vann. Minst like stort som V₁.</p>
+      <input type="range" id="fo-c1" min="0.2" max="5" step="0.1" value="2" title="Hvor sterk løsningen du starter med er">
+      <label for="fo-v1">V₁ – tar ut <output id="fo-v1v"></output></label>
+      <input type="range" id="fo-v1" min="10" max="250" step="5" value="100" title="Det du pipetterer eller måler opp">
+      <label for="fo-v2">V₂ – fyller opp til <output id="fo-v2v"></output></label>
+      <input type="range" id="fo-v2" min="10" max="500" step="5" value="400" title="Totalvolum etterpå. Minst like stort som V₁">
       <p class="fo-knapper">
         <button type="button" id="fo-go">Tilsett vann</button>
         <button type="button" id="fo-reset">Start på nytt</button>
       </p>
     </div>
-    <div>
-      <div class="fo-scene">
         <div class="fo-beger"><strong>Før</strong><span>stamløsning (V₁)</span>
           <svg id="fo-b1" viewBox="0 0 220 290" role="img" aria-label="Begerglass med stamløsning før fortynning"></svg></div>
         <div class="fo-pil"><b>→</b>+ vann<br><output id="fo-vann"></output></div>
         <div class="fo-beger"><strong>Etter</strong><span>fortynnet løsning (V₂)</span>
           <svg id="fo-b2" viewBox="0 0 220 290" role="img" aria-label="Begerglass med fortynnet løsning"></svg></div>
-      </div>
+  </div>
+  <div>
       <div class="fo-tall" aria-live="polite">
         <div><small>Partikler før</small><output id="fo-nf"></output></div>
         <div><small>Partikler etter</small><output id="fo-ne"></output></div>
@@ -86,7 +81,6 @@
         <div class="fo-c2"><small>c₂</small><output id="fo-c2"></output></div>
       </div>
       <div class="fo-likning" id="fo-lik"></div>
-    </div>
   </div>
   <figcaption>Figur: Hver prikk står for en mengde oppløst stoff. Antallet prikker er det samme før og etter. Fargen viser konsentrasjonen.</figcaption>
 </figure>
