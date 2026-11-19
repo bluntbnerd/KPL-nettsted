@@ -33,8 +33,10 @@
     /* Fast bredde i midten, så begerglassene ikke hopper når tallene endrer lengde */
     .fo-pil { width: 6.5em; font-variant-numeric: tabular-nums; }
     .fo-fyll { margin-top: 10px; font-size: .85rem; }
-    .fo-inn { display: block; margin-top: 3px; font-weight: 400; color: var(--info); }
-    .fo-inn input { font: inherit; font-weight: 700; color: var(--info); width: 3.6em; padding: 1px 4px; text-align: right; border: 1px solid var(--linje); border-radius: 5px; background: var(--flate); }
+    .fo-inn { display: block; margin-top: 3px; font-weight: 400; color: var(--dempet); white-space: nowrap; }
+    .fo-inn input { font: inherit; font-size: .95em; color: var(--tekst); width: 3em; padding: 0 3px; text-align: right; border: 0; border-bottom: 1px solid var(--linje); border-radius: 0; background: transparent; }
+    .fo-inn input:focus { outline: none; border-bottom: 2px solid var(--info); }
+    .fo-v2 { font-weight: 400; color: var(--dempet); }
     .fo-svar { display: flex; gap: 6px; align-items: center; margin-top: 4px; }
     .fo-svar input { font: inherit; width: 6em; padding: 4px 6px; border: 1px solid var(--linje); border-radius: 6px; background: var(--flate); color: var(--tekst); }
     .fo-knapper { margin-top: 8px; }
@@ -45,14 +47,14 @@
     .fo-beger svg { width: 100%; max-width: 170px; height: auto; color: var(--tekst); }
     .fo-pil { align-self: center; text-align: center; font-weight: 700; color: var(--info); font-size: .85rem; }
     .fo-pil b { display: block; font-size: 1.8rem; line-height: 1; }
-    .fo-tall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
-    @media (max-width: 600px) { .fo-tall { grid-template-columns: repeat(2, 1fr); } }
-    .fo-tall div { background: var(--flate-2); border-radius: 10px; padding: 8px; text-align: center; }
-    .fo-tall small { display: block; color: var(--dempet); font-weight: 700; }
-    .fo-tall output { font-size: 1.25rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    /* Tilleggsinfo under begerglassene: små felt, begerglassene er hovedelementet */
+    .fo-tall { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 8px; }
+    .fo-tall div { background: var(--flate-2); border-radius: 8px; padding: 4px 6px; text-align: center; }
+    .fo-tall small { display: block; color: var(--dempet); font-weight: 700; font-size: .72rem; }
+    .fo-tall output { font-size: .95rem; font-weight: 700; font-variant-numeric: tabular-nums; }
     .fo-tall .fo-c2 { background: var(--info-bg); }
     .fo-tall .fo-c2 output { color: var(--info); }
-    .fo-likning { margin-top: 10px; text-align: center; font-size: 1.05rem; font-variant-numeric: tabular-nums; background: var(--flate-2); border-radius: 10px; padding: 10px; }
+    .fo-likning { margin-top: 6px; text-align: center; font-size: .85rem; font-variant-numeric: tabular-nums; background: var(--flate-2); border-radius: 8px; padding: 6px 8px; }
     .fo-velg button { margin: 0 6px 6px 0; }
     .fo-velg button[aria-pressed="true"] { font-weight: bold; outline: 2px solid var(--info); }
     .fo-felt { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; }
@@ -79,11 +81,11 @@
 <figure>
   <div class="fo-sim">
     <div class="fo-ctrl">
-      <label for="fo-c1t">c₁ – stamløsning <span class="fo-inn"><input id="fo-c1t" type="text" inputmode="decimal"> mol/L</span></label>
-      <input type="range" id="fo-c1" min="0.1" max="6" step="0.01" value="2" aria-label="c₁ – stamløsning" title="Konsentrasjonen på flaska med stamløsning. Du kan også skrive inn tallet.">
-      <label for="fo-c2t">c₂ – skal lage <span class="fo-inn"><input id="fo-c2t" type="text" inputmode="decimal"> mol/L</span></label>
-      <input type="range" id="fo-c2i" min="0.01" max="1.99" step="0.01" value="0.5" aria-label="c₂ – skal lage" title="Konsentrasjonen løsningen skal ha. Glideren går opp til c₁. Du kan også skrive inn tallet.">
-      <div class="fo-lbl">V₂ – målekolbe
+      <label for="fo-c1t">Stamløsning <span class="fo-inn">c₁ = <input id="fo-c1t" type="text" inputmode="decimal"> mol/L</span></label>
+      <input type="range" id="fo-c1" min="0.1" max="6" step="0.01" value="2" aria-label="c₁, stamløsning" title="Konsentrasjonen på flaska med stamløsning. Du kan også skrive inn tallet.">
+      <label for="fo-c2t">Løsningen du skal lage <span class="fo-inn">c₂ = <input id="fo-c2t" type="text" inputmode="decimal"> mol/L</span></label>
+      <input type="range" id="fo-c2i" min="0.01" max="1.99" step="0.01" value="0.5" aria-label="c₂, løsningen du skal lage" title="Konsentrasjonen løsningen skal ha. Glideren går opp til c₁. Du kan også skrive inn tallet.">
+      <div class="fo-lbl">Målekolbe <span class="fo-v2">V₂</span>
       <div class="fo-kolber" id="fo-kolber" role="group" aria-label="Velg målekolbe">
         <button type="button" data-v="100" aria-pressed="true">100</button>
         <button type="button" data-v="200" aria-pressed="false">200</button>
@@ -99,8 +101,6 @@
       <svg id="fo-b2" viewBox="0 22 220 282" role="img" aria-label="Den fortynnede løsningen"></svg></div>
   </div>
   <div class="fo-tall" aria-live="polite">
-    <div><small>Partikler før</small><output id="fo-nf"></output></div>
-    <div><small>Partikler etter</small><output id="fo-ne"></output></div>
     <div><small>Fortynningsfaktor</small><output id="fo-fak"></output></div>
     <div class="fo-c2"><small>V₁ – ta ut</small><output id="fo-v1"></output></div>
   </div>
@@ -206,7 +206,7 @@
       $("fo-b1").innerHTML = beger(0, d.v2, 0, 0, false);
       $("fo-b2").innerHTML = beger(0, d.v2, 0, 0, false);
       $("fo-vann").textContent = "";
-      ["fo-nf", "fo-ne", "fo-fak", "fo-v1"].forEach(function (id) { $(id).textContent = "–"; });
+      ["fo-fak", "fo-v1"].forEach(function (id) { $(id).textContent = "–"; });
       $("fo-lik").innerHTML = '<span class="fo-varsel">Løsningen du skal lage, må være svakere enn stamløsningen. Velg en lavere c₂ eller en sterkere stamløsning.</span>';
       return;
     }
@@ -217,7 +217,6 @@
     $("fo-b1").innerHTML = beger(d.v1, d.v2, d.c1, n, true);
     $("fo-b2").innerHTML = beger(vNa, d.v2, d.c1 * d.v1 / vNa, n, true);
     $("fo-vann").textContent = tall(d.v2 - d.v1, 1) + " mL";
-    $("fo-nf").textContent = n; $("fo-ne").textContent = n;
     $("fo-fak").textContent = tall(d.v2 / d.v1, 1);
     $("fo-v1").textContent = tall(d.v1, 1) + " mL";
   }
