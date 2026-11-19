@@ -101,7 +101,8 @@
     kalender: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
     hatt: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
     liste: '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>',
-    hake: '<path d="M5 12.5l4.5 4.5L19 7.5"/>'
+    hake: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+    laas: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'
   };
   function ikon(navn, klasse) {
     return '<svg class="ikon ' + (klasse || "") + '" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + (IKONER[navn] || "") + "</svg>";
@@ -422,7 +423,7 @@
         var a;
         if (s.type === "planlagt") {
           a = lag("span", "sti-lenke");
-          a.innerHTML = '<span class="sti-nr">' + merkeTekst + '</span><span class="sti-tittel"></span><span class="kommer-merke">kommer</span>';
+          a.innerHTML = '<span class="sti-nr">' + merkeTekst + '</span><span class="sti-tittel"></span><span class="kommer-merke">' + ikon("laas", "laas") + 'kommer</span>';
         } else {
           a = lenke(s.fil, "");
           var ferdig = erFerdig(s.fil);
@@ -908,11 +909,14 @@
     mål.className = "temakort";
     mål.innerHTML = "";
     TEMAER.forEach(function (t) {
-      var a = lenke("temaer/" + t.mappe + "/index.html", "", "temakort-kort");
-      temaFarge(a, t);
       var fr = fremdrift(t);
       var antall = steg(t).filter(function (s) { return s.type === "fagstoff"; }).length;
-      a.innerHTML = '<span class="temakort-ikon">' + ikon(t.ikon) + "</span>" +
+      // Tema uten innhold ennå: grått kort med lås, ingen lenke
+      var a = antall ? lenke("temaer/" + t.mappe + "/index.html", "", "temakort-kort") : lag("div", "temakort-kort laast");
+      if (!antall) a.title = "Kommer";
+      temaFarge(a, t);
+      a.innerHTML = (antall ? "" : '<span class="laas-merke">' + ikon("laas") + "</span>") +
+        '<span class="temakort-ikon">' + ikon(t.ikon) + "</span>" +
         '<span class="temakort-nr">Tema</span>' +
         '<span class="temakort-tittel">' + t.tittel + "</span>" +
         '<span class="temakort-fag">' + t.fag.map(function (f) { return '<span class="fag">' + f + "</span>"; }).join(" ") + "</span>" +
@@ -988,7 +992,7 @@
       var ferdige = tellbare.filter(function (s) { return erFerdig(s.fil); }).length;
       var forste = tellbare[0];
       var kort = forste ? lenke(forste.fil, "", "emnekort-kort") : lag("div", "emnekort-kort tomt");
-      var html = '<span class="emnekort-tittel"></span>' +
+      var html = (forste ? "" : '<span class="laas-merke">' + ikon("laas") + "</span>") + '<span class="emnekort-tittel"></span>' +
         '<span class="emnekort-info">' + (tellbare.length ? tellbare.length + (tellbare.length === 1 ? " side" : " sider") : "Kommer") +
         (e.sider.length > tellbare.length ? " · " + (e.sider.length - tellbare.length) + " planlagt" : "") + "</span>";
       if (e.vurdering) html += '<span class="emnekort-vurdering">Avsluttes med: ' + e.vurdering + "</span>";

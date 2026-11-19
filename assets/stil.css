@@ -577,6 +577,14 @@ html { overflow-x: clip; }
 .temakort-fag { margin: 4px 0 8px; }
 .temakort-bunn { margin-top: auto; font-size: .85rem; color: var(--dempet); }
 .temakort-kort .fremdrift-bar { margin-top: 8px; height: 6px; }
+/* Låst: tema eller emne uten innhold ennå */
+.temakort-kort.laast, .emnekort-kort.tomt { position: relative; filter: grayscale(1); opacity: .55; box-shadow: none; cursor: not-allowed; }
+.temakort-kort.laast:hover { transform: none; box-shadow: none; border-color: var(--linje); }
+.temakort-kort.laast .fremdrift-bar { display: none; }
+.laas-merke { position: absolute; top: 12px; right: 12px; color: var(--dempet); }
+.laas-merke .ikon { width: 20px; height: 20px; }
+.kommer-merke { display: inline-flex; align-items: center; gap: 3px; }
+.kommer-merke .ikon { width: 12px; height: 12px; }
 
 .snarveier { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 2em; }
 .snarveier a {
