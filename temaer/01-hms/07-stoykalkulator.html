@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Støykalkulatoren – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.stoy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+@media(max-width:680px){.stoy{grid-template-columns:1fr}}
+.stor{font:700 clamp(36px,7vw,56px)/1 var(--head)}
+.skala{position:relative;height:28px;border-radius:6px;background:linear-gradient(90deg,#7fcf9c 0 50%,#f5d65a 50% 62.5%,#f08a7e 62.5%);margin:8px 0 4px}
+.skala .mk{position:absolute;top:-6px;bottom:-6px;width:4px;background:var(--ink);box-shadow:0 0 0 2px var(--bg)}
+.skala-akse{position:relative;height:18px;font-size:12px;color:var(--dim)}
+.skala-akse span{position:absolute;transform:translateX(-50%)}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Støykalkulatoren</h1>
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Hvor mye støy tåler du i løpet av en arbeidsdag? Endre støynivå, tid og hørselvern, og se hva som skjer med støybelastningen.</p>
+
+<div class="sim">
+  <h2>Støykalkulator</h2>
+  <div class="stoy">
+    <div>
+      <label for="db">Støynivå der du jobber: <span id="db-v"></span> dB(A)</label>
+      <input type="range" id="db" min="70" max="110" value="91">
+      <label for="tid">Tid i støyen: <span id="tid-v"></span> timer</label>
+      <input type="range" id="tid" min="0.25" max="12" step="0.25" value="4">
+      <label for="vern">Hørselvern</label><br>
+      <select id="vern" style="width:100%">
+        <option value="0">Ingen hørselvern</option>
+        <option value="15">Ørepropper, dårlig satt inn (ca. 15 dB effektiv demping)</option>
+        <option value="25">Øreklokker, riktig brukt (ca. 25 dB effektiv demping)</option>
+      </select>
+    </div>
+    <div class="panel">
+      <p style="margin:0">Din støybelastning (snitt over 8 timer)</p>
+      <div class="stor"><span id="lex"></span> <span style="font-size:20px">dB(A)</span></div>
+      <div class="skala"><div class="mk" id="mk"></div></div>
+      <div class="skala-akse"><span style="left:0;transform:none">70</span><span style="left:50%">80</span><span style="left:62.5%">85</span><span style="left:100%;transform:translateX(-100%)">90+</span></div>
+      <div id="stoy-svar" aria-live="polite"></div>
+    </div>
+  </div>
+  <p id="tillatt" style="margin:14px 0 0"></p>
+  <p class="liten">Forenklet beregning: L<sub>EX,8h</sub> = L + 10·log₁₀(t/8), der L er støynivået ved øret og t er tiden i timer. Kalkulatoren regner som om du er i stillhet resten av dagen. Den virkelige dempingen fra hørselvern er ofte mindre enn det som står på pakken.</p>
+</div>
+
+<h2>Prøv dette</h2>
+<ol>
+  <li>Sett støyen til 85 dB(A) og tiden til 8 timer. Øk støyen med 3 dB. Hvor lenge kan du nå være i støyen?</li>
+  <li>Sett støyen til 100 dB(A) uten hørselvern. Hvor mange minutter tar det før du når grenseverdien?</li>
+  <li>Velg øreklokker i 100 dB(A). Hvor lenge kan du være der nå?</li>
+</ol>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Du jobber 2 timer i 91 dB(A) og er i stillhet resten av dagen. Er du over grenseverdien på 85 dB(A)?</summary><p>Nei, men akkurat på grensen. 91 dB i 2 timer gir en støybelastning på cirka 85 dB(A) over 8 timer (91 + 10·log(2/8) ≈ 85). Hørselvern er påbudt. Har du mer støy resten av dagen, blir det for mye.</p></details>
+<details><summary>2. Hvorfor gir dårlig satte ørepropper så mye mindre beskyttelse enn øreklokker brukt riktig?</summary><p>Fordi lyden lekker inn rundt proppen når den ikke tetter godt. I kalkulatoren er forskjellen 10 dB. Det betyr at du bare kan være omtrent en tidel så lenge i støyen.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>støybelastning</td><td>Hvor mye støy du er utsatt for i løpet av en arbeidsdag, regnet om til et snitt over 8 timer.</td><td>noise exposure</td></tr>
+    <tr><td>hørselvern</td><td>Ørepropper eller øreklokker som demper støyen som når ørene.</td><td>hearing protection</td></tr>
+  </tbody>
+</table>
+
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+<script>
+{
+  const db = document.getElementById('db'), tid = document.getElementById('tid'), vern = document.getElementById('vern');
+  const fmt = (x, d = 1) => x.toFixed(d).replace('.', ',');
+  function regn() {
+    const L = +db.value - +vern.value, t = +tid.value;
+    const lex = L + 10 * Math.log10(t / 8);
+    document.getElementById('db-v').textContent = db.value;
+    document.getElementById('tid-v').textContent = fmt(t, 2).replace(/,?0+$/, '');
+    document.getElementById('lex').textContent = fmt(lex);
+    document.getElementById('mk').style.left = `calc(${Math.max(0, Math.min(100, (lex - 70) / 20 * 100))}% - 2px)`;
+    let kl, s;
+    if (lex < 80) { kl = 'ok'; s = 'Under nedre tiltaksverdi (80 dB).'; }
+    else if (lex < 85) { kl = 'warn'; s = 'Over 80 dB. Hørselvern skal være tilgjengelig, og du skal få tilbud om hørselskontroll.'; }
+    else { kl = 'bad'; s = 'Over grenseverdien på 85 dB. Hørselvern er påbudt, og støyen må reduseres.'; }
+    document.getElementById('stoy-svar').innerHTML = `<div class="status ${kl}">${s}</div>`;
+    const maks = 8 * Math.pow(10, (85 - L) / 10);
+    const tekst = maks >= 8 ? 'mer enn 8 timer' : maks >= 1 ? `${fmt(maks)} timer` : `${Math.round(maks * 60)} minutter`;
+    document.getElementById('tillatt').innerHTML = `Med ${+vern.value ? 'dette hørselvernet' : 'ingen hørselvern'} kan du være i ${db.value} dB(A) i <strong>${tekst}</strong> per dag før du når grenseverdien på 85 dB(A).`;
+  }
+  [db, tid, vern].forEach(e => e.addEventListener('input', regn));
+  regn();
+}
+</script>
+</body>
+</html>

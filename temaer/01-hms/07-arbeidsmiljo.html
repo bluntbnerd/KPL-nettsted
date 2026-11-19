@@ -3,68 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fysisk og psykososialt arbeidsmiljø – KPL</title>
+  <title>Støy og hørsel – KPL</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/stil.css">
   <link rel="stylesheet" href="hms-komponenter.css">
   <script src="../../assets/meny.js" defer></script>
   <style>
-.stoy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
-@media(max-width:680px){.stoy{grid-template-columns:1fr}}
-.stor{font:700 clamp(36px,7vw,56px)/1 var(--head)}
-.skala{position:relative;height:28px;border-radius:6px;background:linear-gradient(90deg,#7fcf9c 0 50%,#f5d65a 50% 62.5%,#f08a7e 62.5%);margin:8px 0 4px}
-.skala .mk{position:absolute;top:-6px;bottom:-6px;width:4px;background:var(--ink);box-shadow:0 0 0 2px var(--bg)}
-.skala-akse{position:relative;height:18px;font-size:12px;color:var(--dim)}
-.skala-akse span{position:absolute;transform:translateX(-50%)}
 .stige{list-style:none;padding:0;margin:0;font-size:15px}
 .stige li{display:grid;grid-template-columns:58px 1fr;gap:8px;padding:5px 0;border-bottom:1px solid var(--line)}
-.stige b{font-family:var(--head);font-size:17px;text-align:right}
+.stige b{font-size:17px;text-align:right}
 </style>
 </head>
 <body data-status="utkast">
 <main>
 
-
-<h1>Fysisk og psykososialt arbeidsmiljø</h1>
-<p class="ingress">Ikke alle skader skjer i en ulykke. Støy, tunge løft, nattarbeid og et dårlig samarbeidsklima sliter på kroppen og hodet over tid.</p>
-
+<h1>Støy og hørsel</h1>
 <div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Ikke alle skader skjer i en ulykke. Støy sliter på hørselen over tid, og skaden kan ikke repareres.</p>
 
-<h2>Støy</h2>
-<p>Pumper, kompressorer, vifter og trykkavlastning gir mye støy i et prosessanlegg. Høy støy over lang tid gir <strong>varig hørselsskade</strong> og øresus (tinnitus). Skaden kan ikke repareres. Støy gjør det også vanskeligere å høre alarmer og beskjeder.</p>
-<p>Lyd måles i <strong>desibel, dB(A)</strong>. Skalaen er logaritmisk: <strong>for hver 3 dB øker lydenergien til det dobbelte</strong>. Det betyr at du kan oppholde deg bare halvparten så lenge i 88 dB som i 85 dB for å få den samme støybelastningen.</p>
-<div class="to">
-  <div><h3>80 dB(A) i snitt over 8 timer</h3><p>Nedre tiltaksverdi. Arbeidsgiveren skal stille hørselvern til rådighet og tilby hørselskontroll.</p></div>
-  <div><h3>85 dB(A) i snitt over 8 timer</h3><p>Grenseverdi. Hørselvern er påbudt, og arbeidsgiveren må sette i gang tiltak for å få ned støyen.</p></div>
-  <div><h3>130 dB(C) toppverdi</h3><p>Grense for kortvarige smell og impulsstøy, som kan skade hørselen umiddelbart.</p></div>
-</div>
+<h2>Hvorfor er støy farlig?</h2>
+<p>Pumper, kompressorer, vifter og trykkavlastning gir mye støy i et prosessanlegg. Høy støy over lang tid gir <strong>varig hørselsskade</strong> og øresus (tinnitus). Skaden kan ikke repareres. Støy gjør det også vanskeligere å høre alarmer og beskjeder, og det gir tretthet og dårligere konsentrasjon.</p>
 
-<div class="sim">
-  <h2>Støykalkulator</h2>
-  <div class="stoy">
-    <div>
-      <label for="db">Støynivå der du jobber: <span id="db-v"></span> dB(A)</label>
-      <input type="range" id="db" min="70" max="110" value="91">
-      <label for="tid">Tid i støyen: <span id="tid-v"></span> timer</label>
-      <input type="range" id="tid" min="0.25" max="12" step="0.25" value="4">
-      <label for="vern">Hørselvern</label><br>
-      <select id="vern" style="width:100%">
-        <option value="0">Ingen hørselvern</option>
-        <option value="15">Ørepropper, dårlig satt inn (ca. 15 dB effektiv demping)</option>
-        <option value="25">Øreklokker, riktig brukt (ca. 25 dB effektiv demping)</option>
-      </select>
-    </div>
-    <div class="panel">
-      <p style="margin:0">Din støybelastning (snitt over 8 timer)</p>
-      <div class="stor"><span id="lex"></span> <span style="font-size:20px">dB(A)</span></div>
-      <div class="skala"><div class="mk" id="mk"></div></div>
-      <div class="skala-akse"><span style="left:0;transform:none">70</span><span style="left:50%">80</span><span style="left:62.5%">85</span><span style="left:100%;transform:translateX(-100%)">90+</span></div>
-      <div id="stoy-svar" aria-live="polite"></div>
-    </div>
-  </div>
-  <p id="tillatt" style="margin:14px 0 0"></p>
-  <p class="liten">Forenklet beregning: L<sub>EX,8h</sub> = L + 10·log₁₀(t/8). Den virkelige dempingen fra hørselvern er ofte mindre enn det som står på pakken.</p>
-</div>
+<h2>Desibel og 3 dB-regelen</h2>
+<p>Lyd måles i <strong>desibel, dB(A)</strong>. Skalaen er ikke vanlig, men logaritmisk: <strong>for hver 3 dB øker lydenergien til det dobbelte</strong>. 88 dB er altså ikke «litt mer» enn 85 dB, men dobbelt så mye lydenergi. Derfor kan du bare være halvparten så lenge i 88 dB som i 85 dB for å få den samme støybelastningen.</p>
 
 <h3>Typiske støynivåer</h3>
 <ul class="stige">
@@ -77,78 +38,101 @@
 </ul>
 <p class="liten">Omtrentlige nivåer. De virkelige verdiene må måles.</p>
 
-<h2>Andre fysiske faktorer</h2>
+<h2>Grensene</h2>
+<p>Grensene står i forskriften om tiltaks- og grenseverdier. Støyen regnes om til et snitt over en arbeidsdag på 8 timer. Det kalles <strong>støybelastning</strong>.</p>
 <div class="to">
-  <div><h3>Ergonomi</h3><p>Tunge løft, vridde arbeidsstillinger og ensformig arbeid gir belastningsskader i rygg, nakke og skuldre. Bruk tralle og løfteutstyr, løft med rett rygg og bøyde knær, hold lasten nær kroppen og del tunge løft med en kollega. På laben: still inn stol og arbeidshøyde, og ta pauser fra pipettering og mikroskopering.</p></div>
-  <div><h3>Vibrasjoner</h3><p>Håndholdt verktøy som slipemaskiner kan gi skader på blodårer og nerver i hendene. Begrens tiden og bruk verktøy med lav vibrasjon.</p></div>
-  <div><h3>Inneklima, lys og kulde</h3><p>God ventilasjon og riktig belysning er viktig for helse og for å unngå feil. Prosessoperatører jobber ofte ute i kulde og vind og trenger riktig bekledning.</p></div>
+  <div><h3>80 dB(A) i snitt over 8 timer</h3><p>Nedre tiltaksverdi. Arbeidsgiveren skal stille hørselvern til rådighet og tilby hørselskontroll.</p></div>
+  <div><h3>85 dB(A) i snitt over 8 timer</h3><p>Grenseverdi. Hørselvern er påbudt, og arbeidsgiveren må sette i gang tiltak for å få ned støyen.</p></div>
+  <div><h3>130 dB(C) toppverdi</h3><p>Grense for kortvarige smell og impulsstøy, som kan skade hørselen med en gang.</p></div>
 </div>
 
-<h2>Skiftarbeid</h2>
-<p>De fleste prosessanlegg går døgnet rundt, og <strong>prosessoperatører</strong> jobber derfor ofte skift. Nattarbeid forstyrrer døgnrytmen og kan gi søvnproblemer og redusert konsentrasjon, særlig mot slutten av nattskiftet. Det er da mange feil skjer. Gode råd er faste søvnrutiner, mørkt og stille soverom, sunn mat til faste tider og fysisk aktivitet. Arbeidsmiljøloven har egne regler for natt- og skiftarbeid, blant annet om hviletid.</p>
-
-<h2>Psykososialt arbeidsmiljø</h2>
-<p>Det psykososiale arbeidsmiljøet handler om hvordan vi har det sammen på jobb: samarbeid, ledelse, arbeidspress og respekt. Et godt arbeidsmiljø er også et <strong>sikkert</strong> arbeidsmiljø. Der folk er trygge på hverandre, sier de fra om feil, stiller spørsmål og stopper arbeid som virker farlig.</p>
-<ul>
-  <li>Arbeidsmiljøloven sier at ingen skal utsettes for <strong>trakassering eller annen utilbørlig opptreden</strong>.</li>
-  <li>Du har rett til å <strong>varsle</strong> om kritikkverdige forhold, og du skal ikke straffes for det.</li>
-  <li>Et <strong>inkluderende fagmiljø</strong> betyr at alle blir behandlet likt, uansett kjønn, bakgrunn, alder eller funksjonsevne, og at nye og lærlinger får hjelp og oppfølging.</li>
-</ul>
-
-<div class="boks yrkesboks">
-  <h3>I yrket</h3>
-  <p><strong>Prosessoperatører</strong> jobber i skiftlag som er sammen i mange år. Tillit og god kommunikasjon er avgjørende, særlig ved skiftbytte, når informasjon om anlegget skal overleveres. <strong>Laboranter</strong> jobber ofte dagtid, men har perioder med høyt tempo og mange like, gjentatte arbeidsoperasjoner.</p>
+<div class="boks eksempel">
+  <div class="boks-tittel">Regneeksempel: Hvor lenge kan du være i kompressorrommet?</div>
+  <p>I kompressorrommet er støyen 94 dB(A). Hvor lenge kan du være der uten hørselvern før du når grenseverdien på 85 dB(A)?</p>
+  <ol>
+    <li>I 85 dB(A) kan du være i 8 timer.</li>
+    <li>Hver gang støyen øker med 3 dB, halveres tiden: 88 dB gir 4 timer, 91 dB gir 2 timer, og 94 dB gir 1 time.</li>
+    <li><strong>Svar:</strong> 1 time. Etter det er hele dagens støykvote brukt opp.</li>
+  </ol>
+  <p>Med øreklokker som demper 25 dB, blir støyen ved øret omtrent 94 − 25 = 69 dB(A). Det er godt under grensen.</p>
 </div>
 
-<section class="test">
-  <h2>Test deg selv</h2>
-  <details><summary>Du jobber 2 timer i 91 dB(A). Er det over grenseverdien på 85 dB(A)?</summary><div><p>Nei. 91 dB i 2 timer gir en støybelastning på cirka 85 dB(A) over 8 timer (91 + 10·log(2/8) ≈ 85). Det er akkurat på grenseverdien, så hørselvern er påbudt. Har du mer støy resten av dagen, blir det for mye.</p></div></details>
-  <details><summary>Hvorfor har det psykososiale arbeidsmiljøet betydning for sikkerheten?</summary><div><p>Fordi folk som er trygge på kollegene og lederen, sier fra om feil, nesten-ulykker og farlige forhold. I et dårlig miljø holder folk tilbake informasjon, og da øker risikoen.</p></div></details>
-  <details><summary>Når på døgnet skjer det flest feil ved skiftarbeid, og hvorfor?</summary><div><p>Mot slutten av nattskiftet, typisk tidlig på morgenen. Da er kroppen innstilt på søvn, og konsentrasjonen er lavest.</p></div></details>
-</section>
+<h2>Hørselvern</h2>
+<p>Det beste er å få ned støyen ved kilden, for eksempel med lyddemping eller ved å skjerme maskinen. Når det ikke er nok, må du bruke <strong>hørselvern</strong>: ørepropper eller øreklokker. Hørselvernet virker bare når det sitter riktig. Ørepropper som ikke er satt godt inn, demper mye mindre enn det som står på pakken. Tar du av hørselvernet bare noen minutter i høy støy, mister du mye av beskyttelsen.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Bruk hørselvern i alle områder som er merket med påbudsskilt for hørselvern, også når du bare skal innom en kort tur. Hører du ringing eller sus i ørene etter en arbeidsdag, er det et tegn på at hørselen har fått for mye. Si fra.</p>
+</div>
+
+<p>Prøv selv med <a href="07-stoykalkulator.html">støykalkulatoren</a>.</p>
+
+<h2>Test deg selv</h2>
+<div class="quiz">
+  <p>1. Hva er grenseverdien for støy i snitt over en arbeidsdag på 8 timer?</p>
+  <ul>
+    <li>80 dB(A)</li>
+    <li data-riktig>85 dB(A)</li>
+    <li>100 dB(A)</li>
+  </ul>
+  <p class="forklaring">85 dB(A) er grenseverdien. Over den er hørselvern påbudt. 80 dB(A) er nedre tiltaksverdi.</p>
+</div>
+<div class="quiz">
+  <p>2. Støyen øker fra 85 til 88 dB(A). Hva skjer med lydenergien?</p>
+  <ul>
+    <li>Den øker med 3 prosent</li>
+    <li data-riktig>Den blir dobbelt så stor</li>
+    <li>Den blir ti ganger så stor</li>
+  </ul>
+  <p class="forklaring">Desibelskalaen er logaritmisk. For hver 3 dB dobles lydenergien.</p>
+</div>
+<div class="quiz">
+  <p>3. I 85 dB(A) kan du være i 8 timer. Hvor lenge kan du være i 91 dB(A) uten hørselvern?</p>
+  <ul>
+    <li>6 timer</li>
+    <li>4 timer</li>
+    <li data-riktig>2 timer</li>
+  </ul>
+  <p class="forklaring">91 dB er 6 dB over 85 dB. Det er to doblinger av lydenergien, så tiden halveres to ganger: 8 → 4 → 2 timer.</p>
+</div>
+<div class="quiz">
+  <p>4. Hvorfor er hørselsskader fra støy så alvorlige?</p>
+  <ul>
+    <li data-riktig>Fordi skaden er varig og ikke kan repareres</li>
+    <li>Fordi de alltid kommer med en gang</li>
+    <li>Fordi hørselvern ikke hjelper</li>
+  </ul>
+  <p class="forklaring">Hørselsskader utvikler seg ofte sakte over år, men de går ikke over. Derfor må du beskytte hørselen fra første dag.</p>
+</div>
+<div class="quiz">
+  <p>5. Hva er det beste tiltaket mot støy?</p>
+  <ul>
+    <li>Å bruke ørepropper</li>
+    <li data-riktig>Å få ned støyen ved kilden, for eksempel med lyddemping</li>
+    <li>Å jobbe fortere, så du er kortere tid i støyen</li>
+  </ul>
+  <p class="forklaring">Som i tiltakshierarkiet er det best å gjøre noe med selve faren. Hørselvern er det siste du tyr til.</p>
+</div>
 
 <h2>Ordliste</h2>
 <table>
   <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
   <tbody>
+    <tr><td>desibel</td><td>Enheten for lydnivå, dB. Skalaen er logaritmisk, så 3 dB mer betyr dobbelt så mye lydenergi.</td><td>decibel</td></tr>
     <tr><td>støybelastning</td><td>Hvor mye støy du er utsatt for i løpet av en arbeidsdag, regnet om til et snitt over 8 timer.</td><td>noise exposure</td></tr>
+    <tr><td>grenseverdi</td><td>Det høyeste nivået av støy eller et kjemikalie som du kan utsettes for på jobb.</td><td>limit value</td></tr>
     <tr><td>hørselvern</td><td>Ørepropper eller øreklokker som demper støyen som når ørene.</td><td>hearing protection</td></tr>
-    <tr><td>ergonomi</td><td>Hvordan arbeidet og utstyret er tilpasset kroppen, slik at du unngår belastningsskader.</td><td></td></tr>
-    <tr><td>psykososialt arbeidsmiljø</td><td>Hvordan vi har det sammen på jobb: samarbeid, ledelse, arbeidspress og respekt.</td><td></td></tr>
   </tbody>
 </table>
 
 <h2>Les mer</h2>
 <ul>
-  <li>Arbeidstilsynet (arbeidstilsynet.no) har informasjon om støy, ergonomi og skiftarbeid.</li>
-  <li>Rettigheter og plikter i arbeidslivet i <a href="../10-yrket-og-arbeidslivet/index.html">Bransjelære</a>.</li>
+  <li><a href="07-stoykalkulator.html">Øv: Støykalkulatoren</a></li>
+  <li>Hørselvern som verneutstyr: <a href="04-verneutstyr.html">Personlig verneutstyr</a>.</li>
+  <li>Arbeidstilsynet (arbeidstilsynet.no) har informasjon om støy på arbeidsplassen.</li>
 </ul>
 <p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
 
 </main>
-<script>
-{
-  const db = document.getElementById('db'), tid = document.getElementById('tid'), vern = document.getElementById('vern');
-  const fmt = (x, d = 1) => x.toFixed(d).replace('.', ',');
-  function regn() {
-    const L = +db.value - +vern.value, t = +tid.value;
-    const lex = L + 10 * Math.log10(t / 8);
-    document.getElementById('db-v').textContent = db.value;
-    document.getElementById('tid-v').textContent = fmt(t, 2).replace(/,?0+$/, '');
-    document.getElementById('lex').textContent = fmt(lex);
-    document.getElementById('mk').style.left = `calc(${Math.max(0, Math.min(100, (lex - 70) / 20 * 100))}% - 2px)`;
-    let kl, s;
-    if (lex < 80) { kl = 'ok'; s = 'Under nedre tiltaksverdi (80 dB).'; }
-    else if (lex < 85) { kl = 'warn'; s = 'Over 80 dB. Hørselvern skal være tilgjengelig, og du skal få tilbud om hørselskontroll.'; }
-    else { kl = 'bad'; s = 'Over grenseverdien på 85 dB. Hørselvern er påbudt, og støyen må reduseres.'; }
-    document.getElementById('stoy-svar').innerHTML = `<div class="status ${kl}">${s}</div>`;
-    const maks = 8 * Math.pow(10, (85 - L) / 10);
-    const tekst = maks >= 8 ? 'mer enn 8 timer' : maks >= 1 ? `${fmt(maks)} timer` : `${Math.round(maks * 60)} minutter`;
-    document.getElementById('tillatt').innerHTML = `Med ${+vern.value ? 'dette hørselvernet' : 'ingen hørselvern'} kan du være i ${db.value} dB(A) i <strong>${tekst}</strong> per dag før du når grenseverdien på 85 dB(A).`;
-  }
-  [db, tid, vern].forEach(e => e.addEventListener('input', regn));
-  regn();
-}
-</script>
 </body>
 </html>

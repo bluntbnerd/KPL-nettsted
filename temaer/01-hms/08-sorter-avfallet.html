@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Sorter avfallet – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+.kort{font:700 22px/1.25 var(--head);min-height:3.2em;display:flex;align-items:center}
+.kat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:8px;margin-top:12px}
+.kat button{text-align:left;font-weight:600;font-size:15px}
+.fremd{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:14px}
+.fremd div{height:100%;background:var(--grn);transition:width .3s}
+</style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Sorter avfallet</h1>
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Ni typer avfall fra laben og anlegget. Hvor skal de?</p>
+
+<div class="sim">
+  <h2>Sorter avfallet</h2>
+  <p class="hint">Les hva avfallet er, og velg riktig kategori.</p>
+  <div class="panel">
+    <div class="kort" id="av-kort" aria-live="polite"></div>
+    <div class="kat" id="av-kat"></div>
+    <div id="av-svar" aria-live="polite"></div>
+    <div class="rad" style="justify-content:space-between;margin-top:12px"><span id="av-tell" class="etikett"></span><button type="button" id="av-neste">Neste →</button></div>
+    <div class="fremd"><div id="av-bar"></div></div>
+  </div>
+  <p class="liten">Kategoriene er forenklet. Følg avfallsrutinene i bedriften og seksjon 13 i sikkerhetsdatabladet. Les <a href="08-farlig-avfall.html">Farlig avfall</a> hvis du vil repetere først.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. En kollega vil helle en liten rest kobbersulfatløsning i vasken, fordi «det er så lite». Hva svarer du?</summary><p>Kobber er et tungmetall og er giftig for liv i vann, også i små mengder. Mange små rester blir mye til sammen. Resten skal i beholderen for tungmetallholdig avfall.</p></details>
+<details><summary>2. Hvorfor regnes oljete filler som farlig avfall, selv om det mest er tøy?</summary><p>Fordi det er forurenset med olje. Alt som er forurenset med et farlig stoff, skal behandles som det farlige stoffet.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>farlig avfall</td><td>Avfall som kan skade mennesker eller miljøet, for eksempel løsemidler, tungmetaller, syrer og baser.</td><td>hazardous waste</td></tr>
+    <tr><td>halogenert løsemiddel</td><td>Et organisk løsemiddel som inneholder klor, brom eller fluor, for eksempel diklormetan.</td><td>halogenated solvent</td></tr>
+  </tbody>
+</table>
+
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+<script>
+{
+  const KAT = ['Organiske løsemidler uten halogen', 'Halogenerte løsemidler', 'Uorganiske syrer', 'Baser', 'Tungmetallholdig avfall', 'Oljeholdig avfall', 'Vanlig avfall (ikke farlig)'];
+  const A = [
+    ['Rester av aceton og etanol fra vask av glassutstyr', 0, 'Brannfarlige, organiske løsemidler uten klor, brom eller fluor.'],
+    ['Diklormetan fra en ekstraksjon', 1, 'Diklormetan inneholder klor og er derfor et halogenert løsemiddel. Skal ikke blandes med de andre løsemidlene.'],
+    ['Brukt saltsyreløsning fra en titrering', 2, 'Uorganisk syre. Noen bedrifter nøytraliserer fortynnede syrer etter en godkjent prosedyre. Ellers samles syren.'],
+    ['Rester av natronlut', 3, 'Base. Skal holdes adskilt fra syreavfall, fordi de reagerer med hverandre og gir varme.'],
+    ['Løsning med kobbersulfat', 4, 'Kobber er et tungmetall og er giftig for liv i vann.'],
+    ['Et knust kvikksølvtermometer', 4, 'Kvikksølv er svært giftig. Samles opp med eget kvikksølvsett og leveres som farlig avfall.'],
+    ['Brukt smøreolje fra en pumpe', 5, 'Spillolje er farlig avfall og skal samles i egen beholder.'],
+    ['Oljete filler og oljefilter', 5, 'Det som er forurenset med olje, regnes som oljeholdig avfall.'],
+    ['Ren papp fra emballasje', 6, 'Ikke forurenset, så den sorteres som papp og går til gjenvinning.']
+  ];
+  let i = 0, poeng = 0, svart = false;
+  const kort = document.getElementById('av-kort'), kat = document.getElementById('av-kat'), sv = document.getElementById('av-svar'),
+        tell = document.getElementById('av-tell'), nes = document.getElementById('av-neste'), bar = document.getElementById('av-bar');
+  function vis() {
+    svart = false; sv.innerHTML = '';
+    if (i >= A.length) {
+      kort.textContent = `Ferdig! Du sorterte ${poeng} av ${A.length} riktig.`;
+      kat.innerHTML = ''; nes.textContent = 'Prøv igjen'; nes.disabled = false; bar.style.width = '100%'; tell.textContent = ''; return;
+    }
+    kort.textContent = A[i][0];
+    kat.innerHTML = KAT.map((k, j) => `<button type="button" data-j="${j}">${k}</button>`).join('');
+    tell.textContent = `${i + 1} av ${A.length} · ${poeng} riktige`;
+    nes.textContent = 'Neste →'; nes.disabled = true;
+    bar.style.width = (i / A.length * 100) + '%';
+  }
+  kat.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b || svart) return;
+    svart = true; nes.disabled = false;
+    const rett = +b.dataset.j === A[i][1]; if (rett) poeng++;
+    b.classList.add('valgt');
+    sv.innerHTML = `<div class="status ${rett ? 'ok' : 'bad'}">${rett ? 'Riktig!' : 'Feil. Riktig er: ' + KAT[A[i][1]]}</div><p style="margin:8px 0 0">${A[i][2]}</p>`;
+    tell.textContent = `${i + 1} av ${A.length} · ${poeng} riktige`;
+  });
+  nes.addEventListener('click', () => { if (i >= A.length) { i = 0; poeng = 0; } else i++; vis(); });
+  vis();
+}
+</script>
+</body>
+</html>

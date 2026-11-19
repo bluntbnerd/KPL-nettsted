@@ -10,7 +10,10 @@
  */
 KPL.sti("01-hms", [
   { emne: "Grunnlaget for HMS-arbeid", beskrivelse: "Lover, ansvar, verneombud og internkontroll", ikon: "bilder/ikon-lov.svg", sider: [
-    { fil: "01-grunnlag.html", tittel: "Grunnlaget for HMS-arbeid", meny: "Grunnlaget", status: "utkast" }
+    { fil: "01-grunnlag.html", tittel: "Hva er HMS?", meny: "Hva er HMS?", status: "utkast" },
+    { fil: "01-ansvar.html", tittel: "Hvem har ansvaret?", meny: "Ansvar", status: "utkast" },
+    { fil: "01-hvem-har-ansvaret.html", tittel: "Øv: Hvem har ansvaret?", meny: "Hvem gjør hva?", status: "utkast" },
+    { fil: "01-internkontroll.html", tittel: "Internkontroll", meny: "Internkontroll", status: "utkast" }
   ]},
   { emne: "Kjemikaliesikkerhet", beskrivelse: "Faremerking, sikkerhetsdatablad og lagring", ikon: "bilder/ghs02.png", sider: [
     { fil: "02-kjemikalier.html", tittel: "Faremerking av kjemikalier", meny: "Faremerking", status: "utkast" },
@@ -31,7 +34,8 @@ KPL.sti("01-hms", [
     { fil: "05-laboratoriet.html", tittel: "Grunnreglene på laben", meny: "Grunnreglene", status: "utkast" },
     { fil: "05-finn-feilene.html", tittel: "Øv: Finn feilene på labbenken", meny: "Finn feilene", status: "utkast" },
     { fil: "05-avtrekksskap.html", tittel: "Øv: Avtrekksskapet", meny: "Avtrekksskapet", status: "utkast" },
-    { fil: "05-glass-gass-varme.html", tittel: "Glass, gass, varme og biologiske farer", meny: "Glass, gass, varme", status: "utkast" }
+    { fil: "05-glass-gass-varme.html", tittel: "Glass, gass, varme og biologiske farer", meny: "Glass, gass, varme", status: "utkast" },
+    { fil: "05-labsertifikat.html", tittel: "Labsertifikat: er du klar for første lab?", meny: "Labsertifikat", type: "sjekk", status: "utkast" }
   ]},
   { emne: "Brann og eksplosjon", beskrivelse: "Branntrekanten, eksplosjonsgrenser og Ex-soner", ikon: "bilder/ikon-ex.svg", sider: [
     { fil: "06-prosessanlegg.html", tittel: "Brann og eksplosjon", meny: "Brann og eksplosjon", status: "utkast" },
@@ -51,10 +55,16 @@ KPL.sti("01-hms", [
     { fil: "06-barrierer.html", tittel: "Øv: Sveitserostmodellen", meny: "Barrierer", status: "utkast" }
   ]},
   { emne: "Fysisk og psykososialt arbeidsmiljø", beskrivelse: "Støy, ergonomi, skiftarbeid og samarbeid", ikon: "bilder/ikon-horsel.svg", sider: [
-    { fil: "07-arbeidsmiljo.html", tittel: "Fysisk og psykososialt arbeidsmiljø", meny: "Arbeidsmiljø", status: "utkast" }
+    { fil: "07-arbeidsmiljo.html", tittel: "Støy og hørsel", meny: "Støy", status: "utkast" },
+    { fil: "07-stoykalkulator.html", tittel: "Øv: Støykalkulatoren", meny: "Støykalkulatoren", status: "utkast" },
+    { fil: "07-kropp-og-skift.html", tittel: "Ergonomi, inneklima og skiftarbeid", meny: "Kropp og skift", status: "utkast" },
+    { fil: "07-psykososialt.html", tittel: "Psykososialt arbeidsmiljø", meny: "Psykososialt", status: "utkast" }
   ]},
   { emne: "Ytre miljø og avfall", beskrivelse: "Utslipp, farlig avfall og grønn kjemi", ikon: "bilder/ghs09.png", sider: [
-    { fil: "08-ytre-miljo.html", tittel: "Ytre miljø og avfall", meny: "Ytre miljø", status: "utkast" }
+    { fil: "08-ytre-miljo.html", tittel: "Utslipp og miljøprøver", meny: "Utslipp", status: "utkast" },
+    { fil: "08-farlig-avfall.html", tittel: "Farlig avfall", meny: "Farlig avfall", status: "utkast" },
+    { fil: "08-sorter-avfallet.html", tittel: "Øv: Sorter avfallet", meny: "Sorter avfallet", status: "utkast" },
+    { fil: "08-gronn-kjemi.html", tittel: "Grønn kjemi", meny: "Grønn kjemi", status: "utkast" }
   ]},
   { emne: "Beredskap og avvikshåndtering", beskrivelse: "Nødprosedyrer, førstehjelp og læring av hendelser", ikon: "bilder/ikon-forstehjelp.svg", sider: [
     { fil: "09-beredskap.html", tittel: "Beredskap og avvikshåndtering", meny: "Beredskap", status: "utkast" }

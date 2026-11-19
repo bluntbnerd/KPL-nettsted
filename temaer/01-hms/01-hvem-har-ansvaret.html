@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Hvem har ansvaret? – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <link rel="stylesheet" href="hms-komponenter.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: Hvem har ansvaret?</h1>
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT1, ADK10</div>
+<p class="ingress">Arbeidsgiver, arbeidstaker, verneombud, AMU eller bedriftshelsetjenesten? Prøv deg på sju situasjoner fra lab og anlegg.</p>
+
+<div class="sim" id="ansvar">
+  <h2>Hvem har ansvaret?</h2>
+  <p class="hint">Les situasjonen og velg hvem som først og fremst har ansvaret.</p>
+  <div class="panel">
+    <p id="ans-tekst" style="font-size:19px;font-weight:600;min-height:3em"></p>
+    <div class="rad" id="ans-valg"></div>
+    <div id="ans-svar" aria-live="polite"></div>
+    <div class="rad" style="margin-top:12px;justify-content:space-between">
+      <span id="ans-teller" class="etikett"></span>
+      <button type="button" id="ans-neste">Neste situasjon →</button>
+    </div>
+  </div>
+  <p class="liten">AMU = arbeidsmiljøutvalg. BHT = bedriftshelsetjeneste. Se <a href="01-ansvar.html">Hvem har ansvaret?</a> hvis du vil lese om rollene først.</p>
+</div>
+
+<h2>Test deg selv</h2>
+<details><summary>1. Arbeidsgiveren skaffer vernebriller, men du lar være å bruke dem. Hvem har gjort feil?</summary><p>Du. Arbeidsgiveren har gjort sin del ved å skaffe vernebrillene og gi opplæring. Å bruke dem er en del av medvirkningsplikten din.</p></details>
+<details><summary>2. Bedriftshelsetjenesten måler for mye løsemiddel i lufta på laben. Hvem må sørge for at det blir gjort noe med det?</summary><p>Arbeidsgiveren. BHT kartlegger og gir råd, men det er arbeidsgiveren som har ansvaret for å sette i gang tiltak, for eksempel bedre avtrekk.</p></details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>medvirkningsplikt</td><td>Plikten du som arbeidstaker har til å følge rutiner, bruke verneutstyr og si fra om feil og farer.</td><td>duty to cooperate</td></tr>
+    <tr><td>stoffkartotek</td><td>En oversikt over alle farlige kjemikalier i bedriften, med sikkerhetsdatablad for hvert av dem.</td><td>chemical register</td></tr>
+  </tbody>
+</table>
+
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+<script>
+{
+  const ROLLER = ['Arbeidsgiver','Arbeidstaker','Verneombud','AMU','BHT'];
+  const S = [
+    ['Sørge for at stoffkartoteket er oppdatert og tilgjengelig for alle.', 'Arbeidsgiver', 'Arbeidsgiveren skal sørge for at det finnes et stoffkartotek med sikkerhetsdatablad for alle farlige kjemikalier.'],
+    ['Bruke vernebriller når prosedyren krever det.', 'Arbeidstaker', 'Arbeidsgiveren skaffer vernebrillene, men det er du som har plikt til å bruke dem.'],
+    ['Stanse arbeidet i en tank når det er umiddelbar fare for liv og helse.', 'Verneombud', 'Verneombudet har rett til å stanse farlig arbeid. Du kan også selv avbryte ditt eget arbeid hvis du mener det er farlig.'],
+    ['Behandle planene for et nytt prosessanlegg før det bygges.', 'AMU', 'AMU skal behandle store endringer som påvirker arbeidsmiljøet, for eksempel nye anlegg og ny teknologi.'],
+    ['Måle støy og kjemikalieeksponering og gi råd om tiltak.', 'BHT', 'Bedriftshelsetjenesten har fagkunnskapen til å kartlegge helsefarer og gi råd. Arbeidsgiveren må deretter sette i gang tiltakene.'],
+    ['Melde fra om en lekk pakning du oppdager på en pumpe.', 'Arbeidstaker', 'Å melde fra om feil og farer er en del av medvirkningsplikten.'],
+    ['Gi alle ansatte opplæring i en ny prosedyre for prøvetaking.', 'Arbeidsgiver', 'Arbeidsgiveren skal sørge for at alle får den opplæringen de trenger for å jobbe sikkert.']
+  ];
+  let i = 0, poeng = 0, svart = false;
+  const tekst = document.getElementById('ans-tekst'), valg = document.getElementById('ans-valg'),
+        svar = document.getElementById('ans-svar'), teller = document.getElementById('ans-teller'),
+        neste = document.getElementById('ans-neste');
+  function vis() {
+    svart = false;
+    tekst.textContent = S[i][0];
+    valg.innerHTML = ROLLER.map(r => `<button type="button" data-r="${r}">${r}</button>`).join('');
+    svar.innerHTML = '';
+    teller.textContent = `Situasjon ${i + 1} av ${S.length} · ${poeng} riktige`;
+    neste.textContent = i === S.length - 1 ? 'Start på nytt' : 'Neste situasjon →';
+  }
+  valg.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b || svart) return;
+    svart = true;
+    const rett = b.dataset.r === S[i][1];
+    if (rett) poeng++;
+    b.classList.add('valgt');
+    svar.innerHTML = `<div class="status ${rett ? 'ok' : 'bad'}">${rett ? 'Riktig!' : 'Ikke helt. Riktig svar er: ' + S[i][1] + '.'}</div><p style="margin:8px 0 0">${S[i][2]}</p>`;
+    teller.textContent = `Situasjon ${i + 1} av ${S.length} · ${poeng} riktige`;
+  });
+  neste.addEventListener('click', () => {
+    if (i === S.length - 1) { i = 0; poeng = 0; } else i++;
+    vis();
+  });
+  vis();
+}
+</script>
+</body>
+</html>
