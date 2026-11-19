@@ -48,13 +48,18 @@
     .fo-pil { align-self: center; text-align: center; font-weight: 700; color: var(--info); font-size: .85rem; }
     .fo-pil b { display: block; font-size: 1.8rem; line-height: 1; }
     /* Tilleggsinfo under begerglassene: små felt, begerglassene er hovedelementet */
-    .fo-tall { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 8px; }
+    .fo-tall { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin: 8px auto 0; max-width: 440px; }
+    /* Kolbeknappene i to rader: 100 200 250 / 500 1000 mL */
+    .fo-kolber { display: grid; grid-template-columns: repeat(3, auto); justify-content: center; gap: 4px; }
+    .fo-enhet { justify-self: start; align-self: center; }
     .fo-tall div { background: var(--flate-2); border-radius: 8px; padding: 4px 6px; text-align: center; }
     .fo-tall small { display: block; color: var(--dempet); font-weight: 700; font-size: .72rem; }
     .fo-tall output { font-size: .95rem; font-weight: 700; font-variant-numeric: tabular-nums; }
     .fo-tall .fo-c2 { background: var(--info-bg); }
     .fo-tall .fo-c2 output { color: var(--info); }
-    .fo-likning { margin-top: 6px; text-align: center; font-size: .85rem; font-variant-numeric: tabular-nums; background: var(--flate-2); border-radius: 8px; padding: 6px 8px; }
+    .fo-fakt { display: block; margin-top: 10px; font-weight: 400; color: var(--dempet); line-height: 1.3; }
+    .fo-fakt output { font-weight: 700; color: var(--info); }
+    .fo-likning { margin: 6px auto 0; max-width: 440px; text-align: center; font-size: .85rem; color: var(--dempet); background: none !important; padding: 0 !important; font-variant-numeric: tabular-nums; background: var(--flate-2); border-radius: 8px; padding: 6px 8px; }
     .fo-velg button { margin: 0 6px 6px 0; }
     .fo-velg button[aria-pressed="true"] { font-weight: bold; outline: 2px solid var(--info); }
     .fo-felt { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; }
@@ -96,15 +101,11 @@
     </div>
     <div class="fo-beger"><strong>Før</strong><span>stamløsning du tar ut (V₁)</span>
       <svg id="fo-b1" viewBox="0 22 220 282" role="img" aria-label="Begerglass med stamløsning"></svg></div>
-    <div class="fo-pil"><b>→</b>+ vann<br><output id="fo-vann"></output><br><button type="button" id="fo-go" class="fo-fyll">Fyll opp</button></div>
+    <div class="fo-pil"><b>→</b>+ vann<br><output id="fo-vann"></output><span class="fo-fakt">fortynnet<br><output id="fo-fak"></output> ganger</span><button type="button" id="fo-go" class="fo-fyll">Fyll opp</button></div>
     <div class="fo-beger"><strong>Etter</strong><span>i målekolben (V₂)</span>
       <svg id="fo-b2" viewBox="0 22 220 282" role="img" aria-label="Den fortynnede løsningen"></svg></div>
   </div>
-  <div class="fo-tall" aria-live="polite">
-    <div><small>Fortynningsfaktor</small><output id="fo-fak"></output></div>
-    <div class="fo-c2"><small>V₁ – ta ut</small><output id="fo-v1"></output></div>
-  </div>
-  <div class="fo-likning" id="fo-lik" aria-live="polite"></div>
+  <p class="fo-likning" id="fo-lik" aria-live="polite"></p>
   <figcaption>Figur: Hver prikk står for en mengde oppløst stoff. Antallet prikker er det samme før og etter. Fargen viser konsentrasjonen. Glassene er tegnet i samme størrelse som målekolben du har valgt.</figcaption>
 </figure>
 
@@ -191,7 +192,7 @@
       s += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="4" fill="' + PRIKK + '"/>';
     }
     s += '<path d="M' + (V - 8) + ' ' + (TOPP - 14) + ' L' + V + ' ' + (TOPP - 6) + ' L' + V + ' ' + BUNN + ' Q' + V + ' ' + (BUNN + 12) + ' ' + (V + 12) + ' ' + (BUNN + 12) + ' L' + (H - 12) + ' ' + (BUNN + 12) + ' Q' + H + ' ' + (BUNN + 12) + ' ' + H + ' ' + BUNN + ' L' + H + ' ' + (TOPP - 6) + ' L' + (H + 8) + ' ' + (TOPP - 14) + '" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>';
-    s += '<text x="110" y="' + (BUNN + 32) + '" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">' + (visVolum ? tall(vol, 1) + ' mL' : '? mL') + '</text>';
+    s += '<text x="110" y="' + (BUNN + 32) + '" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor">' + (visVolum === false ? '? mL' : visVolum + tall(vol, 1) + ' mL') + '</text>';
     return s;
   }
 
@@ -206,19 +207,18 @@
       $("fo-b1").innerHTML = beger(0, d.v2, 0, 0, false);
       $("fo-b2").innerHTML = beger(0, d.v2, 0, 0, false);
       $("fo-vann").textContent = "";
-      ["fo-fak", "fo-v1"].forEach(function (id) { $(id).textContent = "–"; });
+      ["fo-fak"].forEach(function (id) { $(id).textContent = "–"; });
       $("fo-lik").innerHTML = '<span class="fo-varsel">Løsningen du skal lage, må være svakere enn stamløsningen. Velg en lavere c₂ eller en sterkere stamløsning.</span>';
       return;
     }
     // Antall prikker er proporsjonalt med konsentrasjonen etter fortynning (n = c₂ · V₂, glasset rommer V₂)
     var n = Math.max(1, Math.round(d.c2 * 50));
-    $("fo-lik").innerHTML = utregning(d) + "<br>Pipetter ut " + tall(d.v1, 1) + " mL stamløsning, og fyll opp til streken i " + d.v2 + " mL målekolbe.";
+    $("fo-lik").innerHTML = utregning(d);
     var vNa = d.v1 + (d.v2 - d.v1) * andel;
-    $("fo-b1").innerHTML = beger(d.v1, d.v2, d.c1, n, true);
-    $("fo-b2").innerHTML = beger(vNa, d.v2, d.c1 * d.v1 / vNa, n, true);
+    $("fo-b1").innerHTML = beger(d.v1, d.v2, d.c1, n, "V₁ = ");
+    $("fo-b2").innerHTML = beger(vNa, d.v2, d.c1 * d.v1 / vNa, n, andel >= 1 ? "V₂ = " : "");
     $("fo-vann").textContent = tall(d.v2 - d.v1, 1) + " mL";
     $("fo-fak").textContent = tall(d.v2 / d.v1, 1);
-    $("fo-v1").textContent = tall(d.v1, 1) + " mL";
   }
 
   function utregning(d) {
