@@ -12,7 +12,8 @@ KPL.sti("02-kjemi-og-beregninger", [
     emne: "2A Grunnleggende kjemi og bindinger",
     vurdering: "prøve (V1)",
     sider: [
-      { fil: "atomet.html", tittel: "Atomet og skallmodellen", meny: "Atomet", status: "utkast" },
+      { fil: "atomet.html", tittel: "Atomet", status: "utkast" },
+      { fil: "skallmodell.html", tittel: "Skallmodellen", status: "utkast" },
       { fil: "periodesystemet.html", tittel: "Periodesystemet", status: "utkast" },
       { fil: "skallmodell-bygger.html", tittel: "Øv: bygg et atom (PhET)", status: "utkast" },
       { fil: "stoffer-og-formler.html", tittel: "Grunnstoffer, forbindelser og formler", meny: "Stoffer og formler", status: "utkast" },
