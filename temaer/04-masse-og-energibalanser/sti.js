@@ -25,7 +25,7 @@ KPL.sti("04-masse-og-energibalanser", [
   {
     emne: "Massebalanser i prosessanlegg",
     sider: [
-      { tittel: "Massebalanse i et anlegg", meny: "Massebalanse", status: "planlagt" },
+      { fil: "massebalanse-i-anlegg.html", tittel: "Massebalanse i et anlegg", meny: "Massebalanse", type: "fagstoff", status: "utkast" },
       { tittel: "Separasjon", status: "planlagt" },
       { tittel: "Resirkulering og utbytte", meny: "Resirkulering", status: "planlagt" }
     ]
@@ -33,7 +33,7 @@ KPL.sti("04-masse-og-energibalanser", [
   {
     emne: "Energi- og varmebalanser",
     sider: [
-      { tittel: "Varme og energi i prosesser", meny: "Varme i prosesser", status: "planlagt" },
+      { fil: "varme-og-energi.html", tittel: "Varme og energi i prosesser", meny: "Varme i prosesser", type: "fagstoff", status: "utkast" },
       { tittel: "Energibalanse i en varmeveksler", meny: "Varmeveksler", status: "planlagt" },
       { tittel: "Varmepumpe og COP", meny: "Varmepumpe", status: "planlagt" },
       { tittel: "Varmetap og virkningsgrad", meny: "Varmetap", status: "planlagt" }

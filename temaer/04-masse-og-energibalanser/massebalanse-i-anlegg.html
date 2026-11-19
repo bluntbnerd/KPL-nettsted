@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Massebalanse i et anlegg – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Massebalanse i et anlegg</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT5</div>
+
+<p class="ingress">Hvor mye råstoff går inn i anlegget hver time, og hvor mye produkt kommer ut? Stiger eller synker nivået i tanken? Med en <strong>massebalanse</strong> kan du svare på slike spørsmål. Det er et regnskap over alt stoff som går inn og ut.</p>
+
+<h2>Fra kjemien til anlegget</h2>
+<p>I Kjemiske prinsipper lærte du <a href="../02-kjemi-og-beregninger/reaksjoner.html">loven om massebevaring</a>: atomer forsvinner ikke, og massen er den samme før og etter en reaksjon. I et anlegg bruker vi den samme regelen, men på stoff som <em>strømmer</em> gjennom rør og tanker. Derfor regner vi i masse per tid, ofte kilo per time (kg/h).</p>
+<p>Hvor mange kilo som passerer et sted per time, kalles <strong>massestrøm</strong>. Måler du i liter eller kubikkmeter, må du gjøre om til kilo med tettheten. Se <a href="masse-volum-tetthet.html">Masse, volum og tetthet</a> og <a href="storrelser-og-enheter.html">Størrelser og enheter</a> hvis du trenger å repetere.</p>
+
+<h2>Systemgrensen: hva regner vi på?</h2>
+<p>Før du regner, bestemmer du hva du skal regne på. Du tegner en stiplet strek rundt det. Streken kalles <strong>systemgrensen</strong>. Den kan gå rundt én tank, ett apparat eller et helt anlegg. Du teller bare strømmene som krysser streken, enten inn eller ut. Det som skjer inne i systemet, trenger du ikke å vite alt om.</p>
+
+<figure>
+  <img src="bilder/blandetank-systemgrense.svg" alt="En blandetank med omrører. En rød stiplet strek, systemgrensen, går rundt tanken. To piler går inn fra venstre: saltlake, 1000 kilo per time med 20 prosent natriumklorid, og vann, 600 kilo per time uten salt. Én pil går ut til høyre: blanding, med ukjent massestrøm og ukjent saltinnhold." width="600">
+  <figcaption>Figur: En blandetank med systemgrense. To strømmer krysser grensen på vei inn, og én krysser på vei ut. Det er disse tre vi regner på. Tallene brukes i eksempelet lenger ned.</figcaption>
+</figure>
+
+<h2>Inn = ut + opphopning</h2>
+<p>For alt stoff som krysser systemgrensen, gjelder:</p>
+<p>\[ \text{inn} = \text{ut} + \text{opphopning} \]</p>
+<p><strong>Opphopning</strong> er stoff som blir igjen inne i systemet. Går det mer inn enn ut, stiger nivået i tanken. Går det mer ut enn inn, blir opphopningen negativ, og tanken tømmes.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Tanken som fylles</div>
+  <p>En lagertank får 500 kg/h inn og leverer 420 kg/h ut.</p>
+  <p>\[ \text{opphopning} = \text{inn} - \text{ut} = 500 \text{ kg/h} - 420 \text{ kg/h} = 80 \text{ kg/h} \]</p>
+  <p>Innholdet i tanken øker med 80 kg hver time. Etter 3 timer er det 240 kg mer i tanken.</p>
+</div>
+
+<h3>Kontinuerlig og satsvis drift</h3>
+<ul>
+  <li>I en <strong>kontinuerlig prosess</strong> går strømmene inn og ut hele tiden. Når anlegget går jevnt, er nivåer og temperaturer stabile, og opphopningen er null. Da blir balansen enkel: <strong>inn = ut</strong>. De fleste store prosessanlegg drives slik.</li>
+  <li>I en <strong>satsvis prosess</strong> (batch) fylles tanken eller reaktoren, prosessen går en stund, og så tømmes alt. Mens tanken fylles, er opphopningen stor. Ser du på hele satsen fra start til tom tank, er inn = ut igjen.</li>
+</ul>
+<p>På resten av denne siden regner vi på kontinuerlige prosesser uten opphopning.</p>
+
+<h2>Totalbalanse og balanse for ett stoff</h2>
+<p>En strøm består ofte av flere stoffer, for eksempel salt og vann. Da kan du sette opp to slags balanser:</p>
+<ul>
+  <li><strong>Totalbalansen</strong> gjelder all masse: alt som går inn, er lik alt som går ut.</li>
+  <li><strong>Stoffbalansen</strong> gjelder ett bestemt stoff, for eksempel saltet: alt saltet som går inn, er lik alt saltet som går ut.</li>
+</ul>
+<p>For å finne hvor mye av ett stoff som er i en strøm, bruker du <a href="../02-kjemi-og-beregninger/konsentrasjon.html">masseprosenten</a>:</p>
+<p>\[ \text{massestrøm av stoffet} = \text{massestrøm totalt} \cdot \frac{\text{masseprosent}}{100\,\%} \]</p>
+<p>1000 kg/h saltlake med 20 % salt inneholder altså \( 1000 \cdot 0{,}20 = 200 \) kg salt per time.</p>
+<p>Begge balansene gjelder så lenge stoffene bare blandes eller skilles. Skjer det en kjemisk reaksjon, gjelder totalbalansen fortsatt, men stoffene endres. Det ser vi på i <a href="resirkulering-og-utbytte.html">Resirkulering og utbytte</a>.</p>
+
+<h2>Regneeksempel</h2>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Blandetank for saltlake</div>
+  <p><strong>Oppgave:</strong> En blandetank får 1000 kg/h saltlake med 20 % NaCl og 600 kg/h rent vann (se figuren). Tanken går jevnt uten opphopning. Hvor stor er strømmen ut, og hvor mange prosent salt inneholder den?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li><strong>Tegn og sett systemgrense:</strong> Grensen går rundt tanken. To strømmer inn, én ut.</li>
+    <li><strong>Totalbalanse:</strong> \( \text{ut} = 1000 \text{ kg/h} + 600 \text{ kg/h} = 1600 \text{ kg/h} \)</li>
+    <li><strong>Saltbalanse, inn:</strong> Saltlaken har \( 1000 \cdot 0{,}20 = 200 \text{ kg/h} \) salt. Vannet har 0 kg/h salt. Det går altså 200 kg/h salt inn.</li>
+    <li><strong>Saltbalanse, ut:</strong> Alt saltet må ut igjen: 200 kg/h salt i strømmen ut.</li>
+    <li><strong>Masseprosent i strømmen ut:</strong> \( \dfrac{200 \text{ kg/h}}{1600 \text{ kg/h}} \cdot 100\,\% = 12{,}5\,\% \)</li>
+    <li><strong>Sjekk med vannbalansen:</strong> Vann inn er \( 800 + 600 = 1400 \text{ kg/h} \). Vann ut er \( 1600 - 200 = 1400 \text{ kg/h} \). Det stemmer.</li>
+  </ol>
+  <p><strong>Svar:</strong> Det går 1600 kg/h ut av tanken, med 12,5 % NaCl.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Fast oppskrift for massebalanser</div>
+  <ol>
+    <li>Tegn en enkel skisse med alle strømmene.</li>
+    <li>Sett systemgrensen.</li>
+    <li>Skriv tallene du kjenner på pilene, og sett ? på det du skal finne.</li>
+    <li>Sett opp totalbalansen.</li>
+    <li>Sett opp stoffbalansen for ett stoff, gjerne det som bare er i én strøm inn.</li>
+    <li>Sjekk svaret med en balanse du ikke har brukt, for eksempel vannet.</li>
+  </ol>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Opphopning kan gi overfylling</div>
+  <p>Hvis det går mer inn i en tank enn ut, stiger nivået til tanken er full. Da kan væske renne over, og etsende eller brennbare stoffer kan komme på avveie. Derfor har tanker nivåmåling og høynivåalarm, og ofte en forrigling som stopper pumpen inn. Mer om dette står i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>. En massebalanse hjelper deg å se på forhånd hvor raskt en tank blir full.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er en systemgrense?</p>
+  <ul>
+    <li>Den største mengden en tank kan romme</li>
+    <li data-riktig>En tenkt strek rundt det du regner på. Du teller strømmene som krysser den.</li>
+    <li>Grensen for hvor mye som kan slippes ut fra anlegget</li>
+  </ul>
+  <p class="forklaring">Systemgrensen bestemmer hva som er «inn» og «ut» i balansen. Den kan gå rundt én tank eller et helt anlegg.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En kontinuerlig prosess går jevnt. Hvor stor er opphopningen?</p>
+  <ul>
+    <li data-riktig>null</li>
+    <li>lik det som går inn</li>
+    <li>lik det som går ut</li>
+  </ul>
+  <p class="forklaring">Når nivåene er stabile, hoper ingenting seg opp. Da er inn = ut.</p>
+</div>
+
+<div class="quiz">
+  <p>3. En tank får 800 kg/h inn og leverer 650 kg/h ut. Hva skjer?</p>
+  <ul>
+    <li>Innholdet synker med 150 kg/h.</li>
+    <li data-riktig>Innholdet øker med 150 kg/h.</li>
+    <li>Ingenting, for massen er bevart.</li>
+  </ul>
+  <p class="forklaring">Opphopning = inn − ut = 800 − 650 = 150 kg/h. Massen er bevart, men den blir værende i tanken.</p>
+</div>
+
+<div class="quiz">
+  <p>4. To strømmer på 300 kg/h og 200 kg/h går inn i en blandetank uten opphopning. Hvor stor er strømmen ut?</p>
+  <ul>
+    <li>100 kg/h</li>
+    <li>250 kg/h</li>
+    <li data-riktig>500 kg/h</li>
+  </ul>
+  <p class="forklaring">Totalbalanse: ut = 300 + 200 = 500 kg/h.</p>
+</div>
+
+<div class="quiz">
+  <p>5. En strøm på 2000 kg/h inneholder 5 % salt. Hvor mye salt går det per time?</p>
+  <ul>
+    <li data-riktig>100 kg/h</li>
+    <li>400 kg/h</li>
+    <li>1900 kg/h</li>
+  </ul>
+  <p class="forklaring">2000 kg/h · 0,05 = 100 kg/h salt. Resten, 1900 kg/h, er vann.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>massebalanse</td><td>Et regnskap som viser at alt stoff som går inn i en prosess, kommer ut igjen eller hoper seg opp.</td><td>mass balance</td></tr>
+    <tr><td>massestrøm</td><td>Hvor mange kilo som strømmer forbi per tid, for eksempel i kg/s eller kg/h.</td><td>mass flow rate</td></tr>
+    <tr><td>systemgrense</td><td>En tenkt strek rundt den delen av anlegget du regner på. Strømmene som krysser streken, er inn og ut i balansen.</td><td></td></tr>
+    <tr><td>opphopning</td><td>Stoff som blir igjen inne i systemet fordi det går mer inn enn ut, for eksempel når nivået i en tank stiger.</td><td></td></tr>
+    <tr><td>kontinuerlig prosess</td><td>En prosess der stoff går inn og ut hele tiden. I jevn drift er opphopningen null.</td><td>continuous process</td></tr>
+    <tr><td>satsvis prosess</td><td>En prosess der en tank eller reaktor fylles, behandles og tømmes, én sats om gangen.</td><td>batch process</td></tr>
+    <tr><td>stoffbalanse</td><td>En massebalanse for ett bestemt stoff i strømmene, for eksempel salt.</td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Fagstoff i Kjemiske prinsipper: <a href="../02-kjemi-og-beregninger/konsentrasjon.html">Konsentrasjon</a> (masseprosent) og <a href="../02-kjemi-og-beregninger/fortynning.html">Fortynning</a>. Å fortynne et konsentrat er også en massebalanse.</li>
+  <li>Neste side: <a href="separasjon.html">Separasjon</a>, der én strøm deles i to.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

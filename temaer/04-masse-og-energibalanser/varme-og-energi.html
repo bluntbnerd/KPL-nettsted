@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varme og energi i prosesser – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Varme og energi i prosesser</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT5, KT7</div>
+
+<p class="ingress">I et prosessanlegg varmes tanker opp, væsker kokes inn, og brennere fyres med gass eller olje. For å drifte anlegget må du kunne regne ut hvor mye energi det går med, og hvor stor effekt utstyret må ha.</p>
+
+<p>Denne siden bygger på <a href="temperatur-og-varme.html">Temperatur og varme</a> og <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a>. Les dem først hvis du er usikker på forskjellen mellom temperatur og varme, eller mellom energi og effekt.</p>
+
+<h2>Å varme opp et stoff</h2>
+<p>Energien som trengs for å varme opp et stoff, avhenger av tre ting:</p>
+<ul>
+  <li><strong>massen</strong> \( m \): det trengs dobbelt så mye energi for å varme 2 kg som 1 kg.</li>
+  <li><strong>temperaturendringen</strong> \( \Delta T \) («delta T»): sluttemperatur minus starttemperatur.</li>
+  <li><strong>stoffet</strong>: noen stoffer krever mer energi enn andre. Dette kalles <strong>spesifikk varmekapasitet</strong>, \( c \).</li>
+</ul>
+<p>Sammen gir de formelen</p>
+<p>\[ Q = m \cdot c \cdot \Delta T \]</p>
+<p>der \( Q \) er varmen i kJ, \( m \) er massen i kg, \( c \) er i kJ/(kg·°C) og \( \Delta T \) er i °C. En temperaturendring er like stor i °C og i K, så det spiller ingen rolle hvilken av dem du bruker for \( \Delta T \).</p>
+
+<table>
+  <thead><tr><th>Stoff</th><th>Spesifikk varmekapasitet, \( c \) (kJ/(kg·°C))</th></tr></thead>
+  <tbody>
+    <tr><td>vann</td><td>4,18</td></tr>
+    <tr><td>etanol</td><td>ca. 2,4</td></tr>
+    <tr><td>olje (mineralolje)</td><td>ca. 2,0</td></tr>
+    <tr><td>luft</td><td>ca. 1,0</td></tr>
+    <tr><td>aluminium</td><td>ca. 0,90</td></tr>
+    <tr><td>stål</td><td>ca. 0,49</td></tr>
+  </tbody>
+</table>
+<p>Vann har svært høy spesifikk varmekapasitet. Det tar opp mye varme for hver grad det blir varmere. Derfor er vann et godt kjølevann og et godt varmemedium.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Varme opp en tank med vann</div>
+  <p><strong>Oppgave:</strong> En tank inneholder 500 kg vann på 15 °C. Vannet skal varmes til 80 °C med et elektrisk varmeelement på 30 kW. Hvor mye energi trengs, og hvor lang tid tar det hvis vi ser bort fra varmetap?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Det vi vet: \( m = 500 \text{ kg} \), \( c = 4{,}18 \text{ kJ/(kg·°C)} \), \( \Delta T = 80 \text{ °C} - 15 \text{ °C} = 65 \text{ °C} \).</li>
+    <li>Energi: \( Q = 500 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 65 \text{ °C} = 135\,850 \text{ kJ} \approx 136 \text{ MJ} \)</li>
+    <li>Tid: effekt er energi per tid, \( P = \dfrac{Q}{t} \), så \( t = \dfrac{Q}{P} = \dfrac{135\,850 \text{ kJ}}{30 \text{ kJ/s}} = 4528 \text{ s} \). (1 kW = 1 kJ/s.)</li>
+    <li>Gjør om til minutter: \( 4528 \text{ s} / 60 = 75{,}5 \text{ min} \).</li>
+  </ol>
+  <p><strong>Svar:</strong> Det trengs ca. 136 MJ, og det tar ca. 75 minutter. I virkeligheten tar det litt lenger tid, fordi noe av varmen går tapt gjennom tankveggen. Det ser vi på i <a href="varmetap.html">Varmetap og virkningsgrad</a>.</p>
+</div>
+
+<h2>Strømmer i et anlegg: fra kJ til kW</h2>
+<p>I et kontinuerlig anlegg strømmer væsken hele tiden. Da regner vi ikke med en fast masse, men med <strong>massestrøm</strong>: hvor mange kilo som går forbi per sekund (kg/s). Massestrømmen skrives \( \dot{m} \) («m-prikk»). Prikken betyr «per tid».</p>
+<p>Setter vi massestrøm inn i formelen i stedet for masse, får vi energi per sekund, altså effekt. Vi kaller det <strong>varmeeffekt</strong>:</p>
+<p>\[ P = \dot{m} \cdot c \cdot \Delta T \]</p>
+<p>Med \( \dot{m} \) i kg/s og \( c \) i kJ/(kg·°C) blir svaret i kJ/s, som er det samme som kW.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Forvarming av en vannstrøm</div>
+  <p><strong>Oppgave:</strong> 0,50 kg/s vann skal varmes fra 20 °C til 60 °C før det går inn i en reaktor. Hvor stor varmeeffekt trengs?</p>
+  <ol>
+    <li>Det vi vet: \( \dot{m} = 0{,}50 \text{ kg/s} \), \( c = 4{,}18 \text{ kJ/(kg·°C)} \), \( \Delta T = 60 \text{ °C} - 20 \text{ °C} = 40 \text{ °C} \).</li>
+    <li>\( P = 0{,}50 \text{ kg/s} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 40 \text{ °C} = 83{,}6 \text{ kW} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Det trengs ca. 84 kW.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Gjør om kg/h til kg/s</div>
+  <p>Strømmer i anlegg oppgis ofte i kg/h. Del på 3600 for å få kg/s, for det er 3600 sekunder i en time. Eksempel: 1800 kg/h = 1800 / 3600 = 0,50 kg/s.</p>
+</div>
+
+<h2>Å koke bort væske: fordampingsvarme</h2>
+<p>Når vann har nådd kokepunktet, stiger ikke temperaturen mer selv om du fortsetter å varme. All energien går da med til å gjøre vann om til damp. Energien som trengs for å fordampe 1 kg av et stoff ved kokepunktet, kalles <strong>fordampingsvarme</strong>. For vann ved 100 °C er den ca. 2260 kJ/kg.</p>
+<p>For en fast mengde væske regner vi slik:</p>
+<p>\[ Q = m \cdot L \]</p>
+<p>der \( L \) er fordampingsvarmen i kJ/kg. For en strøm bruker vi \( \dot{m} \) i stedet for \( m \), og da blir svaret i kW.</p>
+
+<figure>
+  <img src="bilder/oppvarming-og-fordamping.svg" alt="Stolpediagram for 1 kg vann. En kort stolpe viser at det trengs 334 kJ for å varme vannet fra 20 til 100 grader. En nesten sju ganger så lang stolpe viser at det trengs 2260 kJ for å koke bort vannet ved 100 grader." width="600">
+  <figcaption>Figur: Det trengs 4,18 · 80 = 334 kJ for å varme 1 kg vann fra 20 til 100 °C, men 2260 kJ for å koke det bort. Fordamping er den store energityven i et anlegg.</figcaption>
+</figure>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Energi til en inndamper</div>
+  <p><strong>Oppgave:</strong> I en inndamper kokes 750 kg/h vann bort fra en saltløsning (se <a href="separasjon.html">Separasjon</a>). Løsningen kommer inn ved kokepunktet. Hvor stor varmeeffekt trengs for å fordampe vannet?</p>
+  <ol>
+    <li>Gjør om til kg/s: \( \dot{m} = \dfrac{750 \text{ kg/h}}{3600 \text{ s/h}} = 0{,}208 \text{ kg/s} \)</li>
+    <li>\( P = \dot{m} \cdot L = 0{,}208 \text{ kg/s} \cdot 2260 \text{ kJ/kg} = 471 \text{ kW} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Det trengs ca. 470 kW. Kommer løsningen inn kaldere, trengs det i tillegg energi til å varme den opp til kokepunktet.</p>
+</div>
+
+<p>Det motsatte skjer når damp <strong>kondenserer</strong> til vann. Da gir dampen fra seg den samme energien igjen, 2260 kJ per kilo. Derfor er damp et mye brukt varmemedium i industrien. Den gir mye energi per kilo, og den gir den fra seg ved en jevn temperatur. At fordamping tar opp energi og kondensering gir fra seg energi, lærte du om i <a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a>.</p>
+
+<h2>Energi fra brensel: brennverdi</h2>
+<p>Mange anlegg får varme fra en brenner eller en kjel. Hvor mye energi du får fra 1 kg brensel, kalles <strong>brennverdi</strong>, og den oppgis i MJ/kg. Hvordan den kan regnes ut fra reaksjonsligningen, lærte du i <a href="../02-kjemi-og-beregninger/forbrenning.html">Forbrenning</a> og <a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a>.</p>
+
+<table>
+  <thead><tr><th>Brensel</th><th>Brennverdi (MJ/kg)</th></tr></thead>
+  <tbody>
+    <tr><td>naturgass (metan)</td><td>ca. 50</td></tr>
+    <tr><td>propan</td><td>ca. 46</td></tr>
+    <tr><td>diesel og fyringsolje</td><td>ca. 43</td></tr>
+    <tr><td>ved (lufttørket)</td><td>ca. 15</td></tr>
+  </tbody>
+</table>
+<p>Verdiene gjelder når vannet i røykgassen går ut som damp, slik det gjør i en vanlig kjel.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Effekt fra en gassbrenner</div>
+  <p><strong>Oppgave:</strong> En brenner bruker 10 kg naturgass per time. Hvor stor effekt gir den?</p>
+  <ol>
+    <li>Energi per time: \( 10 \text{ kg/h} \cdot 50 \text{ MJ/kg} = 500 \text{ MJ/h} \)</li>
+    <li>Gjør om til kJ per sekund: \( \dfrac{500\,000 \text{ kJ}}{3600 \text{ s}} = 139 \text{ kJ/s} = 139 \text{ kW} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Brenneren gir ca. 140 kW. Ikke all denne energien kommer fram til prosessen. Noe forsvinner med den varme røykgassen.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Damp og varmt vann gir alvorlige brannskader. Damp er farligere enn vann med samme temperatur. Når dampen treffer huden, kondenserer den og gir fra seg fordampingsvarmen i tillegg. Bruk verneutstyr, og åpne aldri en ventil, et lokk eller en flens på et damp- eller varmtvannssystem før det er trykkavlastet og kjølt ned. Varme rør og tanker skal være isolert eller merket.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva trenger du å vite for å regne ut hvor mye energi som trengs for å varme opp en væske?</p>
+  <ul>
+    <li>bare massen og sluttemperaturen</li>
+    <li data-riktig>massen, den spesifikke varmekapasiteten og temperaturendringen</li>
+    <li>volumet og trykket</li>
+  </ul>
+  <p class="forklaring">Formelen er Q = m · c · ΔT. Du trenger massen, hvilket stoff det er (c), og hvor mange grader det skal varmes.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hvor mye energi trengs for å varme 2,0 kg vann 10 °C?</p>
+  <ul>
+    <li>8,4 kJ</li>
+    <li>20 kJ</li>
+    <li data-riktig>84 kJ</li>
+  </ul>
+  <p class="forklaring">Q = 2,0 kg · 4,18 kJ/(kg·°C) · 10 °C = 83,6 kJ ≈ 84 kJ.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Du regner med massestrøm i kg/s og c i kJ/(kg·°C). Hvilken enhet får svaret?</p>
+  <ul>
+    <li>kJ</li>
+    <li data-riktig>kW</li>
+    <li>kWh</li>
+  </ul>
+  <p class="forklaring">kg/s · kJ/(kg·°C) · °C = kJ/s, og 1 kJ/s er 1 kW. Svaret er en effekt.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvorfor bruker en inndamper så mye energi?</p>
+  <ul>
+    <li>Fordi saltet må varmes opp til over 100 °C.</li>
+    <li data-riktig>Fordi det trengs mye energi for å gjøre vann om til damp.</li>
+    <li>Fordi vann har lav spesifikk varmekapasitet.</li>
+  </ul>
+  <p class="forklaring">Fordampingsvarmen til vann er ca. 2260 kJ/kg. Det er nesten 7 ganger så mye som det trengs for å varme vannet fra 20 til 100 °C.</p>
+</div>
+
+<div class="quiz">
+  <p>5. En kjel bruker 1,0 kg fyringsolje per time. Brennverdien er 43 MJ/kg. Omtrent hvor stor effekt gir kjelen?</p>
+  <ul>
+    <li data-riktig>12 kW</li>
+    <li>43 kW</li>
+    <li>720 kW</li>
+  </ul>
+  <p class="forklaring">43 MJ per time = 43 000 kJ / 3600 s = 11,9 kJ/s ≈ 12 kW.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>spesifikk varmekapasitet</td><td>Hvor mye energi som trengs for å varme 1 kg av et stoff 1 grad.</td><td></td></tr>
+    <tr><td>massestrøm</td><td>Hvor mange kilo som strømmer forbi per tid, for eksempel i kg/s eller kg/h.</td><td>mass flow rate</td></tr>
+    <tr><td>varmeeffekt</td><td>Hvor mye varme som tilføres eller føres bort per sekund. Den måles i kW.</td><td>heat duty</td></tr>
+    <tr><td>fordampingsvarme</td><td>Energien som trengs for å gjøre 1 kg væske om til damp ved kokepunktet. Den samme energien gis tilbake når dampen kondenserer.</td><td></td></tr>
+    <tr><td>brennverdi</td><td>Hvor mye energi du får når 1 kg brensel brenner. Den oppgis i MJ/kg.</td><td>calorific value</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="temperatur-og-varme.html">Temperatur og varme</a> og <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a> i dette temaet.</li>
+  <li><a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a> i Kjemiske prinsipper.</li>
+  <li>Neste side: <a href="varmeveksler.html">Energibalanse i en varmeveksler</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Tallene for varmekapasitet, fordampingsvarme og brennverdi er avrundede tabellverdier. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

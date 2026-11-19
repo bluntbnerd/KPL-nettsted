@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Blandetank med systemgrense: saltlake og vann inn, blanding ut</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker></defs>
+  <rect x="0" y="0" width="600" height="300" rx="10" fill="#ffffff"/>
+  <!-- systemgrense -->
+  <rect x="205" y="45" width="200" height="230" rx="6" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="305" y="36" font-size="14" text-anchor="middle" fill="#c0392b" font-weight="bold">systemgrense</text>
+  <!-- tank -->
+  <rect x="250" y="130" width="110" height="125" rx="10" fill="#cfe4f7"/>
+  <rect x="250" y="85" width="110" height="170" rx="10" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <!-- omrører -->
+  <rect x="291" y="56" width="28" height="18" rx="3" fill="#e0e4e4" stroke="#586868" stroke-width="1.5"/>
+  <line x1="305" y1="74" x2="305" y2="215" stroke="#586868" stroke-width="2.5"/>
+  <line x1="285" y1="215" x2="325" y2="215" stroke="#586868" stroke-width="4"/>
+  <text x="305" y="160" font-size="13" text-anchor="middle" fill="#1c2828">blandetank</text>
+  <!-- strømmer -->
+  <g stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)" fill="none">
+    <line x1="20" y1="130" x2="248" y2="130"/>
+    <line x1="20" y1="230" x2="248" y2="230"/>
+    <line x1="362" y1="230" x2="585" y2="230"/>
+  </g>
+  <g font-size="14" fill="#1c2828">
+    <text x="22" y="104" font-weight="bold">Saltlake: 1000 kg/h</text>
+    <text x="22" y="121">20 % NaCl</text>
+    <text x="22" y="204" font-weight="bold">Vann: 600 kg/h</text>
+    <text x="22" y="221">0 % NaCl</text>
+    <text x="420" y="204" font-weight="bold">Blanding: ? kg/h</text>
+    <text x="420" y="221">? % NaCl</text>
+  </g>
+  <g font-size="12" fill="#586868">
+    <text x="22" y="150">inn</text>
+    <text x="22" y="250">inn</text>
+    <text x="420" y="250">ut</text>
+  </g>
+</svg>
