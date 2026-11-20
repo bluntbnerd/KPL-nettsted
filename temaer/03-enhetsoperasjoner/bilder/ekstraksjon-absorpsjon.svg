@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="Segoe UI, Arial, sans-serif">
+  <title>To figurer. Til venstre: ekstraksjon i en skilletrakt med to væskelag. Til høyre: absorpsjon i en gassvasker der gass går opp og væske renner ned.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilor" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c25a12"/></marker>
+    <marker id="pilbla" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2a6f97"/></marker>
+    <clipPath id="trakt"><path d="M143,65 C90,90 80,200 150,262 C220,200 210,90 157,65 Z"/></clipPath>
+    <pattern id="pakning" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="4" fill="none" stroke="#586868" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="720" height="380" rx="10" fill="#ffffff"/>
+  <line x1="340" y1="20" x2="340" y2="360" stroke="#d0d8d8" stroke-width="1.5"/>
+
+  <!-- ===== Venstre: skilletrakt ===== -->
+  <text x="150" y="24" font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">Ekstraksjon i skilletrakt</text>
+  <g clip-path="url(#trakt)">
+    <rect x="80" y="100" width="140" height="72" fill="#e3b04b" opacity="0.6"/>
+    <rect x="80" y="172" width="140" height="95" fill="#9cc6e0" opacity="0.7"/>
+  </g>
+  <path d="M143,65 C90,90 80,200 150,262 C220,200 210,90 157,65 Z" fill="none" stroke="#586868" stroke-width="2"/>
+  <line x1="98" y1="172" x2="202" y2="172" stroke="#586868" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="143" y="45" width="14" height="22" fill="#ffffff" stroke="#586868" stroke-width="2"/>
+  <rect x="139" y="34" width="22" height="12" rx="3" fill="#586868"/>
+  <rect x="146" y="258" width="8" height="70" fill="#ffffff" stroke="#586868" stroke-width="2"/>
+  <rect x="136" y="284" width="28" height="10" rx="3" fill="#586868"/>
+  <!-- stoffet: mest i øvre lag -->
+  <g fill="#8a4b0f">
+    <circle cx="120" cy="130" r="3"/><circle cx="140" cy="145" r="3"/><circle cx="165" cy="125" r="3"/>
+    <circle cx="180" cy="150" r="3"/><circle cx="130" cy="160" r="3"/><circle cx="155" cy="160" r="3"/>
+    <circle cx="150" cy="215" r="3"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="212" y="118">løsemiddel med</text>
+    <text x="212" y="133">stoffet (ekstrakt)</text>
+    <text x="212" y="210">vannfasen</text>
+    <text x="212" y="225">(raffinat)</text>
+    <text x="172" y="293">kran</text>
+    <text x="22" y="176" text-anchor="start">grense</text>
+    <text x="22" y="190" text-anchor="start">mellom lagene</text>
+  </g>
+  <g stroke="#1c2828" stroke-width="1">
+    <line x1="210" y1="125" x2="190" y2="135"/>
+    <line x1="210" y1="215" x2="195" y2="215"/>
+  </g>
+  <text x="150" y="352" font-size="12" fill="#586868" text-anchor="middle">Væsken med høyest massetetthet legger seg nederst</text>
+
+  <!-- ===== Høyre: gassvasker ===== -->
+  <text x="530" y="24" font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">Absorpsjon i gassvasker</text>
+  <rect x="470" y="60" width="70" height="270" rx="10" fill="#f2f5f5" stroke="#586868" stroke-width="2.5"/>
+  <rect x="472" y="120" width="66" height="150" fill="url(#pakning)"/>
+  <line x1="470" y1="120" x2="540" y2="120" stroke="#586868" stroke-width="1"/>
+  <line x1="470" y1="270" x2="540" y2="270" stroke="#586868" stroke-width="1"/>
+  <!-- væske i bunnen -->
+  <path d="M472,306 L538,306 L538,320 Q538,328 530,328 L480,328 Q472,328 472,320 Z" fill="#9cc6e0" opacity="0.8"/>
+
+  <!-- gass inn nederst -->
+  <line x1="372" y1="290" x2="468" y2="290" stroke="#c25a12" stroke-width="2.5" marker-end="url(#pilor)"/>
+  <!-- renset gass ut på toppen -->
+  <polyline points="505,60 505,42 600,42" fill="none" stroke="#c25a12" stroke-width="2.5" marker-end="url(#pilor)"/>
+  <!-- ren væske inn på toppen -->
+  <polyline points="600,95 542,95" fill="none" stroke="#2a6f97" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <g stroke="#2a6f97" stroke-width="1.5">
+    <line x1="490" y1="100" x2="486" y2="112"/><line x1="505" y1="100" x2="505" y2="112"/><line x1="520" y1="100" x2="524" y2="112"/>
+  </g>
+  <line x1="480" y1="95" x2="540" y2="95" stroke="#2a6f97" stroke-width="2"/>
+  <!-- væske med gass ut i bunnen -->
+  <polyline points="505,330 505,348 600,348" fill="none" stroke="#2a6f97" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <!-- inne: gass opp, væske ned -->
+  <line x1="488" y1="250" x2="488" y2="150" stroke="#c25a12" stroke-width="2.5" marker-end="url(#pilor)"/>
+  <line x1="524" y1="150" x2="524" y2="250" stroke="#2a6f97" stroke-width="2.5" marker-end="url(#pilbla)"/>
+
+  <g font-size="12" fill="#1c2828">
+    <text x="606" y="38">renset gass ut</text>
+    <text x="606" y="91">regenerert</text>
+    <text x="606" y="105">væske inn</text>
+    <text x="372" y="280">gass med CO₂ inn</text>
+    <text x="606" y="344">væske med CO₂</text>
+    <text x="606" y="359">til regenerering</text>
+    <text x="546" y="200">pakning</text>
+  </g>
+  <g font-size="11">
+    <text x="420" y="200" fill="#c25a12" text-anchor="middle">gass opp</text>
+    <text x="420" y="214" fill="#2a6f97" text-anchor="middle">væske ned</text>
+  </g>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 310" width="660" height="310" font-family="Segoe UI, Arial, sans-serif">
+  <title>Tre pumpetyper i snitt: en sentrifugalpumpe, en tannhjulspumpe og en membranpumpe.</title>
+  <defs>
+    <marker id="pilbla" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2471a3"/></marker>
+    <marker id="pilrod" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="pilrod2" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="310" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Sentrifugalpumpe ===== -->
+  <text x="12" y="22" font-size="15" font-weight="bold" fill="#1c2828">Sentrifugalpumpe</text>
+  <!-- pumpehus (spiral) med utløp -->
+  <path d="M70,36 L70,115 Q80,98 104,96 A64,64 0 0,1 174,160 A68,68 0 0,1 110,228 A72,72 0 0,1 38,160 L38,36" fill="#cfe3f1" stroke="#586868" stroke-width="3" stroke-linejoin="round"/>
+  <!-- hjul -->
+  <circle cx="110" cy="160" r="44" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <g fill="none" stroke="#1c2828" stroke-width="3" stroke-linecap="round">
+    <path d="M124,160 Q139.5,154.8 142.2,133"/>
+    <path d="M117,172.1 Q129.3,183 149.5,174.4"/>
+    <path d="M103,172.1 Q99.7,188.2 117.3,201.4"/>
+    <path d="M96,160 Q80.5,165.2 77.8,187"/>
+    <path d="M103,147.9 Q90.7,137 70.5,145.6"/>
+    <path d="M117,147.9 Q120.3,131.8 102.7,118.6"/>
+  </g>
+  <circle cx="110" cy="160" r="12" fill="#cfe3f1" stroke="#2471a3" stroke-width="2"/>
+  <circle cx="110" cy="160" r="3" fill="#2471a3"/>
+  <!-- rotasjon -->
+  <path d="M136,115 A52,52 0 0,1 162,160" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#pilrod)"/>
+  <!-- strøm ut -->
+  <line x1="54" y1="105" x2="54" y2="44" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="78" y="46">ut (trykksiden)</text>
+    <text x="146" y="104" fill="#c0392b">roterer</text>
+    <text x="110" y="250" text-anchor="middle">Væsken kommer inn i midten</text>
+    <text x="110" y="266" text-anchor="middle">(sugesiden). Hjulet slynger</text>
+    <text x="110" y="282" text-anchor="middle">den ut mot kanten.</text>
+  </g>
+
+  <line x1="222" y1="20" x2="222" y2="295" stroke="#d8dede" stroke-width="1.5"/>
+
+  <!-- ===== Tannhjulspumpe ===== -->
+  <text x="234" y="22" font-size="15" font-weight="bold" fill="#1c2828">Tannhjulspumpe</text>
+  <!-- rør -->
+  <rect x="324" y="200" width="16" height="36" fill="#cfe3f1" stroke="#586868" stroke-width="2"/>
+  <rect x="324" y="62" width="16" height="38" fill="#cfe3f1" stroke="#586868" stroke-width="2"/>
+  <!-- hus -->
+  <rect x="258" y="100" width="148" height="100" rx="50" fill="#cfe3f1" stroke="#586868" stroke-width="3"/>
+  <!-- tannhjul -->
+  <circle cx="305" cy="150" r="30" fill="none" stroke="#586868" stroke-width="10" stroke-dasharray="7.85 7.85"/>
+  <circle cx="305" cy="150" r="26" fill="#e3e8e8" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="359" cy="150" r="30" fill="none" stroke="#586868" stroke-width="10" stroke-dasharray="7.85 7.85" stroke-dashoffset="7.85"/>
+  <circle cx="359" cy="150" r="26" fill="#e3e8e8" stroke="#586868" stroke-width="1.5"/>
+  <circle cx="305" cy="150" r="4" fill="#586868"/>
+  <circle cx="359" cy="150" r="4" fill="#586868"/>
+  <!-- strøm langs veggen -->
+  <path d="M296,193 A42,42 0 0,1 296,107" fill="none" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <path d="M368,193 A42,42 0 0,0 368,107" fill="none" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <line x1="332" y1="240" x2="332" y2="206" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <line x1="332" y1="96" x2="332" y2="52" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="346" y="66">ut</text>
+    <text x="346" y="236">inn</text>
+    <text x="332" y="266" text-anchor="middle">Væsken følger med i lommene</text>
+    <text x="332" y="282" text-anchor="middle">mellom tennene, langs veggen.</text>
+  </g>
+
+  <line x1="444" y1="20" x2="444" y2="295" stroke="#d8dede" stroke-width="1.5"/>
+
+  <!-- ===== Membranpumpe ===== -->
+  <text x="456" y="22" font-size="15" font-weight="bold" fill="#1c2828">Membranpumpe</text>
+  <!-- rør inn og ut -->
+  <rect x="562" y="40" width="16" height="70" fill="#cfe3f1" stroke="#586868" stroke-width="2"/>
+  <rect x="562" y="190" width="16" height="50" fill="#cfe3f1" stroke="#586868" stroke-width="2"/>
+  <!-- kammer -->
+  <path d="M540,110 L600,110 L600,190 L540,190" fill="#cfe3f1" stroke="#586868" stroke-width="3"/>
+  <path d="M540,110 Q518,150 540,190" fill="#cfe3f1" stroke="#1c2828" stroke-width="3"/>
+  <!-- stang -->
+  <line x1="470" y1="150" x2="528" y2="150" stroke="#586868" stroke-width="5"/>
+  <line x1="478" y1="168" x2="516" y2="168" stroke="#c0392b" stroke-width="2" marker-start="url(#pilrod2)" marker-end="url(#pilrod)"/>
+  <!-- tilbakeslagsventiler (kuler) -->
+  <line x1="562" y1="92" x2="567" y2="92" stroke="#1c2828" stroke-width="3"/>
+  <line x1="573" y1="92" x2="578" y2="92" stroke="#1c2828" stroke-width="3"/>
+  <circle cx="570" cy="85" r="7" fill="#586868"/>
+  <line x1="562" y1="218" x2="567" y2="218" stroke="#1c2828" stroke-width="3"/>
+  <line x1="573" y1="218" x2="578" y2="218" stroke="#1c2828" stroke-width="3"/>
+  <circle cx="570" cy="211" r="7" fill="#586868"/>
+  <line x1="610" y1="236" x2="610" y2="200" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <line x1="610" y1="100" x2="610" y2="52" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="618" y="66">ut</text>
+    <text x="618" y="236">inn</text>
+    <text x="470" y="130">membran</text>
+    <text x="470" y="190" fill="#c0392b">fram og</text>
+    <text x="470" y="204" fill="#c0392b">tilbake</text>
+    <text x="552" y="266" text-anchor="middle">To tilbakeslagsventiler (kuler)</text>
+    <text x="552" y="282" text-anchor="middle">gjør at væsken bare kan</text>
+    <text x="552" y="298" text-anchor="middle">gå én vei.</text>
+  </g>
+</svg>

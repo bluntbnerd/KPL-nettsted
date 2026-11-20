@@ -24,9 +24,9 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Transport av væsker og gasser",
     sider: [
-      { tittel: "Tanker og beholdere", status: "planlagt" },
-      { tittel: "Pumpetyper", status: "planlagt" },
-      { tittel: "Ventiltyper", status: "planlagt" },
+      { fil: "tanker-og-beholdere.html", tittel: "Tanker og beholdere", meny: "Tanker", status: "utkast" },
+      { fil: "pumpetyper.html", tittel: "Pumpetyper", status: "utkast" },
+      { fil: "ventiltyper.html", tittel: "Ventiltyper", status: "utkast" },
       { tittel: "Kompressorer og vifter", status: "planlagt" },
       { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
     ]
@@ -54,11 +54,11 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Termisk separasjon",
     sider: [
-      { tittel: "Destillasjon", status: "planlagt" },
-      { tittel: "Destillasjonskolonnen", meny: "Kolonnen", status: "planlagt" },
-      { tittel: "Ekstraksjon og absorpsjon", meny: "Ekstraksjon", status: "planlagt" },
-      { tittel: "Tørking og krystallisering", meny: "Tørking", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "destillasjon.html", tittel: "Destillasjon", status: "ferdig" },
+      { fil: "destillasjonskolonnen.html", tittel: "Destillasjonskolonnen", meny: "Kolonnen", status: "ferdig" },
+      { fil: "ekstraksjon-og-absorpsjon.html", tittel: "Ekstraksjon og absorpsjon", meny: "Ekstraksjon", status: "ferdig" },
+      { fil: "torking-og-krystallisering.html", tittel: "Tørking og krystallisering", meny: "Tørking", status: "ferdig" },
+      { fil: "termisk-separasjon-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {

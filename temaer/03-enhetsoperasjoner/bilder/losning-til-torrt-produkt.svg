@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 175" width="720" height="175" font-family="Segoe UI, Arial, sans-serif">
+  <title>Fra løsning til tørt produkt: inndamping, krystallisering, sentrifuge eller filter og tørking. Vanndamp går ut fra inndampingen og tørkingen, og morlut går tilbake fra sentrifugen til inndampingen.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilor" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c25a12"/></marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="175" rx="10" fill="#ffffff"/>
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="70" y="60" width="115" height="50" rx="6"/>
+    <rect x="225" y="60" width="120" height="50" rx="6"/>
+    <rect x="385" y="60" width="115" height="50" rx="6"/>
+    <rect x="540" y="60" width="100" height="50" rx="6"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="127" y="90">Inndamping</text>
+    <text x="285" y="90">Krystallisering</text>
+    <text x="442" y="82">Sentrifuge</text>
+    <text x="442" y="100">eller filter</text>
+    <text x="590" y="90">Tørking</text>
+  </g>
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#pil)">
+    <line x1="10" y1="85" x2="68" y2="85"/>
+    <line x1="185" y1="85" x2="223" y2="85"/>
+    <line x1="345" y1="85" x2="383" y2="85"/>
+    <line x1="500" y1="85" x2="538" y2="85"/>
+    <line x1="640" y1="85" x2="700" y2="85"/>
+    <polyline points="442,110 442,140 127,140 127,112"/>
+  </g>
+  <g stroke="#c25a12" stroke-width="2.5" fill="none" marker-end="url(#pilor)">
+    <line x1="127" y1="60" x2="127" y2="26"/>
+    <line x1="590" y1="60" x2="590" y2="26"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="12" y="77">løsning</text>
+    <text x="645" y="77">tørt</text>
+    <text x="645" y="105">produkt</text>
+    <text x="284" y="158" text-anchor="middle">morlut tilbake</text>
+  </g>
+  <g font-size="12" fill="#c25a12">
+    <text x="135" y="22">vanndamp</text>
+    <text x="598" y="22">vanndamp</text>
+  </g>
+</svg>

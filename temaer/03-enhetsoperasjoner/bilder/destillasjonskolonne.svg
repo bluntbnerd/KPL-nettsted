@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480" font-family="Segoe UI, Arial, sans-serif">
+  <title>Destillasjonskolonne med føde inn på midten, brett inne i kolonnen, kondensator og tilbakeløpstank på toppen, og koker i bunnen. Topproduktet og bunnproduktet tas ut til høyre.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilor" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c25a12"/></marker>
+    <marker id="pilbla" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2a6f97"/></marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="480" rx="10" fill="#ffffff"/>
+
+  <!-- kolonnen -->
+  <rect x="250" y="50" width="90" height="370" rx="14" fill="#f2f5f5" stroke="#586868" stroke-width="2.5"/>
+  <!-- væske i bunnen -->
+  <path d="M252,395 L338,395 L338,406 Q338,418 326,418 L264,418 Q252,418 252,406 Z" fill="#e3b04b" opacity="0.6"/>
+  <!-- brett med nedløp vekselvis på hver side -->
+  <g stroke="#586868" stroke-width="3">
+    <line x1="250" y1="95" x2="318" y2="95"/>
+    <line x1="272" y1="125" x2="340" y2="125"/>
+    <line x1="250" y1="155" x2="318" y2="155"/>
+    <line x1="272" y1="185" x2="340" y2="185"/>
+    <line x1="250" y1="215" x2="318" y2="215"/>
+    <line x1="272" y1="265" x2="340" y2="265"/>
+    <line x1="250" y1="295" x2="318" y2="295"/>
+    <line x1="272" y1="325" x2="340" y2="325"/>
+    <line x1="250" y1="355" x2="318" y2="355"/>
+  </g>
+  <!-- damp opp og væske ned, inne i kolonnen -->
+  <line x1="300" y1="252" x2="300" y2="228" stroke="#c25a12" stroke-width="2.5" marker-end="url(#pilor)"/>
+  <line x1="330" y1="200" x2="330" y2="222" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+
+  <!-- føde inn -->
+  <line x1="150" y1="240" x2="248" y2="240" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+
+  <!-- damp fra toppen til kondensatoren -->
+  <polyline points="295,50 295,25 470,25 470,58" fill="none" stroke="#c25a12" stroke-width="2.5" marker-end="url(#pilor)"/>
+  <!-- kondensator -->
+  <rect x="415" y="60" width="110" height="48" rx="6" fill="#d6eaf5" stroke="#2a6f97" stroke-width="2"/>
+  <line x1="575" y1="96" x2="527" y2="96" stroke="#2a6f97" stroke-width="2" marker-end="url(#pilbla)"/>
+  <line x1="527" y1="72" x2="575" y2="72" stroke="#2a6f97" stroke-width="2" marker-end="url(#pilbla)"/>
+  <!-- kondensat ned i tanken -->
+  <line x1="470" y1="108" x2="470" y2="138" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <!-- tilbakeløpstank -->
+  <rect x="420" y="140" width="110" height="40" rx="20" fill="#f2f5f5" stroke="#586868" stroke-width="2"/>
+  <path d="M424,166 L526,166 Q522,178 510,178 L440,178 Q428,178 424,166 Z" fill="#2e7d6b" opacity="0.5"/>
+  <!-- pumpe -->
+  <line x1="475" y1="180" x2="475" y2="201" stroke="#1c2828" stroke-width="2.5"/>
+  <circle cx="475" cy="215" r="14" fill="#ffffff" stroke="#586868" stroke-width="2"/>
+  <path d="M468,207 L485,215 L468,223 Z" fill="#586868"/>
+  <!-- topprodukt ut -->
+  <line x1="489" y1="215" x2="590" y2="215" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <circle cx="530" cy="215" r="3.5" fill="#1c2828"/>
+  <!-- tilbakeløp inn i toppen -->
+  <polyline points="530,215 530,258 385,258 385,78 342,78" fill="none" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+
+  <!-- bunnen: væske til kokeren -->
+  <polyline points="295,420 295,450 465,450 465,428" fill="none" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <!-- koker -->
+  <rect x="420" y="380" width="90" height="46" rx="6" fill="#f6e1c5" stroke="#c25a12" stroke-width="2"/>
+  <!-- damp tilbake fra kokeren -->
+  <polyline points="465,380 465,370 342,370" fill="none" stroke="#c25a12" stroke-width="2.5" marker-end="url(#pilor)"/>
+  <!-- bunnprodukt ut -->
+  <line x1="510" y1="415" x2="590" y2="415" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <!-- varmedamp inn i kokeren -->
+  <line x1="560" y1="388" x2="512" y2="388" stroke="#c25a12" stroke-width="2" marker-end="url(#pilor)"/>
+
+  <!-- tekster -->
+  <g font-size="14" font-weight="bold" fill="#1c2828">
+    <text x="470" y="89" text-anchor="middle">kondensator</text>
+    <text x="465" y="408" text-anchor="middle">koker</text>
+    <text x="596" y="211">topprodukt</text>
+    <text x="596" y="411">bunnprodukt</text>
+    <text x="20" y="236">føde inn</text>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="596" y="227">(destillat)</text>
+    <text x="20" y="252">(blandingen)</text>
+    <text x="475" y="132" text-anchor="start" dx="8">kondensat</text>
+    <text x="536" y="164">tilbakeløpstank</text>
+    <text x="496" y="240">pumpe</text>
+    <text x="392" y="126">tilbakeløp</text>
+    <text x="350" y="364">damp</text>
+    <text x="300" y="18" >damp</text>
+    <text x="236" y="80" text-anchor="end">kaldest øverst</text>
+    <text x="236" y="412" text-anchor="end">varmest nederst</text>
+    <text x="236" y="160" text-anchor="end">brett</text>
+  </g>
+  <line x1="238" y1="156" x2="268" y2="155" stroke="#1c2828" stroke-width="1"/>
+  <g font-size="11" fill="#2a6f97">
+    <text x="580" y="76">kjølevann</text>
+  </g>
+  <g font-size="11" fill="#c25a12">
+    <text x="520" y="368">damp til oppvarming</text>
+
+  </g>
+</svg>
