@@ -481,9 +481,13 @@
       var ul = lag("ul", "temaliste");
       TEMAER.forEach(function (t) {
         var li = lag("li");
-        var a = lenke("temaer/" + t.mappe + "/index.html", "");
+        // Tema uten innhold ennå: grått, med lås og uten lenke
+        var tomt = !steg(t).some(function (s) { return s.type === "fagstoff"; });
+        var a = tomt ? lag("span", "laast") : lenke("temaer/" + t.mappe + "/index.html", "");
+        if (tomt) a.title = "Kommer";
         temaFarge(a, t);
-        a.innerHTML = '<span class="liten-ikon">' + ikon(t.ikon) + "</span><span>" + t.tittel + "</span>";
+        a.innerHTML = '<span class="liten-ikon">' + ikon(t.ikon) + "</span><span>" + t.tittel + "</span>" +
+          (tomt ? '<span class="laas-liten">' + ikon("laas") + "</span>" : "");
         li.appendChild(a);
         ul.appendChild(li);
       });
@@ -1069,7 +1073,8 @@
   byggOrdkort();
   byggOrdliste();
   lastFormler();
-  var trengerAlle = erForside || !!document.getElementById("temakort");
+  // Sider utenfor temaene viser temalista i venstremenyen og trenger alle stiene for å låse tomme temaer
+  var trengerAlle = erForside || !TEMA || !!document.getElementById("temakort");
   (trengerAlle ? lastAlleStier() : TEMA ? lastSti(TEMA.mappe) : Promise.resolve()).then(function () {
     byggBanner();
     byggSidetype();

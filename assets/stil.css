@@ -322,6 +322,13 @@ ul.temaliste a {
 }
 ul.temaliste a:hover { background: var(--flate-2); }
 ul.temaliste a.aktiv { background: var(--flate); box-shadow: var(--skygge); font-weight: 600; }
+ul.temaliste span.laast {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 10px; line-height: 1.3;
+  color: var(--dempet); filter: grayscale(1); opacity: .6; cursor: not-allowed;
+}
+.laas-liten { margin-left: auto; display: inline-flex; }
+.laas-liten .ikon { width: 14px; height: 14px; }
 .liten-ikon { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--tema-lys); color: var(--tema); flex: none; }
 .liten-ikon .ikon { width: 18px; height: 18px; }
 

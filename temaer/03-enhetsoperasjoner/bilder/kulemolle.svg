@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Kulemølle sett fra siden og i snitt. Trommelen roterer, kulene blir løftet opp langs veggen og faller ned på materialet.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilrod" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="300" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Sett fra siden ===== -->
+  <text x="160" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">Sett fra siden</text>
+  <rect x="60" y="105" width="200" height="90" rx="14" fill="#e3e8e8" stroke="#586868" stroke-width="2.5"/>
+  <!-- tapper (aksling inn og ut) -->
+  <rect x="40" y="138" width="20" height="24" fill="#9aa7a7" stroke="#586868" stroke-width="2"/>
+  <rect x="260" y="138" width="20" height="24" fill="#9aa7a7" stroke="#586868" stroke-width="2"/>
+  <!-- kuler synlig i trommelen -->
+  <g fill="#7f8f8f" stroke="#4a5858" stroke-width="1">
+    <circle cx="90" cy="180" r="8"/><circle cx="110" cy="182" r="8"/><circle cx="130" cy="180" r="8"/>
+    <circle cx="150" cy="182" r="8"/><circle cx="170" cy="180" r="8"/><circle cx="190" cy="182" r="8"/>
+    <circle cx="210" cy="180" r="8"/><circle cx="230" cy="182" r="8"/>
+    <circle cx="100" cy="166" r="8"/><circle cx="140" cy="166" r="8"/><circle cx="180" cy="166" r="8"/><circle cx="220" cy="166" r="8"/>
+  </g>
+  <line x1="10" y1="150" x2="38" y2="150" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <line x1="282" y1="150" x2="312" y2="150" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="8" y="112">grovt</text>
+    <text x="8" y="127">inn</text>
+    <text x="284" y="112">fint</text>
+    <text x="284" y="127">ut</text>
+    <text x="160" y="228" text-anchor="middle">trommel med stålkuler</text>
+    <text x="160" y="244" text-anchor="middle">roterer rundt sin egen akse</text>
+  </g>
+
+  <line x1="330" y1="20" x2="330" y2="285" stroke="#d8dede" stroke-width="1.5"/>
+
+  <!-- ===== Snitt ===== -->
+  <text x="485" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">Snitt gjennom trommelen</text>
+  <circle cx="485" cy="155" r="105" fill="#f4f6f6" stroke="#586868" stroke-width="5"/>
+  <!-- materialet (finere stoff) i bunnen -->
+  <path d="M398,214 A105,105 0 0,0 570,214 Q485,190 398,214 z" fill="#e2d6c2"/>
+  <!-- kuler som er løftet langs venstre vegg og ligger i bunnen -->
+  <g fill="#7f8f8f" stroke="#4a5858" stroke-width="1">
+    <circle cx="396" cy="128" r="11"/><circle cx="392" cy="152" r="11"/><circle cx="398" cy="176" r="11"/>
+    <circle cx="410" cy="199" r="11"/><circle cx="430" cy="218" r="11"/><circle cx="454" cy="230" r="11"/>
+    <circle cx="480" cy="236" r="11"/><circle cx="506" cy="233" r="11"/>
+    <circle cx="416" cy="140" r="11"/><circle cx="416" cy="164" r="11"/><circle cx="426" cy="186" r="11"/>
+    <circle cx="446" cy="204" r="11"/><circle cx="470" cy="214" r="11"/><circle cx="496" cy="212" r="11"/>
+    <circle cx="410" cy="106" r="11"/>
+  </g>
+  <!-- kuler som faller -->
+  <g fill="#7f8f8f" stroke="#4a5858" stroke-width="1">
+    <circle cx="448" cy="96" r="11"/><circle cx="486" cy="116" r="11"/><circle cx="516" cy="152" r="11"/>
+  </g>
+  <path d="M428,84 Q510,90 534,186" fill="none" stroke="#1c2828" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#pil)"/>
+  <!-- rotasjon (med klokka) -->
+  <path d="M430,40 A118,118 0 0,1 566,52" fill="none" stroke="#c0392b" stroke-width="3" marker-end="url(#pilrod)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="345" y="50" fill="#c0392b">trommelen</text>
+    <text x="345" y="65" fill="#c0392b">roterer</text>
+    <text x="338" y="84">kulene</text>
+    <text x="338" y="99">løftes</text>
+    <text x="540" y="112">kulene</text>
+    <text x="540" y="127">faller</text>
+    <text x="485" y="284" text-anchor="middle">materialet knuses av slag og gnis mellom kulene</text>
+  </g>
+</svg>
