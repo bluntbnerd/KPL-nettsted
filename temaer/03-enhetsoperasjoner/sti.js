@@ -43,12 +43,12 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Mekaniske operasjoner",
     sider: [
-      { tittel: "Knusing og maling", status: "planlagt" },
-      { tittel: "Sikting", status: "planlagt" },
-      { tittel: "Sedimentering og sentrifugering", meny: "Sedimentering", status: "planlagt" },
-      { tittel: "Filtrering", status: "planlagt" },
-      { tittel: "Syklon og støvfilter", meny: "Syklon og filter", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "knusing-og-maling.html", tittel: "Knusing og maling", status: "utkast" },
+      { fil: "sikting.html", tittel: "Sikting", status: "utkast" },
+      { fil: "sedimentering-og-sentrifugering.html", tittel: "Sedimentering og sentrifugering", meny: "Sedimentering", status: "utkast" },
+      { fil: "filtrering.html", tittel: "Filtrering", status: "utkast" },
+      { fil: "syklon-og-stovfilter.html", tittel: "Syklon og støvfilter", meny: "Syklon og filter", status: "utkast" },
+      { fil: "mekaniske-operasjoner-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }
     ]
   },
   {

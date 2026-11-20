@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 310" width="660" height="310" font-family="Segoe UI, Arial, sans-serif">
+  <title>Til venstre rotoren i en laboratoriesentrifuge sett ovenfra, med to rør plassert rett overfor hverandre. Til høyre et snitt gjennom en dekantersentrifuge med trommel og skrue.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilbla" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2471a3"/></marker>
+    <marker id="pilbrun" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7a5a35"/></marker>
+    <marker id="pilrod" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="310" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Laboratoriesentrifuge ===== -->
+  <text x="12" y="24" font-size="15" font-weight="bold" fill="#1c2828">Laboratoriesentrifuge (ovenfra)</text>
+  <circle cx="140" cy="150" r="88" fill="#e3e8e8" stroke="#586868" stroke-width="3"/>
+  <circle cx="140" cy="150" r="10" fill="#586868"/>
+  <!-- seks hull: 0, 60, 120, 180, 240, 300 grader, radius 60 -->
+  <g fill="#ffffff" stroke="#586868" stroke-width="2">
+    <circle cx="200" cy="150" r="13"/>
+    <circle cx="170" cy="202" r="13"/>
+    <circle cx="110" cy="202" r="13"/>
+    <circle cx="80" cy="150" r="13"/>
+    <circle cx="110" cy="98" r="13"/>
+    <circle cx="170" cy="98" r="13"/>
+  </g>
+  <!-- to rør rett overfor hverandre -->
+  <g fill="#b89a74" stroke="#7a5a35" stroke-width="2">
+    <circle cx="200" cy="150" r="11"/>
+    <circle cx="80" cy="150" r="11"/>
+  </g>
+  <line x1="91" y1="150" x2="189" y2="150" stroke="#1c2828" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M140,48 A102,102 0 0,1 236,116" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#pilrod)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="196" y="58" fill="#c0392b">roterer</text>
+    <text x="20" y="262">Rørene står rett overfor hverandre</text>
+    <text x="20" y="278">og har like mye innhold.</text>
+  </g>
+
+  <line x1="300" y1="20" x2="300" y2="295" stroke="#d8dede" stroke-width="1.5"/>
+
+  <!-- ===== Dekantersentrifuge ===== -->
+  <text x="316" y="24" font-size="15" font-weight="bold" fill="#1c2828">Dekantersentrifuge (snitt)</text>
+  <!-- væskelag -->
+  <polygon points="372,104 540,104 600,136 600,184 540,216 372,216" fill="#d6e9f7"/>
+  <!-- faststofflag langs veggen -->
+  <polygon points="372,96 540,96 610,132 610,140 540,110 372,110" fill="#b89a74"/>
+  <polygon points="372,224 540,224 610,188 610,180 540,210 372,210" fill="#b89a74"/>
+  <!-- trommel -->
+  <polygon points="370,94 540,94 612,130 612,190 540,226 370,226" fill="none" stroke="#586868" stroke-width="3"/>
+  <!-- skrue -->
+  <line x1="340" y1="160" x2="636" y2="160" stroke="#4a5858" stroke-width="5"/>
+  <g stroke="#4a5858" stroke-width="2.5">
+    <line x1="400" y1="112" x2="412" y2="208"/>
+    <line x1="440" y1="112" x2="452" y2="208"/>
+    <line x1="480" y1="112" x2="492" y2="208"/>
+    <line x1="520" y1="112" x2="532" y2="208"/>
+    <line x1="560" y1="124" x2="568" y2="196"/>
+  </g>
+  <!-- inn -->
+  <line x1="318" y1="150" x2="455" y2="150" stroke="#7a5a35" stroke-width="3" marker-end="url(#pilbrun)"/>
+  <!-- væske ut til venstre -->
+  <line x1="370" y1="120" x2="336" y2="100" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <line x1="370" y1="200" x2="336" y2="220" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <!-- faststoff ut til høyre -->
+  <line x1="612" y1="135" x2="640" y2="112" stroke="#7a5a35" stroke-width="2.5" marker-end="url(#pilbrun)"/>
+  <line x1="612" y1="185" x2="640" y2="208" stroke="#7a5a35" stroke-width="2.5" marker-end="url(#pilbrun)"/>
+  <!-- skruen flytter faststoffet -->
+  <line x1="430" y1="240" x2="560" y2="240" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="318" y="142">slam inn</text>
+    <text x="310" y="250" fill="#2471a3">klar væske</text>
+    <text x="310" y="265" fill="#2471a3">ut</text>
+    <text x="560" y="96" fill="#7a5a35">faststoff ut</text>
+    <text x="400" y="88">faststoff legger seg ytterst</text>
+    <text x="400" y="258">skruen flytter faststoffet</text>
+    <text x="400" y="273">mot den smale enden</text>
+  </g>
+</svg>

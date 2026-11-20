@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" font-family="Segoe UI, Arial, sans-serif">
+  <title>Snitt gjennom en fortykker. Slam kommer inn i midten, partiklene synker, klar væske renner over kanten, og tykt slam pumpes ut i bunnen.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilbla" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2471a3"/></marker>
+    <marker id="pilbrun" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7a5a35"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="320" rx="10" fill="#ffffff"/>
+
+  <!-- væske i tanken -->
+  <polygon points="80,92 560,92 560,200 320,250 80,200" fill="#d6e9f7"/>
+  <!-- sone der partiklene synker -->
+  <g fill="#b89a74">
+    <circle cx="150" cy="150" r="2.5"/><circle cx="190" cy="162" r="2.5"/><circle cx="230" cy="148" r="2.5"/>
+    <circle cx="270" cy="170" r="2.5"/><circle cx="380" cy="160" r="2.5"/><circle cx="420" cy="150" r="2.5"/>
+    <circle cx="460" cy="168" r="2.5"/><circle cx="500" cy="155" r="2.5"/><circle cx="130" cy="172" r="2.5"/>
+    <circle cx="300" cy="140" r="2.5"/><circle cx="350" cy="145" r="2.5"/><circle cx="520" cy="175" r="2.5"/>
+  </g>
+  <!-- tykt slam i bunnen -->
+  <polygon points="80,184 560,184 560,200 320,250 80,200" fill="#b89a74"/>
+  <!-- tankvegger -->
+  <polyline points="80,78 80,200 320,250 560,200 560,78" fill="none" stroke="#586868" stroke-width="3.5"/>
+  <!-- overløpsrenner -->
+  <path d="M80,92 L62,92 L62,106 L80,106" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <path d="M560,92 L578,92 L578,106 L560,106" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <!-- innløp og innløpsbrønn -->
+  <polyline points="20,58 320,58 320,70" fill="none" stroke="#7a5a35" stroke-width="4"/>
+  <rect x="296" y="70" width="48" height="56" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <!-- aksling, drivverk og river -->
+  <rect x="300" y="22" width="40" height="22" rx="3" fill="#9aa7a7" stroke="#586868" stroke-width="2"/>
+  <line x1="320" y1="44" x2="320" y2="238" stroke="#4a5858" stroke-width="4"/>
+  <g stroke="#4a5858" stroke-width="3">
+    <line x1="320" y1="236" x2="112" y2="194"/>
+    <line x1="320" y1="236" x2="528" y2="194"/>
+  </g>
+  <g stroke="#4a5858" stroke-width="2.5">
+    <line x1="160" y1="204" x2="160" y2="212"/><line x1="210" y1="214" x2="210" y2="222"/><line x1="260" y1="224" x2="260" y2="232"/>
+    <line x1="380" y1="224" x2="380" y2="232"/><line x1="430" y1="214" x2="430" y2="222"/><line x1="480" y1="204" x2="480" y2="212"/>
+  </g>
+  <!-- underløp -->
+  <polyline points="320,250 320,290 440,290" fill="none" stroke="#7a5a35" stroke-width="4" marker-end="url(#pilbrun)"/>
+  <!-- overløp ut -->
+  <line x1="62" y1="106" x2="30" y2="130" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <line x1="578" y1="106" x2="610" y2="130" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <!-- synkepiler -->
+  <g stroke="#1c2828" stroke-width="1.5" marker-end="url(#pil)">
+    <line x1="210" y1="128" x2="210" y2="150"/>
+    <line x1="440" y1="128" x2="440" y2="150"/>
+  </g>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="22" y="50">slam inn</text>
+    <text x="348" y="38">drivverk</text>
+    <text x="350" y="112">innløpsbrønn</text>
+    <text x="96" y="112" fill="#2471a3">klar væske</text>
+    <text x="356" y="178">partiklene synker</text>
+    <text x="96" y="230">tykt slam</text>
+    <text x="400" y="250">river skyver slammet</text>
+    <text x="400" y="265">mot midten</text>
+    <text x="450" y="295">underløp: tykt slam ut</text>
+    <text x="8" y="148" fill="#2471a3">overløp:</text>
+    <text x="8" y="163" fill="#2471a3">klar væske ut</text>
+  </g>
+</svg>
