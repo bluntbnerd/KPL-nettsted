@@ -9,11 +9,11 @@
   <text x="22" y="140" font-size="12" fill="#586868" transform="rotate(-90 22 140)" text-anchor="middle">temperatur (°C)</text>
   <!-- Merker -->
   <g font-size="12" fill="#1c2828" text-anchor="end">
-    <text x="54" y="226">0</text><text x="54" y="86">100</text>
+    <text x="54" y="254">−20</text><text x="54" y="226">0</text><text x="54" y="86">100</text>
   </g>
   <g stroke="#d8e0e0" stroke-dasharray="4 3"><line x1="60" y1="222" x2="560" y2="222"/><line x1="60" y1="82" x2="560" y2="82"/></g>
   <!-- Kurve -->
-  <polyline points="70,250 110,222 190,222 290,82 500,82 550,54" fill="none" stroke="#b5530f" stroke-width="3.5" stroke-linejoin="round"/>
+  <polyline points="70,250 90,222 190,222 290,82 500,82 530,54" fill="none" stroke="#b5530f" stroke-width="3.5" stroke-linejoin="round"/>
   <!-- Etiketter -->
   <g font-size="12" fill="#1c2828">
     <text x="78" y="270" text-anchor="start">is</text>

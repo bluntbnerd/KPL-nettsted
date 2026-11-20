@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Masse, volum og tetthet</h1>
@@ -43,12 +43,12 @@
 </div>
 
 <h2>Tetthet til vanlige stoffer</h2>
-<p>Tabellen viser omtrentlige verdier ved romtemperatur. Nøyaktige verdier for et kjemikalie finner du i avsnitt 9 i sikkerhetsdatabladet. Der står ofte <em>relativ tetthet</em>, som er tettheten sammenlignet med vann. Relativ tetthet 1,84 betyr at stoffet er 1,84 ganger så tungt som vann.</p>
+<p>Tabellen viser omtrentlige verdier ved romtemperatur. Nøyaktige verdier for et kjemikalie finner du i avsnitt 9 i sikkerhetsdatabladet. Der står ofte <em>relativ tetthet</em>, som er tettheten sammenlignet med vann. Relativ tetthet 1,84 betyr at 1 L av stoffet veier 1,84 ganger så mye som 1 L vann. Relativ tetthet har ingen enhet.</p>
 
 <table>
   <thead><tr><th>Stoff</th><th>Tetthet (kg/m³)</th><th>Tetthet (g/mL)</th></tr></thead>
   <tbody>
-    <tr><td>luft (20 °C, 1 atm)</td><td>1,2</td><td>0,0012</td></tr>
+    <tr><td>luft (20 °C, vanlig lufttrykk)</td><td>1,2</td><td>0,0012</td></tr>
     <tr><td>etanol</td><td>789</td><td>0,789</td></tr>
     <tr><td>diesel</td><td>ca. 840</td><td>ca. 0,84</td></tr>
     <tr><td>vann</td><td>1000</td><td>1,00</td></tr>
@@ -61,8 +61,8 @@
 </table>
 
 <h2>Flyte eller synke</h2>
-<p>Et stoff med lavere tetthet enn væsken rundt flyter opp. Et stoff med høyere tetthet synker. Derfor legger diesel og olje seg oppå vann, mens sand og metallbiter synker til bunns.</p>
-<p>Dette brukes i industrien til å skille stoffer. I en oljeutskiller får vannet stå i ro, slik at oljen flyter opp og kan tappes av på toppen. I et smelteverk flyter slagget oppå metallet i ovnen fordi slagget har lavere tetthet. Metall og slagg tappes derfor ut hver for seg.</p>
+<p>Et stoff som ikke blander seg med væsken rundt, flyter opp hvis det har lavere tetthet enn væsken. Har det høyere tetthet, synker det. Derfor legger diesel og annen olje seg oppå vann, mens sand og metallbiter synker til bunns. Etanol har også lavere tetthet enn vann, men den blander seg med vannet og legger seg derfor ikke oppå.</p>
+<p>Dette brukes i industrien til å skille stoffer. I en oljeutskiller får vannet stå i ro, slik at oljen flyter opp og kan tappes av på toppen. I et smelteverk tappes metall og <strong>slagg</strong> ut av ovnen sammen. Slagg er en restmasse av oksider fra råstoffene. I skjenken (pannen) flyter slagget opp fordi det har lavere tetthet enn metallet. Slik kan slagg og metall skilles.</p>
 
 <h2>Tettheten endrer seg med temperaturen</h2>
 <p>De fleste stoffer utvider seg når de blir varmere. Massen er den samme, men volumet blir større. Da blir tettheten mindre. Vann har tetthet 1000 kg/m³ ved 4 °C, men bare 958 kg/m³ ved 100 °C.</p>
@@ -103,7 +103,7 @@
     <li>\( V = \dfrac{500 \text{ kg}}{840 \text{ kg/m}^3} = 0{,}595 \text{ m}^3 \)</li>
     <li>Gjør om til liter: \( 0{,}595 \text{ m}^3 \cdot 1000 \text{ L/m}^3 = 595 \text{ L} \)</li>
   </ol>
-  <p><strong>Svar:</strong> Omtrent 595 L. Det er mer enn 500 L fordi diesel er lettere enn vann.</p>
+  <p><strong>Svar:</strong> Omtrent 595 L. Det er mer enn 500 L fordi diesel har lavere tetthet enn vann.</p>
 </div>
 
 <div class="boks">
@@ -111,7 +111,7 @@
   <ul>
     <li><strong>Vekt og målesylinder:</strong> Vei en tom målesylinder, fyll den med væske, les av volumet og vei igjen. Del massen av væsken på volumet.</li>
     <li><strong>Areometer:</strong> Et flytelegeme av glass med skala. Det synker dypere i en væske med lav tetthet. Du leser tettheten rett av skalaen der væskeoverflaten står.</li>
-    <li><strong>I anlegget:</strong> Faste tetthetsmålere sitter i rørledningen og måler hele tiden. De hører til temaet Automasjon.</li>
+    <li><strong>I anlegget:</strong> Faste tetthetsmålere sitter i rørledningen og måler hele tiden. De hører til temaet <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
   </ul>
 </div>
 
@@ -179,8 +179,8 @@
     <tr><td>masse</td><td>Hvor mye stoff noe inneholder. Masse måles i kilogram med en vekt.</td><td></td></tr>
     <tr><td>volum</td><td>Hvor mye plass noe tar. Volum måles i kubikkmeter eller liter.</td><td></td></tr>
     <tr><td>tetthet</td><td>Hvor mye masse det er i et bestemt volum av et stoff, ρ = m/V. Oppgis i kg/m³ eller g/mL.</td><td>density</td></tr>
-    <tr><td>relativ tetthet</td><td>Tettheten til et stoff sammenlignet med tettheten til vann. Står i sikkerhetsdatabladet.</td><td>relative density</td></tr>
-    <tr><td>areometer</td><td>Et flytende glassinstrument med skala som viser tettheten til en væske.</td><td>hydrometer</td></tr>
+    <tr><td>relativ tetthet</td><td>Tettheten til et stoff delt på tettheten til vann. Den har ingen enhet og står i sikkerhetsdatabladet.</td><td>relative density</td></tr>
+    <tr><td>areometer</td><td>Et glassrør med vekt i bunnen og skala. Det flyter i væsken og viser tettheten der væskeoverflaten står.</td><td>hydrometer</td></tr>
   </tbody>
 </table>
 

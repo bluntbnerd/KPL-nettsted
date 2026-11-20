@@ -12,12 +12,12 @@ KPL.sti("04-masse-og-energibalanser", [
   {
     emne: "Fysiske grunnbegreper",
     sider: [
-      { fil: "storrelser-og-enheter.html", tittel: "Størrelser og enheter", meny: "Enheter", type: "fagstoff", status: "utkast" },
-      { fil: "masse-volum-tetthet.html", tittel: "Masse, volum og tetthet", meny: "Tetthet", type: "fagstoff", status: "utkast" },
-      { fil: "kraft-og-trykk.html", tittel: "Kraft og trykk", type: "fagstoff", status: "utkast" },
-      { fil: "energi-arbeid-effekt.html", tittel: "Energi, arbeid og effekt", meny: "Energi og effekt", type: "fagstoff", status: "utkast" },
-      { fil: "temperatur-og-varme.html", tittel: "Temperatur og varme", type: "fagstoff", status: "utkast" },
-      { fil: "grunnbegreper-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }
+      { fil: "storrelser-og-enheter.html", tittel: "Størrelser og enheter", meny: "Enheter", type: "fagstoff", status: "ferdig" },
+      { fil: "masse-volum-tetthet.html", tittel: "Masse, volum og tetthet", meny: "Tetthet", type: "fagstoff", status: "ferdig" },
+      { fil: "kraft-og-trykk.html", tittel: "Kraft og trykk", type: "fagstoff", status: "ferdig" },
+      { fil: "energi-arbeid-effekt.html", tittel: "Energi, arbeid og effekt", meny: "Energi og effekt", type: "fagstoff", status: "ferdig" },
+      { fil: "temperatur-og-varme.html", tittel: "Temperatur og varme", type: "fagstoff", status: "ferdig" },
+      { fil: "grunnbegreper-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {

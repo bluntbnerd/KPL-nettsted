@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Kraft og trykk</h1>
-<div class="merker"><span class="fag">KT</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for KT6</div>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> grunnlag for KT6</div>
 
 <p class="ingress">Trykk er en av de viktigste størrelsene i et prosessanlegg. Tanker, rør, kompressorer og pumper har alle et trykk du må holde øye med. Her lærer du hva trykk er, hvorfor det kan gi så store krefter, og forskjellen på overtrykk og absolutt trykk.</p>
 
@@ -25,7 +25,7 @@
   <li><em>m</em> = massen (kg)</li>
   <li><em>g</em> = tyngdeakselerasjonen, 9,81 m/s² på jorda</li>
 </ul>
-<p>En kasse på 50 kg har tyngden \( 50 \text{ kg} \cdot 9{,}81 \text{ m/s}^2 \approx 490 \text{ N} \). Som tommelfingerregel tilsvarer 1 kg omtrent 10 N.</p>
+<p>En kasse på 50 kg har tyngden \( 50 \text{ kg} \cdot 9{,}81 \text{ m/s}^2 \approx 490 \text{ N} \). Som tommelfingerregel har en masse på 1 kg en tyngde på ca. 10 N.</p>
 
 <div class="boks tips">
   <div class="boks-tittel">Tips: Masse og tyngde er ikke det samme</div>
@@ -42,7 +42,7 @@
 </ul>
 <p>Enheten for trykk er <strong>pascal</strong> (Pa). 1 Pa er 1 N fordelt på 1 m². Det er svært lite, omtrent som et ark som ligger på et bord. Derfor bruker vi oftest <strong>bar</strong> i anlegget: 1 bar = 100 000 Pa.</p>
 <p>Du kan snu formelen. Kjenner du trykket og arealet, finner du kraften: \( F = p \cdot A \).</p>
-<p>I en gass eller en væske virker trykket i alle retninger. Det presser like mye på bunnen, veggene og lokket i en tank. Hvordan trykket øker nedover i en væske, lærer du på siden <a href="trykk-i-vaesker.html">Trykk i væsker</a>.</p>
+<p>I en gass virker trykket like mye i alle retninger. Det presser like mye på bunnen, veggene og lokket i en gasstank. I en væske virker trykket også i alle retninger, men det øker jo dypere du kommer. Det lærer du på siden <a href="trykk-i-vaesker.html">Trykk i væsker</a>.</p>
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel 1: Trykket under en tank</div>
@@ -53,7 +53,7 @@
     <li>Arealet er fire føtter: \( A = 4 \cdot 0{,}010 \text{ m}^2 = 0{,}040 \text{ m}^2 \)</li>
     <li>\( p = \dfrac{F}{A} = \dfrac{49\,050 \text{ N}}{0{,}040 \text{ m}^2} \approx 1\,200\,000 \text{ Pa} = 12 \text{ bar} \)</li>
   </ol>
-  <p><strong>Svar:</strong> Ca. 12 bar. Sto tanken med hele bunnen på 2,0 m² mot gulvet, ville trykket bare vært ca. 0,25 bar. Derfor settes tunge tanker på stålplater eller et fundament som fordeler kraften.</p>
+  <p><strong>Svar:</strong> Ca. 12 bar. Sto tanken med hele bunnen på 2,0 m² mot gulvet, ville trykket bare vært ca. 0,25 bar. Derfor settes tunge tanker ofte på stålplater eller et fundament som fordeler kraften, slik at gulvet ikke tar skade.</p>
 </div>
 
 <h2>Små trykk kan gi store krefter</h2>
@@ -61,13 +61,13 @@
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel 2: Kraften på et mannlokk</div>
-  <p><strong>Oppgave:</strong> En tank har et overtrykk på 3,0 bar. Mannlokket har et areal på 0,20 m². Hvor stor kraft presser trykket på lokket med?</p>
+  <p><strong>Oppgave:</strong> Trykket inne i en tank er 3,0 bar høyere enn lufttrykket utenfor. Mannlokket har et areal på 0,20 m². Hvor stor kraft presser trykket på lokket med?</p>
   <p><strong>Løsning:</strong></p>
   <ol>
     <li>Gjør om til pascal: \( p = 3{,}0 \text{ bar} = 300\,000 \text{ Pa} \)</li>
     <li>\( F = p \cdot A = 300\,000 \text{ Pa} \cdot 0{,}20 \text{ m}^2 = 60\,000 \text{ N} \)</li>
   </ol>
-  <p><strong>Svar:</strong> 60 000 N. Det er omtrent like mye som tyngden av 6 tonn. Hvis boltene løsnes mens tanken står under trykk, kan lokket slynges av.</p>
+  <p><strong>Svar:</strong> 60 000 N. Det er omtrent like mye som tyngden av 6 tonn. Lufta utenfor presser også på lokket, så det er bare forskjellen på 3,0 bar som gir denne kraften. Hvis boltene løsnes mens tanken står under trykk, kan lokket slynges av.</p>
 </div>
 
 <h2>Lufttrykket rundt oss</h2>
@@ -78,7 +78,7 @@
 <p>Trykk kan regnes fra to forskjellige nullpunkter:</p>
 <ul>
   <li><strong>Absolutt trykk</strong> regnes fra fullstendig vakuum, der det ikke er noen luft i det hele tatt. Absolutt trykk kan aldri bli mindre enn null.</li>
-  <li><strong>Overtrykk</strong> regnes fra lufttrykket rundt oss. Det er dette en vanlig trykkmåler, et <strong>manometer</strong>, viser. Står en tank åpen mot lufta, viser manometeret 0 bar.</li>
+  <li><strong>Overtrykk</strong> regnes fra lufttrykket rundt oss. Det er dette en vanlig trykkmåler, et <strong>manometer</strong>, viser. Står en tank åpen mot lufta, viser et manometer på toppen av tanken 0 bar.</li>
 </ul>
 <p>Sammenhengen er:</p>
 <p>\[ p_{\text{absolutt}} = p_{\text{over}} + p_{\text{luft}} \]</p>
@@ -86,10 +86,10 @@
 
 <figure>
   <img src="bilder/absolutt-og-overtrykk.svg" alt="To trykkskalaer ved siden av hverandre. Til venstre absolutt trykk fra 0 til 5 bar, til høyre overtrykk fra minus 1 til 4 bar. Lufttrykket rundt oss er 1 bar absolutt trykk og 0 bar overtrykk. Fullstendig vakuum er 0 bar absolutt trykk og minus 1 bar overtrykk." width="600">
-  <figcaption>Figur: Samme trykk på to skalaer. Overtrykket er alltid ca. 1 bar lavere enn det absolutte trykket. Under lufttrykket har vi undertrykk (vakuum). Lufttrykket er rundet av til 1 bar.</figcaption>
+  <figcaption>Figur: Samme trykk på to skalaer. Overtrykket er alltid ca. 1 bar lavere enn det absolutte trykket. Under lufttrykket har vi undertrykk. Lufttrykket er rundet av til 1 bar.</figcaption>
 </figure>
 
-<p>Er trykket lavere enn lufttrykket, kaller vi det <strong>undertrykk</strong> eller vakuum. Da viser manometeret et negativt tall. Det laveste overtrykket som er mulig, er ca. −1 bar. Da er all lufta borte.</p>
+<p>Er trykket lavere enn lufttrykket, kaller vi det <strong>undertrykk</strong>. I industrien kalles det ofte vakuum, selv om det fortsatt er noe luft igjen. Da viser manometeret et negativt tall. Det laveste overtrykket som er mulig, er ca. −1 bar. Da er all lufta borte.</p>
 <p>På datablader og tegninger skrives det ofte <strong>barg</strong> for overtrykk (g for <em>gauge</em>, måler) og <strong>bara</strong> for absolutt trykk. Står det bare «bar», må du finne ut hva som er ment.</p>
 
 <div class="boks eksempel">
@@ -103,8 +103,8 @@
   <div class="boks-tittel">Sikkerhet: Trykk og undertrykk</div>
   <ul>
     <li>Løsne aldri en flens, en kobling eller et mannlokk før trykket er avlastet etter prosedyren. Et manometer kan være tett eller defekt, så stol ikke blindt på at det viser 0 bar.</li>
-    <li>Alle trykksatte tanker skal ha en sikkerhetsventil som slipper ut trykket hvis det blir for høyt. Den skal aldri blokkeres.</li>
-    <li>Undertrykk er også farlig. Tømmes en tank uten at lufta slipper inn, kan lufttrykket utenfor knuse tanken.</li>
+    <li>Alle trykksatte tanker skal være sikret mot for høyt trykk, for eksempel med en sikkerhetsventil eller en bruddplate. Sikringen skal aldri blokkeres.</li>
+    <li>Undertrykk er også farlig. Tømmes en tank uten at lufta slipper inn, kan lufttrykket utenfor knuse tanken. Derfor har tanker lufting eller en vakuumventil, og den må aldri tettes.</li>
   </ul>
 </div>
 
@@ -165,12 +165,12 @@
   <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
   <tbody>
     <tr><td>kraft</td><td>Et dytt eller et drag som kan sette noe i bevegelse eller holde det på plass. Måles i newton (N).</td><td></td></tr>
-    <tr><td>tyngde</td><td>Kraften jorda trekker en gjenstand ned med, G = m · g. 1 kg har en tyngde på ca. 10 N.</td><td></td></tr>
+    <tr><td>tyngde</td><td>Kraften jorda trekker en gjenstand ned med, G = m · g. En masse på 1 kg har en tyngde på ca. 10 N.</td><td></td></tr>
     <tr><td>trykk</td><td>Kraft fordelt på et areal, p = F/A. Måles i pascal (Pa) eller bar.</td><td>pressure</td></tr>
     <tr><td>atmosfæretrykk</td><td>Trykket fra lufta rundt oss. Ved havnivået er det ca. 1,013 bar.</td><td>atmospheric pressure</td></tr>
     <tr><td>overtrykk</td><td>Trykket i forhold til lufttrykket rundt oss. Det er dette en vanlig trykkmåler viser. Skrives ofte barg.</td><td>gauge pressure</td></tr>
     <tr><td>absolutt trykk</td><td>Trykket regnet fra fullstendig vakuum. Absolutt trykk er overtrykk pluss lufttrykket. Skrives ofte bara.</td><td>absolute pressure</td></tr>
-    <tr><td>undertrykk</td><td>Trykk som er lavere enn lufttrykket rundt oss. Kalles også vakuum.</td><td>vacuum</td></tr>
+    <tr><td>undertrykk</td><td>Trykk som er lavere enn lufttrykket rundt oss. I industrien kalles det ofte vakuum, selv om det fortsatt er noe luft igjen.</td><td>vacuum</td></tr>
     <tr><td>manometer</td><td>Instrument som måler trykk, vanligvis overtrykket.</td><td>pressure gauge</td></tr>
   </tbody>
 </table>

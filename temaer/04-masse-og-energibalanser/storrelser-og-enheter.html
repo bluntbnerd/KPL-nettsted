@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Størrelser og enheter</h1>
@@ -41,7 +41,7 @@
 <p>Trykk, energi og effekt får egne sider senere i dette emnet. Her ser du bare enhetene.</p>
 
 <h2>Prefikser: store og små tall</h2>
-<p>Tallene i et anlegg kan være svært store eller svært små. En smelteovn kan bruke rundt 30 000 000 W, mens en analysevekt på laben kan veie 0,0001 g. For å slippe så mange nuller setter vi en <strong>prefiks</strong> foran enheten. Prefiksen er en forkortelse for et tall vi ganger med.</p>
+<p>Tallene i et anlegg kan være svært store eller svært små. En smelteovn kan bruke rundt 30 000 000 W, mens en analysevekt på laben viser masse ned til 0,0001 g. For å slippe så mange nuller setter vi en <strong>prefiks</strong> foran enheten. Prefiksen er en forkortelse for et tall vi ganger med.</p>
 
 <table>
   <thead><tr><th>Prefiks</th><th>Symbol</th><th>Betyr</th><th>Eksempel</th></tr></thead>
@@ -49,6 +49,7 @@
     <tr><td>giga</td><td>G</td><td>milliard (1 000 000 000)</td><td>Et kraftverk produserer flere GWh i året.</td></tr>
     <tr><td>mega</td><td>M</td><td>million (1 000 000)</td><td>Smelteovnen bruker 30 MW = 30 000 000 W.</td></tr>
     <tr><td>kilo</td><td>k</td><td>tusen (1000)</td><td>En kokeplate gir 2 kW = 2000 W.</td></tr>
+    <tr><td>deci</td><td>d</td><td>tidel (0,1)</td><td>1 dL = 0,1 L</td></tr>
     <tr><td>centi</td><td>c</td><td>hundredel (0,01)</td><td>1 cm = 0,01 m</td></tr>
     <tr><td>milli</td><td>m</td><td>tusendel (0,001)</td><td>En pipette tar 10 mL = 0,010 L.</td></tr>
     <tr><td>mikro</td><td>µ</td><td>milliondel (0,000 001)</td><td>Et støvkorn kan være 10 µm.</td></tr>
@@ -66,20 +67,20 @@
 </div>
 
 <h2>Omregning steg for steg</h2>
-<p>Den sikreste måten å regne om på er å gange med en brøk som er lik 1. Over og under brøkstreken står det samme, bare i ulike enheter, for eksempel \( \dfrac{1 \text{ h}}{3600 \text{ s}} \). Siden 1 h = 3600 s, er brøken lik 1, og verdien endrer seg ikke. Enheten du vil bli kvitt, skal stå både over og under brøkstreken, slik at den forkortes bort.</p>
+<p>Den sikreste måten å regne om på er å gange med en brøk som er lik 1. Over og under brøkstreken står det samme, bare i ulike enheter, for eksempel \( \dfrac{1 \text{ h}}{3600 \text{ s}} \). Siden 1 h = 3600 s, er brøken lik 1, og verdien endrer seg ikke. Enheten du vil bli kvitt, skal stå på motsatt side av brøkstreken i brøken du ganger med, slik at den forkortes bort mot enheten i tallet.</p>
 
 <p>Disse sammenhengene trenger du ofte:</p>
 <ul>
   <li>1 h = 60 min = 3600 s</li>
   <li>1 bar = 100 000 Pa</li>
-  <li>1 m³ = 1000 L, og 1 L = 1 dm³ = 1000 mL</li>
+  <li>1 m³ = 1000 L, og 1 L = 1 dm³ = 1000 mL = 1000 cm³</li>
   <li>1 tonn = 1000 kg</li>
   <li>temperatur i kelvin = temperatur i °C + 273</li>
 </ul>
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel 1: Kjølevann fra kg/h til kg/s</div>
-  <p><strong>Oppgave:</strong> Kjølevannet til en smelteovn strømmer med 3600 kg/h. Hvor mange kilogram er det per sekund?</p>
+  <p><strong>Oppgave:</strong> Vannet i en kjølekrets på en smelteovn strømmer med 3600 kg/h. Hvor mange kilogram er det per sekund?</p>
   <p><strong>Løsning:</strong></p>
   <ol>
     <li>Vi vet: 3600 kg/h, og 1 h = 3600 s.</li>
@@ -122,14 +123,14 @@
   <div class="boks-tittel">Tips: Er svaret rimelig?</div>
   <ul>
     <li>Skriv enheten på hvert steg, ikke bare til slutt. Da ser du om enhetene forkortes riktig.</li>
-    <li>Tenk etter: Det er flere sekunder enn timer. Derfor må tallet per sekund være mindre enn tallet per time.</li>
-    <li>Gjør om til SI-enheter før du setter inn i en formel.</li>
+    <li>Tenk etter: En time har 3600 sekunder. Derfor må tallet per sekund være mye mindre enn tallet per time.</li>
+    <li>Gjør om til SI-enheter før du setter inn i en formel, eller pass på at enhetene passer sammen.</li>
   </ul>
 </div>
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet: Sjekk enheten på måleren</div>
-  <p>Utstyr fra utlandet kan vise trykk i <strong>psi</strong> i stedet for bar. 1 bar er omtrent 14,5 psi. Tror du at 50 psi er 50 bar, tar du feil med mer enn 14 ganger. Les alltid enheten på måleren, i prosedyren og på typeskiltet før du stiller inn trykk, temperatur eller mengde. Er du usikker, spør før du gjør noe.</p>
+  <p>Utstyr fra utlandet kan vise trykk i <strong>psi</strong>, en amerikansk trykkenhet, i stedet for bar. 1 bar er omtrent 14,5 psi. Tror du at 50 psi er 50 bar, tar du feil med mer enn 14 ganger. Les alltid enheten på måleren, i prosedyren og på typeskiltet før du stiller inn trykk, temperatur eller mengde. Er du usikker, spør før du gjør noe.</p>
 </div>
 
 <h2>Test deg selv</h2>
