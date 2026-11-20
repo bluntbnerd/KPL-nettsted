@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resirkulering og utbytte – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Resirkulering og utbytte</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT5</div>
+
+<p class="ingress">Råstoff og energi koster penger, og avfall må tas hånd om. Derfor vil ingen anlegg kaste stoff som kan brukes. Det som ikke blir produkt første gang, sendes ofte tilbake i prosessen. På denne siden lærer du å sette opp massebalanser for slike anlegg og å regne ut hvor godt råstoffet blir utnyttet.</p>
+
+<h2>Hva er resirkulering?</h2>
+<p><strong>Resirkulering</strong> betyr at en del av en strøm sendes tilbake til et tidligere sted i prosessen og blandes med strømmen som går inn der. Strømmen som går tilbake, kalles en <strong>returstrøm</strong>. Noen eksempler:</p>
+<ul>
+  <li>Råstoff som ikke reagerte i reaktoren, skilles ut og sendes tilbake til reaktoren.</li>
+  <li>Produkt som er for fint eller for grovt til å selges, smeltes eller knuses om.</li>
+  <li>Støv som fanges i renseanlegget, sendes tilbake til ovnen i stedet for å bli avfall.</li>
+</ul>
+
+<h2>Systemgrensen avgjør hva du ser</h2>
+<p>Med resirkulering blir det ekstra viktig å velge <a href="massebalanse-i-anlegg.html">systemgrense</a>. Figuren viser et smelteverk med to mulige systemgrenser.</p>
+
+<figure>
+  <img src="bilder/smelteverk-resirkulering.svg" alt="Råstoff går inn i en smelteovn. Ovnen leverer 1200 kilo metall per time til knusing og sikting. Derfra går salgbart produkt ut, med ukjent mengde. Finstoff, 15 prosent eller 180 kilo per time, går i en returstrøm tilbake til ovnen. En rød stiplet systemgrense går bare rundt ovnen. En blå stiplet systemgrense går rundt hele anlegget, også returstrømmen. En grå stiplet pil viser at slagg, ovnsgass og støv også går ut av ovnen." width="600">
+  <figcaption>Figur: Et smelteverk med returstrøm (tenkte tall). Systemgrense 1 går rundt ovnen. Den krysses av returstrømmen. Systemgrense 2 går rundt hele anlegget. Returstrømmen ligger helt inne i den og er ikke med i balansen. Slagg, ovnsgass og støv går også ut av ovnen. Råstoffet veier derfor mye mer enn metallet. I eksempelet følger vi bare metallet.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Rundt hele anlegget</strong> ser du ikke returstrømmen. Den går fram og tilbake inne i systemet. For metallet er det da enkelt: Metallet som lages av råstoffet, kommer ut som produkt.</li>
+  <li><strong>Rundt ovnen</strong> krysser returstrømmen grensen. Da ser du at ovnen må smelte mer enn det som til slutt selges.</li>
+</ul>
+
+<h2>Eksempel 1: Finstoff tilbake til ovnen</h2>
+<p>Smelteverket i Sauda lager manganlegeringer i store elektriske smelteovner. Legeringene brukes til å lage stål. Når metallet har størknet, knuses det og siktes til de bitstørrelsene kundene vil ha. Biter som er for små (<strong>finstoff</strong>), kan sendes tilbake og smeltes om. Tallene i eksempelet er tenkte og er valgt for å vise prinsippet.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvor mye metall kommer fra råstoffet?</div>
+  <p><strong>Oppgave:</strong> Ovnen leverer 1200 kg/h metall. Etter knusing og sikting er 15 % finstoff, og det sendes tilbake til ovnen. Resten selges. Vi ser bare på metallet og antar at alt finstoffet smeltes om uten tap. Hvor mye metall selges, og hvor mye nytt metall må ovnen lage av råstoffet?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li><strong>Finstoff:</strong> \( 1200 \text{ kg/h} \cdot 0{,}15 = 180 \text{ kg/h} \)</li>
+    <li><strong>Balanse rundt knusing og sikting:</strong> \( \text{salgbart produkt} = 1200 \text{ kg/h} - 180 \text{ kg/h} = 1020 \text{ kg/h} \)</li>
+    <li><strong>Balanse rundt ovnen (systemgrense 1):</strong> Metallet ut av ovnen er nytt metall fra råstoffet pluss omsmeltet finstoff:
+      \[ 1200 \text{ kg/h} = \text{nytt metall} + 180 \text{ kg/h} \quad \Rightarrow \quad \text{nytt metall} = 1020 \text{ kg/h} \]</li>
+    <li><strong>Sjekk rundt hele anlegget (systemgrense 2):</strong> Nytt metall fra råstoffet er 1020 kg/h, og salgbart produkt er 1020 kg/h. Inn = ut. Det stemmer.</li>
+  </ol>
+  <p><strong>Svar:</strong> Anlegget selger 1020 kg/h metall. Ovnen lager 1020 kg/h nytt metall fra råstoffet, men må smelte 1200 kg/h fordi finstoffet går en runde til.</p>
+</div>
+
+<p>Resirkuleringen gjør at finstoffet ikke går til spille. Prisen er at ovnen må bruke energi på å smelte det samme metallet to ganger. Derfor prøver anlegget å holde andelen finstoff lav.</p>
+
+<h2>Utbytte: hvor godt blir råstoffet utnyttet?</h2>
+<p>I Kjemiske prinsipper har du kanskje lest om utbytte. Her er formelen:</p>
+<p>\[ \text{utbytte} = \frac{\text{faktisk utbytte}}{\text{teoretisk utbytte}} \cdot 100\,\% \]</p>
+<p><strong>Teoretisk utbytte</strong> er det du kunne fått hvis ingenting gikk tapt. <strong>Faktisk utbytte</strong> er det du får og måler. I et smelteverk er det vanlig å regne utbytte for ett grunnstoff, for eksempel hvor mye av manganet i malmen som havner i metallet. Resten går tapt, for eksempel i <strong>slagg</strong> og støv.</p>
+<p>Vil du lære hvordan teoretisk utbytte regnes ut fra en reaksjonsligning, kan du lese fordypningen <a href="../02-kjemi-og-beregninger/begrensende-reaktant-utbytte.html">Begrensende reaktant og utbytte</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Manganutbytte (tenkte tall)</div>
+  <p><strong>Oppgave:</strong> Ovnen får 1000 kg malm som inneholder 45 % mangan. Metallet som tappes, inneholder 390 kg mangan. Hva er manganutbyttet?</p>
+  <ol>
+    <li><strong>Teoretisk utbytte av mangan:</strong> \( 1000 \text{ kg} \cdot 0{,}45 = 450 \text{ kg} \)</li>
+    <li><strong>Faktisk utbytte av mangan:</strong> 390 kg</li>
+    <li><strong>Utbytte:</strong> \( \dfrac{390 \text{ kg}}{450 \text{ kg}} \cdot 100\,\% = 86{,}7\,\% \)</li>
+    <li><strong>Massebalanse for mangan:</strong> \( 450 \text{ kg} - 390 \text{ kg} = 60 \text{ kg} \) mangan har havnet i slagg og støv.</li>
+  </ol>
+  <p><strong>Svar:</strong> Manganutbyttet er 86,7 %.</p>
+  <p><strong>Med resirkulering:</strong> Anta at støvet fra renseanlegget inneholder 15 av de 60 kiloene, og at støvet sendes tilbake til ovnen. Havner det manganet i metallet, blir det \( 390 + 15 = 405 \) kg mangan i metallet. Utbyttet blir da \( \dfrac{405}{450} \cdot 100\,\% = 90{,}0\,\% \).</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Utbytte over 100 %?</div>
+  <p>Utbyttet kan aldri bli over 100 %. Det ville betydd at det kom ut mer mangan enn det gikk inn. Får du over 100 %, er det en feil i målingene eller i regnestykket. Massebalansen er en god sjekk.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet i smelteverk</div>
+  <p>Flytende metall og slagg holder ca. 1400–1600 °C når de tappes. Vann som kommer i kontakt med flytende metall eller slagg, fordamper eksplosjonsartet og kan slynge ut smelte. Ovnsgassen inneholder karbonmonoksid (CO), som er giftig og ikke kan ses eller luktes. Støv fra knusing og fra renseanlegget skal ikke pustes inn. I slike områder brukes varmebeskyttende klær, gassmåler og åndedrettsvern etter anleggets prosedyrer.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er en returstrøm?</p>
+  <ul>
+    <li>strømmen som går ut som ferdig produkt</li>
+    <li data-riktig>en strøm som sendes tilbake til et tidligere sted i prosessen</li>
+    <li>avfall som sendes til deponi</li>
+  </ul>
+  <p class="forklaring">En returstrøm går tilbake og blandes med strømmen inn, for eksempel finstoff som smeltes om.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Du setter systemgrensen rundt hele anlegget. Hvorfor er returstrømmen ikke med i balansen?</p>
+  <ul>
+    <li>fordi den er så liten</li>
+    <li data-riktig>fordi den ligger helt inne i systemet og ikke krysser grensen</li>
+    <li>fordi resirkulert stoff ikke har masse</li>
+  </ul>
+  <p class="forklaring">Bare strømmer som krysser systemgrensen, er med. Returstrømmen går fram og tilbake inne i systemet.</p>
+</div>
+
+<div class="quiz">
+  <p>3. En ovn leverer 2000 kg/h metall. 10 % er finstoff som sendes tilbake. Hvor mye selges?</p>
+  <ul>
+    <li>200 kg/h</li>
+    <li data-riktig>1800 kg/h</li>
+    <li>2200 kg/h</li>
+  </ul>
+  <p class="forklaring">Finstoff: 2000 · 0,10 = 200 kg/h. Salgbart: 2000 − 200 = 1800 kg/h.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Råstoffet kan i teorien gi 500 kg metall. Du får 450 kg. Hva er utbyttet?</p>
+  <ul>
+    <li>50 %</li>
+    <li data-riktig>90 %</li>
+    <li>111 %</li>
+  </ul>
+  <p class="forklaring">450 / 500 · 100 % = 90 %</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hvorfor sender et smelteverk støv fra renseanlegget tilbake til ovnen?</p>
+  <ul>
+    <li>for at ovnen skal bli varmere</li>
+    <li>for å få et utbytte på over 100 %</li>
+    <li data-riktig>for å utnytte manganet i støvet og få mindre avfall</li>
+  </ul>
+  <p class="forklaring">Støvet inneholder mangan, mest som oksider. Sendes det tilbake, havner mer av manganet i produktet, og utbyttet øker.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>resirkulering</td><td>Å sende en del av en strøm tilbake til et tidligere sted i prosessen, slik at stoffet blir brukt på nytt.</td><td>recycling</td></tr>
+    <tr><td>returstrøm</td><td>Strømmen som sendes tilbake i prosessen ved resirkulering.</td><td>recycle stream</td></tr>
+    <tr><td>finstoff</td><td>Biter av produktet som er for små til å selges, for eksempel etter knusing og sikting.</td><td>fines</td></tr>
+    <tr><td>utbytte</td><td>Faktisk utbytte delt på teoretisk utbytte, ganget med 100 %. Det viser hvor stor del av det mulige produktet du faktisk får.</td><td>yield</td></tr>
+    <tr><td>slagg</td><td>En smelte av oksider fra urenhetene i malmen og fra tilsatte stoffer. Den skilles fra metallet i smelteovnen, er lettere og flyter oppå.</td><td>slag</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a> og <a href="separasjon.html">Separasjon</a>: systemgrense, totalbalanse og stoffbalanse.</li>
+  <li>Fordypning i Kjemiske prinsipper: <a href="../02-kjemi-og-beregninger/begrensende-reaktant-utbytte.html">Begrensende reaktant og utbytte</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Tallene fra smelteverket er tenkte og er ikke driftsdata fra Sauda. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

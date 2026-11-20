@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340" font-family="Segoe UI, Arial, sans-serif">
+  <title>Energistrøm i en gasskjel: 100 prosent tilført fra gassen, 85 prosent til vannet, 10 prosent ut med røykgassen og 5 prosent gjennom veggene</title>
+  <rect x="0" y="0" width="600" height="340" rx="10" fill="#ffffff"/>
+  <!-- tilført -->
+  <rect x="30" y="80" width="222" height="200" fill="#e08a2c"/>
+  <!-- nyttig -->
+  <rect x="250" y="100" width="272" height="170" fill="#1f6fb2"/>
+  <path d="M520,92 L550,185 L520,278 Z" fill="#1f6fb2"/>
+  <!-- røykgass -->
+  <path d="M250,80 C285,80 300,65 300,35 L320,35 C320,75 290,100 250,100 Z" fill="#c0392b"/>
+  <path d="M293,35 L310,15 L327,35 Z" fill="#c0392b"/>
+  <!-- vegg -->
+  <path d="M250,270 C290,270 310,285 310,305 L300,305 C300,290 285,280 250,280 Z" fill="#c0392b"/>
+  <path d="M295,305 L305,322 L315,305 Z" fill="#c0392b"/>
+  <!-- tekst -->
+  <g font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    <text x="140" y="180">Tilført fra gassen</text>
+    <text x="140" y="200">100 %</text>
+    <text x="390" y="180">Nyttig: til vannet</text>
+    <text x="390" y="200">85 %</text>
+  </g>
+  <g font-size="14" fill="#c0392b" font-weight="bold">
+    <text x="335" y="32">Tap med røykgassen: 10 %</text>
+    <text x="325" y="320">Tap gjennom veggene: 5 %</text>
+  </g>
+</svg>

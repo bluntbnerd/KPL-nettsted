@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trykktap – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Trykktap</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT6</div>
+
+<p class="ingress">Når væske strømmer gjennom rør, bend og ventiler, faller trykket litt etter litt. Det kalles trykktap. Pumpen må lage nok trykk til å dekke tapet, ellers kommer ikke væsken fram. Her lærer du hva som gir trykktap, hvordan du leser det av trykkmålere, og hvordan du kan måle det selv i pumperommet.</p>
+
+<h2>Hvorfor faller trykket?</h2>
+<p>Væsken gnir mot rørveggen, og lagene i væsken gnir mot hverandre. Denne <strong>friksjonen</strong> bremser strømmen. Pumpen har gitt væsken energi i form av trykk, og friksjonen gjør litt av denne energien om til varme. Derfor er trykket lavere langt ute i røret enn rett etter pumpen. Tapet av trykk kalles <strong>trykktap</strong>.</p>
+<p>Energien forsvinner ikke, men den blir til varme som du ikke kan bruke til å flytte væsken. Varmen er så liten at du sjelden merker den på temperaturen.</p>
+
+<figure>
+  <img src="bilder/trykktap-langs-ror.svg" alt="Et rør fra en pumpe til en tank, med fire trykkmålere. Punkt A rett etter pumpen viser 1,50 bar. Etter 10 meter rett rør viser punkt B 1,40 bar, et tap på 0,10 bar. Etter to bend viser punkt C 1,35 bar, et tap på 0,05 bar. Etter en delvis stengt ventil viser punkt D 0,95 bar, et tap på 0,40 bar." width="600">
+  <figcaption>Figur: Trykket faller fra punkt A til punkt D. Hver del av røret tar sin del av trykket. Her er det den delvis stengte ventilen som gir størst tap. Tallene er tenkte.</figcaption>
+</figure>
+
+<h2>Les trykktapet av trykkmålere</h2>
+<p>Trykktapet over en del av røret er forskjellen mellom trykket før og trykket etter:</p>
+<p>\[ \Delta p = p_{\text{før}} - p_{\text{etter}} \]</p>
+<p>Forskjellen mellom to trykk kalles <strong>differansetrykk</strong>. Det er det samme som trykktapet over den delen av røret.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Trykktap over ventilen og i hele røret</div>
+  <p><strong>Oppgave:</strong> Bruk figuren. Hvor stort er trykktapet over ventilen? Hvor stort er det i hele røret fra A til D?</p>
+  <ol>
+    <li>Over ventilen (fra C til D): \( \Delta p = 1{,}35 \text{ bar} - 0{,}95 \text{ bar} = 0{,}40 \text{ bar} \)</li>
+    <li>Hele røret (fra A til D): \( \Delta p = 1{,}50 \text{ bar} - 0{,}95 \text{ bar} = 0{,}55 \text{ bar} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> 0,40 bar over ventilen og 0,55 bar i hele røret. Ventilen står for mer enn to tredeler av tapet.</p>
+</div>
+
+<h2>Hva gir stort trykktap?</h2>
+<table>
+  <thead><tr><th>Hvis …</th><th>blir trykktapet …</th></tr></thead>
+  <tbody>
+    <tr><td>røret er lengre</td><td>større. Dobbelt så langt rør gir omtrent dobbelt så stort tap.</td></tr>
+    <tr><td>hastigheten er høyere</td><td>mye større. Dobbelt så høy hastighet gir omtrent <strong>fire ganger</strong> så stort tap.</td></tr>
+    <tr><td>røret er smalere (samme volumstrøm)</td><td>mye større. Væsken må gå fortere, og den har mer vegg å gni mot i forhold til mengden.</td></tr>
+    <tr><td>det er mange bend, overganger og T-stykker</td><td>større. Hvert bend og hver overgang lager virvler som bremser.</td></tr>
+    <tr><td>en ventil strupes, eller et filter tettes</td><td>større. Åpningen blir trangere.</td></tr>
+    <tr><td>innsiden av røret er ru, for eksempel av rust eller belegg</td><td>større. Gamle rør gir mer friksjon enn nye.</td></tr>
+  </tbody>
+</table>
+<p>Det er derfor viktig å velge rør som er store nok. På siden <a href="stromning.html">Strømning i rør</a> så du at halv diameter gir fire ganger så høy hastighet. Da blir trykktapet svært mye større.</p>
+
+<h2>Trykktap koster energi</h2>
+<p>Trykket som går tapt, er energi som pumpen har brukt strøm på. Effekten som går tapt, regner du ut på samme måte som pumpeeffekten på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>:</p>
+<p>\[ P_{\text{tap}} = \Delta p \cdot Q \]</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Effekten som går tapt i røret</div>
+  <p><strong>Oppgave:</strong> Trykktapet fra A til D er 0,55 bar. Volumstrømmen er 20 m<sup>3</sup>/h. Hvor mye effekt går tapt?</p>
+  <ol>
+    <li>Gjør om til Pa: \( 0{,}55 \text{ bar} = 55\,000 \text{ Pa} \)</li>
+    <li>Gjør om til m<sup>3</sup>/s: \( Q = \dfrac{20}{3600} = 0{,}005\,56 \text{ m}^3\text{/s} \)</li>
+    <li>\( P_{\text{tap}} = 55\,000 \text{ Pa} \cdot 0{,}005\,56 \text{ m}^3\text{/s} \approx 306 \text{ W} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Ca. 0,3 kW går tapt som varme, og ca. 0,2 kW av det i ventilen. I store anlegg som går døgnet rundt, blir dette mye strøm. Derfor er det ofte bedre å styre med en frekvensomformer enn å strupe med en ventil.</p>
+</div>
+
+<h2>Hvor mye trykk må pumpen lage?</h2>
+<p>Pumpen må dekke to ting:</p>
+<ol>
+  <li><strong>Høydeforskjellen:</strong> trykket som trengs for å løfte væsken, \( \rho \cdot g \cdot h \). Se <a href="trykk-i-vaesker.html">Trykk i væsker</a>.</li>
+  <li><strong>Trykktapet</strong> i rør, bend, ventiler og filtre.</li>
+</ol>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Trykket pumpen må gi</div>
+  <p><strong>Oppgave:</strong> Vann skal pumpes 3,0 m opp til en tank. Trykktapet i røret er 0,55 bar ved den volumstrømmen du vil ha. Hvor stort trykk må pumpen lage? Svar i bar og i mVs.</p>
+  <ol>
+    <li>Løfte 3,0 m: \( p = 1000 \cdot 9{,}81 \cdot 3{,}0 = 29\,430 \text{ Pa} \approx 0{,}29 \text{ bar} \)</li>
+    <li>Legg til trykktapet: \( 0{,}29 \text{ bar} + 0{,}55 \text{ bar} = 0{,}84 \text{ bar} \)</li>
+    <li>I mVs: \( \dfrac{84\,000 \text{ Pa}}{1000 \cdot 9{,}81} \approx 8{,}6 \text{ mVs} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Pumpen må lage ca. 0,84 bar, eller ca. 8,6 mVs.</p>
+</div>
+
+<h2>Struping og pumpekurven</h2>
+<p>Hva skjer når du struper en ventil etter pumpen? Ventilen gir mer motstand, og trykktapet øker. Pumpen klarer ikke å presse like mye gjennom. Da går volumstrømmen ned, og pumpen gir høyere trykk. Det er akkurat det pumpekurven viste: mindre volumstrøm gir høyere løftehøyde.</p>
+<p>På trykkmåleren rett etter pumpen ser du derfor at trykket <em>stiger</em> når du struper ventilen lenger ute. Samtidig fyller tanken seg saktere.</p>
+
+<div class="boks">
+  <div class="boks-tittel">Forsøk i pumperommet: Strup og mål</div>
+  <p><strong>Mål:</strong> Se hvordan struping påvirker trykk og volumstrøm, og sammenlign med pumpekurven.</p>
+  <p><strong>Før du starter:</strong> Hva tror du skjer med trykket på pumpens trykkmåler og med volumstrømmen når du struper ventilen? Skriv ned svaret.</p>
+  <ol>
+    <li>Start pumpe 2 etter driftsprosedyren, og kjør den mot tank 2 med stengt bunnventil og spjeldventilen etter pumpen helt åpen. Les av trykkmåleren på pumpeutløpet (PI 12065).</li>
+    <li>Mål volumstrømmen med nivåstigning i tank 2, som på siden <a href="stromning.html">Strømning i rør</a>.</li>
+    <li>Strup spjeldventilen på trykksiden av pumpen til halvt åpen. Les av trykket og mål volumstrømmen igjen.</li>
+    <li>Strup enda mer og mål en gang til.</li>
+    <li>Regn ut den hydrauliske effekten for hver måling, \( P = \Delta p \cdot Q \).</li>
+  </ol>
+  <table>
+    <thead><tr><th>Ventil</th><th>Trykk PI 12065 (bar)</th><th>Δh i tank 2 (m)</th><th>Tid (s)</th><th>Q (L/s)</th><th>P (W)</th></tr></thead>
+    <tbody>
+      <tr><td>helt åpen</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>halvt åpen</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>nesten stengt</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p><strong>Diskuter:</strong> Stemte det du trodde? Hvordan passer målingene med tallene på skiltet til pumpe 2 (20 m<sup>3</sup>/h ved 15 mVs)? Hvorfor blir målingene ikke helt like?</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Følg driftsprosedyrene for start og stopp av pumpene, og spør læreren før du endrer ventiler.</li>
+    <li>Ikke steng ventilen helt mens pumpen går. Pumpen blir varm når ingenting strømmer gjennom den.</li>
+    <li>Foran en stengt ventil kan trykket bli så høyt som pumpen klarer å lage. Alle deler må tåle det (se PN på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>).</li>
+    <li>Følg med på nivået i tanken du fyller. Pumpene stopper ved HH-nivå, men du skal ikke stole på at vernet alltid virker.</li>
+    <li>Stort trykktap over et filter eller en sil betyr ofte at det er tett. Det skal meldes og rengjøres etter prosedyren, ikke ignoreres.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva skjer med energien som går tapt ved trykktap?</p>
+  <ul>
+    <li>Den forsvinner.</li>
+    <li data-riktig>Den blir til varme.</li>
+    <li>Den går tilbake til pumpen.</li>
+  </ul>
+  <p class="forklaring">Friksjonen gjør trykkenergi om til varme. Energien forsvinner ikke, men den kan ikke brukes til å flytte væsken.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkmåler før en ventil viser 2,1 bar, og en trykkmåler etter viser 1,6 bar. Hvor stort er trykktapet over ventilen?</p>
+  <ul>
+    <li data-riktig>0,5 bar</li>
+    <li>1,6 bar</li>
+    <li>3,7 bar</li>
+  </ul>
+  <p class="forklaring">\( \Delta p = 2{,}1 - 1{,}6 = 0{,}5 \text{ bar} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Et rør blir dobbelt så langt. Volumstrømmen og diameteren er de samme. Hva skjer med trykktapet i røret?</p>
+  <ul>
+    <li>Det er det samme.</li>
+    <li data-riktig>Det blir omtrent dobbelt så stort.</li>
+    <li>Det blir omtrent fire ganger så stort.</li>
+  </ul>
+  <p class="forklaring">Trykktapet i et rett rør øker omtrent i takt med lengden.</p>
+</div>
+
+<div class="quiz">
+  <p>Hastigheten i et rør blir dobbelt så høy. Hva skjer omtrent med trykktapet?</p>
+  <ul>
+    <li>Det blir dobbelt så stort.</li>
+    <li data-riktig>Det blir fire ganger så stort.</li>
+    <li>Det blir halvparten så stort.</li>
+  </ul>
+  <p class="forklaring">Trykktapet øker omtrent med hastigheten i andre potens: 2 · 2 = 4.</p>
+</div>
+
+<div class="quiz">
+  <p>Du struper en ventil etter en sentrifugalpumpe. Hva viser trykkmåleren rett etter pumpen?</p>
+  <ul>
+    <li data-riktig>Trykket stiger, og volumstrømmen går ned.</li>
+    <li>Trykket synker, og volumstrømmen går opp.</li>
+    <li>Ingenting endres.</li>
+  </ul>
+  <p class="forklaring">Mer motstand gir mindre volumstrøm. Ifølge pumpekurven gir pumpen da høyere løftehøyde, altså høyere trykk.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>trykktap</td><td>Trykket faller når væske eller gass strømmer gjennom et rør, fordi friksjon gjør noe av energien om til varme.</td><td>pressure drop</td></tr>
+    <tr><td>friksjon</td><td>Motstand som oppstår når noe gnir mot noe annet. I rør gnir væsken mot veggen og mot seg selv.</td><td></td></tr>
+    <tr><td>differansetrykk</td><td>Forskjellen mellom to trykk, for eksempel før og etter en ventil eller et filter.</td><td>differential pressure</td></tr>
+    <tr><td>strupe</td><td>Å gjøre åpningen i en ventil trangere, slik at det strømmer mindre gjennom.</td><td>throttle</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Forrige side: <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a> (pumpekurve og pumpeeffekt).</li>
+  <li>Hastighet og diameter: <a href="stromning.html">Strømning i rør</a>.</li>
+  <li>Trykkmålere og regulering i anlegget: <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Tallene for pumpene og tankene er hentet fra flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

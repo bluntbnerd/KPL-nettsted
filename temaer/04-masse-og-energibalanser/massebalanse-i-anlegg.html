@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Massebalanse i et anlegg</h1>
@@ -56,7 +56,7 @@
 <p>For å finne hvor mye av ett stoff som er i en strøm, bruker du <a href="../02-kjemi-og-beregninger/konsentrasjon.html">masseprosenten</a>:</p>
 <p>\[ \text{massestrøm av stoffet} = \text{massestrøm totalt} \cdot \frac{\text{masseprosent}}{100\,\%} \]</p>
 <p>1000 kg/h saltlake med 20 % salt inneholder altså \( 1000 \cdot 0{,}20 = 200 \) kg salt per time.</p>
-<p>Begge balansene gjelder så lenge stoffene bare blandes eller skilles. Skjer det en kjemisk reaksjon, gjelder totalbalansen fortsatt, men stoffene endres. Det ser vi på i <a href="resirkulering-og-utbytte.html">Resirkulering og utbytte</a>.</p>
+<p>Begge balansene gjelder så lenge stoffene bare blandes eller skilles. Skjer det en kjemisk reaksjon, gjelder totalbalansen fortsatt, men stoffene endres. Da kan du i stedet sette opp en balanse for hvert grunnstoff, for eksempel mangan i et smelteverk. Det ser vi på i <a href="resirkulering-og-utbytte.html">Resirkulering og utbytte</a>.</p>
 
 <h2>Regneeksempel</h2>
 <div class="boks eksempel">
@@ -69,7 +69,7 @@
     <li><strong>Saltbalanse, inn:</strong> Saltlaken har \( 1000 \cdot 0{,}20 = 200 \text{ kg/h} \) salt. Vannet har 0 kg/h salt. Det går altså 200 kg/h salt inn.</li>
     <li><strong>Saltbalanse, ut:</strong> Alt saltet må ut igjen: 200 kg/h salt i strømmen ut.</li>
     <li><strong>Masseprosent i strømmen ut:</strong> \( \dfrac{200 \text{ kg/h}}{1600 \text{ kg/h}} \cdot 100\,\% = 12{,}5\,\% \)</li>
-    <li><strong>Sjekk med vannbalansen:</strong> Vann inn er \( 800 + 600 = 1400 \text{ kg/h} \). Vann ut er \( 1600 - 200 = 1400 \text{ kg/h} \). Det stemmer.</li>
+    <li><strong>Sjekk med vannbalansen:</strong> Vann inn er \( (1000 - 200) + 600 = 1400 \text{ kg/h} \). Vann ut er \( 1600 - 200 = 1400 \text{ kg/h} \). Det stemmer.</li>
   </ol>
   <p><strong>Svar:</strong> Det går 1600 kg/h ut av tanken, med 12,5 % NaCl.</p>
 </div>

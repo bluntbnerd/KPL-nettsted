@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rør, ventiler og pumper – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Rør, ventiler og pumper</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT6</div>
+
+<p class="ingress">Rør fører væsken, ventiler styrer den, og pumper gir den energi til å strømme. Her ser du hva de tre gjør i et væskesystem, og hvordan du regner ut hvor mye effekt en pumpe gir til væsken. Alle eksemplene er fra pumperommet på skolen.</p>
+
+<h2>Rør: størrelse og trykklasse</h2>
+<p>På et flytskjema har hvert rør et <strong>linjenummer</strong>. I pumperommet ser det slik ut: <em>W-12121-40-16</em>. Det kan leses slik:</p>
+<table>
+  <thead><tr><th>Del</th><th>Betyr</th></tr></thead>
+  <tbody>
+    <tr><td>W</td><td>hva som går i røret (W for vann)</td></tr>
+    <tr><td>12121</td><td>nummeret på akkurat denne rørlinjen</td></tr>
+    <tr><td>40</td><td>rørstørrelsen, DN40 (omtrent 40 mm innvendig)</td></tr>
+    <tr><td>16</td><td>trykklassen, PN16</td></tr>
+  </tbody>
+</table>
+<p>DN lærte du om på siden <a href="stromning.html">Strømning i rør</a>. <strong>PN</strong> (trykklasse) sier hvor høyt trykk røret, flensene og ventilene er laget for. PN16 betyr at de tåler 16 bar ved vanlig temperatur. Alle delene i en rørlinje må ha minst like høy trykklasse som det høyeste trykket som kan oppstå.</p>
+
+<h2>Ventiler: åpne, stenge og styre</h2>
+<p>En ventil endrer hvor lett væsken kommer gjennom røret. Ventiler har ulike oppgaver:</p>
+<table>
+  <thead><tr><th>Ventil</th><th>Hva den gjør</th><th>I pumperommet</th></tr></thead>
+  <tbody>
+    <tr><td><strong>stengeventil</strong></td><td>Er enten helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>ventilene foran og etter hver pumpe</td></tr>
+    <tr><td><strong>reguleringsventil</strong></td><td>Kan stå delvis åpen. Styrer hvor mye som strømmer.</td><td>LCV-12022 og LCV-12032, som styres av nivåregulatoren</td></tr>
+    <tr><td><strong>tilbakeslagsventil</strong></td><td>Slipper væsken bare én vei. Hindrer at væsken renner tilbake når pumpen stopper.</td><td>finnes ikke i pumperommet, men er vanlig på trykksiden av pumper i industrien</td></tr>
+  </tbody>
+</table>
+<p>En <strong>spjeldventil</strong> har en rund skive inne i røret som dreies. Står skiva på tvers, er ventilen stengt. Står den på langs, er den åpen. Den kan også stå på skrå og strupe strømmen. I pumperommet sitter det en spjeldventil på trykksiden av pumpene, altså etter pumpen.</p>
+<p>For fysikken er det viktigste dette: Jo mer en ventil struper, jo større motstand får væsken, og jo mer trykk går tapt. Det handler neste side om, <a href="trykktap.html">Trykktap</a>. Hvordan ventilene er bygd, lærer du i <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>. Hvordan reguleringsventiler styres automatisk, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+
+<h2>Pumper gir væsken energi</h2>
+<p>Væske strømmer av seg selv bare nedover, eller fra høyt til lavt trykk. Skal du løfte væsken eller presse den gjennom lange rør, trenger du en pumpe. Pumpen gir væsken <strong>trykk</strong>, og trykket er energi som væsken kan bruke til å strømme.</p>
+<p>Pumpene i pumperommet er <strong>sentrifugalpumper</strong>. Et hjul med skovler roterer fort og slynger væsken utover og ut av pumpen. Hvordan pumpen er bygd, lærer du i <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>.</p>
+
+<table>
+  <thead><tr><th>Pumpe</th><th>Motor</th><th>Volumstrøm</th><th>Løftehøyde</th></tr></thead>
+  <tbody>
+    <tr><td>Pumpe 1</td><td>7,5 kW, med frekvensomformer</td><td>36–90 m<sup>3</sup>/h</td><td>37–20 mVs</td></tr>
+    <tr><td>Pumpe 2</td><td>2,2 kW</td><td>20 m<sup>3</sup>/h</td><td>15 mVs</td></tr>
+    <tr><td>Pumpe 3</td><td>5,5 kW</td><td>80 m<sup>3</sup>/h</td><td>15 mVs</td></tr>
+  </tbody>
+</table>
+<p>Løftehøyden lærte du om på siden <a href="trykk-i-vaesker.html">Trykk i væsker</a>. 15 mVs betyr at pumpen kan lage et trykk på ca. 1,5 bar.</p>
+
+<h2>Pumpekurven: trykk eller mengde</h2>
+<p>En sentrifugalpumpe kan ikke gi både høyt trykk og stor volumstrøm samtidig. Er det mye motstand i rørene, eller må vannet løftes høyt, gir pumpen mindre volumstrøm. Dette vises i en <strong>pumpekurve</strong>. For pumpe 1 står det på skiltet at den gir 90 m<sup>3</sup>/h ved 20 mVs, men bare 36 m<sup>3</sup>/h ved 37 mVs.</p>
+
+<figure>
+  <img src="bilder/pumpekurve.svg" alt="Graf med volumstrøm i kubikkmeter per time langs den vannrette aksen og løftehøyde i meter vannsøyle langs den loddrette aksen. Kurven faller fra venstre mot høyre. To punkter er merket: 36 kubikkmeter per time ved 37 meter vannsøyle, og 90 kubikkmeter per time ved 20 meter vannsøyle." width="600">
+  <figcaption>Figur: Forenklet pumpekurve for pumpe 1 ved full fart. De to røde punktene er tallene fra skiltet, og resten av kurven er tegnet omtrentlig. Jo høyere pumpen må løfte, jo mindre gir den.</figcaption>
+</figure>
+
+<p>Pumpe 1 har en <strong>frekvensomformer</strong>. Den endrer hvor fort motoren går. Går motoren saktere, gir pumpen både mindre trykk og mindre volumstrøm. Slik kan du styre pumpen uten å strupe med en ventil, og det sparer energi.</p>
+
+<h2>Pumpeeffekt: hvor mye energi får væsken?</h2>
+<p>Effekten pumpen gir til væsken, kalles <strong>hydraulisk effekt</strong>. Den avhenger av hvor mye trykket øker, og hvor mye væske som strømmer:</p>
+<p>\[ P = \Delta p \cdot Q \]</p>
+<ul>
+  <li><em>P</em> = hydraulisk effekt (W)</li>
+  <li>Δ<em>p</em> = trykkøkningen gjennom pumpen (Pa)</li>
+  <li><em>Q</em> = volumstrøm (m<sup>3</sup>/s)</li>
+</ul>
+<p>Pa ganger m<sup>3</sup>/s blir J/s, altså watt. Hva effekt er, lærte du i <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Effekten til pumpe 2</div>
+  <p><strong>Oppgave:</strong> Pumpe 2 gir 20 m<sup>3</sup>/h med løftehøyde 15 mVs. Hvor stor effekt får vannet?</p>
+  <ol>
+    <li>Trykkøkning: \( \Delta p = \rho \cdot g \cdot H = 1000 \cdot 9{,}81 \cdot 15 = 147\,150 \text{ Pa} \)</li>
+    <li>Volumstrøm: \( Q = \dfrac{20}{3600} = 0{,}005\,56 \text{ m}^3\text{/s} \)</li>
+    <li>Effekt: \( P = \Delta p \cdot Q = 147\,150 \text{ Pa} \cdot 0{,}005\,56 \text{ m}^3\text{/s} \approx 818 \text{ W} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Vannet får ca. 0,82 kW.</p>
+</div>
+
+<h2>Virkningsgrad: hvor blir resten av?</h2>
+<p>Motoren på pumpe 2 er på 2,2 kW, men vannet får bare ca. 0,82 kW. Noe av energien blir til varme i motoren, i lagrene og i selve pumpen. Motoren er dessuten valgt med litt reserve. Forholdet mellom det du får ut, og det du putter inn, kalles <strong>virkningsgrad</strong>:</p>
+<p>\[ \eta = \frac{P_{\text{ut}}}{P_{\text{inn}}} \]</p>
+<p>Skal du finne virkningsgraden nøyaktig, må du måle hvor mye strøm motoren faktisk bruker. Tallet 2,2 kW på skiltet er hva motoren kan levere, ikke hva den bruker hele tiden.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Virkningsgraden til en pumpe</div>
+  <p><strong>Oppgave:</strong> En pumpe bruker 1,5 kW elektrisk effekt. Den gir vannet 0,82 kW. Hva er virkningsgraden?</p>
+  <p>\( \eta = \dfrac{0{,}82 \text{ kW}}{1{,}5 \text{ kW}} = 0{,}55 = 55\,\% \)</p>
+  <p><strong>Svar:</strong> Virkningsgraden er ca. 55 %. Resten, ca. 0,7 kW, blir til varme.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Ikke kjør pumpen tørr.</strong> Uten væske blir pumpen varm, og tetningene kan bli ødelagt. I pumperommet har hver pumpe en strømningsvakt som stopper pumpen hvis det strømmer for lite inn.</li>
+    <li><strong>Ikke kjør pumpen lenge mot stengt ventil.</strong> Da går all energien til å varme opp væsken i pumpen.</li>
+    <li><strong>Følg driftsprosedyren</strong> for start og stopp av pumpene i pumperommet.</li>
+    <li><strong>Roterende deler og strøm:</strong> Pumpen skal være stoppet, låst og merket før du jobber på den. Se <a href="../01-hms/06-loto.html">LOTO</a> i HMS.</li>
+    <li>Sjekk at alle deler i rørlinjen tåler trykket (PN) før du setter anlegget under trykk.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Et rør er merket PN16. Hva betyr det?</p>
+  <ul>
+    <li>Røret er 16 mm innvendig.</li>
+    <li data-riktig>Røret er laget for et trykk på 16 bar.</li>
+    <li>Røret har linjenummer 16.</li>
+  </ul>
+  <p class="forklaring">PN er trykklassen. PN16 betyr at røret, flensene og ventilene tåler 16 bar ved vanlig temperatur.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilken ventil hindrer at væsken renner tilbake gjennom pumpen når den stopper?</p>
+  <ul>
+    <li>stengeventil</li>
+    <li>reguleringsventil</li>
+    <li data-riktig>tilbakeslagsventil</li>
+  </ul>
+  <p class="forklaring">En tilbakeslagsventil slipper væsken bare én vei.</p>
+</div>
+
+<div class="quiz">
+  <p>En sentrifugalpumpe må løfte vannet høyere enn før. Hva skjer med volumstrømmen?</p>
+  <ul>
+    <li>Den øker.</li>
+    <li data-riktig>Den minker.</li>
+    <li>Den er den samme.</li>
+  </ul>
+  <p class="forklaring">Pumpekurven faller: høyere løftehøyde gir mindre volumstrøm.</p>
+</div>
+
+<div class="quiz">
+  <p>En pumpe øker trykket med 200 000 Pa, og volumstrømmen er 0,010 m<sup>3</sup>/s. Hva er den hydrauliske effekten?</p>
+  <ul>
+    <li>20 W</li>
+    <li data-riktig>2 000 W</li>
+    <li>20 000 000 W</li>
+  </ul>
+  <p class="forklaring">\( P = \Delta p \cdot Q = 200\,000 \cdot 0{,}010 = 2000 \text{ W} = 2{,}0 \text{ kW} \)</p>
+</div>
+
+<div class="quiz">
+  <p>En pumpe bruker 4,0 kW strøm og gir vannet 2,8 kW. Hva er virkningsgraden?</p>
+  <ul>
+    <li>1,4 %</li>
+    <li data-riktig>70 %</li>
+    <li>143 %</li>
+  </ul>
+  <p class="forklaring">\( \eta = 2{,}8 / 4{,}0 = 0{,}70 = 70\,\% \). Virkningsgraden kan aldri bli over 100 %.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>linjenummer</td><td>Merkingen av en rørlinje på flytskjemaet. Den viser blant annet hva som går i røret, størrelsen og trykklassen.</td><td>line number</td></tr>
+    <tr><td>PN</td><td>Trykklasse: hvor høyt trykk rør, flenser og ventiler er laget for. PN16 tåler 16 bar.</td><td>nominal pressure (PN)</td></tr>
+    <tr><td>stengeventil</td><td>Ventil som er helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>isolation valve</td></tr>
+    <tr><td>reguleringsventil</td><td>Ventil som kan stå delvis åpen, og som styrer hvor mye som strømmer.</td><td>control valve</td></tr>
+    <tr><td>tilbakeslagsventil</td><td>Ventil som slipper væsken bare én vei.</td><td>check valve (non-return valve)</td></tr>
+    <tr><td>spjeldventil</td><td>Ventil med en rund skive som dreies inne i røret. Kan stenge, åpne og strupe.</td><td>butterfly valve</td></tr>
+    <tr><td>sentrifugalpumpe</td><td>Pumpe med et hjul som roterer og slynger væsken utover. Den vanligste pumpen i prosessindustrien.</td><td>centrifugal pump</td></tr>
+    <tr><td>pumpekurve</td><td>Graf som viser hvor stor løftehøyde en pumpe gir ved ulik volumstrøm.</td><td>pump curve</td></tr>
+    <tr><td>frekvensomformer</td><td>Utstyr som endrer hvor fort en elektrisk motor går. Brukes til å styre pumper.</td><td>variable frequency drive (VFD)</td></tr>
+    <tr><td>hydraulisk effekt</td><td>Effekten en pumpe gir til væsken. Regnes ut som trykkøkning ganger volumstrøm.</td><td>hydraulic power</td></tr>
+    <tr><td>virkningsgrad</td><td>Hvor stor del av den tilførte energien som blir nyttig. Den er nyttig energi delt på tilført energi, og oppgis ofte i prosent.</td><td>efficiency</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Forrige side: <a href="stromning.html">Strømning i rør</a>.</li>
+  <li>Neste side: <a href="trykktap.html">Trykktap</a>.</li>
+  <li>Hvordan pumper og ventiler er bygd: <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>.</li>
+  <li>Regulering av nivå og mengde: <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Tallene for pumpene og rørene er hentet fra flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Separasjon – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Separasjon</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT5</div>
+
+<p class="ingress">Mange apparater i et prosessanlegg deler én strøm i to. Det kan være produkt og avfall, eller konsentrat og vann. Med en massebalanse kan du regne ut hvor mye som havner i hver strøm, før du har målt det.</p>
+
+<h2>Én strøm inn, to strømmer ut</h2>
+<p>Å skille stoffer fra hverandre kalles <strong>separasjon</strong>. Noen eksempler fra industrien:</p>
+<ul>
+  <li>En <strong>inndamper</strong> koker bort vann fra en løsning, slik at løsningen blir mer konsentrert.</li>
+  <li>Et <strong>filter</strong> holder igjen faste partikler og slipper væsken gjennom.</li>
+  <li>En destillasjonskolonne skiller væsker med ulikt kokepunkt.</li>
+</ul>
+<p>Hvordan apparatene er bygd og virker, lærer du i <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>. Her regner vi bare på hva som går inn og ut.</p>
+<p>Ofte kjenner du strømmen inn og hvor sterk den ene strømmen ut skal være. Da har du <strong>to ukjente</strong>: de to strømmene ut. To ukjente trenger to ligninger. Du bruker de to balansene fra <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a>:</p>
+<ul>
+  <li><strong>Totalbalansen:</strong> inn = ut 1 + ut 2</li>
+  <li><strong>Stoffbalansen</strong> for ett stoff, for eksempel saltet</li>
+</ul>
+
+<h2>Eksempel 1: Inndamper</h2>
+
+<figure>
+  <img src="bilder/inndamper-massebalanse.svg" alt="En inndamper med en rød stiplet systemgrense rundt. Fra venstre går saltløsning inn, 1000 kilo per time med 10 prosent salt. Damp går ut på toppen, ukjent mengde, uten salt. Konsentrat går ut til høyre, ukjent mengde, med 40 prosent salt. En stiplet oransje pil nedenfra viser at det tilføres varme." width="600">
+  <figcaption>Figur: Inndamper med systemgrense. Én strøm går inn og to strømmer går ut. Varmen krysser også grensen, men varme er energi og ikke stoff. Den er derfor ikke med i massebalansen.</figcaption>
+</figure>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Inndamping av saltløsning</div>
+  <p><strong>Oppgave:</strong> En inndamper får 1000 kg/h saltløsning med 10 % salt. Konsentratet som går ut, skal ha 40 % salt. Dampen er rent vann. Hvor mye konsentrat får du, og hvor mye vann må dampes bort?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li><strong>Velg stoffet du starter med:</strong> Saltet går bare ut i én strøm, konsentratet. Derfor starter vi med saltbalansen.</li>
+    <li><strong>Salt inn:</strong> \( 1000 \text{ kg/h} \cdot 0{,}10 = 100 \text{ kg/h} \)</li>
+    <li><strong>Salt ut:</strong> Alt saltet havner i konsentratet, og 40 % av konsentratet er salt:
+      \[ \text{konsentrat} = \frac{100 \text{ kg/h}}{0{,}40} = 250 \text{ kg/h} \]</li>
+    <li><strong>Totalbalanse:</strong> \( \text{damp} = 1000 \text{ kg/h} - 250 \text{ kg/h} = 750 \text{ kg/h} \)</li>
+    <li><strong>Sjekk med vannbalansen:</strong> Vann inn er \( 1000 - 100 = 900 \text{ kg/h} \). Vann ut er 750 kg/h som damp pluss \( 250 - 100 = 150 \text{ kg/h} \) i konsentratet, til sammen 900 kg/h. Det stemmer.</li>
+  </ol>
+  <p><strong>Svar:</strong> Inndamperen gir 250 kg/h konsentrat, og 750 kg/h vann må dampes bort.</p>
+</div>
+
+<p>Å koke bort 750 kg vann i timen krever mye energi. I <a href="varme-og-energi.html">Varme og energi i prosesser</a> regnet du ut den varmeeffekten. Massebalansen forteller hvor mye vann som skal fordampes, og først da kan du regne ut energien.</p>
+
+<h2>Eksempel 2: Filter</h2>
+<p>Et filter i et anlegg får inn <strong>slam</strong>, som er væske med faste partikler i. Det faste stoffet blir liggende igjen som en <strong>filterkake</strong>. Væsken som renner gjennom, kalles <strong>filtrat</strong>. Filterkaka er aldri helt tørr, for det blir alltid litt væske igjen mellom partiklene.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Filtrering av slam</div>
+  <p><strong>Oppgave:</strong> Et filter får 2000 kg/h slam med 15 % faststoff. Vi regner med at alt faststoffet blir i filterkaka, og at kaka er 60 % faststoff og 40 % væske. Hvor mye filterkake og hvor mye filtrat får du?</p>
+  <ol>
+    <li><strong>Faststoff inn:</strong> \( 2000 \text{ kg/h} \cdot 0{,}15 = 300 \text{ kg/h} \)</li>
+    <li><strong>Filterkake:</strong> Alt faststoffet er i kaka, og det utgjør 60 % av den:
+      \[ \text{filterkake} = \frac{300 \text{ kg/h}}{0{,}60} = 500 \text{ kg/h} \]</li>
+    <li><strong>Totalbalanse:</strong> \( \text{filtrat} = 2000 \text{ kg/h} - 500 \text{ kg/h} = 1500 \text{ kg/h} \)</li>
+    <li><strong>Sjekk med væskebalansen:</strong> Væske inn er \( 2000 - 300 = 1700 \text{ kg/h} \). Væske ut er \( 1500 + 200 = 1700 \text{ kg/h} \). Det stemmer.</li>
+  </ol>
+  <p><strong>Svar:</strong> Filteret gir 500 kg/h filterkake og 1500 kg/h filtrat.</p>
+</div>
+
+<p>I virkeligheten slipper litt faststoff gjennom filteret. Da inneholder filtratet litt partikler, og regnestykket blir et overslag. Måler du for mye faststoff i filtratet, kan det bety at filterduken er skadet.</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Hvilken balanse starter du med?</div>
+  <p>Start med stoffet som bare går ut i <em>én</em> av strømmene. Det var saltet i inndamperen og faststoffet i filteret. Da får du én ukjent og kan regne den ut direkte. Den andre strømmen finner du med totalbalansen. Til slutt sjekker du svaret med en balanse du ikke har brukt.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>En inndamper har varme flater og damp under trykk, og damp kan gi alvorlige brannskader. Åpne aldri luker eller flenser før anlegget er avkjølt og trykkløst. Prøver tas bare fra faste prøvetakingspunkter, etter prosedyren og med verneutstyr. Filterkake og filtrat kan inneholde kjemikalier. Sjekk sikkerhetsdatabladet, og bruk verneutstyret som prosedyren krever.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Et apparat som skiller én strøm i to, får 1200 kg/h inn. Den ene strømmen ut er 900 kg/h. Hvor stor er den andre? Det er ingen opphopning.</p>
+  <ul>
+    <li data-riktig>300 kg/h</li>
+    <li>900 kg/h</li>
+    <li>2100 kg/h</li>
+  </ul>
+  <p class="forklaring">Totalbalanse: 1200 = 900 + ut 2, så ut 2 = 300 kg/h.</p>
+</div>
+
+<div class="quiz">
+  <p>2. I en inndamper går saltløsning inn, og damp og konsentrat går ut. Hvilken stoffbalanse er lurest å starte med?</p>
+  <ul>
+    <li data-riktig>saltet, fordi det bare går ut i én strøm</li>
+    <li>vannet, fordi det er mest av det</li>
+    <li>dampen, fordi den går ut på toppen</li>
+  </ul>
+  <p class="forklaring">Saltet er bare i konsentratet. Da gir saltbalansen konsentratstrømmen direkte.</p>
+</div>
+
+<div class="quiz">
+  <p>3. 500 kg/h løsning med 20 % salt dampes inn til 50 % salt. Hvor mye konsentrat får du?</p>
+  <ul>
+    <li data-riktig>200 kg/h</li>
+    <li>250 kg/h</li>
+    <li>300 kg/h</li>
+  </ul>
+  <p class="forklaring">Salt inn: 500 · 0,20 = 100 kg/h. Konsentrat: 100 / 0,50 = 200 kg/h. Da dampes 300 kg/h vann bort.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvorfor er varmen til inndamperen ikke med i massebalansen?</p>
+  <ul>
+    <li>fordi varmen er så liten at den ikke betyr noe</li>
+    <li data-riktig>fordi varme er energi og ikke stoff</li>
+    <li>fordi varmen går ut igjen med dampen</li>
+  </ul>
+  <p class="forklaring">Massebalansen teller bare stoff. Varmen regnes i en energibalanse.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Et filter får 1000 kg/h slam med 10 % faststoff. Alt faststoffet havner i filterkaka, som er 50 % faststoff. Hvor mye filterkake får du?</p>
+  <ul>
+    <li>100 kg/h</li>
+    <li data-riktig>200 kg/h</li>
+    <li>500 kg/h</li>
+  </ul>
+  <p class="forklaring">Faststoff: 1000 · 0,10 = 100 kg/h. Filterkake: 100 / 0,50 = 200 kg/h. Filtratet blir 800 kg/h.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>separasjon</td><td>Å skille stoffer i en blanding fra hverandre, slik at én strøm blir til to eller flere.</td><td></td></tr>
+    <tr><td>inndamper</td><td>En beholder der en løsning varmes slik at vannet koker bort og løsningen blir mer konsentrert.</td><td>evaporator</td></tr>
+    <tr><td>konsentrat</td><td>Den sterke løsningen som blir igjen når noe av løsemiddelet er fjernet, for eksempel i en inndamper.</td><td></td></tr>
+    <tr><td>slam</td><td>En væske med faste partikler blandet i.</td><td>slurry</td></tr>
+    <tr><td>filterkake</td><td>Laget av fast stoff som blir liggende igjen på filteret. Det inneholder alltid litt væske.</td><td>filter cake</td></tr>
+    <tr><td>filtrat</td><td>Væsken som har gått gjennom filteret.</td><td>filtrate</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Forrige side: <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a> (systemgrense, totalbalanse og stoffbalanse).</li>
+  <li>Energien til inndamperen: <a href="varme-og-energi.html">Varme og energi i prosesser</a>.</li>
+  <li>Hvordan apparatene virker: <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

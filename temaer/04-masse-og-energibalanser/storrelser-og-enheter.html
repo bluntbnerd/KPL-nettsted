@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Størrelser og enheter – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Størrelser og enheter</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> grunnlag for KT5, KT6 og KT7</div>
+
+<p class="ingress">I kontrollrommet og på laben står tallene alltid sammen med en enhet: 4,5 bar, 85 °C, 3600 kg/h, 30 MW. Et tall uten enhet sier ingenting, og feil enhet kan gi farlige feil. Her lærer du enhetene du møter i prosessindustrien, og hvordan du regner om mellom dem.</p>
+
+<h2>Tall og enhet hører sammen</h2>
+<p>Alt vi måler, kalles en <strong>størrelse</strong>. Masse, temperatur, trykk og tid er størrelser. En størrelse oppgis alltid som et tall og en <strong>enhet</strong>.</p>
+<p>Står det 12 bar på trykkmåleren på en tank, er tallet 12 og enheten bar. Uten enheten vet du ikke om det er 12 bar eller 12 pascal. Det er en enorm forskjell.</p>
+<p>Hver størrelse har et fast <strong>symbol</strong> som brukes i formler, for eksempel <em>m</em> for masse og <em>p</em> for trykk. Symbolet skrives i kursiv, men enheten skrives ikke i kursiv: \( m = 25 \text{ kg} \).</p>
+
+<h2>SI-systemet</h2>
+<p>For at alle skal forstå hverandre, bruker vi et felles system av enheter over hele verden. Det kalles <strong>SI-systemet</strong>. Når du regner med formler, er det tryggest å bruke SI-enhetene. Da passer formlene sammen uten ekstra tall.</p>
+<p>I industrien brukes også andre enheter fordi de er praktiske, for eksempel bar, °C, tonn og timer. Tabellen viser begge deler.</p>
+
+<table>
+  <thead><tr><th>Størrelse</th><th>Symbol</th><th>SI-enhet</th><th>Andre enheter du møter</th></tr></thead>
+  <tbody>
+    <tr><td>masse</td><td><em>m</em></td><td>kilogram (kg)</td><td>gram (g), tonn (t)</td></tr>
+    <tr><td>lengde</td><td><em>l</em></td><td>meter (m)</td><td>millimeter (mm), centimeter (cm)</td></tr>
+    <tr><td>tid</td><td><em>t</em></td><td>sekund (s)</td><td>minutt (min), time (h)</td></tr>
+    <tr><td>temperatur</td><td><em>T</em></td><td>kelvin (K)</td><td>grader celsius (°C)</td></tr>
+    <tr><td>volum</td><td><em>V</em></td><td>kubikkmeter (m³)</td><td>liter (L), milliliter (mL)</td></tr>
+    <tr><td>trykk</td><td><em>p</em></td><td>pascal (Pa)</td><td>bar</td></tr>
+    <tr><td>energi</td><td><em>E</em></td><td>joule (J)</td><td>kilowattime (kWh)</td></tr>
+    <tr><td>effekt</td><td><em>P</em></td><td>watt (W)</td><td>kilowatt (kW), megawatt (MW)</td></tr>
+  </tbody>
+</table>
+<p>Trykk, energi og effekt får egne sider senere i dette emnet. Her ser du bare enhetene.</p>
+
+<h2>Prefikser: store og små tall</h2>
+<p>Tallene i et anlegg kan være svært store eller svært små. En smelteovn kan bruke rundt 30 000 000 W, mens en analysevekt på laben kan veie 0,0001 g. For å slippe så mange nuller setter vi en <strong>prefiks</strong> foran enheten. Prefiksen er en forkortelse for et tall vi ganger med.</p>
+
+<table>
+  <thead><tr><th>Prefiks</th><th>Symbol</th><th>Betyr</th><th>Eksempel</th></tr></thead>
+  <tbody>
+    <tr><td>giga</td><td>G</td><td>milliard (1 000 000 000)</td><td>Et kraftverk produserer flere GWh i året.</td></tr>
+    <tr><td>mega</td><td>M</td><td>million (1 000 000)</td><td>Smelteovnen bruker 30 MW = 30 000 000 W.</td></tr>
+    <tr><td>kilo</td><td>k</td><td>tusen (1000)</td><td>En kokeplate gir 2 kW = 2000 W.</td></tr>
+    <tr><td>centi</td><td>c</td><td>hundredel (0,01)</td><td>1 cm = 0,01 m</td></tr>
+    <tr><td>milli</td><td>m</td><td>tusendel (0,001)</td><td>En pipette tar 10 mL = 0,010 L.</td></tr>
+    <tr><td>mikro</td><td>µ</td><td>milliondel (0,000 001)</td><td>Et støvkorn kan være 10 µm.</td></tr>
+  </tbody>
+</table>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Flytt kommaet</div>
+  <p>Mellom kilo, enheten og milli er det en faktor 1000 hver gang. Da flytter du kommaet tre plasser:</p>
+  <ul>
+    <li>2,5 kW → 2500 W (kommaet tre plasser til høyre)</li>
+    <li>750 mL → 0,750 L (kommaet tre plasser til venstre)</li>
+  </ul>
+  <p>Går du til en <em>mindre</em> enhet, blir tallet <em>større</em>. Går du til en større enhet, blir tallet mindre.</p>
+</div>
+
+<h2>Omregning steg for steg</h2>
+<p>Den sikreste måten å regne om på er å gange med en brøk som er lik 1. Over og under brøkstreken står det samme, bare i ulike enheter, for eksempel \( \dfrac{1 \text{ h}}{3600 \text{ s}} \). Siden 1 h = 3600 s, er brøken lik 1, og verdien endrer seg ikke. Enheten du vil bli kvitt, skal stå både over og under brøkstreken, slik at den forkortes bort.</p>
+
+<p>Disse sammenhengene trenger du ofte:</p>
+<ul>
+  <li>1 h = 60 min = 3600 s</li>
+  <li>1 bar = 100 000 Pa</li>
+  <li>1 m³ = 1000 L, og 1 L = 1 dm³ = 1000 mL</li>
+  <li>1 tonn = 1000 kg</li>
+  <li>temperatur i kelvin = temperatur i °C + 273</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Kjølevann fra kg/h til kg/s</div>
+  <p><strong>Oppgave:</strong> Kjølevannet til en smelteovn strømmer med 3600 kg/h. Hvor mange kilogram er det per sekund?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Vi vet: 3600 kg/h, og 1 h = 3600 s.</li>
+    <li>Vi vil bli kvitt «h». Da må «h» stå over brøkstreken i brøken vi ganger med.</li>
+    <li>\( 3600 \,\dfrac{\text{kg}}{\text{h}} \cdot \dfrac{1 \text{ h}}{3600 \text{ s}} = 1{,}00 \,\dfrac{\text{kg}}{\text{s}} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> 1,00 kg/s. Hvert sekund renner det 1 kg vann gjennom kjølekretsen.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Volumstrøm fra m³/h til L/s</div>
+  <p><strong>Oppgave:</strong> En pumpe leverer 12 m³/h. Hvor mange liter er det per sekund?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Først kubikkmeter til liter: \( 12 \,\dfrac{\text{m}^3}{\text{h}} \cdot \dfrac{1000 \text{ L}}{1 \text{ m}^3} = 12\,000 \,\dfrac{\text{L}}{\text{h}} \)</li>
+    <li>Så timer til sekunder: \( 12\,000 \,\dfrac{\text{L}}{\text{h}} \cdot \dfrac{1 \text{ h}}{3600 \text{ s}} = 3{,}3 \,\dfrac{\text{L}}{\text{s}} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Omtrent 3,3 L/s.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 3: Trykk fra bar til pascal</div>
+  <p><strong>Oppgave:</strong> En trykkluftledning har 2,5 bar. Hva er trykket i pascal?</p>
+  <p><strong>Løsning:</strong> \( 2{,}5 \text{ bar} \cdot \dfrac{100\,000 \text{ Pa}}{1 \text{ bar}} = 250\,000 \text{ Pa} \)</p>
+  <p><strong>Svar:</strong> 250 000 Pa. Det kan også skrives 250 kPa.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 4: Celsius og kelvin</div>
+  <p><strong>Oppgave:</strong> Romtemperaturen på laben er 25 °C. Metallsmelten i ovnen holder 1500 °C. Hva er temperaturene i kelvin?</p>
+  <p><strong>Løsning:</strong> Legg til 273.</p>
+  <ul>
+    <li>\( 25 + 273 = 298 \text{ K} \)</li>
+    <li>\( 1500 + 273 = 1773 \text{ K} \)</li>
+  </ul>
+  <p><strong>Svar:</strong> 298 K og 1773 K. Et steg på 1 °C er like stort som et steg på 1 K. Bare nullpunktet er forskjellig. På siden om temperatur og varme lærer du hvorfor kelvin starter på det absolutte nullpunktet.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Er svaret rimelig?</div>
+  <ul>
+    <li>Skriv enheten på hvert steg, ikke bare til slutt. Da ser du om enhetene forkortes riktig.</li>
+    <li>Tenk etter: Det er flere sekunder enn timer. Derfor må tallet per sekund være mindre enn tallet per time.</li>
+    <li>Gjør om til SI-enheter før du setter inn i en formel.</li>
+  </ul>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Sjekk enheten på måleren</div>
+  <p>Utstyr fra utlandet kan vise trykk i <strong>psi</strong> i stedet for bar. 1 bar er omtrent 14,5 psi. Tror du at 50 psi er 50 bar, tar du feil med mer enn 14 ganger. Les alltid enheten på måleren, i prosedyren og på typeskiltet før du stiller inn trykk, temperatur eller mengde. Er du usikker, spør før du gjør noe.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvor mange pascal er 1 bar?</p>
+  <ul>
+    <li>1000 Pa</li>
+    <li data-riktig>100 000 Pa</li>
+    <li>1 000 000 Pa</li>
+  </ul>
+  <p class="forklaring">1 bar = 100 000 Pa. Pascal er en liten enhet, derfor bruker vi bar i anlegget.</p>
+</div>
+
+<div class="quiz">
+  <p>En strøm på 7200 kg/h er det samme som …</p>
+  <ul>
+    <li>0,50 kg/s</li>
+    <li data-riktig>2,0 kg/s</li>
+    <li>120 kg/s</li>
+  </ul>
+  <p class="forklaring">\( 7200 \text{ kg/h} \cdot \dfrac{1 \text{ h}}{3600 \text{ s}} = 2{,}0 \text{ kg/s} \). 120 kg/s er per minutt, ikke per sekund: 7200 / 60 = 120 kg/min.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er 20 °C i kelvin?</p>
+  <ul>
+    <li>−253 K</li>
+    <li>20 K</li>
+    <li data-riktig>293 K</li>
+  </ul>
+  <p class="forklaring">Legg til 273: 20 + 273 = 293 K.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva betyr «k» i kW?</p>
+  <ul>
+    <li data-riktig>tusen</li>
+    <li>million</li>
+    <li>tusendel</li>
+  </ul>
+  <p class="forklaring">Kilo betyr tusen: 1 kW = 1000 W. Mega (M) er million, og milli (m) er tusendel.</p>
+</div>
+
+<div class="quiz">
+  <p>En tank rommer 2,5 m³. Hvor mange liter er det?</p>
+  <ul>
+    <li>25 L</li>
+    <li>250 L</li>
+    <li data-riktig>2500 L</li>
+  </ul>
+  <p class="forklaring">1 m³ = 1000 L, så 2,5 m³ = 2500 L.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>størrelse</td><td>Noe vi kan måle, for eksempel masse, temperatur eller trykk. En størrelse oppgis som et tall ganget med en enhet.</td><td></td></tr>
+    <tr><td>enhet</td><td>Den avtalte målestokken vi måler en størrelse i, for eksempel kilogram, meter eller bar.</td><td></td></tr>
+    <tr><td>SI-system</td><td>Det internasjonale systemet av enheter som brukes over hele verden, for eksempel kg, m, s og K.</td><td></td></tr>
+    <tr><td>prefiks</td><td>En forstavelse foran enheten som betyr et tall vi ganger med, for eksempel kilo (k) = 1000 og milli (m) = 0,001.</td><td></td></tr>
+    <tr><td>kelvin</td><td>SI-enheten for temperatur. 0 K er den lavest mulige temperaturen, og temperatur i kelvin er temperatur i °C pluss 273.</td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Bruk formelsamlingen din når du regner om enheter. Der står prefiksene og de viktigste sammenhengene.</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Tallene fra smelteverket er tenkte tall. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

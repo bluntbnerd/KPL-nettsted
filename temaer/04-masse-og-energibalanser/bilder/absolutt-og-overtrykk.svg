@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 310" width="600" height="310" font-family="Segoe UI, Arial, sans-serif">
+  <title>Absolutt trykk og overtrykk på to skalaer ved siden av hverandre</title>
+  <rect x="0" y="0" width="600" height="310" rx="10" fill="#ffffff"/>
+  <!-- Overskrifter -->
+  <text x="110" y="24" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c2828">absolutt trykk</text>
+  <text x="490" y="24" font-size="14" font-weight="bold" text-anchor="middle" fill="#b5530f">overtrykk</text>
+  <text x="490" y="40" font-size="12" text-anchor="middle" fill="#586868">(det trykkmåleren viser)</text>
+  <!-- Akser -->
+  <line x1="150" y1="60" x2="150" y2="270" stroke="#586868" stroke-width="2"/>
+  <line x1="450" y1="60" x2="450" y2="270" stroke="#586868" stroke-width="2"/>
+  <!-- Merker, venstre (absolutt 0–5 bar) -->
+  <g font-size="13" fill="#1c2828" text-anchor="end">
+    <text x="140" y="264">0 bar</text>
+    <text x="140" y="224">1 bar</text>
+    <text x="140" y="184">2 bar</text>
+    <text x="140" y="144">3 bar</text>
+    <text x="140" y="104">4 bar</text>
+    <text x="140" y="64">5 bar</text>
+  </g>
+  <g stroke="#586868" stroke-width="2">
+    <line x1="144" y1="260" x2="156" y2="260"/><line x1="144" y1="220" x2="156" y2="220"/>
+    <line x1="144" y1="180" x2="156" y2="180"/><line x1="144" y1="140" x2="156" y2="140"/>
+    <line x1="144" y1="100" x2="156" y2="100"/><line x1="144" y1="60" x2="156" y2="60"/>
+  </g>
+  <!-- Merker, høyre (overtrykk −1 til 4 bar) -->
+  <g font-size="13" fill="#b5530f" text-anchor="start">
+    <text x="460" y="264">−1 bar</text>
+    <text x="460" y="224">0 bar</text>
+    <text x="460" y="184">1 bar</text>
+    <text x="460" y="144">2 bar</text>
+    <text x="460" y="104">3 bar</text>
+    <text x="460" y="64">4 bar</text>
+  </g>
+  <g stroke="#586868" stroke-width="2">
+    <line x1="444" y1="260" x2="456" y2="260"/><line x1="444" y1="220" x2="456" y2="220"/>
+    <line x1="444" y1="180" x2="456" y2="180"/><line x1="444" y1="140" x2="456" y2="140"/>
+    <line x1="444" y1="100" x2="456" y2="100"/><line x1="444" y1="60" x2="456" y2="60"/>
+  </g>
+  <!-- Viktige nivåer -->
+  <g stroke-width="1.5" stroke-dasharray="5 4">
+    <line x1="156" y1="260" x2="444" y2="260" stroke="#8a9a9a"/>
+    <line x1="156" y1="220" x2="444" y2="220" stroke="#2a7a9a"/>
+    <line x1="156" y1="60" x2="444" y2="60" stroke="#8a9a9a"/>
+  </g>
+  <g font-size="13" text-anchor="middle" fill="#1c2828">
+    <text x="300" y="278">fullstendig vakuum (ingen luft)</text>
+    <text x="300" y="214" fill="#2a7a9a" font-weight="bold">lufttrykket rundt oss</text>
+    <text x="300" y="54">eksempel: trykkluftledning</text>
+  </g>
+  <!-- Område for undertrykk -->
+  <rect x="160" y="226" width="280" height="28" fill="#2a7a9a" opacity="0.08"/>
+  <text x="300" y="244" font-size="12" text-anchor="middle" fill="#586868">undertrykk (vakuum)</text>
+  <!-- Forklaring nederst -->
+  <text x="300" y="302" font-size="13" text-anchor="middle" fill="#1c2828">absolutt trykk = overtrykk + lufttrykket (ca. 1 bar)</text>
+</svg>

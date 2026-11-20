@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trykk i væsker – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Trykk i væsker</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT6</div>
+
+<p class="ingress">Jo dypere du kommer i en væske, jo høyere blir trykket. Det merker du i ørene når du dykker i et basseng. I et prosessanlegg må du kunne regne med dette trykket når du leser trykkmålere, nivåmålere og datablad for pumper. Her bruker vi tankene i pumperommet på skolen som eksempel.</p>
+
+<h2>Væsken over presser nedover</h2>
+<p>Hva trykk er, og forskjellen på overtrykk og absolutt trykk, lærte du i <a href="kraft-og-trykk.html">Kraft og trykk</a>. Nå ser vi på trykket <em>inne i</em> en væske.</p>
+<p>Tenk deg et punkt nede i en tank. Over punktet står det en <strong>væskesøyle</strong>: all væsken rett over, helt opp til overflaten. Tyngden av denne væsken presser ned på punktet. Jo høyere søylen er, jo tyngre er den, og jo høyere blir trykket.</p>
+<p>Trykket fra væskesøylen kalles <strong>hydrostatisk trykk</strong>. Det virker i alle retninger, også sidelengs mot tankveggen. Derfor lekker det mer fra et hull nederst i en tank enn fra et hull høyt oppe.</p>
+
+<figure>
+  <img src="bilder/trykk-og-dybde.svg" alt="Tank 1 i pumperommet med vann 1,20 meter høyt. Tre punkter er merket. 0,30 meter under overflaten er trykket ca. 2 900 pascal, 0,60 meter under er det ca. 5 900 pascal, og i bunnen, 1,20 meter under, er det ca. 11 800 pascal. Pilene blir lengre jo dypere punktet ligger." width="600">
+  <figcaption>Figur: Trykket fra vannet i tank 1 øker jo dypere du kommer. Dobbelt så dypt gir dobbelt så høyt trykk. Tallene er overtrykk, altså trykket i tillegg til lufttrykket.</figcaption>
+</figure>
+
+<h2>Formelen: p = ρ · g · h</h2>
+<p>Trykket fra en væskesøyle regner du ut slik:</p>
+<p>\[ p = \rho \cdot g \cdot h \]</p>
+<ul>
+  <li><em>p</em> = trykket fra væsken (Pa)</li>
+  <li><em>ρ</em> (rho) = tettheten til væsken (kg/m<sup>3</sup>). Vann har ca. 1000 kg/m<sup>3</sup>. Se <a href="masse-volum-tetthet.html">Masse, volum og tetthet</a>.</li>
+  <li><em>g</em> = tyngdeakselerasjonen, 9,81 m/s<sup>2</sup></li>
+  <li><em>h</em> = høyden av væskesøylen over punktet (m)</li>
+</ul>
+<p>Formelen gir trykket fra væsken alene. I en åpen tank med lufting presser lufta i tillegg på overflaten. Formelen gir derfor <strong>overtrykket</strong>, og det er det en vanlig trykkmåler viser. Vil du ha absolutt trykk, legger du til lufttrykket, ca. 1,013 bar.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Trykket i bunnen av tank 1</div>
+  <p><strong>Oppgave:</strong> Tank 1 i pumperommet er 1,25 m høy. Vannet står 1,20 m over bunnen. Hvor stort er overtrykket i bunnen? Svar i pascal og i bar.</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Hva vet vi? \( \rho = 1000 \text{ kg/m}^3 \), \( g = 9{,}81 \text{ m/s}^2 \), \( h = 1{,}20 \text{ m} \)</li>
+    <li>Formel: \( p = \rho \cdot g \cdot h \)</li>
+    <li>Sett inn: \( p = 1000 \cdot 9{,}81 \cdot 1{,}20 = 11\,772 \text{ Pa} \approx 11\,800 \text{ Pa} \)</li>
+    <li>Gjør om til bar (1 bar = 100 000 Pa): \( \dfrac{11\,772 \text{ Pa}}{100\,000 \text{ Pa/bar}} \approx 0{,}12 \text{ bar} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Overtrykket i bunnen er ca. 11 800 Pa, eller ca. 0,12 bar. Absolutt trykk er ca. 1,013 + 0,12 ≈ 1,13 bar.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Sjekk enhetene</div>
+  <p>Bruker du kg/m<sup>3</sup>, m/s<sup>2</sup> og m, får du svaret i pascal. Gjør om centimeter til meter først: 85 cm = 0,85 m.</p>
+</div>
+
+<h2>Formen på tanken spiller ingen rolle</h2>
+<p>Bare <em>høyden</em> på væskesøylen teller, ikke hvor bred tanken er. Tank 3 i pumperommet er mye bredere enn tank 1, men like høy. Står vannet like høyt i begge, er trykket i bunnen det samme.</p>
+
+<figure>
+  <img src="bilder/trykk-uavhengig-av-form.svg" alt="To tanker side om side med vann til samme høyde, 1,20 meter. Tank 1 er smal, 0,79 meter i diameter, med ca. 590 kilo vann. Tank 3 er bred, 1,2 meter i diameter, med ca. 1 360 kilo vann. Trykket i bunnen er 11 800 pascal i begge." width="600">
+  <figcaption>Figur: Tank 3 har over dobbelt så mye vann som tank 1, men trykket i bunnen er det samme. Vannet i tank 3 er tyngre, men det fordeler seg på en like mye større bunn.</figcaption>
+</figure>
+
+<p>Det samme gjelder i rør. Et tynt rør som går 10 m rett opp, gir like høyt trykk i bunnen som en stor tank som er 10 m høy.</p>
+
+<h2>Tyngre væske gir høyere trykk</h2>
+<p>Tettheten står i formelen. En væske med høyere tetthet gir høyere trykk ved samme høyde:</p>
+<table>
+  <thead><tr><th>Væske i tank 1 (1,20 m)</th><th>Tetthet (kg/m<sup>3</sup>)</th><th>Overtrykk i bunnen</th></tr></thead>
+  <tbody>
+    <tr><td>olje</td><td>ca. 900</td><td>ca. 10 600 Pa (0,11 bar)</td></tr>
+    <tr><td>vann</td><td>ca. 1000</td><td>ca. 11 800 Pa (0,12 bar)</td></tr>
+    <tr><td>saltlake</td><td>ca. 1200</td><td>ca. 14 100 Pa (0,14 bar)</td></tr>
+  </tbody>
+</table>
+
+<h2>Meter vannsøyle: trykk målt i høyde</h2>
+<p>Fordi trykket bare avhenger av høyden, kan du oppgi trykk som en høyde. Enheten <strong>meter vannsøyle</strong> (mVs) betyr trykket i bunnen av en vannsøyle som er så mange meter høy.</p>
+<p>\[ 1 \text{ mVs} = 1000 \cdot 9{,}81 \cdot 1 = 9810 \text{ Pa} \approx 0{,}1 \text{ bar} \]</p>
+<p>En nyttig tommelfingerregel er derfor: <strong>10 meter vann gir ca. 1 bar</strong>. En dykker på 10 meters dyp har ca. 2 bar absolutt trykk rundt seg: 1 bar fra lufta og 1 bar fra vannet.</p>
+<p>Pumper oppgis ofte i meter vannsøyle. Det kalles pumpens <strong>løftehøyde</strong>: hvor høyt pumpen kan løfte vann. På skiltet til pumpe 2 i pumperommet står det <em>H = 15 mVs</em>. Pumpen kan altså lage et trykk på ca. 15 · 0,1 bar = 1,5 bar. Mer om pumper kommer på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>.</p>
+
+<h2>Nivå målt med trykk</h2>
+<p>Du kan også snu formelen. Kjenner du trykket i bunnen, kan du regne ut hvor høyt væsken står:</p>
+<p>\[ h = \frac{p}{\rho \cdot g} \]</p>
+<p>Dette brukes i anlegg. Tank 1 i pumperommet har en <strong>DP-celle</strong> i bunnen. Den måler trykket fra vannet, og styresystemet regner det om til nivå. Hvordan slike målere er bygd og koblet til styresystemet, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Fra trykk til nivå</div>
+  <p><strong>Oppgave:</strong> DP-cellen i bunnen av tank 1 måler et overtrykk på 8 830 Pa. Tanken inneholder vann. Hvor høyt står vannet?</p>
+  <ol>
+    <li>Formel: \( h = \dfrac{p}{\rho \cdot g} \)</li>
+    <li>Sett inn: \( h = \dfrac{8830 \text{ Pa}}{1000 \text{ kg/m}^3 \cdot 9{,}81 \text{ m/s}^2} = 0{,}900 \text{ m} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Vannet står 0,90 m over bunnen.</p>
+  <p>Legg merke til at måleren bare er riktig hvis tettheten er riktig. Fyller du saltlake i tanken, viser den for høyt nivå hvis den fortsatt regner med tettheten til vann.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Trykket er størst nederst. En flens eller ventil nede på en full tank står under trykk. Tøm tanken eller steng og sikre ventilene før du åpner noe under væskenivået.</li>
+    <li>I høye tanker og lange rør blir trykket stort: 10 m væske gir ca. 1 bar. Det kan gi en kraftig stråle hvis en slange eller pakning løsner.</li>
+    <li>Ikke fyll en tank over HH-nivået (høyt-høyt). I pumperommet stopper pumpene automatisk ved HH-nivå, men du skal aldri stole på at vernet alltid virker. Se <a href="../01-hms/06-overfylling.html">overfylling</a> i HMS.</li>
+  </ul>
+</div>
+
+<div class="boks">
+  <div class="boks-tittel">Prøv i pumperommet</div>
+  <p>Les av nivået i tank 1 på skjermen. Regn ut overtrykket i bunnen med \( p = \rho \cdot g \cdot h \). Hvor mye endres trykket når nivået stiger 10 cm?</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva bestemmer trykket fra en væske i bunnen av en tank?</p>
+  <ul>
+    <li>hvor mye væske det er i tanken totalt</li>
+    <li data-riktig>hvor høyt væsken står, og tettheten til væsken</li>
+    <li>hvor bred tanken er</li>
+  </ul>
+  <p class="forklaring">\( p = \rho \cdot g \cdot h \). Bare tettheten og høyden av væskesøylen teller. Bredden og den totale mengden spiller ingen rolle.</p>
+</div>
+
+<div class="quiz">
+  <p>Vannet i en åpen tank står 2,0 m høyt. Hva er overtrykket i bunnen?</p>
+  <ul>
+    <li>ca. 2 000 Pa</li>
+    <li data-riktig>ca. 19 600 Pa</li>
+    <li>ca. 196 000 Pa</li>
+  </ul>
+  <p class="forklaring">\( p = 1000 \cdot 9{,}81 \cdot 2{,}0 = 19\,620 \text{ Pa} \approx 0{,}2 \text{ bar} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Omtrent hvor stort trykk gir en vannsøyle på 10 m?</p>
+  <ul>
+    <li>0,1 bar</li>
+    <li data-riktig>1 bar</li>
+    <li>10 bar</li>
+  </ul>
+  <p class="forklaring">1 mVs er ca. 0,1 bar. 10 m vann gir derfor ca. 1 bar. Den regelen er nyttig å huske.</p>
+</div>
+
+<div class="quiz">
+  <p>Du flytter en trykkmåler fra 0,5 m til 1,0 m under overflaten i en vanntank. Hva skjer med overtrykket den viser?</p>
+  <ul>
+    <li>Det blir halvparten så stort.</li>
+    <li>Det er det samme.</li>
+    <li data-riktig>Det blir dobbelt så stort.</li>
+  </ul>
+  <p class="forklaring">Trykket er proporsjonalt med høyden av væskesøylen. Dobbelt så dypt gir dobbelt så høyt overtrykk.</p>
+</div>
+
+<div class="quiz">
+  <p>En pumpe har løftehøyde 15 mVs. Omtrent hvor høyt trykk kan den lage?</p>
+  <ul>
+    <li data-riktig>1,5 bar</li>
+    <li>15 bar</li>
+    <li>150 bar</li>
+  </ul>
+  <p class="forklaring">1 mVs er ca. 0,1 bar, så 15 mVs er ca. 1,5 bar.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>væskesøyle</td><td>All væsken rett over et punkt, helt opp til overflaten. Tyngden av søylen gir trykket i punktet.</td><td></td></tr>
+    <tr><td>hydrostatisk trykk</td><td>Trykket fra en væske som står stille. Det øker med dybden og regnes ut med p = ρ · g · h.</td><td></td></tr>
+    <tr><td>meter vannsøyle</td><td>Trykkenhet (mVs) som oppgir trykket som høyden av en vannsøyle. 1 mVs er ca. 0,1 bar.</td><td>metres of water column (mWC)</td></tr>
+    <tr><td>løftehøyde</td><td>Hvor høyt en pumpe kan løfte vann, oppgitt i meter. Er et mål på hvor stort trykk pumpen kan lage.</td><td>pump head</td></tr>
+    <tr><td>DP-celle</td><td>Trykkmåler som måler forskjellen mellom to trykk. I bunnen av en tank brukes den til å måle nivået.</td><td>DP cell (differential pressure transmitter)</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Grunnbegrepet trykk, overtrykk og absolutt trykk: <a href="kraft-og-trykk.html">Kraft og trykk</a>.</li>
+  <li>Neste side: <a href="stromning.html">Strømning i rør</a>.</li>
+  <li>Nivåmålere og trykkmålere i anlegget: <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Tallene for tankene og pumpene er hentet fra flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

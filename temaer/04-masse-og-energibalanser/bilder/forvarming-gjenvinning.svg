@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" font-family="Segoe UI, Arial, sans-serif">
+  <title>Anlegg uten og med energigjenvinning. Uten: råstoffet varmes fra 15 til 70 grader med 345 kilowatt, og produktet på 80 grader kjøles. Med: en varmeveksler bruker varmen fra produktet til å forvarme råstoffet til 55 grader, og varmeren trenger bare 94 kilowatt.</title>
+  <defs>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="400" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Uten gjenvinning ===== -->
+  <text x="20" y="32" font-size="16" font-weight="bold" fill="#1c2828">Uten gjenvinning</text>
+  <rect x="150" y="75" width="90" height="50" rx="6" fill="#f9d9d4" stroke="#c0392b" stroke-width="2"/>
+  <text x="195" y="105" font-size="14" text-anchor="middle" fill="#1c2828">varmer</text>
+  <rect x="320" y="65" width="100" height="70" rx="8" fill="#e0e4e4" stroke="#586868" stroke-width="2"/>
+  <text x="370" y="105" font-size="14" text-anchor="middle" fill="#1c2828">reaktor</text>
+  <rect x="490" y="75" width="80" height="50" rx="6" fill="#d4e6f6" stroke="#1f6fb2" stroke-width="2"/>
+  <text x="530" y="105" font-size="14" text-anchor="middle" fill="#1c2828">kjøler</text>
+  <g stroke="#1c2828" stroke-width="2.5" marker-end="url(#p)">
+    <line x1="20" y1="100" x2="148" y2="100"/>
+    <line x1="242" y1="100" x2="318" y2="100"/>
+    <line x1="422" y1="100" x2="488" y2="100"/>
+    <line x1="572" y1="100" x2="625" y2="100"/>
+  </g>
+  <g font-size="13" fill="#1c2828">
+    <text x="22" y="90">råstoff 15 °C</text>
+    <text x="250" y="90">70 °C</text>
+    <text x="430" y="90">80 °C</text>
+    <text x="578" y="90">40 °C</text>
+  </g>
+  <text x="195" y="148" font-size="13" text-anchor="middle" font-weight="bold" fill="#c0392b">tilført: 345 kW</text>
+  <text x="530" y="148" font-size="13" text-anchor="middle" font-weight="bold" fill="#1f6fb2">kjølt bort: 251 kW</text>
+
+  <line x1="20" y1="180" x2="620" y2="180" stroke="#cfd6d6" stroke-width="1.5"/>
+
+  <!-- ===== Med gjenvinning ===== -->
+  <text x="20" y="212" font-size="16" font-weight="bold" fill="#1c2828">Med gjenvinning</text>
+  <!-- varmeveksler -->
+  <rect x="140" y="250" width="110" height="100" rx="6" fill="#ffffff" stroke="#586868" stroke-width="2"/>
+  <rect x="140" y="250" width="110" height="46" rx="6" fill="#f9d9d4"/>
+  <rect x="140" y="304" width="110" height="46" rx="6" fill="#d4e6f6"/>
+  <rect x="140" y="250" width="110" height="100" rx="6" fill="none" stroke="#586868" stroke-width="2"/>
+  <line x1="140" y1="300" x2="250" y2="300" stroke="#586868" stroke-width="3"/>
+  <text x="195" y="243" font-size="13" text-anchor="middle" font-weight="bold" fill="#1c2828">varmeveksler</text>
+  <!-- varmer og reaktor -->
+  <rect x="320" y="305" width="80" height="40" rx="6" fill="#f9d9d4" stroke="#c0392b" stroke-width="2"/>
+  <text x="360" y="330" font-size="14" text-anchor="middle" fill="#1c2828">varmer</text>
+  <rect x="470" y="245" width="100" height="110" rx="8" fill="#e0e4e4" stroke="#586868" stroke-width="2"/>
+  <text x="520" y="305" font-size="14" text-anchor="middle" fill="#1c2828">reaktor</text>
+  <!-- råstoff: venstre til høyre nederst -->
+  <g stroke="#1c2828" stroke-width="2.5" marker-end="url(#p)">
+    <line x1="20" y1="325" x2="138" y2="325"/>
+    <line x1="252" y1="325" x2="318" y2="325"/>
+    <line x1="402" y1="325" x2="468" y2="325"/>
+  </g>
+  <!-- produkt: fra reaktor tilbake til venstre øverst -->
+  <g stroke="#c0392b" stroke-width="2.5" marker-end="url(#p)">
+    <line x1="468" y1="273" x2="252" y2="273"/>
+    <line x1="138" y1="273" x2="20" y2="273"/>
+  </g>
+  <g font-size="13" fill="#1c2828">
+    <text x="22" y="345">råstoff 15 °C</text>
+    <text x="262" y="345">55 °C</text>
+    <text x="412" y="345">70 °C</text>
+    <text x="370" y="265" fill="#c0392b">produkt 80 °C</text>
+    <text x="22" y="265" fill="#c0392b">ut 40 °C</text>
+  </g>
+  <text x="360" y="372" font-size="13" text-anchor="middle" font-weight="bold" fill="#c0392b">tilført: 94 kW</text>
+  <text x="195" y="372" font-size="13" text-anchor="middle" font-weight="bold" fill="#1c2828">gjenvunnet: 251 kW</text>
+</svg>

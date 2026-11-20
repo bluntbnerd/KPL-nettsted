@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Smal og bred tank med samme væskehøyde har samme trykk i bunnen</title>
+  <rect x="0" y="0" width="600" height="300" rx="10" fill="#ffffff"/>
+  <!-- felles vannlinje -->
+  <line x1="20" y1="70" x2="580" y2="70" stroke="#2e6da4" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="580" y="62" font-size="12" text-anchor="end" fill="#2e6da4">samme væskehøyde: 1,20 m</text>
+  <!-- tank 1: diameter 0,79 m -> 79 px -->
+  <rect x="90" y="70" width="79" height="160" fill="#cfe4f7"/>
+  <path d="M90,45 L90,230 L169,230 L169,45" fill="none" stroke="#586868" stroke-width="3"/>
+  <text x="129" y="255" font-size="14" text-anchor="middle" fill="#1c2828" font-weight="bold">Tank 1</text>
+  <text x="129" y="272" font-size="12" text-anchor="middle" fill="#586868">diameter 0,79 m, ca. 590 kg vann</text>
+  <!-- tank 3: diameter 1,2 m -> 120 px -->
+  <rect x="330" y="70" width="180" height="160" fill="#cfe4f7"/>
+  <path d="M330,45 L330,230 L510,230 L510,45" fill="none" stroke="#586868" stroke-width="3"/>
+  <text x="420" y="255" font-size="14" text-anchor="middle" fill="#1c2828" font-weight="bold">Tank 3</text>
+  <text x="420" y="272" font-size="12" text-anchor="middle" fill="#586868">diameter 1,2 m, ca. 1 360 kg vann</text>
+  <!-- trykk i bunnen -->
+  <g font-size="14" text-anchor="middle" fill="#c0392b" font-weight="bold">
+    <text x="129" y="218">11 800 Pa</text>
+    <text x="420" y="218">11 800 Pa</text>
+  </g>
+</svg>

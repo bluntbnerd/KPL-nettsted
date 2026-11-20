@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varmetap og virkningsgrad – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Varmetap og virkningsgrad</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT7</div>
+
+<p class="ingress">Ikke all energien vi tilfører, kommer fram dit vi vil. Noe går tapt som varme til omgivelsene. Virkningsgraden forteller hvor stor del av energien som blir nyttig. Den er et mål på hvor godt et anlegg utnytter energien.</p>
+
+<p>Denne siden bygger på <a href="varme-og-energi.html">Varme og energi i prosesser</a> (\( Q = m \cdot c \cdot \Delta T \)) og <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a> (\( E = P \cdot t \)).</p>
+
+<h2>Virkningsgrad</h2>
+<p><strong>Virkningsgraden</strong> er den nyttige energien delt på den tilførte energien. Den skrives med den greske bokstaven \( \eta \) («eta»):</p>
+<p>\[ \eta = \frac{E_\text{nyttig}}{E_\text{tilført}} \]</p>
+<p>Begge energiene må ha samme enhet, for eksempel kJ. Svaret er et tall mellom 0 og 1, og vi gjør det om til prosent ved å gange med 100. Formelen virker også med effekt i kW, for eksempel nyttig effekt delt på tilført effekt.</p>
+<p>Energi kan ikke lages av ingenting. Den nyttige energien kan derfor aldri bli større enn den tilførte, og virkningsgraden er alltid under 100 %. Resten er tap:</p>
+<p>\[ E_\text{tap} = E_\text{tilført} - E_\text{nyttig} \]</p>
+
+<h2>Hvor blir energien av?</h2>
+<p>Energien som går tapt, forsvinner ikke. Den går ut til omgivelsene, nesten alltid som varme. Figuren viser hvor energien i en gasskjel blir av.</p>
+
+<figure>
+  <img src="bilder/energistrom-gasskjel.svg" alt="Energistrøm i en gasskjel vist som et bredt bånd. Fra venstre kommer 100 prosent energi fra gassen. 85 prosent går videre til vannet. En smal gren på 10 prosent bøyer opp og går ut med røykgassen, og en enda smalere gren på 5 prosent bøyer ned og går ut gjennom veggene." width="600">
+  <figcaption>Figur: Energistrømmen i en gasskjel med tenkte, avrundede tall. Bredden på båndet viser hvor mye energi som går hver vei. Virkningsgraden er 85 %.</figcaption>
+</figure>
+
+<p>Typiske tap i et prosessanlegg:</p>
+<ul>
+  <li><strong>Varme rør, tanker og utstyr</strong> gir fra seg varme til lufta rundt.</li>
+  <li><strong>Røykgass</strong> fra brennere og kjeler går varm ut av pipa.</li>
+  <li><strong>Damplekkasjer</strong> og dampfeller som ikke stenger, slipper ut damp med mye energi.</li>
+  <li><strong>Varmt kjølevann og varme produkter</strong> slippes ut uten at varmen brukes til noe.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Virkningsgrad for oppvarming av en tank</div>
+  <p>På siden <a href="varme-og-energi.html">Varme og energi i prosesser</a> regnet vi ut at 500 kg vann trenger 136 MJ for å varmes fra 15 °C til 80 °C. Med et varmeelement på 30 kW skulle det ta ca. 75 minutter.</p>
+  <p><strong>Oppgave:</strong> I virkeligheten tar det 90 minutter. Hvor stor er virkningsgraden, og hvor mye energi går tapt?</p>
+  <ol>
+    <li>Tid i sekunder: \( t = 90 \text{ min} \cdot 60 \text{ s/min} = 5400 \text{ s} \)</li>
+    <li>Tilført energi: \( E_\text{tilført} = P \cdot t = 30 \text{ kJ/s} \cdot 5400 \text{ s} = 162\,000 \text{ kJ} = 162 \text{ MJ} \)</li>
+    <li>Nyttig energi (fra før): \( E_\text{nyttig} = 136 \text{ MJ} \)</li>
+    <li>Virkningsgrad: \( \eta = \dfrac{136 \text{ MJ}}{162 \text{ MJ}} = 0{,}84 = 84 \,\% \)</li>
+    <li>Tap: \( 162 \text{ MJ} - 136 \text{ MJ} = 26 \text{ MJ} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Virkningsgraden er ca. 84 %, og ca. 26 MJ går tapt, mest gjennom tankveggen og lokket.</p>
+</div>
+
+<h2>Isolasjon</h2>
+<p>Varme går alltid fra varmt til kaldt. Et varmt rør gir derfor fra seg varme til lufta rundt så lenge det er varmere enn lufta. Tapet blir større når</p>
+<ul>
+  <li><strong>temperaturforskjellen</strong> mellom røret og lufta er stor. Et damprør på 150 °C taper mye mer enn et varmtvannsrør på 40 °C.</li>
+  <li><strong>flaten</strong> er stor. Lange rør og store tanker har mye flate som kan gi fra seg varme.</li>
+  <li><strong>isolasjonen</strong> er tynn, mangler eller er skadet.</li>
+</ul>
+<p><strong>Isolasjon</strong> er et materiale som leder varme dårlig, for eksempel mineralull eller skumplast. Det meste av isolasjonen er luft som står stille i små lommer. Isolasjon rundt rør og tanker holder varmen inne, sparer energi og hindrer at noen brenner seg. Isolasjon som er blitt våt, isolerer mye dårligere, fordi vann leder varme mye bedre enn luft. Våt isolasjon kan også gi rust under isolasjonen. Ødelagt eller våt isolasjon er derfor noe operatøren skal melde fra om.</p>
+<p>Isolasjon brukes også på kalde rør, for eksempel kjølevannsrør. Der holder den varmen ute og hindrer at det dannes kondens og is på røret.</p>
+
+<h2>Forsøk: Virkningsgraden til en vannkoker</h2>
+<p>Du sammenligner energien vannkokeren bruker, med energien vannet tar opp.</p>
+<ol>
+  <li>Les av effekten på typeskiltet under vannkokeren, for eksempel 2000 W.</li>
+  <li>Vei opp ca. 1 kg kaldt vann, og hell det i vannkokeren. Noter massen.</li>
+  <li>Mål starttemperaturen til vannet.</li>
+  <li>Slå på vannkokeren og start stoppeklokka samtidig. Stopp klokka når vannkokeren slår seg av. Da koker vannet, og temperaturen er ca. 100 °C.</li>
+  <li>Regn ut nyttig energi (\( Q = m \cdot c \cdot \Delta T \)), tilført energi (\( E = P \cdot t \)) og virkningsgraden.</li>
+</ol>
+
+<table>
+  <thead><tr><th>Måling og beregning</th><th>Verdi</th></tr></thead>
+  <tbody>
+    <tr><td>Effekt fra typeskiltet, \( P \) (W)</td><td></td></tr>
+    <tr><td>Masse vann, \( m \) (kg)</td><td></td></tr>
+    <tr><td>Starttemperatur (°C)</td><td></td></tr>
+    <tr><td>Sluttemperatur (°C)</td><td>ca. 100</td></tr>
+    <tr><td>Tid, \( t \) (s)</td><td></td></tr>
+    <tr><td>Nyttig energi, \( Q \) (kJ)</td><td></td></tr>
+    <tr><td>Tilført energi, \( E \) (kJ)</td><td></td></tr>
+    <tr><td>Virkningsgrad, \( \eta \) (%)</td><td></td></tr>
+  </tbody>
+</table>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Slik regner du ut forsøket</div>
+  <p><strong>Målinger:</strong> Vannkokeren har 2000 W på typeskiltet. 1,00 kg vann på 15 °C koker etter 200 s.</p>
+  <ol>
+    <li>Nyttig energi: \( Q = 1{,}00 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot (100 - 15) \text{ °C} = 355 \text{ kJ} \)</li>
+    <li>Tilført energi: \( E = 2000 \text{ W} \cdot 200 \text{ s} = 400\,000 \text{ J} = 400 \text{ kJ} \). (1 W = 1 J/s.)</li>
+    <li>Virkningsgrad: \( \eta = \dfrac{355 \text{ kJ}}{400 \text{ kJ}} = 0{,}89 = 89 \,\% \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Virkningsgraden er ca. 89 %. Ca. 45 kJ gikk med til å varme opp selve vannkokeren og til tap til lufta.</p>
+</div>
+
+<p>Spørsmål til rapporten:</p>
+<ul>
+  <li>Hvor ble energien som ikke gikk til vannet, av?</li>
+  <li>Effekten på typeskiltet er en omtrentlig verdi. Den virkelige effekten kan være litt høyere eller lavere, blant annet fordi spenningen i stikkontakten varierer. Hvordan påvirker det svaret ditt?</li>
+  <li>Tror du virkningsgraden blir høyere eller lavere hvis du bare koker en liten skvett vann? Begrunn svaret.</li>
+  <li>Hvordan kunne vannkokeren vært bygd for å få høyere virkningsgrad?</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Kokende vann og damp fra tuten gir brannskader. Hold hendene unna tuten, og ikke flytt vannkokeren mens vannet koker. Mål temperaturen før du slår på, ikke mens vannet koker. I anlegget kan uisolerte damprør og varme tanker være over 100 °C. Ta aldri på et rør eller utstyr du ikke vet temperaturen på, og meld fra om skadet isolasjon.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er virkningsgrad?</p>
+  <ul>
+    <li>tilført energi delt på nyttig energi</li>
+    <li data-riktig>nyttig energi delt på tilført energi</li>
+    <li>tapet delt på tiden</li>
+  </ul>
+  <p class="forklaring">η = nyttig energi / tilført energi. Den forteller hvor stor del av energien som kommer fram dit vi vil.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En gasskjel får 10 kW fra gassen, og 8 kW går til vannet. Hva er virkningsgraden?</p>
+  <ul>
+    <li>2 %</li>
+    <li data-riktig>80 %</li>
+    <li>125 %</li>
+  </ul>
+  <p class="forklaring">η = 8 kW / 10 kW = 0,80 = 80 %. De siste 2 kW er tap.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvorfor kan virkningsgraden aldri bli over 100 %?</p>
+  <ul>
+    <li>Fordi måleinstrumentene ikke går høyere.</li>
+    <li data-riktig>Fordi energi ikke kan lages av ingenting.</li>
+    <li>Fordi varme alltid går fra kaldt til varmt.</li>
+  </ul>
+  <p class="forklaring">Den nyttige energien kan ikke bli større enn den tilførte. Da måtte energi blitt laget av ingenting.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvilket rør taper mest varme per meter?</p>
+  <ul>
+    <li data-riktig>et uisolert damprør på 150 °C</li>
+    <li>et godt isolert damprør på 150 °C</li>
+    <li>et uisolert vannrør på 25 °C</li>
+  </ul>
+  <p class="forklaring">Tapet er størst når temperaturforskjellen til lufta er stor og isolasjonen mangler.</p>
+</div>
+
+<div class="quiz">
+  <p>5. En vannkoker på 1500 W står på i 4,0 minutter. Hvor mye energi får den tilført?</p>
+  <ul>
+    <li>6,0 kJ</li>
+    <li data-riktig>360 kJ</li>
+    <li>6000 kJ</li>
+  </ul>
+  <p class="forklaring">t = 4,0 · 60 s = 240 s. E = 1500 W · 240 s = 360 000 J = 360 kJ.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>virkningsgrad</td><td>Hvor stor del av den tilførte energien som blir nyttig. Den er nyttig energi delt på tilført energi, og oppgis ofte i prosent.</td><td>efficiency</td></tr>
+    <tr><td>varmetap</td><td>Varme som går ut til omgivelsene i stedet for dit vi vil ha den.</td><td>heat loss</td></tr>
+    <tr><td>isolasjon</td><td>Materiale som leder varme dårlig. Det legges rundt rør og tanker for å holde varmen inne eller ute.</td><td>insulation</td></tr>
+    <tr><td>røykgass</td><td>Den varme gassen som går ut av pipa fra en brenner eller kjel. Den tar med seg energi ut av anlegget.</td><td>flue gas</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="varme-og-energi.html">Varme og energi i prosesser</a> og <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a> i dette temaet.</li>
+  <li><a href="varmeveksler.html">Energibalanse i en varmeveksler</a>, der tapet finnes ved å sammenligne de to sidene.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet, og tallene er tenkte og avrundede. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

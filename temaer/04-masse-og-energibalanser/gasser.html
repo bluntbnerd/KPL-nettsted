@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gasser: trykk, volum og temperatur – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Gasser: trykk, volum og temperatur</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT7</div>
+
+<p class="ingress">I et anlegg finner du gass i trykkluftnett, gassflasker, kompressorer og varmepumper. Trykk, volum og temperatur i en gass henger sammen. Endrer du én av dem, endres de andre. Det må du vite for å forstå utstyret og for å jobbe trygt.</p>
+
+<p>Denne siden bruker <a href="kraft-og-trykk.html">trykk</a> (særlig absolutt trykk) og <a href="temperatur-og-varme.html">temperatur</a> fra grunnbegrepene.</p>
+
+<h2>Gasser kan presses sammen</h2>
+<p>I en gass er det stor avstand mellom molekylene, og de farer rundt i alle retninger. Når de treffer veggen i beholderen, dytter de på den. Det er dette som er trykket i gassen.</p>
+<p>Fordi det er så mye tomrom mellom molekylene, kan en gass presses sammen. Det kalles <strong>kompresjon</strong>. En væske kan nesten ikke presses sammen, fordi molekylene allerede ligger tett.</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">To regler for alle regnestykker på denne siden</div>
+  <ul>
+    <li>Bruk <strong>absolutt trykk</strong>. En trykkmåler viser vanligvis overtrykk. Legg til lufttrykket, ca. 1 bar.</li>
+    <li>Bruk <strong>temperatur i kelvin</strong>: \( T = t + 273 \), der \( t \) er temperaturen i °C. Eksempel: 20 °C = 293 K.</li>
+  </ul>
+  <p>Formlene gjelder for en fast mengde gass, der ingen gass slipper inn eller ut. De er en forenklet modell. Ved vanlige trykk stemmer de godt, men ved svært høye trykk, som i en gassflaske, gir de bare omtrent riktige svar.</p>
+</div>
+
+<h2>Trykk og volum</h2>
+<p>Når temperaturen er den samme hele tiden, gjelder dette: presser du gassen sammen til halvt volum, blir trykket dobbelt så stort. Molekylene har mindre plass og treffer veggene oftere.</p>
+<p>\[ p_1 \cdot V_1 = p_2 \cdot V_2 \]</p>
+<p>Tallet 1 står for før, og 2 står for etter. Sammenhengen kalles <em>Boyles lov</em>.</p>
+
+<figure>
+  <img src="bilder/gass-sammenpressing.svg" alt="To sylindre med stempel. Til venstre er 10 liter gass ved 1 bar, med molekylene spredt i hele sylinderen. Til høyre er stempelet presset ned, og den samme gassen er presset sammen til 2 liter ved 5 bar, med molekylene tett i bunnen." width="600">
+  <figcaption>Figur: Den samme gassmengden presset sammen til en femdel av volumet. Trykket blir fem ganger så stort, fordi molekylene treffer veggene oftere. Temperaturen er den samme før og etter.</figcaption>
+</figure>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Trykkluft</div>
+  <p><strong>Oppgave:</strong> En kompressor suger inn 10 L luft ved 1,0 bar (absolutt trykk) og presser den sammen til 2,0 L. Temperaturen blir den samme som før. Hva blir trykket?</p>
+  <ol>
+    <li>Det vi vet: \( p_1 = 1{,}0 \text{ bar} \), \( V_1 = 10 \text{ L} \), \( V_2 = 2{,}0 \text{ L} \).</li>
+    <li>Snu formelen: \( p_2 = \dfrac{p_1 \cdot V_1}{V_2} \)</li>
+    <li>Sett inn: \( p_2 = \dfrac{1{,}0 \text{ bar} \cdot 10 \text{ L}}{2{,}0 \text{ L}} = 5{,}0 \text{ bar} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Trykket blir 5,0 bar absolutt trykk. En trykkmåler viser ca. 4 bar, fordi den viser overtrykket.</p>
+</div>
+
+<h2>Trykk og temperatur</h2>
+<p>I en lukket beholder kan ikke gassen utvide seg. Varmer du den opp, beveger molekylene seg raskere og treffer veggene hardere og oftere. Da stiger trykket.</p>
+<p>\[ \frac{p_1}{T_1} = \frac{p_2}{T_2} \]</p>
+<p>Dobler du temperaturen i kelvin, dobles trykket. Sammenhengen kalles <em>Gay-Lussacs lov</em>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Gassflaske i sola</div>
+  <p><strong>Oppgave:</strong> En gassflaske har et absolutt trykk på 200 bar ved 15 °C. Den blir stående i sola og blir 50 °C. Hva blir trykket?</p>
+  <ol>
+    <li>Gjør om til kelvin: \( T_1 = 15 + 273 = 288 \text{ K} \) og \( T_2 = 50 + 273 = 323 \text{ K} \).</li>
+    <li>Snu formelen: \( p_2 = p_1 \cdot \dfrac{T_2}{T_1} \)</li>
+    <li>Sett inn: \( p_2 = 200 \text{ bar} \cdot \dfrac{323 \text{ K}}{288 \text{ K}} = 224 \text{ bar} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Trykket stiger til ca. 224 bar. Derfor skal gassflasker ikke stå i sola eller nær varmekilder.</p>
+  <p>Hadde du brukt °C, ville du fått 200 · 50/15 = 667 bar. Det er feil. Bruk alltid kelvin.</p>
+</div>
+
+<h2>Volum og temperatur</h2>
+<p>Kan gassen utvide seg fritt, for eksempel luft som varmes i et tørkeanlegg, eller luft i en ballong, holder trykket seg likt. Da øker i stedet volumet når gassen varmes opp:</p>
+<p>\[ \frac{V_1}{T_1} = \frac{V_2}{T_2} \]</p>
+<p>Sammenhengen kalles <em>Charles' lov</em>. Eksempel: 1,0 m<sup>3</sup> luft som varmes fra 20 °C (293 K) til 80 °C (353 K), blir til \( 1{,}0 \text{ m}^3 \cdot \dfrac{353}{293} = 1{,}2 \text{ m}^3 \). Varm luft tar mer plass. Det må vifter og kanaler i et tørkeanlegg være laget for.</p>
+<p>Boyles lov, Gay-Lussacs lov og Charles' lov kalles sammen for <strong>gasslover</strong>.</p>
+
+<h2>Når gass presses sammen, blir den varm</h2>
+<p>I eksempelet med trykkluft antok vi at temperaturen ikke endret seg. I virkeligheten blir gassen varm når den presses sammen, fordi kompressoren gjør et arbeid på den. Du kjenner det på en sykkelpumpe. Derfor har store kompressorer kjøling. Det samme prinsippet bruker varmepumpen, som du lærer om på siden <a href="varmepumpe.html">Varmepumpe og COP</a>.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Gassflasker skal stå sikret mot å velte, og de skal ikke stå i sola eller nær varmekilder. Trykket stiger når flasken blir varm.</li>
+    <li>Rett aldri trykkluft mot kroppen eller mot andre. Trykkluft kan presse luft inn gjennom huden og gi alvorlige skader.</li>
+    <li>Trykkavlast utstyr før du åpner en kobling, en flens eller et lokk. Gass under trykk kan slynge ut deler med stor kraft.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hvorfor kan en gass presses sammen, mens en væske nesten ikke kan det?</p>
+  <ul>
+    <li>Fordi gassmolekyler er mindre enn væskemolekyler.</li>
+    <li data-riktig>Fordi det er stor avstand mellom molekylene i en gass.</li>
+    <li>Fordi gasser alltid er varmere enn væsker.</li>
+  </ul>
+  <p class="forklaring">I en gass er det mye tomrom mellom molekylene. I en væske ligger molekylene tett inntil hverandre.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Du halverer volumet til en gass, og temperaturen er den samme. Hva skjer med trykket?</p>
+  <ul>
+    <li>Det halveres.</li>
+    <li>Det er det samme.</li>
+    <li data-riktig>Det dobles.</li>
+  </ul>
+  <p class="forklaring">p<sub>1</sub> · V<sub>1</sub> = p<sub>2</sub> · V<sub>2</sub>. Halvt volum gir dobbelt trykk.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvilken temperaturskala må du bruke i gassformlene?</p>
+  <ul>
+    <li>celsius (°C)</li>
+    <li data-riktig>kelvin (K)</li>
+    <li>det spiller ingen rolle</li>
+  </ul>
+  <p class="forklaring">Formlene gjelder bare når temperaturen regnes fra det absolutte nullpunktet, altså i kelvin. Med °C blir svaret feil.</p>
+</div>
+
+<div class="quiz">
+  <p>4. 6,0 L luft ved 1,0 bar presses sammen til 3,0 bar. Temperaturen er den samme. Hva blir volumet?</p>
+  <ul>
+    <li data-riktig>2,0 L</li>
+    <li>3,0 L</li>
+    <li>18 L</li>
+  </ul>
+  <p class="forklaring">V<sub>2</sub> = p<sub>1</sub> · V<sub>1</sub> / p<sub>2</sub> = 1,0 · 6,0 / 3,0 = 2,0 L.</p>
+</div>
+
+<div class="quiz">
+  <p>5. En lukket tank har 2,0 bar absolutt trykk ved 27 °C. Den varmes til 327 °C. Hva blir trykket?</p>
+  <ul>
+    <li>2,0 bar</li>
+    <li data-riktig>4,0 bar</li>
+    <li>24 bar</li>
+  </ul>
+  <p class="forklaring">27 °C = 300 K og 327 °C = 600 K. Temperaturen i kelvin dobles, og da dobles trykket: 2,0 · 600/300 = 4,0 bar.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>kompresjon</td><td>Å presse en gass sammen til mindre volum. Da stiger trykket, og gassen blir varmere.</td><td>compression</td></tr>
+    <tr><td>kompressor</td><td>En maskin som presser sammen gass, for eksempel luft i et trykkluftanlegg eller kuldemedium i en varmepumpe.</td><td>compressor</td></tr>
+    <tr><td>kelvin</td><td>SI-enheten for temperatur. 0 K er den lavest mulige temperaturen, og temperatur i kelvin er temperatur i °C pluss 273.</td><td></td></tr>
+    <tr><td>gasslov</td><td>En formel som viser hvordan trykk, volum og temperatur i en gass henger sammen.</td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="kraft-og-trykk.html">Kraft og trykk</a> og <a href="temperatur-og-varme.html">Temperatur og varme</a> i dette temaet.</li>
+  <li><a href="../02-kjemi-og-beregninger/varmepumpe.html">Varmepumpe – slik flytter den varme</a> (simulering) i Kjemiske prinsipper.</li>
+  <li>Neste side: <a href="varmepumpe.html">Varmepumpe og COP</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

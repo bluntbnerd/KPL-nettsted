@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Varme og energi i prosesser</h1>
@@ -28,6 +28,7 @@
 <p>Sammen gir de formelen</p>
 <p>\[ Q = m \cdot c \cdot \Delta T \]</p>
 <p>der \( Q \) er varmen i kJ, \( m \) er massen i kg, \( c \) er i kJ/(kg·°C) og \( \Delta T \) er i °C. En temperaturendring er like stor i °C og i K, så det spiller ingen rolle hvilken av dem du bruker for \( \Delta T \).</p>
+<p>Legg merke til at \( Q \) her står for varme. På siden <a href="stromning.html">Strømning i rør</a> står \( Q \) for volumstrøm. Det er to forskjellige størrelser med samme bokstav.</p>
 
 <table>
   <thead><tr><th>Stoff</th><th>Spesifikk varmekapasitet, \( c \) (kJ/(kg·°C))</th></tr></thead>
@@ -40,7 +41,8 @@
     <tr><td>stål</td><td>ca. 0,49</td></tr>
   </tbody>
 </table>
-<p>Vann har svært høy spesifikk varmekapasitet. Det tar opp mye varme for hver grad det blir varmere. Derfor er vann et godt kjølevann og et godt varmemedium.</p>
+<p>Noen steder, for eksempel i Kjemiske prinsipper, står \( c \) i J/(g·°C). Tallet blir det samme: 4,18 J/(g·°C) = 4,18 kJ/(kg·°C).</p>
+<p>Vann har svært høy spesifikk varmekapasitet. Det tar opp mye varme for hver grad det blir varmere. Derfor er vann godt egnet som kjølevann og som varmemedium.</p>
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel: Varme opp en tank med vann</div>
@@ -56,7 +58,7 @@
 </div>
 
 <h2>Strømmer i et anlegg: fra kJ til kW</h2>
-<p>I et kontinuerlig anlegg strømmer væsken hele tiden. Da regner vi ikke med en fast masse, men med <strong>massestrøm</strong>: hvor mange kilo som går forbi per sekund (kg/s). Massestrømmen skrives \( \dot{m} \) («m-prikk»). Prikken betyr «per tid».</p>
+<p>I et kontinuerlig anlegg strømmer væsken hele tiden. Da regner vi ikke med en fast masse, men med <strong>massestrøm</strong> \( \dot{m} \): hvor mange kilo som går forbi per sekund (kg/s). Massestrøm kjenner du fra <a href="stromning.html">Strømning i rør</a>.</p>
 <p>Setter vi massestrøm inn i formelen i stedet for masse, får vi energi per sekund, altså effekt. Vi kaller det <strong>varmeeffekt</strong>:</p>
 <p>\[ P = \dot{m} \cdot c \cdot \Delta T \]</p>
 <p>Med \( \dot{m} \) i kg/s og \( c \) i kJ/(kg·°C) blir svaret i kJ/s, som er det samme som kW.</p>
@@ -89,18 +91,20 @@
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel: Energi til en inndamper</div>
-  <p><strong>Oppgave:</strong> I en inndamper kokes 750 kg/h vann bort fra en saltløsning (se <a href="separasjon.html">Separasjon</a>). Løsningen kommer inn ved kokepunktet. Hvor stor varmeeffekt trengs for å fordampe vannet?</p>
+  <p>En inndamper er en beholder der en løsning varmes slik at vannet koker bort og løsningen blir mer konsentrert.</p>
+  <p><strong>Oppgave:</strong> I en inndamper kokes 750 kg/h vann bort fra en saltløsning. Løsningen kommer inn ved kokepunktet. Hvor stor varmeeffekt trengs for å fordampe vannet?</p>
   <ol>
-    <li>Gjør om til kg/s: \( \dot{m} = \dfrac{750 \text{ kg/h}}{3600 \text{ s/h}} = 0{,}208 \text{ kg/s} \)</li>
-    <li>\( P = \dot{m} \cdot L = 0{,}208 \text{ kg/s} \cdot 2260 \text{ kJ/kg} = 471 \text{ kW} \)</li>
+    <li>Gjør om til kg/s: \( \dot{m} = \dfrac{750 \text{ kg/h}}{3600 \text{ s/h}} = 0{,}2083 \text{ kg/s} \)</li>
+    <li>\( P = \dot{m} \cdot L = 0{,}2083 \text{ kg/s} \cdot 2260 \text{ kJ/kg} = 471 \text{ kW} \)</li>
   </ol>
   <p><strong>Svar:</strong> Det trengs ca. 470 kW. Kommer løsningen inn kaldere, trengs det i tillegg energi til å varme den opp til kokepunktet.</p>
+  <p>Hvor mye vann som må dampes bort, regner du ut med en massebalanse. Det lærer du på siden <a href="separasjon.html">Separasjon</a>.</p>
 </div>
 
 <p>Det motsatte skjer når damp <strong>kondenserer</strong> til vann. Da gir dampen fra seg den samme energien igjen, 2260 kJ per kilo. Derfor er damp et mye brukt varmemedium i industrien. Den gir mye energi per kilo, og den gir den fra seg ved en jevn temperatur. At fordamping tar opp energi og kondensering gir fra seg energi, lærte du om i <a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a>.</p>
 
 <h2>Energi fra brensel: brennverdi</h2>
-<p>Mange anlegg får varme fra en brenner eller en kjel. Hvor mye energi du får fra 1 kg brensel, kalles <strong>brennverdi</strong>, og den oppgis i MJ/kg. Hvordan den kan regnes ut fra reaksjonsligningen, lærte du i <a href="../02-kjemi-og-beregninger/forbrenning.html">Forbrenning</a> og <a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a>.</p>
+<p>Mange anlegg får varme fra en brenner eller en kjel. Hvor mye energi du får fra 1 kg brensel, kalles <strong>brennverdi</strong>, og den oppgis i MJ/kg. Hvordan den kan regnes ut fra reaksjonsligningen, lærte du i <a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a>.</p>
 
 <table>
   <thead><tr><th>Brensel</th><th>Brennverdi (MJ/kg)</th></tr></thead>
@@ -141,7 +145,7 @@
 </div>
 
 <div class="quiz">
-  <p>2. Hvor mye energi trengs for å varme 2,0 kg vann 10 °C?</p>
+  <p>2. Hvor mye energi trengs for å gjøre 2,0 kg vann 10 °C varmere?</p>
   <ul>
     <li>8,4 kJ</li>
     <li>20 kJ</li>
@@ -196,7 +200,8 @@
 <ul>
   <li><a href="temperatur-og-varme.html">Temperatur og varme</a> og <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a> i dette temaet.</li>
   <li><a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a> i Kjemiske prinsipper.</li>
-  <li>Neste side: <a href="varmeveksler.html">Energibalanse i en varmeveksler</a>.</li>
+  <li>Neste side: <a href="gasser.html">Gasser: trykk, volum og temperatur</a>.</li>
+  <li>Varmevekslere og varmetap kommer i emnet Energi i prosessindustrien.</li>
 </ul>
 <p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Tallene for varmekapasitet, fordampingsvarme og brennverdi er avrundede tabellverdier. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
 

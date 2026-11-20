@@ -29,12 +29,12 @@ KPL.sti("02-kjemi-og-beregninger", [
     emne: "2B Stoffmengde, konsentrasjon og fortynning",
     vurdering: "videoinnlevering (V2) og prøve (V3)",
     sider: [
-      { fil: "mol-og-molmasse.html", tittel: "Mol og molmasse", status: "utkast" },
-      { fil: "konsentrasjon.html", tittel: "Konsentrasjon og molare løsninger", meny: "Konsentrasjon", status: "utkast" },
-      { fil: "lage-losninger.html", tittel: "Å lage en løsning med kjent konsentrasjon", meny: "Lage løsninger", status: "utkast" },
-      { fil: "fortynning.html", tittel: "Fortynning", status: "utkast" },
-      { fil: "fortynning-simulering.html", tittel: "Øv: fortynning (simulering og kalkulator)", meny: "Fortynning – øv", type: "simulering", status: "utkast" },
-      { fil: "hva-kan-du-na-2b.html", tittel: "Hva kan du nå?", status: "utkast" }
+      { fil: "mol-og-molmasse.html", tittel: "Mol og molmasse", status: "ferdig" },
+      { fil: "konsentrasjon.html", tittel: "Konsentrasjon og molare løsninger", meny: "Konsentrasjon", status: "ferdig" },
+      { fil: "lage-losninger.html", tittel: "Å lage en løsning med kjent konsentrasjon", meny: "Lage løsninger", status: "ferdig" },
+      { fil: "fortynning.html", tittel: "Fortynning", status: "ferdig" },
+      { fil: "fortynning-simulering.html", tittel: "Øv: fortynning (simulering og kalkulator)", meny: "Fortynning – øv", type: "simulering", status: "ferdig" },
+      { fil: "hva-kan-du-na-2b.html", tittel: "Hva kan du nå?", status: "ferdig" }
     ]
   },
   {
@@ -45,11 +45,12 @@ KPL.sti("02-kjemi-og-beregninger", [
       { fil: "balansere-ligninger.html", tittel: "Øv: balanser ligninger (PhET)", status: "utkast" },
       { fil: "stokiometri.html", tittel: "Støkiometriske beregninger", meny: "Støkiometri", status: "utkast" },
       { fil: "forbrenning.html", tittel: "Forbrenning – fullstendig og ufullstendig", meny: "Forbrenning", status: "utkast" },
-      { fil: "energi-i-reaksjoner.html", tittel: "Energi i reaksjoner – endoterm og eksoterm", meny: "Energi i reaksjoner", status: "utkast" },
+      { fil: "energi-i-reaksjoner.html", tittel: "Energi i reaksjoner og andre prosesser – endoterm og eksoterm", meny: "Energi i prosesser", status: "utkast" },
       { fil: "varmepumpe.html", tittel: "Øv: varmepumpe (simulering)", meny: "Varmepumpe", status: "utkast" },
       { fil: "hva-kan-du-na-2c.html", tittel: "Hva kan du nå?", status: "utkast" },
       { fil: "begrensende-reaktant-utbytte.html", tittel: "Begrensende reaktant og utbytte", meny: "Begrensende reaktant", status: "utkast", fordypning: true },
-      { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "utkast", fordypning: true }
+      { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "utkast", fordypning: true },
+      { fil: "kuldepose-varmepose.html", tittel: "Øv: kuldepose og varmepose (simulering)", meny: "Kuldepose", type: "simulering", status: "utkast", fordypning: true }
     ]
   },
   {

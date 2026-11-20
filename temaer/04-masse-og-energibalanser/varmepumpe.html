@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varmepumpe og COP – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Varmepumpe og COP</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT5, KT7</div>
+
+<p class="ingress">En varmepumpe gir mer varme enn den bruker strøm. Den lager ikke energi, men henter varme fra omgivelsene. I industrien kan varmepumper gjøre lunkent kjølevann om til nyttig varme. På denne siden lærer du å sette opp energibalansen for en varmepumpe og å regne ut hvor god den er.</p>
+
+<h2>Slik virker en varmepumpe</h2>
+<p>Hvordan varmepumpen virker, med fordamper, kompressor, kondensator og strupeventil, kan du se i simuleringen <a href="../02-kjemi-og-beregninger/varmepumpe.html">Varmepumpe – slik flytter den varme</a> i Kjemiske prinsipper. Kort fortalt:</p>
+<ul>
+  <li>På den kalde siden fordamper kuldemediet og tar opp varme fra omgivelsene, for eksempel uteluft eller kjølevann.</li>
+  <li>Kompressoren presser gassen sammen. Da blir den varm, slik du lærte på siden <a href="gasser.html">Gasser: trykk, volum og temperatur</a>.</li>
+  <li>På den varme siden kondenserer kuldemediet og gir fra seg varmen.</li>
+</ul>
+
+<h2>Energibalansen</h2>
+<p>All energi som går inn i varmepumpen, må komme ut igjen. Det kommer inn energi på to måter: varme fra den kalde siden og strøm til kompressoren. Alt kommer ut som varme på den varme siden:</p>
+<p>\[ Q_\text{levert} = Q_\text{hentet} + E_\text{strøm} \]</p>
+<ul>
+  <li>\( Q_\text{levert} \) er varmen som kommer ut på den varme siden, den nyttige varmen.</li>
+  <li>\( Q_\text{hentet} \) er varmen som hentes fra den kalde siden.</li>
+  <li>\( E_\text{strøm} \) er energien kompressoren bruker. Den regnes ut med \( E = P \cdot t \), se <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a>.</li>
+</ul>
+<p>I simuleringen i Kjemiske prinsipper heter de samme størrelsene Q<sub>rom</sub>, Q<sub>ute</sub> og W<sub>strøm</sub>. Det er den samme formelen.</p>
+<p>Formelen gjelder når vi ser bort fra varmetap. I virkeligheten går litt av varmen tapt til lufta rundt.</p>
+
+<h2>COP: hvor god er varmepumpen?</h2>
+<p>Hvor god en varmepumpe er, måles med <strong>COP</strong> (fra engelsk <em>coefficient of performance</em>). På norsk heter det også <strong>varmefaktor</strong>. COP forteller hvor mange kilowattimer varme du får for hver kilowattime strøm:</p>
+<p>\[ \text{COP} = \frac{Q_\text{levert}}{E_\text{strøm}} \]</p>
+<p>COP har ingen enhet, fordi begge energiene måles i samme enhet. En vanlig varmepumpe i et hus har en COP på ca. 3. En panelovn har en COP på 1. Den gir like mye varme som den bruker strøm.</p>
+<p>COP blir lavere jo større temperaturforskjellen er mellom den kalde og den varme siden. Da må kompressoren presse gassen hardere sammen og bruker mer strøm. Derfor gir en luft-til-luft-varmepumpe mindre varme per kilowattime når det er svært kaldt ute.</p>
+
+<h2>Regneeksempel: Måle COP i et forsøk</h2>
+<p>I et forsøk på skolen kan du måle COP for en liten varmepumpe. Den varme siden står i en bøtte med vann. Du måler hvor mye vannet blir varmet opp, og hvor mye strøm kompressoren bruker.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: COP fra et forsøk</div>
+  <p><strong>Oppgave:</strong> En bøtte med 2,0 kg vann blir 15 °C varmere på 10 minutter. Kompressoren bruker 120 W strøm, målt med en strømmåler. Hva er COP?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Varme levert til vannet (se <a href="varme-og-energi.html">Varme og energi i prosesser</a>):<br>
+      \( Q_\text{levert} = m \cdot c \cdot \Delta T = 2{,}0 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 15 \text{ °C} = 125 \text{ kJ} \)</li>
+    <li>Strøm til kompressoren. Gjør om tiden til sekunder: 10 min = 600 s.<br>
+      \( E_\text{strøm} = P \cdot t = 120 \text{ W} \cdot 600 \text{ s} = 72\,000 \text{ J} = 72 \text{ kJ} \)</li>
+    <li>COP: \( \text{COP} = \dfrac{125 \text{ kJ}}{72 \text{ kJ}} = 1{,}7 \)</li>
+    <li>Varme hentet fra den kalde siden: \( Q_\text{hentet} = 125 \text{ kJ} - 72 \text{ kJ} = 53 \text{ kJ} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> COP er ca. 1,7. Vannet fikk 1,7 ganger så mye varme som kompressoren brukte strøm.</p>
+</div>
+
+<h3>Hvorfor får vi lavere COP i forsøket?</h3>
+<p>En varmepumpe i et hus har COP rundt 3, men i forsøket får vi ofte under 2. Det har flere grunner:</p>
+<ul>
+  <li><strong>Varmetap:</strong> Bøtta gir fra seg varme til lufta i rommet. Den varmen måler vi ikke, så \( Q_\text{levert} \) blir for lav.</li>
+  <li><strong>Økende temperaturforskjell:</strong> Vannet på den varme siden blir varmere og varmere. Står den kalde siden også i vann, blir det vannet samtidig kaldere. Da øker temperaturforskjellen, kompressoren må jobbe hardere, og COP synker utover i forsøket.</li>
+  <li><strong>Liten kompressor:</strong> Små kompressorer har større tap enn store.</li>
+</ul>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Sjekk energibalansen</div>
+  <p>Står også den kalde siden i en bøtte med vann, kan du måle hvor mye den blir kjølt ned, og regne ut \( Q_\text{hentet} \) med \( m \cdot c \cdot \Delta T \). Sammenlign \( Q_\text{hentet} + E_\text{strøm} \) med \( Q_\text{levert} \). Forskjellen skyldes varmetap til og fra rommet og målefeil. Slik sammenligner du beregning med forsøk.</p>
+</div>
+
+<h2>Varmepumper i industrien</h2>
+<p>I prosessindustrien er det ofte mye <strong>spillvarme</strong>: varme som går ut av anlegget uten å bli brukt, for eksempel lunkent kjølevann. Spillvarmen er for kald til å brukes direkte. En varmepumpe kan hente varme fra kjølevannet og levere den ved en temperatur som er høy nok til å varme bygninger eller prosesser.</p>
+<p>I et anlegg som går hele tiden, regner vi ofte med effekt i kW i stedet for energi. Energibalansen og COP gjelder på samme måte for effekt (kW) som for energi (kJ eller kWh).</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Varme fra kjølevann</div>
+  <p><strong>Oppgave:</strong> En fabrikk trenger 1000 kW varme til å varme opp en prosessvæske. En varmepumpe henter varme fra kjølevann på 30 °C og har COP = 3,5. Hvor mye strøm bruker varmepumpen, og hvor mye varme hentes fra kjølevannet?</p>
+  <ol>
+    <li>Strøm: \( P_\text{strøm} = \dfrac{1000 \text{ kW}}{3{,}5} = 286 \text{ kW} \)</li>
+    <li>Fra kjølevannet: \( 1000 \text{ kW} - 286 \text{ kW} = 714 \text{ kW} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Varmepumpen bruker ca. 290 kW strøm og henter ca. 710 kW fra kjølevannet. Med en elektrisk kjele måtte fabrikken brukt 1000 kW strøm.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Kuldemediet står under høyt trykk. Åpne aldri koblinger på kuldekretsen. Bare sertifiserte personer får fylle eller tømme kuldemedium.</li>
+    <li>Røret etter kompressoren kan bli svært varmt, og røret på den kalde siden kan gi frostskader.</li>
+    <li>Noen kuldemedier er brennbare, for eksempel propan, og mange er sterke klimagasser. Lekkasjer skal meldes.</li>
+    <li>I forsøket: hold strømførende deler og ledninger borte fra vannet.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva forteller COP?</p>
+  <ul>
+    <li>hvor mye strøm varmepumpen bruker per time</li>
+    <li data-riktig>hvor mye varme du får for hver kilowattime strøm</li>
+    <li>hvor varm lufta fra varmepumpen er</li>
+  </ul>
+  <p class="forklaring">COP = varme levert / strøm brukt. COP = 3 betyr 3 kWh varme for hver kWh strøm.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En varmepumpe bruker 500 W strøm og går i 2,0 timer. COP er 4,0. Hvor mye varme leverer den?</p>
+  <ul>
+    <li>1,0 kWh</li>
+    <li data-riktig>4,0 kWh</li>
+    <li>2000 kWh</li>
+  </ul>
+  <p class="forklaring">Strøm: E = P · t = 0,500 kW · 2,0 h = 1,0 kWh. Varme: 4,0 · 1,0 kWh = 4,0 kWh.</p>
+</div>
+
+<div class="quiz">
+  <p>3. En varmepumpe leverer mer varme enn den bruker strøm. Hvor kommer resten av varmen fra?</p>
+  <ul>
+    <li>Den lages i kompressoren.</li>
+    <li data-riktig>Den hentes fra omgivelsene på den kalde siden.</li>
+    <li>Den kommer fra kuldemediet, som brukes opp.</li>
+  </ul>
+  <p class="forklaring">Q<sub>levert</sub> = Q<sub>hentet</sub> + E<sub>strøm</sub>. Resten hentes fra uteluft, jord, sjøvann eller kjølevann. Kuldemediet går rundt i en lukket krets og brukes ikke opp.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvorfor blir COP lavere når det er svært kaldt ute?</p>
+  <ul>
+    <li data-riktig>Temperaturforskjellen blir større, så kompressoren må jobbe hardere.</li>
+    <li>Kuldemediet fryser.</li>
+    <li>Strømmen blir svakere når det er kaldt.</li>
+  </ul>
+  <p class="forklaring">Jo større forskjell mellom kald og varm side, jo mer må gassen presses sammen. Det krever mer strøm per kilowattime varme.</p>
+</div>
+
+<div class="quiz">
+  <p>5. I et forsøk tar vannet opp 90 kJ, og kompressoren bruker 60 kJ strøm. Hva er COP?</p>
+  <ul>
+    <li>0,67</li>
+    <li data-riktig>1,5</li>
+    <li>150</li>
+  </ul>
+  <p class="forklaring">COP = 90 kJ / 60 kJ = 1,5. Varmen levert står over brøkstreken.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>varmepumpe</td><td>En maskin som flytter varme fra et kaldt sted til et varmere sted ved hjelp av et kuldemedium og en kompressor.</td><td>heat pump</td></tr>
+    <tr><td>COP</td><td>Tall som viser hvor god en varmepumpe er: varmen den leverer, delt på strømmen den bruker. Kalles også varmefaktor.</td><td>coefficient of performance</td></tr>
+    <tr><td>kuldemedium</td><td>Stoffet som går rundt i en varmepumpe eller et kjøleanlegg. Det fordamper ved lav temperatur og tar da opp varme.</td><td>refrigerant</td></tr>
+    <tr><td>spillvarme</td><td>Varme som går ut av et anlegg uten å bli brukt, for eksempel med kjølevann eller avgass.</td><td>waste heat</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../02-kjemi-og-beregninger/varmepumpe.html">Varmepumpe – slik flytter den varme</a> (simulering) i Kjemiske prinsipper.</li>
+  <li><a href="varme-og-energi.html">Varme og energi i prosesser</a> og <a href="gasser.html">Gasser: trykk, volum og temperatur</a> i dette temaet.</li>
+  <li>Varmetap og varmevekslere lærer du om i emnet Energi i prosessindustrien.</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Tallene i eksemplene er tenkte, men typiske. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

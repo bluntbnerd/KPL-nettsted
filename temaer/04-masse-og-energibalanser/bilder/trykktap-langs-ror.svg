@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Trykket faller langs et rør med bend og ventil</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker></defs>
+  <rect x="0" y="0" width="600" height="300" rx="10" fill="#ffffff"/>
+  <!-- pumpe -->
+  <circle cx="45" cy="150" r="24" fill="#e0e4e4" stroke="#586868" stroke-width="2.5"/>
+  <path d="M35,138 L59,150 L35,162 Z" fill="#586868"/>
+  <text x="45" y="195" font-size="12" text-anchor="middle" fill="#1c2828">pumpe</text>
+  <!-- rør: rett, bend opp og ned, ventil, til tank -->
+  <path d="M69,150 L260,150 L260,100 L330,100 L330,150 L560,150" fill="none" stroke="#586868" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M69,150 L260,150 L260,100 L330,100 L330,150 L560,150" fill="none" stroke="#cfe4f7" stroke-width="9" stroke-linejoin="round"/>
+  <!-- ventil (sommerfuglform) -->
+  <path d="M430,136 L460,164 L460,136 L430,164 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="445" y1="150" x2="445" y2="122" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="435" y1="122" x2="455" y2="122" stroke="#1c2828" stroke-width="2.5"/>
+  <text x="445" y="112" font-size="12" text-anchor="middle" fill="#1c2828">ventil, delvis stengt</text>
+  <line x1="560" y1="150" x2="585" y2="150" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="575" y="135" font-size="12" text-anchor="middle" fill="#1c2828">til tank</text>
+  <!-- målepunkter -->
+  <g stroke="#1c2828" stroke-width="1.5">
+    <line x1="90" y1="150" x2="90" y2="215"/>
+    <line x1="240" y1="150" x2="240" y2="215"/>
+    <line x1="400" y1="150" x2="400" y2="215"/>
+    <line x1="500" y1="150" x2="500" y2="215"/>
+  </g>
+  <g font-size="14" text-anchor="middle" fill="#1c2828" font-weight="bold">
+    <text x="90" y="232">A: 1,50 bar</text>
+    <text x="240" y="232">B: 1,40 bar</text>
+    <text x="400" y="232">C: 1,35 bar</text>
+    <text x="500" y="232">D: 0,95 bar</text>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#c0392b">
+    <text x="165" y="262">10 m rett rør</text>
+    <text x="165" y="278">−0,10 bar</text>
+    <text x="320" y="262">to bend</text>
+    <text x="320" y="278">−0,05 bar</text>
+    <text x="450" y="262">ventil</text>
+    <text x="450" y="278">−0,40 bar</text>
+  </g>
+</svg>

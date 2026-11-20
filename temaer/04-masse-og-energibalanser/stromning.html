@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strømning i rør – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Strømning i rør</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT6</div>
+
+<p class="ingress">I et prosessanlegg må du vite hvor mye som strømmer gjennom rørene, og hvor fort det går. Her lærer du forskjellen på volumstrøm, massestrøm og strømningshastighet, og hvordan du regner mellom dem. Eksemplene er fra pumperommet på skolen.</p>
+
+<h2>Volumstrøm: hvor mye per tid</h2>
+<p><strong>Volumstrøm</strong> er hvor stort volum som strømmer forbi per tid. Symbolet er <em>Q</em>.</p>
+<p>\[ Q = \frac{V}{t} \]</p>
+<ul>
+  <li><em>Q</em> = volumstrøm (m<sup>3</sup>/s)</li>
+  <li><em>V</em> = volum (m<sup>3</sup>)</li>
+  <li><em>t</em> = tid (s)</li>
+</ul>
+<p>I anlegget oppgis volumstrøm ofte i m<sup>3</sup>/h eller L/s. På skiltet til pumpe 2 står det 20 m<sup>3</sup>/h. Når du skal regne videre, gjør du om til m<sup>3</sup>/s:</p>
+<p>\[ 20 \text{ m}^3\text{/h} = \frac{20 \text{ m}^3}{3600 \text{ s}} = 0{,}005\,56 \text{ m}^3\text{/s} = 5{,}56 \text{ L/s} \]</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Omregning</div>
+  <ul>
+    <li>Fra m<sup>3</sup>/h til m<sup>3</sup>/s: del på 3600 (antall sekunder i en time).</li>
+    <li>1 m<sup>3</sup> = 1000 L. Fra m<sup>3</sup>/s til L/s: gang med 1000.</li>
+  </ul>
+</div>
+
+<h2>Mål volumstrømmen selv</h2>
+<p>Pumperommet har ingen mengdemåler som viser volumstrømmen. Du kan likevel finne den. Pump vann inn i en tank med stengt bunnventil, og mål hvor fort nivået stiger. Volumet som kommer inn, er bunnarealet ganget med hvor mye nivået stiger.</p>
+
+<figure>
+  <img src="bilder/volumstrom-nivastigning.svg" alt="Pumpe 2 fyller tank 2 gjennom et rør ovenfra. Bunnarealet i tanken er 0,490 kvadratmeter. Nivået stiger fra 0,40 meter ved start til 1,00 meter etter 60 sekunder. Stigningen, delta h, er 0,60 meter." width="600">
+  <figcaption>Figur: Nivået i tank 2 stiger 0,60 m på 60 sekunder. Volumet som har kommet inn, er bunnarealet ganger stigningen.</figcaption>
+</figure>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Volumstrømmen fra pumpe 2</div>
+  <p><strong>Oppgave:</strong> Tank 2 har diameter 0,79 m. Pumpe 2 fyller tanken, og bunnventilen er stengt. Nivået stiger 0,60 m på 60 s. Hva er volumstrømmen?</p>
+  <ol>
+    <li>Bunnarealet (sirkel): \( A = \dfrac{\pi \cdot d^2}{4} = \dfrac{\pi \cdot (0{,}79 \text{ m})^2}{4} = 0{,}490 \text{ m}^2 \)</li>
+    <li>Volumet som har kommet inn: \( V = A \cdot \Delta h = 0{,}490 \text{ m}^2 \cdot 0{,}60 \text{ m} = 0{,}294 \text{ m}^3 \)</li>
+    <li>Volumstrøm: \( Q = \dfrac{V}{t} = \dfrac{0{,}294 \text{ m}^3}{60 \text{ s}} = 0{,}004\,90 \text{ m}^3\text{/s} \)</li>
+    <li>I andre enheter: 4,90 L/s, eller \( 0{,}004\,90 \cdot 3600 \approx 17{,}6 \text{ m}^3\text{/h} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Volumstrømmen er ca. 4,9 L/s, eller ca. 18 m<sup>3</sup>/h. Det er litt mindre enn 20 m<sup>3</sup>/h som står på skiltet. Pumpen må presse vannet gjennom rør og ventiler, og da gir den mindre. Det lærer du mer om på siden <a href="trykktap.html">Trykktap</a>.</p>
+</div>
+
+<h2>Massestrøm: hvor mange kilo per tid</h2>
+<p>I massebalanser regner du i kilo, ikke liter. <strong>Massestrøm</strong> er hvor mange kilo som strømmer forbi per tid. Du finner den fra volumstrømmen og tettheten:</p>
+<p>\[ \dot{m} = \rho \cdot Q \]</p>
+<ul>
+  <li>\( \dot{m} \) = massestrøm (kg/s). Prikken over <em>m</em> betyr «per tid».</li>
+  <li><em>ρ</em> = tetthet (kg/m<sup>3</sup>)</li>
+  <li><em>Q</em> = volumstrøm (m<sup>3</sup>/s)</li>
+</ul>
+<p>For vann er tettheten ca. 1000 kg/m<sup>3</sup>. Da er 1 L omtrent 1 kg, og 4,90 L/s vann er ca. 4,90 kg/s. For andre væsker må du bruke tettheten deres. Slik bruker du massestrømmen videre i <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a>.</p>
+
+<h2>Strømningshastighet: hvor fort det går</h2>
+<p><strong>Strømningshastighet</strong> er hvor fort væsken beveger seg inne i røret, i m/s. Den avhenger av volumstrømmen og hvor stort <strong>tverrsnittsarealet</strong> av røret er, altså arealet av sirkelen du ser hvis du kapper røret på tvers.</p>
+<p>\[ v = \frac{Q}{A} \qquad A = \frac{\pi \cdot d^2}{4} \]</p>
+<ul>
+  <li><em>v</em> = strømningshastighet (m/s)</li>
+  <li><em>Q</em> = volumstrøm (m<sup>3</sup>/s)</li>
+  <li><em>A</em> = tverrsnittsareal av røret (m<sup>2</sup>)</li>
+  <li><em>d</em> = innvendig diameter (m)</li>
+</ul>
+<p>Rørstørrelser oppgis som <strong>DN</strong> (nominell diameter). DN40 er et rør som er omtrent 40 mm innvendig. Den nøyaktige innvendige diameteren avhenger av hvor tykk rørveggen er. På denne siden regner vi med at DN40 er 40 mm.</p>
+
+<figure>
+  <img src="bilder/hastighet-i-ror.svg" alt="Et rør som går fra DN65, 65 millimeter, over til DN40, 40 millimeter. Volumstrømmen er 20 kubikkmeter per time i hele røret. I den vide delen er hastigheten ca. 1,7 meter per sekund, vist med en kort pil. I den smale delen er hastigheten ca. 4,4 meter per sekund, vist med en lang pil." width="600">
+  <figcaption>Figur: Like mye vann går gjennom den vide og den smale delen av røret hvert sekund. I den smale delen må vannet derfor gå fortere.</figcaption>
+</figure>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hastigheten før og etter pumpe 2</div>
+  <p><strong>Oppgave:</strong> Pumpe 2 gir 20 m<sup>3</sup>/h. Røret inn til pumpen er DN65, og røret ut er DN40. Hvor stor er hastigheten i hvert av rørene?</p>
+  <ol>
+    <li>Volumstrøm i m<sup>3</sup>/s: \( Q = \dfrac{20}{3600} = 0{,}005\,56 \text{ m}^3\text{/s} \)</li>
+    <li>Areal DN65: \( A = \dfrac{\pi \cdot (0{,}065 \text{ m})^2}{4} = 0{,}003\,32 \text{ m}^2 \)</li>
+    <li>Hastighet DN65: \( v = \dfrac{0{,}005\,56 \text{ m}^3\text{/s}}{0{,}003\,32 \text{ m}^2} \approx 1{,}7 \text{ m/s} \)</li>
+    <li>Areal DN40: \( A = \dfrac{\pi \cdot (0{,}040 \text{ m})^2}{4} = 0{,}001\,26 \text{ m}^2 \)</li>
+    <li>Hastighet DN40: \( v = \dfrac{0{,}005\,56 \text{ m}^3\text{/s}}{0{,}001\,26 \text{ m}^2} \approx 4{,}4 \text{ m/s} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Ca. 1,7 m/s inn til pumpen og ca. 4,4 m/s ut fra pumpen.</p>
+</div>
+
+<h2>Det som går inn, må komme ut</h2>
+<p>Når røret er fullt av væske, kan ikke vannet hope seg opp eller bli borte på veien. Like mye må passere hvert sted i røret hvert sekund. Volumstrømmen er derfor den samme i den vide og den smale delen. Det er massebalansen igjen, bare for et rør.</p>
+<p>\[ Q = v_1 \cdot A_1 = v_2 \cdot A_2 \]</p>
+<p>Diameteren står i annen potens i arealet. Halverer du diameteren, blir arealet fire ganger mindre, og hastigheten blir <strong>fire ganger</strong> så stor.</p>
+
+<div class="boks">
+  <div class="boks-tittel">Hvorfor er ikke hastigheten likegyldig?</div>
+  <p>Høy hastighet gir mer friksjon, mer støy og mer slitasje i rør og ventiler. Den gir også større <a href="trykktap.html">trykktap</a>, slik at pumpen må jobbe hardere. Svært lav hastighet krever dyre, tykke rør, og partikler i væsken kan legge seg på bunnen. For vann i pumperør er en hastighet på omtrent 1–3 m/s vanlig. Inn til en pumpe holdes hastigheten ofte lavere enn ut fra den.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Væskeslag</div>
+  <p>Vann i fart har mye bevegelse. Stenger du en ventil brått, må all væsken i røret stoppe på et øyeblikk. Da kan trykket stige kraftig i et kort støt. Det kalles <strong>væskeslag</strong>, og det kan høres som et smell i røret. Væskeslag kan skade rør, pakninger og målere. Steng og åpne ventiler rolig, særlig når hastigheten er høy.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>En pumpe gir 36 m<sup>3</sup>/h. Hvor mange liter per sekund er det?</p>
+  <ul>
+    <li>0,01 L/s</li>
+    <li>3,6 L/s</li>
+    <li data-riktig>10 L/s</li>
+  </ul>
+  <p class="forklaring">\( 36 / 3600 = 0{,}010 \text{ m}^3\text{/s} = 10 \text{ L/s} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Vann strømmer med 3,0 L/s. Hva er massestrømmen?</p>
+  <ul>
+    <li data-riktig>ca. 3,0 kg/s</li>
+    <li>ca. 0,003 kg/s</li>
+    <li>ca. 3000 kg/s</li>
+  </ul>
+  <p class="forklaring">For vann er 1 L ca. 1 kg. \( \dot{m} = \rho \cdot Q = 1000 \cdot 0{,}0030 = 3{,}0 \text{ kg/s} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Volumstrømmen er 0,010 m<sup>3</sup>/s, og tverrsnittsarealet i røret er 0,0050 m<sup>2</sup>. Hva er strømningshastigheten?</p>
+  <ul>
+    <li>0,5 m/s</li>
+    <li data-riktig>2,0 m/s</li>
+    <li>0,000 05 m/s</li>
+  </ul>
+  <p class="forklaring">\( v = Q / A = 0{,}010 / 0{,}0050 = 2{,}0 \text{ m/s} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Et rør går over fra vid til smal diameter. Hva skjer med volumstrømmen i den smale delen?</p>
+  <ul>
+    <li>Den blir mindre.</li>
+    <li data-riktig>Den er den samme.</li>
+    <li>Den blir større.</li>
+  </ul>
+  <p class="forklaring">Like mye må passere hvert sted i røret hvert sekund. Det er hastigheten som øker, ikke volumstrømmen.</p>
+</div>
+
+<div class="quiz">
+  <p>Du bytter til et rør med halvparten så stor diameter, men volumstrømmen er den samme. Hva skjer med hastigheten?</p>
+  <ul>
+    <li>Den blir dobbelt så stor.</li>
+    <li data-riktig>Den blir fire ganger så stor.</li>
+    <li>Den blir halvparten så stor.</li>
+  </ul>
+  <p class="forklaring">Arealet er \( \pi \cdot d^2 / 4 \). Halv diameter gir en firedel av arealet, og da blir hastigheten fire ganger så stor.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>volumstrøm</td><td>Hvor mange liter eller kubikkmeter som strømmer forbi per sekund eller per time.</td><td>volumetric flow rate</td></tr>
+    <tr><td>massestrøm</td><td>Hvor mange kilo som strømmer forbi per tid, for eksempel i kg/s eller kg/h.</td><td>mass flow rate</td></tr>
+    <tr><td>strømningshastighet</td><td>Hvor fort væsken eller gassen beveger seg i røret, målt i meter per sekund.</td><td></td></tr>
+    <tr><td>tverrsnittsareal</td><td>Arealet av flaten du ser når du kapper et rør på tvers. For et rundt rør er det π · d² / 4.</td><td></td></tr>
+    <tr><td>DN</td><td>Nominell diameter: standardstørrelsen på et rør. DN40 er omtrent 40 mm innvendig.</td><td>nominal diameter (DN)</td></tr>
+    <tr><td>væskeslag</td><td>Kraftig trykkstøt i et rør når væske i fart stoppes brått, for eksempel når en ventil stenges for fort.</td><td>water hammer</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Forrige side: <a href="trykk-i-vaesker.html">Trykk i væsker</a>.</li>
+  <li>Neste side: <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>.</li>
+  <li>Massestrømmer i balanser: <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a>.</li>
+  <li>Mengdemålere i anlegget: <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Tallene for tankene og pumpene er hentet fra flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

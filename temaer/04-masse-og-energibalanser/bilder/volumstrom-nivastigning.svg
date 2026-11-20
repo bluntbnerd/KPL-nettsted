@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Volumstrøm målt som nivåstigning i tank 2</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker></defs>
+  <rect x="0" y="0" width="600" height="300" rx="10" fill="#ffffff"/>
+  <!-- målestokk: 1 m = 120 px. Bunn y = 270, topp av tanken (1,25 m) y = 120 -->
+  <!-- innløpsrør fra pumpe -->
+  <path d="M20,80 L250,80 L250,130" fill="none" stroke="#586868" stroke-width="8"/>
+  <path d="M20,80 L250,80 L250,130" fill="none" stroke="#cfe4f7" stroke-width="4"/>
+  <line x1="40" y1="62" x2="120" y2="62" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="20" y="50" font-size="13" fill="#1c2828">fra pumpe 2</text>
+  <!-- vann ved start: 0,40 m (y = 222). Etter 60 s: 1,00 m (y = 150) -->
+  <rect x="200" y="222" width="160" height="48" fill="#cfe4f7"/>
+  <rect x="200" y="150" width="160" height="72" fill="#cfe4f7" opacity="0.55"/>
+  <path d="M200,120 L200,270 L360,270 L360,120" fill="none" stroke="#586868" stroke-width="3"/>
+  <line x1="200" y1="222" x2="360" y2="222" stroke="#2e6da4" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="200" y1="150" x2="360" y2="150" stroke="#2e6da4" stroke-width="2"/>
+  <text x="280" y="290" font-size="13" text-anchor="middle" fill="#1c2828">Tank 2, bunnareal 0,490 m²</text>
+  <!-- Δh-mål -->
+  <g stroke="#c0392b" stroke-width="2">
+    <line x1="380" y1="150" x2="380" y2="222"/>
+    <line x1="372" y1="150" x2="388" y2="150"/>
+    <line x1="372" y1="222" x2="388" y2="222"/>
+  </g>
+  <g font-size="14" fill="#1c2828">
+    <text x="395" y="154">nivå etter 60 s: 1,00 m</text>
+    <text x="395" y="226">nivå ved start: 0,40 m</text>
+    <text x="395" y="191" fill="#c0392b" font-weight="bold">Δh = 0,60 m</text>
+  </g>
+</svg>

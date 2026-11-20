@@ -6,46 +6,51 @@
  * Side:  { fil: "filnavn.html", tittel: "Tittel", meny: "Kort menytittel", status: "utkast" | "ferdig" }
  * Planlagt side (ikke skrevet ennå): { tittel: "Tittel", status: "planlagt" }
  *
- * Emnet om væskesystemer og sidene om varmeveksler og varmepumpe skal avstemmes med prosesslæreren.
- * Siden om gasser kan flyttes til Kjemiske prinsipper (ikke avklart).
+ * Fem emner fra 20.11.2026 (prosesslæreren). Hvert emne har sin egen emneøkt.
  */
 KPL.sti("04-masse-og-energibalanser", [
   {
     emne: "Fysiske grunnbegreper",
     sider: [
-      { tittel: "Størrelser og enheter", meny: "Enheter", status: "planlagt" },
-      { tittel: "Masse, volum og tetthet", meny: "Tetthet", status: "planlagt" },
-      { tittel: "Kraft og trykk", status: "planlagt" },
-      { tittel: "Energi, arbeid og effekt", meny: "Energi og effekt", status: "planlagt" },
-      { tittel: "Temperatur og varme", status: "planlagt" },
-      { tittel: "Gasser: trykk, volum og temperatur", meny: "Gasser", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "storrelser-og-enheter.html", tittel: "Størrelser og enheter", meny: "Enheter", type: "fagstoff", status: "utkast" },
+      { fil: "masse-volum-tetthet.html", tittel: "Masse, volum og tetthet", meny: "Tetthet", type: "fagstoff", status: "utkast" },
+      { fil: "kraft-og-trykk.html", tittel: "Kraft og trykk", type: "fagstoff", status: "utkast" },
+      { fil: "energi-arbeid-effekt.html", tittel: "Energi, arbeid og effekt", meny: "Energi og effekt", type: "fagstoff", status: "utkast" },
+      { fil: "temperatur-og-varme.html", tittel: "Temperatur og varme", type: "fagstoff", status: "utkast" },
+      { fil: "grunnbegreper-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }
+    ]
+  },
+  {
+    emne: "Fluidmekanikk",
+    sider: [
+      { fil: "trykk-i-vaesker.html", tittel: "Trykk i væsker", type: "fagstoff", status: "utkast" },
+      { fil: "stromning.html", tittel: "Strømning i rør", meny: "Strømning", type: "fagstoff", status: "utkast" },
+      { fil: "ror-ventiler-pumper.html", tittel: "Rør, ventiler og pumper", meny: "Rør og pumper", type: "fagstoff", status: "utkast" },
+      { fil: "trykktap.html", tittel: "Trykktap", type: "fagstoff", status: "utkast" }
+    ]
+  },
+  {
+    emne: "Termodynamikk",
+    sider: [
+      { fil: "varme-og-energi.html", tittel: "Varme og energi i prosesser", meny: "Varme i prosesser", type: "fagstoff", status: "ferdig" },
+      { fil: "gasser.html", tittel: "Gasser: trykk, volum og temperatur", meny: "Gasser", type: "fagstoff", status: "ferdig" },
+      { fil: "varmepumpe.html", tittel: "Varmepumpe og COP", meny: "Varmepumpe", type: "fagstoff", status: "ferdig" }
+    ]
+  },
+  {
+    emne: "Energi i prosessindustrien",
+    sider: [
+      { fil: "varmeveksler.html", tittel: "Energibalanse i en varmeveksler", meny: "Varmeveksler", type: "fagstoff", status: "utkast" },
+      { fil: "varmetap.html", tittel: "Varmetap og virkningsgrad", meny: "Varmetap", type: "fagstoff", status: "utkast" },
+      { fil: "energigjenvinning.html", tittel: "Energigjenvinning", type: "fagstoff", status: "utkast" }
     ]
   },
   {
     emne: "Massebalanser i prosessanlegg",
     sider: [
-      { fil: "massebalanse-i-anlegg.html", tittel: "Massebalanse i et anlegg", meny: "Massebalanse", type: "fagstoff", status: "utkast" },
-      { tittel: "Separasjon", status: "planlagt" },
-      { tittel: "Resirkulering og utbytte", meny: "Resirkulering", status: "planlagt" }
-    ]
-  },
-  {
-    emne: "Energi- og varmebalanser",
-    sider: [
-      { fil: "varme-og-energi.html", tittel: "Varme og energi i prosesser", meny: "Varme i prosesser", type: "fagstoff", status: "utkast" },
-      { tittel: "Energibalanse i en varmeveksler", meny: "Varmeveksler", status: "planlagt" },
-      { tittel: "Varmepumpe og COP", meny: "Varmepumpe", status: "planlagt" },
-      { tittel: "Varmetap og virkningsgrad", meny: "Varmetap", status: "planlagt" }
-    ]
-  },
-  {
-    emne: "Væskesystemer, trykk og trykktap",
-    sider: [
-      { tittel: "Trykk i væsker", status: "planlagt" },
-      { tittel: "Strømning i rør", meny: "Strømning", status: "planlagt" },
-      { tittel: "Rør, ventiler og pumper", meny: "Rør og pumper", status: "planlagt" },
-      { tittel: "Trykktap", status: "planlagt" }
+      { fil: "massebalanse-i-anlegg.html", tittel: "Massebalanse i et anlegg", meny: "Massebalanse", type: "fagstoff", status: "ferdig" },
+      { fil: "separasjon.html", tittel: "Separasjon", type: "fagstoff", status: "ferdig" },
+      { fil: "resirkulering-og-utbytte.html", tittel: "Resirkulering og utbytte", meny: "Resirkulering", type: "fagstoff", status: "ferdig" }
     ]
   }
 ]);

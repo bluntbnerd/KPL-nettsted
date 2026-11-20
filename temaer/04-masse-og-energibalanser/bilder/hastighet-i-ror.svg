@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240" font-family="Segoe UI, Arial, sans-serif">
+  <title>Samme volumstrøm i et vidt og et smalt rør gir ulik hastighet</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+  <rect x="0" y="0" width="600" height="240" rx="10" fill="#ffffff"/>
+  <!-- rør: DN65 = 65 px høyt, DN40 = 40 px høyt, senter y = 110 -->
+  <path d="M20,77.5 L260,77.5 L310,90 L580,90 L580,130 L310,130 L260,142.5 L20,142.5 Z" fill="#cfe4f7" stroke="#586868" stroke-width="3"/>
+  <!-- hastighetspiler: 1,7 m/s = 51 px, 4,4 m/s = 132 px -->
+  <g stroke="#c0392b" stroke-width="3" marker-end="url(#pil)">
+    <line x1="100" y1="110" x2="151" y2="110"/>
+    <line x1="380" y1="110" x2="512" y2="110"/>
+  </g>
+  <g font-size="14" fill="#1c2828" text-anchor="middle">
+    <text x="140" y="60" font-weight="bold">DN65 (Ø 65 mm)</text>
+    <text x="140" y="170">v ≈ 1,7 m/s</text>
+    <text x="445" y="72" font-weight="bold">DN40 (Ø 40 mm)</text>
+    <text x="445" y="158">v ≈ 4,4 m/s</text>
+  </g>
+  <text x="300" y="215" font-size="14" text-anchor="middle" fill="#2e6da4" font-weight="bold">Samme volumstrøm i hele røret: Q = 20 m³/h</text>
+</svg>

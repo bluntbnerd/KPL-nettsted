@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Energigjenvinning – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Energigjenvinning</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT7</div>
+
+<p class="ingress">Mye av varmen som går ut av et anlegg, kan brukes igjen. Da trengs det mindre ny energi. Det sparer penger og gir mindre utslipp. Å bruke varmen på nytt kalles energigjenvinning.</p>
+
+<p>Denne siden bygger på <a href="varmeveksler.html">Energibalanse i en varmeveksler</a> og <a href="varmetap.html">Varmetap og virkningsgrad</a>.</p>
+
+<h2>Spillvarme</h2>
+<p><strong>Spillvarme</strong> er varme som blir til overs i en prosess. Eksempler er varmt kjølevann, varme produkter som skal kjøles ned, og varm røykgass eller avgass. Spillvarmen må uansett føres bort fra prosessen. Spørsmålet er om den bare slippes ut, eller om den kan gjøre nytte et annet sted.</p>
+<p>Om spillvarmen er nyttig, avhenger mest av temperaturen. Varm avgass på flere hundre grader kan lage damp. Lunkent kjølevann på 30 °C er vanskeligere å bruke, men kan for eksempel varme opp bygninger med en varmepumpe.</p>
+
+<h2>Forvarming med varmeveksler</h2>
+<p>Den vanligste formen for energigjenvinning er <strong>forvarming</strong>. Mange prosesser varmer opp et råstoff, og senere må produktet kjøles ned igjen. En varmeveksler kan da la det varme produktet som går ut, varme opp det kalde råstoffet som kommer inn. Da sparer du både energi til oppvarming og kjølevann.</p>
+
+<figure>
+  <img src="bilder/forvarming-gjenvinning.svg" alt="To skisser av samme anlegg. Øverst, uten gjenvinning: råstoff på 15 grader varmes til 70 grader i en varmer med 345 kilowatt, går gjennom en reaktor og ut som produkt på 80 grader, som kjøles til 40 grader i en kjøler med 251 kilowatt. Nederst, med gjenvinning: produktet på 80 grader går tilbake gjennom en varmeveksler og varmer råstoffet fra 15 til 55 grader. Varmeren trenger da bare 94 kilowatt, og produktet går ut på 40 grader." width="640">
+  <figcaption>Figur: Det samme anlegget uten og med energigjenvinning. Med gjenvinning flyttes 251 kW fra produktet til råstoffet i varmeveksleren. Tallene hører til eksempelet under.</figcaption>
+</figure>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvor mye sparer forvarmingen?</div>
+  <p><strong>Oppgave:</strong> Et råstoff (1,5 kg/s) skal varmes fra 15 °C til 70 °C før det går inn i en reaktor. Produktet kommer ut av reaktoren med 1,5 kg/s og 80 °C, og skal kjøles til 40 °C. Begge har samme spesifikke varmekapasitet som vann. Vi ser bort fra varmetap.</p>
+  <p>a) Hvor stor varmeeffekt trengs uten gjenvinning?<br>
+     b) En varmeveksler kjøler produktet fra 80 °C til 40 °C og varmer råstoffet med den samme varmen. Hvor varmt blir råstoffet, og hvor mye må varmeren tilføre nå?<br>
+     c) Hvor mye energi spares på et år med 8000 driftstimer?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>a) Uten gjenvinning: \( P = 1{,}5 \text{ kg/s} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot (70 - 15) \text{ °C} = 345 \text{ kW} \)</li>
+    <li>b) Varmen fra produktet: \( P = 1{,}5 \text{ kg/s} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot (80 - 40) \text{ °C} = 251 \text{ kW} \)<br>
+      Strømmene er like store og har samme \( c \). Råstoffet varmes derfor like mange grader som produktet kjøles, altså 40 °C: fra 15 °C til 55 °C.<br>
+      Varmeren må bare varme fra 55 °C til 70 °C: \( P = 1{,}5 \cdot 4{,}18 \cdot 15 = 94 \text{ kW} \)</li>
+    <li>Kontroll: \( 251 \text{ kW} + 94 \text{ kW} = 345 \text{ kW} \). Det stemmer med a).</li>
+    <li>c) Spart effekt er 251 kW. Energi per år: \( E = P \cdot t = 251 \text{ kW} \cdot 8000 \text{ h} = 2\,008\,000 \text{ kWh} \approx 2 \text{ millioner kWh} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Forvarmingen sparer 251 av 345 kW, altså ca. 73 % av energien til oppvarming. Det blir ca. 2 millioner kWh i året. Med en tenkt pris på 1 kr per kWh er det ca. 2 millioner kroner. I tillegg trengs det ingen kjøler for produktet.</p>
+</div>
+
+<p>Råstoffet kan aldri bli varmere enn 80 °C i forvarmeren, for varme går bare fra varmt til kaldt. I praksis blir det litt mindre varmt enn produktet, fordi det trengs en temperaturforskjell for at varmen skal gå gjennom veggen. Derfor trengs det nesten alltid en varmer i tillegg. Varmeveksleren er koplet i <a href="varmeveksler.html">motstrøm</a>, for da kan den flytte mest varme.</p>
+
+<h2>Andre måter å bruke spillvarme på</h2>
+<ul>
+  <li><strong>Varmepumpe:</strong> En varmepumpe kan hente varme fra lunkent vann og levere den ved høyere temperatur. Det koster litt strøm, men gir mye mer varme tilbake. Se <a href="varmepumpe.html">Varmepumpe og COP</a>.</li>
+  <li><strong>Damp og strøm fra avgass:</strong> Svært varm avgass kan sendes gjennom en kjel som lager damp. Dampen kan brukes i prosessen eller drive en turbin som lager strøm.</li>
+  <li><strong>Fjernvarme:</strong> Varmt vann sendes i isolerte rør til bygninger i nærheten og varmer dem opp.</li>
+  <li><strong>Oppdrett og veksthus:</strong> Lunkent kjølevann kan holde riktig temperatur i fiskeoppdrett eller veksthus.</li>
+</ul>
+
+<div class="boks">
+  <div class="boks-tittel">Smelteverk og energigjenvinning</div>
+  <p>Et smelteverk bruker svært mye strøm i ovnene. En stor del av energien forlater ovnen som varme, blant annet med avgassen og kjølevannet. Flere norske smelteverk har bygd anlegg som gjenvinner denne spillvarmen.</p>
+  <p><strong>I Sauda</strong> gjenvinner smelteverket spillvarme som brukes til å varme opp bygninger i bygda. Varmen brukes også blant annet til å smelte snø i gatene, og på stadion og i svømmebassenget. Dette er et eksempel på <strong>fjernvarme</strong>: Varme som ellers ville gått tapt, gjør nytte i lokalsamfunnet.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Rør, varmevekslere og kjeler i et gjenvinningsanlegg er varme og står ofte under trykk. Ta ikke på utstyr du ikke vet temperaturen på. Åpne aldri noe før det er stengt, trykkavlastet og kjølt ned. En lekkasje inne i en varmeveksler kan gjøre at to strømmer blandes, for eksempel at produkt kommer over i kjølevann eller råstoff. Derfor følger operatøren med på trykk og temperatur og tar prøver av strømmene.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er spillvarme?</p>
+  <ul>
+    <li>varme som tilføres med vilje i en varmer</li>
+    <li data-riktig>varme som blir til overs i en prosess og ofte slippes ut</li>
+    <li>varme som lagres i en tank til senere</li>
+  </ul>
+  <p class="forklaring">Spillvarme er varme som blir til overs, for eksempel i kjølevann, varme produkter og avgass.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En varmer trenger 200 kW. Forvarming med en varmeveksler gjenvinner 150 kW. Hvor mye må varmeren tilføre nå?</p>
+  <ul>
+    <li data-riktig>50 kW</li>
+    <li>150 kW</li>
+    <li>350 kW</li>
+  </ul>
+  <p class="forklaring">200 kW − 150 kW = 50 kW. Resten kommer fra den gjenvunne varmen.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Et anlegg sparer 100 kW i 8000 timer per år. Hvor mye energi sparer det?</p>
+  <ul>
+    <li>800 kWh</li>
+    <li data-riktig>800 000 kWh</li>
+    <li>80 000 000 kWh</li>
+  </ul>
+  <p class="forklaring">E = P · t = 100 kW · 8000 h = 800 000 kWh.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Et produkt på 80 °C forvarmer et råstoff på 15 °C. Hvorfor kan råstoffet ikke bli varmere enn 80 °C?</p>
+  <ul>
+    <li>Fordi vannet koker ved 80 °C.</li>
+    <li data-riktig>Fordi varme bare går fra varmt til kaldt.</li>
+    <li>Fordi varmeveksleren er for liten.</li>
+  </ul>
+  <p class="forklaring">Råstoffet tar opp varme bare så lenge produktet er varmere. Det kan derfor aldri bli varmere enn 80 °C.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hva kan en varmepumpe gjøre med lunkent kjølevann?</p>
+  <ul>
+    <li>gjøre det om til strøm uten tap</li>
+    <li data-riktig>hente varmen og levere den ved høyere temperatur</li>
+    <li>kjøle det ned uten å bruke energi</li>
+  </ul>
+  <p class="forklaring">En varmepumpe bruker litt strøm for å «løfte» varmen fra lav til høyere temperatur, der den er mer nyttig.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>spillvarme</td><td>Varme som går ut av et anlegg uten å bli brukt, for eksempel med kjølevann eller avgass.</td><td>waste heat</td></tr>
+    <tr><td>energigjenvinning</td><td>Å bruke spillvarme eller annen overskuddsenergi på nytt i stedet for å slippe den ut.</td><td>energy recovery</td></tr>
+    <tr><td>forvarming</td><td>Å varme opp et råstoff før det går inn i prosessen, ofte med varme fra et produkt som skal kjøles.</td><td>preheating</td></tr>
+    <tr><td>fjernvarme</td><td>Varmt vann som sendes i isolerte rør fra et anlegg til bygninger og varmer dem opp.</td><td>district heating</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="varmeveksler.html">Energibalanse i en varmeveksler</a> og <a href="varmetap.html">Varmetap og virkningsgrad</a> i dette temaet.</li>
+  <li><a href="varmepumpe.html">Varmepumpe og COP</a> i dette temaet.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksempelet og figuren på denne siden er laget for dette nettstedet, og tallene er tenkte. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

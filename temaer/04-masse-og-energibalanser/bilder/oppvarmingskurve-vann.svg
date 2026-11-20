@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Oppvarmingskurve for vann fra is til damp</title>
+  <defs><marker id="akse" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#586868"/></marker></defs>
+  <rect x="0" y="0" width="600" height="300" rx="10" fill="#ffffff"/>
+  <!-- Akser -->
+  <line x1="60" y1="260" x2="580" y2="260" stroke="#586868" stroke-width="1.5" marker-end="url(#akse)"/>
+  <line x1="60" y1="260" x2="60" y2="25" stroke="#586868" stroke-width="1.5" marker-end="url(#akse)"/>
+  <text x="570" y="282" font-size="12" text-anchor="end" fill="#586868">tid (varmen tilføres jevnt)</text>
+  <text x="22" y="140" font-size="12" fill="#586868" transform="rotate(-90 22 140)" text-anchor="middle">temperatur (°C)</text>
+  <!-- Merker -->
+  <g font-size="12" fill="#1c2828" text-anchor="end">
+    <text x="54" y="226">0</text><text x="54" y="86">100</text>
+  </g>
+  <g stroke="#d8e0e0" stroke-dasharray="4 3"><line x1="60" y1="222" x2="560" y2="222"/><line x1="60" y1="82" x2="560" y2="82"/></g>
+  <!-- Kurve -->
+  <polyline points="70,250 110,222 190,222 290,82 500,82 550,54" fill="none" stroke="#b5530f" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Etiketter -->
+  <g font-size="12" fill="#1c2828">
+    <text x="78" y="270" text-anchor="start">is</text>
+    <text x="150" y="212" text-anchor="middle" font-weight="bold">is smelter</text>
+    <text x="150" y="240" text-anchor="middle" fill="#586868">is og vann</text>
+    <text x="250" y="160" text-anchor="start">vann</text>
+    <text x="395" y="72" text-anchor="middle" font-weight="bold">vann koker</text>
+    <text x="395" y="102" text-anchor="middle" fill="#586868">vann og damp</text>
+    <text x="545" y="45" text-anchor="end">damp</text>
+  </g>
+  <!-- Forklaring -->
+  <text x="320" y="180" font-size="12" text-anchor="start" fill="#586868">Flate deler: temperaturen står stille.</text>
+  <text x="320" y="196" font-size="12" text-anchor="start" fill="#586868">Energien går til å endre tilstand.</text>
+</svg>

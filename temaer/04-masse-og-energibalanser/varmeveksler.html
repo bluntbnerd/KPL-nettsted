@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Energibalanse i en varmeveksler – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Energibalanse i en varmeveksler</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT7</div>
+
+<p class="ingress">I et prosessanlegg må varme produkter kjøles ned, og kalde strømmer må varmes opp. En varmeveksler flytter varme fra den ene strømmen til den andre. På denne siden regner du ut hvor mye varme som flyttes, og hvor mye som går tapt.</p>
+
+<p>En <strong>varmeveksler</strong> har to strømmer som går på hver sin side av en vegg. Varmen går gjennom veggen fra den varme til den kalde strømmen, men strømmene blandes ikke. Hvordan varmevekslere er bygd, og hvilke typer som finnes, lærer du i <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>. Her regner vi på energien.</p>
+
+<p>Du trenger formelen for varmeeffekt fra <a href="varme-og-energi.html">Varme og energi i prosesser</a>:</p>
+<p>\[ P = \dot{m} \cdot c \cdot \Delta T \]</p>
+<p>Med massestrømmen \( \dot{m} \) i kg/s og \( c \) i kJ/(kg·°C) får du svaret i kW.</p>
+
+<h2>Energibalansen</h2>
+<p>Vi tegner en <a href="massebalanse-i-anlegg.html">systemgrense</a> rundt varmeveksleren, slik vi gjør i en massebalanse. Fire strømmer krysser grensen: varm strøm inn og ut, og kald strøm inn og ut.</p>
+
+<figure>
+  <img src="bilder/varmeveksler-energibalanse.svg" alt="Skisse av en varmeveksler med to kanaler og en vegg imellom. Varm strøm går inn på 80 grader og ut på 60 grader. Kjølevann går motsatt vei, inn på 10 grader og ut på 25 grader. Piler viser varme gjennom veggen og litt tap til omgivelsene. En stiplet systemgrense går rundt varmeveksleren." width="620">
+  <figcaption>Figur: Den varme strømmen gir fra seg varme gjennom veggen til kjølevannet. Litt varme går tapt til omgivelsene. Tallene hører til eksempelet under.</figcaption>
+</figure>
+
+<p>Energi kan ikke forsvinne. Varmen den varme strømmen gir fra seg, må derfor havne et sted. Det meste går til den kalde strømmen, og resten går tapt til lufta rundt varmeveksleren:</p>
+<p>\[ \text{avgitt varme} = \text{opptatt varme} + \text{tap} \]</p>
+<p>Avgitt varme regner du ut med tallene for den varme siden, og opptatt varme med tallene for den kalde siden. I begge tilfeller er \( \Delta T \) forskjellen mellom høyeste og laveste temperatur, slik at svaret blir positivt.</p>
+<p>En godt isolert varmeveksler har lite tap. Da kan vi regne som om tapet er null. Avgitt varme er da like stor som opptatt varme. Det gjør at vi kan finne én ukjent størrelse, for eksempel en temperatur vi ikke har målt.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Hvor kald blir produktet?</div>
+  <p><strong>Oppgave:</strong> Et produkt skal kjøles i en varmeveksler. Produktet har samme spesifikke varmekapasitet som vann. Det kommer inn med 1,5 kg/s og 80 °C. Kjølevannet har 2,0 kg/s og varmes fra 10 °C til 25 °C. Hvor stor varmeeffekt tar kjølevannet opp, og hvilken temperatur har produktet når det går ut? Vi ser bort fra tap.</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Opptatt varme (kald side): \( \Delta T = 25 \text{ °C} - 10 \text{ °C} = 15 \text{ °C} \)<br>
+      \( P_\text{kald} = 2{,}0 \text{ kg/s} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 15 \text{ °C} = 125{,}4 \text{ kW} \)</li>
+    <li>Uten tap er avgitt varme like stor: \( P_\text{varm} = 125{,}4 \text{ kW} \).</li>
+    <li>Finn temperaturfallet på varm side. Formelen snudd blir \( \Delta T = \dfrac{P}{\dot{m} \cdot c} \):<br>
+      \( \Delta T = \dfrac{125{,}4 \text{ kW}}{1{,}5 \text{ kg/s} \cdot 4{,}18 \text{ kJ/(kg·°C)}} = 20{,}0 \text{ °C} \)</li>
+    <li>Temperatur ut: \( 80 \text{ °C} - 20 \text{ °C} = 60 \text{ °C} \).</li>
+  </ol>
+  <p><strong>Svar:</strong> Kjølevannet tar opp ca. 125 kW, og produktet går ut med 60 °C.</p>
+</div>
+
+<p>Legg merke til at produktet kjøles 20 °C, mens kjølevannet bare varmes 15 °C. Det er fordi det går mer kjølevann enn produkt. Den samme varmen fordeles på flere kilo, og da blir temperaturendringen mindre.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Hvor stort er tapet?</div>
+  <p><strong>Oppgave:</strong> Operatøren måler på den samme varmeveksleren. Alle tall er som i eksempel 1, men produktet går ut med 58 °C, ikke 60 °C. Hvor stort er tapet?</p>
+  <ol>
+    <li>Avgitt varme (varm side): \( \Delta T = 80 \text{ °C} - 58 \text{ °C} = 22 \text{ °C} \)<br>
+      \( P_\text{varm} = 1{,}5 \text{ kg/s} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 22 \text{ °C} = 137{,}9 \text{ kW} \)</li>
+    <li>Opptatt varme (kald side) er den samme som før: \( P_\text{kald} = 125{,}4 \text{ kW} \).</li>
+    <li>Tap: \( 137{,}9 \text{ kW} - 125{,}4 \text{ kW} = 12{,}5 \text{ kW} \)</li>
+    <li>Som andel av den avgitte varmen: \( \dfrac{12{,}5}{137{,}9} = 0{,}091 = 9{,}1 \,\% \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Tapet er ca. 13 kW, eller ca. 9 % av varmen produktet gir fra seg. Er tapet mye større enn vanlig, kan isolasjonen være skadet. Mer om dette står i <a href="varmetap.html">Varmetap og virkningsgrad</a>.</p>
+</div>
+
+<h2>Medstrøm og motstrøm</h2>
+<p>Strømmene i en varmeveksler kan gå i samme retning eller i hver sin retning:</p>
+<ul>
+  <li><strong>Medstrøm:</strong> Begge strømmene kommer inn i samme ende og går samme vei.</li>
+  <li><strong>Motstrøm:</strong> Strømmene kommer inn i hver sin ende og går mot hverandre. Figuren øverst på siden viser motstrøm.</li>
+</ul>
+
+<figure>
+  <img src="bilder/medstrom-motstrom.svg" alt="To grafer av temperaturen langs varmeveksleren. Medstrøm: den varme strømmen går fra 80 til 50 grader, den kalde fra 10 til 40 grader, og linjene nærmer seg hverandre uten å møtes. Motstrøm: den varme strømmen går fra 80 til 30 grader, og den kalde går motsatt vei fra 10 til 60 grader." width="600">
+  <figcaption>Figur: Temperaturen langs varmeveksleren, med tenkte tall og like store strømmer. Ved medstrøm blir den kalde strømmen aldri varmere enn den varme strømmen ut (40 °C mot 50 °C). Ved motstrøm kan den kalde strømmen komme ut varmere (60 °C) enn den varme strømmen går ut (30 °C).</figcaption>
+</figure>
+
+<p>Varme går alltid fra varmt til kaldt. Ved medstrøm kommer de to strømmene inn i samme ende. Der er forskjellen stor, men etter hvert som de går sammen gjennom varmeveksleren, nærmer temperaturene seg hverandre. Den kalde strømmen kan derfor aldri bli varmere enn den varme strømmen er når den går ut.</p>
+<p>Ved motstrøm møter den kalde strømmen det varmeste produktet helt til slutt, rett før den går ut. Det er en temperaturforskjell som driver varmen hele veien gjennom varmeveksleren. Derfor kan motstrøm flytte mer varme med den samme varmeveksleren. De fleste varmevekslere i industrien er koplet i motstrøm.</p>
+<p>Energibalansen regnes på samme måte for medstrøm og motstrøm. Det er bare temperaturene som blir forskjellige.</p>
+
+<h2>Forsøk: Energibalanse på skolens varmeveksler</h2>
+<p>Målet er å finne avgitt varme, opptatt varme og tapet, og sammenligne målingene med beregningen. Læreren viser hvordan varmeveksleren startes, og hvor målerne sitter.</p>
+<ol>
+  <li>Start varmtvann og kjølevann, og vent til temperaturene har stabilisert seg (ca. 5–10 minutter). Først da er driften jevn.</li>
+  <li>Les av de fire temperaturene og de to vannmengdene. Noter dem i tabellen.</li>
+  <li>Regn ut avgitt varme, opptatt varme og tapet.</li>
+  <li>Gjenta gjerne med en annen vannmengde, eller med strømmene snudd fra motstrøm til medstrøm hvis anlegget kan det.</li>
+</ol>
+
+<table>
+  <thead><tr><th>Måling</th><th>Varm side</th><th>Kald side</th></tr></thead>
+  <tbody>
+    <tr><td>Temperatur inn (°C)</td><td></td><td></td></tr>
+    <tr><td>Temperatur ut (°C)</td><td></td><td></td></tr>
+    <tr><td>\( \Delta T \) (°C)</td><td></td><td></td></tr>
+    <tr><td>Vannmengde (L/min)</td><td></td><td></td></tr>
+    <tr><td>Massestrøm \( \dot{m} \) (kg/s)</td><td></td><td></td></tr>
+    <tr><td>Varmeeffekt \( P \) (kW)</td><td>avgitt:</td><td>opptatt:</td></tr>
+  </tbody>
+</table>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Fra L/min til kg/s</div>
+  <p>1 liter vann veier omtrent 1 kg. Del på 60 for å få per sekund. Eksempel: 12 L/min = 12 kg/min = 12 / 60 = 0,20 kg/s.</p>
+</div>
+
+<p>Spørsmål til rapporten:</p>
+<ul>
+  <li>Hvor stort er tapet i kW og i prosent av avgitt varme?</li>
+  <li>Hvor tror du tapet blir av? Kjenn forsiktig etter hvor varmeveksleren og rørene er varme.</li>
+  <li>Får du noen gang et negativt tap, altså at kjølevannet tar opp mer enn varm side gir fra seg? Hva kan det komme av? Tenk på hvor nøyaktige målerne er, og om kjølevannet er kaldere enn lufta i rommet.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Rør, ventiler og varmeveksleren kan være så varme at du brenner deg. Ta på flatene bare der læreren sier det er trygt, og bruk hansker ved behov. Varmeveksleren står under trykk. Åpne aldri en kopling, et lokk eller en luftskrue før anlegget er stengt, trykkavlastet og kjølt ned. Varmtvann på over ca. 60 °C gir skåldeskader på kort tid.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva sier energibalansen for en varmeveksler?</p>
+  <ul>
+    <li>Den kalde strømmen tar alltid opp mer varme enn den varme strømmen gir fra seg.</li>
+    <li data-riktig>Avgitt varme er lik opptatt varme pluss tap.</li>
+    <li>Temperaturen inn er lik temperaturen ut.</li>
+  </ul>
+  <p class="forklaring">Energi forsvinner ikke. Varmen fra den varme strømmen går enten til den kalde strømmen eller ut til omgivelsene som tap.</p>
+</div>
+
+<div class="quiz">
+  <p>2. 1,0 kg/s kjølevann varmes 10 °C i en varmeveksler. Hvor stor varmeeffekt tar det opp?</p>
+  <ul>
+    <li>4,2 kW</li>
+    <li data-riktig>42 kW</li>
+    <li>418 kW</li>
+  </ul>
+  <p class="forklaring">P = 1,0 kg/s · 4,18 kJ/(kg·°C) · 10 °C = 41,8 kW ≈ 42 kW.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Den varme siden gir fra seg 100 kW, og kjølevannet tar opp 92 kW. Hvor stort er tapet?</p>
+  <ul>
+    <li data-riktig>8 kW</li>
+    <li>92 kW</li>
+    <li>192 kW</li>
+  </ul>
+  <p class="forklaring">Tap = avgitt varme − opptatt varme = 100 kW − 92 kW = 8 kW.</p>
+</div>
+
+<div class="quiz">
+  <p>4. I hvilken koplingsmåte kan kjølevannet komme ut varmere enn produktet går ut?</p>
+  <ul>
+    <li>medstrøm</li>
+    <li data-riktig>motstrøm</li>
+    <li>begge</li>
+  </ul>
+  <p class="forklaring">Ved motstrøm møter kjølevannet det varmeste produktet rett før det går ut. Ved medstrøm nærmer temperaturene seg hverandre, men kjølevannet blir aldri varmere enn produktet ut.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Det går dobbelt så mye kjølevann som produkt gjennom en varmeveksler. Begge har samme spesifikke varmekapasitet. Produktet kjøles 20 °C. Hvor mye varmes kjølevannet uten tap?</p>
+  <ul>
+    <li data-riktig>10 °C</li>
+    <li>20 °C</li>
+    <li>40 °C</li>
+  </ul>
+  <p class="forklaring">Den samme varmen fordeles på dobbelt så mange kilo. Da blir temperaturendringen halvparten så stor.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>varmeveksler</td><td>Utstyr som overfører varme fra én strøm til en annen uten at de blandes.</td><td>heat exchanger</td></tr>
+    <tr><td>varmetap</td><td>Varme som går ut til omgivelsene i stedet for dit vi vil ha den.</td><td>heat loss</td></tr>
+    <tr><td>medstrøm</td><td>Koplingsmåte der begge strømmene i en varmeveksler går i samme retning.</td><td>co-current flow</td></tr>
+    <tr><td>motstrøm</td><td>Koplingsmåte der strømmene i en varmeveksler går mot hverandre. Den flytter mest varme og er vanligst i industrien.</td><td>counter-current flow</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="varme-og-energi.html">Varme og energi i prosesser</a> i dette temaet, om varmeeffekt og \( P = \dot{m} \cdot c \cdot \Delta T \).</li>
+  <li><a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>, om hvordan varmevekslere er bygd.</li>
+  <li>Neste side: <a href="varmetap.html">Varmetap og virkningsgrad</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet, og tallene er tenkte. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

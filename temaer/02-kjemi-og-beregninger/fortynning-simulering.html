@@ -73,7 +73,7 @@
     .fo-riktig { color: var(--info); font-weight: 700; }
   </style>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Fortynning – simulering og kalkulator</h1>
@@ -147,6 +147,11 @@
   </ol>
 </details>
 
+<h2>Les mer</h2>
+<ul>
+  <li>Teorien bak: <a href="fortynning.html">Fortynning</a>.</li>
+  <li><em>Kjemien stemmer</em>, kapittel 4.</li>
+</ul>
 <p><small>Om kildene: Simuleringen og oppdragene er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs.</small></p>
 
 </main>
@@ -254,7 +259,6 @@
     nullstill();
   }
   function tolk(id) { return parseFloat(String($(id).value).replace(/\s/g, "").replace(",", ".")); }
-  // Glideren for c₁: steg på 0,1 mol/L
   // Siden starter med c₁ = 2 mol/L og c₂ = 0,2 mol/L (10 ganger fortynnet)
   // Glideren for c₁: steg på 0,1 mol/L
   $("fo-c1").addEventListener("input", function () { C1 = rund(+this.value, 1); oppdater(); });
@@ -294,7 +298,7 @@
     x[ukjent] = r;
     $("fo-k" + ukjent).value = tall(r, 4);
     var tekst = linje + " = <strong>" + tall(r, 4) + "</strong>";
-    if (x.V2 >= x.V1) tekst += "<br>Vann som tilsettes: " + tall(x.V2 - x.V1, 2) + ". Fortynningsfaktor: " + tall(x.V2 / x.V1, 2) + ".";
+    if (x.V2 >= x.V1) tekst += "<br>Vann som tilsettes: " + tall(x.V2 - x.V1, 2) + " (samme volumenhet som V₁ og V₂). Fortynningsfaktor: " + tall(x.V2 / x.V1, 2) + ".";
     if (x.C2 > x.C1 || x.V1 > x.V2) tekst += '<br><span class="fo-varsel">c₂ er større enn c₁, eller V₁ er større enn V₂. Det er ikke en fortynning. Sjekk tallene.</span>';
     ut.innerHTML = tekst;
   }

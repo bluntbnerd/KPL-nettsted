@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" font-family="Segoe UI, Arial, sans-serif">
+  <title>Inndamper med systemgrense: saltløsning inn, damp og konsentrat ut, varme tilføres</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilvarme" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="320" rx="10" fill="#ffffff"/>
+  <!-- systemgrense -->
+  <rect x="200" y="62" width="200" height="196" rx="6" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="208" y="80" font-size="13" fill="#c0392b" font-weight="bold">systemgrense</text>
+  <!-- inndamper -->
+  <rect x="250" y="165" width="100" height="65" rx="10" fill="#cfe4f7"/>
+  <rect x="250" y="110" width="100" height="120" rx="10" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <text x="300" y="150" font-size="13" text-anchor="middle" fill="#1c2828">inndamper</text>
+  <!-- strømmer -->
+  <g stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)" fill="none">
+    <line x1="20" y1="195" x2="248" y2="195"/>
+    <line x1="300" y1="108" x2="300" y2="18"/>
+    <line x1="352" y1="205" x2="585" y2="205"/>
+  </g>
+  <line x1="300" y1="305" x2="300" y2="234" stroke="#d35400" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#pilvarme)"/>
+  <g font-size="14" fill="#1c2828">
+    <text x="22" y="169" font-weight="bold">Saltløsning: 1000 kg/h</text>
+    <text x="22" y="186">10 % salt</text>
+    <text x="312" y="30" font-weight="bold">Damp (vann): ? kg/h</text>
+    <text x="312" y="47">0 % salt</text>
+    <text x="415" y="179" font-weight="bold">Konsentrat: ? kg/h</text>
+    <text x="415" y="196">40 % salt</text>
+  </g>
+  <text x="312" y="298" font-size="13" fill="#d35400">varme inn (energi, ikke stoff)</text>
+</svg>
