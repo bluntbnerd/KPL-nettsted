@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 225" width="720" height="225" font-family="Segoe UI, Arial, sans-serif">
+  <title>Forenklet anlegg som lager etanol av korn: maling, blanding og oppvarming, gjæring og destillasjon. Under er trinnene delt i forbehandling, reaksjon og separasjon.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="225" rx="10" fill="#ffffff"/>
+
+  <!-- bokser -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="70" y="70" width="100" height="50" rx="6"/>
+    <rect x="220" y="70" width="120" height="50" rx="6"/>
+    <rect x="390" y="70" width="110" height="50" rx="6"/>
+    <rect x="550" y="70" width="110" height="50" rx="6"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="120" y="100">Maling</text>
+    <text x="280" y="92">Blanding og</text>
+    <text x="280" y="110">oppvarming</text>
+    <text x="445" y="100">Gjæring</text>
+    <text x="605" y="100">Destillasjon</text>
+  </g>
+
+  <!-- strømmer -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#pil)">
+    <line x1="10" y1="95" x2="68" y2="95"/>
+    <line x1="170" y1="95" x2="218" y2="95"/>
+    <line x1="280" y1="22" x2="280" y2="68"/>
+    <line x1="340" y1="95" x2="388" y2="95"/>
+    <line x1="445" y1="70" x2="445" y2="24"/>
+    <line x1="500" y1="95" x2="548" y2="95"/>
+    <line x1="660" y1="95" x2="712" y2="95"/>
+    <line x1="605" y1="120" x2="605" y2="160"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="14" y="87">korn</text>
+    <text x="288" y="40">vann og enzymer</text>
+    <text x="452" y="40">CO₂ (gass)</text>
+    <text x="664" y="87">etanol</text>
+    <text x="612" y="150">rester til dyrefôr</text>
+  </g>
+
+  <!-- hovedtrinn -->
+  <g stroke="#2e7d6b" stroke-width="2" fill="none">
+    <path d="M70,178 L70,186 L340,186 L340,178"/>
+    <path d="M390,178 L390,186 L500,186 L500,178"/>
+    <path d="M550,178 L550,186 L660,186 L660,178"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#2e7d6b" text-anchor="middle">
+    <text x="205" y="206">Forbehandling</text>
+    <text x="445" y="206">Reaksjon</text>
+    <text x="605" y="206">Separasjon</text>
+  </g>
+</svg>

@@ -15,10 +15,10 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Prosessanlegget",
     sider: [
-      { tittel: "Hva er en enhetsoperasjon?", meny: "Enhetsoperasjoner", status: "planlagt" },
-      { tittel: "Mekaniske, termiske og kjemiske operasjoner", meny: "Tre typer", status: "planlagt" },
-      { tittel: "Batch og kontinuerlig drift", meny: "Batch og kontinuerlig", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "hva-er-en-enhetsoperasjon.html", tittel: "Hva er en enhetsoperasjon?", meny: "Enhetsoperasjoner", status: "ferdig" },
+      { fil: "mekaniske-termiske-kjemiske-operasjoner.html", tittel: "Mekaniske, termiske og kjemiske operasjoner", meny: "Tre typer", status: "ferdig" },
+      { fil: "batch-og-kontinuerlig-drift.html", tittel: "Batch og kontinuerlig drift", meny: "Batch og kontinuerlig", status: "ferdig" },
+      { fil: "prosessanlegget-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {

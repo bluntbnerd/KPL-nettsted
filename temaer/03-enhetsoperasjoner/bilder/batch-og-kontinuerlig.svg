@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 325" width="660" height="325" font-family="Segoe UI, Arial, sans-serif">
+  <title>Nivået i tanken over tid. Ved batchdrift går nivået opp når tanken fylles, står stille mens den behandles, og går ned når den tømmes. Ved kontinuerlig drift er nivået hele tiden det samme.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="325" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Batch ===== -->
+  <text x="12" y="24" font-size="15" font-weight="bold" fill="#1c2828">Batchdrift</text>
+  <rect x="50" y="45" width="80" height="80" rx="6" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <rect x="52" y="75" width="76" height="48" rx="4" fill="#bcd9ee"/>
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#pil)">
+    <line x1="110" y1="28" x2="110" y2="43"/>
+    <line x1="90" y1="125" x2="90" y2="150"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="116" y="38">inn</text>
+    <text x="96" y="146">ut</text>
+  </g>
+  <!-- akser -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="210" y1="125" x2="632" y2="125"/>
+    <line x1="210" y1="125" x2="210" y2="34"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="203" y="44" text-anchor="end">nivå</text>
+    <text x="636" y="129">tid</text>
+  </g>
+  <path d="M215,125 L265,60 L400,60 L450,125 L500,125 L550,60 L625,60" fill="none" stroke="#2c6ea6" stroke-width="3" stroke-linejoin="round"/>
+  <g font-size="11.5" fill="#586868" text-anchor="middle">
+    <text x="240" y="143">fylle</text>
+    <text x="332" y="143">behandle</text>
+    <text x="425" y="143">tømme</text>
+    <text x="475" y="143">vaske</text>
+    <text x="525" y="143">fylle</text>
+    <text x="588" y="143">behandle</text>
+  </g>
+  <g stroke="#d8dede" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="265" y1="60" x2="265" y2="125"/>
+    <line x1="400" y1="60" x2="400" y2="125"/>
+    <line x1="450" y1="60" x2="450" y2="125"/>
+    <line x1="500" y1="60" x2="500" y2="125"/>
+    <line x1="550" y1="60" x2="550" y2="125"/>
+  </g>
+  <text x="332" y="52" font-size="11.5" fill="#1c2828" text-anchor="middle">batch 1</text>
+  <text x="588" y="52" font-size="11.5" fill="#1c2828" text-anchor="middle">batch 2</text>
+
+  <line x1="12" y1="162" x2="648" y2="162" stroke="#d8dede" stroke-width="1.5"/>
+
+  <!-- ===== Kontinuerlig ===== -->
+  <text x="12" y="189" font-size="15" font-weight="bold" fill="#1c2828">Kontinuerlig drift</text>
+  <rect x="50" y="210" width="80" height="80" rx="6" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <rect x="52" y="240" width="76" height="48" rx="4" fill="#bcd9ee"/>
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#pil)">
+    <line x1="110" y1="193" x2="110" y2="208"/>
+    <line x1="90" y1="290" x2="90" y2="315"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="116" y="203">inn</text>
+    <text x="96" y="311">ut</text>
+  </g>
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="210" y1="290" x2="632" y2="290"/>
+    <line x1="210" y1="290" x2="210" y2="199"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="203" y="209" text-anchor="end">nivå</text>
+    <text x="636" y="294">tid</text>
+  </g>
+  <line x1="215" y1="240" x2="625" y2="240" stroke="#2c6ea6" stroke-width="3"/>
+  <text x="420" y="230" font-size="12" fill="#1c2828" text-anchor="middle">nivået holdes konstant</text>
+  <text x="420" y="308" font-size="11.5" fill="#586868" text-anchor="middle">drift i uker og måneder uten stans</text>
+</svg>

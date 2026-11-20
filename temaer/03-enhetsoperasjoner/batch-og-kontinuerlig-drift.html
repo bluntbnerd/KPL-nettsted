@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batch og kontinuerlig drift – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Batch og kontinuerlig drift</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT1, KT2</div>
+
+<p class="ingress">Et anlegg kan lage produktet sitt på to måter. Enten lager det én porsjon om gangen, eller så går råstoffet inn og produktet ut hele tiden, døgnet rundt. Hvilken måte anlegget bruker, bestemmer hvordan du jobber som operatør.</p>
+
+<h2>Batchdrift: én porsjon om gangen</h2>
+<p>Ved <strong>batchdrift</strong> lager anlegget produktet i porsjoner. En slik porsjon kalles en <strong>batch</strong>. Det er som når du baker brød hjemme: Du blander en deig, lar den heve, steker den og tar den ut. Så kan du begynne på neste.</p>
+<p>I en fabrikk går en batch gjennom de samme stegene hver gang:</p>
+<ol>
+  <li><strong>Fylle:</strong> Råstoffene fylles i en tank eller en reaktor.</li>
+  <li><strong>Behandle:</strong> Innholdet blir rørt, varmet, kjølt eller får reagere i en bestemt tid.</li>
+  <li><strong>Tømme:</strong> Produktet tappes ut.</li>
+  <li><strong>Vaske:</strong> Tanken rengjøres, slik at neste batch ikke blir forurenset.</li>
+</ol>
+<p>Batchdrift brukes når det lages små mengder, når produktet skiftes ofte, eller når kvaliteten må kontrolleres nøye. Eksempler er medisiner, lakk og maling, lim, spesialkjemikalier, øl og ost.</p>
+<p>Hver batch får et <strong>batchnummer</strong>. Da kan bedriften spore nøyaktig hvilke råstoffer som ble brukt, hvem som jobbet og hva prøvene viste. Hvis det blir oppdaget en feil, vet bedriften hvilken batch som må holdes tilbake.</p>
+
+<figure>
+  <img src="bilder/batch-og-kontinuerlig.svg" alt="To grafer som viser nivået i en tank over tid. Øverst batchdrift: Nivået stiger mens tanken fylles, står stille mens den behandles, synker mens den tømmes og er null mens den vaskes. Så starter batch 2 på samme måte. Nederst kontinuerlig drift: Det går stoff inn og ut av tanken hele tiden, og nivået er en rett, vannrett linje." width="660">
+  <figcaption>Figur: Nivået i tanken over tid. Ved batchdrift går nivået opp og ned i takt med stegene. Ved kontinuerlig drift går det like mye inn som ut, og nivået holder seg konstant.</figcaption>
+</figure>
+
+<h2>Kontinuerlig drift: hele tiden</h2>
+<p>Ved <strong>kontinuerlig drift</strong> går råstoffet inn og produktet ut hele tiden. Anlegget kan gå i uker, måneder eller år uten å stoppe. Det stopper bare ved planlagt vedlikehold eller ved feil.</p>
+<p>Når anlegget går som det skal, er det i <strong>stasjonær tilstand</strong>. Det betyr at strømmene inn og ut, temperaturer, trykk og nivåer holder seg like over tid. Det går like mye stoff inn i en tank som ut av den, og derfor står nivået stille. Operatørens viktigste jobb er å holde anlegget stabilt og å oppdage avvik tidlig. Hvordan anlegget holdes stabilt med målinger og regulering, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+<p>Kontinuerlig drift brukes når det lages store mengder av det samme produktet. Eksempler er oljeraffinerier, gjødselfabrikker, papirfabrikker og vannrenseanlegg. Smelteovnene på et smelteverk går også døgnet rundt.</p>
+
+<h2>Fordeler og ulemper</h2>
+<table>
+  <thead><tr><th></th><th>Batchdrift</th><th>Kontinuerlig drift</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Mengde</strong></td><td>Små og mellomstore mengder</td><td>Store mengder</td></tr>
+    <tr><td><strong>Bytte produkt</strong></td><td>Lett. Samme utstyr kan lage mange produkter.</td><td>Vanskelig. Anlegget er bygd for ett produkt.</td></tr>
+    <tr><td><strong>Kvalitet</strong></td><td>Hver batch kan kontrolleres og godkjennes for seg.</td><td>Jevn kvalitet når anlegget er stabilt.</td></tr>
+    <tr><td><strong>Arbeid</strong></td><td>Mye manuelt arbeid: fylle, tømme og vaske</td><td>Mye er automatisert. Operatøren overvåker.</td></tr>
+    <tr><td><strong>Start og stopp</strong></td><td>Skjer hele tiden, er en del av jobben</td><td>Sjelden, men tar lang tid og er krevende</td></tr>
+    <tr><td><strong>Utstyr</strong></td><td>Billigere og enklere å bygge</td><td>Dyrt å bygge, men billig per tonn produkt</td></tr>
+  </tbody>
+</table>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvor mye lager anlegget per døgn?</div>
+  <p><strong>Oppgave:</strong> En batchreaktor tar 5 m³. En batch tar 8 timer, når fylling, reaksjon, tømming og vask er regnet med. Et kontinuerlig anlegg lager 1 m³ produkt i timen. Hvilket anlegg lager mest per døgn?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Et døgn har 24 timer. Batchreaktoren rekker 24 h / 8 h = 3 batcher per døgn.</li>
+    <li>Batchreaktoren lager 3 · 5 m³ = 15 m³ per døgn.</li>
+    <li>Det kontinuerlige anlegget lager 24 h · 1 m³/h = 24 m³ per døgn.</li>
+  </ol>
+  <p><strong>Svar:</strong> Det kontinuerlige anlegget lager mest, 24 m³ mot 15 m³, selv om reaktoren tar hele 5 m³ om gangen. Batchreaktoren bruker mye av tiden på fylling, tømming og vask.</p>
+</div>
+
+<h2>Batch og kontinuerlig i samme anlegg</h2>
+<p>Mange anlegg har både batchtrinn og kontinuerlige trinn. For eksempel kan en reaktor lage produktet i batcher, mens destillasjonen etterpå går kontinuerlig. Da trengs en <strong>buffertank</strong> mellom dem. Reaktoren tømmer en hel batch i buffertanken, og destillasjonen henter jevnt fra den. Buffertanken tar opp forskjellen, slik at begge trinnene kan gå i sitt eget tempo.</p>
+<p>Buffertanker brukes også mellom kontinuerlige trinn. Hvis ett trinn må stoppe en kort stund, kan resten av anlegget fortsette på det som ligger i tanken.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Start og stopp</strong> er blant de mest risikable øyeblikkene i begge driftsformer. Da endrer trykk, temperatur og mengder seg raskt, og mange ulykker skjer nettopp da. Følg prosedyren nøye.</li>
+    <li><strong>Batchdrift</strong> har mye manuelt arbeid med kjemikalier: fylling, prøvetaking og tømming. Bruk riktig verneutstyr. Før noen går inn i en tank for å vaske eller inspisere, skal den være tømt, spylt, blindet og luftet, og sikret med <a href="../01-hms/06-loto.html">lås og merk</a>. Det trengs arbeidstillatelse, gassmåling og en vakt utenfor. Les mer om <a href="../01-hms/06-loto.html#lukkede">arbeid i lukkede rom</a>.</li>
+    <li><strong>Kontinuerlig drift</strong> går ofte stabilt i lang tid. Da er det lett å slutte å følge med. Små endringer i målingene kan være det første tegnet på en feil.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er en batch?</p>
+  <ul>
+    <li>Et anlegg som går døgnet rundt</li>
+    <li data-riktig>En porsjon produkt som lages i én omgang</li>
+    <li>En tank mellom to trinn i anlegget</li>
+  </ul>
+  <p class="forklaring">En batch er én porsjon som fylles, behandles og tømmes før neste porsjon starter. Tanken mellom to trinn er en buffertank.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Et anlegg er i stasjonær tilstand. Hva betyr det?</p>
+  <ul>
+    <li>Anlegget står stille.</li>
+    <li data-riktig>Strømmer, temperaturer, trykk og nivåer holder seg like over tid.</li>
+    <li>Anlegget er stoppet for vedlikehold.</li>
+  </ul>
+  <p class="forklaring">I stasjonær tilstand er anlegget i full drift, men ingenting endrer seg over tid. Det går like mye inn som ut, så nivåene står stille.</p>
+</div>
+
+<div class="quiz">
+  <p>3. En fabrikk lager 30 ulike typer maling (farge) i små mengder. Hvilken driftsform passer best?</p>
+  <ul>
+    <li data-riktig>Batchdrift</li>
+    <li>Kontinuerlig drift</li>
+  </ul>
+  <p class="forklaring">Batchdrift passer når produktet skiftes ofte og mengdene er små. Samme utstyr kan brukes til mange produkter, og tanken vaskes mellom hver batch.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvorfor får hver batch et batchnummer?</p>
+  <ul>
+    <li>For å vite hvor mye den veier</li>
+    <li data-riktig>For å kunne spore råstoffer, prøver og arbeid hvis det blir funnet en feil</li>
+    <li>For å vite hvilken tank den skal i</li>
+  </ul>
+  <p class="forklaring">Med batchnummeret kan bedriften finne ut nøyaktig hvordan batchen ble laget. Hvis en feil blir oppdaget, vet bedriften hvilken batch som må holdes tilbake.</p>
+</div>
+
+<div class="quiz">
+  <p>5. En reaktor lager batcher, og destillasjonen etterpå går kontinuerlig. Hva trengs mellom dem?</p>
+  <ul>
+    <li>En sikt</li>
+    <li>En ekstra reaktor</li>
+    <li data-riktig>En buffertank</li>
+  </ul>
+  <p class="forklaring">Buffertanken tar imot en hel batch om gangen og gir jevnt videre til destillasjonen. Da kan begge trinnene gå i sitt eget tempo.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>batch</td><td>En porsjon produkt som lages i én omgang, fra fylling til tømming.</td><td>batch</td></tr>
+    <tr><td>batchdrift</td><td>En driftsform der anlegget lager produktet i porsjoner, én om gangen.</td><td>batch process</td></tr>
+    <tr><td>kontinuerlig drift</td><td>En driftsform der råstoff går inn og produkt går ut hele tiden, ofte i uker og måneder uten stans.</td><td>continuous process</td></tr>
+    <tr><td>stasjonær tilstand</td><td>En tilstand der strømmer, temperaturer, trykk og nivåer i et anlegg i drift holder seg like over tid.</td><td>steady state</td></tr>
+    <tr><td>batchnummer</td><td>Et nummer som følger en batch, slik at det går an å spore hvordan den ble laget.</td><td>batch number, lot number</td></tr>
+    <tr><td>buffertank</td><td>En tank mellom to trinn i et anlegg som jevner ut forskjeller i mengde, slik at trinnene kan gå i hvert sitt tempo.</td><td>buffer tank</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../05-maling-styring-regulering/index.html">Automasjon</a>: hvordan anlegget holdes stabilt med målinger og regulering.</li>
+  <li><a href="mekaniske-termiske-kjemiske-operasjoner.html">Mekaniske, termiske og kjemiske operasjoner</a>: forrige side.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
