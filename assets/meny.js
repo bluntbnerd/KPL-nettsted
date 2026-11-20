@@ -66,11 +66,12 @@
     { mappe: "01-hms", nr: 1, tittel: "HMS", farge: "#c2410c", ikon: "skjold", fag: ["PT", "ADK"] },
     { mappe: "02-kjemi-og-beregninger", nr: 2, tittel: "Kjemiske prinsipper", farge: "#2563eb", ikon: "kolbe", fag: ["KT", "ADK"], periodesystem: true },
     { mappe: "04-masse-og-energibalanser", nr: 3, tittel: "Fysiske prinsipper", farge: "#7c3aed", ikon: "vekt", fag: ["KT"], periodesystem: true },
-    { mappe: "03-enhetsoperasjoner", nr: 4, tittel: "Enhetsoperasjoner", farge: "#0f766e", ikon: "kolonne", fag: ["KT", "PT"] },
+    { mappe: "03-enhetsoperasjoner", nr: 4, tittel: "Enhetsoperasjoner", farge: "#0f766e", ikon: "kolonne", fag: ["KT"] },
     { mappe: "05-maling-styring-regulering", nr: 5, tittel: "Automasjon", farge: "#b45309", ikon: "maler", fag: ["PT"] },
     { mappe: "06-drift-og-vedlikehold", nr: 6, tittel: "Drift og vedlikehold", farge: "#475569", ikon: "tannhjul", fag: ["PT", "ADK"] },
     { mappe: "07-laboratorium-og-analyse", nr: 7, tittel: "Laboratorium og analyse", farge: "#0e7490", ikon: "reagensror", fag: ["ADK"], periodesystem: true },
-    { mappe: "10-yrket-og-arbeidslivet", nr: 8, tittel: "Bransjelære", farge: "#be185d", ikon: "hjelm", fag: ["PT", "KT", "ADK"] }
+    { mappe: "10-yrket-og-arbeidslivet", nr: 8, tittel: "Bransjelære", farge: "#be185d", ikon: "hjelm", fag: ["PT", "KT", "ADK"] },
+    { mappe: "11-tekniske-flytskjemaer", nr: 9, tittel: "Tekniske flytskjemaer", farge: "#4d7c0f", ikon: "flytskjema", fag: ["PT"] }
   ];
 
   var HOVEDLENKER = [
@@ -98,6 +99,7 @@
     skjema: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 10h7M8.5 13.5h7M8.5 17h4"/>',
     blad: '<path d="M5 19C5 10 11 5 20 4c-1 9-6 15-15 15z"/><path d="M5 19l8-8"/>',
     hjelm: '<path d="M3 17.5h18"/><path d="M5 17.5a7 7 0 0 1 14 0"/><path d="M10 10.8V8h4v2.8"/>',
+    flytskjema: '<rect x="2.5" y="4" width="6" height="6" rx="1"/><rect x="15.5" y="14" width="6" height="6" rx="1"/><path d="M8.5 7h4.5v10h2.5"/><path d="M13.5 15l2 2-2 2"/>',
     kalender: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
     hatt: '<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/>',
     liste: '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>',
