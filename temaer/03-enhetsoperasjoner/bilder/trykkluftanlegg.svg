@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 190" width="660" height="190" font-family="Segoe UI, Arial, sans-serif">
+  <title>Et trykkluftanlegg i seks trinn: kompressor, etterkjøler, vannutskiller, trykkluftbeholder, lufttørker og forbrukere.</title>
+  <defs>
+    <marker id="pilbla" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2471a3"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="190" rx="10" fill="#ffffff"/>
+  <text x="12" y="24" font-size="15" font-weight="bold" fill="#1c2828">Trykkluftanlegg</text>
+
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="10" y="50" width="92" height="60" rx="6"/>
+    <rect x="120" y="50" width="92" height="60" rx="6"/>
+    <rect x="230" y="50" width="92" height="60" rx="6"/>
+    <rect x="340" y="44" width="92" height="72" rx="30"/>
+    <rect x="450" y="50" width="92" height="60" rx="6"/>
+    <rect x="560" y="50" width="92" height="60" rx="6" fill="#ffffff" stroke-dasharray="5 4"/>
+  </g>
+  <g stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)">
+    <line x1="102" y1="80" x2="118" y2="80"/>
+    <line x1="212" y1="80" x2="228" y2="80"/>
+    <line x1="322" y1="80" x2="338" y2="80"/>
+    <line x1="432" y1="80" x2="448" y2="80"/>
+    <line x1="542" y1="80" x2="558" y2="80"/>
+  </g>
+  <g font-size="12.5" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="56" y="85">Kompressor</text>
+    <text x="166" y="85">Etterkjøler</text>
+    <text x="276" y="78">Vann-</text>
+    <text x="276" y="93">utskiller</text>
+    <text x="386" y="78">Trykkluft-</text>
+    <text x="386" y="93">beholder</text>
+    <text x="496" y="85">Lufttørker</text>
+    <text x="606" y="85">Forbrukere</text>
+  </g>
+  <g font-size="11.5" fill="#586868" text-anchor="middle">
+    <text x="56" y="140">presser lufta</text>
+    <text x="56" y="155">sammen</text>
+    <text x="166" y="140">kjøler den</text>
+    <text x="166" y="155">varme lufta</text>
+    <text x="276" y="140">tar ut vannet</text>
+    <text x="276" y="155">som kondenserer</text>
+    <text x="386" y="140">lagrer luft og</text>
+    <text x="386" y="155">jevner ut trykket</text>
+    <text x="496" y="140">tørker lufta</text>
+    <text x="496" y="155">enda mer</text>
+    <text x="606" y="140">ventiler, verktøy</text>
+    <text x="606" y="155">og instrumenter</text>
+  </g>
+</svg>

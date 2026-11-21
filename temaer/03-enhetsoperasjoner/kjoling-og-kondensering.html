@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kjøling og kondensering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Kjøling og kondensering</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT1</div>
+
+<p class="ingress">Varmen som kjøles bort fra prosessen, må havne et sted. I de fleste anlegg går den til et kjølevannssystem. På denne siden lærer du hvordan kjølevannet sirkulerer, hvordan en kondensator gjør damp om til væske, og hvordan damp brukes til å varme opp.</p>
+
+<h2>Hva kan vi kjøle med?</h2>
+<p>En kjøler er en <a href="typer-varmevekslere.html">varmeveksler</a> der den kalde strømmen er et kjølemedium. De vanligste er</p>
+<ul>
+  <li><strong>vann</strong>: ferskvann fra et vassdrag eller sjøvann. Vann tar opp mye varme og er billig. Det er det vanligste kjølemediet i prosessindustrien.</li>
+  <li><strong>luft</strong>: i en <a href="typer-varmevekslere.html">luftkjøler</a>. Den brukes der det er lite vann.</li>
+  <li><strong>kjølemaskin</strong>: Skal noe kjøles ned under temperaturen på vannet eller lufta, trengs en kjølemaskin. Den virker som en <a href="../04-masse-og-energibalanser/varmepumpe.html">varmepumpe</a>, men her er det den kalde siden vi bruker.</li>
+</ul>
+
+<h2>Kjølevannssystemer</h2>
+<p>Kjølevann kan brukes på to måter:</p>
+<ul>
+  <li><strong>Gjennomstrømning:</strong> Vannet pumpes inn fra sjøen eller elva, går gjennom kjølerne én gang og slippes ut igjen litt varmere. Det er enkelt, men krever mye vann. Varmt utslipp kan også påvirke livet i sjøen eller elva, så utslippet er regulert. Sjøvann er salt og etsende, og det kan vokse skjell og alger i rørene. Kjølere for sjøvann lages derfor ofte av titan.</li>
+  <li><strong>Sirkulerende krets med kjøletårn:</strong> Det samme vannet sirkulerer om og om igjen. Det henter varme fra kjølerne og blir kjølt ned igjen i et kjøletårn. I kjøletårnet er vannet i direkte kontakt med lufta.</li>
+</ul>
+<p>Et <strong>lukket kjølevannssystem</strong> er en krets der vannet aldri er i kontakt med lufta. Mange norske anlegg bruker en slik krets med ferskvann gjennom prosessutstyret. Ferskvannet kjøles igjen av sjøvann i en platevarmeveksler av titan. Da kommer sjøvannet bare i kontakt med én varmeveksler, og resten av anlegget slipper salt og begroing.</p>
+
+<figure>
+  <img src="bilder/kjolevannskrets.svg" alt="Skisse av en kjølevannskrets. Til venstre et kjøletårn med vifte på toppen. Varmt vann, for eksempel 35 grader, kommer inn i et rør øverst i tårnet og sprutes ut gjennom dyser. Vannet renner ned gjennom et fyllmateriale og ned i et basseng i bunnen. Luft kommer inn nederst på siden og blåses ut på toppen som varm, fuktig luft. Fra bassenget pumper en pumpe kaldt vann, for eksempel 25 grader, til en kjøler og en kondensator i prosessen. Fra disse går det varme vannet tilbake til toppen av kjøletårnet. Det er også en pil for etterfylling av vann inn i bassenget og en pil for avtapping fra bunnen av bassenget." width="600">
+  <figcaption>Figur: Sirkulerende kjølevannskrets med kjøletårn. Blått er kaldt vann på vei til prosessutstyret, og rødt er varmt vann på vei tilbake. Vannet tar opp varme fra prosessen i kjøleren og kondensatoren og gir den fra seg i kjøletårnet. Tallene er eksempler. Tegningen er forenklet.</figcaption>
+</figure>
+
+<h3>Slik virker kjøletårnet</h3>
+<p>Det varme vannet sprutes ut over et <strong>fyllmateriale</strong> øverst i tårnet. Fyllmaterialet er plater eller gitter av plast som får vannet til å spre seg i tynne lag. En vifte suger luft inn nederst og blåser den ut på toppen. Når lufta strømmer forbi vannet, fordamper litt av vannet. Fordampingen tar varme fra resten av vannet, som blir kaldere. Det kalde vannet samles i et <strong>basseng</strong> i bunnen og pumpes tilbake til kjølerne.</p>
+<p>Det er dette du ser som en hvit sky over et kjøletårn. Det er ikke røyk, men vanndamp som kondenserer til små dråper i den kalde lufta.</p>
+<p>Fordi noe vann fordamper hele tiden, må det fylles på nytt vann. Det kalles <strong>etterfylling</strong>. Saltene i vannet fordamper ikke, så de blir igjen og blir mer og mer konsentrert. Derfor tappes litt av vannet ut hele tiden. Det kalles <strong>avtapping</strong>. Vannet tilsettes også kjemikalier som hindrer kalk, rust og bakterievekst. Det kalles vannbehandling.</p>
+<p>Hvor kaldt vannet blir, avhenger av hvor varm og fuktig lufta er. Det er fordampingen som kjøler, så i tørr luft kan vannet faktisk bli litt kaldere enn lufta. Det klarer ikke en luftkjøler. Varm og fuktig luft gir dårligere kjøling, så kjøletårnet kjøler dårligere en varm og fuktig sommerdag.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Legionella</div>
+  <p>Legionella er en bakterie som trives i vann på ca. 20–45 °C, og som kan gi en alvorlig lungebetennelse. Et kjøletårn har varmt vann og sprer små dråper med lufta. Derfor kan bakteriene spres over store avstander. I 2005 fikk flere titalls personer legionellasykdom i Sarpsborg og Fredrikstad, og ti døde. Smitten kom fra en luftskrubber ved en fabrikk, som i likhet med et kjøletårn sprer vanndråper i lufta. Anlegg med kjøletårn skal derfor ha rutiner for vannbehandling og rengjøring, og det tas jevnlige prøver av vannet. Bruk åndedrettsvern når du arbeider inne i et kjøletårn.</p>
+</div>
+
+<h2>Kondensatoren</h2>
+<p>En <strong>kondensator</strong> er en varmeveksler som kjøler damp slik at den blir væske. Væsken som dannes, kalles <strong>kondensat</strong>. Du møter kondensatoren igjen på <a href="destillasjonskolonnen.html">toppen av en destillasjonskolonne</a>. Den finnes også etter inndampere og tørkere, og i kraftverk.</p>
+<p>I en vanlig kjøler synker temperaturen på produktet etter hvert som det kjøles. I en kondensator er det annerledes. Så lenge dampen av et rent stoff, for eksempel vann, kondenserer, holder den seg på kokepunktet. Varmen som tas bort, er <a href="../04-masse-og-energibalanser/varme-og-energi.html">fordampingsvarmen</a> som dampen fikk da den ble laget. For vann er det ca. 2260 kJ per kilo, mye mer enn det trengs for å kjøle vannet noen grader. En kondensator trenger derfor mye kjølevann.</p>
+<p>Ofte går dampen på kappesiden av en <a href="typer-varmevekslere.html">rørkjelvarmeveksler</a>, og kjølevannet går i rørene. Kondensatet renner ned og samles i bunnen.</p>
+
+<h3>Luft i kondensatoren</h3>
+<p>Kommer det luft eller andre gasser som ikke kondenserer, inn i kondensatoren, legger de seg som et lag rundt rørene. Laget hindrer dampen i å komme fram til de kalde flatene, og kondensatoren virker dårligere. Derfor har kondensatoren en <strong>lufting</strong> der slike gasser kan slippe ut.</p>
+
+<h3>Vakuum fra kondensatoren</h3>
+<p>Damp tar mer enn tusen ganger så stor plass som den samme mengden vann. Når dampen kondenserer i en lukket kondensator, blir den derfor nesten borte, og trykket faller. Slik kan en kondensator lage vakuum. En <a href="kompressorer-og-vifter.html">vakuumpumpe</a> trengs mest for å lage vakuum ved oppstart og for å fjerne lufta som lekker inn. Dette brukes i vakuumdestillasjon og i vakuuminndampere, der man vil koke ved lav temperatur.</p>
+
+<h2>Damp som varmekilde</h2>
+<p>Det motsatte av å kjøle med en kondensator er å varme med damp. Mange anlegg har en <strong>dampkjel</strong> som lager damp, og et nett av damprør ut til utstyret som skal varmes. Damp er et godt varmemedium av to grunner:</p>
+<ul>
+  <li>Den gir fra seg mye energi per kilo når den kondenserer.</li>
+  <li>Den kondenserer ved en fast temperatur som avhenger av trykket. Ved høyere damptrykk blir temperaturen høyere, se <a href="../04-masse-og-energibalanser/temperatur-og-varme.html">Kokepunktet avhenger av trykket</a>. Operatøren kan derfor styre temperaturen ved å styre damptrykket.</li>
+</ul>
+
+<figure>
+  <img src="bilder/dampoppvarming.svg" alt="Skisse av en varmeveksler som varmes med damp. Damp fra dampkjelen går gjennom en reguleringsventil og inn på toppen av kappen. Inne i kappen kondenserer dampen på rørene, og kondensat samler seg i bunnen. Kaldt produkt går inn i rørene fra venstre og kommer ut varmt til høyre. Fra bunnen av kappen går kondensatet ned til en kondenspotte, som slipper ut vann, men ikke damp. Kondensatet går tilbake til dampkjelen." width="600">
+  <figcaption>Figur: Dampoppvarming. Dampen (oransje) kondenserer på rørene og varmer produktet. Kondensatet (blått) går ut gjennom en kondenspotte og tilbake til dampkjelen. Tegningen er forenklet.</figcaption>
+</figure>
+
+<h3>Kondenspotten</h3>
+<p>Kondensatet som dannes, må hele tiden fjernes. Blir det stående, dekker det rørene, og da varmer varmeveksleren dårligere. Men dampen skal ikke slippe ut, for da går energien tapt. Løsningen er en <strong>kondenspotte</strong>. Det er en automatisk ventil som åpner når det kommer vann, og stenger når det kommer damp. Kondenspotter sitter også på lave punkter i damprørene, der kondensat samler seg.</p>
+<p>Kondensatet er varmt og rent vann. Det sendes derfor tilbake til dampkjelen, slik at både vannet og varmen brukes på nytt.</p>
+<p>En kondenspotte som står fast åpen, slipper ut damp hele tiden og sløser med energi. En som står fast stengt, gjør at varmeveksleren fylles med kondensat og slutter å varme. Begge deler er vanlige feil som operatøren må se etter.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Prøv selv</div>
+  <p>Finn ut hvor varmen fra skolens anlegg eller labutstyr blir av. Går den til kjølevann fra springen, til et lukket system eller til lufta? Hvis du besøker en bedrift, se etter kjøletårn, damprør og kondenspotter.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Damp</strong> gir verre brannskader enn kokende vann, fordi den gir fra seg mye ekstra energi når den kondenserer på huden. Damp fra en lekkasje kan være usynlig nær lekkasjen.</li>
+    <li><strong>Vannslag:</strong> Kondensat som blir liggende i et damprør, kan bli revet med av dampen i stor fart og slå inn i bend og ventiler med et kraftig smell. Det kan få rør til å sprekke. Åpne damp langsomt, og tøm rørene for kondensat først, slik prosedyren sier.</li>
+    <li><strong>Varmt kondensat:</strong> Kondensat under trykk er varmere enn 100 °C. Når det slippes ut, koker en del av det med en gang og blir til damp. Hold deg unna utløpet fra kondenspotter.</li>
+    <li><strong>Kjølevann</strong> inneholder kjemikalier fra vannbehandlingen. Sjekk <a href="../01-hms/02-sikkerhetsdatablad.html">sikkerhetsdatabladet</a>.</li>
+    <li>Før en kondensator, en dampvarmet varmeveksler eller et damprør åpnes, skal det være stengt, trykkløst, tømt og avkjølt, og sikret med <a href="../01-hms/06-loto.html">lås og merk</a>.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hvordan blir vannet kaldt i et kjøletårn?</p>
+  <ul>
+    <li>Det går gjennom en kjølemaskin i bunnen av tårnet.</li>
+    <li data-riktig>Litt av vannet fordamper, og det tar varme fra resten av vannet.</li>
+    <li>Det blandes med kaldt vann fra springen.</li>
+  </ul>
+  <p class="forklaring">Fordamping tar opp mye energi. Når litt av vannet fordamper i lufta som strømmer gjennom tårnet, blir resten av vannet kaldere.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hvorfor må det tappes ut litt vann fra bassenget i et kjøletårn hele tiden?</p>
+  <ul>
+    <li>For å gjøre plass til regnvann</li>
+    <li data-riktig>Fordi saltene blir igjen når vann fordamper, og blir mer og mer konsentrert</li>
+    <li>For å senke temperaturen i bassenget</li>
+  </ul>
+  <p class="forklaring">Det er bare vannet som fordamper. Saltene blir igjen. Uten avtapping ville det blitt så mye salter at det dannes kalk og belegg.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva skjer med temperaturen på dampen mens den kondenserer i en kondensator?</p>
+  <ul>
+    <li>Den synker jevnt hele veien.</li>
+    <li data-riktig>Den holder seg på kokepunktet så lenge dampen kondenserer.</li>
+    <li>Den stiger.</li>
+  </ul>
+  <p class="forklaring">Ved kondensering gir dampen fra seg fordampingsvarmen uten at temperaturen endres. Først når alt er blitt væske, kan væsken kjøles videre.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hva gjør en kondenspotte?</p>
+  <ul>
+    <li>Den lager damp av kondensatet.</li>
+    <li>Den slipper damp ut i lufta hvis trykket blir for høyt.</li>
+    <li data-riktig>Den slipper ut kondensat, men holder dampen inne.</li>
+  </ul>
+  <p class="forklaring">Kondensatet må ut, ellers fylles varmeveksleren med vann. Dampen skal bli inne til den har kondensert og gitt fra seg varmen.</p>
+</div>
+
+<div class="quiz">
+  <p>5. En dampvarmet varmeveksler varmer plutselig mye dårligere, selv om damptrykket er normalt. Hva kan være feil?</p>
+  <ul>
+    <li data-riktig>Kondenspotten står fast stengt, så varmeveksleren fylles med kondensat.</li>
+    <li>Kondenspotten står fast åpen.</li>
+    <li>Dampen er for varm.</li>
+  </ul>
+  <p class="forklaring">Kommer ikke kondensatet ut, dekker det rørene, og dampen når ikke fram til flatene. En kondenspotte som står fast åpen, sløser med damp, men varmeveksleren varmer fortsatt.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>kjølevann</td><td>Vann som brukes til å ta opp varme fra prosessen i kjølere og kondensatorer.</td><td>cooling water</td></tr>
+    <tr><td>kjøletårn</td><td>Et tårn der varmt kjølevann kjøles ved at litt av det fordamper i lufta som blåses gjennom.</td><td>cooling tower</td></tr>
+    <tr><td>fyllmateriale</td><td>Plater eller gitter i et kjøletårn som sprer vannet i tynne lag, slik at det kommer i god kontakt med lufta.</td><td>fill</td></tr>
+    <tr><td>etterfylling</td><td>Nytt vann som fylles på i en kjølevannskrets for å erstatte vann som har fordampet eller er tappet ut.</td><td>make-up water</td></tr>
+    <tr><td>avtapping</td><td>Vann som tappes ut av en kjølevannskrets for å hindre at saltene blir for konsentrerte.</td><td>blowdown</td></tr>
+    <tr><td>kjølemaskin</td><td>En maskin som virker som en varmepumpe og kan kjøle under temperaturen på lufta eller vannet rundt.</td><td>chiller</td></tr>
+    <tr><td>kondensator</td><td>En varmeveksler som kjøler damp slik at den blir væske. På laben kalles den ofte kjøler.</td><td>condenser</td></tr>
+    <tr><td>kondensat</td><td>Væske som dannes når damp kjøles, for eksempel vann fra damp som har kondensert i en varmeveksler, eller vann i trykkluftanlegget.</td><td>condensate</td></tr>
+    <tr><td>lufting</td><td>Et utløp der luft og andre gasser som ikke kondenserer, kan slippe ut av utstyret.</td><td>vent</td></tr>
+    <tr><td>dampkjel</td><td>Utstyr som koker vann til damp under trykk, slik at dampen kan brukes til oppvarming.</td><td>steam boiler</td></tr>
+    <tr><td>kondenspotte</td><td>En automatisk ventil som slipper ut kondensat, men holder dampen inne.</td><td>steam trap</td></tr>
+    <tr><td>vannslag</td><td>Et kraftig slag i et rør når væske plutselig stoppes eller blir revet med i stor fart, for eksempel kondensat i et damprør.</td><td>water hammer</td></tr>
+    <tr><td>legionella</td><td>En bakterie som trives i varmt vann og kan gi alvorlig lungebetennelse når små vanndråper pustes inn.</td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../04-masse-og-energibalanser/varme-og-energi.html">Varme og energi i prosesser</a> (Fysiske prinsipper): regn ut hvor mye varme som trengs for å koke bort eller kondensere en væske.</li>
+  <li><a href="../04-masse-og-energibalanser/varmepumpe.html">Varmepumpe</a> (Fysiske prinsipper): prinsippet bak kjølemaskinen.</li>
+  <li><a href="destillasjonskolonnen.html">Destillasjonskolonnen</a>: kondensator og koker i en kolonne.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Opplysningene om legionellautbruddet i 2005 er allment kjente og omtalt av Folkehelseinstituttet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

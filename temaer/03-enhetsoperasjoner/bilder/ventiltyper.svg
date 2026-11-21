@@ -28,7 +28,7 @@
   <text x="82" y="24" font-size="15" font-weight="bold" fill="#1c2828" text-anchor="middle">Kuleventil</text>
   <circle cx="82" cy="170" r="36" fill="#e3e8e8" stroke="#586868" stroke-width="3"/>
   <circle cx="82" cy="170" r="27" fill="#a9b3b3" stroke="#586868" stroke-width="2"/>
-  <rect x="55" y="158" width="54" height="24" fill="#cfe3f1"/>
+  <rect x="44" y="152" width="76" height="36" fill="#cfe3f1"/>
   <line x1="82" y1="143" x2="82" y2="96" stroke="#586868" stroke-width="5"/>
   <line x1="82" y1="96" x2="138" y2="96" stroke="#1c2828" stroke-width="7" stroke-linecap="round"/>
   <text x="96" y="86" font-size="11.5" fill="#586868">håndtak</text>
@@ -64,7 +64,7 @@
   <rect x="402" y="80" width="20" height="56" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
   <ellipse cx="412" cy="170" rx="44" ry="38" fill="#cfe3f1" stroke="#586868" stroke-width="3"/>
   <!-- strømningsvei -->
-  <path d="M352,182 L410,182 L410,172 M414,154 L476,154" fill="none" stroke="#2471a3" stroke-width="2.5"/>
+  <path d="M352,182 L410,182 L410,172 M430,154 L476,154" fill="none" stroke="#2471a3" stroke-width="2.5"/>
   <line x1="460" y1="154" x2="478" y2="154" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
   <!-- skillevegg med sete -->
   <path d="M392,134 L392,170 L402,170" fill="none" stroke="#586868" stroke-width="4"/>
@@ -93,7 +93,7 @@
   <!-- klaff, åpen -->
   <circle cx="566" cy="146" r="3.5" fill="#1c2828"/>
   <line x1="566" y1="146" x2="598" y2="176" stroke="#1c2828" stroke-width="5" stroke-linecap="round"/>
-  <line x1="512" y1="186" x2="640" y2="186" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
+  <line x1="512" y1="179" x2="640" y2="179" stroke="#2471a3" stroke-width="2.5" marker-end="url(#pilbla)"/>
   <text x="604" y="122" font-size="11.5" fill="#586868">klaff</text>
   <line x1="606" y1="126" x2="590" y2="164" stroke="#586868" stroke-width="1"/>
   <g font-size="12.5" fill="#1c2828" text-anchor="middle">

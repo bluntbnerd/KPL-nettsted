@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Tanker og beholdere</h1>
@@ -31,12 +31,12 @@
 
 <h2>Atmosfærisk tank eller trykkbeholder</h2>
 <p>Den viktigste forskjellen mellom tanker er hvilket trykk de er laget for.</p>
-<p>En <strong>atmosfærisk tank</strong> står åpen mot lufta gjennom en lufting. Trykket over væsken er derfor det samme som lufttrykket, altså 0 bar overtrykk. De fleste lagertanker for væske er atmosfæriske. De er ofte stående sylindere med flat bunn og et svakt hellende tak. Veggene trenger ikke være så tykke, fordi de bare skal tåle trykket fra væsken. Det trykket lærte du å regne ut på siden <a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a>.</p>
+<p>En <strong>atmosfærisk tank</strong> er laget for et trykk nær lufttrykket. Den har en lufting eller en pusteventil som slipper luft ut og inn, slik at trykket over væsken holder seg omtrent likt lufttrykket, altså nær 0 bar overtrykk. De fleste lagertanker for væske er atmosfæriske. De er ofte stående sylindere med flat bunn og et svakt hellende tak. Veggene trenger ikke være så tykke, fordi de bare skal tåle trykket fra væsken. Det trykket kan du regne ut på siden <a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a>.</p>
 <p>En <strong>trykkbeholder</strong> er lukket og står under trykk. Den brukes til gass, for eksempel trykkluft, nitrogen eller propan, og til væsker som må holdes under trykk. Trykkbeholdere har runde former: en sylinder med buede ender, eller en kule. En rund form fordeler trykket jevnt på hele veggen. En flat plate ville bøyd seg utover. Trykkbeholdere må være godkjent for trykket de skal brukes ved, og de kontrolleres jevnlig.</p>
 
 <figure>
-  <img src="bilder/tanker.svg" alt="To tegninger. Til venstre et snitt gjennom en stående atmosfærisk lagertank med hellende tak. Tanken står på et fundament i et oppsamlingskar. Innløpet kommer ovenfra og går ned i tanken. På taket sitter luftingen. Høyt oppe på høyre side går et overløpsrør ned i oppsamlingskaret. På venstre side sitter et høynivåvern øverst, et mannlokk på midten og en nivåmåler nederst. Nederst på høyre side går utløpet ut gjennom en bunnventil. Til høyre en liggende trykkbeholder med buede ender, som står på to saler. På toppen sitter en sikkerhetsventil og et manometer. Teksten sier at buede ender og runde former fordeler trykket jevnt på veggen." width="660">
-  <figcaption>Figur: Til venstre en atmosfærisk lagertank med det vanligste utstyret. Til høyre en trykkbeholder, som har runde former og sikkerhetsventil. Tegningene er forenklet.</figcaption>
+  <img src="bilder/tanker.svg" alt="To tegninger. Til venstre et snitt gjennom en stående atmosfærisk lagertank med hellende tak. Tanken står på et fundament i et oppsamlingskar. Innløpsrøret kommer ovenfra og går ned under væskeoverflaten. På taket sitter luftingen. Høyt oppe på høyre side går et overløpsrør ned i oppsamlingskaret. På venstre side sitter et høynivåvern øverst, et mannlokk på midten og en nivåmåler nederst. Nederst på høyre side går utløpet ut gjennom en bunnventil. Til høyre en liggende trykkbeholder med buede ender, som står på to saler. På toppen sitter en sikkerhetsventil og et manometer. Teksten sier at buede ender og runde former fordeler trykket jevnt på veggen." width="660">
+  <figcaption>Figur: Til venstre en atmosfærisk lagertank med det vanligste utstyret. Til høyre en trykkbeholder, som har runde former og sikkerhetsventil. Tegningene er forenklet. Overløpet er tegnet ned i oppsamlingskaret, men for farlige kjemikalier skal det gå til en lukket oppsamling.</figcaption>
 </figure>
 
 <h2>Hva sitter på en tank?</h2>
@@ -45,7 +45,7 @@
   <li><strong>Innløp</strong> fyller tanken. Innløpsrøret går ofte ned under væskeoverflaten. Da spruter ikke væsken, og det blir mindre damp og mindre statisk elektrisitet.</li>
   <li><strong>Utløp med bunnventil</strong> tømmer tanken. Utløpet sitter nær bunnen, så nesten all væsken kan tas ut. Bunnventilen kan stenges, slik at tanken kan holdes adskilt fra resten av anlegget.</li>
   <li><strong>Lufting</strong> slipper luft ut når tanken fylles, og inn når den tømmes. Uten lufting ville trykket i tanken steget når den fylles, og falt når den tømmes.</li>
-  <li><strong>Overløp</strong> er et rør høyt oppe som leder væsken bort på en trygg måte hvis tanken likevel blir for full.</li>
+  <li><strong>Overløp</strong> er et rør høyt oppe som leder væsken bort på en trygg måte hvis tanken likevel blir for full. For farlige kjemikalier skal overløpet gå til en lukket oppsamlingstank, ikke rett ut i et sluk.</li>
   <li><strong>Mannlokk</strong> er en stor luke som kan åpnes når tanken skal inspiseres eller rengjøres innvendig.</li>
   <li><strong>Avtapping</strong> er en liten ventil helt i bunnen. Den brukes til å tømme ut det siste, til å ta ut vann som har samlet seg under en olje, eller til å ta prøver.</li>
   <li><strong>Nivåmåler og høynivåvern</strong> viser hvor mye som er i tanken, og stopper fyllingen før tanken blir overfylt. Hvordan målerne virker, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</li>
@@ -59,18 +59,18 @@
   <thead><tr><th>Materiale</th><th>Brukes til</th></tr></thead>
   <tbody>
     <tr><td>karbonstål (vanlig stål)</td><td>vann, olje, diesel og andre stoffer som ikke tærer på stålet</td></tr>
-    <tr><td>rustfritt stål</td><td>matvarer, rent vann og mange kjemikalier</td></tr>
+    <tr><td>rustfritt stål</td><td>matvarer, rent vann og mange kjemikalier, men ikke saltsyre og andre væsker med mye klorid</td></tr>
     <tr><td>glassfiberarmert plast</td><td>syrer som tærer på stål, for eksempel saltsyre</td></tr>
     <tr><td>stål med gummi eller plast innvendig</td><td>sterke syrer og lut i store tanker</td></tr>
   </tbody>
 </table>
 <p>Det er ikke alltid lett å gjette riktig materiale. Konsentrert svovelsyre lagres ofte i vanlig karbonstål, fordi stålet får et tynt lag på overflaten som beskytter det. Fortynnet svovelsyre tærer derimot fort på det samme stålet. Sjekk derfor alltid hva tanken er laget for, før du fyller noe annet i den. Hvorfor metall tæres, og hvordan tanker kontrolleres, lærer du i <a href="../06-drift-og-vedlikehold/index.html">Drift og vedlikehold</a>.</p>
-<p>Tanker med farlige eller miljøskadelige væsker står i et <strong>oppsamlingskar</strong>, også kalt invallering. Det er en mur eller et basseng rundt tanken som fanger opp væsken hvis tanken lekker. Karet skal minst romme innholdet i den største tanken. Står flere tanker sammen, kalles det en tankgård.</p>
+<p>Tanker med farlige eller miljøskadelige væsker står i et <strong>oppsamlingskar</strong>, også kalt invallering. Det er en mur eller et basseng rundt tanken som fanger opp væsken hvis tanken lekker. Karet skal minst romme innholdet i den største tanken, og ofte litt mer. Hva som kreves, står i forskriftene for stoffet. Står flere tanker sammen, kalles det en <strong>tankgård</strong>.</p>
 
 <div class="boks eksempel">
   <div class="boks-tittel">Pumperommet på skolen</div>
-  <p>Pumperommet har tre stående tanker. Tank 1 og tank 2 er 0,79 m i diameter, og tank 3 er 1,2 m. Tank 1 og tank 3 er 1,25 m høye. Tank 1 har en nivåmåler i bunnen som måler trykket fra vannet, og pumpene stopper automatisk hvis nivået blir høyt-høyt (HH). Hver tank har en bunnventil.</p>
-  <p><strong>Prøv selv:</strong> Gå rundt tankene og finn innløp, utløp, bunnventil, lufting og eventuelt overløp. Hva er tankene laget av? Er de atmosfæriske tanker eller trykkbeholdere? Hvordan kan du se det?</p>
+  <p>Pumperommet har tre tanker. Tank 1 og tank 2 er 0,79 m i diameter, og tank 3 er 1,2 m. Tank 1 og tank 3 er 1,25 m høye. Tank 1 har en nivåmåler i bunnen som måler trykket fra vannet, og pumpene stopper automatisk hvis nivået blir høyt-høyt (HH). Tank 2 har en bunnventil som kan stenges når tanken fylles.</p>
+  <p><strong>Prøv selv:</strong> Gå rundt tankene og finn innløp, utløp, lufting og eventuelt overløp. Har alle tankene bunnventil? Hva er tankene laget av? Er de atmosfæriske tanker eller trykkbeholdere? Hvordan kan du se det?</p>
 </div>
 
 <div class="boks advarsel">
@@ -79,7 +79,7 @@
     <li><strong>Luftingen må aldri tettes.</strong> Tømmes en tank mens luftingen er tett, blir det undertrykk, og lufttrykket utenfor kan knuse tanken. Fylles den, kan trykket sprenge den. Se <a href="../04-masse-og-energibalanser/kraft-og-trykk.html">Kraft og trykk</a>.</li>
     <li><strong>Overfylling</strong> kan gi utslipp, brann eller giftig damp. Følg med på nivået når du fyller, og stol ikke bare på høynivåvernet. Se <a href="../01-hms/06-overfylling.html">Overfylling av tank</a>.</li>
     <li><strong>Sikkerhetsventilen</strong> på en trykkbeholder skal aldri stenges eller blokkeres. Se <a href="../01-hms/06-trykktank.html">Trykktanken</a>.</li>
-    <li><strong>Mannlokket</strong> skal ikke åpnes før tanken er tømt og trykkløs. Å gå inn i en tank er arbeid i et lukket rom, og krever arbeidstillatelse, gassmåling, <a href="../01-hms/06-loto.html">lås og merk</a> og en vakt utenfor.</li>
+    <li><strong>Mannlokket</strong> skal ikke åpnes før tanken er tømt og trykkløs. Før noen går inn, skal tanken også være rengjort og luftet. Å gå inn i en tank er arbeid i et lukket rom, og krever arbeidstillatelse, gassmåling, <a href="../01-hms/06-loto.html">lås og merk</a> og en vakt utenfor.</li>
     <li>Over brannfarlig væske i en tank kan det være brennbar damp. Rundt luftingen er det derfor ofte et <a href="../01-hms/06-eksplosjonsomrade.html">eksplosjonsfarlig område</a>.</li>
   </ul>
 </div>
@@ -142,13 +142,19 @@
   <tbody>
     <tr><td>lagertank</td><td>En tank som lagrer råstoff før det brukes, eller ferdig produkt før det sendes ut.</td><td>storage tank</td></tr>
     <tr><td>buffertank</td><td>En tank mellom to trinn i et anlegg som jevner ut forskjeller i mengde, slik at trinnene kan gå i hvert sitt tempo.</td><td>buffer tank</td></tr>
-    <tr><td>separator</td><td>En tank der væsker eller faser får stå i ro og skille seg, for eksempel olje og vann.</td><td>separator</td></tr>
-    <tr><td>atmosfærisk tank</td><td>En tank som står åpen mot lufta gjennom en lufting, slik at trykket over væsken er det samme som lufttrykket.</td><td>atmospheric tank</td></tr>
+    <tr><td>blandetank</td><td>En tank der to eller flere stoffer blandes, ofte med en omrører.</td><td>mixing tank</td></tr>
+    <tr><td>separator</td><td>Utstyr som skiller to faser, for eksempel olje og vann eller gass og væske. Det kan være en tank der fasene skiller seg av tyngden, eller en sentrifuge.</td><td>separator</td></tr>
+    <tr><td>atmosfærisk tank</td><td>En tank som er laget for trykk nær lufttrykket. Den har en lufting eller en pusteventil, slik at trykket over væsken holder seg nær lufttrykket.</td><td>atmospheric tank</td></tr>
     <tr><td>trykkbeholder</td><td>En lukket beholder som står under trykk, for eksempel for gass. Den har runde former og sikkerhetsventil.</td><td>pressure vessel</td></tr>
     <tr><td>stuss</td><td>Et rørstykke eller et hull på en tank der rør, ventiler eller instrumenter kobles til.</td><td>nozzle</td></tr>
     <tr><td>lufting</td><td>En åpning på toppen av en tank som slipper luft ut når tanken fylles, og inn når den tømmes.</td><td>vent</td></tr>
     <tr><td>overløp</td><td>Et rør høyt oppe på en tank som leder væsken trygt bort hvis tanken blir for full.</td><td>overflow</td></tr>
     <tr><td>mannlokk</td><td>En stor luke på en tank som åpnes når tanken skal inspiseres eller rengjøres innvendig.</td><td>manhole</td></tr>
+    <tr><td>avtapping</td><td>En liten ventil helt i bunnen av en tank som brukes til å tømme ut det siste, tappe ut vann eller ta prøver.</td><td>drain valve</td></tr>
+    <tr><td>høynivåvern</td><td>En nivåbryter høyt oppe i en tank som stopper fyllingen før tanken blir overfylt.</td><td>high level switch</td></tr>
+    <tr><td>sikkerhetsventil</td><td>En fjærbelastet ventil som åpner av seg selv når trykket blir for høyt, og stenger når det har falt.</td><td>safety valve, pressure relief valve</td></tr>
+    <tr><td>manometer</td><td>Instrument som måler trykk, vanligvis overtrykket.</td><td>pressure gauge</td></tr>
+    <tr><td>tankgård</td><td>Et område der flere lagertanker står sammen, ofte i et felles oppsamlingskar.</td><td>tank farm</td></tr>
     <tr><td>bunnventil</td><td>Ventilen på utløpet nederst på en tank. Med den kan tanken stenges av fra resten av anlegget.</td><td>bottom valve</td></tr>
     <tr><td>pusteventil</td><td>En ventil på en tank som slipper luft ut eller inn bare når trykket blir litt for høyt eller litt for lavt.</td><td>pressure/vacuum relief valve</td></tr>
     <tr><td>flytende tak</td><td>Et tak som ligger oppå væsken i en lagertank og følger nivået opp og ned, slik at lite damp slipper ut.</td><td>floating roof</td></tr>

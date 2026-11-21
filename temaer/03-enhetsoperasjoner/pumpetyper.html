@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Pumpetyper</h1>
@@ -37,12 +37,12 @@
 <h3>Slik oppfører sentrifugalpumpen seg</h3>
 <ul>
   <li><strong>Den må være fylt med væske før start.</strong> En vanlig sentrifugalpumpe klarer ikke å suge luft. Er pumpehuset fullt av luft, går hjulet rundt uten å pumpe noe.</li>
-  <li><strong>Strømmen reguleres med en ventil på trykksiden</strong> eller ved å endre turtallet på motoren med en frekvensomformer. Struper du ventilen, blir volumstrømmen mindre. Hvordan trykket og volumstrømmen henger sammen, ser du på <a href="../04-masse-og-energibalanser/ror-ventiler-pumper.html">pumpekurven</a> i Fysiske prinsipper.</li>
-  <li><strong>Den tåler å gå mot en stengt ventil en kort stund.</strong> Da står væsken stille i pumpehuset, og trykket stiger bare til det høyeste pumpen kan gi. Men går den lenge slik, blir væsken varm, og pumpen kan bli skadet.</li>
+  <li><strong>Strømmen reguleres med en ventil på trykksiden</strong> eller ved å endre turtallet på motoren med en frekvensomformer. Struper du ventilen, blir volumstrømmen mindre, og trykket rett etter pumpen stiger. Å styre med frekvensomformer sparer energi, fordi pumpen ikke må presse mot en ventil som struper. Hvordan trykket og volumstrømmen henger sammen, ser du på <a href="../04-masse-og-energibalanser/ror-ventiler-pumper.html">pumpekurven</a> i Fysiske prinsipper.</li>
+  <li><strong>Den tåler å gå mot en stengt ventil en kort stund.</strong> Da strømmer ingen væske gjennom pumpen. Væsken virvles rundt i huset, og trykket stiger bare til det høyeste pumpen kan gi. Men går den lenge slik, blir væsken varm, og pumpen kan bli skadet. Steng derfor ikke ventilen helt mens pumpen går, med mindre driftsprosedyren sier det.</li>
 </ul>
 
 <h3>Kavitasjon</h3>
-<p>I midten av hjulet, der væsken kommer inn, er trykket lavest. Blir trykket her for lavt, begynner væsken å koke, selv om den ikke er varm. Det dannes små dampbobler. Når boblene kommer ut mot kanten der trykket er høyere, klapper de sammen med et smell. Dette kalles <strong>kavitasjon</strong>. Pumpen lager en lyd som om den pumper grus, den rister, og den gir mindre. Over tid sliter smellene hull i pumpehjulet.</p>
+<p>I midten av hjulet, der væsken kommer inn, er trykket lavest. Blir trykket her for lavt, begynner væsken å koke, selv om den ikke er varm. Det dannes små dampbobler. Når boblene kommer lenger ut på skovlene, der trykket er høyere, klapper de sammen med et smell. Dette kalles <strong>kavitasjon</strong>. Pumpen lager en lyd som om den pumper grus, den rister, og den gir mindre volumstrøm og trykk. Over tid sliter smellene hull i pumpehjulet.</p>
 <p>Kavitasjon skjer når det er for lite trykk på sugesiden, for eksempel fordi</p>
 <ul>
   <li>nivået i tanken foran pumpen er for lavt</li>
@@ -57,7 +57,7 @@
   <thead><tr><th>Pumpe</th><th>Slik virker den</th><th>Brukes til</th></tr></thead>
   <tbody>
     <tr><td><strong>stempelpumpe</strong></td><td>Et stempel går fram og tilbake i en sylinder. To tilbakeslagsventiler sørger for at væsken bare går én vei.</td><td>høyt trykk, for eksempel høytrykksspylere</td></tr>
-    <tr><td><strong>membranpumpe</strong></td><td>Som stempelpumpen, men en bøyelig plate (membran) beveger seg i stedet for et stempel. Væsken kommer ikke i kontakt med de bevegelige delene.</td><td>etsende kjemikalier, slam og nøyaktig dosering</td></tr>
+    <tr><td><strong>membranpumpe</strong></td><td>Som stempelpumpen, men en bøyelig plate (membran) beveger seg i stedet for et stempel. Membranen skiller væsken fra drivverket, så pumpen trenger ingen akseltetning som kan lekke.</td><td>etsende kjemikalier, slam og nøyaktig dosering</td></tr>
     <tr><td><strong>tannhjulspumpe</strong></td><td>To tannhjul griper inn i hverandre. Væsken blir med i lommene mellom tennene langs veggen og presses ut.</td><td>tykke væsker som olje, sirup og lim</td></tr>
     <tr><td><strong>slangepumpe</strong></td><td>Ruller klemmer en slange sammen og presser væsken framover. Væsken er bare inne i slangen.</td><td>dosering og laboratoriet</td></tr>
   </tbody>
@@ -65,10 +65,10 @@
 
 <h3>Slik oppfører fortrengningspumpen seg</h3>
 <ul>
-  <li><strong>Den må aldri gå mot en stengt ventil.</strong> Væsken har ingen annen vei ut. Pumpen fortsetter å skyve, og trykket stiger til et rør, en pakning eller selve pumpen ryker. Derfor har fortrengningspumper en <strong>sikkerhetsventil</strong> på trykksiden som slipper væsken tilbake hvis trykket blir for høyt.</li>
+  <li><strong>Den må aldri gå mot en stengt ventil.</strong> Væsken har ingen annen vei ut. Pumpen fortsetter å skyve, og trykket stiger til et rør, en pakning eller selve pumpen ryker. Derfor har fortrengningspumper en <strong>sikkerhetsventil</strong> på trykksiden som slipper væsken tilbake til sugesiden eller tanken hvis trykket blir for høyt.</li>
   <li><strong>Strømmen reguleres med turtallet</strong> eller med hvor langt stempelet eller membranen går. Ikke ved å strupe en ventil.</li>
   <li><strong>Stempel- og membranpumper gir en pulserende strøm</strong>, fordi de skyver væsken i støt. Det merkes som rykk i rørene.</li>
-  <li><strong>Mange fortrengningspumper kan suge selv</strong>, også når pumpen er tom ved start.</li>
+  <li><strong>Mange fortrengningspumper kan suge selv</strong>, også når pumpen er tom ved start. Men det betyr ikke at alle tåler å gå tørre. En tannhjulspumpe smøres av væsken og blir fort skadet uten. Membran- og slangepumper tåler det bedre.</li>
 </ul>
 <p>Fordi hvert slag gir like mye, er membranpumper og slangepumper gode til <strong>dosering</strong>, altså å tilsette en nøyaktig mengde av et kjemikalie, for eksempel lut til et vannrenseanlegg.</p>
 
@@ -86,7 +86,7 @@
 
 <div class="boks eksempel">
   <div class="boks-tittel">Pumperommet på skolen</div>
-  <p>Alle de tre pumpene i pumperommet er sentrifugalpumper. Pumpe 1 har en frekvensomformer, så turtallet kan endres. På trykksiden av pumpene sitter det en spjeldventil som kan strupe strømmen. Hver pumpe har en strømningsvakt som stopper pumpen hvis det strømmer for lite inn, slik at den ikke går tørr.</p>
+  <p>Alle de tre pumpene i pumperommet er sentrifugalpumper. Pumpe 1 har en frekvensomformer, så turtallet kan endres. På trykksiden av pumpene sitter det en spjeldventil som kan strupe strømmen. Hver pumpe har en strømningsvakt, en føler som merker om det strømmer væske. Den stopper pumpen hvis det strømmer for lite inn, slik at den ikke går tørr.</p>
   <p><strong>Prøv selv:</strong> Finn sugesiden og trykksiden på en av pumpene. Hvor sitter akseltetningen? Hva står på typeskiltet?</p>
 </div>
 
@@ -140,7 +140,7 @@
     <li>En stor sentrifugalpumpe</li>
     <li>En flertrinns sentrifugalpumpe</li>
   </ul>
-  <p class="forklaring">En membranpumpe gir like mye for hvert slag, så mengden kan styres nøyaktig. Luten er heller ikke i kontakt med de bevegelige delene.</p>
+  <p class="forklaring">En membranpumpe gir like mye for hvert slag, så mengden kan styres nøyaktig. Den har heller ingen akseltetning som kan lekke lut.</p>
 </div>
 
 <div class="quiz">
@@ -157,7 +157,7 @@
 <table>
   <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
   <tbody>
-    <tr><td>sentrifugalpumpe</td><td>En pumpe der et hjul som roterer, slynger væsken utover. Farten blir til trykk i pumpehuset.</td><td>centrifugal pump</td></tr>
+    <tr><td>sentrifugalpumpe</td><td>Pumpe med et hjul som roterer og slynger væsken utover. Den vanligste pumpen i prosessindustrien.</td><td>centrifugal pump</td></tr>
     <tr><td>fortrengningspumpe</td><td>En pumpe som lukker inne en bestemt mengde væske og skyver den ut, om og om igjen.</td><td>positive displacement pump</td></tr>
     <tr><td>pumpehjul</td><td>Hjulet med skovler inne i en sentrifugalpumpe som gir væsken fart.</td><td>impeller</td></tr>
     <tr><td>pumpehus</td><td>Det ytre skallet på pumpen, der væsken kommer inn og går ut.</td><td>pump casing</td></tr>
@@ -165,9 +165,12 @@
     <tr><td>trykkside</td><td>Siden der væsken går ut av pumpen med høyere trykk.</td><td>discharge side</td></tr>
     <tr><td>akseltetning</td><td>Tetningen der akselen går gjennom pumpehuset. Den hindrer at væsken lekker ut.</td><td>shaft seal</td></tr>
     <tr><td>flertrinnspumpe</td><td>En sentrifugalpumpe med flere hjul etter hverandre, slik at trykket økes trinn for trinn.</td><td>multistage pump</td></tr>
-    <tr><td>kavitasjon</td><td>Dampbobler som dannes der trykket i pumpen er lavt, og som klapper sammen der trykket er høyere. Gir støy og skader pumpehjulet.</td><td>cavitation</td></tr>
+    <tr><td>kavitasjon</td><td>Når væsken koker i pumpen fordi trykket blir for lavt, og dampboblene klapper sammen igjen der trykket er høyere. Gir støy og skader pumpehjulet.</td><td>cavitation</td></tr>
+    <tr><td>stempelpumpe</td><td>En fortrengningspumpe der et stempel går fram og tilbake i en sylinder og skyver væsken ut.</td><td>piston pump</td></tr>
     <tr><td>membranpumpe</td><td>En fortrengningspumpe der en bøyelig plate går fram og tilbake og skyver væsken.</td><td>diaphragm pump</td></tr>
     <tr><td>tannhjulspumpe</td><td>En fortrengningspumpe med to tannhjul som presser væsken fram i lommene mellom tennene.</td><td>gear pump</td></tr>
+    <tr><td>slangepumpe</td><td>En fortrengningspumpe der ruller klemmer en slange sammen og presser væsken framover inne i slangen.</td><td>peristaltic pump</td></tr>
+    <tr><td>sikkerhetsventil</td><td>En fjærbelastet ventil som åpner av seg selv når trykket blir for høyt, og stenger når det har falt.</td><td>safety valve, pressure relief valve</td></tr>
     <tr><td>dosering</td><td>Å tilsette en nøyaktig mengde av et stoff.</td><td>dosing</td></tr>
   </tbody>
 </table>

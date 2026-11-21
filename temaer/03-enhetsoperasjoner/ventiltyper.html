@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Ventiltyper</h1>
@@ -31,17 +31,17 @@
 </figure>
 
 <h2>Ventiler som stenger</h2>
-<p>En <strong>kuleventil</strong> har en kule med et hull gjennom. Når hullet ligger langs røret, er ventilen åpen. Dreier du håndtaket en kvart omdreining (90°), ligger hullet på tvers, og ventilen er stengt. Håndtaket viser derfor stillingen: Ligger det langs røret, er ventilen åpen. Står det på tvers, er den stengt. En helt åpen kuleventil gir nesten ikke noe trykktap, fordi hullet er like stort som røret. Kuleventiler er de vanligste stengeventilene i prosessanlegg.</p>
+<p>En <strong>kuleventil</strong> har en kule med et hull gjennom. Når hullet ligger langs røret, er ventilen åpen. Dreier du håndtaket en kvart omdreining (90°), ligger hullet på tvers, og ventilen er stengt. Håndtaket viser derfor stillingen: Ligger det langs røret, er ventilen åpen. Står det på tvers, er den stengt. I mange kuleventiler er hullet like stort som røret, og da gir en helt åpen ventil nesten ikke noe trykktap. Kuleventiler er de vanligste stengeventilene i prosessanlegg.</p>
 <p>En <strong>sluseventil</strong> har en plate som skrus ned på tvers av røret med et ratt. Det tar mange omdreininger å åpne eller stenge den. Helt åpen gir den heller ikke noe særlig trykktap. Sluseventiler er vanlige på store vannrør.</p>
-<p>Både kuleventilen og sluseventilen skal stå <strong>helt åpen eller helt stengt</strong>. Står de halvåpne, river strømmen i kanten av kula eller platen, og ventilen blir slitt og lekker når den skal stenge.</p>
+<p>Både kuleventilen og sluseventilen skal stå <strong>helt åpen eller helt stengt</strong>. Står de halvåpne, får væsken stor fart gjennom den smale åpningen. Den sliter på kanten og på setet, og da lekker ventilen når den skal stenge. En halvåpen sluseplate kan også begynne å vibrere.</p>
+<p>En <strong>spjeldventil</strong> har en rund skive inne i røret som dreies en kvart omdreining. Står skiva langs strømretningen, er ventilen åpen, og står den på tvers, er den stengt. Håndtaket står i samme retning som skiva, så også her betyr håndtak langs røret at ventilen er åpen. Spjeldventilen er lett, billig og tar liten plass, og brukes mye på store rør. Den brukes både til å stenge og til å strupe, men struper ikke så nøyaktig som en seteventil. Skiva står i strømmen også når ventilen er helt åpen, så den gir litt trykktap.</p>
 
 <h2>Ventiler som regulerer</h2>
 <p>En <strong>seteventil</strong> har en skillevegg inne i ventilhuset med et rundt hull, som kalles <strong>setet</strong>. En kjegle på en spindel kan skrus ned mot setet eller løftes fra det. Væsken må gå i en S-bane gjennom hullet. Jo mindre åpning mellom kjeglen og setet, jo mindre strømmer det. Seteventilen er laget for å stå delvis åpen og regulerer godt. Ulempen er at den gir trykktap også når den er helt åpen, fordi væsken må svinge.</p>
-<p>En <strong>spjeldventil</strong> har en rund skive inne i røret som dreies en kvart omdreining. Står skiva på langs, er ventilen åpen, og står den på tvers, er den stengt. Den er lett, billig og tar liten plass, og brukes mye på store rør. Den kan også strupe noe, men ikke så nøyaktig som en seteventil.</p>
 <p>En <strong>membranventil</strong> har en gummimembran som presses ned mot bunnen av ventilhuset. Væsken er bare i kontakt med huset og membranen, så den passer for etsende kjemikalier og slam.</p>
 
 <h3>Reguleringsventiler med aktuator</h3>
-<p>I et anlegg står ikke operatøren og skrur på ventilene hele tiden. Ventiler som skal regulere, har en <strong>aktuator</strong> på toppen i stedet for ratt. Aktuatoren flytter ventilen, oftest med trykkluft og noen ganger med en elektromotor. Den får signal fra en regulator som måler for eksempel nivå eller strømning. En slik ventil kalles en <strong>reguleringsventil</strong>, og den er ofte en seteventil. Hvordan reguleringen virker, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+<p>I et anlegg står ikke operatøren og skrur på ventilene hele tiden. Ventiler som skal regulere, har en <strong>aktuator</strong> på toppen i stedet for ratt. Aktuatoren flytter spindelen og kjeglen, oftest med trykkluft og noen ganger med en elektromotor. Den får signal fra en regulator, som får målinger av for eksempel nivå eller strømning fra et instrument. En slik ventil kalles en <strong>reguleringsventil</strong>, og den er ofte en seteventil. Hvordan reguleringen virker, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
 <p>Også stengeventiler kan ha aktuator. Da kan de åpnes og stenges fra kontrollrommet, eller stenge automatisk hvis noe går galt.</p>
 
 <h2>Ventiler som verner</h2>
@@ -64,7 +64,7 @@
 
 <div class="boks eksempel">
   <div class="boks-tittel">Pumperommet på skolen</div>
-  <p>De manuelle ventilene i pumperommet er spjeldventiler. Foran og etter hver pumpe sitter det en spjeldventil som brukes til å stenge av pumpen. Spjeldventilen på trykksiden kan også strupe strømmen. Nivået i tankene styres av to reguleringsventiler, LCV-12022 og LCV-12032. Det finnes ingen tilbakeslagsventil i pumperommet.</p>
+  <p>De manuelle ventilene i pumperommet er spjeldventiler. Foran og etter hver pumpe sitter det en spjeldventil som brukes til å stenge av pumpen. Spjeldventilen på trykksiden kan også strupe strømmen. Spjeldventilen på sugesiden skal alltid stå helt åpen når pumpen går, ellers kan pumpen kavitere. Nivået i tankene styres av to reguleringsventiler, LCV-12022 og LCV-12032. Det finnes ingen tilbakeslagsventil i pumperommet.</p>
   <p><strong>Prøv selv:</strong> Finn en spjeldventil. Står den åpen eller stengt? Hvordan ser du det på håndtaket? Se på reguleringsventilene. Hva sitter på toppen av dem?</p>
 </div>
 
@@ -117,7 +117,7 @@
     <li data-riktig>Den flytter ventilen etter signal fra en regulator, oftest med trykkluft.</li>
     <li>Den hindrer at væsken går feil vei.</li>
   </ul>
-  <p class="forklaring">Aktuatoren erstatter rattet. Den får signal fra regulatoren og åpner eller struper ventilen. Målingen gjøres av et instrument et annet sted.</p>
+  <p class="forklaring">Aktuatoren erstatter rattet. Den får signal fra regulatoren og åpner eller struper ventilen. Selve målingen gjøres av et instrument et annet sted i anlegget.</p>
 </div>
 
 <div class="quiz">
@@ -143,7 +143,7 @@
     <tr><td>sikkerhetsventil</td><td>En fjærbelastet ventil som åpner av seg selv når trykket blir for høyt, og stenger når det har falt.</td><td>safety valve, pressure relief valve</td></tr>
     <tr><td>reguleringsventil</td><td>En ventil som kan stå delvis åpen og styres av en regulator, slik at strømmen blir riktig.</td><td>control valve</td></tr>
     <tr><td>sete</td><td>Kanten inne i ventilen som kjeglen, kula eller klaffen tetter mot når ventilen er stengt.</td><td>valve seat</td></tr>
-    <tr><td>aktuator</td><td>Drivverket på toppen av en ventil som flytter den, med trykkluft eller elektrisk motor.</td><td>actuator</td></tr>
+    <tr><td>aktuator</td><td>Drivverket på toppen av en ventil som åpner og stenger den, med trykkluft eller elektrisk motor.</td><td>actuator</td></tr>
     <tr><td>strupe</td><td>Å gjøre åpningen i en ventil mindre, slik at det strømmer mindre.</td><td>throttle</td></tr>
     <tr><td>væskeslag</td><td>Et kraftig trykkstøt i et rør når væske i fart stoppes brått, for eksempel av en ventil som stenger fort.</td><td>water hammer</td></tr>
   </tbody>

@@ -24,20 +24,20 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Transport av væsker og gasser",
     sider: [
-      { fil: "tanker-og-beholdere.html", tittel: "Tanker og beholdere", meny: "Tanker", status: "utkast" },
-      { fil: "pumpetyper.html", tittel: "Pumpetyper", status: "utkast" },
-      { fil: "ventiltyper.html", tittel: "Ventiltyper", status: "utkast" },
-      { tittel: "Kompressorer og vifter", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "tanker-og-beholdere.html", tittel: "Tanker og beholdere", meny: "Tanker", status: "ferdig" },
+      { fil: "pumpetyper.html", tittel: "Pumpetyper", status: "ferdig" },
+      { fil: "ventiltyper.html", tittel: "Ventiltyper", status: "ferdig" },
+      { fil: "kompressorer-og-vifter.html", tittel: "Kompressorer og vifter", meny: "Kompressorer", status: "ferdig" },
+      { fil: "transport-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {
     emne: "Varmeoverføring",
     sider: [
-      { tittel: "Typer varmevekslere", meny: "Varmevekslere", status: "planlagt" },
-      { tittel: "Kjøling og kondensering", meny: "Kjøling", status: "planlagt" },
-      { tittel: "Fordampning og inndamping", meny: "Inndamping", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "typer-varmevekslere.html", tittel: "Typer varmevekslere", meny: "Varmevekslere", status: "ferdig" },
+      { fil: "kjoling-og-kondensering.html", tittel: "Kjøling og kondensering", meny: "Kjøling", status: "ferdig" },
+      { fil: "fordampning-og-inndamping.html", tittel: "Fordamping og inndamping", meny: "Inndamping", status: "ferdig" },
+      { fil: "varmeoverforing-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {
