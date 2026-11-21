@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 250" width="780" height="250" font-family="Segoe UI, Arial, sans-serif">
+  <title>Mønsteret i et prosessanlegg: råstoff går til forbehandling, reaksjon, separasjon og ferdiggjøring, og ut kommer produktet. Fra separasjonen går det som ikke har reagert, tilbake til reaksjonen. Fra forbehandlingen og separasjonen går urenheter, biprodukter og avfall ut.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="780" height="250" rx="10" fill="#ffffff"/>
+
+  <!-- bokser -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="70" y="90" width="135" height="60" rx="6"/>
+    <rect x="250" y="90" width="120" height="60" rx="6"/>
+    <rect x="415" y="90" width="130" height="60" rx="6"/>
+    <rect x="590" y="90" width="130" height="60" rx="6"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="137" y="115">Forbehandling</text>
+    <text x="310" y="115">Reaksjon</text>
+    <text x="480" y="115">Separasjon</text>
+    <text x="655" y="115">Ferdiggjøring</text>
+  </g>
+  <g font-size="11" fill="#1c2828" text-anchor="middle">
+    <text x="137" y="135">gjøre råstoffet klart</text>
+    <text x="310" y="135">lage produktet</text>
+    <text x="480" y="135">skille produktet ut</text>
+    <text x="655" y="135">tørke, blande, lagre</text>
+  </g>
+
+  <!-- hovedstrøm -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#pil)">
+    <line x1="8" y1="120" x2="68" y2="120"/>
+    <line x1="205" y1="120" x2="248" y2="120"/>
+    <line x1="370" y1="120" x2="413" y2="120"/>
+    <line x1="545" y1="120" x2="588" y2="120"/>
+    <line x1="720" y1="120" x2="774" y2="120"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="12" y="111">råstoff</text>
+    <text x="724" y="111">produkt</text>
+  </g>
+
+  <!-- resirkulering -->
+  <path d="M480,90 L480,45 L310,45 L310,88" stroke="#2e7d6b" stroke-width="2.5" fill="none" marker-end="url(#pilg)"/>
+  <text x="395" y="36" font-size="12" fill="#2e7d6b" text-anchor="middle">resirkulering: råstoff som ikke har reagert</text>
+
+  <!-- ut av anlegget -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)" stroke-dasharray="6 4">
+    <line x1="137" y1="150" x2="137" y2="195"/>
+    <line x1="480" y1="150" x2="480" y2="195"/>
+  </g>
+  <g font-size="12" fill="#1c2828" text-anchor="middle">
+    <text x="137" y="215">stein, sand, salt, vann</text>
+    <text x="137" y="231">(urenheter)</text>
+    <text x="480" y="215">biprodukter og avfall</text>
+    <text x="480" y="231">(til salg eller rensing)</text>
+  </g>
+</svg>

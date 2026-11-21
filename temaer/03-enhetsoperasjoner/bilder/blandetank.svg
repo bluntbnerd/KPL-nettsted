@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 350" width="660" height="350" font-family="Segoe UI, Arial, sans-serif">
+  <title>Blandetank sett fra siden med motor, gir, aksel, akseltetning, skråbladet omrører og strømningsbrytere. Til høyre tanken sett ovenfra, uten og med strømningsbrytere.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="blapil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2c6ea6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="350" rx="10" fill="#ffffff"/>
+
+  <!-- ===== Tanken fra siden ===== -->
+  <text x="12" y="20" font-size="14" font-weight="bold" fill="#1c2828">Sett fra siden</text>
+  <!-- væske -->
+  <path d="M62,118 L218,118 L218,300 Q218,328 140,328 Q62,328 62,300 Z" fill="#bcd9ee"/>
+  <!-- tankvegg -->
+  <path d="M60,88 L220,88 L220,300 Q220,330 140,330 Q60,330 60,300 Z" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <line x1="56" y1="88" x2="224" y2="88" stroke="#586868" stroke-width="4"/>
+  <!-- strømningsbrytere -->
+  <rect x="63" y="126" width="9" height="172" fill="#8a9a9a"/>
+  <rect x="208" y="126" width="9" height="172" fill="#8a9a9a"/>
+  <!-- motor, gir, tetning -->
+  <rect x="115" y="30" width="50" height="28" rx="4" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <rect x="125" y="58" width="30" height="20" rx="2" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <rect x="133" y="80" width="14" height="12" fill="#586868"/>
+  <!-- aksel -->
+  <line x1="140" y1="78" x2="140" y2="286" stroke="#1c2828" stroke-width="4"/>
+  <!-- strømning -->
+  <g stroke="#2c6ea6" stroke-width="2.5" fill="none" marker-end="url(#blapil)">
+    <path d="M122,298 C96,318 82,302 82,262 L82,168 C84,138 114,136 122,166 L127,252"/>
+    <path d="M158,298 C184,318 198,302 198,262 L198,168 C196,138 166,136 158,166 L153,252"/>
+  </g>
+  <!-- omrører (skrå blader) -->
+  <g stroke="#1c2828" stroke-width="7" stroke-linecap="round">
+    <line x1="108" y1="278" x2="133" y2="291"/>
+    <line x1="147" y1="291" x2="172" y2="278"/>
+  </g>
+  <circle cx="140" cy="287" r="6" fill="#1c2828"/>
+
+  <!-- etiketter -->
+  <g stroke="#8a9a9a" stroke-width="1">
+    <line x1="165" y1="44" x2="230" y2="44"/>
+    <line x1="155" y1="68" x2="230" y2="68"/>
+    <line x1="147" y1="86" x2="230" y2="92"/>
+    <line x1="221" y1="118" x2="230" y2="118"/>
+    <line x1="142" y1="200" x2="230" y2="200"/>
+    <line x1="217" y1="240" x2="230" y2="240"/>
+    <line x1="174" y1="280" x2="230" y2="284"/>
+  </g>
+  <g font-size="12.5" fill="#1c2828">
+    <text x="234" y="48">motor</text>
+    <text x="234" y="72">gir</text>
+    <text x="234" y="96">akseltetning</text>
+    <text x="234" y="122">væskeoverflate</text>
+    <text x="234" y="204">aksel</text>
+    <text x="234" y="244">strømningsbryter</text>
+    <text x="234" y="282">omrører</text>
+    <text x="234" y="297" font-size="11.5" fill="#586868">(skråbladet turbin)</text>
+  </g>
+  <text x="234" y="326" font-size="11.5" fill="#2c6ea6">blå piler: strømningen</text>
+
+  <line x1="402" y1="14" x2="402" y2="336" stroke="#d8dede" stroke-width="1.5"/>
+
+  <!-- ===== Ovenfra ===== -->
+  <text x="418" y="20" font-size="14" font-weight="bold" fill="#1c2828">Sett ovenfra</text>
+
+  <!-- uten -->
+  <text x="418" y="44" font-size="12.5" font-weight="bold" fill="#1c2828">Uten strømningsbrytere</text>
+  <circle cx="472" cy="110" r="50" fill="#bcd9ee" stroke="#586868" stroke-width="2.5"/>
+  <g stroke="#2c6ea6" stroke-width="2.5" fill="none" marker-end="url(#blapil)">
+    <path d="M472,74 A36,36 0 0 1 508,110"/>
+    <path d="M508,114 A36,36 0 0 1 476,146"/>
+    <path d="M468,146 A36,36 0 0 1 436,114"/>
+    <path d="M436,106 A36,36 0 0 1 466,74"/>
+  </g>
+  <circle cx="472" cy="110" r="12" fill="#e3f0f8" stroke="#2c6ea6" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <circle cx="472" cy="110" r="3" fill="#1c2828"/>
+  <g font-size="11.5" fill="#1c2828">
+    <text x="532" y="94">Væsken går</text>
+    <text x="532" y="108">rundt i ring.</text>
+    <text x="532" y="122">Virvel i midten.</text>
+    <text x="532" y="136">Dårlig blanding.</text>
+  </g>
+
+  <!-- med -->
+  <text x="418" y="196" font-size="12.5" font-weight="bold" fill="#1c2828">Med strømningsbrytere</text>
+  <circle cx="472" cy="262" r="50" fill="#bcd9ee" stroke="#586868" stroke-width="2.5"/>
+  <g fill="#8a9a9a">
+    <rect x="468" y="213" width="8" height="13"/>
+    <rect x="468" y="298" width="8" height="13"/>
+    <rect x="423" y="258" width="13" height="8"/>
+    <rect x="508" y="258" width="13" height="8"/>
+  </g>
+  <g stroke="#2c6ea6" stroke-width="2.2" fill="none" marker-end="url(#blapil)">
+    <path d="M486,232 Q502,236 496,250"/>
+    <path d="M502,276 Q498,292 484,290"/>
+    <path d="M458,292 Q442,288 448,274"/>
+    <path d="M442,248 Q446,232 460,234"/>
+  </g>
+  <circle cx="472" cy="262" r="3" fill="#1c2828"/>
+  <g font-size="11.5" fill="#1c2828">
+    <text x="532" y="246">Platene bryter</text>
+    <text x="532" y="260">opp ringstrømmen.</text>
+    <text x="532" y="274">Væsken går opp,</text>
+    <text x="532" y="288">ned og på tvers.</text>
+  </g>
+</svg>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reaktortyper – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Reaktortyper</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT1, KT2</div>
+
+<p class="ingress">Reaktoren er hjertet i mange anlegg. Det er her råstoffene blir til produktet. Alle trinnene før reaktoren gjør råstoffene klare, og alle trinnene etter skiller ut og renser produktet. Her lærer du hvilke typer reaktorer som finnes, og hva som skiller dem.</p>
+
+<h2>Hva gjør en reaktor?</h2>
+<p>En <strong>reaktor</strong> er en tank eller beholder der stoffer reagerer og blir til nye stoffer. Reaktoren skal gi reaksjonen de forholdene den trenger:</p>
+<ul>
+  <li><strong>Riktig temperatur:</strong> De fleste reaksjoner går fortere når det er varmt. Mange reaksjoner lager selv varme, og da må reaktoren kjøles. Det lærer du om på siden <a href="oppvarming-og-kjoling-av-reaktorer.html">Oppvarming og kjøling av reaktorer</a>.</li>
+  <li><strong>Riktig trykk:</strong> Reaksjoner med gasser går ofte best ved høyt trykk.</li>
+  <li><strong>God blanding:</strong> Stoffene må møtes for å reagere. Det lærte du om på siden <a href="blanding-og-omroring.html">Blanding og omrøring</a>.</li>
+  <li><strong>Nok tid:</strong> Stoffene må være lenge nok i reaktoren til at de rekker å reagere.</li>
+</ul>
+<p>Hvorfor temperatur, konsentrasjon og katalysator påvirker en reaksjon, lærer du i <a href="../02-kjemi-og-beregninger/index.html">Kjemiske prinsipper</a>. I dette temaet ser vi på reaktoren som utstyr.</p>
+
+<h2>Oppholdstid</h2>
+<p><strong>Oppholdstiden</strong> er hvor lenge stoffene er inne i reaktoren. I en batchreaktor er det enkelt: Oppholdstiden er tiden fra reaksjonen starter til reaktoren tømmes. I en kontinuerlig reaktor strømmer stoffene gjennom hele tiden. Da regner vi ut oppholdstiden fra væskevolumet i reaktoren og hvor mye som strømmer gjennom per time, altså <a href="../04-masse-og-energibalanser/stromning.html">volumstrømmen</a>:</p>
+<p>\[ \text{oppholdstid} = \frac{\text{væskevolum}}{\text{volumstrøm}} \]</p>
+<p>I en kontinuerlig reaktor er dette den gjennomsnittlige oppholdstiden. Noe av stoffet er inne kortere, og noe lenger. En stor reaktor eller en liten volumstrøm gir lang oppholdstid. Hvis reaksjonen ikke rekker å bli ferdig, kan operatøren sette ned volumstrømmen.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvor lenge er stoffene i reaktoren?</div>
+  <p><strong>Oppgave:</strong> En kontinuerlig reaktor har et væskevolum på 6 m³. Det strømmer 4 m³ inn i timen, og like mye ut. Hva er oppholdstiden? Reaksjonen trenger minst 2 timer. Er oppholdstiden lang nok?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Vi vet: væskevolum = 6 m³, volumstrøm = 4 m³/h.</li>
+    <li>Oppholdstid = væskevolum / volumstrøm = 6 m³ / (4 m³/h) = 1,5 h.</li>
+    <li>1,5 h er mindre enn 2 h. For å få 2 timer må volumstrømmen ned til 6 m³ / 2 h = 3 m³/h.</li>
+  </ol>
+  <p><strong>Svar:</strong> Oppholdstiden er 1,5 timer, eller 90 minutter. Det er for kort. Volumstrømmen må settes ned til 3 m³/h.</p>
+</div>
+
+<h2>Tankreaktorer</h2>
+<p>En tankreaktor er en tank med omrører, ofte med en kappe eller en spiral for oppvarming og kjøling. Den kan brukes på tre måter.</p>
+
+<figure>
+  <img src="bilder/reaktortyper.svg" alt="Fire reaktorer tegnet ved siden av hverandre. Øverst til venstre en batchreaktor: en tank med omrører og kappe. Pilene viser at råstoffene fylles i på toppen og at produktet tappes ut i bunnen etterpå, ikke samtidig. Øverst til høyre en kontinuerlig omrørt tankreaktor: samme tank, men råstoffet går inn på toppen og produktet ut i bunnen hele tiden. Nederst til venstre en rørreaktor: et langt rør i sikk-sakk der råstoffet går inn i den ene enden og produktet ut i den andre. Fargen går fra blå til grønn langs røret for å vise at stoffene reagerer underveis. Nederst til høyre en fastsjiktreaktor: en høy beholder fylt med små katalysatorkorn. Gassen går inn på toppen, strømmer ned gjennom kornene og går ut i bunnen." width="660">
+  <figcaption>Figur: Fire vanlige reaktortyper. Blått er råstoff, grønt er produkt. I tankreaktoren blir innholdet rørt om til det er likt overalt. I rørreaktoren reagerer stoffene underveis gjennom røret.</figcaption>
+</figure>
+
+<h3>Batchreaktor</h3>
+<p>I en <strong>batchreaktor</strong> fylles alle råstoffene i, de får reagere i en bestemt tid, og så tømmes reaktoren. Det er batchdrift, som du lærte om på siden <a href="batch-og-kontinuerlig-drift.html">Batch og kontinuerlig drift</a>. Batchreaktorer brukes mye til medisiner, maling (farge), lim og spesialkjemikalier. Samme reaktor kan lage mange ulike produkter.</p>
+<p>En batchreaktor har stusser for å fylle råstoffer, ta prøver, tappe ut produkt og lufte. Den har også temperatur- og trykkmåling, og vern mot for høyt trykk, som en sikkerhetsventil eller en sprengplate.</p>
+
+<h3>Halvkontinuerlig reaktor</h3>
+<p>Ofte fylles bare noen av råstoffene i før start. Det siste råstoffet tilsettes litt etter litt mens reaksjonen går. Dette kalles <strong>halvkontinuerlig drift</strong>. Det brukes mye når reaksjonen lager mye varme. Da kan operatøren styre hvor fort reaksjonen går ved å styre hvor fort råstoffet tilsettes. Stiger temperaturen for mye, stopper tilsetningen.</p>
+
+<h3>Kontinuerlig omrørt tankreaktor</h3>
+<p>I en <strong>kontinuerlig omrørt tankreaktor</strong> går råstoffene inn og produktet ut hele tiden. Omrøreren blander så godt at innholdet er tilnærmet likt overalt i tanken. Det er en forenkling, men den stemmer godt når omrøringen er god. Det betyr at det som strømmer ut, er likt det som er inne i tanken.</p>
+<p>Det har en ulempe: Noe av det som kommer inn, blir blandet inn rett ved utløpet og går ut igjen nesten med en gang, før det har rukket å reagere. Andre deler blir værende lenge. For å få mer av stoffet til å reagere settes det ofte flere slike reaktorer etter hverandre.</p>
+
+<h2>Rørreaktor</h2>
+<p>En <strong>rørreaktor</strong> er et langt rør som stoffene strømmer gjennom. De reagerer underveis, så det er mest råstoff ved innløpet og mest produkt ved utløpet. Alt stoffet bruker omtrent like lang tid gjennom røret. Derfor får alt omtrent like lang tid til å reagere.</p>
+<p>Rørreaktorer passer godt til gasser, raske reaksjoner og høyt trykk. Et smalt rør tåler høyt trykk bedre enn en stor tank. Røret har også stor overflate i forhold til volumet, så det er lett å varme eller kjøle det. Røret kan ligge i en kappe med kjølevann, eller i en ovn hvis reaksjonen trenger mye varme. Et eksempel er krakking, der store molekyler fra olje eller gass blir delt opp til mindre molekyler i lange rør inne i en ovn.</p>
+
+<h2>Reaktorer med katalysator</h2>
+<p>Mange reaksjoner i industrien bruker en <strong>katalysator</strong>. Det er et stoff som gjør at en reaksjon går raskere, uten at det selv blir brukt opp. Katalysatoren er ofte et fast stoff i form av små korn eller kuler.</p>
+<ul>
+  <li>I en <strong>fastsjiktreaktor</strong> ligger katalysatorkornene i ro i en beholder eller i mange rør. Gassen eller væsken strømmer gjennom mellom kornene og reagerer på overflaten av dem. Ammoniakk til kunstgjødsel lages på denne måten. Katalysatoren mister aktivitet med tiden, for eksempel fordi den blir forgiftet av urenheter eller får belegg, og må byttes etter noen år.</li>
+  <li>I en <strong>virvelsjiktreaktor</strong> blåses gassen opp gjennom kornene så kraftig at de svever og beveger seg som en kokende væske. Da blir temperaturen jevn i hele reaktoren. Samme prinsipp brukes i virvelsjikttørken, som du møtte på siden <a href="torking-og-krystallisering.html">Tørking og krystallisering</a>.</li>
+</ul>
+
+<h2>Andre reaktorer</h2>
+<ul>
+  <li><strong>Bioreaktor:</strong> En tank der levende celler som gjærsopp eller bakterier gjør jobben. Gjæringstanken i etanolanlegget på siden <a href="hva-er-en-enhetsoperasjon.html">Hva er en enhetsoperasjon?</a> er en bioreaktor. Cellene tåler bare et smalt temperaturområde, og tanken må ofte holdes fri for andre mikroorganismer.</li>
+  <li><strong>Smelteovn:</strong> En smelteovn på et smelteverk er også en reaktor. Malm reagerer med karbon ved svært høy temperatur, og varmen kommer ofte fra elektrisk strøm gjennom store elektroder. Ferromangan lages slik i Sauda: Manganmalm reagerer med koks i en elektrisk smelteovn.</li>
+</ul>
+
+<h2>Sammenligning</h2>
+<table>
+  <thead><tr><th>Reaktor</th><th>Drift</th><th>Passer til</th><th>Ulempe</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Batchreaktor</strong></td><td>Batch eller halvkontinuerlig</td><td>Små mengder, mange produkter, krav til sporbarhet</td><td>Tid går med til fylling, tømming og vask.</td></tr>
+    <tr><td><strong>Kontinuerlig omrørt tankreaktor</strong></td><td>Kontinuerlig</td><td>Væsker, store mengder, jevn temperatur</td><td>Noe av stoffet går ut før det har reagert.</td></tr>
+    <tr><td><strong>Rørreaktor</strong></td><td>Kontinuerlig</td><td>Gasser, raske reaksjoner, høyt trykk</td><td>Vanskelig å rengjøre og å bytte produkt.</td></tr>
+    <tr><td><strong>Fastsjiktreaktor</strong></td><td>Kontinuerlig</td><td>Gass som reagerer på en fast katalysator</td><td>Katalysatoren må byttes, og det krever stans.</td></tr>
+  </tbody>
+</table>
+
+<h2>Reaktoren i anlegget</h2>
+<p>Reaktoren står sjelden alene. Før reaktoren gjøres råstoffene klare: De blir renset, blandet, varmet opp og satt under trykk. Etter reaktoren skilles produktet fra det som ikke har reagert, for eksempel med <a href="destillasjon.html">destillasjon</a> eller <a href="filtrering.html">filtrering</a>. Råstoff som ikke har reagert, sendes ofte tilbake til reaktoren. Dette er mønsteret forbehandling, reaksjon og separasjon, som du lærte på siden <a href="hva-er-en-enhetsoperasjon.html">Hva er en enhetsoperasjon?</a></p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Løpsk reaksjon:</strong> Mange reaksjoner lager varme. Blir det for varmt, går reaksjonen fortere og lager enda mer varme. Det kan ende med at trykket blir så høyt at reaktoren sprekker. Les mer på siden <a href="../01-hms/06-trykk.html">Trykk og løpske reaksjoner</a>, og prøv simuleringen <a href="../01-hms/06-reaktor.html">Øv: Reaktoren</a>.</li>
+    <li><strong>Tilsetning:</strong> Tilsett råstoffer i riktig rekkefølge, med riktig fart og ved riktig temperatur, slik prosedyren sier. Råstoff som samler seg opp uten å reagere, kan reagere på en gang senere.</li>
+    <li><strong>Trykkvern:</strong> Sikkerhetsventil og sprengplate skal aldri blokkeres eller stenges av.</li>
+    <li><strong>Prøvetaking:</strong> Prøver tas ofte fra en reaktor som er varm og under trykk. Bruk riktig verneutstyr, og følg prosedyren for prøvetaking.</li>
+    <li><strong>Inne i reaktoren:</strong> Luften i reaktoren byttes ofte ut med nitrogen, slik at det ikke er nok oksygen til brann eller eksplosjon. Nitrogen fortrenger oksygenet, og du kan bli kvalt uten å merke noe. Arbeid inne i en reaktor krever arbeidstillatelse, gassmåling, <a href="../01-hms/06-loto.html">lås og merk</a> og en vakt utenfor. Noen brukte katalysatorer kan bli varme eller ta fyr når de kommer i kontakt med luft.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. En kontinuerlig reaktor har et volum på 10 m³, og volumstrømmen er 5 m³/h. Hva er oppholdstiden?</p>
+  <ul>
+    <li>0,5 h</li>
+    <li data-riktig>2 h</li>
+    <li>50 h</li>
+  </ul>
+  <p class="forklaring">Oppholdstid = væskevolum / volumstrøm = 10 m³ / (5 m³/h) = 2 h.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En reaksjon lager mye varme. Det ene råstoffet tilsettes derfor litt etter litt mens reaksjonen går. Hva kalles dette?</p>
+  <ul>
+    <li>Kontinuerlig drift</li>
+    <li data-riktig>Halvkontinuerlig drift</li>
+    <li>Fastsjikt</li>
+  </ul>
+  <p class="forklaring">Ved halvkontinuerlig drift tilsettes ett råstoff gradvis. Da styrer tilsetningen hvor fort reaksjonen går, og dermed hvor mye varme som lages.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva er typisk for en kontinuerlig omrørt tankreaktor?</p>
+  <ul>
+    <li>Det er mest råstoff ved innløpet og mest produkt ved utløpet.</li>
+    <li data-riktig>Innholdet er likt overalt, og det som strømmer ut, er likt det som er i tanken.</li>
+    <li>Reaktoren tømmes helt mellom hver gang.</li>
+  </ul>
+  <p class="forklaring">Omrøringen gjør innholdet likt overalt. Det er i rørreaktoren at det er mest råstoff i starten og mest produkt på slutten.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvilken reaktor passer best til en rask reaksjon mellom gasser ved høyt trykk?</p>
+  <ul>
+    <li>Batchreaktor</li>
+    <li data-riktig>Rørreaktor</li>
+    <li>Bioreaktor</li>
+  </ul>
+  <p class="forklaring">Et smalt rør tåler høyt trykk og er lett å varme eller kjøle. Gassen strømmer gjennom og reagerer underveis.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hvorfor er det farlig å gå inn i en reaktor som har vært fylt med nitrogen?</p>
+  <ul>
+    <li>Nitrogen er giftig å puste inn.</li>
+    <li>Nitrogen kan ta fyr.</li>
+    <li data-riktig>Nitrogen fortrenger oksygenet, og du kan bli kvalt uten å merke noe.</li>
+  </ul>
+  <p class="forklaring">Nitrogen er verken giftig eller brennbart, men det er ikke oksygen igjen å puste inn. Du merker ikke at noe er galt før du besvimer. Derfor kreves gassmåling, arbeidstillatelse og vakt.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>reaktor</td><td>En tank eller beholder der stoffer reagerer og blir til nye stoffer.</td><td>reactor</td></tr>
+    <tr><td>oppholdstid</td><td>Hvor lenge stoffene er inne i en reaktor eller et annet utstyr. I en kontinuerlig reaktor er den i gjennomsnitt væskevolumet delt på volumstrømmen.</td><td>residence time</td></tr>
+    <tr><td>batchreaktor</td><td>En reaktor som fylles, får reagere i en bestemt tid og så tømmes, én batch om gangen.</td><td>batch reactor</td></tr>
+    <tr><td>halvkontinuerlig drift</td><td>En driftsform der noen råstoffer fylles i før start, og det siste tilsettes litt etter litt mens reaksjonen går.</td><td>semi-batch</td></tr>
+    <tr><td>kontinuerlig omrørt tankreaktor</td><td>En tank med omrører der råstoff går inn og produkt går ut hele tiden, og innholdet er likt overalt.</td><td>continuous stirred tank reactor (CSTR)</td></tr>
+    <tr><td>rørreaktor</td><td>Et langt rør der stoffene reagerer mens de strømmer gjennom.</td><td>tubular reactor, plug flow reactor</td></tr>
+    <tr><td>katalysator</td><td>Et stoff som gjør at en reaksjon går raskere, uten at det selv blir brukt opp.</td><td></td></tr>
+    <tr><td>fastsjiktreaktor</td><td>En reaktor der korn av fast katalysator ligger i ro, og gass eller væske strømmer gjennom mellom kornene.</td><td>fixed-bed reactor</td></tr>
+    <tr><td>virvelsjiktreaktor</td><td>En reaktor der gass blåses opp gjennom korn av fast stoff så kraftig at kornene svever og beveger seg som en væske.</td><td>fluidized-bed reactor</td></tr>
+    <tr><td>bioreaktor</td><td>En tank der levende celler, som gjærsopp eller bakterier, lager produktet.</td><td>bioreactor, fermenter</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="blanding-og-omroring.html">Blanding og omrøring</a>: forrige side.</li>
+  <li><a href="oppvarming-og-kjoling-av-reaktorer.html">Oppvarming og kjøling av reaktorer</a>: neste side.</li>
+  <li><a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a> (Kjemiske prinsipper): eksoterme og endoterme reaksjoner.</li>
+  <li><a href="../01-hms/06-trykk.html">Trykk og løpske reaksjoner</a> (HMS).</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

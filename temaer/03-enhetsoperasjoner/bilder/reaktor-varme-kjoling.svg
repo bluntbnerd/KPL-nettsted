@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 400" width="660" height="400" font-family="Segoe UI, Arial, sans-serif">
+  <title>En reaktor med fire måter å varme eller kjøle: varmekappe, kjølespiral, varmeveksler utenfor reaktoren og tilbakeløpskjøler på toppen.</title>
+  <defs>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="660" height="400" rx="10" fill="#ffffff"/>
+
+  <!-- 1: kappe -->
+  <path d="M220,150 L380,150 L380,315 Q380,346 300,346 Q220,346 220,315 Z" fill="#f3d9c4" stroke="#586868" stroke-width="2"/>
+  <!-- tank -->
+  <path d="M230,110 L370,110 L370,312 Q370,336 300,336 Q230,336 230,312 Z" fill="#ffffff" stroke="#586868" stroke-width="2.5"/>
+  <path d="M232,140 L368,140 L368,312 Q368,334 300,334 Q232,334 232,312 Z" fill="#bcd9ee"/>
+  <line x1="224" y1="110" x2="376" y2="110" stroke="#586868" stroke-width="4"/>
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#p)">
+    <line x1="424" y1="322" x2="384" y2="322"/>
+    <line x1="382" y1="162" x2="424" y2="162"/>
+  </g>
+  <g font-size="11.5" fill="#1c2828">
+    <text x="428" y="166">ut</text>
+    <text x="428" y="326">inn</text>
+  </g>
+
+  <!-- motor og omrører -->
+  <rect x="285" y="80" width="30" height="24" rx="3" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <line x1="300" y1="104" x2="300" y2="306" stroke="#1c2828" stroke-width="3.5"/>
+  <g stroke="#1c2828" stroke-width="6" stroke-linecap="round">
+    <line x1="274" y1="298" x2="295" y2="308"/>
+    <line x1="305" y1="308" x2="326" y2="298"/>
+  </g>
+
+  <!-- 2: kjølespiral -->
+  <g stroke="#2c6ea6" stroke-width="2.5">
+    <line x1="250" y1="90" x2="250" y2="165"/>
+    <line x1="350" y1="96" x2="350" y2="165"/>
+  </g>
+  <g fill="#ffffff" stroke="#2c6ea6" stroke-width="2.5">
+    <circle cx="250" cy="170" r="5"/><circle cx="250" cy="192" r="5"/><circle cx="250" cy="214" r="5"/>
+    <circle cx="250" cy="236" r="5"/><circle cx="250" cy="258" r="5"/><circle cx="250" cy="280" r="5"/>
+    <circle cx="350" cy="170" r="5"/><circle cx="350" cy="192" r="5"/><circle cx="350" cy="214" r="5"/>
+    <circle cx="350" cy="236" r="5"/><circle cx="350" cy="258" r="5"/><circle cx="350" cy="280" r="5"/>
+  </g>
+  <g stroke="#2c6ea6" stroke-width="2.5" fill="none" marker-end="url(#p)">
+    <line x1="250" y1="72" x2="250" y2="92"/>
+    <line x1="350" y1="96" x2="350" y2="80"/>
+  </g>
+  <text x="236" y="66" font-size="11" fill="#2c6ea6">inn</text>
+  <text x="356" y="86" font-size="11" fill="#2c6ea6">ut</text>
+
+  <!-- 4: tilbakeløpskjøler -->
+  <line x1="325" y1="110" x2="325" y2="76" stroke="#586868" stroke-width="5"/>
+  <rect x="313" y="22" width="24" height="54" rx="4" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <g stroke="#2c6ea6" stroke-width="2" fill="none" marker-end="url(#p)">
+    <line x1="364" y1="66" x2="339" y2="66"/>
+    <line x1="339" y1="32" x2="364" y2="32"/>
+  </g>
+  <text x="368" y="36" font-size="11" fill="#2c6ea6">kjølevann</text>
+
+  <!-- 3: ytre sløyfe med pumpe og varmeveksler -->
+  <path d="M300,346 L300,372 L163,372" fill="none" stroke="#586868" stroke-width="3" marker-end="url(#p)"/>
+  <circle cx="145" cy="372" r="16" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <path d="M153,363 L134,372 L153,381" fill="none" stroke="#586868" stroke-width="1.8"/>
+  <path d="M129,372 L90,372 L90,274" fill="none" stroke="#586868" stroke-width="3" marker-end="url(#p)"/>
+  <rect x="70" y="190" width="40" height="80" rx="4" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <path d="M74,200 L106,212 L74,224 L106,236 L74,248 L106,260" fill="none" stroke="#2c6ea6" stroke-width="2"/>
+  <path d="M90,190 L90,130 L228,130" fill="none" stroke="#586868" stroke-width="3" marker-end="url(#p)"/>
+  <g font-size="11" fill="#1c2828">
+    <text x="128" y="398">pumpe</text>
+    <text x="116" y="228">varme-</text>
+    <text x="116" y="242">veksler</text>
+  </g>
+
+  <!-- nummer -->
+  <g font-size="12" font-weight="bold" text-anchor="middle">
+    <circle cx="400" cy="240" r="11" fill="#1c2828"/><text x="400" y="244" fill="#ffffff">1</text>
+    <circle cx="278" cy="232" r="11" fill="#1c2828"/><text x="278" y="236" fill="#ffffff">2</text>
+    <circle cx="46" cy="230" r="11" fill="#1c2828"/><text x="46" y="234" fill="#ffffff">3</text>
+    <circle cx="292" cy="46" r="11" fill="#1c2828"/><text x="292" y="50" fill="#ffffff">4</text>
+  </g>
+
+  <!-- forklaring -->
+  <g font-size="12.5" fill="#1c2828">
+    <circle cx="474" cy="196" r="9" fill="#1c2828"/><text x="474" y="200" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">1</text>
+    <text x="490" y="200">varmekappe</text>
+    <circle cx="474" cy="222" r="9" fill="#1c2828"/><text x="474" y="226" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">2</text>
+    <text x="490" y="226">kjølespiral</text>
+    <circle cx="474" cy="248" r="9" fill="#1c2828"/><text x="474" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">3</text>
+    <text x="490" y="252">varmeveksler utenfor</text>
+    <circle cx="474" cy="274" r="9" fill="#1c2828"/><text x="474" y="278" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">4</text>
+    <text x="490" y="278">tilbakeløpskjøler</text>
+  </g>
+  <g font-size="11" fill="#586868">
+    <text x="464" y="306">Damp fra reaktoren kondenserer i</text>
+    <text x="464" y="320">kjøleren og renner tilbake.</text>
+  </g>
+</svg>

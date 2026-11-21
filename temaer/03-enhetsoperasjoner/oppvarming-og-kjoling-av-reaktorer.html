@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oppvarming og kjøling av reaktorer – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Oppvarming og kjøling av reaktorer</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT1</div>
+
+<p class="ingress">Temperaturen er det viktigste du følger med på i en reaktor. Er det for kaldt, går reaksjonen for sakte. Er det for varmt, kan du få feil produkt, eller i verste fall en reaksjon som løper løpsk. Her lærer du hvordan en reaktor varmes og kjøles.</p>
+
+<h2>Hvorfor må reaktoren varmes eller kjøles?</h2>
+<p>Reaksjoner gir fra seg eller tar opp varme:</p>
+<ul>
+  <li>En <strong>eksoterm</strong> reaksjon gir fra seg varme. Reaktoren må kjøles, ellers blir det stadig varmere. Mange viktige reaksjoner i industrien er eksoterme.</li>
+  <li>En <strong>endoterm</strong> reaksjon tar opp varme. Reaktoren må varmes, ellers blir det kaldere, og reaksjonen går saktere og saktere.</li>
+</ul>
+<p>Du lærer mer om dette på siden <a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a> i Kjemiske prinsipper. I tillegg må en batchreaktor ofte varmes opp før reaksjonen starter, og kjøles ned før den tømmes.</p>
+
+<h2>Fire måter å varme og kjøle en reaktor</h2>
+
+<figure>
+  <img src="bilder/reaktor-varme-kjoling.svg" alt="En reaktor med omrører sett fra siden, med fire måter å varme eller kjøle den. 1: En varmekappe rundt veggen og bunnen. Kjølemediet går inn nederst og ut øverst. 2: En spiral av rør inne i reaktoren, der kjølevann strømmer gjennom. 3: En sløyfe utenfor reaktoren. En pumpe tar væske fra bunnen, sender den gjennom en varmeveksler og tilbake inn på toppen. 4: En kondensator på toppen. Damp fra reaktoren stiger opp, kondenserer i kondensatoren og renner tilbake som væske." width="660">
+  <figcaption>Figur: Fire måter å varme eller kjøle en reaktor. En reaktor har sjelden alle fire. Kappen er vanligst.</figcaption>
+</figure>
+
+<h3>1. Varmekappe</h3>
+<p>En <strong>varmekappe</strong> er en ekstra vegg utenpå reaktoren. I mellomrommet strømmer et varme- eller kjølemedium, for eksempel damp eller kjølevann. Varmen går gjennom reaktorveggen, fra det varme til det kalde. Kappen kalles også bare kappe eller kjølekappe. Ordet kappe brukes også om den ytre sylinderen i en <a href="typer-varmevekslere.html">rørkjelvarmeveksler</a>.</p>
+<p>Kjølevannet går vanligvis inn nederst og ut øverst, slik at kappen blir helt full av vann. Damp går inn øverst, og kondensatet går ut nederst gjennom en kondenspotte, slik du lærte på siden <a href="kjoling-og-kondensering.html">Kjøling og kondensering</a>.</p>
+<p>En vanlig variant er <strong>halvrørskappe</strong>. Da er et rør som er delt på langs, sveiset fast i en spiral utenpå reaktoren. Mediet strømmer fort gjennom den smale kanalen og tar opp mye varme. Halvrørskappen tåler også høyere trykk enn en vanlig kappe.</p>
+<p>Kappen dekker veggene og bunnen opp til en viss høyde. Varmen kan bare gå inn eller ut der væsken i reaktoren ligger mot kappen. Når nivået er lavt, blir kjølingen dårligere.</p>
+
+<h3>2. Kjølespiral</h3>
+<p>En <strong>kjølespiral</strong> er et rør som går i spiral inne i reaktoren. Kjølevann eller damp strømmer gjennom røret. Spiralen gir mer varmeflate enn kappen alene, og den står midt i væsken. Ulempen er at den er vanskelig å rengjøre, at den kan hindre omrøringen, og at en lekkasje slipper kjølevann rett inn i produktet. Når spiralen brukes til oppvarming, kalles den en varmespiral.</p>
+
+<h3>3. Varmeveksler utenfor reaktoren</h3>
+<p>En pumpe tar væske fra bunnen av reaktoren, sender den gjennom en <a href="typer-varmevekslere.html">varmeveksler</a> og tilbake inn i reaktoren. Varmeveksleren kan være så stor som det trengs, så denne løsningen gir mest kjøling. Den brukes på store reaktorer og ved reaksjoner som lager mye varme. Pumpen må gå hele tiden. Stopper den, stopper også kjølingen.</p>
+
+<h3>4. Kondensator på toppen</h3>
+<p>Noen reaktorer går ved kokepunktet til væsken. Da koker litt av væsken bort og tar med seg mye varme, fordi det trengs mye energi for å få en væske til å fordampe. Dampen går opp i en <strong>tilbakeløpskjøler</strong>, en kondensator på toppen av reaktoren. Der blir den til væske igjen og renner tilbake. Slik holdes temperaturen ved kokepunktet, og nesten ingen væske går tapt.</p>
+
+<h2>Varme- og kjølemedier</h2>
+<table>
+  <thead><tr><th>Medium</th><th>Brukes til</th><th>Kommentar</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Damp</strong></td><td>Oppvarming, vanligvis opp til rundt 200 °C</td><td>Gir mye varme når den kondenserer. Temperaturen styres med trykket.</td></tr>
+    <tr><td><strong>Varmt vann</strong></td><td>Skånsom oppvarming under 100 °C</td><td>Jevn temperatur, mindre fare for at produktet blir brent fast på veggen.</td></tr>
+    <tr><td><strong>Varmeolje</strong></td><td>Oppvarming til høye temperaturer, ofte 200–300 °C</td><td>Koker ikke og gir derfor ikke høyt trykk i kappen, slik damp ville gjort ved så høy temperatur. Kan brenne ved lekkasje.</td></tr>
+    <tr><td><strong>Kjølevann</strong></td><td>Kjøling ned mot temperaturen på vannet</td><td>Det vanligste kjølemediet. Se <a href="kjoling-og-kondensering.html">Kjøling og kondensering</a>.</td></tr>
+    <tr><td><strong>Kuldebærer fra kjølemaskin</strong></td><td>Kjøling under temperaturen på kjølevannet, også under 0 °C</td><td>Ofte en blanding av vann og glykol som ikke fryser ved 0 °C. Kjøles i en kjølemaskin.</td></tr>
+  </tbody>
+</table>
+<p>Mange batchreaktorer både varmes og kjøles i den samme kappen. Da brukes ofte ett medium, for eksempel vann eller varmeolje, som sirkulerer i en krets. Mediet varmes eller kjøles i varmevekslere utenfor reaktoren, etter hva reaktoren trenger.</p>
+
+<h2>Hva bestemmer hvor mye varme som går gjennom?</h2>
+<p>Varme går alltid fra det varme til det kalde. Hvor mye varme som går gjennom veggen, avhenger av:</p>
+<ul>
+  <li><strong>Varmeflaten:</strong> Større flate gir mer varmeoverføring.</li>
+  <li><strong>Temperaturforskjellen:</strong> Jo kaldere kjølemediet er i forhold til reaktoren, jo mer varme tar det opp.</li>
+  <li><strong>Omrøringen:</strong> Væsken ved veggen må skiftes ut hele tiden. Står omrøreren, blir væsken ved veggen kald mens resten av reaktoren blir varm.</li>
+  <li><strong>Rene flater:</strong> Belegg på veggen isolerer og gir mindre varmeoverføring.</li>
+</ul>
+<p>Hvordan varme går gjennom en vegg, lærer du mer om på siden <a href="../04-masse-og-energibalanser/temperatur-og-varme.html">Temperatur og varme</a> i Fysiske prinsipper.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvorfor er en stor reaktor vanskeligere å kjøle?</div>
+  <p><strong>Oppgave:</strong> Tenk deg to reaktorer formet som terninger (forenklet: vi regner som om hele overflaten kan kjøles). Den lille er 1 m på hver side, og den store er 2 m på hver side. Hvor mye overflate har de per kubikkmeter innhold?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Den lille: Volumet er 1 m · 1 m · 1 m = 1 m³. Overflaten er 6 sider · 1 m² = 6 m². Det gir 6 m² / 1 m³ = 6 m² per m³.</li>
+    <li>Den store: Volumet er 2 m · 2 m · 2 m = 8 m³. Overflaten er 6 sider · 4 m² = 24 m². Det gir 24 m² / 8 m³ = 3 m² per m³.</li>
+  </ol>
+  <p><strong>Svar:</strong> Den store reaktoren har bare halvparten så mye overflate per kubikkmeter. Varmen lages i hele volumet, men kan bare komme ut gjennom overflaten. Derfor er det vanskeligere å kjøle en stor reaktor. En reaksjon som går rolig i en kolbe på laben, kan bli farlig i en stor reaktor. Store reaktorer trenger derfor ofte kjølespiral eller varmeveksler i tillegg til kappen.</p>
+</div>
+
+<h2>Temperaturen følges hele tiden</h2>
+<p>Temperaturen måles inne i reaktoren og ofte også i mediet inn og ut av kappen. En regulator åpner og stenger ventilen for damp eller kjølevann, slik at temperaturen holdes der den skal være. Hvordan dette virker, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+<p>Som operatør følger du med på om temperaturen i reaktoren holder seg, og om kjølingen klarer å følge med. Står kjøleventilen helt åpen og temperaturen likevel stiger, er det et alvorlig varsel. Da har kjølingen ikke mer å gi. Kjølekapasiteten er brukt opp.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Kjølesvikt og omrørerstans:</strong> Svikter kjølevannet, pumpen eller omrøreren i en reaktor med eksoterm reaksjon, kan temperaturen stige raskt. Stopp tilsetningen av råstoff med en gang, og følg nødprosedyren. Les om <a href="../01-hms/06-trykk.html">løpske reaksjoner</a> og prøv simuleringen <a href="../01-hms/06-reaktor.html">Øv: Reaktoren</a>.</li>
+    <li><strong>Ikke start omrøreren uten videre:</strong> Har omrøreren stått mens råstoff ble tilsatt, kan stoffene ligge i lag uten å ha reagert. Starter omrøreren, kan alt reagere på en gang. Spør skiftleder og følg prosedyren før omrøreren startes igjen.</li>
+    <li><strong>Damp og varme flater:</strong> Damp, kondensat og kappen kan gi alvorlige brannskader. Slipp aldri damp inn i en kappe full av kaldt vann uten å tømme den først, for det kan gi kraftige slag i rørene, såkalt vannslag.</li>
+    <li><strong>Varmeolje:</strong> Varm olje som lekker ut, kan ta fyr. Lekkasjer skal meldes og stoppes.</li>
+    <li><strong>Brå temperaturendringer:</strong> Noen reaktorer er kledd med glass på innsiden for å tåle etsende stoffer. Glasset kan sprekke hvis reaktoren varmes eller kjøles for fort.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. En reaktor har en eksoterm reaksjon. Hva betyr det for reaktoren?</p>
+  <ul>
+    <li>Den må varmes hele tiden.</li>
+    <li data-riktig>Den må kjøles, fordi reaksjonen lager varme.</li>
+    <li>Den trenger verken oppvarming eller kjøling.</li>
+  </ul>
+  <p class="forklaring">En eksoterm reaksjon gir fra seg varme. Uten kjøling blir det stadig varmere i reaktoren.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hvorfor blir kjølingen dårligere når nivået i reaktoren er lavt?</p>
+  <ul>
+    <li>Fordi kjølevannet strømmer saktere</li>
+    <li data-riktig>Fordi en mindre del av kappen har væske på innsiden, så varmeflaten blir mindre</li>
+    <li>Fordi omrøreren går fortere</li>
+  </ul>
+  <p class="forklaring">Varmen kan bare gå gjennom veggen der væsken ligger mot kappen. Lavt nivå gir mindre varmeflate.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva er en ulempe med en kjølespiral inne i reaktoren?</p>
+  <ul>
+    <li>Den gir mindre varmeflate enn kappen.</li>
+    <li data-riktig>En lekkasje slipper kjølevann rett inn i produktet.</li>
+    <li>Den kan bare brukes til oppvarming.</li>
+  </ul>
+  <p class="forklaring">Spiralen står i produktet. Lekker den, går kjølevannet rett inn i reaktoren. Den er også vanskelig å rengjøre.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Omrøreren i en reaktor med eksoterm reaksjon stopper, men kjølevannet går som før. Hva skjer?</p>
+  <ul>
+    <li>Ingenting, for kjølevannet tar like mye varme som før.</li>
+    <li data-riktig>Kjølingen blir mye dårligere, og temperaturen i reaktoren kan stige.</li>
+    <li>Reaksjonen stopper av seg selv.</li>
+  </ul>
+  <p class="forklaring">Uten omrøring blir ikke væsken ved veggen skiftet ut. Den blir kald, mens resten av reaktoren blir varmere. Tilsetningen av råstoff skal stoppes.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hvorfor brukes varmeolje i stedet for damp når reaktoren skal holde 280 °C?</p>
+  <ul>
+    <li>Fordi varmeolje er billigere enn damp</li>
+    <li data-riktig>Fordi damp må ha svært høyt trykk for å være så varm, mens varmeoljen ikke koker</li>
+    <li>Fordi varmeolje ikke kan brenne</li>
+  </ul>
+  <p class="forklaring">Temperaturen til damp henger sammen med trykket. Ved 280 °C ville kappen fått et svært høyt trykk. Varmeoljen er flytende ved denne temperaturen. Men den kan brenne hvis den lekker ut.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>varmekappe</td><td>En ekstra vegg utenpå en reaktor eller tank. Et varme- eller kjølemedium strømmer i mellomrommet.</td><td>jacket</td></tr>
+    <tr><td>halvrørskappe</td><td>En kappe laget av et rør som er delt på langs og sveiset i en spiral utenpå reaktoren.</td><td>half-pipe jacket</td></tr>
+    <tr><td>kjølespiral</td><td>Et rør i spiral inne i en reaktor eller tank, der kjølemedium strømmer gjennom.</td><td>cooling coil</td></tr>
+    <tr><td>tilbakeløpskjøler</td><td>En kondensator på toppen av en reaktor som gjør dampen til væske igjen, slik at den renner tilbake.</td><td>reflux condenser</td></tr>
+    <tr><td>varmeolje</td><td>En olje som brukes til å varme utstyr til høye temperaturer uten høyt trykk.</td><td>thermal oil, heat transfer oil</td></tr>
+    <tr><td>kuldebærer</td><td>En væske, ofte vann og glykol, som kjøles i en kjølemaskin og sirkulerer ut til utstyret, der den tar opp varme.</td><td>brine, coolant</td></tr>
+    <tr><td>kjølekapasitet</td><td>Hvor mye varme kjølesystemet klarer å fjerne fra reaktoren.</td><td>cooling capacity</td></tr>
+    <tr><td>varmeflate</td><td>Den delen av veggen i en varmeveksler, kappe eller spiral som varmen går gjennom. Større flate gir mer varmeoverføring.</td><td>heat transfer area</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="reaktortyper.html">Reaktortyper</a>: forrige side.</li>
+  <li><a href="typer-varmevekslere.html">Typer varmevekslere</a> og <a href="kjoling-og-kondensering.html">Kjøling og kondensering</a> (emnet Varmeoverføring).</li>
+  <li><a href="../02-kjemi-og-beregninger/energi-i-reaksjoner.html">Energi i reaksjoner</a> (Kjemiske prinsipper).</li>
+  <li><a href="../05-maling-styring-regulering/index.html">Automasjon</a>: hvordan temperaturen reguleres.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -43,12 +43,12 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Mekaniske operasjoner",
     sider: [
-      { fil: "knusing-og-maling.html", tittel: "Knusing og maling", status: "utkast" },
-      { fil: "sikting.html", tittel: "Sikting", status: "utkast" },
-      { fil: "sedimentering-og-sentrifugering.html", tittel: "Sedimentering og sentrifugering", meny: "Sedimentering", status: "utkast" },
-      { fil: "filtrering.html", tittel: "Filtrering", status: "utkast" },
-      { fil: "syklon-og-stovfilter.html", tittel: "Syklon og støvfilter", meny: "Syklon og filter", status: "utkast" },
-      { fil: "mekaniske-operasjoner-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }
+      { fil: "knusing-og-maling.html", tittel: "Knusing og maling", status: "ferdig" },
+      { fil: "sikting.html", tittel: "Sikting", status: "ferdig" },
+      { fil: "sedimentering-og-sentrifugering.html", tittel: "Sedimentering og sentrifugering", meny: "Sedimentering", status: "ferdig" },
+      { fil: "filtrering.html", tittel: "Filtrering", status: "ferdig" },
+      { fil: "syklon-og-stovfilter.html", tittel: "Syklon og støvfilter", meny: "Syklon og filter", status: "ferdig" },
+      { fil: "mekaniske-operasjoner-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {
@@ -64,18 +64,18 @@ KPL.sti("03-enhetsoperasjoner", [
   {
     emne: "Reaktorer og blanding",
     sider: [
-      { tittel: "Blanding og omrøring", meny: "Blanding", status: "planlagt" },
-      { tittel: "Reaktortyper", status: "planlagt" },
-      { tittel: "Oppvarming og kjøling av reaktorer", meny: "Temperatur i reaktoren", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "blanding-og-omroring.html", tittel: "Blanding og omrøring", meny: "Blanding", status: "ferdig" },
+      { fil: "reaktortyper.html", tittel: "Reaktortyper", status: "ferdig" },
+      { fil: "oppvarming-og-kjoling-av-reaktorer.html", tittel: "Oppvarming og kjøling av reaktorer", meny: "Temperatur i reaktoren", status: "ferdig" },
+      { fil: "reaktorer-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {
     emne: "Et helt anlegg",
     sider: [
-      { tittel: "Hvorfor operasjonene kommer i denne rekkefølgen", meny: "Rekkefølgen", status: "planlagt" },
-      { tittel: "Eksempel: fra råstoff til produkt", meny: "Eksempelanlegg", status: "planlagt" },
-      { tittel: "Hva kan du nå?", type: "sjekk", status: "planlagt" }
+      { fil: "rekkefolgen-i-anlegget.html", tittel: "Hvorfor operasjonene kommer i denne rekkefølgen", meny: "Rekkefølgen", status: "ferdig" },
+      { fil: "oljeraffineriet.html", tittel: "Eksempel: fra råolje til bensin og diesel", meny: "Oljeraffineriet", status: "ferdig" },
+      { fil: "et-helt-anlegg-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   }
 ]);

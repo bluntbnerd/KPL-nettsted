@@ -19,7 +19,7 @@
   <!-- tykt slam i bunnen -->
   <polygon points="80,184 560,184 560,200 320,250 80,200" fill="#b89a74"/>
   <!-- tankvegger -->
-  <polyline points="80,78 80,200 320,250 560,200 560,78" fill="none" stroke="#586868" stroke-width="3.5"/>
+  <polyline points="80,92 80,200 320,250 560,200 560,92" fill="none" stroke="#586868" stroke-width="3.5"/>
   <!-- overløpsrenner -->
   <path d="M80,92 L62,92 L62,106 L80,106" fill="none" stroke="#586868" stroke-width="2.5"/>
   <path d="M560,92 L578,92 L578,106 L560,106" fill="none" stroke="#586868" stroke-width="2.5"/>
@@ -53,7 +53,7 @@
     <text x="350" y="112">innløpsbrønn</text>
     <text x="96" y="112" fill="#2471a3">klar væske</text>
     <text x="356" y="178">partiklene synker</text>
-    <text x="96" y="230">tykt slam</text>
+    <text x="430" y="198" font-weight="bold">tykt slam</text>
     <text x="400" y="250">river skyver slammet</text>
     <text x="400" y="265">mot midten</text>
     <text x="450" y="295">underløp: tykt slam ut</text>
