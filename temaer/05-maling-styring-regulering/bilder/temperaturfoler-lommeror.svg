@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 310" width="620" height="310" font-family="Segoe UI, Arial, sans-serif">
+  <title>Snitt gjennom et rør med en temperaturføler. Føleren står i et lommerør som stikker ned i strømmen. På toppen sitter en temperaturgiver som sender signal til kontrollrommet.</title>
+  <rect x="0" y="0" width="620" height="310" rx="10" fill="#ffffff"/>
+
+  <!-- Rør i snitt med væske -->
+  <rect x="20" y="172" width="580" height="76" fill="#2a7a9a" opacity="0.15"/>
+  <line x1="20" y1="170" x2="600" y2="170" stroke="#586868" stroke-width="5"/>
+  <line x1="20" y1="250" x2="600" y2="250" stroke="#586868" stroke-width="5"/>
+  <g fill="#2a7a9a">
+    <polygon points="60,202 80,210 60,218"/>
+    <polygon points="520,202 540,210 520,218"/>
+  </g>
+  <text x="70" y="238" font-size="12" text-anchor="middle" fill="#2a7a9a">strømning</text>
+
+  <!-- Feste på røret -->
+  <rect x="280" y="150" width="40" height="20" fill="#d8dede" stroke="#586868" stroke-width="2"/>
+
+  <!-- Lommerør -->
+  <path d="M290,120 L290,220 Q290,230 300,230 Q310,230 310,220 L310,120 Z" fill="#eef2f2" stroke="#1c2828" stroke-width="2.5"/>
+
+  <!-- Føler inne i lommerøret -->
+  <line x1="300" y1="100" x2="300" y2="222" stroke="#b5530f" stroke-width="3"/>
+  <rect x="296" y="204" width="8" height="20" rx="2" fill="#b5530f"/>
+
+  <!-- Temperaturgiver (hode) -->
+  <rect x="268" y="62" width="64" height="40" rx="8" fill="#f6f8f8" stroke="#1c2828" stroke-width="2.5"/>
+  <rect x="284" y="72" width="32" height="16" rx="2" fill="#1c2828"/>
+  <text x="300" y="84" font-size="10" text-anchor="middle" fill="#7fd0e0">65,2</text>
+  <line x1="300" y1="102" x2="300" y2="120" stroke="#1c2828" stroke-width="5"/>
+  <text x="300" y="50" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c2828">temperaturgiver</text>
+
+  <!-- Signal -->
+  <line x1="332" y1="82" x2="590" y2="82" stroke="#b5530f" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <polygon points="582,76 594,82 582,88" fill="#b5530f"/>
+  <text x="470" y="72" font-size="12" text-anchor="middle" fill="#b5530f">signal til kontrollrommet</text>
+
+  <!-- Forklaringer -->
+  <g stroke="#8a9a9a" stroke-width="1.2">
+    <line x1="232" y1="132" x2="296" y2="132"/>
+    <line x1="232" y1="196" x2="288" y2="196"/>
+    <line x1="300" y1="234" x2="300" y2="268"/>
+  </g>
+  <g font-size="13" fill="#1c2828" text-anchor="end">
+    <text x="228" y="128"><tspan font-weight="bold" fill="#b5530f">føler</tspan>: kan trekkes ut</text>
+    <text x="228" y="144">uten å åpne røret</text>
+    <text x="228" y="192"><tspan font-weight="bold">lommerør</tspan>: sitter fast</text>
+    <text x="228" y="208">i røret og beskytter føleren</text>
+  </g>
+  <text x="300" y="286" font-size="13" text-anchor="middle" fill="#1c2828">selve målingen skjer ytterst i spissen, ute i strømmen</text>
+</svg>

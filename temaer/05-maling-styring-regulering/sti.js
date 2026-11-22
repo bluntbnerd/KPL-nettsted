@@ -14,12 +14,12 @@ KPL.sti("05-maling-styring-regulering", [
   {
     emne: "Måling i anlegget",
     sider: [
-      { tittel: "Hvorfor vi måler", status: "planlagt" },
-      { tittel: "Trykkmåling", status: "planlagt" },
-      { tittel: "Temperaturmåling", status: "planlagt" },
-      { tittel: "Nivåmåling", status: "planlagt" },
-      { tittel: "Mengdemåling", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "hvorfor-vi-maler.html", tittel: "Hvorfor vi måler", type: "fagstoff", status: "ferdig" },
+      { fil: "trykkmaling.html", tittel: "Trykkmåling", type: "fagstoff", status: "ferdig" },
+      { fil: "temperaturmaling.html", tittel: "Temperaturmåling", type: "fagstoff", status: "ferdig" },
+      { fil: "nivamaling.html", tittel: "Nivåmåling", type: "fagstoff", status: "ferdig" },
+      { fil: "mengdemaling.html", tittel: "Mengdemåling", type: "fagstoff", status: "ferdig" },
+      { fil: "maling-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {

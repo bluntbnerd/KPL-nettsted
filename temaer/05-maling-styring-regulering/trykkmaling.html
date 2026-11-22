@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trykkmåling – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Trykkmåling</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Trykk er en av de målingene du ser oftest i et prosessanlegg. Trykket viser om en pumpe går som den skal, om et filter er i ferd med å tettes, og om en tank er trygg. Her lærer du hvordan et manometer og en trykkgiver virker, hvordan de monteres, og hvordan du oppdager at en trykkmåler viser feil.</p>
+
+<h2>Hvorfor måler vi trykk?</h2>
+<p>Noen eksempler fra anlegget:</p>
+<ul>
+  <li><strong>Etter en pumpe</strong> viser trykket om pumpa går og gir det den skal. Faller trykket plutselig, kan pumpa ha stoppet eller suge luft.</li>
+  <li><strong>I en tank eller reaktor</strong> må trykket holdes under det tanken tåler. Det er et spørsmål om sikkerhet.</li>
+  <li><strong>Over et filter</strong> viser trykkforskjellen om filteret er rent eller begynner å tettes.</li>
+  <li><strong>I damp- og trykkluftledninger</strong> må trykket være riktig for at utstyret skal virke.</li>
+</ul>
+<p>De fleste trykkmålere i anlegget viser <strong>overtrykk</strong>, altså trykket i forhold til lufta rundt. Forskjellen på overtrykk og absolutt trykk lærer du på siden <a href="../04-masse-og-energibalanser/kraft-og-trykk.html">Kraft og trykk</a> i Fysiske prinsipper.</p>
+
+<h2>Manometeret</h2>
+<p>Den vanligste lokale trykkmåleren er et <strong>manometer</strong> med viser og skala. Det trenger verken strøm eller ledninger, og det sitter overalt i anlegget.</p>
+
+<figure>
+  <img src="bilder/manometer-rorfjaer.svg" alt="Et rundt manometer med skala fra 0 til 10 bar. Inne i manometeret er et bøyd, blått rør tegnet inn. Røret er festet i tilkoblingen nederst og bøyer seg nesten en hel runde. Den frie enden er koblet til viseren med et stag. Viseren peker på ca. 6 bar." width="620">
+  <figcaption>Figur: Et manometer med rørfjær, sett forfra med innmaten tegnet inn. Når trykket øker, retter røret seg litt ut, og viseren går mot høyere verdi. Figuren er forenklet.</figcaption>
+</figure>
+
+<p>Inne i manometeret sitter et bøyd, flatt metallrør som kalles en <strong>rørfjær</strong>. Røret er festet i tilkoblingen i den ene enden og lukket i den andre. Trykket fra prosessen kommer inn i røret. Når trykket øker, prøver røret å rette seg ut, omtrent som en oppblåsbar «festblåser». Den frie enden flytter seg litt, og en liten mekanisme gjør bevegelsen om til at viseren går rundt.</p>
+<p>Mange manometre er fylt med en klar væske, ofte glyserin. Væsken demper viseren så den ikke dirrer når det er vibrasjoner eller trykket svinger, for eksempel nær en pumpe. Da blir det lettere å lese av, og måleren slites mindre.</p>
+
+<h2>Trykkgiveren</h2>
+<p>Et manometer må leses av på stedet. Skal trykket vises i kontrollrommet, brukes en <strong>trykkgiver</strong>. Den måler trykket og sender verdien som et elektrisk signal til styresystemet.</p>
+<p>Inne i en trykkgiver sitter en tynn metallplate, en <strong>membran</strong>. Trykket fra prosessen presser på membranen, så den bøyer seg litt. Elektronikk i giveren måler hvor mye membranen bøyer seg, og gjør det om til et signal. Hvordan signalet ser ut, og hvordan det kommer fram til kontrollrommet, lærer du i emnet Signaler og instrumentering.</p>
+<p>Mange trykkgivere har også et lite display, så du kan lese av verdien på stedet.</p>
+
+<h2>Differansetrykk</h2>
+<p>Noen ganger vil vi vite <em>forskjellen</em> mellom to trykk. Da brukes en <strong>differansetrykkmåler</strong>. Den har to tilkoblinger og viser hvor mye høyere trykket er på den ene siden enn på den andre.</p>
+<p>Et vanlig eksempel er et filter. Når filteret er rent, er trykket nesten like høyt før og etter. Etter hvert som filteret fylles med partikler, blir det tyngre å presse væsken gjennom, og trykket etter filteret blir lavere enn før. Differansetrykket stiger. Når det når en grense, er det på tide å bytte eller rense filteret.</p>
+<p>Differansetrykk brukes også til å måle nivå og mengde. Det lærer du på sidene <a href="nivamaling.html">Nivåmåling</a> og <a href="mengdemaling.html">Mengdemåling</a>. En differansetrykkmåler som sender verdien til kontrollrommet, kalles en differansetrykkgiver.</p>
+
+<h2>Slik monteres en trykkmåler</h2>
+
+<figure>
+  <img src="bilder/trykkmaling-montering.svg" alt="Et horisontalt prosessrør. Fra toppen av røret går to tynne rør opp. På det venstre sitter en instrumentventil og et manometer, som er en lokal måler. På det høyre sitter en instrumentventil og en trykkgiver med et lite display. En stiplet linje går fra trykkgiveren til kontrollrommet." width="620">
+  <figcaption>Figur: To trykkmålere på samme rør. Begge sitter på et impulsrør med en instrumentventil, slik at måleren kan stenges av og byttes.</figcaption>
+</figure>
+
+<p>En trykkmåler skrus sjelden rett inn i prosessrøret. Mellom røret og måleren er det vanligvis</p>
+<ul>
+  <li>et <strong>impulsrør</strong>: et tynt rør som fører trykket fra prosessen fram til måleren</li>
+  <li>en <strong>instrumentventil</strong>: en liten ventil som stenger av måleren fra prosessen</li>
+</ul>
+<p>Med instrumentventilen kan du stenge av og bytte en måler uten å stoppe hele anlegget. På damprør sitter det ofte også en bøyd rørsløyfe, en <strong>sifong</strong>, foran manometeret. Der blir det stående kondensvann som beskytter måleren mot den varme dampen.</p>
+
+<h2>Velg riktig måleområde</h2>
+<p>Hver trykkmåler har et <strong>måleområde</strong>, for eksempel 0–10 bar. Velg en måler der det vanlige trykket ligger omtrent midt på skalaen. Da kan du lese av nøyaktig, og måleren tåler at trykket av og til blir høyere. Står viseren hele tiden helt nede, er avlesningen unøyaktig. Står den helt oppe, kan måleren bli ødelagt.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Hvilket manometer velger du?</div>
+  <p><strong>Oppgave:</strong> Etter en pumpe er trykket vanligvis 4 bar, men det kan bli opp mot 6 bar når en ventil lenger ute stenges. Du kan velge mellom manometre med måleområde 0–4 bar, 0–10 bar og 0–100 bar. Hvilket velger du?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>0–4 bar: Det vanlige trykket står helt i toppen av skalaen, og 6 bar er utenfor. Måleren kan bli ødelagt.</li>
+    <li>0–100 bar: 4 bar er bare en liten bit av skalaen. Viseren flytter seg nesten ikke, og du kan ikke lese av nøyaktig.</li>
+    <li>0–10 bar: 4 bar er under halve skalaen, og 6 bar er godt innenfor.</li>
+  </ol>
+  <p><strong>Svar:</strong> Manometeret med 0–10 bar.</p>
+</div>
+
+<h2>Når trykkmåleren viser feil</h2>
+<p>Vanlige feil på trykkmålere er:</p>
+<ul>
+  <li><strong>Tett impulsrør.</strong> Partikler, belegg eller frossen væske tetter det tynne røret. Måleren viser da et trykk som ikke endrer seg, selv om trykket i prosessen gjør det.</li>
+  <li><strong>Stengt instrumentventil.</strong> Noen har glemt å åpne ventilen etter et bytte. Måleren viser 0 eller et gammelt trykk som er stengt inne.</li>
+  <li><strong>Ødelagt måler.</strong> Har manometeret vært utsatt for mye høyere trykk enn det er laget for, kan rørfjæren ha fått varig skade. Da viser det ikke 0 når trykket er borte.</li>
+  <li><strong>Væske i impulsrøret.</strong> Sitter måleren lavere enn målepunktet, og impulsrøret er fullt av væske, presser væsken i røret på måleren. Måleren viser da for høyt.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Manometeret som viste for høyt</div>
+  <p><strong>Oppgave:</strong> Et manometer skal vise trykket på toppen av en tank, men det er montert 5 m lenger ned, ved gulvet, så det er lett å lese av. Impulsrøret er fullt av vann. Hvor mye for høyt viser manometeret?</p>
+  <p><strong>Løsning:</strong> Vannet i impulsrøret står 5 m høyt over manometeret. Tommelfingerregelen fra siden <a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a> er at 10 m vann gir ca. 1 bar. Da gir 5 m vann ca. 0,5 bar.</p>
+  <p><strong>Svar:</strong> Manometeret viser ca. 0,5 bar for høyt. Viser det 1,7 bar, er trykket på toppen av tanken bare ca. 1,2 bar. En trykkgiver kan stilles inn slik at den trekker fra væskesøylen. For et manometer må du regne den ut selv, eller flytte måleren opp til målepunktet.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Sjekk nullpunktet</div>
+  <p>Når et anlegg er stoppet og trykket er tatt av, skal et manometer vise 0 bar, så sant det ikke står en væskesøyle i impulsrøret over det. Viser det noe annet, er det noe galt med måleren eller tilkoblingen, for eksempel trykk som er stengt inne bak instrumentventilen. Sammenlign også gjerne manometeret med trykket på skjermen i kontrollrommet. Er de svært ulike, viser en av dem feil.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Arbeid med trykkmålere</div>
+  <ul>
+    <li>Skru aldri løs en trykkmåler før instrumentventilen er stengt og trykket mellom ventilen og måleren er sluppet ut etter prosedyren.</li>
+    <li>Et manometer som viser 0, kan være tett eller ødelagt. Stol ikke på det alene når du skal åpne utstyr.</li>
+    <li>Husk å åpne instrumentventilen igjen etter arbeidet, og sjekk at måleren viser et rimelig trykk.</li>
+    <li>Et manometer med sprukket glass eller en viser som ikke går tilbake til 0, skal meldes og byttes.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva skjer med rørfjæren i et manometer når trykket øker?</p>
+  <ul>
+    <li>Den trekker seg sammen.</li>
+    <li data-riktig>Den retter seg litt ut.</li>
+    <li>Den blir varm.</li>
+  </ul>
+  <p class="forklaring">Trykket inne i det bøyde, flate røret får det til å rette seg litt ut. Den frie enden flytter seg og drar viseren rundt.</p>
+</div>
+
+<div class="quiz">
+  <p>Trykket er vanligvis 4 bar. Hvilket manometer passer best?</p>
+  <ul>
+    <li>0–4 bar</li>
+    <li data-riktig>0–10 bar</li>
+    <li>0–60 bar</li>
+  </ul>
+  <p class="forklaring">Det vanlige trykket bør ligge omtrent midt på skalaen. Med 0–10 bar står 4 bar litt under midten. Med 0–4 bar er måleren helt i toppen, og med 0–60 bar blir avlesningen unøyaktig.</p>
+</div>
+
+<div class="quiz">
+  <p>Differansetrykket over et filter har steget mye den siste uka. Hva betyr det mest sannsynlig?</p>
+  <ul>
+    <li>Filteret har fått hull.</li>
+    <li data-riktig>Filteret begynner å bli tett.</li>
+    <li>Pumpa har stoppet.</li>
+  </ul>
+  <p class="forklaring">Når filteret fylles med partikler, blir det tyngre å presse væsken gjennom. Trykket etter filteret faller, og forskjellen mellom før og etter øker.</p>
+</div>
+
+<div class="quiz">
+  <p>Anlegget er stoppet og trykket er tatt av, men manometeret viser 0,3 bar. Hva gjør du?</p>
+  <ul>
+    <li>Ingenting, det er bare litt.</li>
+    <li>Trekker fra 0,3 bar hver gang du leser av.</li>
+    <li data-riktig>Melder fra, fordi måleren viser feil og må sjekkes eller byttes.</li>
+  </ul>
+  <p class="forklaring">Uten trykk skal manometeret vise 0. Viser det noe annet, kan rørfjæren være skadet, eller det kan være trykk stengt inne i impulsrøret. Måleren må sjekkes.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er instrumentventilen til?</p>
+  <ul>
+    <li>Den regulerer trykket i prosessrøret.</li>
+    <li data-riktig>Den stenger av måleren, så den kan byttes uten å stoppe anlegget.</li>
+    <li>Den slipper ut trykket hvis det blir for høyt.</li>
+  </ul>
+  <p class="forklaring">Instrumentventilen sitter mellom prosessen og måleren. Når den er stengt, kan måleren tas av. Det er sikkerhetsventilen som slipper ut trykket hvis det blir for høyt.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>manometer</td><td>Instrument som måler trykk, vanligvis overtrykket.</td><td>pressure gauge</td></tr>
+    <tr><td>rørfjær</td><td>Bøyd, flatt metallrør inne i et manometer. Det retter seg litt ut når trykket øker, og flytter viseren.</td><td>Bourdon tube</td></tr>
+    <tr><td>trykkgiver</td><td>Instrument som måler trykket og sender verdien som et elektrisk signal til styresystemet.</td><td>pressure transmitter</td></tr>
+    <tr><td>membran</td><td>Tynn, bøyelig plate som bøyer seg litt når trykket presser på den, for eksempel i en trykkgiver.</td><td>diaphragm</td></tr>
+    <tr><td>overtrykk</td><td>Trykket i forhold til lufttrykket rundt oss. Det er dette en vanlig trykkmåler viser. Skrives ofte barg.</td><td>gauge pressure</td></tr>
+    <tr><td>differansetrykk</td><td>Forskjellen mellom to trykk, for eksempel trykket før og etter et filter.</td><td>differential pressure (DP)</td></tr>
+    <tr><td>impulsrør</td><td>Tynt rør som fører trykket fra prosessen fram til en måler.</td><td>impulse line</td></tr>
+    <tr><td>instrumentventil</td><td>Liten ventil mellom prosessen og en måler. Når den er stengt, kan måleren tas av.</td><td>instrument valve</td></tr>
+    <tr><td>måleområde</td><td>Området mellom laveste og høyeste verdi et instrument kan måle, for eksempel 0–10 bar.</td><td>measuring range</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../04-masse-og-energibalanser/kraft-og-trykk.html">Kraft og trykk</a> og <a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a> i Fysiske prinsipper forklarer hva trykk er, og forskjellen på overtrykk og absolutt trykk.</li>
+  <li><a href="../03-enhetsoperasjoner/tanker-og-beholdere.html">Tanker og beholdere</a> i Enhetsoperasjoner viser hvor manometer og sikkerhetsventil sitter på en trykkbeholder.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

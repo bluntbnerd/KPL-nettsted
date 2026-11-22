@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" font-family="Segoe UI, Arial, sans-serif">
+  <title>En tank med fire målepunkter som sender måleverdiene til en skjerm i kontrollrommet</title>
+  <rect x="0" y="0" width="640" height="320" rx="10" fill="#ffffff"/>
+
+  <!-- Rør inn med pumpe -->
+  <line x1="10" y1="90" x2="172" y2="90" stroke="#8a9a9a" stroke-width="10"/>
+  <polygon points="150,82 164,90 150,98" fill="#ffffff"/>
+  <circle cx="60" cy="90" r="16" fill="#ffffff" stroke="#586868" stroke-width="2.5"/>
+  <polygon points="52,80 72,90 52,100" fill="#586868"/>
+  <text x="14" y="76" font-size="12" fill="#586868">inn</text>
+  <text x="60" y="122" font-size="12" text-anchor="middle" fill="#586868">pumpe</text>
+
+  <!-- Tank med væske (nivå 72 %) -->
+  <rect x="172" y="116" width="146" height="143" fill="#2a7a9a" opacity="0.18"/>
+  <line x1="172" y1="116" x2="318" y2="116" stroke="#2a7a9a" stroke-width="2"/>
+  <rect x="170" y="60" width="150" height="200" rx="12" fill="none" stroke="#1c2828" stroke-width="3"/>
+  <text x="245" y="200" font-size="13" text-anchor="middle" fill="#1c2828">tank</text>
+
+  <!-- Rør ut -->
+  <line x1="245" y1="260" x2="245" y2="292" stroke="#8a9a9a" stroke-width="10"/>
+  <line x1="240" y1="292" x2="370" y2="292" stroke="#8a9a9a" stroke-width="10"/>
+  <text x="378" y="296" font-size="12" fill="#586868">ut</text>
+
+  <!-- Stusser fra tanken til målepunktene -->
+  <g stroke="#586868" stroke-width="2.5">
+    <line x1="245" y1="60" x2="245" y2="46"/>
+    <line x1="320" y1="140" x2="340" y2="140"/>
+    <line x1="320" y1="220" x2="340" y2="220"/>
+    <line x1="115" y1="85" x2="115" y2="102"/>
+  </g>
+
+  <!-- Signallinjer til kontrollrommet (stiplet) -->
+  <g stroke="#b5530f" stroke-width="1.5" stroke-dasharray="5 4" fill="none">
+    <polyline points="115,78 115,18 420,18"/>
+    <line x1="257" y1="34" x2="420" y2="34"/>
+    <line x1="364" y1="140" x2="420" y2="140"/>
+    <line x1="364" y1="220" x2="420" y2="220"/>
+    <line x1="420" y1="18" x2="420" y2="220"/>
+    <line x1="420" y1="155" x2="440" y2="155"/>
+  </g>
+
+  <!-- Målepunkter -->
+  <g fill="#ffffff" stroke="#b5530f" stroke-width="2.5">
+    <circle cx="115" cy="90" r="12"/>
+    <circle cx="245" cy="34" r="12"/>
+    <circle cx="352" cy="140" r="12"/>
+    <circle cx="352" cy="220" r="12"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#b5530f">
+    <text x="115" y="122" text-anchor="middle">mengde</text>
+    <text x="227" y="39" text-anchor="end">trykk</text>
+    <text x="352" y="122" text-anchor="middle">nivå</text>
+    <text x="336" y="250" text-anchor="start">temperatur</text>
+  </g>
+
+  <!-- Skjerm i kontrollrommet -->
+  <text x="530" y="62" font-size="14" font-weight="bold" text-anchor="middle" fill="#1c2828">kontrollrommet</text>
+  <rect x="440" y="72" width="180" height="166" rx="8" fill="#1c2828"/>
+  <g font-size="14" fill="#e8f4f4">
+    <text x="455" y="104">Trykk</text>
+    <text x="455" y="140">Temperatur</text>
+    <text x="455" y="176">Nivå</text>
+    <text x="455" y="212">Mengde</text>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#7fd0e0" text-anchor="end">
+    <text x="606" y="104">1,2 bar</text>
+    <text x="606" y="140">65 °C</text>
+    <text x="606" y="176">72 %</text>
+    <text x="606" y="212">18 m³/h</text>
+  </g>
+  <text x="530" y="262" font-size="12" text-anchor="middle" fill="#586868">operatøren ser måleverdiene</text>
+  <text x="530" y="278" font-size="12" text-anchor="middle" fill="#586868">uten å gå ut i anlegget</text>
+</svg>

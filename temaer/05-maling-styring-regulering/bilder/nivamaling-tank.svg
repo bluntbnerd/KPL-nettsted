@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 320" width="620" height="320" font-family="Segoe UI, Arial, sans-serif">
+  <title>En tank med fire måter å måle nivået på: seglass på siden, radar på toppen, trykkgiver i bunnen og høynivåvern høyt oppe</title>
+  <rect x="0" y="0" width="620" height="320" rx="10" fill="#ffffff"/>
+
+  <!-- Væske i tanken -->
+  <rect x="232" y="150" width="156" height="138" fill="#2a7a9a" opacity="0.18"/>
+  <line x1="232" y1="150" x2="388" y2="150" stroke="#2a7a9a" stroke-width="2"/>
+  <!-- Tank -->
+  <rect x="230" y="60" width="160" height="230" rx="10" fill="none" stroke="#1c2828" stroke-width="3"/>
+
+  <!-- Høyden h -->
+  <line x1="262" y1="286" x2="262" y2="154" stroke="#1c2828" stroke-width="1.5"/>
+  <polygon points="257,162 262,152 267,162" fill="#1c2828"/>
+  <polygon points="257,278 262,288 267,278" fill="#1c2828"/>
+  <text x="270" y="225" font-size="15" font-style="italic" fill="#1c2828">h</text>
+
+  <!-- Seglass på venstre side -->
+  <line x1="182" y1="100" x2="230" y2="100" stroke="#586868" stroke-width="5"/>
+  <line x1="182" y1="262" x2="230" y2="262" stroke="#586868" stroke-width="5"/>
+  <rect x="168" y="90" width="16" height="182" rx="4" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <rect x="170" y="150" width="12" height="120" fill="#2a7a9a" opacity="0.45"/>
+  <line x1="170" y1="150" x2="182" y2="150" stroke="#2a7a9a" stroke-width="2"/>
+  <g stroke="#8a9a9a" stroke-width="1.2">
+    <line x1="164" y1="150" x2="130" y2="150"/>
+  </g>
+  <g font-size="13" fill="#1c2828" text-anchor="end">
+    <text x="126" y="140" font-weight="bold">seglass</text>
+    <text x="126" y="156">væsken står like</text>
+    <text x="126" y="172">høyt som i tanken</text>
+  </g>
+
+  <!-- Radar på toppen -->
+  <rect x="332" y="22" width="36" height="22" rx="4" fill="#f6f8f8" stroke="#1c2828" stroke-width="2"/>
+  <polygon points="340,44 360,44 366,60 334,60" fill="#d8dede" stroke="#1c2828" stroke-width="2"/>
+  <g stroke="#b5530f" stroke-width="1.8" stroke-dasharray="5 4">
+    <line x1="344" y1="64" x2="344" y2="140"/>
+    <line x1="356" y1="146" x2="356" y2="70"/>
+  </g>
+  <polygon points="339,136 344,146 349,136" fill="#b5530f"/>
+  <polygon points="351,72 356,62 361,72" fill="#b5530f"/>
+
+  <!-- Høynivåvern -->
+  <line x1="390" y1="88" x2="406" y2="88" stroke="#586868" stroke-width="4"/>
+  <rect x="406" y="78" width="22" height="20" rx="3" fill="#f6f8f8" stroke="#1c2828" stroke-width="2"/>
+  <line x1="376" y1="88" x2="390" y2="88" stroke="#1c2828" stroke-width="3"/>
+
+  <!-- Trykkgiver i bunnen -->
+  <line x1="390" y1="284" x2="410" y2="284" stroke="#586868" stroke-width="4"/>
+  <rect x="410" y="268" width="36" height="32" rx="5" fill="#f6f8f8" stroke="#1c2828" stroke-width="2"/>
+  <rect x="417" y="276" width="22" height="12" rx="2" fill="#1c2828"/>
+
+  <!-- Forklaringer til høyre -->
+  <g stroke="#8a9a9a" stroke-width="1.2">
+    <line x1="370" y1="33" x2="456" y2="33"/>
+    <line x1="430" y1="88" x2="456" y2="88"/>
+    <line x1="448" y1="284" x2="456" y2="284"/>
+  </g>
+  <g font-size="13" fill="#1c2828">
+    <text x="460" y="29" font-weight="bold" fill="#b5530f">radar</text>
+    <text x="460" y="45">måler tiden ekkoet</text>
+    <text x="460" y="61">bruker fra overflaten</text>
+    <text x="460" y="84" font-weight="bold">høynivåvern</text>
+    <text x="460" y="100">gir signal når</text>
+    <text x="460" y="116">væsken når hit</text>
+    <text x="460" y="264" font-weight="bold">trykkgiver</text>
+    <text x="460" y="280">måler trykket fra</text>
+    <text x="460" y="296">væskesøylen over seg</text>
+  </g>
+</svg>

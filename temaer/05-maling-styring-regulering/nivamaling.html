@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nivåmåling – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Nivåmåling</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Hvor full er tanken? Det spørsmålet stiller operatøren mange ganger hver dag. En tank som går full, kan gi utslipp. En tank som går tom, kan ødelegge pumpa. Her lærer du de vanligste måtene å måle nivå på, og hva som kan få en nivåmåler til å vise feil.</p>
+
+<h2>Hvorfor måler vi nivå?</h2>
+<ul>
+  <li><strong>Hindre overfylling.</strong> Renner en tank over, kan kjemikalier komme ut i naturen eller gi brann og giftig damp.</li>
+  <li><strong>Beskytte pumper.</strong> Går en tank tom, suger pumpa luft og kan bli ødelagt. Det kalles at pumpa går tørr.</li>
+  <li><strong>Holde prosessen stabil.</strong> Mange tanker og kolonner må holde et jevnt nivå for at prosessen skal gå riktig.</li>
+  <li><strong>Vite hvor mye du har.</strong> Nivået i lagertankene viser hvor mye råstoff og produkt bedriften har.</li>
+</ul>
+
+<h2>Kontinuerlig måling og nivåbrytere</h2>
+<p>Det er to hovedtyper nivåmålere:</p>
+<ul>
+  <li>En <strong>kontinuerlig nivåmåler</strong> viser nivået hele tiden, for eksempel 72 %.</li>
+  <li>En <strong>nivåbryter</strong> sier bare fra når væsken når et bestemt punkt. Den er enten «av» eller «på».</li>
+</ul>
+<p>Et <strong>høynivåvern</strong> er en nivåbryter høyt oppe i tanken som stopper fyllingen før tanken blir overfylt. En nivåbryter lavt nede kan stoppe pumpa før tanken går tom. Nivåbryterne er ofte helt adskilt fra den kontinuerlige nivåmåleren. Da virker de selv om nivåmåleren viser feil. I flytskjemaer og alarmlister heter høynivåvernet ofte LAHH (høy-høy-alarm for nivå).</p>
+
+<figure>
+  <img src="bilder/nivamaling-tank.svg" alt="En tank som er litt over halvfull med væske. Høyden h er tegnet fra bunnen opp til væskeoverflaten. Til venstre sitter et seglass der væsken står like høyt som i tanken. På toppen sitter en radar som sender et signal ned til overflaten og tar imot ekkoet. Høyt oppe på høyre side sitter et høynivåvern. Nederst på høyre side sitter en trykkgiver som måler trykket fra væskesøylen." width="620">
+  <figcaption>Figur: Fire måter å måle nivå på i samme tank. Seglasset leses av på stedet. Radaren og trykkgiveren måler nivået hele tiden. Høynivåvernet sier bare fra når væsken når bryteren. Figuren er forenklet.</figcaption>
+</figure>
+
+<h2>Seglasset</h2>
+<p>Den enkleste nivåmåleren er et <strong>seglass</strong>: et glassrør eller et vindu på siden av tanken. Glassrøret er koblet til tanken både nede og oppe. Væsken står derfor like høyt i glasset som i tanken, og du kan se nivået direkte.</p>
+<p>Seglasset trenger ingen strøm og er nyttig for å sjekke at nivåmåleren på skjermen viser riktig. Men det kan bare leses av på stedet.</p>
+
+<h2>Nivå målt med trykk</h2>
+<p>Jo høyere væsken står, jo større er trykket i bunnen av tanken. Det lærte du på siden <a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a>: \( p = \rho \cdot g \cdot h \). En trykkgiver i bunnen av tanken kan derfor brukes til å måle nivået. Snur du formelen, får du høyden:</p>
+<p>\[ h = \frac{p}{\rho \cdot g} \]</p>
+<ul>
+  <li><em>h</em> = høyden av væsken over giveren (m)</li>
+  <li><em>p</em> = trykket giveren måler (Pa)</li>
+  <li><em>ρ</em> = tettheten til væsken (kg/m³)</li>
+  <li><em>g</em> = 9,81 m/s²</li>
+</ul>
+<p>Dette er en av de vanligste måtene å måle nivå på i prosessindustrien. Giveren eller styresystemet regner om fra trykk til nivå, men da må de vite hvilken tetthet væsken har.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Nivået i tank 1 i pumperommet</div>
+  <p><strong>Oppgave:</strong> Tank 1 i pumperommet er 1,25 m høy og har en nivåmåler i bunnen som måler trykket fra vannet. Anta at giveren sitter helt nederst, at 0 % er bunnen og at 100 % er 1,25 m. Giveren måler 0,098 bar. Hvor høyt står vannet, og hvor mange prosent av full tank er det?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Gjør om til pascal: \( p = 0{,}098 \text{ bar} = 9800 \text{ Pa} \)</li>
+    <li>\( h = \dfrac{p}{\rho \cdot g} = \dfrac{9800 \text{ Pa}}{1000 \text{ kg/m}^3 \cdot 9{,}81 \text{ m/s}^2} \approx 1{,}0 \text{ m} \)</li>
+    <li>Prosent av full tank: \( \dfrac{1{,}0 \text{ m}}{1{,}25 \text{ m}} \cdot 100\,\% = 80\,\% \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Vannet står ca. 1,0 m høyt. Det er 80 % av full tank. Måleren i tank 1 er en differansetrykkgiver, også kalt DP-celle.</p>
+</div>
+
+<p>I en lukket tank med trykk over væsken, for eksempel en trykkbeholder, presser også gassen på toppen ned på væsken. Da brukes en differansetrykkmåler som måler trykket både i bunnen og på toppen. Forskjellen mellom dem er trykket fra væsken alene.</p>
+
+<h2>Radar og ultralyd</h2>
+<p>En <strong>nivåradar</strong> sitter på toppen av tanken. Den sender radiobølger ned mot væsken og måler hvor lang tid det tar før ekkoet kommer tilbake fra overflaten. Kort tid betyr at væsken står høyt. Lang tid betyr at den står lavt. Radaren er ikke i kontakt med væsken, så den passer godt for etsende og skitne væsker.</p>
+<p>En <strong>ultralydmåler</strong> virker på samme måte, men sender lydbølger i stedet for radiobølger. Den er billigere, men forstyrres lettere av skum, damp og støv i tanken. En trykkgiver i bunnen påvirkes nesten ikke av skum, fordi skummet veier svært lite.</p>
+
+<h2>Flottør</h2>
+<p>En <strong>flottør</strong> er en hul kule eller sylinder som flyter på væsken og følger nivået opp og ned. Flottøren kan flytte en viser på utsiden av tanken, eller slå en bryter av og på. Flottører brukes mest som nivåbrytere. Ulempen er at de har bevegelige deler som kan sette seg fast.</p>
+
+<h2>Hva betyr 0 % og 100 %?</h2>
+<p>Nivå oppgis ofte i prosent. Men 0 % betyr ikke alltid at tanken er helt tom, og 100 % betyr ikke alltid at den er helt full. 0 % og 100 % er de punktene måleren er stilt inn på. Måler en trykkgiver som sitter et stykke over bunnen, er det fortsatt væske i tanken når den viser 0 %. Sjekk hvor 0 % og 100 % er på tanken du jobber med.</p>
+
+<h2>Når nivåmåleren viser feil</h2>
+<ul>
+  <li><strong>Feil tetthet.</strong> En trykkgiver regner om fra trykk til nivå med én bestemt tetthet. Fyller du tanken med en tyngre eller lettere væske enn den er stilt inn for, viser den feil.</li>
+  <li><strong>Skum og damp.</strong> Radar og særlig ultralyd kan få ekko fra skummet i stedet for fra væsken.</li>
+  <li><strong>Belegg og avleiringer.</strong> Belegg på føleren eller i koblingen til giveren kan gi feil eller treg måling.</li>
+  <li><strong>Flottør eller bryter som henger.</strong> En flottør som har satt seg fast, viser samme nivå hele tiden.</li>
+  <li><strong>Tett eller stengt seglass.</strong> Er ventilene til seglasset stengt, eller koblingen tett, viser glasset et gammelt nivå.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Tanken som fikk saltlake</div>
+  <p><strong>Oppgave:</strong> En trykkgiver er stilt inn for vann, med tettheten 1000 kg/m³. Nå fylles tanken med saltlake, som har tettheten 1200 kg/m³. Saltlaken står 1,50 m høyt. Hvilket nivå viser giveren?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Trykket fra saltlaken: \( p = 1200 \text{ kg/m}^3 \cdot 9{,}81 \text{ m/s}^2 \cdot 1{,}50 \text{ m} \approx 17\,700 \text{ Pa} \)</li>
+    <li>Giveren tror det er vann: \( h = \dfrac{17\,700 \text{ Pa}}{1000 \text{ kg/m}^3 \cdot 9{,}81 \text{ m/s}^2} \approx 1{,}80 \text{ m} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Giveren viser ca. 1,80 m, altså 0,30 m for høyt. Med en lettere væske, for eksempel olje, ville den vist for lavt. Det er farligst, for da kan tanken bli overfylt mens skjermen viser at det er god plass.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Følg med på nivået når du fyller</div>
+  <p>Når du fyller en tank, skal nivået stige jevnt. Står det stille, eller stiger det mye fortere eller saktere enn det burde, kan nivåmåleren vise feil. Sjekk seglasset, eller regn ut hvor fort nivået burde stige ut fra mengden som pumpes inn.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Nivå og overfylling</div>
+  <ul>
+    <li>Stol ikke bare på høynivåvernet når du fyller en tank. Følg med på nivået hele tiden. Se også <a href="../01-hms/06-overfylling.html">Overfylling av tank</a> i HMS.</li>
+    <li>Høynivåvernet skal aldri kobles ut eller overstyres uten tillatelse etter bedriftens prosedyre.</li>
+    <li>Fylles en tank med et annet stoff enn vanlig, må du sjekke at nivåmåleren er stilt inn for riktig tetthet.</li>
+    <li>Et seglass kan knuse. Ventilene til glasset skal kunne stenges, og et sprukket glass skal meldes og byttes.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvilken nivåmåler er ikke i kontakt med væsken?</p>
+  <ul>
+    <li>Flottør</li>
+    <li>Trykkgiver i bunnen</li>
+    <li data-riktig>Nivåradar</li>
+  </ul>
+  <p class="forklaring">Radaren sitter på toppen og måler tiden ekkoet bruker fra væskeoverflaten. Flottøren og trykkgiveren er i kontakt med væsken.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkgiver i bunnen av en vanntank måler 0,196 bar. Omtrent hvor høyt står vannet?</p>
+  <ul>
+    <li>0,2 m</li>
+    <li data-riktig>2,0 m</li>
+    <li>20 m</li>
+  </ul>
+  <p class="forklaring">\( h = \dfrac{19\,600 \text{ Pa}}{1000 \cdot 9{,}81} \approx 2{,}0 \text{ m} \). Tommelfingerregelen 10 m vann ≈ 1 bar gir det samme: 0,2 bar ≈ 2 m.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkgiver er stilt inn for vann, men tanken fylles med olje som er lettere enn vann. Hva viser giveren?</p>
+  <ul>
+    <li>For høyt nivå</li>
+    <li data-riktig>For lavt nivå</li>
+    <li>Riktig nivå</li>
+  </ul>
+  <p class="forklaring">Lettere væske gir mindre trykk for samme høyde. Giveren tror det er vann, og regner ut et lavere nivå enn det virkelige. Da kan tanken bli overfylt.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er forskjellen på en nivåbryter og en kontinuerlig nivåmåler?</p>
+  <ul>
+    <li data-riktig>Nivåbryteren sier bare fra når nivået når et bestemt punkt. Den kontinuerlige måleren viser nivået hele tiden.</li>
+    <li>Nivåbryteren er mer nøyaktig.</li>
+    <li>Nivåbryteren brukes bare på laben.</li>
+  </ul>
+  <p class="forklaring">En nivåbryter er enten av eller på, for eksempel et høynivåvern. En kontinuerlig nivåmåler viser for eksempel 72 %.</p>
+</div>
+
+<div class="quiz">
+  <p>Seglasset viser at tanken er halvfull, men skjermen viser 95 %. Hva gjør du?</p>
+  <ul>
+    <li>Stoler på skjermen, den er mest moderne.</li>
+    <li>Stoler på seglasset og fortsetter å fylle.</li>
+    <li data-riktig>Stopper fyllingen og finner ut hvilken måler som viser feil.</li>
+  </ul>
+  <p class="forklaring">Når to målere viser så forskjellig, viser en av dem feil. Seglasset kan være tett eller stengt. Fortsetter du å fylle før du vet hvem som har rett, kan tanken bli overfylt.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>nivå</td><td>Hvor høyt væsken står i en tank. Oppgis ofte i prosent av full tank eller i meter.</td><td>level</td></tr>
+    <tr><td>seglass</td><td>Glassrør eller vindu på siden av en tank der du kan se hvor høyt væsken står.</td><td>sight glass</td></tr>
+    <tr><td>kontinuerlig nivåmåler</td><td>Nivåmåler som viser nivået hele tiden, for eksempel i prosent av full tank.</td><td>level transmitter</td></tr>
+    <tr><td>nivåbryter</td><td>Nivåmåler som bare sier fra når væsken når et bestemt punkt i tanken. Den er enten av eller på.</td><td>level switch</td></tr>
+    <tr><td>høynivåvern</td><td>En nivåbryter høyt oppe i en tank som stopper fyllingen før tanken blir overfylt.</td><td>high level switch</td></tr>
+    <tr><td>nivåradar</td><td>Nivåmåler på toppen av en tank som sender radiobølger mot væsken og måler hvor lang tid ekkoet bruker.</td><td>radar level transmitter</td></tr>
+    <tr><td>ultralydmåler</td><td>Måler som sender lydbølger og måler hvor lang tid ekkoet bruker. Brukes til nivå, og utenpå rør til mengde.</td><td>ultrasonic meter</td></tr>
+    <tr><td>flottør</td><td>Hul kule eller sylinder som flyter på væsken og følger nivået opp og ned.</td><td>float</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a> i Fysiske prinsipper forklarer formelen \( p = \rho \cdot g \cdot h \).</li>
+  <li><a href="../03-enhetsoperasjoner/tanker-og-beholdere.html">Tanker og beholdere</a> i Enhetsoperasjoner viser hvor nivåmåler og høynivåvern sitter på en tank.</li>
+  <li><a href="../01-hms/06-overfylling.html">Overfylling av tank</a> i HMS.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

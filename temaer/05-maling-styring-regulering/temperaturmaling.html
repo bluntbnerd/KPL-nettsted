@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temperaturmåling – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Temperaturmåling</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Mange prosesser går bare riktig ved én bestemt temperatur. Blir en reaktor for varm, kan reaksjonen løpe løpsk. Blir den for kald, blir det lite produkt. Her lærer du hvordan temperaturen måles i anlegget, hvorfor føleren sitter i et lommerør, og hvorfor en temperaturmåling kan henge etter.</p>
+
+<h2>Hvorfor måler vi temperatur?</h2>
+<p>Noen eksempler fra anlegget:</p>
+<ul>
+  <li><strong>I en reaktor</strong> avgjør temperaturen hvor fort reaksjonen går, og hvilket produkt du får.</li>
+  <li><strong>Ved en varmeveksler</strong> viser temperaturen inn og ut om den varmer eller kjøler som den skal.</li>
+  <li><strong>I en destillasjonskolonne</strong> viser temperaturen på ulike høyder om stoffene skilles som de skal, for eksempel om toppproduktet er rent nok.</li>
+  <li><strong>På lagertanker</strong> må noen stoffer holdes varme for ikke å stivne, og andre kalde for ikke å fordampe.</li>
+</ul>
+<p>Hva temperatur er, og forskjellen på celsius og kelvin, lærer du på siden <a href="../04-masse-og-energibalanser/temperatur-og-varme.html">Temperatur og varme</a> i Fysiske prinsipper.</p>
+
+<h2>Bimetalltermometeret: den lokale måleren</h2>
+<p>Ute i anlegget er den vanligste lokale temperaturmåleren et <strong>bimetalltermometer</strong>. Det ser ut som et manometer, med viser og skala.</p>
+<p>Inne i termometeret sitter to tynne strimler av ulike metaller som er festet sammen. Når de blir varme, utvider de seg, men ikke like mye. Da bøyer strimmelen seg. Strimmelen er rullet opp som en spiral, så den vrir seg når temperaturen endrer seg. Viseren sitter på spiralen og følger med rundt.</p>
+<p>Et bimetalltermometer trenger ikke strøm, men det kan bare leses av på stedet. Glasstermometre, som du kjenner fra laben, brukes nesten ikke i anlegget fordi de lett knuser.</p>
+
+<h2>Elektriske temperaturfølere</h2>
+<p>Skal temperaturen vises i kontrollrommet, brukes en elektrisk føler. De to vanligste er motstandsføleren Pt100 og termoelementet.</p>
+
+<h3>Motstandsføleren Pt100</h3>
+<p>En <strong>Pt100</strong> er en liten tråd eller film av platina. Platina leder strøm litt dårligere når det blir varmere. Det vil si at den elektriske <strong>motstanden</strong> øker med temperaturen. Navnet forteller hvordan føleren er laget: Pt er platina, og 100 betyr at motstanden er 100 ohm (Ω) ved 0 °C. For hver grad det blir varmere, øker motstanden med ca. 0,385 Ω.</p>
+<p>Pt100 er svært nøyaktig og er den vanligste føleren i prosessindustrien ved vanlige temperaturer.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Hvor varmt er det?</div>
+  <p><strong>Oppgave:</strong> En instrumenttekniker måler motstanden i en Pt100 til 123,2 Ω. Omtrent hvilken temperatur har føleren?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Ved 0 °C er motstanden 100 Ω. Økningen er \( 123{,}2 \text{ Ω} - 100 \text{ Ω} = 23{,}2 \text{ Ω} \).</li>
+    <li>Hver grad gir ca. 0,385 Ω. Antall grader er \( \dfrac{23{,}2 \text{ Ω}}{0{,}385 \text{ Ω/°C}} \approx 60 \text{ °C} \).</li>
+  </ol>
+  <p><strong>Svar:</strong> Ca. 60 °C. I praksis gjør temperaturgiveren denne utregningen selv. Den viser temperaturen direkte og sender den videre.</p>
+</div>
+
+<h3>Termoelementet</h3>
+<p>Et <strong>termoelement</strong> består av to tråder av ulike metaller som er sveiset sammen i spissen. Når spissen blir varmere enn den andre enden av trådene, lager termoelementet en liten elektrisk spenning. Jo større temperaturforskjellen er, jo høyere blir spenningen.</p>
+<p>Termoelementer er robuste og tåler svært høye temperaturer, over 1000 °C. De brukes derfor i ovner, kjeler og smelteverk. De er litt mindre nøyaktige enn Pt100.</p>
+
+<table>
+  <thead><tr><th>Måler</th><th>Hvordan den virker</th><th>Typisk bruk</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Bimetalltermometer</strong></td><td>To metaller utvider seg ulikt, og en spiral vrir viseren</td><td>Lokal avlesning ute i anlegget</td></tr>
+    <tr><td><strong>Pt100</strong></td><td>Motstanden i platina øker med temperaturen</td><td>Nøyaktig måling, fra langt under 0 °C og opp til noen hundre grader</td></tr>
+    <tr><td><strong>Termoelement</strong></td><td>To metaller sammen gir en liten spenning når spissen er varmere enn den andre enden</td><td>Høye temperaturer, over 1000 °C</td></tr>
+  </tbody>
+</table>
+
+<p>Føleren kobles til en <strong>temperaturgiver</strong>. Den gjør motstanden eller spenningen om til en temperatur, og sender den som et signal til styresystemet. Hvordan signalet sendes, lærer du i emnet Signaler og instrumentering.</p>
+
+<h2>Lommerøret</h2>
+
+<figure>
+  <img src="bilder/temperaturfoler-lommeror.svg" alt="Snitt gjennom et rør der væske strømmer fra venstre mot høyre. Ovenfra stikker et lukket metallrør, et lommerør, ned i væsken. Inne i lommerøret står føleren, og selve følerelementet sitter ytterst i spissen. På toppen sitter en temperaturgiver med et lite display som viser 65,2. En stiplet linje går fra giveren til kontrollrommet." width="620">
+  <figcaption>Figur: En temperaturføler i et lommerør. Lommerøret sitter fast i prosessrøret, så føleren kan trekkes ut og byttes uten at røret åpnes. Figuren er forenklet.</figcaption>
+</figure>
+
+<p>En temperaturføler står sjelden direkte i væsken. Den står inne i et <strong>lommerør</strong>, et lukket metallrør som er sveiset eller skrudd fast i prosessrøret eller tanken. Lommerøret</p>
+<ul>
+  <li>beskytter føleren mot trykk, slitasje og etsende stoffer</li>
+  <li>gjør at du kan trekke ut og bytte føleren uten å stoppe anlegget eller åpne prosessen</li>
+</ul>
+<p>Spissen av lommerøret må stå godt ute i strømmen. Sitter den i en krok der væsken står stille, eller bare så vidt stikker inn, måler den ikke den riktige temperaturen.</p>
+
+<h2>Temperaturmålingen henger etter</h2>
+<p>Varmen må først gå gjennom veggen i lommerøret og inn i føleren før føleren merker en endring. Derfor viser en temperaturmåling alltid en forandring litt for sent. Hvor lang tid det tar, kalles <strong>responstiden</strong>. For en føler i et lommerør kan den være fra noen sekunder til mer enn et minutt.</p>
+<p>Det betyr at temperaturen i prosessen kan ha steget mer enn skjermen viser. Det er viktig å vite når du følger med på en reaktor der temperaturen kan stige fort.</p>
+
+<h2>Når temperaturmålingen viser feil</h2>
+<ul>
+  <li><strong>Belegg på lommerøret.</strong> Et lag med avleiringer isolerer lommerøret. Målingen blir tregere og viser ofte for lavt i en varm prosess.</li>
+  <li><strong>Føleren står ikke helt inne i lommerøret.</strong> Da er det luft mellom spissen av føleren og bunnen av lommerøret. Luft leder varme dårlig, så føleren reagerer tregt og viser ofte for lavt i en varm prosess.</li>
+  <li><strong>Feil plassering.</strong> Spissen står i en død krok eller for nær veggen, og ikke ute i strømmen.</li>
+  <li><strong>Brudd i føleren eller ledningen.</strong> Temperaturen på skjermen hopper plutselig til høyeste eller laveste verdi i måleområdet. En slik plutselig, urimelig endring tyder oftest på feil i måleren, ikke i prosessen.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: To målinger som ikke stemmer</div>
+  <p>På en tank sitter både et bimetalltermometer og en temperaturgiver. Termometeret ute ved tanken viser 72 °C, men på skjermen står det 64 °C. Prosessen har gått jevnt lenge, så det er ikke treghet som er forklaringen.</p>
+  <p><strong>Hva kan være feil?</strong> En av dem viser feil. Det kan være at føleren til giveren er dratt litt ut av lommerøret og viser for lite, eller at termometeret er skadet. Meld fra, så kan instrumentfolkene sjekke begge mot en måler som er kalibrert.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Bruk flere målinger</div>
+  <p>Sammenlign med det du ellers vet. Temperaturen ut av en varmeveksler skal ligge mellom temperaturene på det varme og det kalde mediet inn. Ligger den utenfor, er det trolig en målefeil.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Temperaturfølere og lommerør</div>
+  <ul>
+    <li>Føleren kan trekkes ut av lommerøret mens anlegget går. Lommerøret i seg selv må aldri skrus løs mens røret har trykk eller inneholder væske.</li>
+    <li>Lommerør, følere og rør kan være svært varme. Bruk hansker, og sjekk temperaturen på skjermen før du tar på utstyret.</li>
+    <li>Følg bedriftens prosedyre og arbeidstillatelse når du bytter en føler.</li>
+    <li>Husk at målingen henger etter. Stiger temperaturen raskt, kan den i virkeligheten være høyere enn skjermen viser.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva er motstanden i en Pt100 ved 0 °C?</p>
+  <ul>
+    <li>0 Ω</li>
+    <li data-riktig>100 Ω</li>
+    <li>385 Ω</li>
+  </ul>
+  <p class="forklaring">Tallet 100 i navnet betyr 100 Ω ved 0 °C. Motstanden øker med ca. 0,385 Ω for hver grad.</p>
+</div>
+
+<div class="quiz">
+  <p>Du skal måle temperaturen i en ovn på 900 °C. Hvilken føler passer best?</p>
+  <ul>
+    <li>Bimetalltermometer</li>
+    <li>Pt100</li>
+    <li data-riktig>Termoelement</li>
+  </ul>
+  <p class="forklaring">Termoelementer tåler over 1000 °C og brukes i ovner og kjeler. Pt100 brukes ved lavere temperaturer.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor står temperaturføleren i et lommerør?</p>
+  <ul>
+    <li>For at den skal reagere raskere</li>
+    <li data-riktig>For at den kan byttes uten å åpne prosessen, og for å beskytte den</li>
+    <li>For at den skal vise høyere temperatur</li>
+  </ul>
+  <p class="forklaring">Lommerøret beskytter føleren og gjør at den kan trekkes ut mens anlegget går. Ulempen er at målingen blir litt tregere.</p>
+</div>
+
+<div class="quiz">
+  <p>En Pt100 har motstanden 119,3 Ω. Omtrent hvilken temperatur er det?</p>
+  <ul>
+    <li>19 °C</li>
+    <li data-riktig>50 °C</li>
+    <li>119 °C</li>
+  </ul>
+  <p class="forklaring">Økningen er 119,3 − 100 = 19,3 Ω. Hver grad gir ca. 0,385 Ω, så temperaturen er ca. 19,3 / 0,385 ≈ 50 °C.</p>
+</div>
+
+<div class="quiz">
+  <p>Temperaturen på skjermen hopper plutselig fra 65 °C til høyeste verdi i måleområdet. Hva er mest sannsynlig?</p>
+  <ul>
+    <li>Reaksjonen har løpt løpsk på et sekund.</li>
+    <li data-riktig>Det er brudd i føleren eller ledningen.</li>
+    <li>Lommerøret har fått belegg.</li>
+  </ul>
+  <p class="forklaring">Temperaturen i en tank eller et rør endrer seg ikke så brått. Et plutselig hopp til ytterkanten av måleområdet tyder på feil i måleren. Belegg gir en langsom feil, ikke et hopp.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>temperaturføler</td><td>Den delen av en temperaturmåler som merker temperaturen, for eksempel en Pt100 eller et termoelement.</td><td>temperature sensor</td></tr>
+    <tr><td>temperaturgiver</td><td>Instrument som gjør signalet fra en temperaturføler om til en temperatur og sender den til styresystemet.</td><td>temperature transmitter</td></tr>
+    <tr><td>bimetalltermometer</td><td>Termometer med viser der to metaller som utvider seg ulikt, vrir en spiral når temperaturen endrer seg.</td><td>bimetal thermometer</td></tr>
+    <tr><td>Pt100</td><td>Temperaturføler av platina der motstanden er 100 Ω ved 0 °C og øker når det blir varmere.</td><td>Pt100 / RTD</td></tr>
+    <tr><td>termoelement</td><td>Temperaturføler av to ulike metaller som er sveiset sammen i spissen. Den lager en liten spenning når spissen har en annen temperatur enn den andre enden. Tåler svært høye temperaturer.</td><td>thermocouple</td></tr>
+    <tr><td>motstand</td><td>Hvor vanskelig det er for elektrisk strøm å gå gjennom et materiale. Måles i ohm (Ω).</td><td></td></tr>
+    <tr><td>lommerør</td><td>Lukket metallrør som sitter fast i prosessen. Temperaturføleren står inne i det, så den kan byttes uten å åpne prosessen.</td><td>thermowell</td></tr>
+    <tr><td>responstid</td><td>Tiden det tar før en måler viser nesten hele en endring i prosessen.</td><td>response time</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../04-masse-og-energibalanser/temperatur-og-varme.html">Temperatur og varme</a> i Fysiske prinsipper forklarer hva temperatur er.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

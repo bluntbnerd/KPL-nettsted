@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mengdemåling – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Mengdemåling</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Hvor mye råstoff går inn i reaktoren? Hvor mye produkt sendes til kunden? For å svare må du måle hvor mye som strømmer gjennom rørene. Her lærer du hvordan de vanligste mengdemålerne virker, hva de passer til, og hva som kan få dem til å vise feil.</p>
+
+<h2>Hvorfor måler vi mengde?</h2>
+<ul>
+  <li><strong>Riktig blanding.</strong> I en reaksjon må stoffene tilsettes i riktig forhold. Da må du vite hvor mye som strømmer inn av hvert stoff.</li>
+  <li><strong>Regnskap og salg.</strong> Bedriften må vite hvor mye råstoff den bruker, og hvor mye produkt den selger.</li>
+  <li><strong>Massebalanse.</strong> Det som går inn i et anlegg, må komme ut igjen. Mengdemålingene viser om noe forsvinner, for eksempel i en lekkasje.</li>
+  <li><strong>Utslipp.</strong> Mengden avløpsvann og avgass må måles for å vise at utslippskravene holdes.</li>
+</ul>
+<p>Mengde kalles også <strong>strømning</strong>. Den kan oppgis som <strong>volumstrøm</strong>, for eksempel i m³/h, eller som <strong>massestrøm</strong>, for eksempel i kg/h. Forskjellen og hvordan du regner mellom dem, lærer du på siden <a href="../04-masse-og-energibalanser/stromning.html">Strømning i rør</a> i Fysiske prinsipper.</p>
+
+<h2>Rotameteret: den lokale måleren</h2>
+<p>Et <strong>rotameter</strong> er et loddrett glassrør som er smalest nederst og bredest øverst. Inne i røret er det en liten flottør. Væsken eller gassen strømmer inn nedenfra og løfter flottøren. Jo større strømningen er, jo høyere opp går flottøren før den blir stående og sveve. Du leser av mengden på skalaen ved flottøren.</p>
+<p>Rotametre er billige og trenger ikke strøm. De brukes mest på små rør, for eksempel til gass, kjølevann eller dosering av kjemikalier. Røret må stå helt loddrett for at målingen skal bli riktig.</p>
+
+<h2>Differansetrykk over en måleblende</h2>
+<p>En <strong>måleblende</strong> er en tynn plate med et hull i midten som settes inn mellom to flenser i røret. En flens er en flat ring på enden av et rør, som skrus sammen med flensen på neste rør. Væsken må presses gjennom hullet. Da blir trykket lavere etter blenden enn før. Jo mer som strømmer, jo større blir trykkforskjellen. En differansetrykkgiver måler forskjellen og regner ut mengden.</p>
+
+<figure>
+  <img src="bilder/maleblende.svg" alt="Snitt gjennom et rør der væske strømmer fra venstre mot høyre. Midt i røret sitter en tynn plate med et hull i midten, en måleblende. Strømlinjene presses sammen gjennom hullet. Ett impulsrør går fra røret før blenden og ett fra røret etter blenden opp til en differansetrykkgiver. Før blenden er trykket høyere, merket pluss. Etter blenden er trykket lavere, merket minus. Giveren sender signal til kontrollrommet." width="620">
+  <figcaption>Figur: Måleblende med differansetrykkgiver. Væsken presses gjennom hullet i platen, og trykket faller. Giveren måler forskjellen mellom trykket før og etter blenden. Figuren er forenklet.</figcaption>
+</figure>
+
+<p>Trykkforskjellen øker med kvadratet av strømningen. Dobler du strømningen, blir trykkforskjellen <em>fire</em> ganger så stor. Halverer du strømningen, blir den bare en firedel. Det betyr at en måleblende er unøyaktig når det strømmer lite, fordi trykkforskjellen da blir svært liten.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Trykkforskjellen ved halv strømning</div>
+  <p><strong>Oppgave:</strong> Ved 20 m³/h er trykkforskjellen over en måleblende 0,40 bar. Hva blir trykkforskjellen når strømningen er 10 m³/h?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Strømningen blir halvert: \( \dfrac{10 \text{ m}^3\text{/h}}{20 \text{ m}^3\text{/h}} = \dfrac{1}{2} \)</li>
+    <li>Trykkforskjellen endrer seg med kvadratet av dette: \( \left(\dfrac{1}{2}\right)^2 = \dfrac{1}{4} \)</li>
+    <li>\( 0{,}40 \text{ bar} \cdot \dfrac{1}{4} = 0{,}10 \text{ bar} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> 0,10 bar. Halv strømning gir bare en firedel av trykkforskjellen.</p>
+</div>
+
+<p>Måleblender er enkle og billige, og de virker for væske, gass og damp. Ulempen er at de gir et varig trykktap i røret, og at de er unøyaktige ved liten strømning.</p>
+
+<h2>Magnetisk mengdemåler</h2>
+<p>En <strong>magnetisk mengdemåler</strong> er et rørstykke med en magnet rundt. Når en væske som leder strøm, strømmer gjennom magnetfeltet, lager den en liten elektrisk spenning. To små elektroder i røret måler spenningen. Jo fortere væsken strømmer, jo høyere blir spenningen.</p>
+<p>Måleren har ingen deler som stikker inn i røret, så den gir ikke trykktap og tetter seg ikke. Den passer godt for vann, avløpsvann, syrer og slam. Men væsken <em>må</em> lede strøm. Olje, og rent, avionisert vann (vann der nesten alle oppløste salter er fjernet), leder for dårlig og kan ikke måles slik.</p>
+
+<h2>Coriolismåler</h2>
+<p>I en <strong>coriolismåler</strong> strømmer væsken gjennom ett eller to rør som vibrerer. Når væsken strømmer, vrir rørene seg litt. Måleren måler hvor mye de vrir seg. Ut fra det finner den <strong>massestrømmen</strong> direkte, i kg/h. Den kan også måle tettheten til væsken.</p>
+<p>Coriolismålere er svært nøyaktige og brukes når det er viktig å vite nøyaktig hvor mange kilo som går forbi, for eksempel ved dosering og salg. De er dyre.</p>
+
+<h2>Ultralyd utenpå røret</h2>
+<p>Noen <strong>ultralydmålere</strong> festes utenpå røret. De sender lydbølger på skrå gjennom væsken, med og mot strømmen, og måler hvor fort lyden går. Lyden går litt fortere med strømmen enn mot den. Forskjellen viser hvor fort væsken strømmer. Fordelen er at du ikke trenger å åpne røret. Slike målere brukes ofte til kontrollmålinger. De er mindre nøyaktige enn faste målere, og luftbobler i væsken kan forstyrre lyden.</p>
+
+<table>
+  <thead><tr><th>Måler</th><th>Hva den måler</th><th>Passer til</th><th>Ulemper</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Rotameter</strong></td><td>volumstrøm</td><td>Små rør, gass og væske, lokal avlesning</td><td>Må stå loddrett, glasset kan knuse</td></tr>
+    <tr><td><strong>Måleblende</strong></td><td>volumstrøm</td><td>Væske, gass og damp</td><td>Trykktap, unøyaktig ved liten strømning</td></tr>
+    <tr><td><strong>Magnetisk</strong></td><td>volumstrøm</td><td>Vann, syrer, slam</td><td>Væsken må lede strøm</td></tr>
+    <tr><td><strong>Coriolis</strong></td><td>massestrøm</td><td>Nøyaktig dosering og salg</td><td>Dyr</td></tr>
+    <tr><td><strong>Ultralyd utenpå røret</strong></td><td>volumstrøm</td><td>Kontrollmåling uten å åpne røret</td><td>Mindre nøyaktig, forstyrres av bobler</td></tr>
+  </tbody>
+</table>
+
+<p>Mange mengdemålere kan også <strong>telle opp</strong> den totale mengden, for eksempel hvor mange kubikkmeter som er levert i løpet av et døgn. Det brukes ved salg og når en tank skal fylles med en bestemt mengde.</p>
+
+<h2>Slik monteres en mengdemåler</h2>
+<ul>
+  <li><strong>Rett rør før og etter.</strong> Bend, ventiler og pumper lager virvler i strømmen. De fleste mengdemålere trenger et stykke rett rør foran seg, så strømmen er rolig når den kommer fram. Hvor langt det må være, står i bruksanvisningen.</li>
+  <li><strong>Fullt rør.</strong> Røret må være fullt av væske der måleren sitter. Et rør som bare er halvfullt, gir feil måling.</li>
+  <li><strong>Riktig retning.</strong> Mange målere har en pil som viser hvilken vei væsken skal strømme.</li>
+</ul>
+
+<h2>Når mengdemåleren viser feil</h2>
+<ul>
+  <li><strong>Luft eller gass i væsken.</strong> Bobler tar plass i røret. En måler som måler volumstrøm, for eksempel en magnetisk måler, tror da at alt er væske og viser for mye. En coriolismåler blir ustabil, og en ultralydmåler kan miste signalet.</li>
+  <li><strong>Halvfullt rør.</strong> Måleren regner som om hele røret er fullt.</li>
+  <li><strong>For lite rett rør.</strong> Virvler i strømmen gir feil som ikke er lette å oppdage.</li>
+  <li><strong>Belegg.</strong> Belegg på elektrodene i en magnetisk måler eller i hullet på en måleblende gir feil måling.</li>
+  <li><strong>Slitt måleblende.</strong> Kanten på hullet blir rund over tid. Da blir trykkforskjellen mindre, og måleren viser for lite.</li>
+  <li><strong>Tette impulsrør.</strong> Ved måleblende gjelder de samme feilene som for trykkmålere, se <a href="trykkmaling.html">Trykkmåling</a>.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Kontroll av en mengdemåler med en tank</div>
+  <p>Du kan sjekke en mengdemåler ved å pumpe inn i en tank og måle hvor fort nivået stiger. På siden <a href="../04-masse-og-energibalanser/stromning.html">Strømning i rør</a> fant vi på denne måten at pumpe 2 i pumperommet gir ca. 18 m³/h inn i tank 2.</p>
+  <p>Hadde det sittet en mengdemåler på røret, skulle den også vist ca. 18 m³/h. Viser den 25 m³/h, er noe galt. Det kan for eksempel være luft i røret eller en feil i måleren.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Bruk massebalansen</div>
+  <p>Det som går inn, må komme ut, eller bli liggende i en tank. Viser mengdemåleren inn til en tank mer enn mengdemåleren ut, skal nivået i tanken stige. Gjør det ikke det, viser en av mengdemålerne eller nivåmåleren feil, eller så er det en lekkasje.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Arbeid med mengdemålere</div>
+  <ul>
+    <li>En mengdemåler sitter i selve prosessrøret. Røret må være tømt, trykkavlastet og sikret etter prosedyren før måleren tas ut.</li>
+    <li>Et rotameter av glass kan knuse. Brukes det med gass under trykk eller farlige kjemikalier, skal det ha en beskyttelse rundt glasset.</li>
+    <li>Ved dosering av kjemikalier kan en mengdemåler som viser for lite, gi overdosering. Følg med på om forbruket stemmer med det du venter.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvilken væske kan <em>ikke</em> måles med en magnetisk mengdemåler?</p>
+  <ul>
+    <li>Avløpsvann</li>
+    <li>Fortynnet syre</li>
+    <li data-riktig>Olje</li>
+  </ul>
+  <p class="forklaring">En magnetisk mengdemåler virker bare når væsken leder strøm. Olje leder for dårlig. Avløpsvann og syre leder godt.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilken mengdemåler måler massestrømmen direkte?</p>
+  <ul>
+    <li>Måleblende</li>
+    <li data-riktig>Coriolismåler</li>
+    <li>Rotameter</li>
+  </ul>
+  <p class="forklaring">Coriolismåleren måler hvor mye de vibrerende rørene vrir seg, og finner massestrømmen i kg/h direkte. De andre måler volumstrøm.</p>
+</div>
+
+<div class="quiz">
+  <p>Ved 30 m³/h er trykkforskjellen over en måleblende 0,36 bar. Hva er den ved 15 m³/h?</p>
+  <ul>
+    <li>0,18 bar</li>
+    <li data-riktig>0,09 bar</li>
+    <li>0,72 bar</li>
+  </ul>
+  <p class="forklaring">Halv strømning gir en firedel av trykkforskjellen: 0,36 bar · ¼ = 0,09 bar.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor trenger mange mengdemålere et stykke rett rør foran seg?</p>
+  <ul>
+    <li>For at røret skal tåle trykket</li>
+    <li data-riktig>For at strømmen skal være rolig og uten virvler når den kommer til måleren</li>
+    <li>For at måleren skal være lett å bytte</li>
+  </ul>
+  <p class="forklaring">Bend, ventiler og pumper lager virvler. Et rett rørstykke foran måleren gir strømmen tid til å roe seg, så målingen blir riktig.</p>
+</div>
+
+<div class="quiz">
+  <p>Det kommer luftbobler i røret der en magnetisk mengdemåler sitter. Hva skjer med målingen?</p>
+  <ul>
+    <li data-riktig>Den viser mer væske enn det som egentlig strømmer.</li>
+    <li>Den viser mindre væske enn det som egentlig strømmer.</li>
+    <li>Den påvirkes ikke.</li>
+  </ul>
+  <p class="forklaring">Boblene tar plass i røret, men den magnetiske måleren regner som om alt er væske. Den viser derfor for mye.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>mengdemåler</td><td>Instrument som måler hvor mye væske eller gass som strømmer gjennom et rør per tid.</td><td>flow meter</td></tr>
+    <tr><td>volumstrøm</td><td>Hvor mange liter eller kubikkmeter som strømmer forbi per sekund eller per time.</td><td>volumetric flow rate</td></tr>
+    <tr><td>massestrøm</td><td>Hvor mange kilo som strømmer forbi per tid, for eksempel i kg/s eller kg/h.</td><td>mass flow rate</td></tr>
+    <tr><td>rotameter</td><td>Loddrett glassrør med en flottør som løftes av strømningen. Mengden leses av på skalaen ved flottøren.</td><td>rotameter</td></tr>
+    <tr><td>måleblende</td><td>Tynn plate med et hull i midten som settes inn i røret. Trykkforskjellen over platen viser hvor mye som strømmer.</td><td>orifice plate</td></tr>
+    <tr><td>magnetisk mengdemåler</td><td>Mengdemåler som måler den lille spenningen som oppstår når en væske som leder strøm, strømmer gjennom et magnetfelt. Jo fortere væsken strømmer, jo høyere er spenningen.</td><td>magnetic flow meter</td></tr>
+    <tr><td>coriolismåler</td><td>Mengdemåler med vibrerende rør som måler massestrømmen direkte. Den kan også måle tettheten.</td><td>Coriolis flow meter</td></tr>
+    <tr><td>ultralydmåler</td><td>Måler som sender lydbølger og måler hvor lang tid ekkoet bruker. Brukes til nivå, og utenpå rør til mengde.</td><td>ultrasonic meter</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../04-masse-og-energibalanser/stromning.html">Strømning i rør</a> og <a href="../04-masse-og-energibalanser/massebalanse-i-anlegg.html">Massebalanse i et anlegg</a> i Fysiske prinsipper.</li>
+  <li><a href="trykkmaling.html">Trykkmåling</a> i dette emnet forklarer differansetrykk og impulsrør.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

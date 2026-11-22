@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" width="620" height="280" font-family="Segoe UI, Arial, sans-serif">
+  <title>Snitt gjennom et rør med en måleblende. En differansetrykkgiver måler trykket før og etter blenden.</title>
+  <rect x="0" y="0" width="620" height="280" rx="10" fill="#ffffff"/>
+
+  <!-- Rør med væske -->
+  <rect x="20" y="142" width="580" height="56" fill="#2a7a9a" opacity="0.15"/>
+  <line x1="20" y1="140" x2="600" y2="140" stroke="#586868" stroke-width="5"/>
+  <line x1="20" y1="200" x2="600" y2="200" stroke="#586868" stroke-width="5"/>
+  <g fill="#2a7a9a">
+    <polygon points="50,162 70,170 50,178"/>
+    <polygon points="540,162 560,170 540,178"/>
+  </g>
+  <text x="60" y="192" font-size="12" text-anchor="middle" fill="#2a7a9a">strømning</text>
+
+  <!-- Strømlinjer som presses gjennom hullet -->
+  <g stroke="#2a7a9a" stroke-width="1.3" fill="none" opacity="0.7">
+    <path d="M200,152 C260,152 280,164 300,164 C320,164 340,156 400,152"/>
+    <path d="M200,188 C260,188 280,176 300,176 C320,176 340,184 400,188"/>
+  </g>
+
+  <!-- Måleblende -->
+  <rect x="296" y="138" width="8" height="24" fill="#1c2828"/>
+  <rect x="296" y="178" width="8" height="24" fill="#1c2828"/>
+
+  <!-- Impulsrør til differansetrykkgiveren -->
+  <g stroke="#586868" stroke-width="4" fill="none">
+    <polyline points="240,138 240,66 262,66"/>
+    <polyline points="360,138 360,66 338,66"/>
+  </g>
+  <rect x="262" y="46" width="76" height="40" rx="6" fill="#f6f8f8" stroke="#1c2828" stroke-width="2.5"/>
+  <rect x="272" y="58" width="56" height="16" rx="2" fill="#1c2828"/>
+  <text x="300" y="70" font-size="10" text-anchor="middle" fill="#7fd0e0">18,0 m³/h</text>
+  <g font-size="15" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="226" y="110">+</text>
+    <text x="374" y="110">−</text>
+  </g>
+
+  <!-- Signal -->
+  <polyline points="300,46 300,22 590,22" fill="none" stroke="#b5530f" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <polygon points="582,16 594,22 582,28" fill="#b5530f"/>
+  <text x="470" y="40" font-size="12" text-anchor="middle" fill="#b5530f">signal til kontrollrommet</text>
+
+  <!-- Forklaringer -->
+  <g font-size="13" fill="#1c2828">
+    <text x="210" y="94" text-anchor="end">trykk før</text>
+    <text x="210" y="110" text-anchor="end">blenden</text>
+    <text x="390" y="94">lavere trykk</text>
+    <text x="390" y="110">etter blenden</text>  </g>
+  <line x1="300" y1="204" x2="300" y2="236" stroke="#8a9a9a" stroke-width="1.2"/>
+  <text x="300" y="254" font-size="13" text-anchor="middle" fill="#1c2828"><tspan font-weight="bold">måleblende</tspan>: en plate med et hull i midten</text>
+  <text x="130" y="60" font-size="13" text-anchor="middle" font-weight="bold" fill="#1c2828">differansetrykkgiver</text>
+  <line x1="196" y1="56" x2="260" y2="60" stroke="#8a9a9a" stroke-width="1.2"/>
+</svg>
