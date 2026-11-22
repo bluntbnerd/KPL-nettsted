@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="Segoe UI, Arial, sans-serif">
+  <title>Reguleringssløyfe for temperaturen i en tank: temperaturmåler, regulator og reguleringsventil på damp</title>
+  <rect x="0" y="0" width="640" height="340" rx="10" fill="#ffffff"/>
+
+  <!-- Råstoff inn -->
+  <line x1="150" y1="120" x2="230" y2="120" stroke="#8a9a9a" stroke-width="8"/>
+  <polygon points="208,113 220,120 208,127" fill="#ffffff"/>
+  <text x="150" y="104" font-size="12" fill="#586868">råstoff inn</text>
+
+  <!-- Tank med væske -->
+  <rect x="232" y="130" width="156" height="158" fill="#2a7a9a" opacity="0.18"/>
+  <line x1="232" y1="130" x2="388" y2="130" stroke="#2a7a9a" stroke-width="2"/>
+  <rect x="230" y="80" width="160" height="210" rx="12" fill="none" stroke="#1c2828" stroke-width="3"/>
+  <text x="310" y="70" font-size="13" text-anchor="middle" fill="#1c2828">tank</text>
+
+  <!-- Damp inn med reguleringsventil, varmespiral og kondensat ut -->
+  <line x1="20" y1="262" x2="232" y2="262" stroke="#8a9a9a" stroke-width="7"/>
+  <path d="M232,262 H350 A17,17 0 0 0 350,228 H232" fill="none" stroke="#8a9a9a" stroke-width="5"/>
+  <line x1="150" y1="228" x2="232" y2="228" stroke="#8a9a9a" stroke-width="5"/>
+  <text x="20" y="250" font-size="12" fill="#586868">damp inn</text>
+  <text x="150" y="218" font-size="12" fill="#586868">kondensat ut</text>
+  <text x="292" y="249" font-size="11" text-anchor="middle" fill="#586868">varmespiral</text>
+
+  <!-- Reguleringsventil -->
+  <polygon points="94,251 110,262 94,273" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <polygon points="126,251 110,262 126,273" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <line x1="110" y1="262" x2="110" y2="244" stroke="#1c2828" stroke-width="2"/>
+  <path d="M96,244 A14,12 0 0 1 124,244 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <text x="110" y="292" font-size="12" text-anchor="middle" fill="#1c2828">reguleringsventil</text>
+
+  <!-- Produkt ut -->
+  <line x1="330" y1="290" x2="330" y2="318" stroke="#8a9a9a" stroke-width="8"/>
+  <line x1="326" y1="318" x2="480" y2="318" stroke="#8a9a9a" stroke-width="8"/>
+  <text x="488" y="322" font-size="12" fill="#586868">produkt ut</text>
+
+  <!-- Temperaturmåler -->
+  <line x1="390" y1="170" x2="408" y2="170" stroke="#586868" stroke-width="2.5"/>
+  <circle cx="422" cy="170" r="14" fill="#ffffff" stroke="#b5530f" stroke-width="2.5"/>
+  <text x="422" y="175" font-size="11" font-weight="bold" text-anchor="middle" fill="#b5530f">TT</text>
+  <text x="440" y="200" font-size="12" fill="#1c2828">temperaturmåler</text>
+
+  <!-- Signallinjer (stiplet) -->
+  <g stroke="#b5530f" stroke-width="1.5" stroke-dasharray="5 4" fill="none">
+    <polyline points="422,156 422,100 440,100"/>
+    <polyline points="470,40 470,22 110,22 110,232"/>
+  </g>
+  <polygon points="434,95 442,100 434,105" fill="#b5530f"/>
+  <polygon points="105,226 110,234 115,226" fill="#b5530f"/>
+
+  <!-- Regulator -->
+  <rect x="440" y="40" width="180" height="100" rx="8" fill="#1c2828"/>
+  <text x="530" y="62" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">Regulator TIC-101</text>
+  <g font-size="13" fill="#e8f4f4">
+    <text x="452" y="86">Settpunkt</text>
+    <text x="452" y="106">Måleverdi</text>
+    <text x="452" y="126">Ut til ventil</text>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#7fd0e0" text-anchor="end">
+    <text x="608" y="86">80 °C</text>
+    <text x="608" y="106">76 °C</text>
+    <text x="608" y="126">65 %</text>
+  </g>
+
+  <!-- Stegene i sløyfa -->
+  <g font-size="12" font-weight="bold" fill="#ffffff">
+    <circle cx="452" cy="232" r="10" fill="#b5530f"/><text x="452" y="236" text-anchor="middle">1</text>
+    <circle cx="452" cy="160" r="10" fill="#b5530f"/><text x="452" y="164" text-anchor="middle">2</text>
+    <circle cx="140" cy="176" r="10" fill="#b5530f"/><text x="140" y="180" text-anchor="middle">3</text>
+    <circle cx="256" cy="176" r="10" fill="#b5530f"/><text x="256" y="180" text-anchor="middle">4</text>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="468" y="236">måler temperaturen</text>
+    <text x="468" y="164">sammenligner og regner ut</text>
+    <text x="154" y="174">justerer</text>
+    <text x="154" y="188">dampen</text>
+    <text x="272" y="174">temperaturen</text>
+    <text x="272" y="188">endrer seg</text>
+  </g>
+</svg>

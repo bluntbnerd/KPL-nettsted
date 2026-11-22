@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reguleringssløyfen – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Reguleringssløyfen</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT5, PT8</div>
+
+<p class="ingress">I et prosessanlegg skal temperaturer, trykk, nivåer og mengder holdes jevne døgnet rundt, selv når noe i prosessen endrer seg. Det klarer ingen operatør å gjøre for hånd overalt. Det gjør reguleringssløyfer. Her lærer du hvilke deler en reguleringssløyfe består av, og hvordan de virker sammen.</p>
+
+<h2>Regulering for hånd</h2>
+<p>Tenk deg en tank der et råstoff skal varmes til 80 °C. Varmen kommer fra damp som strømmer gjennom en spiral i tanken. Jo mer damp, jo varmere blir væsken.</p>
+<p>Uten automatikk måtte en operatør ha stått ved tanken og gjort dette, om og om igjen:</p>
+<ol>
+  <li>Lese av termometeret.</li>
+  <li>Sammenligne med 80 °C: Er det for kaldt eller for varmt, og hvor mye?</li>
+  <li>Åpne dampventilen litt hvis det er for kaldt, eller strupe den litt hvis det er for varmt.</li>
+  <li>Vente litt og se hva som skjer med temperaturen. Så begynne på nytt.</li>
+</ol>
+<p>Dette er <strong>regulering</strong>: å holde en størrelse i prosessen på en ønsket verdi ved å måle, sammenligne og justere hele tiden. Fordi arbeidet går i ring og aldri stopper, kaller vi det en <strong>sløyfe</strong>.</p>
+
+<h2>Automatisk regulering</h2>
+<p>I anlegget gjøres det samme automatisk. Hvert av stegene over har fått sin egen del:</p>
+
+<figure>
+  <img src="bilder/reguleringssloyfe-tank.svg" alt="En tank med væske. Råstoff kommer inn på siden, og produkt går ut i bunnen. Damp går gjennom en reguleringsventil og inn i en varmespiral i tanken. En temperaturmåler merket TT sitter på siden av tanken og sender signal til en regulator merket TIC-101. Regulatoren viser settpunkt 80 grader, måleverdi 76 grader og ut til ventil 65 prosent. Fra regulatoren går et signal til reguleringsventilen. Fire nummererte steg viser at sløyfa går i ring: 1 måler temperaturen, 2 sammenligner og regner ut, 3 justerer dampen, 4 temperaturen endrer seg." width="640">
+  <figcaption>Figur: En reguleringssløyfe for temperaturen i en tank. Temperaturen er 76 °C, men skal være 80 °C. Regulatoren har derfor åpnet dampventilen til 65 %. De stiplede linjene er signaler. Tallene er bare et eksempel.</figcaption>
+</figure>
+
+<ol>
+  <li><strong>Måleren</strong> måler temperaturen i tanken hele tiden og sender måleverdien som et signal.</li>
+  <li><strong>Regulatoren</strong> sammenligner måleverdien med den verdien temperaturen skal ha, og regner ut hvor mye ventilen skal være åpen.</li>
+  <li><strong>Reguleringsventilen</strong> åpner eller struper og slipper inn mer eller mindre damp.</li>
+  <li><strong>Prosessen</strong> svarer: Temperaturen i tanken endrer seg. Måleren merker det, og sløyfa begynner på nytt.</li>
+</ol>
+<p>Regulatoren gjør dette hele tiden, ofte flere ganger i sekundet, og den blir aldri trett. Den sitter som et program i styresystemet. Hvordan styresystemet er bygd opp, lærer du i emnet Styresystemer.</p>
+
+<h2>De fire delene i sløyfa</h2>
+<p>Alle reguleringssløyfer har de samme fire delene, uansett hva som reguleres:</p>
+<table>
+  <thead><tr><th>Del</th><th>Hva den gjør</th><th>I eksemplet med tanken</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Prosessen</strong></td><td>Det vi vil holde stabilt</td><td>Væsken i tanken</td></tr>
+    <tr><td><strong>Måleren</strong></td><td>Måler størrelsen og sender måleverdien</td><td>Temperaturmåleren (TT)</td></tr>
+    <tr><td><strong>Regulatoren</strong></td><td>Sammenligner og bestemmer hva som skal gjøres</td><td>Regulatoren i styresystemet (TIC-101)</td></tr>
+    <tr><td><strong>Pådragsorganet</strong></td><td>Påvirker prosessen etter signal fra regulatoren</td><td>Reguleringsventilen på dampen</td></tr>
+  </tbody>
+</table>
+<p><strong>Pådragsorgan</strong> er fellesnavnet på det som gjør endringen i prosessen. Oftest er det en reguleringsventil. Det kan også være en pumpe eller vifte der farten styres, eller et elektrisk varmeelement. Signalet regulatoren sender til pådragsorganet, kalles <strong>pådraget</strong>. Det oppgis ofte i prosent, der 0 % er helt stengt og 100 % er helt åpen.</p>
+<p>Hvordan målerne virker, lærte du i emnet <a href="hvorfor-vi-maler.html">Måling i anlegget</a>.</p>
+
+<h2>Settpunkt, måleverdi og avvik</h2>
+<p>Regulatoren arbeider med tre tall:</p>
+<ul>
+  <li><strong>Settpunktet</strong> er verdien prosessen skal holde, her 80 °C. Det er operatøren eller programmet som bestemmer settpunktet.</li>
+  <li><strong>Måleverdien</strong> er det måleren måler akkurat nå, her 76 °C.</li>
+  <li><strong>Avviket</strong> er forskjellen mellom settpunktet og måleverdien, her 4 °C.</li>
+</ul>
+<p>Regulatoren prøver hele tiden å gjøre avviket så lite som mulig. Disse tre begrepene lærer du mer om på neste side, <em>Settpunkt, måleverdi og avvik</em>.</p>
+
+<h2>Tilbakekobling: regulatoren ser resultatet</h2>
+<p>Det viktigste med en reguleringssløyfe er at regulatoren hele tiden får se resultatet av det den selv gjorde. Åpner den ventilen for mye, merker den at temperaturen blir for høy, og struper igjen. Dette kalles <strong>tilbakekobling</strong>, og sløyfa kalles en <strong>lukket sløyfe</strong>.</p>
+<p>Sammenlign med en kaffetrakter som bare varmer i ti minutter og så skrur seg av. Den sjekker aldri hvor varm kaffen faktisk ble. Det er <em>styring</em>, ikke regulering. Forskjellen på styring og regulering lærer du mer om i emnet Styring.</p>
+
+<h2>Forstyrrelser</h2>
+<p>Hvis ingenting endret seg i prosessen, kunne vi stilt dampventilen én gang og latt den stå. Men i virkeligheten skjer det endringer hele tiden. Slike endringer kalles <strong>forstyrrelser</strong>. For tanken i figuren kan det være:</p>
+<ul>
+  <li>Råstoffet som kommer inn, er kaldere om vinteren enn om sommeren.</li>
+  <li>Det tappes mer produkt ut, så det strømmer mer kaldt råstoff inn.</li>
+  <li>Trykket på dampen synker fordi andre deler av fabrikken bruker mye damp samtidig.</li>
+</ul>
+<p>Regulatoren vet ikke <em>hvorfor</em> temperaturen endrer seg. Den merker bare at måleverdien flytter seg bort fra settpunktet, og justerer ventilen til avviket er borte igjen. Det er hele poenget med regulering: å holde prosessen stabil selv om noe forstyrrer den.</p>
+
+<h2>Sløyfer overalt i anlegget</h2>
+<p>Et prosessanlegg kan ha hundrevis av reguleringssløyfer. Her er noen vanlige:</p>
+<table>
+  <thead><tr><th>Hva som reguleres</th><th>Måler</th><th>Pådragsorgan (eksempel)</th></tr></thead>
+  <tbody>
+    <tr><td>Temperatur i en reaktor</td><td>Temperaturmåler</td><td>Ventil på damp eller kjølevann</td></tr>
+    <tr><td>Nivå i en tank</td><td>Nivåmåler</td><td>Ventil på røret ut av tanken</td></tr>
+    <tr><td>Mengde råstoff inn</td><td>Mengdemåler</td><td>Ventil på røret, eller farten på pumpa</td></tr>
+    <tr><td>Trykk i en beholder</td><td>Trykkmåler</td><td>Ventil som slipper ut gass</td></tr>
+  </tbody>
+</table>
+<p>På skjermer og tegninger får hver sløyfe et navn med bokstaver og tall, en <strong>tag</strong>. Første bokstav forteller hva som måles, og de neste hva sløyfa gjør. TIC-101 betyr temperatur (T), vises på skjermen (I) og reguleres (C). En nivåregulator kan hete LIC-201, og en mengderegulator FIC-301. Mer om dette lærer du i emnet Signaler og instrumentering.</p>
+
+<h2>Auto og manuell</h2>
+<p>En regulator kan stå i to driftsmåter:</p>
+<ul>
+  <li><strong>Auto:</strong> Regulatoren bestemmer selv hvor mye ventilen skal være åpen. Sløyfa er lukket, slik som beskrevet over.</li>
+  <li><strong>Manuell:</strong> Operatøren bestemmer hvor mye ventilen skal være åpen, for eksempel 40 %. Regulatoren bryr seg ikke om måleverdien. Sløyfa er brutt.</li>
+</ul>
+<p>Manuell brukes for eksempel ved oppstart, når en måler skal byttes, eller når noe ikke virker som det skal. Så lenge regulatoren står i manuell, er det ingen som retter opp forstyrrelser. Det må operatøren gjøre selv.</p>
+
+<h2>Når sløyfa ikke virker</h2>
+<p>Regulatoren stoler blindt på måleren og på at ventilen gjør det den får beskjed om. Er det feil et sted i sløyfa, blir reguleringen feil:</p>
+<ul>
+  <li><strong>Feil måling.</strong> Viser måleren for lav temperatur, åpner regulatoren mer damp. Tanken blir for varm, mens skjermen viser at alt er i orden.</li>
+  <li><strong>Ventilen henger.</strong> Regulatoren sender et nytt pådrag, men ventilen står fast. Avviket blir ikke borte, og pådraget går ofte helt til 0 % eller 100 %.</li>
+  <li><strong>Ingen kraft til å rette opp.</strong> Ventilen står helt åpen, men det er for lite damp, for eksempel fordi damptrykket er lavt. Da klarer ikke sløyfa å nå settpunktet.</li>
+  <li><strong>Regulatoren står i manuell</strong> og er glemt der. Da rettes ingenting opp.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Temperaturen vil ikke opp</div>
+  <p>Settpunktet for tanken er 80 °C, men måleverdien har ligget på 71 °C i en halv time. Regulatoren står i auto, og pådraget til dampventilen viser 100 %.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Regulatoren gjør det den skal. Det er for kaldt, og den ber om full damp.</li>
+    <li>Likevel stiger ikke temperaturen. Da er feilen et annet sted i sløyfa.</li>
+    <li>Sjekk om ventilen faktisk er åpen. Mange ventiler har en viser som viser hvor åpen den er. Står den på stengt, henger ventilen, eller den får ikke signal eller trykkluft. De fleste reguleringsventiler drives av trykkluft, som kalles instrumentluft.</li>
+    <li>Er ventilen åpen, sjekk damptrykket. Det kan være for lite damp å få.</li>
+    <li>Sammenlign med en lokal temperaturmåler hvis tanken har det. Kanskje er det måleren som viser feil.</li>
+  </ol>
+  <p><strong>Det du lærer:</strong> Når en sløyfe ikke klarer å holde settpunktet, sjekker du alle delene: måleren, regulatoren (auto eller manuell) og pådragsorganet.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Reguleringsventiler kan bevege seg av seg selv</div>
+  <ul>
+    <li>En reguleringsventil i auto kan åpne eller stenge når som helst, uten varsel. Hold hender og verktøy unna ventiler som er i drift.</li>
+    <li>Skal du arbeide på en ventil, en måler eller et rør i en sløyfe, må utstyret sikres etter bedriftens prosedyre. Å sette regulatoren i manuell er ikke nok sikring.</li>
+    <li>En reguleringssløyfe er ikke et sikkerhetssystem. Viktige grenser, som for høyt trykk eller nivå, har egne vern og forriglinger som virker selv om reguleringen svikter.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvilke fire deler har alle reguleringssløyfer?</p>
+  <ul>
+    <li>Pumpe, tank, rør og ventil</li>
+    <li data-riktig>Prosess, måler, regulator og pådragsorgan</li>
+    <li>Settpunkt, alarm, skjerm og operatør</li>
+  </ul>
+  <p class="forklaring">Måleren måler prosessen, regulatoren sammenligner med settpunktet og bestemmer pådraget, og pådragsorganet (ofte en reguleringsventil) endrer prosessen.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva gjør regulatoren?</p>
+  <ul>
+    <li>Måler temperaturen i prosessen</li>
+    <li data-riktig>Sammenligner måleverdien med settpunktet og bestemmer hvor mye ventilen skal være åpen</li>
+    <li>Varsler operatøren når noe er feil</li>
+  </ul>
+  <p class="forklaring">Regulatoren er «hjernen» i sløyfa. Den får måleverdien fra måleren, sammenligner med settpunktet og sender et pådrag til pådragsorganet.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor kalles en reguleringssløyfe for lukket?</p>
+  <ul>
+    <li>Fordi den sitter inne i et lukket skap</li>
+    <li>Fordi ventilen er stengt når prosessen er stabil</li>
+    <li data-riktig>Fordi regulatoren hele tiden får se resultatet av det den selv gjorde</li>
+  </ul>
+  <p class="forklaring">Måleren viser hvordan prosessen svarte på endringen regulatoren gjorde. Det kalles tilbakekobling. Signalet går i ring: måle, sammenligne, justere, måle igjen.</p>
+</div>
+
+<div class="quiz">
+  <p>Råstoffet inn til tanken blir kaldere. Hva gjør temperaturregulatoren i auto?</p>
+  <ul>
+    <li>Ingenting, fordi den ikke måler råstoffet</li>
+    <li data-riktig>Den merker at temperaturen i tanken synker, og åpner dampventilen mer</li>
+    <li>Den senker settpunktet</li>
+  </ul>
+  <p class="forklaring">Kaldere råstoff er en forstyrrelse. Regulatoren vet ikke hvorfor temperaturen synker, men den merker avviket og åpner mer damp til temperaturen er tilbake på settpunktet. Settpunktet endres ikke.</p>
+</div>
+
+<div class="quiz">
+  <p>En regulator står i manuell. Hva betyr det?</p>
+  <ul>
+    <li>Regulatoren styrer ventilen etter måleverdien som vanlig.</li>
+    <li data-riktig>Operatøren bestemmer hvor mye ventilen skal være åpen, og ingen forstyrrelser blir rettet opp automatisk.</li>
+    <li>Ventilen er stengt og kan ikke åpnes.</li>
+  </ul>
+  <p class="forklaring">I manuell er sløyfa brutt. Ventilen står der operatøren satte den, uansett hva måleverdien viser.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>regulering</td><td>Å holde en størrelse i prosessen, for eksempel en temperatur, på en ønsket verdi ved å måle, sammenligne og justere hele tiden.</td><td>control</td></tr>
+    <tr><td>reguleringssløyfe</td><td>Prosessen, måleren, regulatoren og pådragsorganet koblet sammen slik at én størrelse i prosessen holdes på settpunktet. Signalet går i ring.</td><td>control loop</td></tr>
+    <tr><td>regulator</td><td>Enhet som sammenligner måleverdien med settpunktet og justerer for eksempel en ventil for å rette opp avviket.</td><td>controller</td></tr>
+    <tr><td>pådragsorgan</td><td>Utstyret som endrer prosessen etter signal fra regulatoren, oftest en reguleringsventil, men også for eksempel en pumpe med styrt fart.</td><td>final control element</td></tr>
+    <tr><td>reguleringsventil</td><td>Ventil som åpner og lukker gradvis etter signal fra regulatoren, og slik styrer strømmen.</td><td>control valve</td></tr>
+    <tr><td>pådrag</td><td>Signalet fra regulatoren til pådragsorganet, ofte oppgitt i prosent fra 0 % (stengt) til 100 % (helt åpen).</td><td>output (OP)</td></tr>
+    <tr><td>settpunkt</td><td>Verdien prosessen skal holde, for eksempel 80 °C eller 2,0 bar.</td><td>setpoint (SP)</td></tr>
+    <tr><td>måleverdi</td><td>Verdien instrumentet faktisk måler i prosessen akkurat nå.</td><td>process value (PV)</td></tr>
+    <tr><td>avvik</td><td>Forskjellen mellom settpunktet og måleverdien.</td><td>error, deviation</td></tr>
+    <tr><td>tilbakekobling</td><td>At måleverdien hele tiden sendes tilbake til regulatoren, slik at den ser resultatet av det den gjorde. Gir en lukket sløyfe.</td><td>feedback</td></tr>
+    <tr><td>forstyrrelse</td><td>En endring i prosessen som flytter måleverdien bort fra settpunktet, for eksempel kaldere råstoff.</td><td>disturbance</td></tr>
+    <tr><td>auto og manuell</td><td>Driftsmåtene til en regulator. I auto bestemmer regulatoren pådraget selv. I manuell bestemmer operatøren pådraget.</td><td>auto / manual</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="hvorfor-vi-maler.html">Hvorfor vi måler</a> i emnet Måling i anlegget forklarer måleverdi, målefeil og kalibrering.</li>
+  <li><a href="scada-og-dcs.html">SCADA og DCS</a> i emnet Styresystemer viser hvor regulatorene sitter, og hvordan operatøren endrer settpunkter og setter regulatorer i auto eller manuell.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

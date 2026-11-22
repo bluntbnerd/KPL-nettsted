@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settpunkt, måleverdi og avvik – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Settpunkt, måleverdi og avvik</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT5, PT8</div>
+
+<p class="ingress">Settpunkt, måleverdi og avvik er de tre tallene alle regulatorer arbeider med. Som operatør leser du dem på skjermen hver dag. Her lærer du hva tallene betyr, hvordan du regner ut avviket, og hvordan regulatoren vet hvilken vei den skal justere.</p>
+
+<h2>Tre tall i hver regulator</h2>
+<p>På siden <a href="reguleringssloyfen.html">Reguleringssløyfen</a> så du en regulator som skulle holde temperaturen i en tank på 80 °C. Åpner du regulatoren på skjermen i kontrollrommet, ser du minst tre tall:</p>
+<table>
+  <thead><tr><th>Tall</th><th>Forkortelse</th><th>Hva det er</th><th>Eksempel</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Settpunkt</strong></td><td>SP</td><td>Verdien prosessen skal holde</td><td>80 °C</td></tr>
+    <tr><td><strong>Måleverdi</strong></td><td>PV</td><td>Det måleren måler akkurat nå</td><td>76 °C</td></tr>
+    <tr><td><strong>Pådrag</strong></td><td>OP</td><td>Signalet regulatoren sender til ventilen, i prosent</td><td>65 %</td></tr>
+  </tbody>
+</table>
+<p>Forkortelsene kommer fra engelsk og står på skjermen i de fleste styresystemer: SP for <em>setpoint</em>, PV for <em>process value</em> og OP for <em>output</em>. Det fjerde tallet, avviket, står ikke alltid på skjermen. Det regner du lett ut selv.</p>
+
+<h2>Settpunktet</h2>
+<p>Settpunktet er målet: den verdien prosessen skal holde. Det kan være en temperatur, et trykk, et nivå eller en mengde, og det har alltid samme enhet som måleverdien.</p>
+<p>Settpunktet kan bestemmes på flere måter:</p>
+<ul>
+  <li><strong>Operatøren</strong> skriver det inn på skjermen, for eksempel når produksjonen skal økes.</li>
+  <li><strong>En oppskrift</strong> i styresystemet setter det automatisk. Ulike produkter kan trenge ulike temperaturer.</li>
+  <li><strong>Prosessen er bygd for det.</strong> Mange settpunkter står fast i lang tid og endres nesten aldri.</li>
+</ul>
+<p>Hvilket settpunkt som er riktig, står i driftsinstruksen for anlegget. Ofte har styresystemet også grenser, slik at settpunktet ikke kan settes høyere eller lavere enn det prosessen tåler.</p>
+
+<h2>Måleverdien</h2>
+<p>Måleverdien er det regulatoren tror er sannheten. Den kommer fra måleren i sløyfa, og regulatoren har ingen annen måte å vite hva som skjer i prosessen på.</p>
+<p>Derfor gjelder alt du lærte i emnet Måling i anlegget også her. En måler som viser feil, gir feil regulering. Viser måleren 2 °C for lavt, holder regulatoren tanken 2 °C for varm, mens skjermen viser at alt er riktig. Se <a href="hvorfor-vi-maler.html">Hvorfor vi måler</a>.</p>
+
+<h2>Avviket</h2>
+<p>Avviket er forskjellen mellom settpunktet og måleverdien:</p>
+<p>\[ \text{avvik} = \text{settpunkt} - \text{måleverdi} \]</p>
+<p>Avviket kan være positivt eller negativt:</p>
+<ul>
+  <li><strong>Positivt avvik:</strong> Måleverdien er <em>under</em> settpunktet. Settpunkt 80 °C og måleverdi 76 °C gir avvik \( 80 - 76 = 4 \) °C.</li>
+  <li><strong>Negativt avvik:</strong> Måleverdien er <em>over</em> settpunktet. Settpunkt 80 °C og måleverdi 83 °C gir avvik \( 80 - 83 = -3 \) °C.</li>
+  <li><strong>Avvik null:</strong> Måleverdien er lik settpunktet. Det er det regulatoren prøver å oppnå.</li>
+</ul>
+<p>Noen styresystemer regner avviket motsatt vei, altså måleverdi minus settpunkt. Da blir fortegnet snudd. Det viktigste er ikke fortegnet, men at du forstår om måleverdien ligger over eller under settpunktet, og hvor langt unna den er.</p>
+
+<h3>Avvik i prosent</h3>
+<p>Regulatoren regner ofte med avviket i prosent av måleområdet til måleren, ikke i °C eller bar. Da kan den samme regulatoren brukes til temperatur, trykk og nivå på samme måte. Dette får du bruk for på neste side, om P-regulering.</p>
+<p>\[ \text{avvik i prosent} = \frac{\text{avvik}}{\text{øvre grense} - \text{nedre grense}} \cdot 100\ \% \]</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Regn ut avviket</div>
+  <p><strong>Oppgave:</strong> Temperaturmåleren på tanken har måleområde 0–150 °C. Settpunktet er 80 °C, og måleverdien er 77 °C. Finn avviket i °C og i prosent av måleområdet.</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Hva vet vi? Settpunkt 80 °C, måleverdi 77 °C, måleområde fra 0 °C til 150 °C.</li>
+    <li>Avviket i °C: \( 80 - 77 = 3 \) °C. Det er positivt, så måleverdien er under settpunktet.</li>
+    <li>Måleområdet er \( 150 - 0 = 150 \) °C.</li>
+    <li>Avviket i prosent: \( \frac{3}{150} \cdot 100\ \% = 2{,}0\ \% \).</li>
+  </ol>
+  <p><strong>Svar:</strong> Avviket er 3 °C, eller 2,0 % av måleområdet. Tanken er litt for kald.</p>
+</div>
+
+<h2>Slik ser det ut i en trend</h2>
+<p>På skjermen kan du se settpunktet, måleverdien og pådraget som kurver over tid. En slik kurve kalles en <strong>trend</strong>. I trenden ser du avviket som avstanden mellom settpunktet og måleverdien.</p>
+
+<figure>
+  <img src="bilder/trend-settpunkt-avvik.svg" alt="To kurvefelt over 40 minutter. Øverst temperatur: Settpunktet er en stiplet linje på 80 grader, som etter 10 minutter hopper til 85 grader. Måleverdien ligger på 80 grader, begynner å stige etter settpunktendringen, går litt over 85 grader rundt 20 minutter og legger seg på 85. Etter 27 minutter kommer en forstyrrelse, kaldere råstoff, og måleverdien synker til 82,5 grader før den kommer tilbake til 85. Piler viser avvik 4,5 grader like etter settpunktendringen og avvik 2,5 grader etter forstyrrelsen. Nederst pådrag til dampventilen: 50 prosent, hopper til nesten 80 prosent når settpunktet endres, synker så til rundt 58 prosent, og øker til 70 prosent etter forstyrrelsen før det synker til 60 prosent." width="640">
+  <figcaption>Figur: Trend for temperaturregulatoren på tanken. Først endres settpunktet fra 80 til 85 °C. Senere kommer det kaldere råstoff inn. Begge gangene oppstår det et avvik, og regulatoren øker pådraget til dampventilen. Regulatoren i figuren er en PI-regulator, som fjerner avviket helt. Hva det betyr, lærer du senere i emnet. Tallene er bare et eksempel.</figcaption>
+</figure>
+
+<p>Trenden viser to vanlige grunner til at det oppstår et avvik:</p>
+<ul>
+  <li><strong>Settpunktet endres</strong> (etter 10 minutter). Måleverdien er den samme som før, men målet er flyttet. Avviket blir stort med en gang, og regulatoren åpner mye mer damp. Temperaturen trenger tid på å stige, for det tar tid å varme opp væsken i tanken.</li>
+  <li><strong>En forstyrrelse</strong> (etter 27 minutter). Settpunktet er det samme, men kaldere råstoff gjør at måleverdien synker. Regulatoren merker avviket og åpner mer damp til temperaturen er tilbake.</li>
+</ul>
+<p>Legg også merke til at måleverdien går litt <em>over</em> 85 °C rundt 20 minutter. Da er avviket et lite stykke negativt, og regulatoren struper dampen litt. Små svingninger rundt settpunktet er vanlige. Hvor fort og hvor rolig måleverdien kommer tilbake til settpunktet, avhenger av hvordan regulatoren er innstilt. Det lærer du om på sidene om P-regulering og PI- og PID-regulering.</p>
+
+<h2>Hvilken vei skal regulatoren justere?</h2>
+<p>Regulatoren må vite om den skal øke eller minske pådraget når måleverdien stiger. Det kommer an på hva ventilen gjør i prosessen:</p>
+<table>
+  <thead><tr><th>Sløyfe</th><th>Måleverdien stiger over settpunktet. Da må regulatoren …</th></tr></thead>
+  <tbody>
+    <tr><td>Temperatur, ventil på <strong>damp</strong> (oppvarming)</td><td><strong>minske</strong> pådraget, altså gi mindre damp</td></tr>
+    <tr><td>Temperatur, ventil på <strong>kjølevann</strong> (kjøling)</td><td><strong>øke</strong> pådraget, altså gi mer kjølevann</td></tr>
+    <tr><td>Nivå, ventil på røret <strong>ut</strong> av tanken</td><td><strong>øke</strong> pådraget, så det renner mer ut</td></tr>
+    <tr><td>Nivå, ventil på røret <strong>inn</strong> til tanken</td><td><strong>minske</strong> pådraget, så det renner mindre inn</td></tr>
+  </tbody>
+</table>
+<p>Dette kalles regulatorens <strong>virkningsretning</strong>. Den stilles inn én gang når sløyfa settes i drift. Er den stilt feil, gjør regulatoren det motsatte av det den skal: Blir tanken for varm, åpner den <em>mer</em> damp. Avviket blir større og større, og ventilen går helt til 0 % eller 100 %.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Les av regulatoren</div>
+  <p>En nivåregulator for en tank har ventilen på røret ut. På skjermen står det: SP 60 %, PV 68 %, OP 85 %.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Avviket er \( 60 - 68 = -8 \) %. Måleverdien er over settpunktet, så tanken er for full.</li>
+    <li>Ventilen sitter på røret ut. For å få nivået ned må det renne mer ut. Regulatoren må altså åpne ventilen.</li>
+    <li>Pådraget er 85 %, så ventilen er godt åpen. Regulatoren gjør det den skal.</li>
+    <li>Følg med i trenden. Synker nivået mot 60 %, er alt i orden. Stiger det fortsatt selv om ventilen er nesten helt åpen, må du finne ut hvorfor, for eksempel om det kommer mer inn enn vanlig, eller om ventilen ikke åpner.</li>
+  </ol>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Endre settpunkt</div>
+  <ul>
+    <li>Endre bare settpunkter du har lov til å endre, og hold deg innenfor grensene i driftsinstruksen.</li>
+    <li>En stor endring av settpunktet gir et stort avvik med en gang, og regulatoren kan gjøre et kraftig utslag på ventilen. Endre heller i små steg, og vent til prosessen har roet seg mellom hvert steg.</li>
+    <li>Følg med på trenden etter at du har endret et settpunkt. Skriv endringen i skiftloggen.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva er settpunktet?</p>
+  <ul>
+    <li>Verdien måleren måler akkurat nå</li>
+    <li data-riktig>Verdien prosessen skal holde</li>
+    <li>Hvor mye ventilen er åpen</li>
+  </ul>
+  <p class="forklaring">Settpunktet (SP) er målet. Måleverdien (PV) er det som måles nå, og pådraget (OP) er signalet til ventilen.</p>
+</div>
+
+<div class="quiz">
+  <p>Settpunktet er 2,0 bar, og måleverdien er 2,3 bar. Hva er avviket?</p>
+  <ul>
+    <li>2,3 bar</li>
+    <li>0,3 bar</li>
+    <li data-riktig>−0,3 bar</li>
+  </ul>
+  <p class="forklaring">Avvik = settpunkt − måleverdi = 2,0 − 2,3 = −0,3 bar. Det negative fortegnet betyr at trykket er over settpunktet.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkmåler har måleområde 0–10 bar. Avviket er 0,5 bar. Hvor stort er avviket i prosent av måleområdet?</p>
+  <ul>
+    <li>0,5 %</li>
+    <li data-riktig>5 %</li>
+    <li>50 %</li>
+  </ul>
+  <p class="forklaring">Måleområdet er 10 bar. 0,5 / 10 · 100 % = 5 %.</p>
+</div>
+
+<div class="quiz">
+  <p>En temperaturregulator styrer en ventil på kjølevann. Temperaturen stiger over settpunktet. Hva skal regulatoren gjøre?</p>
+  <ul>
+    <li>Strupe kjølevannsventilen</li>
+    <li data-riktig>Åpne kjølevannsventilen mer</li>
+    <li>Senke settpunktet</li>
+  </ul>
+  <p class="forklaring">Mer kjølevann gir lavere temperatur. Når det blir for varmt, skal regulatoren derfor åpne kjølevannsventilen mer.</p>
+</div>
+
+<div class="quiz">
+  <p>Tanken blir varmere og varmere, og dampventilen går helt til 100 %. Hva kan være feil?</p>
+  <ul>
+    <li>Settpunktet er for lavt.</li>
+    <li data-riktig>Regulatoren har feil virkningsretning.</li>
+    <li>Avviket er null.</li>
+  </ul>
+  <p class="forklaring">Med riktig virkningsretning skal regulatoren strupe dampen når det blir for varmt. Åpner den mer i stedet, er virkningsretningen feil. (En måler som viser for lav temperatur, kan gi det samme bildet, så den bør også sjekkes.)</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>settpunkt</td><td>Verdien prosessen skal holde, for eksempel 80 °C eller 2,0 bar.</td><td>setpoint (SP)</td></tr>
+    <tr><td>måleverdi</td><td>Verdien instrumentet faktisk måler i prosessen akkurat nå.</td><td>process value (PV)</td></tr>
+    <tr><td>avvik</td><td>Forskjellen mellom settpunktet og måleverdien. Positivt avvik betyr at måleverdien er under settpunktet.</td><td>error, deviation</td></tr>
+    <tr><td>pådrag</td><td>Signalet fra regulatoren til pådragsorganet, ofte oppgitt i prosent fra 0 % (stengt) til 100 % (helt åpen).</td><td>output (OP)</td></tr>
+    <tr><td>måleområde</td><td>Området mellom laveste og høyeste verdi et instrument kan måle, for eksempel 0–10 bar.</td><td>measuring range</td></tr>
+    <tr><td>trend</td><td>Kurve som viser hvordan en måleverdi har endret seg over tid.</td><td>trend</td></tr>
+    <tr><td>virkningsretning</td><td>Innstillingen som bestemmer om regulatoren skal øke eller minske pådraget når måleverdien stiger.</td><td>controller action (direct/reverse)</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="reguleringssloyfen.html">Reguleringssløyfen</a> forklarer delene i sløyfa og hva en forstyrrelse er.</li>
+  <li><a href="scada-og-dcs.html">SCADA og DCS</a> i emnet Styresystemer viser hvordan operatøren endrer settpunkter og bruker trender.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

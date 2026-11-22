@@ -44,11 +44,11 @@ KPL.sti("05-maling-styring-regulering", [
   {
     emne: "Regulering",
     sider: [
-      { tittel: "Reguleringssløyfen", status: "planlagt" },
-      { tittel: "Settpunkt, måleverdi og avvik", status: "planlagt" },
-      { tittel: "P-regulering", status: "planlagt" },
-      { tittel: "PI- og PID-regulering", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "reguleringssloyfen.html", tittel: "Reguleringssløyfen", type: "fagstoff", status: "ferdig" },
+      { fil: "settpunkt-maleverdi-avvik.html", tittel: "Settpunkt, måleverdi og avvik", meny: "Settpunkt og avvik", type: "fagstoff", status: "ferdig" },
+      { fil: "p-regulering.html", tittel: "P-regulering", type: "fagstoff", status: "ferdig" },
+      { fil: "pi-og-pid-regulering.html", tittel: "PI- og PID-regulering", meny: "PI og PID", type: "fagstoff", status: "ferdig" },
+      { fil: "regulering-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {

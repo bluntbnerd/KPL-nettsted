@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" font-family="Segoe UI, Arial, sans-serif">
+  <title>Pådrag fra en P-regulator som funksjon av avviket, for forsterkning 1, 2 og 4</title>
+  <rect x="0" y="0" width="640" height="330" rx="10" fill="#ffffff"/>
+
+  <!-- Rutenett -->
+  <g stroke="#e3eaea" stroke-width="1">
+    <line x1="80" y1="30" x2="560" y2="30"/>
+    <line x1="80" y1="150" x2="560" y2="150"/>
+    <line x1="200" y1="30" x2="200" y2="270"/>
+    <line x1="320" y1="30" x2="320" y2="270"/>
+    <line x1="440" y1="30" x2="440" y2="270"/>
+    <line x1="560" y1="30" x2="560" y2="270"/>
+  </g>
+  <line x1="80" y1="270" x2="560" y2="270" stroke="#586868" stroke-width="1.5"/>
+  <line x1="80" y1="30" x2="80" y2="270" stroke="#586868" stroke-width="1.5"/>
+
+  <!-- Akser -->
+  <g font-size="11" fill="#586868" text-anchor="end">
+    <text x="74" y="34">100</text>
+    <text x="74" y="154">50</text>
+    <text x="74" y="274">0</text>
+  </g>
+  <text x="18" y="20" font-size="12" font-weight="bold" fill="#1c2828">pådrag (%)</text>
+  <g font-size="11" fill="#586868" text-anchor="middle">
+    <text x="80" y="288">−50</text>
+    <text x="200" y="288">−25</text>
+    <text x="320" y="288">0</text>
+    <text x="440" y="288">25</text>
+    <text x="560" y="288">50</text>
+  </g>
+  <text x="320" y="306" font-size="12" font-weight="bold" text-anchor="middle" fill="#1c2828">avvik (% av måleområdet)</text>
+  <g font-size="11" fill="#586868">
+    <text x="84" y="322">måleverdien over settpunktet</text>
+    <text x="556" y="322" text-anchor="end">måleverdien under settpunktet</text>
+  </g>
+
+  <!-- Linjer for Kp = 1, 2 og 4 -->
+  <polyline points="80,270 560,30" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <polyline points="80,270 200,270 440,30 560,30" fill="none" stroke="#2a7a9a" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="80,270 260,270 380,30 560,30" fill="none" stroke="#b5530f" stroke-width="2.5" stroke-dasharray="7 4" stroke-linejoin="round"/>
+
+  <!-- Arbeidspunkt og eksempelpunkt -->
+  <circle cx="320" cy="150" r="5" fill="#1c2828"/>
+  <text x="310" y="143" font-size="11" text-anchor="end" fill="#1c2828">avvik 0 gir arbeidspunktet 50 %</text>
+  <g stroke="#1c2828" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="344" y1="126" x2="344" y2="270"/>
+    <line x1="80" y1="126" x2="344" y2="126"/>
+  </g>
+  <circle cx="344" cy="126" r="5" fill="#2a7a9a" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="352" y="146" font-size="11" fill="#1c2828">Kp = 2: avvik 5 % gir 60 %</text>
+
+  <!-- Forklaring -->
+  <rect x="96" y="40" width="150" height="68" rx="6" fill="#ffffff" stroke="#e3eaea"/>
+  <g font-size="12" fill="#1c2828">
+    <line x1="106" y1="56" x2="134" y2="56" stroke="#586868" stroke-width="2.5"/>
+    <text x="140" y="60">Kp = 1</text>
+    <line x1="106" y1="74" x2="134" y2="74" stroke="#2a7a9a" stroke-width="3"/>
+    <text x="140" y="78">Kp = 2</text>
+    <line x1="106" y1="92" x2="134" y2="92" stroke="#b5530f" stroke-width="2.5" stroke-dasharray="7 4"/>
+    <text x="140" y="96">Kp = 4</text>
+  </g>
+</svg>

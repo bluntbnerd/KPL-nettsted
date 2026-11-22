@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="Segoe UI, Arial, sans-serif">
+  <title>Trend som sammenligner P-regulering og PI-regulering etter en forstyrrelse</title>
+  <rect x="0" y="0" width="640" height="360" rx="10" fill="#ffffff"/>
+
+  <!-- Øvre felt: temperatur -->
+  <text x="70" y="26" font-size="13" font-weight="bold" fill="#1c2828">Temperatur i tanken (°C)</text>
+  <g stroke="#e3eaea" stroke-width="1">
+    <line x1="70" y1="40" x2="610" y2="40"/>
+    <line x1="70" y1="72.5" x2="610" y2="72.5"/>
+    <line x1="70" y1="105" x2="610" y2="105"/>
+    <line x1="70" y1="137.5" x2="610" y2="137.5"/>
+  </g>
+  <line x1="70" y1="170" x2="610" y2="170" stroke="#586868" stroke-width="1.5"/>
+  <line x1="70" y1="40" x2="70" y2="170" stroke="#586868" stroke-width="1.5"/>
+  <g font-size="11" fill="#586868" text-anchor="end">
+    <text x="64" y="44">82</text>
+    <text x="64" y="76.5">80</text>
+    <text x="64" y="109">78</text>
+    <text x="64" y="141.5">76</text>
+    <text x="64" y="174">74</text>
+  </g>
+
+  <!-- Forstyrrelse -->
+  <line x1="160" y1="40" x2="160" y2="300" stroke="#586868" stroke-width="1" stroke-dasharray="2 3"/>
+  <text x="166" y="54" font-size="11" fill="#586868">forstyrrelse: kaldere råstoff</text>
+
+  <!-- Settpunkt -->
+  <line x1="70" y1="72.5" x2="610" y2="72.5" stroke="#1c2828" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <!-- Bare P -->
+  <polyline points="70,72.5 160,72.5 178,88.75 196,101.75 214,109.9 250,114.75 286,113.1 610,113.1" fill="none" stroke="#586868" stroke-width="3" stroke-linejoin="round"/>
+  <!-- PI -->
+  <polyline points="70,72.5 160,72.5 178,88.75 196,103.4 214,111.5 232,113.1 250,109.9 286,98.5 322,85.5 358,75.75 394,69.25 430,69.25 484,71.7 610,72.5" fill="none" stroke="#2a7a9a" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Varig avvik -->
+  <line x1="560" y1="77" x2="560" y2="109" stroke="#1c2828" stroke-width="1.2"/>
+  <polygon points="556,78 560,73 564,78" fill="#1c2828"/>
+  <polygon points="556,108 560,113 564,108" fill="#1c2828"/>
+  <text x="554" y="134" font-size="11" text-anchor="end" fill="#1c2828">varig avvik med bare P</text>
+  <text x="430" y="62" font-size="11" text-anchor="middle" fill="#2a7a9a">PI: tilbake på settpunktet</text>
+
+  <!-- Nedre felt: pådrag -->
+  <text x="70" y="200" font-size="13" font-weight="bold" fill="#1c2828">Pådrag til dampventilen (%)</text>
+  <g stroke="#e3eaea" stroke-width="1">
+    <line x1="70" y1="210" x2="610" y2="210"/>
+    <line x1="70" y1="255" x2="610" y2="255"/>
+  </g>
+  <line x1="70" y1="300" x2="610" y2="300" stroke="#586868" stroke-width="1.5"/>
+  <line x1="70" y1="210" x2="70" y2="300" stroke="#586868" stroke-width="1.5"/>
+  <g font-size="11" fill="#586868" text-anchor="end">
+    <text x="64" y="214">100</text>
+    <text x="64" y="259">50</text>
+    <text x="64" y="304">0</text>
+  </g>
+  <polyline points="70,255 160,255 178,251.4 196,248.7 214,246.9 250,246 610,246" fill="none" stroke="#586868" stroke-width="3" stroke-linejoin="round"/>
+  <polyline points="70,255 160,255 178,250.5 214,244.2 250,240.6 286,237.9 322,236.1 358,235.65 394,236.1 430,236.64 610,237" fill="none" stroke="#2a7a9a" stroke-width="3" stroke-linejoin="round"/>
+  <text x="604" y="262" font-size="11" text-anchor="end" fill="#586868">P: 60 %</text>
+  <text x="604" y="230" font-size="11" text-anchor="end" fill="#2a7a9a">PI: 70 %</text>
+
+  <!-- Tidsakse -->
+  <g font-size="11" fill="#586868" text-anchor="middle">
+    <text x="70" y="316">0</text>
+    <text x="160" y="316">5</text>
+    <text x="250" y="316">10</text>
+    <text x="340" y="316">15</text>
+    <text x="430" y="316">20</text>
+    <text x="520" y="316">25</text>
+    <text x="610" y="316">30</text>
+  </g>
+  <text x="340" y="332" font-size="12" text-anchor="middle" fill="#1c2828">tid (minutter)</text>
+
+  <!-- Forklaring -->
+  <g font-size="12" fill="#1c2828">
+    <line x1="150" y1="350" x2="176" y2="350" stroke="#1c2828" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="182" y="354">settpunkt</text>
+    <line x1="270" y1="350" x2="296" y2="350" stroke="#586868" stroke-width="3"/>
+    <text x="302" y="354">bare P</text>
+    <line x1="370" y1="350" x2="396" y2="350" stroke="#2a7a9a" stroke-width="3"/>
+    <text x="402" y="354">PI</text>
+  </g>
+</svg>

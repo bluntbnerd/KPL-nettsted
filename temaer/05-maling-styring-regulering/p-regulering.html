@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P-regulering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>P-regulering</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT5, PT8</div>
+
+<p class="ingress">Hvor mye skal regulatoren åpne ventilen når det oppstår et avvik? Det enkleste svaret er: mer jo større avviket er. Det kalles P-regulering, og det er grunnlaget for nesten alle regulatorer i industrien. Her lærer du hvordan en P-regulator regner, hva forsterkning betyr, og hvorfor P-regulering alene ofte gir et avvik som aldri blir borte.</p>
+
+<h2>Mer avvik gir mer pådrag</h2>
+<p>Tenk deg at du regulerer temperaturen i tanken for hånd. Er det bare litt for kaldt, åpner du dampventilen litt. Er det mye for kaldt, åpner du mye. Du justerer altså i forhold til hvor stort avviket er.</p>
+<p>En <strong>P-regulator</strong> gjør akkurat det samme. P står for <em>proporsjonal</em>, som betyr «i samme forhold». Pådraget endres i samme forhold som avviket: Dobbelt så stort avvik gir dobbelt så stor endring av ventilen.</p>
+
+<h2>Slik regner P-regulatoren</h2>
+<p>P-regulatoren regner ut pådraget med denne formelen:</p>
+<p>\[ \text{pådrag} = \text{arbeidspunkt} + K_p \cdot \text{avvik} \]</p>
+<ul>
+  <li><strong>Avviket</strong> er settpunkt minus måleverdi, i prosent av måleområdet. Det lærte du på siden <a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a>.</li>
+  <li><strong>Forsterkningen</strong> \( K_p \) er et tall som bestemmer hvor kraftig regulatoren reagerer. Med \( K_p = 2 \) gir 1 % avvik 2 % endring av pådraget.</li>
+  <li><strong>Arbeidspunktet</strong> er pådraget regulatoren gir når avviket er null, ofte 50 %. Det stilles inn slik at det passer med vanlig drift.</li>
+</ul>
+<p>Pådraget kan ikke bli mindre enn 0 % (stengt) eller større enn 100 % (helt åpen). Regner regulatoren seg fram til mer, blir pådraget stående på grensen.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Regn ut pådraget</div>
+  <p><strong>Oppgave:</strong> En P-regulator har forsterkning \( K_p = 2 \) og arbeidspunkt 50 %. Hva blir pådraget når avviket er a) 5 %, b) −10 % og c) 30 %?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Formelen er pådrag = arbeidspunkt + \( K_p \) · avvik.</li>
+    <li>a) \( 50\ \% + 2 \cdot 5\ \% = 60\ \% \). Det er for kaldt, så ventilen åpnes mer.</li>
+    <li>b) \( 50\ \% + 2 \cdot (-10\ \%) = 30\ \% \). Det er for varmt, så ventilen strupes.</li>
+    <li>c) \( 50\ \% + 2 \cdot 30\ \% = 110\ \% \). Det går ikke, så pådraget blir stående på 100 %.</li>
+  </ol>
+  <p><strong>Svar:</strong> a) 60 %, b) 30 % og c) 100 % (helt åpen).</p>
+</div>
+
+<figure>
+  <img src="bilder/p-regulator-padrag.svg" alt="Diagram med avvik i prosent av måleområdet fra minus 50 til pluss 50 langs bunnen og pådrag fra 0 til 100 prosent oppover. Tre linjer går gjennom punktet avvik 0 og pådrag 50 prosent. Linjen for Kp lik 1 er slakest og når 0 og 100 prosent ved avvik minus og pluss 50. Linjen for Kp lik 2 er brattere og når grensene ved minus og pluss 25 prosent avvik. Linjen for Kp lik 4 er brattest og når grensene ved minus og pluss 12,5 prosent avvik. Et punkt viser at Kp lik 2 og avvik 5 prosent gir pådrag 60 prosent." width="640">
+  <figcaption>Figur: Pådraget fra en P-regulator med arbeidspunkt 50 %. Jo større forsterkning, jo brattere linje, og jo mindre avvik skal til før ventilen står helt åpen eller helt stengt. Til venstre er måleverdien over settpunktet, og til høyre er den under. Figuren gjelder for en regulator som gir mer pådrag når det er for lite, for eksempel damp til oppvarming.</figcaption>
+</figure>
+
+<h3>Proporsjonalbånd</h3>
+<p>I mange styresystemer stilles ikke forsterkningen inn direkte. I stedet stilles <strong>proporsjonalbåndet</strong> (PB). Det er hvor mye avviket må endre seg, i prosent av måleområdet, for at pådraget skal gå fra helt stengt til helt åpen:</p>
+<p>\[ \text{PB} = \frac{100\ \%}{K_p} \]</p>
+<p>Med \( K_p = 2 \) blir proporsjonalbåndet \( 100\ \% / 2 = 50\ \% \). I figuren ser du at linjen for \( K_p = 2 \) går fra 0 til 100 % pådrag mens avviket går fra −25 % til 25 %, altså over 50 %. Legg merke til at stor forsterkning gir et <em>smalt</em> (lite) proporsjonalbånd.</p>
+
+<h2>Avviket som ikke blir borte</h2>
+<p>P-regulering har én stor svakhet. Se på formelen igjen: Er avviket null, gir regulatoren alltid arbeidspunktet, for eksempel 50 %. Men hva om prosessen trenger 70 % damp for å holde settpunktet? Da må det være et avvik for at regulatoren skal gi mer enn 50 %. Prosessen legger seg derfor til ro med et lite avvik som aldri blir borte. Det kalles <strong>varig avvik</strong>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Kaldt råstoff om vinteren</div>
+  <p><strong>Oppgave:</strong> Temperaturen i tanken skal være 80 °C. Måleområdet er 0–150 °C. P-regulatoren har \( K_p = 4 \) og arbeidspunkt 50 %. Om sommeren holder 50 % damp temperaturen på 80 °C. Om vinteren er råstoffet kaldere, og det trengs 70 % damp. Hvilken temperatur legger tanken seg på om vinteren?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Pådraget må bli 70 %: \( 70\ \% = 50\ \% + 4 \cdot \text{avvik} \).</li>
+    <li>Da må \( 4 \cdot \text{avvik} = 20\ \% \), altså avvik = 5 %.</li>
+    <li>Måleområdet er 150 °C. 5 % av det er \( 0{,}05 \cdot 150 = 7{,}5 \) °C.</li>
+    <li>Avviket er positivt, så måleverdien er under settpunktet: \( 80 - 7{,}5 = 72{,}5 \) °C.</li>
+  </ol>
+  <p><strong>Svar:</strong> Tanken legger seg på 72,5 °C om vinteren. Avviket på 7,5 °C blir ikke borte så lenge regulatoren bare er en P-regulator.</p>
+  <p><small>Eksemplet er forenklet: Vi regner som om det trengs 70 % damp også når temperaturen er litt lavere enn 80 °C. I virkeligheten trengs det litt mindre varme for å holde en lavere temperatur, så avviket blir noe mindre.</small></p>
+</div>
+
+<h2>Liten eller stor forsterkning?</h2>
+<p>Eksemplet viser at større forsterkning gir mindre varig avvik. Med \( K_p = 8 \) i stedet for 4 ville avviket blitt halvparten så stort. Hvorfor ikke bare skru forsterkningen helt opp?</p>
+<p>Problemet er at prosessen trenger tid på å svare. Det tar tid å varme opp væsken i tanken, og det tar tid før måleren merker endringen. En regulator med for stor forsterkning reagerer for kraftig: Den åpner mye damp, temperaturen skyter over settpunktet, regulatoren struper kraftig, temperaturen faller under, og slik fortsetter det. Prosessen begynner å <strong>svinge</strong>.</p>
+
+<figure>
+  <img src="bilder/p-regulering-forsterkning.svg" alt="Trend over 20 minutter der settpunktet endres fra 80 til 85 grader etter 2 minutter. Tre kurver viser temperaturen med ulik forsterkning. Med liten forsterkning stiger temperaturen sakte og legger seg på 82,5 grader, et varig avvik på 2,5 grader. Med passe forsterkning stiger den raskt, svinger litt og legger seg på omtrent 84 grader, like under settpunktet. Med for stor forsterkning svinger temperaturen opp og ned mellom omtrent 83 og 87 grader hele tiden." width="640">
+  <figcaption>Figur: Settpunktet endres fra 80 til 85 °C. Liten forsterkning gir en rolig, men treg regulering med stort varig avvik. Passe forsterkning gir raskere regulering og lite varig avvik. For stor forsterkning får temperaturen til å svinge. Kurvene er laget for å vise prinsippet.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Forsterkning</th><th>Hva som skjer</th></tr></thead>
+  <tbody>
+    <tr><td><strong>For liten</strong></td><td>Rolig, men treg. Stort varig avvik. Forstyrrelser blir rettet opp sakte.</td></tr>
+    <tr><td><strong>Passe</strong></td><td>Raskt mot settpunktet, kanskje med en liten svingning før det roer seg. Lite varig avvik.</td></tr>
+    <tr><td><strong>For stor</strong></td><td>Prosessen svinger opp og ned rundt settpunktet. Ventilen går fram og tilbake hele tiden og slites. I verste fall blir svingningene større og større.</td></tr>
+  </tbody>
+</table>
+<p>Å finne riktige innstillinger kalles å <strong>tune</strong> regulatoren. Det gjøres av instrumentteknikere eller prosessingeniører når sløyfa settes i drift, og senere hvis prosessen endres.</p>
+
+<h2>Når holder P-regulering?</h2>
+<p>P-regulering alene brukes der et lite varig avvik ikke gjør noe. Et typisk eksempel er nivået i en <strong>buffertank</strong>, en tank som skal jevne ut strømmen mellom to deler av anlegget. Det spiller liten rolle om nivået er 50 % eller 55 %, bare tanken ikke går tom eller full. En rolig P-regulator gjør at strømmen ut av tanken endres jevnt, og det er nettopp det vi vil.</p>
+<p>Der settpunktet må holdes nøyaktig, for eksempel temperaturen i en reaktor, er varig avvik ikke godt nok. Da trengs det mer enn P. Det lærer du om på neste side, <em>PI- og PID-regulering</em>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Temperaturen svinger</div>
+  <p>På nattskiftet ser du i trenden at temperaturen i en tank svinger jevnt mellom 77 og 83 °C, med cirka fire minutter mellom hver topp. Settpunktet er 80 °C. Pådraget til dampventilen går fram og tilbake mellom 20 % og 90 %.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Jevne svingninger der både måleverdi og pådrag går opp og ned, tyder på at regulatoren reagerer for kraftig.</li>
+    <li>Sjekk hendelsesloggen, altså listen i styresystemet over hva som har skjedd og hvem som har endret hva. Har noen endret innstillingene, eller har prosessen endret seg, for eksempel en annen produksjonsmengde?</li>
+    <li>Svingningene kan også komme fra en ventil som henger litt og så hopper. Følg med på om ventilen beveger seg jevnt.</li>
+    <li>Meld fra til skiftleder. En midlertidig løsning kan være å sette regulatoren i manuell med et fast pådrag, hvis prosedyren tillater det. Innstillingene i regulatoren endrer du ikke selv.</li>
+  </ol>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Innstillinger i regulatoren</div>
+  <ul>
+    <li>Forsterkning og andre innstillinger i en regulator skal bare endres av dem som har ansvar og opplæring for det, og etter bedriftens prosedyre.</li>
+    <li>En regulator med feil innstilling kan få prosessen til å svinge. Svingninger i trykk eller temperatur sliter på utstyret og kan utløse alarmer og nedstengning.</li>
+    <li>Ser du at en sløyfe svinger, meld fra. Ikke vent til det går over.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva betyr P i P-regulering?</p>
+  <ul>
+    <li>Prosess</li>
+    <li data-riktig>Proporsjonal: pådraget endres i samme forhold som avviket</li>
+    <li>Pumpe</li>
+  </ul>
+  <p class="forklaring">P står for proporsjonal. Dobbelt så stort avvik gir dobbelt så stor endring av pådraget.</p>
+</div>
+
+<div class="quiz">
+  <p>En P-regulator har \( K_p = 3 \) og arbeidspunkt 50 %. Avviket er 4 %. Hva blir pådraget?</p>
+  <ul>
+    <li>54 %</li>
+    <li data-riktig>62 %</li>
+    <li>12 %</li>
+  </ul>
+  <p class="forklaring">Pådrag = 50 % + 3 · 4 % = 50 % + 12 % = 62 %.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor gir P-regulering ofte et varig avvik?</p>
+  <ul>
+    <li>Fordi måleren alltid viser litt feil</li>
+    <li data-riktig>Fordi regulatoren bare gir et annet pådrag enn arbeidspunktet når det er et avvik</li>
+    <li>Fordi ventilen aldri kan stå helt åpen</li>
+  </ul>
+  <p class="forklaring">Trenger prosessen et annet pådrag enn arbeidspunktet, må det være et avvik for at P-regulatoren skal gi det pådraget. Derfor blir avviket stående.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva skjer hvis forsterkningen er for stor?</p>
+  <ul>
+    <li>Reguleringen blir treg, og det varige avviket blir stort.</li>
+    <li data-riktig>Prosessen begynner å svinge opp og ned rundt settpunktet.</li>
+    <li>Regulatoren går over i manuell.</li>
+  </ul>
+  <p class="forklaring">For stor forsterkning gjør at regulatoren reagerer for kraftig. Måleverdien skyter over og under settpunktet, og prosessen svinger.</p>
+</div>
+
+<div class="quiz">
+  <p>En regulator har proporsjonalbånd 25 %. Hva er forsterkningen?</p>
+  <ul>
+    <li>0,25</li>
+    <li>25</li>
+    <li data-riktig>4</li>
+  </ul>
+  <p class="forklaring">PB = 100 % / \( K_p \), altså \( K_p \) = 100 % / PB = 100 % / 25 % = 4.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>P-regulering</td><td>Regulering der pådraget endres i samme forhold som avviket. Større avvik gir større endring av pådraget.</td><td>proportional control</td></tr>
+    <tr><td>forsterkning</td><td>Tallet (K<sub>p</sub>) som bestemmer hvor kraftig regulatoren reagerer på et avvik. Med forsterkning 2 gir 1 % avvik 2 % endring av pådraget.</td><td>gain (Kp)</td></tr>
+    <tr><td>arbeidspunkt</td><td>Pådraget en P-regulator gir når avviket er null, ofte 50 %.</td><td>bias</td></tr>
+    <tr><td>proporsjonalbånd</td><td>Hvor mye avviket må endre seg, i prosent av måleområdet, for at pådraget skal gå fra 0 % til 100 %. Er lik 100 % delt på forsterkningen.</td><td>proportional band (PB)</td></tr>
+    <tr><td>varig avvik</td><td>Avvik som blir stående når prosessen har roet seg, fordi en P-regulator trenger et avvik for å gi et annet pådrag enn arbeidspunktet.</td><td>offset</td></tr>
+    <tr><td>svingning</td><td>At måleverdien går opp og ned rundt settpunktet igjen og igjen, ofte fordi regulatoren reagerer for kraftig.</td><td>oscillation</td></tr>
+    <tr><td>tuning</td><td>Å stille inn regulatoren, for eksempel forsterkningen, slik at reguleringen blir rask og rolig.</td><td>tuning</td></tr>
+    <tr><td>buffertank</td><td>Tank mellom to deler av et anlegg som jevner ut forskjeller i strømmen inn og ut.</td><td>buffer tank, surge tank</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a> viser hvordan du regner ut avviket i prosent av måleområdet.</li>
+  <li><a href="reguleringssloyfen.html">Reguleringssløyfen</a> forklarer delene i sløyfa og hva pådrag er.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Regulering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT5, PT8</div>
+
+<p class="ingress">Dette er siste steg i emnet «Regulering». Gå gjennom sjekklisten og quizen. Står du fast, går du tilbake til siden det gjelder. I dette emnet har du lært hvordan en regulator holder en temperatur, et trykk, et nivå eller en mengde på settpunktet, og hva du gjør når det ikke virker.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare hva regulering er, og beskrive de fire delene i en reguleringssløyfe: prosess, måler, regulator og pådragsorgan. (<a href="reguleringssloyfen.html">Reguleringssløyfen</a>)</li>
+  <li>Jeg kan forklare hva tilbakekobling og lukket sløyfe betyr, og hva en forstyrrelse er. (<a href="reguleringssloyfen.html">Reguleringssløyfen</a>)</li>
+  <li>Jeg kan forklare forskjellen på auto og manuell, og hva som skjer med forstyrrelser når regulatoren står i manuell. (<a href="reguleringssloyfen.html">Reguleringssløyfen</a>)</li>
+  <li>Jeg kan forklare hva settpunkt (SP), måleverdi (PV) og pådrag (OP) er, og lese dem av på en regulator. (<a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a>)</li>
+  <li>Jeg kan regne ut avviket med fortegn, og regne det om til prosent av måleområdet. (<a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a>)</li>
+  <li>Jeg kan lese en trend og se avviket etter en settpunktendring eller en forstyrrelse. (<a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a>)</li>
+  <li>Jeg kan forklare hva virkningsretning er, og si om regulatoren skal åpne eller strupe når måleverdien stiger. (<a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a>)</li>
+  <li>Jeg kan regne ut pådraget fra en P-regulator med forsterkning og arbeidspunkt, og regne mellom forsterkning og proporsjonalbånd. (<a href="p-regulering.html">P-regulering</a>)</li>
+  <li>Jeg kan forklare hvorfor P-regulering alene gir varig avvik, og hva som skjer med for liten og for stor forsterkning. (<a href="p-regulering.html">P-regulering</a>)</li>
+  <li>Jeg kan forklare hva I-delen og D-delen gjør, og hva integraltid og derivattid betyr. (<a href="pi-og-pid-regulering.html">PI- og PID-regulering</a>)</li>
+  <li>Jeg kan si hvilken regulator som er vanlig for mengde, trykk, nivå og temperatur, og hvorfor. (<a href="pi-og-pid-regulering.html">PI- og PID-regulering</a>)</li>
+  <li>Jeg kan feilsøke en sløyfe som ikke holder settpunktet, ved å sjekke måleren, regulatoren og pådragsorganet, og bruke pådraget som hjelp. (alle sidene)</li>
+  <li>Jeg kan forklare hvorfor en reguleringssløyfe ikke er et sikkerhetssystem, og hvorfor innstillingene i regulatoren bare skal endres av dem som har ansvaret. (alle sidene)</li>
+</ul>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>Hvilken del av reguleringssløyfa endrer prosessen etter signal fra regulatoren?</p>
+  <ul>
+    <li>Måleren</li>
+    <li data-riktig>Pådragsorganet, for eksempel en reguleringsventil</li>
+    <li>Settpunktet</li>
+  </ul>
+  <p class="forklaring">Pådragsorganet gjør endringen i prosessen. Oftest er det en reguleringsventil, men det kan også være en pumpe med styrt fart eller et varmeelement.</p>
+</div>
+
+<div class="quiz">
+  <p>Settpunktet er 150 °C, og måleverdien er 146 °C. Hva er avviket?</p>
+  <ul>
+    <li data-riktig>4 °C</li>
+    <li>−4 °C</li>
+    <li>146 °C</li>
+  </ul>
+  <p class="forklaring">Avvik = settpunkt − måleverdi = 150 − 146 = 4 °C. Avviket er positivt, så måleverdien er under settpunktet.</p>
+</div>
+
+<div class="quiz">
+  <p>En temperaturmåler har måleområde 0–200 °C. Avviket er 5 °C. Hvor stort er avviket i prosent av måleområdet?</p>
+  <ul>
+    <li>5 %</li>
+    <li data-riktig>2,5 %</li>
+    <li>10 %</li>
+  </ul>
+  <p class="forklaring">5 / 200 · 100 % = 2,5 %.</p>
+</div>
+
+<div class="quiz">
+  <p>En nivåregulator styrer en ventil på røret <em>inn</em> til tanken. Nivået stiger over settpunktet. Hva skal regulatoren gjøre?</p>
+  <ul>
+    <li>Åpne ventilen mer</li>
+    <li data-riktig>Strupe ventilen</li>
+    <li>Ingenting, nivået går ned av seg selv</li>
+  </ul>
+  <p class="forklaring">Når tanken er for full, må det renne mindre inn. Med ventilen på røret inn skal regulatoren derfor strupe.</p>
+</div>
+
+<div class="quiz">
+  <p>En P-regulator har forsterkning 1,5 og arbeidspunkt 50 %. Avviket er −10 %. Hva blir pådraget?</p>
+  <ul>
+    <li>65 %</li>
+    <li data-riktig>35 %</li>
+    <li>40 %</li>
+  </ul>
+  <p class="forklaring">Pådrag = 50 % + 1,5 · (−10 %) = 50 % − 15 % = 35 %.</p>
+</div>
+
+<div class="quiz">
+  <p>En regulator har proporsjonalbånd 50 %. Hva er forsterkningen?</p>
+  <ul>
+    <li>0,5</li>
+    <li data-riktig>2</li>
+    <li>50</li>
+  </ul>
+  <p class="forklaring">Forsterkning = 100 % / proporsjonalbånd = 100 % / 50 % = 2.</p>
+</div>
+
+<div class="quiz">
+  <p>Etter en forstyrrelse legger temperaturen seg 3 °C under settpunktet og blir liggende der. Regulatoren står i auto, og pådraget ligger stille på 62 %. Hva er den mest sannsynlige forklaringen?</p>
+  <ul>
+    <li>Regulatoren har for sterk D-del.</li>
+    <li data-riktig>Regulatoren er en P-regulator uten I-del, så det blir et varig avvik.</li>
+    <li>Settpunktet er for høyt.</li>
+  </ul>
+  <p class="forklaring">En P-regulator trenger et avvik for å gi et annet pådrag enn arbeidspunktet. Derfor blir det stående et varig avvik. En I-del ville fortsatt å øke pådraget til avviket var borte.</p>
+</div>
+
+<div class="quiz">
+  <p>Trykket i en beholder svinger jevnt opp og ned rundt settpunktet, og ventilen går fram og tilbake hele tiden. Hva kan være årsaken?</p>
+  <ul>
+    <li>For liten forsterkning</li>
+    <li data-riktig>For sterk regulering, for eksempel for stor forsterkning eller for sterk I-del</li>
+    <li>Regulatoren står i manuell</li>
+  </ul>
+  <p class="forklaring">En regulator som reagerer for kraftig, får prosessen til å svinge. En ventil som henger og hopper, kan gi det samme bildet. I manuell beveger ventilen seg ikke av seg selv.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilken del av en PID-regulator fjerner det varige avviket?</p>
+  <ul>
+    <li>P-delen</li>
+    <li data-riktig>I-delen</li>
+    <li>D-delen</li>
+  </ul>
+  <p class="forklaring">I-delen summerer avviket over tid og fortsetter å endre pådraget til avviket er null. D-delen reagerer på hvor fort avviket endrer seg.</p>
+</div>
+
+<div class="quiz">
+  <p>Pådraget fra en temperaturregulator har i flere uker ligget rundt 55 %. Nå ligger det på 80 %, men temperaturen er fortsatt på settpunktet. Hva forteller det deg?</p>
+  <ul>
+    <li>Ingenting, så lenge temperaturen er riktig</li>
+    <li data-riktig>Prosessen trenger mer varme enn før. Det kan for eksempel være belegg på varmespiralen eller lavere damptrykk.</li>
+    <li>Regulatoren har fått feil virkningsretning.</li>
+  </ul>
+  <p class="forklaring">I-delen justerer pådraget til det prosessen trenger. Et pådrag som kryper oppover over tid, er et tidlig varsel om at noe har endret seg. Meld fra før pådraget når 100 %.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Slike spørsmål kan du få i en fagsamtale eller til eksamen. Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Forklar hvordan temperaturen i en tank holdes på 80 °C med en reguleringssløyfe. Bruk ordene måler, regulator, pådragsorgan, settpunkt, avvik og tilbakekobling.</summary>
+  <p>Temperaturmåleren måler temperaturen i tanken og sender måleverdien til regulatoren. Regulatoren sammenligner måleverdien med settpunktet på 80 °C og regner ut avviket. Ut fra avviket bestemmer den pådraget til pådragsorganet, som her er en reguleringsventil på dampen. Er det for kaldt, åpner ventilen mer damp, og er det for varmt, struper den. Måleren merker hvordan temperaturen endrer seg, så regulatoren hele tiden ser resultatet av det den gjorde. Det er tilbakekoblingen, og den gjør sløyfa lukket.</p>
+</details>
+
+<details>
+  <summary>2. Hvorfor gir en P-regulator ofte et varig avvik, og hvordan løser en PI-regulator problemet?</summary>
+  <p>En P-regulator gir arbeidspunktet, for eksempel 50 %, når avviket er null. Trenger prosessen et annet pådrag, for eksempel 70 % fordi råstoffet er kaldere, må det være et avvik for at regulatoren skal gi det. Derfor blir avviket stående. I-delen i en PI-regulator fortsetter å endre pådraget så lenge det er et avvik. Den stopper først når avviket er null, og da står ventilen akkurat der prosessen trenger den.</p>
+</details>
+
+<details>
+  <summary>3. Hva skjer hvis forsterkningen i en regulator er for liten, og hva skjer hvis den er for stor?</summary>
+  <p>Med for liten forsterkning blir reguleringen rolig, men treg. Forstyrrelser rettes opp sakte, og en P-regulator får et stort varig avvik. Med for stor forsterkning reagerer regulatoren for kraftig. Måleverdien skyter over og under settpunktet, og prosessen svinger. Ventilen går fram og tilbake og slites. Riktige innstillinger finnes ved tuning, som gjøres av instrumentteknikere eller prosessingeniører.</p>
+</details>
+
+<details>
+  <summary>4. Du finner en regulator som står i manuell. Hva gjør du før du setter den i auto?</summary>
+  <p>Først finner jeg ut hvorfor den står i manuell. Jeg ser i hendelsesloggen (listen i styresystemet over hva som har skjedd og hvem som har endret hva) eller i skiftloggen, og spør skiftleder. Det kan være en god grunn, for eksempel at en måler er i ustand eller at noen arbeider på utstyret. Hvis det er i orden å sette den i auto, sjekker jeg at måleverdien er i nærheten av settpunktet, så regulatoren ikke gjør et kraftig utslag på ventilen. Etterpå følger jeg med på trenden til prosessen har roet seg, og skriver det i skiftloggen.</p>
+</details>
+
+<details>
+  <summary>5. En mengderegulator står i auto. Pådraget har stått på 100 % lenge, men mengden når ikke settpunktet. Hvordan feilsøker du?</summary>
+  <p>Regulatoren har gjort alt den kan, så feilen er et annet sted i sløyfa eller i prosessen. Jeg sjekker om ventilen faktisk er åpen ute i anlegget, og om den får signal og trykkluft (instrumentluft) som driver den. Så sjekker jeg det som kan begrense strømmen: om pumpa går som den skal, om et filter er tett, eller om nivået i tanken pumpa suger fra, er for lavt. Til slutt sjekker jeg om mengdemåleren kan vise feil, for eksempel ved å sammenligne med nivåendringen i en tank. Jeg melder fra til skiftleder og skriver det i skiftloggen.</p>
+</details>
+
+<details>
+  <summary>6. Hvorfor er en reguleringssløyfe ikke et sikkerhetssystem?</summary>
+  <p>En reguleringssløyfe kan svikte: Måleren kan vise feil, ventilen kan henge, eller regulatoren kan stå i manuell. Da kan for eksempel trykket eller nivået bli for høyt uten at reguleringen merker det. Derfor har viktige grenser egne vern og forriglinger, med egne målere, som virker selv om reguleringen svikter.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Gå tilbake til fagstoffsidene i dette emnet i læringsstien.</li>
+  <li>I emnet Styresystemer ser du hvor regulatorene ligger, og hvordan du bruker dem fra kontrollrommet. Start med <a href="pls.html">PLS</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten og spørsmålene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PI- og PID-regulering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>PI- og PID-regulering</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT5, PT8</div>
+
+<p class="ingress">En P-regulator gir ofte et varig avvik. For de fleste sløyfer i et prosessanlegg er ikke det godt nok. Derfor har nesten alle regulatorer også en I-del, og noen har en D-del i tillegg. Her lærer du hva I og D gjør, og hvilken regulator som brukes hvor.</p>
+
+<h2>Problemet med bare P</h2>
+<p>På siden <a href="p-regulering.html">P-regulering</a> så du at en P-regulator bare gir et annet pådrag enn arbeidspunktet når det er et avvik. Trenger prosessen 70 % damp, men arbeidspunktet er 50 %, blir det stående et avvik. Tanken legger seg for eksempel på 72,5 °C i stedet for 80 °C.</p>
+<p>En erfaren operatør ville ikke godtatt det. Hun eller han ville sett at det fortsatt var for kaldt, og åpnet dampventilen litt til. Og litt til, helt til temperaturen var tilbake på 80 °C. Det er akkurat det I-delen gjør.</p>
+
+<h2>I-delen fjerner det varige avviket</h2>
+<p>I står for <strong>integral</strong>, som betyr at noe summeres opp over tid. I-delen legger sammen avviket minutt for minutt. Så lenge det er et avvik, fortsetter I-delen å endre pådraget, litt etter litt:</p>
+<ul>
+  <li>Er det for kaldt, åpner I-delen ventilen mer og mer.</li>
+  <li>Er det for varmt, struper I-delen ventilen mer og mer.</li>
+  <li>Først når avviket er null, slutter I-delen å endre pådraget. Da står ventilen akkurat der prosessen trenger den.</li>
+</ul>
+<p>I-delen finner altså selv det riktige pådraget. Derfor blir det ikke noe varig avvik. En regulator med P-del og I-del kalles en <strong>PI-regulator</strong>.</p>
+
+<figure>
+  <img src="bilder/p-mot-pi-regulering.svg" alt="Trend over 30 minutter. Etter 5 minutter kommer en forstyrrelse, kaldere råstoff. Med bare P synker temperaturen fra 80 til 77,5 grader og blir liggende der, et varig avvik. Med PI synker temperaturen til omtrent 77,5 grader, men stiger igjen, går så vidt over 80 og legger seg på settpunktet 80 grader etter omtrent 20 minutter. Under viser pådraget at P-regulatoren øker dampen fra 50 til 60 prosent, mens PI-regulatoren fortsetter å øke til 70 prosent." width="640">
+  <figcaption>Figur: Den samme forstyrrelsen med P-regulator og PI-regulator. P-regulatoren stopper på 60 % pådrag, og temperaturen blir liggende under settpunktet. PI-regulatoren fortsetter å øke pådraget til 70 %, og temperaturen kommer tilbake til 80 °C. P-regulatoren klarer seg med mindre enn 70 %, fordi det trengs litt mindre varme for å holde 77,5 °C enn 80 °C. Kurvene er laget for å vise prinsippet.</figcaption>
+</figure>
+
+<h3>Integraltid</h3>
+<p>Hvor raskt I-delen endrer pådraget, stilles inn med <strong>integraltiden</strong> (T<sub>i</sub>), som oftest i minutter eller sekunder. Integraltiden er den tiden I-delen bruker på å legge til like mye pådrag som P-delen ga, hvis avviket holder seg likt.</p>
+<ul>
+  <li><strong>Kort integraltid</strong> gir en sterk I-del som endrer pådraget raskt.</li>
+  <li><strong>Lang integraltid</strong> gir en svak I-del som endrer pådraget sakte.</li>
+</ul>
+<p>Noen styresystemer oppgir I-delen som «repetisjoner per minutt» i stedet. Det er det omvendte: repetisjoner per minutt = 1 delt på integraltiden i minutter. Integraltid 5 minutter blir 0,2 repetisjoner per minutt. Et stort tall betyr da en sterk I-del.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Slik vokser I-delen</div>
+  <p><strong>Oppgave:</strong> En PI-regulator har forsterkning \( K_p = 2 \) og integraltid \( T_i = 5 \) minutter. Pådraget er 50 %. Plutselig oppstår det et avvik på 3 %, og vi later som det holder seg likt. Hva blir pådraget med en gang, etter 5 minutter og etter 10 minutter?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>P-delen reagerer med en gang: \( 2 \cdot 3\ \% = 6\ \% \). Pådraget blir \( 50\ \% + 6\ \% = 56\ \% \).</li>
+    <li>I-delen legger til like mye som P-delen (6 %) for hver integraltid (5 minutter).</li>
+    <li>Etter 5 minutter: \( 56\ \% + 6\ \% = 62\ \% \).</li>
+    <li>Etter 10 minutter: \( 62\ \% + 6\ \% = 68\ \% \).</li>
+  </ol>
+  <p><strong>Svar:</strong> 56 % med en gang, 62 % etter 5 minutter og 68 % etter 10 minutter. I virkeligheten blir avviket mindre etter hvert som temperaturen stiger, så I-delen vokser saktere og stopper når avviket er null.</p>
+</div>
+
+<h3>For sterk I-del</h3>
+<p>I-delen har også en ulempe. Den fortsetter å øke pådraget så lenge det er avvik, også mens prosessen er på vei tilbake. Er I-delen for sterk, har den rukket å åpne ventilen for mye når måleverdien når settpunktet. Måleverdien skyter over, og prosessen kan begynne å svinge, akkurat som med for stor forsterkning.</p>
+<p>Det samme kan skje hvis ventilen står helt åpen en stund uten at avviket blir borte, for eksempel ved oppstart. I-delen vil da gjerne fortsette å vokse, selv om ventilen ikke kan åpne mer. Når prosessen endelig tar seg opp, skyter den langt over. Dette kalles <strong>integratoroppvinding</strong>, på engelsk <em>windup</em>. De fleste moderne regulatorer har en sperre mot dette (<em>anti-windup</em>), men det er lurt å vite at det kan skje.</p>
+
+<h2>D-delen bremser i tide</h2>
+<p>D står for <strong>derivat</strong>, som betyr hvor fort noe endrer seg. D-delen ser ikke på hvor stort avviket er, men på hvor fort det endrer seg.</p>
+<p>Tenk deg at temperaturen i tanken stiger raskt mot settpunktet. P-delen og I-delen gir fortsatt mye damp, fordi det ennå er for kaldt. D-delen merker at temperaturen stiger fort, og struper dampen litt <em>før</em> settpunktet er nådd. Den virker som en brems som hindrer at måleverdien skyter over.</p>
+<p>Hvor sterk D-delen er, stilles inn med <strong>derivattiden</strong> (T<sub>d</sub>). Lang derivattid gir sterk D-del. Står derivattiden på null, er D-delen slått av. En regulator med alle tre delene kalles en <strong>PID-regulator</strong>.</p>
+
+<h3>Hvorfor D-delen brukes lite</h3>
+<p>D-delen reagerer på alle raske endringer i måleverdien, også på små, tilfeldige hopp som ikke betyr noe. Slike hopp kalles <strong>støy</strong>. Mange mengdemålinger og nivåmålinger har mye støy, for eksempel fordi væsken bølger eller strømmer urolig. Da får D-delen ventilen til å rykke fram og tilbake hele tiden.</p>
+<p>D-delen er mest nyttig i langsomme prosesser med lite støy, som temperatur i store tanker og reaktorer. De fleste regulatorer i et prosessanlegg er derfor PI-regulatorer.</p>
+
+<h2>P, I og D sammen</h2>
+<p>I en PID-regulator regnes de tre delene ut hver for seg og legges sammen til ett pådrag:</p>
+<p>\[ \text{pådrag} = \text{P-del} + \text{I-del} + \text{D-del} \]</p>
+<table>
+  <thead><tr><th>Del</th><th>Reagerer på</th><th>Fordel</th><th>Ulempe hvis den er for sterk</th></tr></thead>
+  <tbody>
+    <tr><td><strong>P</strong></td><td>Hvor stort avviket er nå</td><td>Reagerer med en gang</td><td>Svingninger. Alene gir den varig avvik.</td></tr>
+    <tr><td><strong>I</strong></td><td>Avviket summert over tid</td><td>Fjerner det varige avviket</td><td>Måleverdien skyter over, og prosessen kan svinge.</td></tr>
+    <tr><td><strong>D</strong></td><td>Hvor fort avviket endrer seg</td><td>Bremser før måleverdien skyter over</td><td>Ventilen rykker fram og tilbake på grunn av støy.</td></tr>
+  </tbody>
+</table>
+<p>En enkel huskeregel: P ser på <em>nå</em>, I ser på det som har <em>vært</em>, og D prøver å se hva som <em>kommer</em>.</p>
+
+<h2>Hvilken regulator brukes hvor?</h2>
+<table>
+  <thead><tr><th>Sløyfe</th><th>Vanlig regulator</th><th>Hvorfor</th></tr></thead>
+  <tbody>
+    <tr><td>Mengde</td><td>PI</td><td>Rask prosess med mye støy. D-del gir uro.</td></tr>
+    <tr><td>Trykk</td><td>PI</td><td>Settpunktet må holdes uten varig avvik.</td></tr>
+    <tr><td>Nivå i buffertank</td><td>P eller svak PI</td><td>Et lite avvik gjør ikke noe. Jevn strøm ut er viktigere.</td></tr>
+    <tr><td>Temperatur</td><td>PI eller PID</td><td>Langsom prosess. D-delen kan hindre at temperaturen skyter over.</td></tr>
+  </tbody>
+</table>
+<p>Tabellen viser det vanlige, ikke en fast regel. Hvilken regulator og hvilke innstillinger som er best, avhenger av prosessen. Innstillingene bestemmes av instrumentteknikere eller prosessingeniører når sløyfa settes i drift.</p>
+
+<h2>Pådraget forteller deg noe</h2>
+<p>Fordi I-delen fortsetter å justere til avviket er borte, er pådraget fra en PI-regulator et godt bilde på hva prosessen trenger. Det kan du bruke når du følger med på anlegget:</p>
+<ul>
+  <li>Pådraget har ligget rundt 60 % i flere uker, men har nå krøpet opp til 85 %. Prosessen trenger mer enn før. Kanskje har det kommet belegg på varmespiralen, så varmen går dårligere over til væsken, eller damptrykket er lavere enn før.</li>
+  <li>Pådraget står på 100 % og avviket blir ikke borte. Regulatoren har gjort alt den kan. Feilen er et annet sted: for lite damp, en ventil som henger, eller en måler som viser feil.</li>
+</ul>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Mengderegulatoren som ikke når settpunktet</div>
+  <p>En PI-regulator skal holde mengden råstoff inn til en reaktor på 12,0 m³/h. Måleverdien er 10,5 m³/h, og pådraget til ventilen har sakte steget til 100 % i løpet av en halvtime.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Avviket er positivt, så det strømmer for lite. I-delen har åpnet ventilen mer og mer, slik den skal.</li>
+    <li>Ventilen står helt åpen, men mengden når ikke settpunktet. Regulatoren kan ikke gjøre mer.</li>
+    <li>Sjekk det som kan begrense strømmen: Går pumpa som den skal? Er det et filter som er i ferd med å gå tett? Er nivået i tanken pumpa suger fra, for lavt?</li>
+    <li>Sjekk at ventilen faktisk er åpen ute i anlegget, og at mengdemåleren viser riktig.</li>
+    <li>Meld fra til skiftleder, og skriv det i skiftloggen.</li>
+  </ol>
+  <p><strong>Det du lærer:</strong> Et pådrag som står fast på 0 % eller 100 %, betyr at sløyfa har nådd grensen sin. Da må du lete etter årsaken i prosessen eller utstyret, ikke i regulatoren.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Fra manuell til auto</div>
+  <ul>
+    <li>Før du setter en regulator tilbake fra manuell til auto, sjekk at måleverdien er i nærheten av settpunktet. Er avviket stort, kan regulatoren gjøre et kraftig utslag på ventilen.</li>
+    <li>Følg med på trenden etterpå til prosessen har roet seg.</li>
+    <li>Innstillingene for P, I og D skal bare endres av dem som har ansvar og opplæring for det, etter bedriftens prosedyre.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva gjør I-delen i en PI-regulator?</p>
+  <ul>
+    <li>Reagerer på hvor fort avviket endrer seg</li>
+    <li data-riktig>Fortsetter å endre pådraget så lenge det er et avvik, og fjerner slik det varige avviket</li>
+    <li>Gir et fast arbeidspunkt på 50 %</li>
+  </ul>
+  <p class="forklaring">I-delen summerer avviket over tid. Den slutter først å endre pådraget når avviket er null. Derfor blir det ikke noe varig avvik.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva skjer hvis I-delen er for sterk (integraltiden for kort)?</p>
+  <ul>
+    <li>Det blir et stort varig avvik.</li>
+    <li data-riktig>Måleverdien skyter over settpunktet, og prosessen kan begynne å svinge.</li>
+    <li>Regulatoren går over i manuell.</li>
+  </ul>
+  <p class="forklaring">En for sterk I-del har åpnet ventilen for mye når måleverdien når settpunktet. Da skyter den over, og prosessen kan svinge.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva reagerer D-delen på?</p>
+  <ul>
+    <li>Hvor stort avviket er</li>
+    <li>Hvor lenge avviket har vart</li>
+    <li data-riktig>Hvor fort avviket endrer seg</li>
+  </ul>
+  <p class="forklaring">D-delen ser på hvor fort måleverdien endrer seg, og bremser før den skyter over settpunktet.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor brukes D-delen sjelden i mengderegulatorer?</p>
+  <ul>
+    <li>Fordi mengde ikke kan reguleres</li>
+    <li data-riktig>Fordi mengdemålinger ofte har mye støy, som får D-delen til å rykke i ventilen</li>
+    <li>Fordi mengderegulatorer alltid står i manuell</li>
+  </ul>
+  <p class="forklaring">D-delen reagerer på alle raske endringer, også støy. I raske prosesser med urolige målinger, som mengde, gir det en urolig ventil. PI er derfor det vanlige for mengde.</p>
+</div>
+
+<div class="quiz">
+  <p>En PI-regulator står i auto. Pådraget har stått på 100 % i en halvtime, og avviket blir ikke borte. Hva betyr det?</p>
+  <ul>
+    <li>Regulatoren er stilt inn feil og må tunes.</li>
+    <li>Alt er i orden. Det tar bare tid.</li>
+    <li data-riktig>Sløyfa har nådd grensen sin. Årsaken må letes etter i prosessen eller utstyret.</li>
+  </ul>
+  <p class="forklaring">Regulatoren har åpnet ventilen helt og kan ikke gjøre mer. Sjekk for eksempel om ventilen faktisk er åpen, om pumpa går, om noe er tett, eller om måleren viser feil.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>I-del</td><td>Den delen av regulatoren som summerer avviket over tid og endrer pådraget så lenge det er et avvik. Fjerner varig avvik.</td><td>integral action</td></tr>
+    <tr><td>PI-regulator</td><td>Regulator med P-del og I-del. Den vanligste regulatoren i prosessanlegg.</td><td>PI controller</td></tr>
+    <tr><td>integraltid</td><td>Innstilling (T<sub>i</sub>) for hvor raskt I-delen endrer pådraget. Kort integraltid gir sterk I-del.</td><td>integral time (Ti)</td></tr>
+    <tr><td>integratoroppvinding</td><td>At I-delen fortsetter å vokse mens ventilen allerede står helt åpen eller helt stengt, slik at måleverdien skyter langt over når prosessen tar seg opp.</td><td>integral windup</td></tr>
+    <tr><td>D-del</td><td>Den delen av regulatoren som reagerer på hvor fort avviket endrer seg, og bremser før måleverdien skyter over settpunktet.</td><td>derivative action</td></tr>
+    <tr><td>derivattid</td><td>Innstilling (T<sub>d</sub>) for hvor sterk D-delen er. Derivattid null betyr at D-delen er slått av.</td><td>derivative time (Td)</td></tr>
+    <tr><td>PID-regulator</td><td>Regulator med P-del, I-del og D-del. De tre delene legges sammen til ett pådrag.</td><td>PID controller</td></tr>
+    <tr><td>støy</td><td>Små, raske og tilfeldige hopp i en måleverdi som ikke skyldes virkelige endringer i prosessen.</td><td>noise</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="p-regulering.html">P-regulering</a> forklarer forsterkning, svingninger og varig avvik.</li>
+  <li><a href="scada-og-dcs.html">SCADA og DCS</a> i emnet Styresystemer viser hvor regulatorene ligger, og hvordan operatøren setter dem i auto eller manuell.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
