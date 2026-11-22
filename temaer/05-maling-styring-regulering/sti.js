@@ -54,10 +54,10 @@ KPL.sti("05-maling-styring-regulering", [
   {
     emne: "Styresystemer",
     sider: [
-      { tittel: "PLS", status: "planlagt" },
-      { tittel: "SCADA og DCS", status: "planlagt" },
-      { tittel: "Operatørbilder og alarmer", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "pls.html", tittel: "PLS", type: "fagstoff", status: "ferdig" },
+      { fil: "scada-og-dcs.html", tittel: "SCADA og DCS", type: "fagstoff", status: "ferdig" },
+      { fil: "operatorbilder-og-alarmer.html", tittel: "Operatørbilder og alarmer", meny: "Bilder og alarmer", type: "fagstoff", status: "ferdig" },
+      { fil: "styresystemer-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   }
 ]);

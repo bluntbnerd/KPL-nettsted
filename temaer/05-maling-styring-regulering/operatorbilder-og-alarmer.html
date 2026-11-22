@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operatørbilder og alarmer – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Operatørbilder og alarmer</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT7, PT8</div>
+
+<p class="ingress">Som operatør ser du anlegget gjennom skjermene i kontrollrommet. Skjermbildene viser hvordan anlegget går, og alarmene sier fra når noe må gjøres. Her lærer du å lese et prosessbilde, betjene utstyr fra skjermen og håndtere en alarm på riktig måte.</p>
+
+<h2>Prosessbildene</h2>
+<p>På siden om <a href="scada-og-dcs.html">SCADA og DCS</a> lærte du at et <strong>prosessbilde</strong> viser en del av anlegget som en tegning. Bildene er ordnet i nivåer, fra det store bildet til detaljene:</p>
+<ul>
+  <li><strong>Oversiktsbilde.</strong> Hele anlegget på ett bilde, med de viktigste måleverdiene. Her ser du raskt om alt går normalt.</li>
+  <li><strong>Områdebilde.</strong> Én del av anlegget, for eksempel tankanlegget eller reaktoren, med alle tanker, pumper, ventiler og målinger.</li>
+  <li><strong>Detaljbilde.</strong> Ett utstyr eller én regulator, ofte med trend og alle innstillinger.</li>
+</ul>
+<p>Du går fra oversikten og ned i detaljene ved å klikke. Øverst på skjermen ser du ofte hvor du er, for eksempel «Oversikt › Tankanlegg».</p>
+
+<figure>
+  <img src="bilder/operatorbilde-alarm.svg" alt="Et skjermbilde med grå bakgrunn og tittelen Tankanlegg, områdebilde. Til venstre går et rør inn gjennom pumpe P-101, som er fylt mørk og merket går, og opp til toppen av tank T-101. Tanken er nesten full. Ved siden av tanken står nivåmålingen LI-101 med verdien 86 prosent i en boks med gul ramme og et gult merke med bokstaven H. Under står temperaturen TI-103 med 24 grader i en vanlig grå boks. Fra bunnen av tanken går et rør ut gjennom ventil V-102, som er tegnet uten fyll og merket stengt. Til høyre er et lite vindu for pumpe P-101 fødepumpe med status går, driftsform manuell, forrigling ingen aktiv, og knappene Start, Stopp, Auto og Manuell. Nederst er en alarmliste med to linjer. Den første er gul: klokka 03:12:40, LAH-101, høyt nivå i tank T-101, prioritet middels, ny og ikke kvittert. Den andre er grå: klokka 02:58:05, TAL-205, lav temperatur ut av varmeveksler, prioritet lav, kvittert og aktiv." width="680">
+  <figcaption>Figur: Et områdebilde av et tankanlegg. Bakgrunnen er grå, og farge brukes nesten bare der noe er unormalt. Her har nivået i tanken gått over grensen for høy alarm. Til høyre er betjeningsvinduet for pumpa, og nederst er alarmlisten. Bildet er laget for denne siden, og ekte systemer ser litt forskjellige ut.</figcaption>
+</figure>
+
+<h2>Slik leser du et prosessbilde</h2>
+<ul>
+  <li><strong>Utstyr</strong> er tegnet med enkle symboler: tanker, pumper, ventiler og rør. Hvert utstyr har en <strong>tag</strong>, et fast navn med bokstaver og tall som står både på skjermen og på utstyret, for eksempel P-101 for en pumpe.</li>
+  <li><strong>Måleverdier</strong> står i små bokser med tag, tall og enhet, for eksempel LI-101 86 %.</li>
+  <li><strong>Status</strong> vises med fyll eller farge. I figuren er en pumpe som går, fylt mørk. En ventil som er stengt, er tegnet uten fyll.</li>
+  <li><strong>Farge betyr noe.</strong> I moderne bilder er bakgrunnen grå og det meste grått. Da springer en alarm i gult eller rødt rett i øynene.</li>
+</ul>
+<p>Fargene er ikke like på alle anlegg. Noen steder betyr grønt at en pumpe går, andre steder betyr rødt det samme. Lær forklaringen til fargene og symbolene der du jobber, før du betjener noe.</p>
+
+<h2>Betjeningsvinduet</h2>
+<p>Klikker du på en pumpe, en ventil eller en regulator, åpnes et lite <strong>betjeningsvindu</strong>. Der kan du</p>
+<ul>
+  <li>se status, for eksempel om pumpa går eller står</li>
+  <li>starte og stoppe, eller åpne og lukke</li>
+  <li>velge auto eller manuell</li>
+  <li>endre settpunktet, hvis det er en regulator</li>
+  <li>se om en forrigling hindrer utstyret i å starte</li>
+</ul>
+<p>Mange systemer ber deg bekrefte før en kommando sendes, for eksempel «Vil du stoppe P-101?». Les hva det står, og sjekk at du har valgt riktig utstyr. Det er lett å trykke på feil pumpe.</p>
+
+<h2>Hva er en alarm?</h2>
+<p>En <strong>alarm</strong> er et varsel om at noe i anlegget er unormalt og krever at operatøren gjør noe. En alarm kommer med lyd, og den blinker i prosessbildet og i <strong>alarmlisten</strong>.</p>
+<p>De fleste alarmer kommer når en måleverdi passerer en <strong>alarmgrense</strong>:</p>
+<table>
+  <thead><tr><th>Grense</th><th>Navn</th><th>Eksempel</th></tr></thead>
+  <tbody>
+    <tr><td><strong>HH</strong></td><td>høy-høy</td><td>Nivået er 90 %. Ofte stopper en forrigling utstyret samtidig.</td></tr>
+    <tr><td><strong>H</strong></td><td>høy</td><td>Nivået er 80 %. Operatøren skal finne årsaken og gripe inn.</td></tr>
+    <tr><td><strong>L</strong></td><td>lav</td><td>Nivået er 20 %. Operatøren skal finne årsaken og gripe inn.</td></tr>
+    <tr><td><strong>LL</strong></td><td>lav-lav</td><td>Nivået er 10 %. Ofte stopper en forrigling pumpa, så den ikke går tørr.</td></tr>
+  </tbody>
+</table>
+<p>Grensen står med bokstaver i taggen. Slik leser du bokstavene:</p>
+<ul>
+  <li><strong>Første bokstav</strong> sier hva som måles: L = nivå, T = temperatur, P = trykk.</li>
+  <li><strong>Bokstavene etter</strong> sier hva instrumentet gjør: I = viser verdien, T = giver, A = alarm.</li>
+  <li><strong>H eller L til slutt</strong> betyr høy eller lav.</li>
+</ul>
+<p>LAH betyr altså nivå, alarm, høy. TAL betyr temperatur, alarm, lav. LI-101 er en nivåmåling som vises på skjermen. Legg merke til at L kan bety både nivå og lav, alt etter hvor i taggen den står. Tallene for grensene i tabellen er bare eksempler. De er bestemt for hvert anlegg.</p>
+<p>Ikke alt som skjer, er en alarm. At en pumpe starter eller en sekvens er ferdig, blir lagret i hendelsesloggen som en <strong>melding</strong>. En melding krever ikke at du gjør noe.</p>
+
+<h2>Prioritet</h2>
+<p>Alarmene har ulik <strong>prioritet</strong>, ofte høy, middels og lav. Prioriteten sier hvor alvorlig det er og hvor fort du må handle. En alarm med høy prioritet kan bety fare for folk, miljø eller utstyr hvis du ikke gjør noe raskt. Den vises ofte i rødt. Middels er ofte gul.</p>
+<p>Kommer det flere alarmer samtidig, tar du den med høyest prioritet først.</p>
+
+<h2>Alarmlisten og kvittering</h2>
+<p>Alarmlisten viser alle aktive alarmer og alarmer som ikke er kvittert, med tid, tag, beskrivelse og prioritet. En alarm kan være i ulike tilstander:</p>
+<ul>
+  <li><strong>Ny, ikke kvittert:</strong> Alarmen har nettopp kommet. Den blinker, og det er lyd.</li>
+  <li><strong>Kvittert, aktiv:</strong> Du har sett alarmen, men måleverdien er fortsatt utenfor grensen.</li>
+  <li><strong>Borte, ikke kvittert:</strong> Måleverdien er tilbake innenfor grensen, men ingen har sett alarmen ennå.</li>
+</ul>
+<p>Å <strong>kvittere</strong> betyr å bekrefte at du har sett alarmen. Da stopper blinkingen og lyden. Men kvitteringen retter ikke feilen. Alarmen blir stående i listen til måleverdien er tilbake innenfor grensen.</p>
+
+<h2>Slik håndterer du en alarm</h2>
+<ol>
+  <li><strong>Se</strong> hvilken alarm det er, og hvilken prioritet den har.</li>
+  <li><strong>Kvitter</strong> alarmen, så du og kollegaene dine vet at den er sett.</li>
+  <li><strong>Finn ut hva som skjer.</strong> Gå til prosessbildet. Se på trenden og på målinger som henger sammen med den. Er alarmen ekte, eller kan måleren vise feil?</li>
+  <li><strong>Gjør tiltak.</strong> Følg bedriftens prosedyre for alarmen, hvis det finnes en. Spør skiftleder hvis du er usikker.</li>
+  <li><strong>Følg med</strong> til måleverdien er tilbake til normalt.</li>
+  <li><strong>Skriv det ned</strong> i skiftloggen, og meld fra om feil på utstyr.</li>
+</ol>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Høyt nivå i tanken</div>
+  <p>Se på figuren. Klokka 03:12 kommer alarmen LAH-101, høyt nivå i tank T-101. Operatøren kvitterer og åpner områdebildet.</p>
+  <ul>
+    <li>Nivået har steget fra 80 % til 86 % siden alarmen kom, og det stiger fortsatt.</li>
+    <li>Fødepumpa P-101 går, så det kommer væske inn.</li>
+    <li>Ventilen V-102 på utløpet er stengt, så ingenting går ut.</li>
+  </ul>
+  <p>Det henger sammen, så målingen er trolig riktig. Operatøren sjekker hendelsesloggen. Den viser at V-102 ble stengt for en halvtime siden fordi tanken etter skulle tømmes. Operatøren stopper P-101 fra betjeningsvinduet, ser at nivået slutter å stige, og skriver det i skiftloggen.</p>
+  <p>Hvis ingen hadde grepet inn, ville høy-høy-alarmen LAHH stoppet pumpa ved 90 %. Den er det siste automatiske vernet, og den skal ikke være den vanlige måten å stoppe pumpa på. Du kan prøve dette selv i øvingen <a href="../01-hms/06-overfylling.html">Overfylling av tank</a> i HMS.</p>
+</div>
+
+<h2>For mange alarmer</h2>
+<p>Et godt alarmsystem gir bare noen få alarmer i timen når anlegget går normalt. Hver alarm skal bety noe og kreve en handling.</p>
+<p>Når noe stort skjer, for eksempel at en kompressor stopper, kan det komme hundre alarmer på få minutter. Det kalles en <strong>alarmflom</strong>. Da er det lett å miste oversikten og overse den alarmen som virkelig betyr noe. Ta alarmene med høy prioritet først, og be om hjelp.</p>
+<p>Noen alarmer kommer og går hele tiden uten at noe er galt. De kalles <strong>plagsomme alarmer</strong>. Det er fristende å bare kvittere dem uten å se på dem. Meld fra om dem i stedet, så kan grensen eller måleren rettes. Et alarmsystem der folk slutter å reagere, er farlig.</p>
+<p>Det går an å <strong>blokkere en alarm</strong>. Det betyr å slå den av midlertidig i styresystemet, så den ikke kommer selv om grensen passeres. Det kan være nødvendig mens en måler repareres, men det krever tillatelse.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Alarmer</div>
+  <ul>
+    <li><strong>Kvittering er ikke løsning.</strong> Finn alltid ut hvorfor alarmen kom.</li>
+    <li><strong>Blokker aldri en alarm uten tillatelse.</strong> En blokkert alarm sier ikke fra når noe går galt. Blokkering skal gjøres etter bedriftens prosedyre, skrives ned og fjernes så snart det er mulig.</li>
+    <li><strong>Stol ikke blindt på at alarmen er feil.</strong> Tro at alarmen er ekte til du har sjekket. Er du usikker, gå ut og se, eller spør.</li>
+    <li><strong>En høy-høy-alarm som stopper utstyr</strong>, skal tilbakestilles først når årsaken er funnet og rettet.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva betyr det å kvittere en alarm?</p>
+  <ul>
+    <li>At feilen er rettet</li>
+    <li data-riktig>At du bekrefter at du har sett alarmen</li>
+    <li>At alarmen slås av for resten av skiftet</li>
+  </ul>
+  <p class="forklaring">Kvittering stopper blinkingen og lyden, og viser at alarmen er sett. Feilen må du fortsatt finne og rette.</p>
+</div>
+
+<div class="quiz">
+  <p>Det kommer tre alarmer samtidig: én med lav, én med middels og én med høy prioritet. Hvilken tar du først?</p>
+  <ul>
+    <li>Den som kom først</li>
+    <li data-riktig>Den med høy prioritet</li>
+    <li>Den som er lettest å rette</li>
+  </ul>
+  <p class="forklaring">Prioriteten sier hvor alvorlig alarmen er og hvor fort du må handle. Høy prioritet først.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva betyr bokstavene LAHH?</p>
+  <ul>
+    <li>Lav alarm på et høyt nivå</li>
+    <li data-riktig>Høy-høy-alarm på nivå</li>
+    <li>Lav-lav-alarm på nivå</li>
+  </ul>
+  <p class="forklaring">L står for nivå, A for alarm og HH for høy-høy. Det er den høyeste grensen, og den stopper ofte utstyr samtidig.</p>
+</div>
+
+<div class="quiz">
+  <p>En alarm kommer og går mange ganger i timen, uten at noe ser ut til å være galt. Hva bør du gjøre?</p>
+  <ul>
+    <li>Blokkere den, så den ikke forstyrrer</li>
+    <li>Kvittere den hver gang uten å se på den</li>
+    <li data-riktig>Sjekke den og melde fra, så grensen eller måleren kan rettes</li>
+  </ul>
+  <p class="forklaring">Plagsomme alarmer gjør at folk slutter å reagere. Meld fra, så kan de rettes. Blokkering krever tillatelse etter prosedyre.</p>
+</div>
+
+<div class="quiz">
+  <p>I prosessbildet er det meste grått, men én måleverdi har gul ramme. Hva betyr det mest sannsynlig?</p>
+  <ul>
+    <li>Måleren er ny.</li>
+    <li data-riktig>Måleverdien har passert en alarmgrense.</li>
+    <li>Pumpa ved siden av går.</li>
+  </ul>
+  <p class="forklaring">I moderne prosessbilder brukes farge nesten bare når noe er unormalt. Gult er ofte en alarm med middels prioritet. Sjekk alltid forklaringen til fargene på ditt anlegg.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>prosessbilde</td><td>Skjermbilde som viser en del av anlegget som en tegning, med måleverdier og status for pumper og ventiler.</td><td>process display</td></tr>
+    <tr><td>oversiktsbilde</td><td>Prosessbilde som viser hele anlegget med de viktigste måleverdiene.</td><td>overview display</td></tr>
+    <tr><td>områdebilde</td><td>Prosessbilde som viser én del av anlegget, for eksempel tankanlegget, med alle tanker, pumper, ventiler og målinger.</td><td>area display</td></tr>
+    <tr><td>detaljbilde</td><td>Prosessbilde som viser ett utstyr eller én regulator, ofte med trend og alle innstillinger.</td><td>detail display</td></tr>
+    <tr><td>tag</td><td>Den faste merkingen til en utstyrsdel eller et instrument, med bokstaver og tall, for eksempel P-101. Den står både på skjermen, i skjemaene og på utstyret i anlegget. Kalles også tagnummer.</td><td>tag number</td></tr>
+    <tr><td>betjeningsvindu</td><td>Lite vindu som åpnes når du klikker på utstyr i prosessbildet. Der kan du starte, stoppe, velge auto eller manuell og endre settpunkt.</td><td>faceplate</td></tr>
+    <tr><td>alarm</td><td>Varsel om at noe i anlegget er unormalt og krever at operatøren gjør noe.</td><td>alarm</td></tr>
+    <tr><td>alarmgrense</td><td>Verdien en måling må passere for at alarmen skal komme, for eksempel høy grense på 80 %.</td><td>alarm limit</td></tr>
+    <tr><td>alarmliste</td><td>Liste på skjermen over aktive alarmer og alarmer som ikke er kvittert, med tid, tag, beskrivelse og prioritet.</td><td>alarm list</td></tr>
+    <tr><td>prioritet</td><td>Hvor alvorlig en alarm er og hvor fort operatøren må handle, ofte høy, middels eller lav.</td><td>priority</td></tr>
+    <tr><td>kvittere</td><td>Å bekrefte at du har sett en alarm. Lyden og blinkingen stopper, men feilen er ikke rettet.</td><td>acknowledge</td></tr>
+    <tr><td>melding</td><td>Beskjed i hendelsesloggen om noe som har skjedd, for eksempel at en pumpe startet. Krever ingen handling.</td><td>event</td></tr>
+    <tr><td>alarmflom</td><td>Når det kommer så mange alarmer på kort tid at operatøren ikke rekker å håndtere dem.</td><td>alarm flood</td></tr>
+    <tr><td>blokkere en alarm</td><td>Å slå av en alarm midlertidig i styresystemet, så den ikke kommer selv om grensen passeres. Krever tillatelse etter prosedyre.</td><td>shelve / inhibit an alarm</td></tr>
+    <tr><td>plagsom alarm</td><td>Alarm som kommer og går ofte uten at noe er galt, og som derfor bør rettes.</td><td>nuisance alarm</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../01-hms/06-overfylling.html">Øv: Overfylling av tank</a> i HMS lar deg prøve høy alarm og høy-høy-alarm i en simulering.</li>
+  <li><a href="scada-og-dcs.html">SCADA og DCS</a> forklarer trender, historikk og hendelseslogg.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

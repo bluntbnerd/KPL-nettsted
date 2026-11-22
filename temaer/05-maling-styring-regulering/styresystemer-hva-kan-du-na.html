@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Styresystemer – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT7, PT8</div>
+
+<p class="ingress">Dette er siste steg i emnet «Styresystemer». Gå gjennom sjekklisten og quizen. Står du fast, går du tilbake til siden det gjelder. I dette emnet har du sett hvordan målinger, styring og regulering kommer sammen i styresystemet som du bruker i kontrollrommet.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare hva en PLS er, og hvorfor den brukes i industrien i stedet for en vanlig PC. (<a href="pls.html">PLS</a>)</li>
+  <li>Jeg kan forklare hva innganger, program og utganger er, og gi eksempler på hver. (<a href="pls.html">PLS</a>)</li>
+  <li>Jeg kan forklare forskjellen på digitale og analoge signaler, og regne om et signal på 4–20 mA til en måleverdi. (<a href="pls.html">PLS</a>)</li>
+  <li>Jeg kan forklare programsyklusen: les innganger, kjør programmet, skriv utganger. (<a href="pls.html">PLS</a>)</li>
+  <li>Jeg kan forklare hva feilsikker kobling er, og hvorfor viktige vern kobles slik. (<a href="pls.html">PLS</a>)</li>
+  <li>Jeg kan bruke lampene på PLS-en til å si om en feil sitter før eller etter PLS-en. (<a href="pls.html">PLS</a>)</li>
+  <li>Jeg kan beskrive de tre lagene i et styresystem, og forklare at reglene ligger i styringene og ikke i skjermene. (<a href="scada-og-dcs.html">SCADA og DCS</a>)</li>
+  <li>Jeg kan forklare hva SCADA og DCS er, og hva som er forskjellen. (<a href="scada-og-dcs.html">SCADA og DCS</a>)</li>
+  <li>Jeg kan forklare hva redundans, historikk, trend og hendelseslogg er, og hvordan jeg bruker dem. (<a href="scada-og-dcs.html">SCADA og DCS</a>)</li>
+  <li>Jeg kan lese et prosessbilde og bruke et betjeningsvindu til å starte, stoppe og velge auto eller manuell. (<a href="operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a>)</li>
+  <li>Jeg kan forklare alarmgrensene HH, H, L og LL, prioritet og hva det betyr å kvittere en alarm. (<a href="operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a>)</li>
+  <li>Jeg kan håndtere en alarm steg for steg, og forklare hvorfor alarmflom og plagsomme alarmer er farlige. (<a href="operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a>)</li>
+  <li>Jeg kan forklare hvorfor tvangsstyring og blokkering av alarmer krever tillatelse, og hvorfor sikkerhetssystemet er eget. (alle sidene)</li>
+</ul>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>Hva står PLS for?</p>
+  <ul>
+    <li>Prosessens logiske skjerm</li>
+    <li data-riktig>Programmerbar logisk styring</li>
+    <li>Personlig styringssystem</li>
+  </ul>
+  <p class="forklaring">PLS betyr programmerbar logisk styring. På engelsk heter den PLC.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilket av disse er en digital utgang fra en PLS?</p>
+  <ul>
+    <li>Signal fra en trykkgiver</li>
+    <li data-riktig>Signal som starter en pumpe</li>
+    <li>Signal som stiller en reguleringsventil til 40 % åpen</li>
+  </ul>
+  <p class="forklaring">Startsignalet til en pumpe har bare to verdier, start eller stopp, og går ut fra PLS-en. Trykkgiveren er en inngang, og signalet til reguleringsventilen er analogt.</p>
+</div>
+
+<div class="quiz">
+  <p>En temperaturgiver har måleområdet 0–200 °C og sender 8 mA. Hvilken temperatur viser PLS-en?</p>
+  <ul>
+    <li>40 °C</li>
+    <li data-riktig>50 °C</li>
+    <li>80 °C</li>
+  </ul>
+  <p class="forklaring">Signalområdet er 16 mA (fra 4 til 20). 8 mA er 4 mA over nullpunktet, altså en firedel av området. En firedel av 200 °C er 50 °C.</p>
+</div>
+
+<div class="quiz">
+  <p>Ledningen fra et feilsikkert koblet høynivåvern blir brutt. Hva skjer?</p>
+  <ul>
+    <li>Ingenting, PLS-en merker ikke bruddet.</li>
+    <li data-riktig>PLS-en tror nivået er høyt og stopper pumpa.</li>
+    <li>Pumpa går fortere for å fylle tanken.</li>
+  </ul>
+  <p class="forklaring">Ved feilsikker kobling er signalet på når alt er i orden. Et brudd gir samme signal som høyt nivå, og anlegget går til en trygg tilstand.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilket styresystem er typisk for et stort raffineri med hundrevis av regulatorer?</p>
+  <ul>
+    <li data-riktig>DCS</li>
+    <li>Én enkelt PLS</li>
+    <li>En lokal måler</li>
+  </ul>
+  <p class="forklaring">Et DCS er laget for store prosessanlegg med mange regulatorer, og har ofte dobbelt utstyr fra starten.</p>
+</div>
+
+<div class="quiz">
+  <p>Nettverket mellom kontrollrommet og en PLS faller ut. Hva skjer med den delen av anlegget?</p>
+  <ul>
+    <li>Den stopper med en gang.</li>
+    <li data-riktig>PLS-en fortsetter å kjøre programmet, men operatøren ser ikke måleverdiene.</li>
+    <li>Alle utgangene går på samtidig.</li>
+  </ul>
+  <p class="forklaring">Programmet kjører i PLS-en. Den fortsetter vanligvis med de siste innstillingene, men operatøren mister oversikten. Da må bedriftens prosedyre følges.</p>
+</div>
+
+<div class="quiz">
+  <p>Du vil finne ut hvem som endret settpunktet på en regulator i går kveld. Hvor ser du?</p>
+  <ul>
+    <li>I trenden</li>
+    <li data-riktig>I hendelsesloggen</li>
+    <li>I alarmlisten</li>
+  </ul>
+  <p class="forklaring">Hendelsesloggen viser hva som har skjedd og når, også endringer operatørene har gjort. Derfor logger hver operatør seg inn med egen bruker.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er riktig om en alarm du har kvittert?</p>
+  <ul>
+    <li>Feilen er rettet, og alarmen forsvinner.</li>
+    <li data-riktig>Lyden og blinkingen stopper, men alarmen står i listen til måleverdien er normal igjen.</li>
+    <li>Alarmen blir blokkert resten av skiftet.</li>
+  </ul>
+  <p class="forklaring">Kvittering viser bare at alarmen er sett. Alarmen er aktiv så lenge måleverdien er utenfor grensen.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva betyr bokstavene TAL?</p>
+  <ul>
+    <li>Tank, alarm, lekkasje</li>
+    <li data-riktig>Temperatur, alarm, lav</li>
+    <li>Trykk, alarm, lav</li>
+  </ul>
+  <p class="forklaring">T står for temperatur, A for alarm og L for lav. Trykk har bokstaven P.</p>
+</div>
+
+<div class="quiz">
+  <p>En kompressor stopper, og det kommer 80 alarmer på to minutter. Hva gjør du først?</p>
+  <ul>
+    <li>Kvitterer alle alarmene så fort som mulig</li>
+    <li data-riktig>Tar alarmene med høy prioritet først og ber om hjelp</li>
+    <li>Blokkerer alarmene til det blir roligere</li>
+  </ul>
+  <p class="forklaring">Ved en alarmflom er det lett å overse det viktigste. Ta høy prioritet først, og få hjelp. Blokkering krever tillatelse.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Slike spørsmål kan du få i en fagsamtale eller til eksamen. Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Forklar hvordan en PLS styrer en pumpe som fyller en tank. Bruk ordene inngang, program og utgang.</summary>
+  <p>Startknappen, stoppknappen og høynivåvernet er koblet til inngangene. Programmet sier at pumpa skal starte når operatøren trykker start og høynivåvernet ikke er utløst, og stoppe når operatøren trykker stopp eller vernet løses ut. PLS-en leser inngangene, kjører programmet og setter utgangen til pumpa, om og om igjen mange ganger i sekundet.</p>
+</details>
+
+<details>
+  <summary>2. Operatøren trykker start, men pumpa går ikke. Utgangslampen på PLS-en lyser. Hva betyr det, og hva gjør du?</summary>
+  <p>Når utgangslampen lyser, sender PLS-en startsignalet. Programmet gjør altså jobben sin, og feilen sitter etter PLS-en, for eksempel i sikringen, et utløst motorvern, en arbeidsbryter ved motoren som står av, kontaktoren eller motoren. Som operatør beskriver jeg feilen tydelig og melder fra til elektriker eller automatiker. Arbeid i skap med strøm gjør bare fagfolk.</p>
+</details>
+
+<details>
+  <summary>3. Hva er forskjellen på SCADA og DCS? Hvorfor betyr forskjellen lite for operatøren?</summary>
+  <p>I et SCADA-system ligger styringen i PLS-er, som kan være fra ulike leverandører, og SCADA-programmet samler data og viser dem. Et DCS er ett helt system fra én leverandør, laget for store prosessanlegg, ofte med dobbelt utstyr. For operatøren virker begge på samme måte: prosessbilder, betjeningsvinduer, alarmer og trender.</p>
+</details>
+
+<details>
+  <summary>4. Hvorfor fortsetter anlegget å gå når skjermen på operatørstasjonen blir svart? Hva gjør du da?</summary>
+  <p>Forriglinger, sekvenser og regulatorer kjører i styringene, ikke i skjermene. Styringene fortsetter med de siste innstillingene. Jeg bytter til en annen operatørstasjon. Er alle skjermene borte, følger jeg bedriftens prosedyre, som kan si at anlegget skal stoppes på en trygg måte.</p>
+</details>
+
+<details>
+  <summary>5. Det kommer en høynivåalarm på en tank. Beskriv hvordan du håndterer den.</summary>
+  <p>Jeg ser hvilken alarm det er og hvilken prioritet den har, og kvitterer. Kvitteringen retter ikke feilen. Så går jeg til prosessbildet og ser om det henger sammen: Går pumpa inn? Er ventilen ut stengt? Stiger nivået i trenden? Hvis alarmen er ekte, gjør jeg tiltak etter prosedyren, for eksempel stopper pumpa. Jeg følger med til nivået er normalt, skriver det i skiftloggen og melder fra om feil på utstyr. Er jeg usikker, spør jeg skiftleder.</p>
+</details>
+
+<details>
+  <summary>6. Hvorfor er tvangsstyring i PLS-en og blokkering av alarmer farlig? Hva skal til for å gjøre det?</summary>
+  <p>Begge deler kan gjøre at et vern eller en alarm slutter å virke uten at noen merker det. Da kan en farlig situasjon utvikle seg uten varsel. Det skal bare gjøres med tillatelse etter bedriftens prosedyre, skrives ned og fjernes så snart jobben er ferdig. De viktigste vernene ligger i tillegg i et eget sikkerhetssystem (SIS).</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Gå tilbake til fagstoffsidene i dette emnet i læringsstien.</li>
+  <li>Prøv høy alarm og høy-høy-alarm i øvingen <a href="../01-hms/06-overfylling.html">Overfylling av tank</a> i HMS.</li>
+</ul>
+<p><small>Om kildene: Teksten og spørsmålene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLS – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>PLS</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Forriglinger, sekvenser og regulatorer må ligge et sted. I de fleste anlegg ligger de i en PLS, en liten og robust datamaskin i et skap. Den leser signalene fra anlegget, bestemmer hva som skal skje, og sender kommandoer til pumper og ventiler. Her lærer du hvordan en PLS er bygd opp og virker, og hvordan den kan hjelpe deg å finne feil.</p>
+
+<h2>Hva er en PLS?</h2>
+<p><strong>PLS</strong> står for <em>programmerbar logisk styring</em>. Det er en datamaskin laget for industrien. Den har ingen skjerm eller tastatur. Den sitter i et skap i et eget elektrorom og kjører det samme programmet hele tiden, døgnet rundt, ofte i mange år.</p>
+<p>En PLS er bygd for å tåle støv, varme, vibrasjoner og elektrisk støy fra store motorer. Den reagerer raskt, og den gjør nøyaktig det samme hver gang. Det er derfor den brukes til å styre maskiner og prosesser.</p>
+<p>Før PLS-en kom på slutten av 1960-tallet, ble styringen bygd med mange <strong>releer</strong>. Et relé er en bryter som slås av og på av strøm. Reglene for styringen lå i hvordan ledningene var koblet. Skulle noe endres, måtte en elektriker koble om. Med en PLS endrer man programmet i stedet.</p>
+
+<h2>Innganger, program og utganger</h2>
+<p>En PLS har tre hoveddeler som du må kjenne:</p>
+<ul>
+  <li><strong>Innganger.</strong> Hit kommer signalene fra anlegget, for eksempel fra trykkgivere, nivåbrytere og startknapper.</li>
+  <li><strong>Programmet.</strong> Prosessoren i PLS-en følger programmet og bestemmer hva som skal skje.</li>
+  <li><strong>Utganger.</strong> Herfra går signalene ut til anlegget, for eksempel for å starte en pumpe eller åpne en <strong>magnetventil</strong>, altså en ventil som åpnes og lukkes elektrisk.</li>
+</ul>
+<p>I tillegg har PLS-en en strømforsyning og en kobling til nettverket. Gjennom nettverket får operatørskjermen i kontrollrommet måleverdiene, og operatøren kan sende kommandoer, for eksempel «start pumpe». Det lærer du mer om på neste side.</p>
+
+<figure>
+  <img src="bilder/pls-oppbygning.svg" alt="Til venstre tre innganger: en startknapp og et høynivåvern, som begge er digitale og bare kan være av eller på, og en trykkgiver, som er analog og sender 4–20 mA. Piler går fra inngangene inn i en boks merket PLS. Inne i PLS-en står tre steg under hverandre: 1 les innganger, 2 kjør programmet, 3 skriv utganger. En pil går fra steg 3 tilbake til steg 1, og teksten sier at syklusen gjentas hele tiden. Fra PLS-en går piler ut til tre utganger til høyre: en pumpe som startes eller stoppes, en magnetventil som er åpen eller lukket, og en reguleringsventil som kan stå fra 0 til 100 prosent åpen. Under PLS-en går en stiplet linje merket nettverk ned til en operatørskjerm i kontrollrommet." width="680">
+  <figcaption>Figur: Signalene går inn i PLS-en, programmet bestemmer hva som skal skje, og signalene går ut til pumper og ventiler. Operatørskjermen er koblet til PLS-en gjennom et nettverk.</figcaption>
+</figure>
+
+<h2>Digitale og analoge signaler</h2>
+<p>Inngangene og utgangene finnes i to typer. Du så begge i figuren.</p>
+<table>
+  <thead><tr><th></th><th>Digitalt signal</th><th>Analogt signal</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hva det er</strong></td><td>Bare to verdier: av eller på</td><td>En verdi som kan ligge hvor som helst i et område</td></tr>
+    <tr><td><strong>Inngang, eksempel</strong></td><td>Startknapp, nivåbryter, signal om at en pumpe går</td><td>Trykkgiver, temperaturgiver eller nivåmåler som sender 4–20 mA</td></tr>
+    <tr><td><strong>Utgang, eksempel</strong></td><td>Start eller stopp en pumpe, åpne eller lukke en magnetventil, tenne en lampe</td><td>Signal til en reguleringsventil om hvor mye den skal åpne</td></tr>
+  </tbody>
+</table>
+<p>Et analogt signal på 4–20 mA gjør PLS-en om til et tall med riktig enhet. Har en trykkgiver måleområdet 0–10 bar, betyr 4 mA 0 bar og 20 mA 10 bar. Ligger signalet midt imellom, på 12 mA, viser PLS-en 5 bar. Mer om dette signalet lærer du i emnet Signaler og instrumentering.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Fra mA til måleverdi</div>
+  <p><strong>Oppgave:</strong> En temperaturgiver har måleområdet 0–200 °C og sender 16 mA. Hvilken temperatur viser PLS-en?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Signalet starter på 4 mA. Trekk fra 4 mA: 16 mA − 4 mA = 12 mA.</li>
+    <li>Hele signalområdet er 20 mA − 4 mA = 16 mA. Del på 16 mA for å finne hvor stor del av måleområdet signalet er: 12 / 16 = 0,75.</li>
+    <li>Gang med måleområdet: 0,75 · 200 °C = 150 °C.</li>
+  </ol>
+  <p><strong>Svar:</strong> PLS-en viser 150 °C.</p>
+</div>
+
+<h2>Syklusen: les, tenk, skriv</h2>
+<p>En PLS arbeider i en fast runde som kalles en <strong>programsyklus</strong>:</p>
+<ol>
+  <li><strong>Les innganger.</strong> PLS-en sjekker alle inngangene og husker verdiene.</li>
+  <li><strong>Kjør programmet.</strong> Den går gjennom programmet fra start til slutt, med verdiene den nettopp leste.</li>
+  <li><strong>Skriv utganger.</strong> Den setter alle utgangene slik programmet sa.</li>
+</ol>
+<p>Så begynner den på nytt. En runde tar vanligvis fra noen få til noen titalls millisekunder. PLS-en går altså gjennom programmet mange ganger i sekundet. For deg ser det ut som den reagerer med en gang.</p>
+
+<h2>Hva står i programmet?</h2>
+<p>Programmet inneholder reglene for anlegget. Det er de samme tingene du har lært om i emnene Styring og Regulering:</p>
+<ul>
+  <li><strong>Av/på-styring</strong>, for eksempel at en pumpe starter når nivået er lavt og stopper når det er høyt.</li>
+  <li><strong>Forriglinger</strong>, for eksempel at pumpa ikke kan starte hvis ventilen etter den er stengt.</li>
+  <li><strong>Sekvenser</strong>, for eksempel trinnene når en reaktor skal fylles, varmes opp og tømmes.</li>
+  <li><strong>Regulering</strong>, for eksempel en PID-regulator som holder temperaturen på settpunktet.</li>
+</ul>
+<p>Programmet skrives av en automatiker eller ingeniør på en PC og lastes over til PLS-en. Et vanlig programspråk er <strong>stigediagram</strong>, som ser ut som de gamle tegningene av relékoblinger. Et annet er funksjonsblokker, der hver blokk gjør én jobb, for eksempel en tidsforsinkelse eller en PID-regulator.</p>
+<p>Som operatør endrer du ikke programmet. Du bruker det. Du starter og stopper utstyr og endrer settpunkter fra skjermen, og programmet passer på at reglene blir fulgt.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: PLS-en fyller en tank</div>
+  <p>En tank fylles med en pumpe. PLS-en har tre innganger og én utgang:</p>
+  <ul>
+    <li>Inngang: startknapp (digital)</li>
+    <li>Inngang: stoppknapp (digital)</li>
+    <li>Inngang: høynivåvern i toppen av tanken (digital)</li>
+    <li>Utgang: pumpe (digital)</li>
+  </ul>
+  <p>Reglene i programmet, skrevet med vanlige ord:</p>
+  <ol>
+    <li>Når operatøren trykker start, og høynivåvernet <em>ikke</em> er utløst, starter pumpa.</li>
+    <li>Pumpa fortsetter å gå etter at startknappen er sluppet. PLS-en husker at den skal gå.</li>
+    <li>Pumpa stopper når operatøren trykker stopp, eller når høynivåvernet løses ut.</li>
+  </ol>
+  <p>Delen av regel 1 og 3 som gjelder høynivåvernet, er en forrigling. Den hindrer at pumpa starter eller går videre når tanken er full, selv om operatøren glemmer å stoppe den.</p>
+</div>
+
+<h2>Feilsikker kobling</h2>
+<p>Hva skjer hvis ledningen fra høynivåvernet blir revet av? Da kommer det ikke noe signal til PLS-en. Hvis «ikke noe signal» betydde «alt i orden», ville pumpa gått videre uten vern.</p>
+<p>Derfor kobles viktige vern som regel <strong>feilsikkert</strong>. Signalet er <em>på</em> når alt er i orden, og forsvinner når nivået blir for høyt. Et brudd i ledningen gir samme signal som høyt nivå, og PLS-en stopper pumpa. Et brudd i ledningen eller tap av strøm fører da til at anlegget går til en trygg tilstand.</p>
+
+<h2>PLS-en hjelper deg å finne feil</h2>
+<p>På inngangs- og utgangskortene i PLS-skapet har hver kanal en liten lampe, en lysdiode. Den lyser når signalet er på. Lampene, og statusbildet i styresystemet, viser deg hvor i kjeden en feil sitter.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Pumpa starter ikke</div>
+  <p>Operatøren trykker start på skjermen, men pumpa står stille. En automatiker sjekker PLS-en, og du skal forstå hva svarene betyr:</p>
+  <table>
+    <thead><tr><th>Hva automatikeren finner</th><th>Hva det betyr</th></tr></thead>
+    <tbody>
+      <tr><td>Programmet sier at pumpa er stoppet av en forrigling.</td><td>PLS-en gjør som den skal. Finn ut hvorfor forriglingen er aktiv, for eksempel høyt nivå eller en stengt ventil.</td></tr>
+      <tr><td>Utgangslampen for pumpa lyser, men pumpa går ikke.</td><td>PLS-en sender startsignal. Feilen sitter etter PLS-en, for eksempel en sikring, et utløst motorvern, en arbeidsbryter ved motoren som står av, kontaktoren (den store elektriske bryteren som slår motoren av og på), eller selve motoren.</td></tr>
+      <tr><td>Utgangslampen lyser ikke, og ingen forrigling er aktiv.</td><td>Startsignalet når ikke fram til programmet, eller programmet stopper pumpa av en annen grunn. Dette må en automatiker se på.</td></tr>
+    </tbody>
+  </table>
+  <p>Arbeid med strøm og PLS-skap gjøres av fagfolk med riktig opplæring. Som operatør er din jobb å beskrive feilen tydelig: hva du gjorde, hva du så på skjermen, og hva som skjedde ute i anlegget.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: PLS og sikkerhetssystem</div>
+  <ul>
+    <li><strong>Tvangsstyring.</strong> Med programmeringsverktøyet kan en inngang eller utgang låses på eller av, uansett hva som skjer i anlegget. Det kalles tvangsstyring. Da kan et vern slutte å virke uten at noen merker det. Tvangsstyring skal bare brukes med tillatelse etter bedriftens prosedyre, og skal fjernes når jobben er ferdig.</li>
+    <li><strong>Endringer i programmet</strong> skal bare gjøres av autoriserte personer, etter prosedyre og med beskjed til dem som kjører anlegget.</li>
+    <li><strong>Sikkerhetssystemet er eget.</strong> De viktigste vernene, som nødavstengning, ligger i et eget sikkerhetssystem (SIS) og ikke bare i den vanlige PLS-en. Nødstopp er ofte koblet direkte med ledninger, uten noe program. De skal virke selv om den vanlige styringen svikter. Se <a href="../01-hms/06-trykk.html">Trykk og løpske reaksjoner</a> i HMS.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvilken rekkefølge arbeider en PLS i?</p>
+  <ul>
+    <li>Kjør programmet, les innganger, skriv utganger</li>
+    <li data-riktig>Les innganger, kjør programmet, skriv utganger, og så på nytt</li>
+    <li>Skriv utganger, les innganger, og stopp til operatøren trykker start</li>
+  </ul>
+  <p class="forklaring">PLS-en leser først alle inngangene, kjører programmet med disse verdiene og setter så utgangene. Runden gjentas hele tiden, mange ganger i sekundet.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilket av disse er et analogt inngangssignal?</p>
+  <ul>
+    <li>En startknapp</li>
+    <li>Et høynivåvern</li>
+    <li data-riktig>En temperaturgiver som sender 4–20 mA</li>
+  </ul>
+  <p class="forklaring">Et analogt signal kan ha alle verdier i et område. Startknappen og høynivåvernet har bare to verdier, av eller på, og er digitale.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkgiver har måleområdet 0–10 bar og sender 12 mA. Hvilket trykk viser PLS-en?</p>
+  <ul>
+    <li>1,2 bar</li>
+    <li data-riktig>5 bar</li>
+    <li>7,5 bar</li>
+  </ul>
+  <p class="forklaring">4 mA er 0 bar og 20 mA er 10 bar. 12 mA ligger midt mellom 4 og 20 mA, og da er trykket midt i måleområdet: 5 bar.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor kobles et høynivåvern feilsikkert?</p>
+  <ul>
+    <li>For at pumpa skal starte raskere</li>
+    <li data-riktig>For at et brudd i ledningen skal stoppe pumpa, akkurat som høyt nivå</li>
+    <li>For at operatøren skal slippe å følge med på nivået</li>
+  </ul>
+  <p class="forklaring">Ved feilsikker kobling er signalet på når alt er i orden. Forsvinner signalet, enten fordi nivået er høyt eller fordi ledningen er brutt, går anlegget til en trygg tilstand.</p>
+</div>
+
+<div class="quiz">
+  <p>Utgangslampen for en pumpe lyser på PLS-en, men pumpa går ikke. Hvor sitter feilen mest sannsynlig?</p>
+  <ul>
+    <li>I programmet i PLS-en</li>
+    <li>I startknappen på skjermen</li>
+    <li data-riktig>Etter PLS-en, for eksempel i sikringen, motorvernet, kontaktoren eller motoren</li>
+  </ul>
+  <p class="forklaring">Når utgangslampen lyser, sender PLS-en startsignalet. Da gjør programmet jobben sin, og feilen må ligge i det som kommer etter utgangen.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>PLS</td><td>Programmerbar logisk styring. En robust datamaskin for industrien som leser signaler fra anlegget, kjører et program og styrer pumper, ventiler og annet utstyr.</td><td>PLC (programmable logic controller)</td></tr>
+    <tr><td>inngang</td><td>Koblingspunkt på PLS-en der et signal fra anlegget kommer inn, for eksempel fra en giver eller en bryter.</td><td>input</td></tr>
+    <tr><td>utgang</td><td>Koblingspunkt på PLS-en der et signal går ut til anlegget, for eksempel for å starte en pumpe eller stille en ventil.</td><td>output</td></tr>
+    <tr><td>digitalt signal</td><td>Signal som bare har to verdier: av eller på.</td><td>digital signal</td></tr>
+    <tr><td>analogt signal</td><td>Signal som kan ha alle verdier i et område, for eksempel 4–20 mA fra en trykkgiver.</td><td>analog signal</td></tr>
+    <tr><td>programsyklus</td><td>Den faste runden en PLS gjentar hele tiden: lese innganger, kjøre programmet og skrive utganger.</td><td>scan cycle</td></tr>
+    <tr><td>stigediagram</td><td>Et programspråk for PLS som ser ut som tegninger av relékoblinger.</td><td>ladder diagram</td></tr>
+    <tr><td>feilsikker</td><td>Koblet slik at en feil, for eksempel et brudd i ledningen, får anlegget til å gå til en trygg tilstand.</td><td>fail-safe</td></tr>
+    <tr><td>magnetventil</td><td>Ventil som åpnes og lukkes elektrisk av en spole. Den er enten helt åpen eller helt lukket.</td><td>solenoid valve</td></tr>
+    <tr><td>kontaktor</td><td>Stor elektrisk bryter som slår en motor av og på når den får signal, for eksempel fra en PLS.</td><td>contactor</td></tr>
+    <tr><td>sikkerhetssystem (SIS)</td><td>Eget styresystem, atskilt fra den vanlige styringen, som stenger ned anlegget automatisk når en farlig grense nås.</td><td>safety instrumented system (SIS)</td></tr>
+    <tr><td>tvangsstyring</td><td>Å låse en inngang eller utgang i PLS-en på eller av, uansett hva som skjer i anlegget. Krever tillatelse.</td><td>forcing</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../01-hms/06-trykk.html">Trykk og løpske reaksjoner</a> i HMS viser hvordan sikkerhetssystemet stenger ned et anlegg ved for høyt trykk.</li>
+  <li><a href="hvorfor-vi-maler.html">Hvorfor vi måler</a> forklarer hvorfor du ikke alltid kan stole blindt på en måling, heller ikke når den kommer via PLS-en.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

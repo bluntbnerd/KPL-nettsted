@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SCADA og DCS – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>SCADA og DCS</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT7</div>
+
+<p class="ingress">Et stort anlegg kan ha tusenvis av målinger, pumper og ventiler. Likevel kan noen få operatører kjøre hele anlegget fra kontrollrommet. Det går fordi alt er samlet i ett styresystem. Her lærer du hvordan et styresystem er bygd opp, hva SCADA og DCS er, og hva systemet gjør for deg som operatør.</p>
+
+<h2>Fra én PLS til et helt anlegg</h2>
+<p>På forrige side lærte du at en <a href="pls.html">PLS</a> styrer en del av anlegget, for eksempel et tankanlegg. Et stort anlegg har mange slike styringer. Operatøren kan ikke gå rundt til hvert skap for å se hva som skjer.</p>
+<p>Derfor kobles alle styringene sammen i et nettverk, og alt vises på skjermer i kontrollrommet. Hele løsningen kaller vi et <strong>styresystem</strong>. De to vanligste typene heter SCADA og DCS.</p>
+
+<h2>Tre lag</h2>
+<p>Både SCADA og DCS er bygd opp i tre lag:</p>
+
+<figure>
+  <img src="bilder/styresystem-lag.svg" alt="Tre bånd over hverandre. Øverst kontrollrommet med to operatørstasjoner, den ene med en kurve og den andre med et prosessbilde, og en datamaskin merket historikk. Et nettverk går fra kontrollrommet ned til elektrorommet i midten, der tre styringer står: styring 1 for tankanlegget, styring 2 for reaktoren og styring 3 for destillasjonen. Fra hver styring går kabler ned til utstyr ute i anlegget nederst: en nivågiver og en pumpe, en temperaturgiver og en ventil, og en trykkgiver og en ventil." width="680">
+  <figcaption>Figur: Et styresystem i tre lag. Givere, pumper og ventiler ute i anlegget er koblet med kabler til styringene i elektrorommet. Styringene er koblet sammen med operatørstasjonene i kontrollrommet gjennom et nettverk. LT, TT og PT er bokstavkodene for nivå-, temperatur- og trykkgiver (den siste T-en står for transmitter, altså giver). Figuren er forenklet.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Ute i anlegget</strong> sitter givere, pumper og ventiler. Givere måler, og pumper og ventiler gjør jobben.</li>
+  <li><strong>I elektrorommet</strong> står styringene. Hver styring har innganger og utganger og kjører programmet for sin del av anlegget, slik du lærte på siden om PLS.</li>
+  <li><strong>I kontrollrommet</strong> står <strong>operatørstasjonene</strong>, altså PC-er med skjermer der operatøren følger med og gir kommandoer. Her er også en datamaskin som lagrer alle måleverdiene, kalt <strong>historikk</strong>.</li>
+</ul>
+<p>Det viktigste å huske er at <em>reglene ligger i styringene</em>, ikke i skjermene. Forriglinger, sekvenser og regulatorer kjører i styringene. Skjermene viser hva som skjer, og lar operatøren gi kommandoer.</p>
+
+<h2>SCADA</h2>
+<p><strong>SCADA</strong> er en engelsk forkortelse som betyr omtrent «overvåking, styring og innsamling av data». Et SCADA-system er programvare på PC-er og servere. Det henter data fra mange PLS-er, viser dem på skjermene og sender operatørens kommandoer tilbake til PLS-ene.</p>
+<ul>
+  <li>PLS-ene kan være fra ulike produsenter, og de kan stå langt fra hverandre.</li>
+  <li>SCADA brukes mye der anlegget er spredt over et stort område, for eksempel vannverk, avløpsanlegg, kraftverk og rørledninger. Det brukes også i mange fabrikker.</li>
+  <li>Styringen ligger i PLS-ene. Mister SCADA-systemet kontakten med en PLS, fortsetter PLS-en å kjøre programmet sitt.</li>
+</ul>
+
+<h2>DCS</h2>
+<p><strong>DCS</strong> betyr <em>distribuert styresystem</em>. «Distribuert» betyr at styringen er fordelt på mange styringer rundt i anlegget. I et DCS kalles styringene ofte <strong>kontrollere</strong>.</p>
+<ul>
+  <li>Et DCS er ett helt system fra én leverandør. Kontrollerne, nettverket, operatørstasjonene og historikken er laget for å virke sammen.</li>
+  <li>Det er laget for store prosessanlegg som går døgnet rundt, for eksempel raffinerier, kjemiske fabrikker, gjødselfabrikker og papirfabrikker. Slike anlegg har hundrevis av regulatorer.</li>
+  <li>Det viktigste utstyret er ofte dobbelt opp: to kontrollere, to nettverk og to strømforsyninger. Svikter den ene, tar den andre over med en gang. Det kalles <strong>redundans</strong>.</li>
+</ul>
+
+<h2>Forskjellen</h2>
+<table>
+  <thead><tr><th></th><th>SCADA</th><th>DCS</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hvor ligger styringen?</strong></td><td>I PLS-er</td><td>I kontrollere som er en del av systemet</td></tr>
+    <tr><td><strong>Leverandør</strong></td><td>PLS-er og skjermprogram kan være fra ulike leverandører</td><td>Alt fra samme leverandør</td></tr>
+    <tr><td><strong>Typisk bruk</strong></td><td>Anlegg spredt over store områder, maskiner og mindre anlegg</td><td>Store prosessanlegg med mange regulatorer</td></tr>
+    <tr><td><strong>Dobbelt utstyr</strong></td><td>Kan bygges inn</td><td>Vanlig fra starten</td></tr>
+  </tbody>
+</table>
+<p>Forskjellen er mindre i dag enn før. Moderne SCADA-systemer kan gjøre mye av det samme som et DCS, og omvendt. På arbeidsplassen sier mange bare «styresystemet» eller bruker navnet på produktet. For deg som operatør virker de på samme måte.</p>
+
+<h2>Hva gjør styresystemet for operatøren?</h2>
+<p>Fra en operatørstasjon kan du</p>
+<ul>
+  <li><strong>se</strong> måleverdier og om pumper går og ventiler er åpne, i <strong>prosessbilder</strong> som viser anlegget som en tegning</li>
+  <li><strong>styre</strong>: starte og stoppe pumper, åpne og lukke ventiler og starte sekvenser</li>
+  <li><strong>endre settpunkter</strong>, for eksempel temperaturen en regulator skal holde</li>
+  <li><strong>sette regulatorer i auto eller manuell</strong>. I auto justerer regulatoren ventilen selv. I manuell bestemmer du hvor mye ventilen skal være åpen.</li>
+  <li><strong>få alarmer</strong> når noe er galt</li>
+  <li><strong>se trender</strong>, altså kurver som viser hvordan en måleverdi har endret seg over tid</li>
+</ul>
+<p>Alt dette lagres. Historikken har måleverdiene, ofte for flere år tilbake. En <strong>hendelseslogg</strong> viser hva som har skjedd og når, for eksempel alarmer og hvem som endret et settpunkt. Derfor logger hver operatør seg inn med sin egen bruker.</p>
+<p>Hvordan prosessbildene ser ut, og hvordan du håndterer alarmer, lærer du på neste side.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Når startet det?</div>
+  <p>Klokka er tre om natta. Operatøren ser at temperaturen i en reaktor er 4 °C høyere enn vanlig. Er dette noe som skjedde nå, eller har det pågått lenge?</p>
+  <p>Operatøren åpner en trend for reaktortemperaturen de siste 24 timene. Kurven viser at temperaturen begynte å stige klokka 22, rett etter skiftbyttet. Operatøren legger også inn kjølevannsmengden i samme trend. Den falt på samme tidspunkt.</p>
+  <p>Hendelsesloggen viser at kjølevannsregulatoren ble satt i manuell klokka 22, og at ventilen ble strupet. Regulatoren ble ikke satt tilbake i auto. Operatøren sjekker med skiftleder at det ikke var en grunn til dette, og setter regulatoren i auto igjen. Da åpner regulatoren ventilen, og temperaturen begynner å synke.</p>
+  <p><strong>Det du lærer:</strong> Trender og hendelseslogg viser deg hva som har skjedd. Sammenlign flere målinger i samme trend for å finne årsaken. Finn ut hvorfor noe står i manuell før du endrer det.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Styresystemet</div>
+  <ul>
+    <li><strong>Mister du skjermbildet</strong>, fortsetter styringene vanligvis å kjøre anlegget med de siste innstillingene. Bruk en annen operatørstasjon. Er alle skjermene borte, følg bedriftens prosedyre. Den kan si at anlegget skal stoppes på en trygg måte.</li>
+    <li><strong>Datasikkerhet.</strong> Skadevare kan stoppe et anlegg eller få det til å gjøre farlige ting. Koble aldri minnepinner, telefoner eller egne PC-er til styresystemet. Styresystemet skal ikke være koblet direkte til internett.</li>
+    <li><strong>Logg inn med din egen bruker</strong> og logg ut når du går. Det du gjør, blir lagret med ditt navn.</li>
+    <li><strong>Sikkerhetssystemet er eget.</strong> Nødavstengning ligger i et eget sikkerhetssystem (SIS), slik du lærte på siden om <a href="pls.html">PLS</a>. Det skal virke selv om styresystemet svikter.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvor ligger forriglinger og regulatorer i et styresystem?</p>
+  <ul>
+    <li>I operatørstasjonene i kontrollrommet</li>
+    <li data-riktig>I styringene, altså PLS-ene eller kontrollerne</li>
+    <li>I historikken</li>
+  </ul>
+  <p class="forklaring">Reglene kjører i styringene. Operatørstasjonene viser hva som skjer og sender kommandoer. Derfor fortsetter anlegget å gå selv om en skjerm slutter å virke.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er typisk for et DCS?</p>
+  <ul>
+    <li>Det består av PLS-er fra mange ulike leverandører.</li>
+    <li data-riktig>Det er ett helt system fra én leverandør, laget for store prosessanlegg.</li>
+    <li>Det har ingen skjermer, bare kontrollere.</li>
+  </ul>
+  <p class="forklaring">I et DCS er kontrollerne, nettverket, operatørstasjonene og historikken laget for å virke sammen. Det brukes mest i store anlegg med mange regulatorer, som raffinerier og kjemiske fabrikker.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva betyr redundans?</p>
+  <ul>
+    <li>At anlegget har flere operatører på skiftet</li>
+    <li>At måleverdiene lagres i mange år</li>
+    <li data-riktig>At viktig utstyr finnes dobbelt, slik at det andre tar over hvis det ene svikter</li>
+  </ul>
+  <p class="forklaring">Med redundans har du for eksempel to kontrollere eller to nettverk. Svikter det ene, tar det andre over, og anlegget går videre.</p>
+</div>
+
+<div class="quiz">
+  <p>Du vil se hvordan trykket i en tank har endret seg det siste døgnet. Hva bruker du?</p>
+  <ul>
+    <li>En alarm</li>
+    <li data-riktig>En trend</li>
+    <li>Et settpunkt</li>
+  </ul>
+  <p class="forklaring">En trend er en kurve som viser en måleverdi over tid. Verdiene hentes fra historikken.</p>
+</div>
+
+<div class="quiz">
+  <p>Skjermen på operatørstasjonen blir svart. Hva skjer med anlegget?</p>
+  <ul>
+    <li>Anlegget stopper med en gang.</li>
+    <li data-riktig>Styringene fortsetter å kjøre anlegget med de siste innstillingene.</li>
+    <li>Alle regulatorene går over i manuell.</li>
+  </ul>
+  <p class="forklaring">Programmene kjører i styringene, ikke i skjermen. Bruk en annen operatørstasjon, og følg bedriftens prosedyre hvis du ikke får oversikt.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>styresystem</td><td>Hele datasystemet som overvåker og styrer anlegget: styringene (PLS-er eller kontrollere), nettverket og operatørstasjonene i kontrollrommet.</td><td>control system (DCS/SCADA)</td></tr>
+    <tr><td>SCADA</td><td>Styresystem som henter data fra mange PLS-er, viser dem på skjermer og sender kommandoer tilbake. Styringen ligger i PLS-ene.</td><td>SCADA (supervisory control and data acquisition)</td></tr>
+    <tr><td>DCS</td><td>Distribuert styresystem. Et helt system fra én leverandør der styringen er fordelt på mange kontrollere. Brukes mest i store prosessanlegg.</td><td>DCS (distributed control system)</td></tr>
+    <tr><td>kontroller</td><td>Styringen i et DCS. Den har innganger og utganger og kjører programmet for en del av anlegget, omtrent som en PLS.</td><td>controller</td></tr>
+    <tr><td>operatørstasjon</td><td>PC med skjermer i kontrollrommet der operatøren følger med på anlegget og gir kommandoer.</td><td>operator station</td></tr>
+    <tr><td>prosessbilde</td><td>Skjermbilde som viser en del av anlegget som en tegning, med måleverdier og status for pumper og ventiler.</td><td>process display</td></tr>
+    <tr><td>trend</td><td>Kurve som viser hvordan en måleverdi har endret seg over tid.</td><td>trend</td></tr>
+    <tr><td>historikk</td><td>Datamaskin som lagrer måleverdiene fra anlegget, ofte i mange år, og de lagrede dataene. Brukes til trender og til å finne ut hva som skjedde.</td><td>historian</td></tr>
+    <tr><td>hendelseslogg</td><td>Liste over hva som har skjedd i anlegget og når, for eksempel alarmer og endringer operatørene har gjort.</td><td>event log</td></tr>
+    <tr><td>redundans</td><td>At viktig utstyr finnes dobbelt, slik at det andre tar over hvis det ene svikter.</td><td>redundancy</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="pls.html">PLS</a> forklarer hvordan styringene leser innganger, kjører programmet og setter utganger.</li>
+  <li><a href="hvorfor-vi-maler.html">Hvorfor vi måler</a> forklarer hvorfor måleverdiene lagres og hvorfor du bør sjekke om et tall er rimelig.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

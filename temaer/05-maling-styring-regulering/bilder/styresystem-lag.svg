@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 370" width="680" height="370" font-family="Segoe UI, Arial, sans-serif">
+  <title>Et styresystem i tre lag: kontrollrommet øverst, styringene i elektrorommet i midten og givere, pumper og ventiler ute i anlegget nederst</title>
+  <rect x="0" y="0" width="680" height="370" rx="10" fill="#ffffff"/>
+
+  <!-- Bånd -->
+  <g fill="#f6f3ee">
+    <rect x="10" y="10" width="660" height="110" rx="8"/>
+    <rect x="10" y="140" width="660" height="90" rx="8"/>
+    <rect x="10" y="250" width="660" height="110" rx="8"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#1c2828">
+    <text x="22" y="32">Kontrollrommet</text>
+    <text x="22" y="162">Elektrorommet</text>
+    <text x="22" y="272">Ute i anlegget</text>
+  </g>
+  <g font-size="11.5" fill="#586868">
+    <text x="22" y="48">operatøren overvåker og styrer</text>
+    <text x="22" y="178">styringene kjører programmene</text>
+    <text x="22" y="288">givere måler, pumper og ventiler gjør jobben</text>
+  </g>
+
+  <!-- Kontrollrommet: to operatørstasjoner og en historikkserver -->
+  <g>
+    <rect x="250" y="34" width="110" height="64" rx="6" fill="#1c2828"/>
+    <polyline points="262,82 280,74 298,78 316,60 348,56" fill="none" stroke="#7fd0e0" stroke-width="2"/>
+    <rect x="380" y="34" width="110" height="64" rx="6" fill="#1c2828"/>
+    <rect x="392" y="50" width="30" height="34" fill="none" stroke="#7fd0e0" stroke-width="2"/>
+    <circle cx="455" cy="67" r="10" fill="none" stroke="#7fd0e0" stroke-width="2"/>
+    <rect x="530" y="34" width="110" height="64" rx="6" fill="#ffffff" stroke="#586868" stroke-width="2"/>
+    <g stroke="#586868" stroke-width="2">
+      <line x1="546" y1="52" x2="624" y2="52"/>
+      <line x1="546" y1="66" x2="624" y2="66"/>
+      <line x1="546" y1="80" x2="624" y2="80"/>
+    </g>
+  </g>
+  <g font-size="11.5" fill="#1c2828" text-anchor="middle">
+    <text x="305" y="112">operatørstasjon</text>
+    <text x="435" y="112">operatørstasjon</text>
+    <text x="585" y="112">historikk</text>
+  </g>
+
+  <!-- Nettverk -->
+  <line x1="230" y1="130" x2="650" y2="130" stroke="#b5530f" stroke-width="3"/>
+  <text x="222" y="134" font-size="11.5" fill="#b5530f" text-anchor="end">nettverk</text>
+  <g stroke="#b5530f" stroke-width="2">
+    <line x1="305" y1="117" x2="305" y2="130"/>
+    <line x1="435" y1="117" x2="435" y2="130"/>
+    <line x1="585" y1="117" x2="585" y2="130"/>
+    <line x1="305" y1="130" x2="305" y2="156"/>
+    <line x1="435" y1="130" x2="435" y2="156"/>
+    <line x1="585" y1="130" x2="585" y2="156"/>
+  </g>
+
+  <!-- Styringer -->
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="2.5">
+    <rect x="255" y="156" width="100" height="56" rx="6"/>
+    <rect x="385" y="156" width="100" height="56" rx="6"/>
+    <rect x="535" y="156" width="100" height="56" rx="6"/>
+  </g>
+  <g font-size="12.5" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="305" y="180">styring 1</text>
+    <text x="435" y="180">styring 2</text>
+    <text x="585" y="180">styring 3</text>
+  </g>
+  <g font-size="11" fill="#586868" text-anchor="middle">
+    <text x="305" y="198">tankanlegg</text>
+    <text x="435" y="198">reaktor</text>
+    <text x="585" y="198">destillasjon</text>
+  </g>
+
+  <!-- Signalkabler -->
+  <g stroke="#586868" stroke-width="1.5">
+    <line x1="280" y1="212" x2="280" y2="306"/>
+    <line x1="330" y1="212" x2="330" y2="306"/>
+    <line x1="410" y1="212" x2="410" y2="306"/>
+    <line x1="460" y1="212" x2="460" y2="306"/>
+    <line x1="560" y1="212" x2="560" y2="306"/>
+    <line x1="610" y1="212" x2="610" y2="306"/>
+  </g>
+
+  <!-- Feltutstyr -->
+  <g fill="#ffffff" stroke="#2a7a9a" stroke-width="2.5">
+    <circle cx="280" cy="318" r="12"/>
+    <circle cx="410" cy="318" r="12"/>
+    <circle cx="560" cy="318" r="12"/>
+  </g>
+  <g font-size="10" font-weight="bold" fill="#2a7a9a" text-anchor="middle">
+    <text x="280" y="322">LT</text>
+    <text x="410" y="322">TT</text>
+    <text x="560" y="322">PT</text>
+  </g>
+  <!-- pumpe -->
+  <circle cx="330" cy="318" r="12" fill="#ffffff" stroke="#586868" stroke-width="2.5"/>
+  <polygon points="324,311 338,318 324,325" fill="#586868"/>
+  <!-- ventiler (sløyfe) -->
+  <g fill="#ffffff" stroke="#586868" stroke-width="2.5">
+    <polygon points="448,310 472,326 472,310 448,326"/>
+    <polygon points="598,310 622,326 622,310 598,326"/>
+  </g>
+  <g font-size="11" fill="#1c2828" text-anchor="middle">
+    <text x="280" y="346">nivå</text>
+    <text x="330" y="346">pumpe</text>
+    <text x="410" y="346">temperatur</text>
+    <text x="460" y="346">ventil</text>
+    <text x="560" y="346">trykk</text>
+    <text x="610" y="346">ventil</text>
+  </g>
+</svg>

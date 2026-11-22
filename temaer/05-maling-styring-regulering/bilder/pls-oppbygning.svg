@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 370" width="680" height="370" font-family="Segoe UI, Arial, sans-serif">
+  <title>En PLS får signaler fra innganger, kjører programmet sitt og sender signaler til utganger. Syklusen gjentas hele tiden.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#586868"/>
+    </marker>
+    <marker id="pil-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b5530f"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="370" rx="10" fill="#ffffff"/>
+
+  <!-- Overskrifter -->
+  <g font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="95" y="30">Innganger</text>
+    <text x="585" y="30">Utganger</text>
+  </g>
+  <g font-size="12" fill="#586868" text-anchor="middle">
+    <text x="95" y="46">signaler inn fra anlegget</text>
+    <text x="585" y="46">signaler ut til anlegget</text>
+  </g>
+
+  <!-- Innganger -->
+  <g fill="#eef6f8" stroke="#2a7a9a" stroke-width="2">
+    <rect x="10" y="60" width="170" height="46" rx="6"/>
+    <rect x="10" y="130" width="170" height="46" rx="6"/>
+    <rect x="10" y="200" width="170" height="46" rx="6"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="95" y="80">Startknapp</text>
+    <text x="95" y="150">Høynivåvern</text>
+    <text x="95" y="220">Trykkgiver</text>
+  </g>
+  <g font-size="11.5" fill="#586868" text-anchor="middle">
+    <text x="95" y="97">digital: av eller på</text>
+    <text x="95" y="167">digital: av eller på</text>
+    <text x="95" y="237">analog: 4–20 mA</text>
+  </g>
+
+  <!-- Piler inn -->
+  <g stroke="#586868" stroke-width="2" marker-end="url(#pil)">
+    <line x1="180" y1="83" x2="228" y2="83"/>
+    <line x1="180" y1="153" x2="228" y2="153"/>
+    <line x1="180" y1="223" x2="228" y2="223"/>
+  </g>
+
+  <!-- PLS -->
+  <rect x="230" y="40" width="220" height="250" rx="10" fill="#f6f3ee" stroke="#1c2828" stroke-width="3"/>
+  <text x="340" y="64" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c2828">PLS</text>
+
+  <g fill="#ffffff" stroke="#b5530f" stroke-width="2">
+    <rect x="260" y="78" width="160" height="38" rx="6"/>
+    <rect x="260" y="148" width="160" height="38" rx="6"/>
+    <rect x="260" y="218" width="160" height="38" rx="6"/>
+  </g>
+  <g font-size="13" fill="#1c2828" text-anchor="middle">
+    <text x="340" y="102">1  Les innganger</text>
+    <text x="340" y="172">2  Kjør programmet</text>
+    <text x="340" y="242">3  Skriv utganger</text>
+  </g>
+  <g stroke="#b5530f" stroke-width="2" fill="none" marker-end="url(#pil-o)">
+    <line x1="340" y1="116" x2="340" y2="146"/>
+    <line x1="340" y1="186" x2="340" y2="216"/>
+    <polyline points="420,237 437,237 437,97 422,97"/>
+  </g>
+  <text x="340" y="280" font-size="11.5" text-anchor="middle" fill="#b5530f">gjentas hele tiden</text>
+
+  <!-- Piler ut -->
+  <g stroke="#586868" stroke-width="2" marker-end="url(#pil)">
+    <line x1="450" y1="83" x2="498" y2="83"/>
+    <line x1="450" y1="153" x2="498" y2="153"/>
+    <line x1="450" y1="223" x2="498" y2="223"/>
+  </g>
+
+  <!-- Utganger -->
+  <g fill="#eef6f8" stroke="#2a7a9a" stroke-width="2">
+    <rect x="500" y="60" width="170" height="46" rx="6"/>
+    <rect x="500" y="130" width="170" height="46" rx="6"/>
+    <rect x="500" y="200" width="170" height="46" rx="6"/>
+  </g>
+  <g font-size="13" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="585" y="80">Pumpe</text>
+    <text x="585" y="150">Magnetventil</text>
+    <text x="585" y="220">Reguleringsventil</text>
+  </g>
+  <g font-size="11.5" fill="#586868" text-anchor="middle">
+    <text x="585" y="97">digital: start eller stopp</text>
+    <text x="585" y="167">digital: åpen eller lukket</text>
+    <text x="585" y="237">analog: 0–100 % åpen</text>
+  </g>
+
+  <!-- Nettverk til operatørskjerm -->
+  <line x1="340" y1="290" x2="340" y2="320" stroke="#586868" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="350" y="310" font-size="11.5" fill="#586868">nettverk</text>
+  <rect x="230" y="320" width="220" height="40" rx="6" fill="#1c2828"/>
+  <text x="340" y="345" font-size="13" text-anchor="middle" fill="#e8f4f4">Operatørskjerm i kontrollrommet</text>
+</svg>
