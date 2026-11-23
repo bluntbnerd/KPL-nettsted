@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signalet 4–20 mA – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Signalet 4–20 mA</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">De fleste givere i et prosessanlegg sender målingen som en elektrisk strøm mellom 4 og 20 milliampere (mA). Her lærer du hvorfor nettopp dette signalet brukes, hvordan du regner fra mA til måleverdi og tilbake, og hvordan signalet hjelper deg å finne feil.</p>
+
+<h2>En strøm som forteller hvor mye</h2>
+<p>På siden <a href="givere-og-transmittere.html">Givere og transmittere</a> lærte du at giveren sender verdien som en andel av måleområdet. Signalet 4–20 mA gjør det slik:</p>
+<ul>
+  <li><strong>4 mA</strong> betyr laveste verdi i måleområdet, altså 0 %.</li>
+  <li><strong>20 mA</strong> betyr høyeste verdi, altså 100 %.</li>
+  <li>Alt imellom følger en rett linje. 12 mA, midt mellom 4 og 20, betyr 50 %.</li>
+</ul>
+<p>Én milliampere er en tusendel ampere. Det er en svært liten strøm, mye mindre enn strømmen i en lyspære.</p>
+
+<figure>
+  <img src="bilder/signal-4-20-ma.svg" alt="Graf med strømmen fra giveren i mA langs den vannrette aksen, fra 0 til 22, og måleverdien i prosent av måleområdet langs den loddrette aksen, fra 0 til 100 prosent. En rett linje går fra 4 mA og 0 prosent til 20 mA og 100 prosent. Punktene 4, 8, 12, 16 og 20 mA er merket, og de svarer til 0, 25, 50, 75 og 100 prosent. Stiplede linjer viser at 12 mA er 50 prosent. Området under ca. 3,6 mA og over ca. 21 mA er farget rødt og merket signalfeil. Ved brudd er strømmen 0 mA." width="640">
+  <figcaption>Figur: Sammenhengen mellom strømmen og måleverdien. 4 mA er 0 % og 20 mA er 100 % av måleområdet. Hver økning på 4 mA er 25 %. Strøm langt under 4 mA eller over 20 mA betyr at noe er galt.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Strøm</th><th>Del av måleområdet</th><th>Trykkgiver 0–10 bar</th><th>Temperaturgiver 50–150 °C</th></tr></thead>
+  <tbody>
+    <tr><td>4 mA</td><td>0 %</td><td>0 bar</td><td>50 °C</td></tr>
+    <tr><td>8 mA</td><td>25 %</td><td>2,5 bar</td><td>75 °C</td></tr>
+    <tr><td>12 mA</td><td>50 %</td><td>5 bar</td><td>100 °C</td></tr>
+    <tr><td>16 mA</td><td>75 %</td><td>7,5 bar</td><td>125 °C</td></tr>
+    <tr><td>20 mA</td><td>100 %</td><td>10 bar</td><td>150 °C</td></tr>
+  </tbody>
+</table>
+
+<h2>Hvorfor strøm?</h2>
+<p>Giveren kunne sendt en spenning i stedet. Men strøm har to store fordeler i et anlegg:</p>
+<ul>
+  <li><strong>Lange kabler gjør ikke noe.</strong> Strømmen er den samme overalt i en lukket krets, også gjennom flere hundre meter kabel. En spenning ville falt litt på veien, og da ville styresystemet lest av feil verdi.</li>
+  <li><strong>Støy gjør lite.</strong> Motorer og annet elektrisk utstyr lager elektrisk støy. Et strømsignal blir mye mindre påvirket av støyen enn et spenningssignal.</li>
+</ul>
+<p>Giveren, kabelen og inngangen på styresystemet danner en lukket krets som kalles en <strong>strømsløyfe</strong>. En strømforsyning, oftest på 24 volt, sørger for at strømmen kan gå. Giveren bestemmer hvor stor strømmen skal være.</p>
+
+<h2>Hvorfor 4 og ikke 0?</h2>
+<p>Signalet starter på 4 mA og ikke på 0. Det kalles <strong>levende null</strong>, og det har to grunner:</p>
+<ul>
+  <li><strong>Brudd kan oppdages.</strong> Går kabelen av, blir strømmen 0 mA. Hadde 0 mA betydd 0 %, kunne ikke styresystemet skilt et kabelbrudd fra en tom tank. Nå vet det at 0 mA betyr feil.</li>
+  <li><strong>Giveren får strøm.</strong> Giveren trenger litt strøm selv for at elektronikken skal virke. Med minst 4 mA i sløyfa hele tiden kan giveren få strømmen sin gjennom de to samme lederne som signalet går i.</li>
+</ul>
+<p>Styresystemet melder <strong>signalfeil</strong> når strømmen er tydelig utenfor 4–20 mA. Mange anlegg bruker grensene under ca. 3,6 mA og over ca. 21 mA. Litt under 4 mA eller litt over 20 mA betyr vanligvis bare at verdien er litt utenfor måleområdet. Grensene kan være litt forskjellige fra anlegg til anlegg.</p>
+<p>En smart giver som oppdager en feil i seg selv, kan sende en strøm utenfor området med vilje, for eksempel 3,6 mA eller 21 mA. Da får styresystemet beskjed om at målingen ikke kan stoles på.</p>
+
+<h2>Fra mA til måleverdi</h2>
+<p>Slik regner du om fra strøm til måleverdi:</p>
+<ol>
+  <li>Trekk fra 4 mA. Da vet du hvor langt over nullpunktet signalet er.</li>
+  <li>Del på 16 mA, som er hele signalområdet (20 − 4). Da får du andelen av måleområdet.</li>
+  <li>Gang andelen med bredden på måleområdet (høyeste minus laveste verdi).</li>
+  <li>Legg til laveste verdi i måleområdet. Starter måleområdet på 0, er du ferdig etter steg 3.</li>
+</ol>
+<p>Som formel, der <em>I</em> er strømmen i mA:</p>
+<p>\[ \text{måleverdi} = \text{laveste verdi} + \frac{I - 4}{16} \cdot (\text{høyeste verdi} - \text{laveste verdi}) \]</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Fra mA til temperatur</div>
+  <p><strong>Oppgave:</strong> En temperaturgiver har måleområdet 50–150 °C og sender 10 mA. Hvilken temperatur er det?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Trekk fra 4 mA: 10 mA − 4 mA = 6 mA.</li>
+    <li>Del på 16 mA: \( \dfrac{6}{16} = 0{,}375 \). Signalet er 37,5 % av måleområdet.</li>
+    <li>Bredden på måleområdet er 150 °C − 50 °C = 100 °C. Gang: \( 0{,}375 \cdot 100 \text{ °C} = 37{,}5 \text{ °C} \).</li>
+    <li>Legg til laveste verdi: 50 °C + 37,5 °C = 87,5 °C.</li>
+  </ol>
+  <p><strong>Svar:</strong> Temperaturen er 87,5 °C. Glemmer du steg 4, får du 37,5 °C, som er under måleområdet. Sjekk alltid at svaret ligger innenfor måleområdet.</p>
+</div>
+
+<h2>Fra måleverdi til mA</h2>
+<p>Noen ganger må du gå andre veien, for eksempel når du skal sjekke at en giver sender riktig strøm. Da gjør du stegene baklengs:</p>
+<p>\[ I = 4 + 16 \cdot \frac{\text{måleverdi} - \text{laveste verdi}}{\text{høyeste verdi} - \text{laveste verdi}} \]</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Hvilken strøm skal giveren sende?</div>
+  <p><strong>Oppgave:</strong> En trykkgiver har måleområdet 0–6 bar. Manometeret ved siden av viser 4,5 bar. Hvor mange mA skal giveren sende?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Finn andelen av måleområdet: \( \dfrac{4{,}5 \text{ bar}}{6 \text{ bar}} = 0{,}75 \), altså 75 %.</li>
+    <li>Gang med 16 mA: \( 0{,}75 \cdot 16 \text{ mA} = 12 \text{ mA} \).</li>
+    <li>Legg til 4 mA: 12 mA + 4 mA = 16 mA.</li>
+  </ol>
+  <p><strong>Svar:</strong> Giveren skal sende 16 mA. Måler du en helt annen strøm, viser enten giveren eller manometeret feil.</p>
+</div>
+
+<h2>Signalet ut til ventilen</h2>
+<p>4–20 mA brukes ikke bare inn til styresystemet. Det brukes også ut fra styresystemet til en reguleringsventil. Da betyr strømmen hvor mye ventilen skal åpne, for eksempel 4 mA = stengt og 20 mA = helt åpen. På ventilen sitter en <strong>ventilstiller</strong> som gjør strømsignalet om til lufttrykk, og lufttrykket flytter ventilen.</p>
+
+<h2>Feilsøking med signalet</h2>
+<p>Strømmen i sløyfa forteller mye om hvor en feil sitter:</p>
+<table>
+  <thead><tr><th>Strøm i sløyfa</th><th>Hva det kan bety</th></tr></thead>
+  <tbody>
+    <tr><td>0 mA</td><td>Brudd i kabelen, løs ledning i en koblingsboks, ingen strømforsyning eller død giver.</td></tr>
+    <tr><td>Rundt 3,6 mA eller lavere</td><td>Giveren melder selv om en feil, eller sløyfa har en feil.</td></tr>
+    <tr><td>4–20 mA, men verdien virker feil</td><td>Signalet er i orden. Feilen sitter i målingen (føler, impulsrør, tetthet) eller i måleområdet i giveren eller styresystemet.</td></tr>
+    <tr><td>Rundt 21 mA eller høyere</td><td>Giveren melder selv om en feil, eller det er kortslutning i sløyfa.</td></tr>
+  </tbody>
+</table>
+<p>Instrumentteknikeren kan måle strømmen i sløyfa med et <strong>multimeter</strong>. Med en <strong>sløyfekalibrator</strong> kan teknikeren også sende en kjent strøm inn i sløyfa, for eksempel 12 mA, og sjekke at skjermen i kontrollrommet viser 50 %. Det kalles en sløyfetest, og den gjøres blant annet når nye givere er montert.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 3: Tanken som plutselig var tom</div>
+  <p><strong>Situasjon:</strong> Midt på natta faller nivået i en tank fra 62 % til «signalfeil» på skjermen. Pumpa som fyller tanken, går som før, og seglasset ute ved tanken viser at nivået står omtrent der det sto.</p>
+  <p><strong>Hva kan være feil?</strong> Nivået kan ikke ha falt så fort når pumpa fyller, og seglasset viser at tanken ikke er tom. Det er altså signalet som har falt bort. Teknikeren måler 0 mA i sløyfa. Det betyr brudd, ofte en løs ledning i en koblingsboks eller en skadet kabel. Fordi signalet startet på 4 mA, kunne styresystemet melde signalfeil i stedet for å vise at tanken var tom.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Arbeid i en strømsløyfe</div>
+  <ul>
+    <li>Avtal med kontrollrommet før noen kobler i en sløyfe. Når signalet blir borte eller endres, kan regulatorer, alarmer og forriglinger reagere.</li>
+    <li>En sløyfekalibrator sender en falsk måleverdi til styresystemet. Regulatoren og forriglingene på den målingen må være koblet ut eller satt i manuell etter prosedyren før testen.</li>
+    <li>I Ex-områder må også multimeter og kalibrator være godkjent for området, og arbeidet krever tillatelse.</li>
+    <li>Mange forriglinger er laget slik at signalfeil gir en trygg tilstand, for eksempel at en pumpe stopper. Derfor kan et løst ledd i en kabel stoppe en del av anlegget.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva betyr 4 mA fra en giver?</p>
+  <ul>
+    <li>At giveren er i stykker.</li>
+    <li data-riktig>Laveste verdi i måleområdet, altså 0 %.</li>
+    <li>4 % av måleområdet.</li>
+  </ul>
+  <p class="forklaring">Signalet starter på 4 mA. 4 mA er laveste verdi i måleområdet (0 %), og 20 mA er høyeste verdi (100 %).</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkgiver har måleområdet 0–8 bar og sender 12 mA. Hva er trykket?</p>
+  <ul>
+    <li>3 bar</li>
+    <li data-riktig>4 bar</li>
+    <li>6 bar</li>
+  </ul>
+  <p class="forklaring">12 mA er midt mellom 4 og 20 mA, altså 50 % av måleområdet. 50 % av 8 bar er 4 bar.</p>
+</div>
+
+<div class="quiz">
+  <p>En nivågiver har måleområdet 0–100 %. Nivået er 75 %. Hvilken strøm sender giveren?</p>
+  <ul>
+    <li>12 mA</li>
+    <li>15 mA</li>
+    <li data-riktig>16 mA</li>
+  </ul>
+  <p class="forklaring">\( 4 + 16 \cdot 0{,}75 = 4 + 12 = 16 \) mA. Svaret 15 mA får du hvis du glemmer at signalet starter på 4 mA og regner 75 % av 20 mA.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor starter signalet på 4 mA og ikke på 0 mA?</p>
+  <ul>
+    <li>Fordi 0 mA er farlig.</li>
+    <li data-riktig>Fordi styresystemet da kan skille et kabelbrudd (0 mA) fra laveste måleverdi (4 mA).</li>
+    <li>Fordi det gir mer nøyaktige målinger.</li>
+  </ul>
+  <p class="forklaring">Med levende null betyr 0 mA alltid feil. Den minste strømmen gir også giveren nok strøm til å drive elektronikken sin.</p>
+</div>
+
+<div class="quiz">
+  <p>Skjermen viser «signalfeil» på en temperaturmåling, og teknikeren måler 0 mA i sløyfa. Hva er mest sannsynlig?</p>
+  <ul>
+    <li>Temperaturen er under måleområdet.</li>
+    <li>Måleområdet er feil innstilt i styresystemet.</li>
+    <li data-riktig>Brudd i kabelen, en løs ledning eller ingen strømforsyning.</li>
+  </ul>
+  <p class="forklaring">Lav temperatur gir 4 mA eller litt under, ikke 0 mA. Feil måleområde gir feil verdi, men strømmen er fortsatt mellom 4 og 20 mA. 0 mA betyr at strømmen ikke kommer fram.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>4–20 mA</td><td>Standardsignal der giveren sender en strøm mellom 4 og 20 milliampere. 4 mA er 0 % og 20 mA er 100 % av måleområdet.</td><td>4–20 mA signal</td></tr>
+    <tr><td>milliampere</td><td>En tusendel ampere. Enheten for den lille strømmen i signalet fra en giver. Skrives mA.</td><td>milliampere</td></tr>
+    <tr><td>strømsløyfe</td><td>Lukket krets med strømforsyning, giver, kabel og inngang på styresystemet, der signalet går som en strøm.</td><td>current loop</td></tr>
+    <tr><td>levende null</td><td>At signalet starter på 4 mA og ikke 0 mA, slik at 0 mA alltid betyr feil, for eksempel kabelbrudd.</td><td>live zero</td></tr>
+    <tr><td>signalfeil</td><td>Melding fra styresystemet om at strømmen er utenfor det normale området, slik at målingen ikke kan stoles på.</td><td>signal fault, bad PV</td></tr>
+    <tr><td>ventilstiller</td><td>Enhet på en reguleringsventil som gjør strømsignalet fra styresystemet om til lufttrykk som flytter ventilen.</td><td>valve positioner</td></tr>
+    <tr><td>sløyfekalibrator</td><td>Instrument som kan måle strømmen i en sløyfe, eller sende en kjent strøm inn i den for å teste den.</td><td>loop calibrator</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="pls.html">PLS</a> viser hvordan styresystemet tar imot analoge signaler, med et eget regneeksempel.</li>
+  <li><a href="reguleringssloyfen.html">Reguleringssløyfen</a> viser hvordan signalet fra giveren og signalet til ventilen henger sammen i en sløyfe.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

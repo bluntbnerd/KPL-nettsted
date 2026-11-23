@@ -619,10 +619,36 @@
     var svar = lag("p", "quiz-svar");
     svar.hidden = true;
     q.insertBefore(svar, forklaring || null);
+    // Flyt: velg et svar → «Sjekk svar». Feil: «Prøv igjen» eller «Se forklaring».
+    // Riktig svar vises bare når eleven får det til selv, eller ber om forklaringen.
+    var knapper = lag("div", "quiz-knapper");
+    var sjekk = lag("button", "knapp quiz-sjekk", "Sjekk svar"); sjekk.type = "button"; sjekk.disabled = true;
+    var proevIgjen = lag("button", "knapp sekundar quiz-proev", "Prøv igjen"); proevIgjen.type = "button"; proevIgjen.hidden = true;
+    var seForkl = lag("button", "quiz-igjen quiz-se", "Se forklaring"); seForkl.type = "button"; seForkl.hidden = true;
+    knapper.appendChild(sjekk); knapper.appendChild(proevIgjen); knapper.appendChild(seForkl);
+    if (liste) liste.parentNode.insertBefore(knapper, liste.nextSibling);
+    var valgt = null, forsok = 0;
     var igjen = null;
+    function las(laast) { valg.forEach(function (v) { v.querySelector("button").disabled = laast; }); }
+    function ferdig() {
+      q.classList.add("besvart");
+      las(true);
+      sjekk.hidden = true; proevIgjen.hidden = true; seForkl.hidden = true;
+      if (forklaring) forklaring.hidden = false;
+      if (egenIgjenKnapp) {
+        igjen = lag("button", "quiz-igjen", "Start på nytt");
+        igjen.type = "button";
+        igjen.addEventListener("click", function () { nullstill(false); });
+        q.appendChild(igjen);
+      }
+      if (naarSvart) naarSvart(null, true);
+    }
     function nullstill(stokkValg) {
       q.classList.remove("besvart");
-      valg.forEach(function (v) { v.classList.remove("rett", "feil"); v.querySelector("button").disabled = false; });
+      valg.forEach(function (v) { v.classList.remove("rett", "feil", "valgt"); });
+      las(false);
+      valgt = null; forsok = 0;
+      sjekk.hidden = false; sjekk.disabled = true; proevIgjen.hidden = true; seForkl.hidden = true;
       svar.hidden = true; if (forklaring) forklaring.hidden = true;
       if (igjen) { igjen.remove(); igjen = null; }
       if (stokkValg && liste) stokk(valg.slice()).forEach(function (v) { liste.appendChild(v); });
@@ -634,23 +660,41 @@
       li.innerHTML = "";
       li.appendChild(b);
       b.addEventListener("click", function () {
-        if (q.classList.contains("besvart")) return;
-        q.classList.add("besvart");
-        var rett = li.hasAttribute("data-riktig");
-        li.classList.add(rett ? "rett" : "feil");
-        valg.forEach(function (v) { if (v.hasAttribute("data-riktig")) v.classList.add("rett"); v.querySelector("button").disabled = true; });
-        svar.textContent = rett ? "Riktig!" : "Ikke helt. Riktig svar er markert.";
-        svar.className = "quiz-svar " + (rett ? "rett" : "feil");
-        svar.hidden = false;
-        if (forklaring) forklaring.hidden = false;
-        if (egenIgjenKnapp) {
-          igjen = lag("button", "quiz-igjen", "Prøv igjen");
-          igjen.type = "button";
-          igjen.addEventListener("click", function () { nullstill(false); });
-          q.appendChild(igjen);
-        }
-        if (naarSvart) naarSvart(rett);
+        if (b.disabled) return;
+        valg.forEach(function (v) { v.classList.remove("valgt"); v.querySelector("button").setAttribute("aria-pressed", "false"); });
+        li.classList.add("valgt"); b.setAttribute("aria-pressed", "true");
+        valgt = li; sjekk.disabled = false;
       });
+    });
+    sjekk.addEventListener("click", function () {
+      if (!valgt) return;
+      forsok++;
+      var rett = valgt.hasAttribute("data-riktig");
+      valgt.classList.remove("valgt");
+      valgt.classList.add(rett ? "rett" : "feil");
+      svar.className = "quiz-svar " + (rett ? "rett" : "feil");
+      svar.hidden = false;
+      if (forsok === 1 && naarSvart) naarSvart(rett, false);
+      if (rett) {
+        svar.textContent = forsok === 1 ? "Riktig!" : "Riktig! Du fikk det til.";
+        ferdig();
+      } else {
+        svar.textContent = "Ikke riktig. Prøv igjen, eller se forklaringen.";
+        las(true); sjekk.hidden = true; proevIgjen.hidden = false; seForkl.hidden = false;
+        proevIgjen.focus({ preventScroll: true });
+      }
+    });
+    proevIgjen.addEventListener("click", function () {
+      // Feile svar forblir røde og kan ikke velges igjen.
+      valg.forEach(function (v) { v.querySelector("button").disabled = v.classList.contains("feil"); });
+      valgt = null; sjekk.hidden = false; sjekk.disabled = true;
+      proevIgjen.hidden = true; seForkl.hidden = true; svar.hidden = true;
+    });
+    seForkl.addEventListener("click", function () {
+      valg.forEach(function (v) { if (v.hasAttribute("data-riktig")) v.classList.add("rett"); });
+      svar.textContent = "Riktig svar er markert med grønt.";
+      svar.className = "quiz-svar";
+      ferdig();
     });
     return nullstill;
   }
@@ -670,20 +714,23 @@
     var videre = lag("button", "knapp karusell-videre", "Neste spørsmål →"); videre.type = "button"; videre.hidden = true;
     var prikker = lag("div", "karusell-prikker");
     var poeng = lag("div", "karusell-poeng");
-    var igjen = lag("button", "quiz-igjen karusell-igjen", "Prøv igjen"); igjen.type = "button";
+    var igjen = lag("button", "quiz-igjen karusell-igjen", "Start quizen på nytt"); igjen.type = "button";
     boks.appendChild(hode); boks.appendChild(scene); boks.appendChild(videre);
     boks.appendChild(prikker); boks.appendChild(poeng); boks.appendChild(igjen);
 
     var orden = quizer.slice();
     var resultat = [];
+    var ferdige = [];
     var nullstillere = [];
     var n = 0;
     quizer.forEach(function (q, i) {
       scene.appendChild(q);
-      nullstillere[i] = lagQuiz(q, function (rett) {
-        resultat[orden.indexOf(q)] = rett;
+      nullstillere[i] = lagQuiz(q, function (rett, avsluttet) {
+        var k = orden.indexOf(q);
+        if (!avsluttet) { resultat[k] = rett; ferdige[k] = false; oppdater(); return; }
+        ferdige[k] = true;
         oppdater();
-        if (n < orden.length - 1) { videre.hidden = false; videre.focus({ preventScroll: true }); }
+        if (n < orden.length - 1) videre.focus({ preventScroll: true });
       }, false);
     });
     function oppdater() {
@@ -702,7 +749,7 @@
       var besvart = resultat.filter(function (r) { return r !== undefined; }).length;
       var riktige = resultat.filter(function (r) { return r === true; }).length;
       poeng.textContent = riktige + " av " + orden.length + " riktige" + (besvart === orden.length ? " – ferdig!" : "");
-      videre.hidden = !(resultat[n] !== undefined && n < orden.length - 1);
+      videre.hidden = !(ferdige[n] && n < orden.length - 1);
     }
     function gaa(i) { n = Math.max(0, Math.min(orden.length - 1, i)); oppdater(); }
     forrige.addEventListener("click", function () { gaa(n - 1); });
@@ -716,7 +763,7 @@
       quizer.forEach(function (q, i) { nullstillere[i](true); });
       orden = stokk(quizer.slice());
       orden.forEach(function (q) { scene.appendChild(q); });
-      resultat = [];
+      resultat = []; ferdige = [];
       gaa(0);
     });
     oppdater();

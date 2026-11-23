@@ -456,6 +456,12 @@ ul.sjekk li::before { content: "☐"; position: absolute; left: 0; color: var(--
 .quiz-valg:disabled { cursor: default; }
 .quiz li.rett .quiz-valg { background: var(--rett-bg); border-color: var(--rett); }
 .quiz li.feil .quiz-valg { background: var(--feil-bg); border-color: var(--feil); }
+.quiz li.valgt .quiz-valg { border-color: var(--tema-middels); box-shadow: inset 0 0 0 1px var(--tema-middels); font-weight: 600; }
+.quiz li.feil .quiz-valg:disabled { opacity: .85; }
+.quiz-knapper { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: .2em 0 .6em; }
+.quiz-knapper button[hidden], .karusell-videre[hidden] { display: none; }
+.quiz-sjekk:disabled { opacity: .45; cursor: not-allowed; filter: none; }
+.quiz.besvart .quiz-knapper { display: none; }
 .quiz-svar { font-weight: 700; margin: .4em 0; }
 .quiz-svar.rett { color: var(--rett); }
 .quiz-svar.feil { color: var(--feil); }

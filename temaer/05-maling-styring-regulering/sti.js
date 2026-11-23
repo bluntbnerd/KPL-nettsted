@@ -26,8 +26,8 @@ KPL.sti("05-maling-styring-regulering", [
     emne: "Signaler og instrumentering",
     sider: [
       { fil: "givere-og-transmittere.html", tittel: "Givere og transmittere", meny: "Givere", type: "fagstoff", status: "utkast" },
-      { tittel: "Signalet 4–20 mA", status: "planlagt" },
-      { tittel: "Instrumentsymboler og P&ID", status: "planlagt" },
+      { fil: "signalet-4-20-ma.html", tittel: "Signalet 4–20 mA", meny: "4–20 mA", type: "fagstoff", status: "utkast" },
+      { fil: "instrumentsymboler-og-pid.html", tittel: "Instrumentsymboler og P&ID", meny: "Symboler og P&ID", type: "fagstoff", status: "utkast" },
       { tittel: "Hva kan du nå?", status: "planlagt" }
     ]
   },
