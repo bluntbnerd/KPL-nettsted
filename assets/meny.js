@@ -849,7 +849,7 @@
         var p = n.parentElement;
         if (!p || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
         if (n.nodeValue.indexOf("\\") !== -1) return NodeFilter.FILTER_REJECT; // formler (MathJax)
-        if (p.closest("h1,h2,h3,h4,summary,a,button,table,figcaption,.ordliste-boks,.quiz,.quiz-karusell,.merker,.boks-tittel,.begrep,script,style,mjx-container,.utkast-varsel")) return NodeFilter.FILTER_REJECT;
+        if (p.closest("h1,h2,h3,h4,summary,a,button,table,figcaption,.ordliste-boks,.quiz,.quiz-karusell,.merker,.boks-tittel,.begrep,script,style,svg,mjx-container,.utkast-varsel")) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }
     });

@@ -257,7 +257,7 @@ details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:
 
 <div class="sim ws" id="nivasikring">
   <h2>Del B – Arbeidsark: kartlegg nivåsikringen på skolens anlegg</h2>
-  <div class="boks viktig" style="margin-top:0"><strong>Sikkerhet:</strong> Følg skolens prosedyre for anlegget. Du skal ikke endre settpunkter, koble ut sikringer eller overstyre noe.</div>
+  <div class="boks viktig" style="margin-top:0"><strong>Sikkerhet:</strong> Følg skolens prosedyre for anlegget. Du skal ikke endre settpunktene for alarmer og sikringer, koble ut sikringer eller overstyre noe. Det eneste du endrer, er settpunktet for nivåreguleringen i funksjonstesten (punkt 4), og bare når læreren er til stede.</div>
   <h3>1. Finn instrumentene</h3>
   <p>Finn instrumentene på anlegget og fyll inn tabellen. Bruk flytskjemaet for anlegget og skiltene på utstyret. Settpunktene finner du i styresystemet eller i dokumentasjonen.</p>
   <div class="scroll"><table id="wsMap" class="ws-tbl"></table></div>
@@ -270,7 +270,8 @@ details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:
     <p style="margin:0">Typisk gir LAH bare alarm. LAHH gir alarm, stopper pumpen og må tilbakestilles manuelt. En nødstopp gjør det samme som LAHH. Sammenlign med dokumentasjonen for anlegget, for skolens anlegg kan være laget annerledes. Hvis det er forskjell, diskuter hvorfor.</p>
   </details>
   <h3>4. Funksjonstest</h3>
-  <p>Sett reguleringen i manuell, og fyll tanken kontrollert ved å åpne LCV-12022 litt. Les av nivået når hvert lag slår inn, og sammenlign med settpunktet fra punkt 1. Én elev følger med på nivået hele tiden og er klar til å stoppe pumpen hvis et lag ikke slår inn som forventet. Sett reguleringen tilbake i automatisk når dere er ferdige.</p>
+  <p>La reguleringen stå i automatisk hele testen. Øk settpunktet for LIC-12094 i små steg, for eksempel 5 % om gangen, slik at reguleringen selv kjører nivået oppover. Vent til nivået har nådd det nye settpunktet før du øker igjen. Les av nivået når hvert lag slår inn, og sammenlign med settpunktet fra punkt 1. Én elev følger med på nivået hele tiden og er klar til å stoppe pumpen hvis et lag ikke slår inn som forventet.</p>
+  <p>Når LAHH har stoppet pumpen: Senk settpunktet til normal verdi <em>før</em> dere tilbakestiller LAHH og starter pumpen igjen. Ellers åpner reguleringen ventilen fullt, og tanken fylles opp på nytt med en gang. Noen styresystemer har en øvre grense for settpunktet. Kommer dere ikke høyt nok, spør læreren.</p>
   <div class="scroll"><table id="wsTest" class="ws-tbl"></table></div>
   <h3>5. Refleksjon</h3>
   <ol>
@@ -401,7 +402,7 @@ details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:
   const MAPP = ['Tag', 'f.eks. trykk, radar, flottør', '% eller cm', ''];
   const CER = ['LAH', 'LAHH', 'Nødstopp (hvis anlegget har det)'];
   const CEC = ['Alarm i styresystemet', 'Pumpen stopper', 'Må tilbakestilles manuelt'];
-  const TR = ['LAH gir alarm', 'LAHH stopper pumpen', 'Pumpen kan ikke startes før LAHH er tilbakestilt', 'Overløpet begynner å renne (hvis dere tester det)'];
+  const TR = ['LAH gir alarm', 'LAHH stopper pumpen', 'Pumpen kan ikke startes før LAHH er tilbakestilt'];
   const TC = ['Forventet nivå', 'Observert nivå'];
   const esc = s => String(s).replace(/"/g, '&quot;');
   E('wsMap').innerHTML = '<thead><tr><th>Funksjon</th>' + MAPC.map(c => '<th>' + c + '</th>').join('') + '</tr></thead><tbody>' + MAPR.map((r, i) => '<tr><td><strong>' + r[0] + '</strong><br><span class="etikett">' + r[1] + '</span></td>' + MAPC.map((c, j) => '<td><input type="text" id="ws-map-' + i + '-' + j + '" data-ws="map-' + i + '-' + j + '" placeholder="' + MAPP[j] + '" aria-label="' + esc(r[0] + ': ' + c) + '"></td>').join('') + '</tr>').join('') + '</tbody>';

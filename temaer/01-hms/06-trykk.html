@@ -115,12 +115,52 @@ details.mer summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:
 <p>Husk sammenhengen fra gasslovene: For en gass i et lukket volum øker trykket når temperaturen øker. Og når væske koker, blir den til gass som tar mye større plass.</p>
 
 <h3>Trykkavlastning</h3>
-<p>Den siste tekniske barrieren mot overtrykk er trykkavlastningsutstyr. Det skal slippe ut trykket på en kontrollert måte, til fakkel, skrubber eller et trygt sted, før utstyret sprekker.</p>
+<p>Den siste tekniske barrieren mot overtrykk er trykkavlastningsutstyr, for eksempel en sikkerhetsventil eller en sprengplate. Det skal slippe ut trykket på en kontrollert måte, til fakkel, skrubber eller et trygt sted, før utstyret sprekker.</p>
 <div class="to">
   <div><h3>Sikkerhetsventil (PSV)</h3><p>En fjærbelastet ventil som åpner når trykket når et innstilt åpningstrykk, og lukker igjen når trykket faller. På flytskjemaer merkes den ofte med en tag som <strong>PSV-101</strong>.</p></div>
   <div><h3>Sprengplate</h3><p>En tynn metallplate som sprekker ved et bestemt trykk. Den kan ikke lukke seg igjen og må byttes etterpå. Brukes ofte der stoffet er etsende eller klebrig.</p></div>
   <div><h3>Vakuumventil</h3><p>Beskytter tanker mot undertrykk. En atmosfærisk tank kan bli trykket sammen hvis den tømmes eller kjøles uten at luft eller nitrogen slipper inn.</p></div>
 </div>
+<figure>
+  <div class="pid-wrap"><svg class="pid" viewBox="56 26 608 252" style="min-width:520px" role="img" aria-label="Flytskjema av en tank med tre sikringer på toppen: en sikkerhetsventil som slipper gass ut til fakkel, en sprengplate som slipper gass ut til skrubber, og en vakuumventil som slipper luft eller nitrogen inn i tanken">
+    <!-- Tank -->
+    <rect class="vessel" x="220" y="150" width="280" height="120" rx="20"/>
+    <text x="360" y="208" text-anchor="middle" style="font-weight:600;font-size:13px">Tank</text>
+    <text x="360" y="224" text-anchor="middle" class="lbl2">lukket, med trykk</text>
+
+    <!-- Sikkerhetsventil: ut til fakkel -->
+    <line class="ln" x1="270" y1="150" x2="270" y2="116"/>
+    <polygon class="valve" points="262,116 278,116 270,104"/>
+    <polygon class="valve" points="258,96 258,112 270,104"/>
+    <polyline class="ln" points="270,104 270,96 264,92 276,88 264,84 276,80 270,76 270,70"/>
+    <line class="ln" x1="258" y1="104" x2="76" y2="104"/>
+    <polygon points="78,98 68,104 78,110" style="fill:var(--ink)"/>
+    <text x="70" y="96">Til fakkel</text>
+    <text x="150" y="128" text-anchor="middle" style="font-weight:600;font-size:13px">Sikkerhetsventil</text>
+    <text x="150" y="142" text-anchor="middle" class="lbl2">PSV-101</text>
+
+    <!-- Sprengplate: ut til skrubber -->
+    <line class="ln" x1="360" y1="150" x2="360" y2="114"/>
+    <line class="ln" x1="346" y1="114" x2="374" y2="114"/>
+    <line class="ln" x1="346" y1="100" x2="374" y2="100"/>
+    <path class="ln" d="M348,112 Q360,98 372,112"/>
+    <line class="ln" x1="360" y1="100" x2="360" y2="48"/>
+    <polygon points="354,50 360,38 366,50" style="fill:var(--ink)"/>
+    <text x="372" y="46">Til skrubber</text>
+    <text x="350" y="62" text-anchor="end" style="font-weight:600;font-size:13px">Sprengplate</text>
+
+    <!-- Vakuumventil: luft eller nitrogen inn -->
+    <line class="ln" x1="450" y1="150" x2="450" y2="116"/>
+    <polygon class="valve" points="442,116 458,116 450,104"/>
+    <polygon class="valve" points="462,96 462,112 450,104"/>
+    <polyline class="ln" points="450,104 450,96 444,92 456,88 444,84 456,80 450,76 450,70"/>
+    <line class="ln" x1="462" y1="104" x2="650" y2="104"/>
+    <polygon points="568,98 558,104 568,110" style="fill:var(--ink)"/>
+    <text x="650" y="96" text-anchor="end">Luft eller nitrogen inn</text>
+    <text x="580" y="128" text-anchor="middle" style="font-weight:600;font-size:13px">Vakuumventil</text>
+  </svg></div>
+  <figcaption>Forenklet flytskjema. Sikkerhetsventilen og sprengplaten slipper gass ut når trykket i tanken blir for høyt. Vakuumventilen slipper luft eller nitrogen inn når trykket blir for lavt. Pilene viser hvilken vei gassen strømmer. En tank trenger ikke ha alle tre.</figcaption>
+</figure>
 <div class="boks viktig"><strong>Regel du aldri skal bryte:</strong> En sikkerhetsventil skal aldri blokkeres, fjernes eller stenges av uten godkjent arbeidstillatelse og andre tiltak på plass. Piper Alpha-ulykken i Nordsjøen i 1988 startet da en pumpe ble satt i gang mens sikkerhetsventilen var fjernet for vedlikehold.</div>
 
 <h3>Lag på lag: Slik sikres en trykktank</h3>
