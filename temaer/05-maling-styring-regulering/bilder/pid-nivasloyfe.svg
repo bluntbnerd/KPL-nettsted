@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370" width="720" height="370" font-family="Segoe UI, Arial, sans-serif">
-  <title>Utsnitt av et teknisk flytskjema (P&amp;ID) med tank T-101, pumpe P-101 og nivåreguleringssløyfe 101: nivågiver LT-101, nivåregulator LIC-101 i styresystemet og reguleringsventil LV-101. I tillegg et høy-høy-nivåvern LSHH-102 og et lokalt manometer PI-103.</title>
+  <title>Utsnitt av et teknisk flytskjema (P&amp;ID) med tank T-101, pumpe P-101 og nivåreguleringssløyfe 101: nivågiver LT-101, nivåregulator LIC-101 i styresystemet og reguleringsventil LV-101. I tillegg et høy-høy-nivåvern LSHH-102 som sender signal til en forrigling, og et lokalt manometer PI-103.</title>
   <rect x="0" y="0" width="720" height="370" rx="10" fill="#ffffff"/>
 
   <!-- Innløp -->
@@ -49,6 +49,11 @@
   <line x1="446" y1="150" x2="494" y2="150" stroke="#1c2828" stroke-width="1.5"/>
   <text x="470" y="145" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">LIC</text>
   <text x="470" y="164" font-size="11" text-anchor="middle" fill="#1c2828">101</text>
+
+  <!-- Signal fra LSHH-102 til forrigling -->
+  <line x1="274" y1="110" x2="352" y2="110" stroke="#b5530f" stroke-width="2" stroke-dasharray="6 4"/>
+  <polygon points="350,104 362,110 350,116" fill="#b5530f"/>
+  <text x="368" y="114" font-size="12" fill="#1c2828">til forrigling</text>
 
   <!-- Signallinjer -->
   <polyline points="274,230 380,230 380,150 444,150" fill="none" stroke="#b5530f" stroke-width="2" stroke-dasharray="6 4"/>

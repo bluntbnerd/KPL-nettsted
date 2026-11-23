@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Signaler og instrumentering – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Dette er siste steg i emnet «Signaler og instrumentering». Gå gjennom sjekklisten og quizen. Står du fast, går du tilbake til siden det gjelder. I dette emnet har du fulgt målingen fra føleren i prosessen, gjennom giveren og kabelen, og fram til tagnummeret på tegningen og skjermen.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan beskrive veien fra prosessen til skjermen: føler, giver, kabel, styresystem og skjerm. (<a href="givere-og-transmittere.html">Givere og transmittere</a>)</li>
+  <li>Jeg kan forklare forskjellen på en føler og en giver, og at giver og transmitter er det samme. (<a href="givere-og-transmittere.html">Givere og transmittere</a>)</li>
+  <li>Jeg kan forklare hva måleområdet er, og hva som skjer når giveren og styresystemet har ulikt måleområde. (<a href="givere-og-transmittere.html">Givere og transmittere</a>)</li>
+  <li>Jeg kan forklare forskjellen på en lokal måler, en giver og en bryter. (<a href="givere-og-transmittere.html">Givere og transmittere</a>)</li>
+  <li>Jeg kan forklare hva 4 mA og 20 mA betyr, og hvorfor signalet er en strøm. (<a href="signalet-4-20-ma.html">Signalet 4–20 mA</a>)</li>
+  <li>Jeg kan forklare hvorfor signalet starter på 4 mA og ikke 0 mA (levende null). (<a href="signalet-4-20-ma.html">Signalet 4–20 mA</a>)</li>
+  <li>Jeg kan regne om fra mA til måleverdi, også når måleområdet ikke starter på null. (<a href="signalet-4-20-ma.html">Signalet 4–20 mA</a>)</li>
+  <li>Jeg kan regne om fra måleverdi til mA. (<a href="signalet-4-20-ma.html">Signalet 4–20 mA</a>)</li>
+  <li>Jeg kan bruke strømmen i sløyfa til å si noe om hvor en feil sitter. (<a href="signalet-4-20-ma.html">Signalet 4–20 mA</a>)</li>
+  <li>Jeg kan lese et tagnummer: bokstavkoden og sløyfenummeret. (<a href="instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a>)</li>
+  <li>Jeg kan forklare hva instrumentsymbolene og de stiplede signallinjene i et teknisk flytskjema betyr. (<a href="instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a>)</li>
+  <li>Jeg kan følge en sløyfe fra giveren til ventilen i et teknisk flytskjema. (<a href="instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a>)</li>
+  <li>Jeg kan forklare hvorfor jeg melder fra til kontrollrommet og sjekker tagnummeret på skiltet før jeg gjør noe med et instrument. (alle sidene)</li>
+</ul>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>Hvilken del av måleinstrumentet er i kontakt med prosessen?</p>
+  <ul>
+    <li data-riktig>Føleren</li>
+    <li>Giveren</li>
+    <li>Kabelen</li>
+  </ul>
+  <p class="forklaring">Føleren, for eksempel en membran eller en Pt100, merker endringen i prosessen. Giveren leser av føleren og sender et signal.</p>
+</div>
+
+<div class="quiz">
+  <p>En ny trykkgiver er stilt inn på 0–20 bar, men styresystemet regner fortsatt med 0–10 bar. Trykket er 10 bar. Hva viser skjermen?</p>
+  <ul>
+    <li>10 bar</li>
+    <li data-riktig>5 bar</li>
+    <li>20 bar</li>
+  </ul>
+  <p class="forklaring">10 bar er 50 % av 0–20 bar, så giveren sender 50 %. Styresystemet regner 50 % av 0–10 bar og viser 5 bar. Måleområdet må være likt begge steder.</p>
+</div>
+
+<div class="quiz">
+  <p>Du vil ha et signal som bare sier fra når trykket blir over 6 bar. Hva trenger du?</p>
+  <ul>
+    <li>En trykkgiver</li>
+    <li data-riktig>En trykkbryter</li>
+    <li>Et manometer</li>
+  </ul>
+  <p class="forklaring">En bryter er enten av eller på og sier fra når en grense er nådd. En giver sender verdien hele tiden, og et manometer viser bare trykket på stedet.</p>
+</div>
+
+<div class="quiz">
+  <p>En temperaturgiver har måleområdet 0–200 °C og sender 14 mA. Hvilken temperatur er det?</p>
+  <ul>
+    <li>100 °C</li>
+    <li data-riktig>125 °C</li>
+    <li>140 °C</li>
+  </ul>
+  <p class="forklaring">14 mA − 4 mA = 10 mA. \( \dfrac{10}{16} = 0{,}625 \). \( 0{,}625 \cdot 200 \text{ °C} = 125 \text{ °C} \).</p>
+</div>
+
+<div class="quiz">
+  <p>En temperaturgiver har måleområdet 50–150 °C og sender 8 mA. Hvilken temperatur er det?</p>
+  <ul>
+    <li>25 °C</li>
+    <li data-riktig>75 °C</li>
+    <li>100 °C</li>
+  </ul>
+  <p class="forklaring">8 mA er 4 mA over nullpunktet, altså \( \dfrac{4}{16} = 0{,}25 \) av måleområdet. 0,25 · 100 °C = 25 °C. Legg til laveste verdi: 50 °C + 25 °C = 75 °C. Svaret 25 °C får du hvis du glemmer det siste steget.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkgiver har måleområdet 0–4 bar. Trykket er 1 bar. Hvor mange mA sender giveren?</p>
+  <ul>
+    <li>5 mA</li>
+    <li data-riktig>8 mA</li>
+    <li>10 mA</li>
+  </ul>
+  <p class="forklaring">1 bar av 4 bar er 25 %. \( 4 + 16 \cdot 0{,}25 = 4 + 4 = 8 \) mA.</p>
+</div>
+
+<div class="quiz">
+  <p>Teknikeren måler 0 mA i sløyfa til en nivågiver. Hva er mest sannsynlig?</p>
+  <ul>
+    <li>Tanken er tom.</li>
+    <li data-riktig>Brudd i kabelen, en løs ledning eller ingen strømforsyning.</li>
+    <li>Måleområdet er feil innstilt.</li>
+  </ul>
+  <p class="forklaring">En tom tank gir 4 mA, ikke 0 mA. Feil måleområde gir feil verdi, men strømmen er fortsatt mellom 4 og 20 mA. 0 mA betyr at strømmen ikke kommer fram.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva betyr LSHH-102?</p>
+  <ul>
+    <li>Nivågiver i sløyfe 102</li>
+    <li data-riktig>Nivåbryter for høy-høy-nivå i sløyfe 102</li>
+    <li>Lav sikkerhet, høy hastighet</li>
+  </ul>
+  <p class="forklaring">L først betyr nivå, S betyr bryter, og HH til slutt betyr høy-høy. 102 er sløyfenummeret.</p>
+</div>
+
+<div class="quiz">
+  <p>Et instrument er tegnet som en sirkel uten strek og uten signallinje, med PI-103 inni. Hva er det?</p>
+  <ul>
+    <li data-riktig>Et manometer som bare leses av ute i anlegget</li>
+    <li>En trykkregulator i styresystemet</li>
+    <li>En trykkgiver som sender signal til kontrollrommet</li>
+  </ul>
+  <p class="forklaring">P betyr trykk og I betyr at verdien vises. Sirkelen uten strek betyr at instrumentet sitter ute i anlegget, og uten signallinje sender det ikke noe videre.</p>
+</div>
+
+<div class="quiz">
+  <p>FT-210, FIC-210 og FV-210 har samme nummer. Hva er FV-210?</p>
+  <ul>
+    <li>Mengdegiveren</li>
+    <li>Mengderegulatoren</li>
+    <li data-riktig>Ventilen i mengdesløyfe 210</li>
+  </ul>
+  <p class="forklaring">F betyr mengde (flow), og V betyr ventil. Samme nummer betyr at giveren, regulatoren og ventilen hører til samme sløyfe.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Slike spørsmål kan du få i en fagsamtale eller til eksamen. Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Beskriv veien fra en temperatur i et rør til tallet på skjermen i kontrollrommet. Bruk ordene føler, giver, signal og styresystem.</summary>
+  <p>Føleren, for eksempel en Pt100, står i et lommerør i røret og merker temperaturen. Giveren sitter på toppen, leser av føleren og regner om til temperatur. Den sender verdien som et standardsignal, oftest 4–20 mA, gjennom en kabel til styresystemet. Styresystemet gjør strømmen om til en temperatur med riktig enhet, ut fra måleområdet, og viser den på skjermen med tagnummeret, for eksempel TT-101.</p>
+</details>
+
+<details>
+  <summary>2. Hvorfor brukes en strøm på 4–20 mA, og ikke en spenning eller en strøm som starter på 0 mA?</summary>
+  <p>En strøm er den samme overalt i en lukket krets, så lange kabler gir ikke feil verdi, og strømmen påvirkes lite av elektrisk støy. Signalet starter på 4 mA slik at styresystemet kan skille laveste måleverdi (4 mA) fra et brudd (0 mA). Den minste strømmen gir også giveren nok strøm til å drive seg selv gjennom de samme to lederne.</p>
+</details>
+
+<details>
+  <summary>3. Trykket på skjermen ser feil ut. Hvordan kan du finne ut om feilen sitter i prosessen, i giveren eller i signalet?</summary>
+  <p>Først sammenligner jeg med et manometer i nærheten. Viser manometeret det samme som skjermen, er det trolig prosessen som har endret seg. Så ser jeg på displayet på giveren. Viser giveren riktig, men skjermen feil, sitter feilen etter selve målingen: i kabelen, eller i måleområdet i giveren eller i styresystemet. Viser også giveren feil, kan det være giveren, et tett impulsrør eller en stengt instrumentventil. Instrumentteknikeren kan måle strømmen: 0 mA betyr brudd, og en strøm mellom 4 og 20 mA betyr at signalet er i orden.</p>
+</details>
+
+<details>
+  <summary>4. En regulering bruker verdien fra en giver. Hvorfor må du melde fra til kontrollrommet før giveren tas ut av drift?</summary>
+  <p>Når giveren stenges av eller kobles fra, endrer verdien på skjermen seg, eller den blir borte. Regulatoren tror da at prosessen har endret seg og kan åpne eller stenge en ventil helt. En forrigling kan stoppe utstyr, og det kan komme alarmer. Kontrollrommet må vite om arbeidet og sette regulatoren i manuell, slik at den ikke flytter ventilen av seg selv, før giveren tas ut.</p>
+</details>
+
+<details>
+  <summary>5. I et teknisk flytskjema ser du LT-101 på en tank, LIC-101 i en firkant og LV-101 på utløpet. Forklar hva sløyfa gjør.</summary>
+  <p>LT-101 er en nivågiver ute ved tanken. Den sender nivået som et elektrisk signal til LIC-101, som er en nivåregulator i styresystemet. Operatøren ser den på skjermen. Regulatoren styrer reguleringsventilen LV-101 på utløpet. Stiger nivået, åpner den ventilen mer, og synker det, struper den. Slik holdes nivået i tanken jevnt. Alle tre har sløyfenummer 101 fordi de hører til samme sløyfe.</p>
+</details>
+
+<details>
+  <summary>6. Hvorfor skal du sjekke tagnummeret på skiltet før du gjør noe med et instrument, og hva gjør du hvis tegningen ikke stemmer?</summary>
+  <p>Ofte sitter flere like givere tett sammen. Stenger jeg av feil giver, kan en sløyfe som er i drift, miste målingen, og utstyr kan stoppe eller gå feil. Stemmer ikke tegningen med det som er i anlegget, melder jeg fra, slik at tegningen blir rettet. Feil tegninger kan føre til ulykker ved vedlikehold.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Gå tilbake til fagstoffsidene i dette emnet i læringsstien.</li>
+  <li>Signalene brukes videre i emnene Styring, Regulering og Styresystemer.</li>
+</ul>
+<p><small>Om kildene: Teksten og spørsmålene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Signalet 4–20 mA</h1>
@@ -23,11 +23,11 @@
   <li><strong>20 mA</strong> betyr høyeste verdi, altså 100 %.</li>
   <li>Alt imellom følger en rett linje. 12 mA, midt mellom 4 og 20, betyr 50 %.</li>
 </ul>
-<p>Én milliampere er en tusendel ampere. Det er en svært liten strøm, mye mindre enn strømmen i en lyspære.</p>
+<p>Én milliampere er en tusendel ampere. Det er en svært liten strøm. En vannkoker trekker til sammenligning rundt 10 A, altså 10 000 mA.</p>
 
 <figure>
   <img src="bilder/signal-4-20-ma.svg" alt="Graf med strømmen fra giveren i mA langs den vannrette aksen, fra 0 til 22, og måleverdien i prosent av måleområdet langs den loddrette aksen, fra 0 til 100 prosent. En rett linje går fra 4 mA og 0 prosent til 20 mA og 100 prosent. Punktene 4, 8, 12, 16 og 20 mA er merket, og de svarer til 0, 25, 50, 75 og 100 prosent. Stiplede linjer viser at 12 mA er 50 prosent. Området under ca. 3,6 mA og over ca. 21 mA er farget rødt og merket signalfeil. Ved brudd er strømmen 0 mA." width="640">
-  <figcaption>Figur: Sammenhengen mellom strømmen og måleverdien. 4 mA er 0 % og 20 mA er 100 % av måleområdet. Hver økning på 4 mA er 25 %. Strøm langt under 4 mA eller over 20 mA betyr at noe er galt.</figcaption>
+  <figcaption>Figur: Sammenhengen mellom strømmen og måleverdien. 4 mA er 0 % og 20 mA er 100 % av måleområdet. Hver økning på 4 mA er 25 %. Strøm tydelig under 4 mA eller tydelig over 20 mA, for eksempel under ca. 3,6 mA eller over ca. 21 mA, betyr at noe er galt.</figcaption>
 </figure>
 
 <table>
@@ -55,7 +55,7 @@
   <li><strong>Brudd kan oppdages.</strong> Går kabelen av, blir strømmen 0 mA. Hadde 0 mA betydd 0 %, kunne ikke styresystemet skilt et kabelbrudd fra en tom tank. Nå vet det at 0 mA betyr feil.</li>
   <li><strong>Giveren får strøm.</strong> Giveren trenger litt strøm selv for at elektronikken skal virke. Med minst 4 mA i sløyfa hele tiden kan giveren få strømmen sin gjennom de to samme lederne som signalet går i.</li>
 </ul>
-<p>Styresystemet melder <strong>signalfeil</strong> når strømmen er tydelig utenfor 4–20 mA. Mange anlegg bruker grensene under ca. 3,6 mA og over ca. 21 mA. Litt under 4 mA eller litt over 20 mA betyr vanligvis bare at verdien er litt utenfor måleområdet. Grensene kan være litt forskjellige fra anlegg til anlegg.</p>
+<p>Styresystemet melder <strong>signalfeil</strong> når strømmen er tydelig utenfor 4–20 mA. Mange anlegg bruker grensene under ca. 3,6 mA og over ca. 21 mA, etter en anbefaling som kalles NAMUR. Litt under 4 mA eller litt over 20 mA betyr vanligvis bare at verdien er litt utenfor måleområdet. Grensene kan være litt forskjellige fra anlegg til anlegg.</p>
 <p>En smart giver som oppdager en feil i seg selv, kan sende en strøm utenfor området med vilje, for eksempel 3,6 mA eller 21 mA. Da får styresystemet beskjed om at målingen ikke kan stoles på.</p>
 
 <h2>Fra mA til måleverdi</h2>
@@ -99,7 +99,8 @@
 </div>
 
 <h2>Signalet ut til ventilen</h2>
-<p>4–20 mA brukes ikke bare inn til styresystemet. Det brukes også ut fra styresystemet til en reguleringsventil. Da betyr strømmen hvor mye ventilen skal åpne, for eksempel 4 mA = stengt og 20 mA = helt åpen. På ventilen sitter en <strong>ventilstiller</strong> som gjør strømsignalet om til lufttrykk, og lufttrykket flytter ventilen.</p>
+<p>4–20 mA brukes ikke bare inn til styresystemet. Det brukes også ut fra styresystemet til en reguleringsventil. Da betyr strømmen hvor mye ventilen skal åpne. Ofte betyr 4 mA stengt og 20 mA helt åpen, men på noen ventiler er det omvendt. Det avhenger av hvilken stilling ventilen skal gå til hvis signalet eller lufta blir borte.</p>
+<p>På ventilen sitter en <strong>ventilstiller</strong>. Den tar imot strømsignalet og styrer lufttrykket til ventilen, slik at ventilen står der signalet sier.</p>
 
 <h2>Feilsøking med signalet</h2>
 <p>Strømmen i sløyfa forteller mye om hvor en feil sitter:</p>
@@ -108,7 +109,7 @@
   <tbody>
     <tr><td>0 mA</td><td>Brudd i kabelen, løs ledning i en koblingsboks, ingen strømforsyning eller død giver.</td></tr>
     <tr><td>Rundt 3,6 mA eller lavere</td><td>Giveren melder selv om en feil, eller sløyfa har en feil.</td></tr>
-    <tr><td>4–20 mA, men verdien virker feil</td><td>Signalet er i orden. Feilen sitter i målingen (føler, impulsrør, tetthet) eller i måleområdet i giveren eller styresystemet.</td></tr>
+    <tr><td>4–20 mA, men verdien virker feil</td><td>Strømmen er innenfor området. Feilen kan sitte i målingen (føler, tett impulsrør, feil tetthet ved nivåmåling med trykk), i kalibreringen av giveren eller i måleområdet i giveren eller styresystemet.</td></tr>
     <tr><td>Rundt 21 mA eller høyere</td><td>Giveren melder selv om en feil, eller det er kortslutning i sløyfa.</td></tr>
   </tbody>
 </table>
@@ -126,7 +127,7 @@
     <li>Avtal med kontrollrommet før noen kobler i en sløyfe. Når signalet blir borte eller endres, kan regulatorer, alarmer og forriglinger reagere.</li>
     <li>En sløyfekalibrator sender en falsk måleverdi til styresystemet. Regulatoren og forriglingene på den målingen må være koblet ut eller satt i manuell etter prosedyren før testen.</li>
     <li>I Ex-områder må også multimeter og kalibrator være godkjent for området, og arbeidet krever tillatelse.</li>
-    <li>Mange forriglinger er laget slik at signalfeil gir en trygg tilstand, for eksempel at en pumpe stopper. Derfor kan et løst ledd i en kabel stoppe en del av anlegget.</li>
+    <li>Mange forriglinger er laget slik at signalfeil gir en trygg tilstand, for eksempel at en pumpe stopper. Derfor kan en løs ledning stoppe en del av anlegget.</li>
   </ul>
 </div>
 
@@ -187,11 +188,11 @@
   <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
   <tbody>
     <tr><td>4–20 mA</td><td>Standardsignal der giveren sender en strøm mellom 4 og 20 milliampere. 4 mA er 0 % og 20 mA er 100 % av måleområdet.</td><td>4–20 mA signal</td></tr>
-    <tr><td>milliampere</td><td>En tusendel ampere. Enheten for den lille strømmen i signalet fra en giver. Skrives mA.</td><td>milliampere</td></tr>
+    <tr><td>milliampere</td><td>En tusendel ampere. Enheten for den lille strømmen i signalet fra en giver. Skrives mA.</td><td></td></tr>
     <tr><td>strømsløyfe</td><td>Lukket krets med strømforsyning, giver, kabel og inngang på styresystemet, der signalet går som en strøm.</td><td>current loop</td></tr>
     <tr><td>levende null</td><td>At signalet starter på 4 mA og ikke 0 mA, slik at 0 mA alltid betyr feil, for eksempel kabelbrudd.</td><td>live zero</td></tr>
     <tr><td>signalfeil</td><td>Melding fra styresystemet om at strømmen er utenfor det normale området, slik at målingen ikke kan stoles på.</td><td>signal fault, bad PV</td></tr>
-    <tr><td>ventilstiller</td><td>Enhet på en reguleringsventil som gjør strømsignalet fra styresystemet om til lufttrykk som flytter ventilen.</td><td>valve positioner</td></tr>
+    <tr><td>ventilstiller</td><td>Enhet på en reguleringsventil som tar imot signalet fra styresystemet og styrer lufttrykket, slik at ventilen står i riktig stilling.</td><td>valve positioner</td></tr>
     <tr><td>sløyfekalibrator</td><td>Instrument som kan måle strømmen i en sløyfe, eller sende en kjent strøm inn i den for å teste den.</td><td>loop calibrator</td></tr>
   </tbody>
 </table>

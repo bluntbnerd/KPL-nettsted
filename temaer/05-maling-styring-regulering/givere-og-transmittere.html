@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Givere og transmittere</h1>
@@ -28,7 +28,7 @@
   <li><strong>Føleren</strong> er delen som er i kontakt med prosessen og merker endringen. I en trykkgiver er det membranen. Ved temperaturmåling er det for eksempel en Pt100 eller et termoelement.</li>
   <li><strong>Giveren</strong> leser av føleren og gjør målingen om til et signal som kan sendes langt.</li>
   <li><strong>Kabelen</strong> fører signalet til styresystemet, ofte flere hundre meter.</li>
-  <li><strong>Styresystemet</strong>, for eksempel en PLS, gjør signalet om til et tall med riktig enhet. Det bruker verdien til regulering, alarmer og forriglinger.</li>
+  <li><strong>Styresystemet</strong>, for eksempel en PLS (en datamaskin som styrer anlegget), gjør signalet om til et tall med riktig enhet. Det bruker verdien til regulering, alarmer og forriglinger.</li>
   <li><strong>Skjermen</strong> i kontrollrommet viser verdien for operatøren.</li>
 </ol>
 <p>Føler og giver sitter ofte sammen i ett instrument, for eksempel en trykkgiver. I en temperaturmåling er de ofte to deler: føleren står i lommerøret, og giveren sitter i et hode på toppen.</p>
@@ -65,18 +65,18 @@
 
 <h2>Smarte givere</h2>
 <p>De fleste nye givere er <strong>smarte givere</strong>. De har en liten datamaskin inni seg. Instrumentteknikeren kan koble til et håndholdt verktøy eller bruke et dataprogram, og så lese og endre innstillingene, for eksempel måleområdet og enheten.</p>
-<p>En smart giver kan også sjekke seg selv og melde fra hvis noe er galt, for eksempel at føleren er ødelagt. Mange sender slik informasjon i tillegg til selve målingen. Et vanlig system for dette heter HART.</p>
+<p>En smart giver kan også sjekke seg selv og melde fra hvis noe er galt, for eksempel at føleren er ødelagt. Et vanlig system for dette heter HART. Det sender digital informasjon i de samme to lederne, oppå selve målesignalet. Det er også slik det håndholdte verktøyet snakker med giveren.</p>
 
 <h2>Giver eller bryter?</h2>
-<p>En giver sender en verdi som kan ligge hvor som helst i måleområdet. Det kalles et analogt signal. En <strong>bryter</strong> sier bare fra når en grense er nådd, for eksempel en nivåbryter høyt i tanken eller en trykkbryter som slår ut ved 6 bar. Bryteren er enten av eller på, og sender et digitalt signal. Forskjellen på analoge og digitale signaler lærte du på siden <a href="pls.html">PLS</a>.</p>
+<p>En giver sender en verdi som kan ligge hvor som helst i måleområdet. Det kalles et analogt signal. En <strong>bryter</strong> sier bare fra når en grense er nådd, for eksempel en nivåbryter høyt i tanken eller en trykkbryter som slår ut ved 6 bar. Bryteren er enten av eller på, og sender et digitalt signal. Mer om analoge og digitale signaler lærer du på siden <a href="pls.html">PLS</a> i emnet Styresystemer.</p>
 
 <table>
   <thead><tr><th>Måling</th><th>Lokal måler (viser på stedet)</th><th>Giver (sender verdien hele tiden)</th><th>Bryter (av eller på ved en grense)</th></tr></thead>
   <tbody>
     <tr><td>Trykk</td><td>Manometer</td><td>Trykkgiver (PT)</td><td>Trykkbryter</td></tr>
-    <tr><td>Temperatur</td><td>Bimetalltermometer</td><td>Temperaturgiver (TT)</td><td>Termostat</td></tr>
+    <tr><td>Temperatur</td><td>Bimetalltermometer</td><td>Temperaturgiver (TT)</td><td>Temperaturbryter (termostat)</td></tr>
     <tr><td>Nivå</td><td>Seglass</td><td>Nivågiver (LT)</td><td>Nivåbryter</td></tr>
-    <tr><td>Mengde</td><td>Rotameter</td><td>Mengdegiver (FT)</td><td>Strømningsbryter</td></tr>
+    <tr><td>Mengde</td><td>Rotameter</td><td>Mengdegiver (FT)</td><td>Strømningsvakt</td></tr>
   </tbody>
 </table>
 
@@ -84,19 +84,19 @@
 <p>Viser skjermen en verdi som ikke stemmer, kan feilen sitte hvor som helst på veien i figuren: i prosessen, i føleren, i giveren, i kabelen eller i styresystemet. Prøv å finne ut hvor:</p>
 <ul>
   <li><strong>Sammenlign med en lokal måler.</strong> Sitter det et manometer eller et termometer i nærheten, kan du se om det viser det samme som skjermen.</li>
-  <li><strong>Se på giverens display.</strong> Viser giveren riktig verdi, men skjermen feil, sitter feilen etter giveren: i kabelen eller i oppsettet i styresystemet. Viser også giveren feil, sitter feilen i giveren, føleren eller tilkoblingen til prosessen.</li>
+  <li><strong>Se på giverens display.</strong> Viser giveren riktig verdi, men skjermen feil, sitter feilen etter selve målingen: i kabelen, eller i måleområdet i giveren eller i styresystemet. Giverens display kan nemlig vise riktig selv om måleområdet for signalet er stilt feil. Viser også giveren feil, sitter feilen i giveren, føleren eller tilkoblingen til prosessen.</li>
   <li><strong>Verdien står helt stille.</strong> En måling i en prosess som går, svinger nesten alltid litt. Står verdien helt stille, kan impulsrøret være tett, instrumentventilen stengt eller giveren ha hengt seg opp.</li>
   <li><strong>Verdien står helt nede eller helt oppe.</strong> Det kan bety brudd i kabelen eller en ødelagt giver. Hvordan du kjenner igjen dette ut fra signalet, lærer du på neste side.</li>
-  <li><strong>Verdien er feil med samme forhold hele tiden.</strong> Da kan måleområdet være forskjellig i giveren og i styresystemet, som i eksemplet over.</li>
+  <li><strong>Verdien er feil på en fast måte hele tiden.</strong> Da kan måleområdet være forskjellig i giveren og i styresystemet, som i eksemplet over.</li>
 </ul>
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet: Arbeid på givere</div>
   <ul>
-    <li><strong>Meld fra til kontrollrommet før en giver tas ut av drift.</strong> Regulatorer, alarmer og forriglinger bruker verdien fra giveren. Faller verdien plutselig, kan en regulator åpne en ventil helt, eller en forrigling kan stoppe en pumpe.</li>
+    <li><strong>Meld fra til kontrollrommet før en giver tas ut av drift.</strong> Regulatorer, alarmer og forriglinger, som du lærer om i emnene Styring og Regulering, bruker verdien fra giveren. Faller verdien plutselig, kan en regulator åpne en ventil helt, eller en forrigling kan stoppe en pumpe.</li>
     <li>En giver som sitter på prosessen, har trykk og kanskje farlig eller varmt stoff bak seg. Steng instrumentventilen og slipp ut trykket etter prosedyren før giveren skrus løs.</li>
     <li>I områder der det kan være brennbar gass eller damp (Ex-områder), må givere være godkjent for det. Giverhuset skal ikke åpnes mens det er spenning på, uten tillatelse.</li>
-    <li>Etter arbeidet: åpne instrumentventilen igjen, og sjekk at verdien på skjermen er rimelig før regulatoren settes tilbake i auto.</li>
+    <li>Etter arbeidet: åpne instrumentventilen igjen, og sjekk at verdien på skjermen er rimelig før regulatoren igjen får styre ventilen av seg selv (auto).</li>
   </ul>
 </div>
 
@@ -149,7 +149,7 @@
     <li>Slår av strømmen til hele anlegget.</li>
     <li data-riktig>Melder fra til kontrollrommet, fordi regulatorer, alarmer og forriglinger bruker verdien fra giveren.</li>
   </ul>
-  <p class="forklaring">Når giveren tas ut, endrer verdien seg på skjermen. En regulator kan da åpne eller stenge en ventil, og en forrigling kan stoppe utstyr. Kontrollrommet må vite om arbeidet og kunne sette regulatoren i manuell.</p>
+  <p class="forklaring">Når giveren tas ut, endrer verdien seg på skjermen. En regulator kan da åpne eller stenge en ventil, og en forrigling kan stoppe utstyr. Kontrollrommet må vite om arbeidet og kunne sette regulatoren i manuell, slik at den ikke flytter ventilen av seg selv.</p>
 </div>
 
 <h2>Ordliste</h2>
@@ -158,7 +158,7 @@
   <tbody>
     <tr><td>føler</td><td>Delen av et måleinstrument som er i kontakt med prosessen og merker endringen, for eksempel en membran eller en Pt100.</td><td>sensor, sensing element</td></tr>
     <tr><td>giver</td><td>Instrument som leser av en føler, gjør målingen om til et standardsignal og sender det til styresystemet. Kalles også transmitter.</td><td>transmitter</td></tr>
-    <tr><td>standardsignal</td><td>Signal som alle givere sender på samme måte, uansett hva de måler, for eksempel 4–20 mA.</td><td>standard signal</td></tr>
+    <tr><td>standardsignal</td><td>Signal som alle givere sender på samme måte, uansett hva de måler, for eksempel 4–20 mA.</td><td></td></tr>
     <tr><td>måleområde</td><td>Området mellom laveste og høyeste verdi et instrument kan måle, for eksempel 0–10 bar.</td><td>measuring range</td></tr>
     <tr><td>smart giver</td><td>Giver med en liten datamaskin inni, der innstillingene kan leses og endres med et verktøy, og som kan melde fra om egne feil.</td><td>smart transmitter</td></tr>
     <tr><td>bryter</td><td>Instrument som bare sier fra når en grense er nådd, for eksempel et bestemt trykk eller nivå. Den er enten av eller på.</td><td>switch</td></tr>

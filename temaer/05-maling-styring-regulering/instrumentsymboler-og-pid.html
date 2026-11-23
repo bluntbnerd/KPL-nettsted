@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Instrumentsymboler og P&amp;ID</h1>
@@ -29,7 +29,7 @@
 <p>I mange anlegg står det også et nummer for området eller anleggsdelen foran, for eksempel 20-LIC-101.</p>
 
 <h2>Slik leser du bokstavkoden</h2>
-<p>Du kjenner allerede litt av dette fra siden <a href="operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a>. Reglene er:</p>
+<p>Reglene er:</p>
 <ul>
   <li><strong>Første bokstav</strong> sier hva som måles.</li>
   <li><strong>Bokstavene etter</strong> sier hva instrumentet gjør.</li>
@@ -58,6 +58,7 @@
   <li><strong>PDI</strong>: differansetrykkmåler som viser verdien, for eksempel over et filter</li>
   <li><strong>LSHH</strong>: nivåbryter for høy-høy-nivå</li>
 </ul>
+<p>En <strong>regulator</strong> er enheten som hele tiden justerer for eksempel en ventil, slik at måleverdien holder seg der vi vil ha den. Det lærer du mer om i emnet Regulering. Bokstavkodene møter du igjen på siden <a href="operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a>, der de brukes i alarmlisten.</p>
 <p>Pass på at samme bokstav kan bety ulike ting alt etter hvor den står. I TT betyr den første T-en temperatur og den andre giver. I LSL betyr den første L-en nivå og den siste lav.</p>
 
 <h2>Instrumentsymbolene</h2>
@@ -67,16 +68,16 @@
   <tbody>
     <tr><td>Sirkel</td><td>Instrumentet sitter ute i anlegget.</td><td>En giver, et manometer eller en nivåbryter</td></tr>
     <tr><td>Sirkel med vannrett strek</td><td>Instrumentet sitter i et panel i kontrollrommet, der operatøren ser det.</td><td>En egen regulator eller viser i et panel</td></tr>
-    <tr><td>Sirkel i en firkant, med vannrett strek</td><td>Funksjonen ligger i styresystemet og vises på skjermen i kontrollrommet.</td><td>En regulator i en PLS eller DCS</td></tr>
+    <tr><td>Sirkel i en firkant, med vannrett strek</td><td>Funksjonen ligger i styresystemet og vises på skjermen i kontrollrommet.</td><td>En regulator i styresystemet</td></tr>
   </tbody>
 </table>
 <p>Signalet mellom instrumentene tegnes som en tynn linje. Et elektrisk signal, for eksempel 4–20 mA, tegnes stiplet. Et signal med trykkluft tegnes ofte med små skråstreker på linja. Prosessrørene tegnes med heltrukne, tykkere linjer.</p>
-<p>Symbolene kan variere litt fra anlegg til anlegg. Hver tegning eller tegningsserie har derfor en <strong>symbolforklaring</strong>. Se alltid der hvis du er usikker.</p>
+<p>Symbolene kan variere litt fra anlegg til anlegg. Noen tegninger bruker for eksempel andre former for funksjoner i en PLS. Hver tegning eller tegningsserie har derfor en <strong>symbolforklaring</strong>. Se alltid der hvis du er usikker.</p>
 
 <h2>Les en sløyfe i skjemaet</h2>
 
 <figure>
-  <img src="bilder/pid-nivasloyfe.svg" alt="Utsnitt av et teknisk flytskjema. Til venstre en tank merket T-101 med væske i. Et innløpsrør kommer inn på toppen. Fra bunnen går et utløpsrør mot høyre, gjennom pumpe P-101 og reguleringsventil LV-101, og videre ut til høyre. På utløpsrøret etter ventilen sitter et manometer i en sirkel merket PI-103. På siden av tanken sitter to sirkler: LSHH-102 høyt oppe og LT-101 lenger ned. Fra LT-101 går en stiplet signallinje til LIC-101, som er tegnet som en sirkel i en firkant med en vannrett strek. Fra LIC-101 går en stiplet linje ned til ventilen LV-101. En symbolforklaring viser at tykk heltrukken linje er prosessrør, stiplet linje er elektrisk signal, sirkel er instrument ute i anlegget, og sirkel i firkant er funksjon i styresystemet som vises på skjermen." width="720">
+  <img src="bilder/pid-nivasloyfe.svg" alt="Utsnitt av et teknisk flytskjema. Til venstre en tank merket T-101 med væske i. Et innløpsrør kommer inn på toppen. Fra bunnen går et utløpsrør mot høyre, gjennom pumpe P-101 og reguleringsventil LV-101, og videre ut til høyre. På utløpsrøret etter ventilen sitter et manometer i en sirkel merket PI-103. På siden av tanken sitter to sirkler: LSHH-102 høyt oppe og LT-101 lenger ned. Fra LSHH-102 går en kort stiplet signallinje med pil og teksten til forrigling. Fra LT-101 går en stiplet signallinje til LIC-101, som er tegnet som en sirkel i en firkant med en vannrett strek. Fra LIC-101 går en stiplet linje ned til ventilen LV-101. En symbolforklaring viser at tykk heltrukken linje er prosessrør, stiplet linje er elektrisk signal, sirkel er instrument ute i anlegget, og sirkel i firkant er funksjon i styresystemet som vises på skjermen." width="720">
   <figcaption>Figur: Utsnitt av et teknisk flytskjema med nivåreguleringssløyfe 101. Nivågiveren LT-101 sender signal til regulatoren LIC-101 i styresystemet, og regulatoren styrer ventilen LV-101. Figuren er forenklet.</figcaption>
 </figure>
 
@@ -88,7 +89,7 @@
     <li><strong>LT-101</strong> er en sirkel: en nivågiver ute i anlegget. Den måler nivået i tank T-101.</li>
     <li>Den stiplede linja viser at LT-101 sender et elektrisk signal til <strong>LIC-101</strong>. Sirkelen i firkanten betyr at dette er en nivåregulator i styresystemet. Operatøren ser nivået og regulatoren på skjermen.</li>
     <li>Fra LIC-101 går et elektrisk signal til <strong>LV-101</strong>, reguleringsventilen på utløpet. Regulatoren åpner ventilen mer når nivået stiger, og mindre når det synker.</li>
-    <li><strong>LSHH-102</strong> er en nivåbryter for høy-høy-nivå ute i anlegget. Den har et eget sløyfenummer fordi den er en egen funksjon, ofte en forrigling.</li>
+    <li><strong>LSHH-102</strong> er en nivåbryter for høy-høy-nivå ute i anlegget. Den stiplede linja viser at den sender et signal videre, her til en forrigling som stopper fyllingen hvis tanken blir for full. Den har et eget sløyfenummer fordi den er en egen funksjon.</li>
     <li><strong>PI-103</strong> er et manometer på utløpet. Det er en sirkel uten signallinje, så det leses bare av på stedet.</li>
   </ol>
   <p><strong>Svar:</strong> Sløyfe 101 holder nivået i tanken ved å regulere hvor mye som pumpes ut. LSHH-102 er et vern mot overfylling, og PI-103 er en lokal trykkmåler.</p>
@@ -142,7 +143,7 @@
     <li data-riktig>I styresystemet, og du ser den på skjermen i kontrollrommet</li>
     <li>I verkstedet</li>
   </ul>
-  <p class="forklaring">Sirkel i firkant betyr en funksjon i styresystemet, for eksempel en regulator i en PLS eller DCS. Streken betyr at operatøren har den tilgjengelig i kontrollrommet.</p>
+  <p class="forklaring">Sirkel i firkant betyr en funksjon i styresystemet, for eksempel en regulator. Streken betyr at operatøren har den tilgjengelig i kontrollrommet.</p>
 </div>
 
 <div class="quiz">
@@ -173,7 +174,7 @@
     <tr><td>tagnummer</td><td>Den faste merkingen til en utstyrsdel eller et instrument, for eksempel en pumpe eller en nivåmåler. Den står både i skjemaet og på utstyret i anlegget.</td><td>tag number</td></tr>
     <tr><td>bokstavkode</td><td>Bokstavene i et tagnummer. Første bokstav sier hva som måles, og bokstavene etter sier hva instrumentet gjør.</td><td>instrument letter code</td></tr>
     <tr><td>sløyfenummer</td><td>Tallet i et tagnummer. Alle instrumentene som hører til samme måling eller regulering, har samme sløyfenummer.</td><td>loop number</td></tr>
-    <tr><td>instrumentsymbol</td><td>Sirkelen som et instrument tegnes med i et teknisk flytskjema. Formen sier om instrumentet sitter ute i anlegget eller i styresystemet.</td><td>instrument bubble</td></tr>
+    <tr><td>instrumentsymbol</td><td>Sirkelen som et instrument tegnes med i et teknisk flytskjema. Formen sier om instrumentet sitter ute i anlegget, i et panel i kontrollrommet eller i styresystemet.</td><td>instrument bubble</td></tr>
     <tr><td>symbolforklaring</td><td>Oversikt på tegningen som forklarer hva symbolene og linjene betyr.</td><td>legend</td></tr>
     <tr><td>instrumentliste</td><td>Liste over alle instrumentene i anlegget med tagnummer, type, måleområde og plassering.</td><td>instrument index</td></tr>
     <tr><td>sløyfediagram</td><td>Tegning som viser hvordan ett instrument er koblet: kabler, koblingsbokser og inngangen på styresystemet.</td><td>loop diagram</td></tr>
