@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styring og regulering – forskjellen – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Styring og regulering – forskjellen</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT5</div>
+
+<p class="ingress">Automatikken i et prosessanlegg gjør to forskjellige jobber. Den <strong>styrer</strong>: starter og stopper pumper, åpner og stenger ventiler. Og den <strong>regulerer</strong>: holder temperatur, trykk, nivå og mengde jevne. Her lærer du forskjellen, og hvorfor det er viktig å vite hvilken av dem du har foran deg.</p>
+
+<h2>To måter å få noe til å skje</h2>
+<p>Tenk på en kaffetrakter som varmer i ti minutter og så skrur seg av. Den sjekker aldri hvor varm kaffen faktisk ble. Den gjør bare det den har fått beskjed om. Dette er <strong>styring</strong>.</p>
+<p>Tenk så på cruisekontrollen i en bil. Den måler farten hele tiden. Kommer bilen i en motbakke og farten synker, gir den mer gass. I en nedoverbakke gir den mindre. Den holder farten nær 80 km/t uansett. Dette er <strong>regulering</strong>.</p>
+<p>Forskjellen er om resultatet blir målt og brukt:</p>
+<ul>
+  <li><strong>Styring</strong> gjør noe etter en plan eller en kommando, men sjekker ikke om resultatet ble riktig.</li>
+  <li><strong>Regulering</strong> måler resultatet hele tiden og retter opp når det ikke er riktig.</li>
+</ul>
+
+<h2>Et eksempel fra anlegget</h2>
+<p>Mange bedrifter har surt avløpsvann fra produksjonen. Før vannet slippes ut, må det nøytraliseres. Det betyr at vi blander inn lut til vannet verken er surt eller basisk, det vil si at pH er rundt 7. Luten tilsettes med en <strong>doseringspumpe</strong>, en liten pumpe som gir en nøyaktig mengde.</p>
+
+<figure>
+  <img src="bilder/styring-mot-regulering.svg" alt="To tegninger av det samme røret med surt avløpsvann. En doseringspumpe tilsetter lut i røret. Øverst, merket styring og åpen sløyfe: Pumpa får signal fra en boks med fast innstilling, pumpa går på 50 prosent. Det er ingen måler, og ingen sjekker om pH-en i vannet blir riktig. Nederst, merket regulering og lukket sløyfe: En pH-måler sitter på røret etter at luten er blandet inn. Den sender signal tilbake til en pH-regulator som viser settpunkt pH 7,0, måleverdi pH 6,8 og ut til pumpa 55 prosent. Regulatoren sender signal til pumpa." width="640">
+  <figcaption>Figur: Den samme jobben gjort med styring (øverst) og med regulering (nederst). De stiplede linjene er signaler. Bare den nederste har en måler som sender resultatet tilbake. Tallene er bare et eksempel.</figcaption>
+</figure>
+
+<p><strong>Med styring</strong> (øverst) er pumpa stilt inn på 50 %, og den går på 50 % hele tiden. Det fungerer så lenge avløpsvannet er likt hele tiden. Men kommer det mer vann, eller blir vannet surere, er 50 % for lite lut. Da slippes surt vann ut, og ingen merker det før noen tar en prøve.</p>
+<p><strong>Med regulering</strong> (nederst) sitter det en pH-måler på røret etter at luten er blandet inn. En <strong>regulator</strong> sammenligner det måleren viser, med den pH-en vannet skal ha. Den verdien kalles <strong>settpunktet</strong>, her pH 7,0. Er vannet for surt, får pumpa beskjed om å gå fortere. Er det for basisk, går den saktere. Pumpa tilsetter hele tiden den mengden lut som trengs akkurat nå.</p>
+
+<h2>Åpen og lukket sløyfe</h2>
+<p>Signalene i figuren går forskjellige veier:</p>
+<ul>
+  <li>Ved styring går signalet bare én vei, fra innstillingen til pumpa. Ingenting kommer tilbake. Dette kalles en <strong>åpen sløyfe</strong>.</li>
+  <li>Ved regulering går signalet i ring: Regulatoren justerer pumpa, pumpa endrer pH-en, måleren måler pH-en, og regulatoren ser resultatet. At måleverdien sendes tilbake på denne måten, kalles <strong>tilbakekobling</strong>, og ringen kalles en <strong>lukket sløyfe</strong>.</li>
+</ul>
+<p>Styring er enklere og billigere, fordi den ikke trenger måler og regulator. Den passer når prosessen er stabil, eller når det ikke er farlig at resultatet blir litt feil. Regulering trengs når en størrelse skal holdes riktig selv om noe i prosessen endrer seg.</p>
+
+<table>
+  <thead><tr><th></th><th>Styring (åpen sløyfe)</th><th>Regulering (lukket sløyfe)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Måler resultatet?</strong></td><td>Nei</td><td>Ja, hele tiden</td></tr>
+    <tr><td><strong>Sløyfe</strong></td><td>Åpen</td><td>Lukket</td></tr>
+    <tr><td><strong>Hva den gjør</strong></td><td>Følger en plan eller en kommando</td><td>Holder en størrelse på settpunktet</td></tr>
+    <tr><td><strong>Når noe endrer seg i prosessen</strong></td><td>Merker det ikke</td><td>Merker det og retter opp</td></tr>
+    <tr><td><strong>Eksempel fra anlegget</strong></td><td>Doseringspumpe på fast innstilling, røreverk som går i 20 minutter</td><td>pH-regulering, temperatur i en tank, nivå i en tank</td></tr>
+  </tbody>
+</table>
+<p>Tabellen gjelder styring uten måling. Styring i anlegget kan også bruke en måling, for eksempel en nivåbryter som stopper en pumpe. Men den slår bare av og på, og den holder ikke størrelsen på et settpunkt.</p>
+
+<h2>Ordet «styring» i anlegget</h2>
+<p>I anlegget bruker vi ordet <em>styring</em> også i en videre betydning. Da mener vi alt som <strong>starter og stopper, åpner og stenger</strong>: pumper, motorer, røreverk og ventiler som enten er helt åpne eller helt stengte. Signalene er av eller på, og det finnes ingen mellomting.</p>
+<p>Slik styring kan godt bruke målinger. En pumpe kan for eksempel stoppe når en nivåbryter melder at tanken er full. Men styringen justerer ikke gradvis, slik en regulator gjør. Den bestemmer bare om noe skal være av eller på, åpent eller stengt.</p>
+<p>I dette emnet lærer du om tre slags styring:</p>
+<ul>
+  <li><strong>Av/på-styring:</strong> utstyr som slås av og på, for hånd eller av en måling.</li>
+  <li><strong>Forriglinger:</strong> automatiske sperrer som stopper utstyr eller hindrer en handling når noe er farlig.</li>
+  <li><strong>Sekvenser:</strong> flere steg som skjer i en fast rekkefølge, for eksempel ved oppstart.</li>
+</ul>
+<p>Regulering lærer du om i emnet etter dette, <a href="reguleringssloyfen.html">Regulering</a>.</p>
+
+<h2>Styring og regulering jobber sammen</h2>
+<p>I et anlegg finner du nesten alltid begge deler. Slik kan det se ut i nøytraliseringsanlegget fra figuren:</p>
+<ol>
+  <li>Operatøren trykker start. En <strong>sekvens</strong> starter pumpa for avløpsvann, venter til vannet strømmer, og starter så doseringspumpa for lut. Dette er styring.</li>
+  <li>Mens anlegget går, holder pH-regulatoren pH-en på 7,0. Dette er regulering.</li>
+  <li>Blir pH-en likevel altfor lav eller altfor høy, stenger en <strong>forrigling</strong> ventilen ut til utslipp, så vannet ikke slippes ut. Dette er styring.</li>
+</ol>
+<p>Regulering sørger for at prosessen går jevnt. Styring sørger for at ting starter, stopper og skjer i riktig rekkefølge, og at anlegget stopper når noe går galt.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: pH-en er feil, men pumpa går</div>
+  <p>En bedrift har økt produksjonen. Etter noen dager viser en prøve av utslippsvannet pH 4, altså surt vann. Doseringspumpa for lut går som den skal, på 50 %, slik den har gjort i flere år.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Pumpa gjør nøyaktig det den har fått beskjed om. Den er ikke i stykker.</li>
+    <li>Pumpa er styrt, ikke regulert. Den vet ikke hva som skjer med pH-en.</li>
+    <li>Mer produksjon gir mer avløpsvann. Den samme mengden lut skal nå nøytralisere mer syre, og det blir for lite.</li>
+    <li>Løsningen på kort sikt er å stille pumpa høyere og ta nye prøver. På lang sikt bør pumpa reguleres etter en pH-måler, slik at mengden lut følger med når vannet endrer seg.</li>
+  </ol>
+  <p><strong>Det du lærer:</strong> Styring virker bare så lenge prosessen er slik den var da innstillingen ble valgt. Endrer prosessen seg, må noen endre innstillingen, eller så trengs regulering.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Utstyr som styres automatisk, kan starte, stoppe, åpne eller stenge når som helst, også om det står stille akkurat nå. Skal du arbeide på det, må det sikres etter bedriftens prosedyre.</li>
+    <li>At styringen har gitt beskjed om start, betyr ikke at utstyret går. Styring sjekker ikke resultatet. Kontroller at pumpa faktisk går, og at det faktisk strømmer.</li>
+    <li>Lut er sterkt etsende. Arbeid på doseringsutstyr krever verneutstyr etter sikkerhetsdatabladet.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva er den viktigste forskjellen på styring og regulering?</p>
+  <ul>
+    <li>Styring gjøres for hånd, regulering gjøres automatisk.</li>
+    <li data-riktig>Regulering måler resultatet og retter opp. Styring sjekker ikke resultatet.</li>
+    <li>Styring brukes bare på pumper, regulering bare på ventiler.</li>
+  </ul>
+  <p class="forklaring">Både styring og regulering kan være automatiske, og begge kan brukes på pumper og ventiler. Forskjellen er tilbakekoblingen: Ved regulering blir resultatet målt og brukt til å rette opp.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilket av disse er regulering?</p>
+  <ul>
+    <li>En kaffetrakter som varmer i ti minutter og så skrur seg av</li>
+    <li>Et røreverk som går i 20 minutter hver gang tanken er fylt</li>
+    <li data-riktig>Cruisekontroll som holder bilen på 80 km/t i både motbakke og nedoverbakke</li>
+  </ul>
+  <p class="forklaring">Cruisekontrollen måler farten hele tiden og gir mer eller mindre gass etter det den måler. Kaffetrakteren og røreverket følger bare en fast tid og sjekker ikke resultatet.</p>
+</div>
+
+<div class="quiz">
+  <p>En doseringspumpe for lut går på fast 50 %. Plutselig kommer det dobbelt så mye surt avløpsvann. Hva skjer?</p>
+  <ul>
+    <li>Pumpa øker automatisk til 100 %.</li>
+    <li data-riktig>Det blir for lite lut, og vannet som går ut, blir for surt.</li>
+    <li>pH-en blir den samme, fordi pumpa går som før.</li>
+  </ul>
+  <p class="forklaring">Pumpa er styrt og vet ikke at det kommer mer vann. Den samme mengden lut fordeles på dobbelt så mye vann, og det blir for lite til å nøytralisere syra.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor kalles regulering en lukket sløyfe?</p>
+  <ul>
+    <li>Fordi rørene i anlegget er lukket</li>
+    <li data-riktig>Fordi måleren sender resultatet tilbake til regulatoren, så signalet går i ring</li>
+    <li>Fordi operatøren ikke kan endre noe</li>
+  </ul>
+  <p class="forklaring">Regulatoren justerer, prosessen endrer seg, måleren måler, og regulatoren ser resultatet. Dette kalles tilbakekobling. Ved styring går signalet bare én vei, og sløyfa er åpen.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva mener vi oftest med «styring» i et prosessanlegg?</p>
+  <ul>
+    <li>Å holde en temperatur helt jevn</li>
+    <li data-riktig>Å starte og stoppe, åpne og stenge utstyr, med signaler som er av eller på</li>
+    <li>Bare det operatøren gjør for hånd</li>
+  </ul>
+  <p class="forklaring">Styring i anlegget er av/på-styring, forriglinger og sekvenser. Den kan være automatisk og kan bruke målinger, men den justerer ikke gradvis slik en regulator gjør.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>styring</td><td>Å få utstyr til å gjøre noe etter en plan eller en kommando, uten å justere etter resultatet. I anlegget brukes ordet om å starte og stoppe, åpne og stenge.</td><td>open-loop control</td></tr>
+    <tr><td>regulering</td><td>Å holde en størrelse i prosessen, for eksempel en temperatur, på en ønsket verdi ved å måle, sammenligne og justere hele tiden.</td><td>control</td></tr>
+    <tr><td>åpen sløyfe</td><td>Signalet går bare én vei, fra innstillingen eller kommandoen til utstyret. Resultatet blir ikke målt og sendt tilbake.</td><td>open loop</td></tr>
+    <tr><td>lukket sløyfe</td><td>Signalet går i ring: Resultatet blir målt og sendt tilbake til regulatoren, som retter opp.</td><td>closed loop</td></tr>
+    <tr><td>tilbakekobling</td><td>At måleverdien hele tiden sendes tilbake til regulatoren, slik at den ser resultatet av det den gjorde. Gir en lukket sløyfe.</td><td>feedback</td></tr>
+    <tr><td>regulator</td><td>Enhet som sammenligner måleverdien med settpunktet og justerer for eksempel en ventil for å rette opp avviket.</td><td>controller</td></tr>
+    <tr><td>settpunkt</td><td>Verdien prosessen skal holde, for eksempel 80 °C eller 2,0 bar.</td><td>setpoint (SP)</td></tr>
+    <tr><td>doseringspumpe</td><td>Liten pumpe som tilsetter en nøyaktig mengde av et kjemikalie, for eksempel lut eller fellingskjemikalie.</td><td>dosing pump</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="hvorfor-vi-maler.html">Hvorfor vi måler</a> i emnet Måling i anlegget forklarer hvorfor målinger trengs for å styre og regulere.</li>
+  <li><a href="reguleringssloyfen.html">Reguleringssløyfen</a> i emnet Regulering viser delene i en lukket sløyfe mer i detalj.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

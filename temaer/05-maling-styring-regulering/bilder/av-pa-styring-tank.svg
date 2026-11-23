@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" font-family="Segoe UI, Arial, sans-serif">
+  <title>Av/på-styring av en tank med to nivåbrytere: pumpa starter ved 80 prosent og stopper ved 20 prosent. Til høyre en graf over nivået og når pumpa går.</title>
+  <rect x="0" y="0" width="640" height="320" rx="10" fill="#ffffff"/>
+
+  <!-- Innløp -->
+  <polyline points="10,30 110,30 110,58" fill="none" stroke="#8a9a9a" stroke-width="8"/>
+  <text x="10" y="20" font-size="12" fill="#586868">innløp (2 m³/h)</text>
+
+  <!-- Tank med væske (55 %) -->
+  <rect x="62" y="149" width="146" height="119" fill="#2a7a9a" opacity="0.18"/>
+  <line x1="62" y1="149" x2="208" y2="149" stroke="#2a7a9a" stroke-width="2"/>
+  <rect x="60" y="50" width="150" height="220" rx="10" fill="none" stroke="#1c2828" stroke-width="3"/>
+  <text x="135" y="210" font-size="13" text-anchor="middle" fill="#1c2828">tank</text>
+
+  <!-- Nivåbryter høy (80 %) -->
+  <line x1="210" y1="95" x2="226" y2="95" stroke="#586868" stroke-width="2.5"/>
+  <circle cx="236" cy="95" r="10" fill="#ffffff" stroke="#b5530f" stroke-width="2.5"/>
+  <text x="252" y="92" font-size="12" font-weight="bold" fill="#1c2828">nivåbryter høy, 80 %</text>
+  <text x="252" y="107" font-size="12" fill="#b5530f">starter pumpa</text>
+
+  <!-- Nivåbryter lav (20 %) -->
+  <line x1="210" y1="225" x2="226" y2="225" stroke="#586868" stroke-width="2.5"/>
+  <circle cx="236" cy="225" r="10" fill="#ffffff" stroke="#b5530f" stroke-width="2.5"/>
+  <text x="252" y="222" font-size="12" font-weight="bold" fill="#1c2828">nivåbryter lav, 20 %</text>
+  <text x="252" y="237" font-size="12" fill="#b5530f">stopper pumpa</text>
+
+  <!-- Utløp med pumpe -->
+  <polyline points="135,270 135,295 186,295" fill="none" stroke="#8a9a9a" stroke-width="8"/>
+  <line x1="214" y1="295" x2="330" y2="295" stroke="#8a9a9a" stroke-width="8"/>
+  <circle cx="200" cy="295" r="14" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <polygon points="195,287 209,295 195,303" fill="#1c2828"/>
+  <text x="224" y="316" font-size="12" fill="#586868">pumpe (5 m³/h)</text>
+
+  <!-- Graf: nivå over tid -->
+  <text x="410" y="38" font-size="12" font-weight="bold" fill="#1c2828">nivå</text>
+  <line x1="410" y1="50" x2="410" y2="230" stroke="#1c2828" stroke-width="1.5"/>
+  <line x1="410" y1="230" x2="625" y2="230" stroke="#1c2828" stroke-width="1.5"/>
+  <g stroke="#b5530f" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="410" y1="86" x2="625" y2="86"/>
+    <line x1="410" y1="194" x2="625" y2="194"/>
+  </g>
+  <g font-size="11" fill="#b5530f" text-anchor="end">
+    <text x="404" y="90">80 %</text>
+    <text x="404" y="198">20 %</text>
+  </g>
+  <polyline points="410,194 473,86 515,194 578,86 620,194" fill="none" stroke="#2a7a9a" stroke-width="2.5"/>
+
+  <!-- Pumpa går -->
+  <text x="404" y="270" font-size="11" text-anchor="end" fill="#1c2828">pumpa</text>
+  <line x1="410" y1="274" x2="625" y2="274" stroke="#c8d4d4" stroke-width="1.5"/>
+  <rect x="473" y="258" width="42" height="16" fill="#b5530f"/>
+  <rect x="578" y="258" width="42" height="16" fill="#b5530f"/>
+  <g font-size="10" fill="#ffffff" text-anchor="middle">
+    <text x="494" y="270">går</text>
+    <text x="599" y="270">går</text>
+  </g>
+  <g font-size="11" fill="#586868" text-anchor="middle">
+    <text x="410" y="290">0</text>
+    <text x="515" y="290">5</text>
+    <text x="620" y="290">10</text>
+  </g>
+  <text x="515" y="310" font-size="11" text-anchor="middle" fill="#586868">tid (timer)</text>
+</svg>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sekvenser – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Sekvenser</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT4, PT8</div>
+
+<p class="ingress">Mye av arbeidet i et anlegg skal gjøres i en bestemt rekkefølge: først fylle, så røre, så varme. Utstyr skal også startes og stoppes i riktig rekkefølge. En sekvens gjør dette automatisk, steg for steg. Her lærer du hvordan en sekvens er bygd opp, hvordan du følger den, og hva du gjør når den stopper opp.</p>
+
+<h2>Steg for steg</h2>
+<p>En <strong>sekvens</strong> er en styring som går gjennom flere <strong>steg</strong> i en fast rekkefølge. I hvert steg skjer det bestemte ting: ventiler åpner eller stenger, pumper og røreverk starter eller stopper. Sekvensen går ikke videre til neste steg før en <strong>betingelse</strong> er oppfylt, for eksempel at tanken er fylt eller at det har gått 30 minutter.</p>
+<p>Du kjenner prinsippet fra en vaskemaskin. Den fyller vann til nivået er riktig, varmer til temperaturen er nådd, vasker i en bestemt tid, tømmer og sentrifugerer. Hvert steg venter på at det forrige er ferdig.</p>
+
+<h2>Et eksempel: blanding i en tank</h2>
+<p>I en blandetank skal to råstoffer blandes og varmes. Hver gang lages én porsjon, en <strong>batch</strong>. Sekvensen ser slik ut:</p>
+
+<figure>
+  <img src="bilder/sekvens-blandetank.svg" alt="Åtte steg under hverandre, med pil mellom. Steg 0 Klar: alt står stille og venter på start. Betingelse: operatøren trykker start. Steg 1 Fyll råstoff A: ventil A åpner. Betingelse: nivået er 60 prosent. Steg 2 Tilsett råstoff B: ventil A stenger, røreverk starter, ventil B åpner. Betingelse: mengdemåleren har talt 200 liter. Steg 3 Varm opp: ventil B stenger, temperaturregulatoren settes i auto og styrer dampen. Betingelse: temperaturen er 80 grader. Steg 4 Hold temperaturen: regulatoren holder 80 grader, tiden telles. Betingelse: 30 minutter har gått. Steg 5 Kjøl ned: regulatoren slås av, dampen stenges, og kjølevannet åpner. Betingelse: temperaturen er under 40 grader. Steg 6 Tøm tanken: kjølevannet stenger, pumpa starter. Betingelse: nivået er 5 prosent. Steg 7 Ferdig: pumpa og røreverket stopper." width="640">
+  <figcaption>Figur: Sekvensen for én batch i en blandetank. Boksene er stegene og viser hva som skjer. Teksten ved pilene er betingelsen som må være oppfylt før sekvensen går videre. Tallene er bare et eksempel.</figcaption>
+</figure>
+
+<p>Legg merke til at sekvensen bruker mange ting på en gang:</p>
+<ul>
+  <li><strong>Av/på-styring:</strong> Ventilene og pumpa slås av og på i hvert steg.</li>
+  <li><strong>Målinger:</strong> Nivåmåleren, mengdemåleren og temperaturmåleren bestemmer når sekvensen går videre.</li>
+  <li><strong>Regulering:</strong> I steg 3 og 4 får temperaturregulatoren settpunktet 80 °C og holder temperaturen. Sekvensen setter regulatoren i auto, og regulatoren gjør resten. Regulering lærer du mer om i neste emne.</li>
+  <li><strong>Tid:</strong> I steg 4 venter sekvensen i 30 minutter.</li>
+</ul>
+
+<h2>Betingelser for å gå videre</h2>
+<p>Betingelsen mellom to steg kan være mye forskjellig:</p>
+<table>
+  <thead><tr><th>Type betingelse</th><th>Eksempel</th></tr></thead>
+  <tbody>
+    <tr><td>En måling når en grense</td><td>Nivået er 60 %, temperaturen er 80 °C</td></tr>
+    <tr><td>En mengde er talt opp</td><td>Mengdemåleren har talt 200 liter</td></tr>
+    <tr><td>En tid har gått</td><td>30 minutter har gått</td></tr>
+    <tr><td>Utstyret har gitt tilbakemelding</td><td>Pumpa melder «går», ventilen melder «stengt»</td></tr>
+    <tr><td>Operatøren bekrefter</td><td>Operatøren har tatt en prøve og trykker «fortsett»</td></tr>
+  </tbody>
+</table>
+<p>Tilbakemeldinger fra utstyret er viktige i sekvenser. Sekvensen bør ikke åpne ventil B før ventil A faktisk melder «stengt». Ellers kan begge stå åpne samtidig.</p>
+
+<h2>Oppstart og nedstengning</h2>
+<p>Sekvenser brukes også når utstyr skal startes og stoppes. Rekkefølgen er ofte viktig for sikkerheten og for å skåne utstyret. Slik kan oppstarten av en sentrifugalpumpe se ut:</p>
+<ol>
+  <li>Åpne ventilen på sugesiden, så pumpa får væske. Vent til endebryteren melder «åpen».</li>
+  <li>Start pumpa med ventilen på trykksiden stengt. Vent til pumpa melder «går» og trykket har bygd seg opp.</li>
+  <li>Åpne ventilen på trykksiden sakte, så det ikke blir trykkstøt i røret.</li>
+</ol>
+<p>En sentrifugalpumpe tåler å gå mot stengt ventil en kort stund. En fortrengningspumpe gjør ikke det. Den skal aldri startes mot stengt ventil, for trykket stiger til noe ryker. Les mer på siden <a href="../03-enhetsoperasjoner/pumpetyper.html">Pumpetyper</a> i Enhetsoperasjoner.</p>
+<p>For sentrifugalpumpa skjer nedstengning ofte i motsatt rekkefølge: Steng ventilen på trykksiden, stopp pumpa, og steng ventilen på sugesiden.</p>
+<p>En slik <strong>oppstartssekvens</strong> eller <strong>nedstengningssekvens</strong> kan ligge i styresystemet. Der den ikke gjør det, følger operatøren en skriftlig prosedyre med de samme stegene. Prinsippet er det samme: Hvert steg skal være ferdig og kontrollert før neste begynner.</p>
+
+<h2>Operatøren og sekvensen</h2>
+<p>I skjermbildet kan operatøren styre sekvensen. Vanlige knapper er:</p>
+<ul>
+  <li><strong>Start:</strong> Sekvensen går fra steg 0 (klar) til steg 1.</li>
+  <li><strong>Pause</strong> (også kalt hold): Sekvensen blir stående i steget den er i. Utstyret blir i en trygg tilstand til operatøren trykker fortsett.</li>
+  <li><strong>Stopp</strong> (avbryt): Sekvensen avbrytes, og utstyret går til en trygg tilstand. Batchen må kanskje tas hånd om for hånd.</li>
+</ul>
+<p>Skjermbildet viser hvilket steg sekvensen er i, og hvilken betingelse den venter på. Det er det første du ser på når noe ikke går som det skal.</p>
+<p>Noen steg tar alltid omtrent like lang tid. Derfor har mange sekvenser en <strong>tidsgrense</strong> for hvert steg. Tar et steg mye lengre tid enn vanlig, gir sekvensen en alarm, for eksempel «steg 2 tok for lang tid». Slår en forrigling inn, stopper sekvensen, og utstyret går til en trygg tilstand.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Sekvensen står fast i steg 2</div>
+  <p>Batchen startet for en time siden. Skjermbildet viser at sekvensen er i steg 2, «Tilsett råstoff B», og at det har kommet en alarm om at steget tar for lang tid. Mengdemåleren har talt 35 liter og står stille.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Sekvensen venter på at mengdemåleren skal telle 200 liter. Den gjør det den skal.</li>
+    <li>Det kommer ikke noe råstoff B. Se om ventil B melder «åpen» i skjermbildet. Melder den ikke «åpen», er feilen ventilen eller endebryteren.</li>
+    <li>Melder ventilen «åpen», gå ut og sjekk: Er det råstoff igjen i tanken det kommer fra? Er det en håndventil på røret som er stengt?</li>
+    <li>Er tanken for råstoff B tom, sett sekvensen på pause og meld fra. Når det er fylt på, kan sekvensen fortsette.</li>
+  </ol>
+  <p><strong>Det du lærer:</strong> Når en sekvens står fast, finner du steget og betingelsen den venter på. Så finner du ut hvorfor betingelsen aldri blir oppfylt.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Når en sekvens går, kan ventiler, pumper og røreverk starte og stoppe uten varsel. Hold deg unna utstyr i bevegelse, og sikre det etter bedriftens prosedyre før arbeid.</li>
+    <li>Ikke hopp over steg eller tving sekvensen videre uten tillatelse. Et steg som hoppes over, kan bety at en ventil står åpen som skulle vært stengt.</li>
+    <li>Går du over til å styre for hånd midt i en sekvens, må du vite hvilket steg den var i, og hva som er åpent og i gang.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva er en sekvens?</p>
+  <ul>
+    <li>En regulator som holder en temperatur jevn</li>
+    <li data-riktig>En styring som går gjennom flere steg i fast rekkefølge, og venter på en betingelse før hvert nytt steg</li>
+    <li>En alarm som kommer når noe går galt</li>
+  </ul>
+  <p class="forklaring">I hvert steg skjer bestemte ting, og sekvensen går først videre når betingelsen er oppfylt, for eksempel et nivå, en mengde eller en tid.</p>
+</div>
+
+<div class="quiz">
+  <p>Sekvensen i figuren er i steg 1, «Fyll råstoff A». Når går den videre til steg 2?</p>
+  <ul>
+    <li>Etter en fast tid</li>
+    <li data-riktig>Når nivået i tanken er 60 %</li>
+    <li>Når operatøren trykker fortsett</li>
+  </ul>
+  <p class="forklaring">Betingelsen mellom steg 1 og steg 2 er at nivået er 60 %. Da stenger ventil A, og steg 2 begynner.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor bør sekvensen vente på at ventil A melder «stengt» før ventil B åpnes?</p>
+  <ul>
+    <li data-riktig>For å være sikker på at ventilen faktisk har stengt, så begge ikke står åpne samtidig</li>
+    <li>For at ventilene skal slites mindre</li>
+    <li>Fordi det er raskere</li>
+  </ul>
+  <p class="forklaring">At styringen har sendt «steng», betyr ikke at ventilen har stengt. Tilbakemeldingen fra endebryteren viser at den faktisk er stengt.</p>
+</div>
+
+<div class="quiz">
+  <p>I hvilken rekkefølge startes en sentrifugalpumpe på en trygg måte?</p>
+  <ul>
+    <li>Start pumpa, åpne trykksiden, åpne sugesiden</li>
+    <li data-riktig>Åpne sugesiden, start pumpa, åpne trykksiden sakte</li>
+    <li>Åpne trykksiden, start pumpa, åpne sugesiden</li>
+  </ul>
+  <p class="forklaring">Pumpa må ha væske før den starter, ellers går den tørr. Trykksiden åpnes sakte etter start for å unngå trykkstøt.</p>
+</div>
+
+<div class="quiz">
+  <p>En sekvens har stått i samme steg mye lengre enn vanlig. Hva gjør du først?</p>
+  <ul>
+    <li>Tvinger sekvensen videre til neste steg</li>
+    <li>Starter sekvensen på nytt fra steg 0</li>
+    <li data-riktig>Ser i skjermbildet hvilken betingelse sekvensen venter på, og finner ut hvorfor den ikke blir oppfylt</li>
+  </ul>
+  <p class="forklaring">Sekvensen venter på noe som ikke skjer. Finn betingelsen og årsaken. Å tvinge sekvensen videre kan være farlig og krever tillatelse.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>sekvens</td><td>Styring som går gjennom flere steg i fast rekkefølge. Den går videre til neste steg når en betingelse er oppfylt.</td><td>sequence</td></tr>
+    <tr><td>steg</td><td>Én del av en sekvens. I hvert steg skjer bestemte ting, for eksempel at en ventil åpner eller en pumpe starter.</td><td>step</td></tr>
+    <tr><td>betingelse</td><td>Det som må være oppfylt før sekvensen går videre til neste steg, for eksempel et nivå, en mengde eller en tid.</td><td>transition condition</td></tr>
+    <tr><td>batch</td><td>Én porsjon som lages ferdig fra start til slutt, før neste porsjon begynner.</td><td>batch</td></tr>
+    <tr><td>oppstartssekvens</td><td>De stegene som skal gjøres i riktig rekkefølge når utstyr eller et anlegg startes.</td><td>start-up sequence</td></tr>
+    <tr><td>nedstengningssekvens</td><td>De stegene som skal gjøres i riktig rekkefølge når utstyr eller et anlegg stoppes.</td><td>shutdown sequence</td></tr>
+    <tr><td>tidsgrense</td><td>Den lengste tiden et steg får ta. Tar steget lengre tid, gir sekvensen en alarm.</td><td>step timeout</td></tr>
+    <tr><td>pause</td><td>Sekvensen blir stående i steget den er i, med utstyret i en trygg tilstand, til operatøren trykker fortsett.</td><td>hold</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="av-pa-styring.html">Av/på-styring</a> forklarer tilbakemeldinger og endebrytere, som sekvensene bruker.</li>
+  <li><a href="pls.html">PLS</a> i emnet Styresystemer viser hvor sekvensene ligger, og har et eksempel med fylling av en tank.</li>
+  <li><a href="reguleringssloyfen.html">Reguleringssløyfen</a> i emnet Regulering forklarer regulatoren som holder temperaturen i steg 3 og 4.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

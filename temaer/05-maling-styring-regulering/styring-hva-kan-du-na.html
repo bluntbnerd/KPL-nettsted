@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Styring – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT4, PT8</div>
+
+<p class="ingress">Dette er siste steg i emnet «Styring». Gå gjennom sjekklisten og quizen. Står du fast, går du tilbake til siden det gjelder. I dette emnet har du lært hvordan utstyr startes og stoppes, hvordan forriglinger sikrer anlegget, og hvordan sekvenser gjør arbeidet i riktig rekkefølge.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare forskjellen på styring og regulering, og gi et eksempel på hver fra et anlegg. (<a href="styring-og-regulering.html">Styring og regulering</a>)</li>
+  <li>Jeg kan forklare hva åpen og lukket sløyfe betyr, og hva tilbakekobling er. (<a href="styring-og-regulering.html">Styring og regulering</a>)</li>
+  <li>Jeg kan forklare hvorfor styring uten måling slutter å virke når prosessen endrer seg. (<a href="styring-og-regulering.html">Styring og regulering</a>)</li>
+  <li>Jeg kan gi eksempler på utstyr som er av eller på, og forklare hva en kontaktor og en magnetventil gjør. (<a href="av-pa-styring.html">Av/på-styring</a>)</li>
+  <li>Jeg kan forklare de tre stillingene hånd, 0 og auto, og hva som er farlig med å glemme en bryter i hånd. (<a href="av-pa-styring.html">Av/på-styring</a>)</li>
+  <li>Jeg kan forklare hvordan en pumpe styres av to nivåbrytere, og hvorfor det trengs to grenser (hysterese). (<a href="av-pa-styring.html">Av/på-styring</a>)</li>
+  <li>Jeg kan regne ut hvor ofte en pumpe starter, ut fra volumet mellom grensene og mengden inn og ut. (<a href="av-pa-styring.html">Av/på-styring</a>)</li>
+  <li>Jeg kan forklare hva en tilbakemelding er, og hvorfor styringen gir alarm når den mangler. (<a href="av-pa-styring.html">Av/på-styring</a>)</li>
+  <li>Jeg kan forklare hva en forrigling er, og forskjellen på en forrigling som stopper og en startbetingelse. (<a href="forriglinger.html">Forriglinger</a>)</li>
+  <li>Jeg kan lese en enkel forriglingsmatrise. (<a href="forriglinger.html">Forriglinger</a>)</li>
+  <li>Jeg kan forklare hvorfor en forrigling må tilbakestilles, og hvorfor den bare skal forbikobles med tillatelse. (<a href="forriglinger.html">Forriglinger</a>)</li>
+  <li>Jeg kan beskrive en sekvens med steg og betingelser, og forklare hvordan en pumpe startes og stoppes i riktig rekkefølge. (<a href="sekvenser.html">Sekvenser</a>)</li>
+  <li>Jeg kan feilsøke utstyr som ikke starter, ikke stopper eller står fast i en sekvens, ved å sjekke bryterstilling, forriglinger, tilbakemeldinger og målinger. (alle sidene)</li>
+</ul>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>En doseringspumpe går alltid på 40 %, uansett hva som skjer i prosessen. Hva slags styring er dette?</p>
+  <ul>
+    <li data-riktig>Styring med åpen sløyfe</li>
+    <li>Regulering med lukket sløyfe</li>
+    <li>En forrigling</li>
+  </ul>
+  <p class="forklaring">Pumpa får en fast innstilling, og ingen måler om resultatet blir riktig. Signalet går bare én vei, så sløyfa er åpen.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er tilbakekobling?</p>
+  <ul>
+    <li>At operatøren kobler utstyret tilbake etter vedlikehold</li>
+    <li data-riktig>At måleverdien hele tiden sendes tilbake, så styringen eller regulatoren ser resultatet av det den gjorde</li>
+    <li>At en forrigling blir tilbakestilt</li>
+  </ul>
+  <p class="forklaring">Med tilbakekobling går signalet i ring: justere, måle, se resultatet og justere igjen. Det gir en lukket sløyfe.</p>
+</div>
+
+<div class="quiz">
+  <p>En pumpe tømmer en tank. Den starter ved 70 % nivå og stopper ved 30 %. Nivået er 45 % og stiger. Går pumpa?</p>
+  <ul>
+    <li>Ja, fordi nivået er over 30 %</li>
+    <li data-riktig>Nei. Den stoppet ved 30 % og starter ikke før nivået når 70 %.</li>
+    <li>Det kommer an på temperaturen.</li>
+  </ul>
+  <p class="forklaring">Mellom grensene blir pumpa stående slik den er. Stiger nivået, har pumpa stoppet og venter på startgrensen.</p>
+</div>
+
+<div class="quiz">
+  <p>En tank rommer 20 m³. Pumpa starter ved 70 % og stopper ved 30 %. Det renner inn 4 m³/h hele tiden, og pumpa tar ut 8 m³/h. Hvor mange ganger starter pumpa i døgnet?</p>
+  <ul>
+    <li>3</li>
+    <li data-riktig>6</li>
+    <li>12</li>
+  </ul>
+  <p class="forklaring">Volum mellom grensene: 40 % av 20 m³ = 8 m³. Fylling: 8 / 4 = 2 h. Tømming: 8 / (8 − 4) = 2 h. Én runde tar 4 h, og 24 / 4 = 6 starter i døgnet.</p>
+</div>
+
+<div class="quiz">
+  <p>Bryteren ved en pumpemotor står i 0. Styresystemet sender «start». Hva skjer?</p>
+  <ul>
+    <li>Pumpa starter, fordi styresystemet bestemmer.</li>
+    <li data-riktig>Pumpa står. I 0 kan den ikke startes, verken for hånd eller av styresystemet.</li>
+    <li>Pumpa går i hånd.</li>
+  </ul>
+  <p class="forklaring">I 0 står utstyret uansett hva styresystemet sier. Mange anlegg gir da en alarm, fordi tilbakemeldingen «går» ikke kommer.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er forskjellen på stoppet ved 20 % i vanlig av/på-styring og en forrigling ved 10 %?</p>
+  <ul>
+    <li>Det er ingen forskjell, begge stopper pumpa.</li>
+    <li data-riktig>Stoppet ved 20 % er vanlig drift. Forriglingen ved 10 % slår bare inn når noe har sviktet, og må tilbakestilles.</li>
+    <li>Forriglingen slår inn først, fordi den er viktigst.</li>
+  </ul>
+  <p class="forklaring">Forriglingen er en ekstra sikring hvis den vanlige styringen svikter. Den bør ha sin egen bryter, og stoppet er låst til noen har funnet årsaken.</p>
+</div>
+
+<div class="quiz">
+  <p>I forriglingsmatrisen står det X under «Stopper pumpa», «Hindrer start» og «Alarm» på raden «Nivå høy-høy i tank 2». Hva betyr det?</p>
+  <ul>
+    <li>Pumpa starter når nivået i tank 2 er høyt.</li>
+    <li data-riktig>Når nivået i tank 2 når høy-høy, stopper pumpa, den kan ikke startes, og det kommer en alarm.</li>
+    <li>Operatøren skal stoppe pumpa når alarmen kommer.</li>
+  </ul>
+  <p class="forklaring">Matrisen leses rad for rad. Raden er årsaken, og kryssene viser de automatiske virkningene.</p>
+</div>
+
+<div class="quiz">
+  <p>En forrigling har stoppet en pumpe. Hva er riktig rekkefølge?</p>
+  <ul>
+    <li>Tilbakestill, start pumpa, finn årsaken</li>
+    <li data-riktig>Finn og rett årsaken, sjekk at forholdene er normale, tilbakestill, start pumpa</li>
+    <li>Forbikoble forriglingen og start pumpa</li>
+  </ul>
+  <p class="forklaring">Forriglingen låser stoppet for at noen skal finne årsaken først. Tilbakestilling går bare når den farlige tilstanden er borte, og starter ikke utstyret av seg selv.</p>
+</div>
+
+<div class="quiz">
+  <p>En sekvens er i steg 1, «Fyll råstoff A», og venter på at nivået skal bli 60 %. Nivået har stått på 42 % i en halv time. Hva er mest sannsynlig?</p>
+  <ul>
+    <li>Sekvensen har en feil i programmet.</li>
+    <li data-riktig>Det kommer ikke råstoff A, for eksempel fordi ventilen ikke åpner, en håndventil er stengt eller tanken er tom.</li>
+    <li>Nivået er for høyt.</li>
+  </ul>
+  <p class="forklaring">Sekvensen gjør det den skal og venter på betingelsen. Finn ut hvorfor nivået ikke stiger. Sjekk ventilen, røret og tanken det kommer fra.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor startes en sentrifugalpumpe med ventilen på sugesiden åpen?</p>
+  <ul>
+    <li data-riktig>For at pumpa skal ha væske og ikke gå tørr</li>
+    <li>For å unngå trykkstøt i røret på trykksiden</li>
+    <li>For at pumpa skal starte fortere</li>
+  </ul>
+  <p class="forklaring">Pumpa må ha væske før den starter. Ventilen på trykksiden åpnes sakte etterpå for å unngå trykkstøt.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Slike spørsmål kan du få i en fagsamtale eller til eksamen. Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Forklar forskjellen på styring og regulering med et eksempel fra et anlegg. Bruk ordene åpen sløyfe, lukket sløyfe og tilbakekobling.</summary>
+  <p>Ved styring gjør utstyret det det får beskjed om, uten at resultatet blir målt. En doseringspumpe for lut som alltid går på 50 %, er styrt. Signalet går bare én vei, fra innstillingen til pumpa, og det kalles en åpen sløyfe. Kommer det mer surt avløpsvann, blir det for lite lut, og ingen merker det. Ved regulering måler en pH-måler resultatet, og en regulator justerer pumpa etter målingen. Måleverdien sendes tilbake til regulatoren, og det kalles tilbakekobling. Signalet går i ring, så sløyfa er lukket.</p>
+</details>
+
+<details>
+  <summary>2. En pumpe tømmer en tank og styres av to nivåbrytere. Forklar hvordan det virker, og hvorfor det trengs to grenser.</summary>
+  <p>Når nivået stiger til den høye nivåbryteren, starter styringen pumpa. Pumpa tar ut mer enn det som kommer inn, så nivået synker. Pumpa fortsetter å gå til nivået når den lave nivåbryteren, og da stopper den. Så stiger nivået igjen. Med bare én grense ville pumpa startet og stoppet hele tiden, for nivået ville gått litt over og litt under grensen. Hver start sliter på pumpa og motoren. Avstanden mellom grensene kalles hysterese, og jo større den er, jo færre starter blir det.</p>
+</details>
+
+<details>
+  <summary>3. Du kommer på jobb og finner bryteren ved en pumpe i hånd. Hva er farlig med det, og hva gjør du?</summary>
+  <p>I hånd går pumpa, ofte uten at automatikken kan stoppe den. Nivåbryterne for vanlig drift virker ikke, og om forriglingene virker i hånd, avhenger av anlegget. Pumpa kan gå tørr, eller fylle en tank til den renner over. Jeg finner ut hvorfor bryteren står i hånd, for eksempel i skiftloggen eller ved å spørre skiftleder. Kanskje noen prøvekjørte pumpa og glemte å sette bryteren tilbake. Er det i orden, setter jeg bryteren i auto, sier fra til kontrollrommet og skriver det i skiftloggen.</p>
+</details>
+
+<details>
+  <summary>4. Hvorfor skal en forrigling ha sin egen nivåbryter, og hvorfor må stoppet tilbakestilles?</summary>
+  <p>Bruker forriglingen samme måler som den vanlige styringen, kan én feil på måleren slå ut begge. Viser måleren for lavt nivå, fyller styringen for mye, og forriglingen merker heller ingenting. Det kalles en felles feil. En egen bryter virker selv om den vanlige måleren viser feil. Stoppet må tilbakestilles for at noen skal finne årsaken før anlegget startes igjen. Hvis pumpa startet av seg selv, kunne det samme skjedd igjen og igjen uten at noen fant feilen.</p>
+</details>
+
+<details>
+  <summary>5. En pumpe vil ikke starte fra skjermen. Beskriv hvordan du feilsøker.</summary>
+  <p>Først ser jeg i skjermbildet om en forrigling eller startbetingelse er aktiv, og i så fall hvilken. Er det en nivåforrigling, sjekker jeg nivåene. Er det en ventil som ikke melder «åpen», går jeg ut og ser om ventilen faktisk er åpen. Er den det, er det trolig endebryteren som er feil. Er ingen forrigling aktiv, sjekker jeg bryteren ved motoren. Den kan stå i 0, eller arbeidsbryteren kan være slått av. Får styringen startsignalet ut, men pumpa går ikke, kan sikringen, motorvernet eller motoren være feil. Jeg forbikobler aldri en forrigling for å få startet, og melder fra til automatiker eller elektriker.</p>
+</details>
+
+<details>
+  <summary>6. Beskriv en sekvens du kjenner fra anlegget eller laben. Hva er stegene, og hva er betingelsene for å gå videre?</summary>
+  <p>Eksempel: oppstart av en sentrifugalpumpe. Steg 1: Åpne ventilen på sugesiden. Betingelse: endebryteren melder «åpen». Steg 2: Start pumpa med ventilen på trykksiden stengt. Betingelse: pumpa melder «går», og trykket har bygd seg opp. Steg 3: Åpne ventilen på trykksiden sakte. Betingelse: ventilen melder «åpen», og mengden er som den skal. Hvert steg skal være ferdig og kontrollert før neste begynner. Står sekvensen fast, ser jeg hvilken betingelse den venter på, og finner ut hvorfor den ikke blir oppfylt.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Gå tilbake til fagstoffsidene i dette emnet i læringsstien.</li>
+  <li>I neste emne, Regulering, lærer du hvordan en regulator holder en størrelse på settpunktet. Start med <a href="reguleringssloyfen.html">Reguleringssløyfen</a>.</li>
+  <li>I HMS kan du prøve alarm, forrigling og tilbakestilling i øvingen <a href="../01-hms/06-overfylling.html">Overfylling av tank</a>.</li>
+</ul>
+<p><small>Om kildene: Teksten og spørsmålene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

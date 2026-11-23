@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Av/på-styring – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Av/på-styring</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT4, PT8</div>
+
+<p class="ingress">Det meste av utstyret i et anlegg er enten av eller på. En pumpe går eller står, en ventil er åpen eller stengt. Her lærer du hvordan slikt utstyr startes og stoppes, for hånd og automatisk etter en måling, og hvorfor en tank med pumpe har to grenser og ikke én.</p>
+
+<h2>Av eller på, ingen mellomting</h2>
+<p>Ved <strong>av/på-styring</strong> har utstyret bare to tilstander. Det finnes ingen mellomting, slik det gjør med en reguleringsventil som kan stå 37 % åpen. Eksempler:</p>
+<ul>
+  <li><strong>Pumper, motorer, røreverk og vifter</strong> går eller står. Motoren slås av og på med en <strong>kontaktor</strong>, en stor elektrisk bryter som får signal fra styresystemet.</li>
+  <li><strong>Av/på-ventiler</strong> er helt åpne eller helt stengte. En liten ventil kan være en <strong>magnetventil</strong>, som åpnes og lukkes elektrisk. Større ventiler drives ofte av trykkluft.</li>
+  <li><strong>Elektriske varmeelementer</strong> er slått av eller på.</li>
+</ul>
+<p>Signalene til og fra slikt utstyr er også av eller på. Det betyr at signalet bare har to verdier, for eksempel «start» eller «stopp».</p>
+
+<h2>Start og stopp for hånd</h2>
+<p>Den enkleste av/på-styringen er at operatøren starter og stopper. Det kan gjøres på to steder:</p>
+<ul>
+  <li><strong>Lokalt</strong>, med start- og stoppknapper ved utstyret ute i anlegget.</li>
+  <li><strong>Fra kontrollrommet</strong>, ved å klikke på pumpa eller ventilen i skjermbildet.</li>
+</ul>
+<p>Mange motorer har en bryter med tre stillinger ved siden av seg: <strong>hånd – 0 – auto</strong>. I <em>auto</em> bestemmer styresystemet når motoren går. I <em>0</em> står den, uansett hva styresystemet sier. I <em>hånd</em> går den, ofte uten at automatikken kan stoppe den. Om forriglingene virker i hånd, avhenger av anlegget. Regn ikke med det. Hånd brukes for eksempel når en pumpe skal prøvekjøres etter reparasjon.</p>
+
+<h2>Av/på-styring etter en måling</h2>
+<p>Ofte er det en måling som bestemmer når utstyret skal slås av og på. Et vanlig eksempel er en tank som tar imot væske, og en pumpe som tømmer den videre:</p>
+
+<figure>
+  <img src="bilder/av-pa-styring-tank.svg" alt="Til venstre en tank med innløp på toppen på 2 kubikkmeter i timen og en pumpe i bunnen som pumper 5 kubikkmeter i timen. På siden av tanken sitter to nivåbrytere: en høy ved 80 prosent som starter pumpa, og en lav ved 20 prosent som stopper pumpa. Til høyre en graf over nivået i 10 timer. Nivået stiger fra 20 til 80 prosent på 3 timer mens pumpa står, og synker fra 80 til 20 prosent på 2 timer mens pumpa går. Så gjentar det seg. Under grafen vises når pumpa går." width="640">
+  <figcaption>Figur: Av/på-styring av en tank med to nivåbrytere. Nivået går opp og ned mellom 20 % og 80 %. Pumpa går bare når nivået synker. Tallene er bare et eksempel.</figcaption>
+</figure>
+
+<ol>
+  <li>Væske renner inn i tanken, og nivået stiger. Pumpa står.</li>
+  <li>Når nivået når 80 %, melder den høye <strong>nivåbryteren</strong> fra, og styringen starter pumpa.</li>
+  <li>Pumpa tar ut mer enn det som kommer inn, så nivået synker. Pumpa fortsetter å gå selv om nivået er under 80 %.</li>
+  <li>Når nivået når 20 %, melder den lave nivåbryteren fra, og styringen stopper pumpa. Så begynner det på nytt.</li>
+</ol>
+<p>Mellom de to grensene skjer det ingenting. Pumpa blir stående i den tilstanden den har. Ved 50 % kan pumpa derfor både gå og stå. Det kommer an på om nivået er på vei opp eller ned.</p>
+<p>Her brukes en måling, så styringen har en form for tilbakekobling. Men den holder ikke nivået på ett settpunkt. Nivået får gå opp og ned mellom grensene. Det er greit i en tank der nivået ikke trenger å være nøyaktig, for eksempel en tank som samler opp væske før neste trinn i prosessen.</p>
+<p>Fordi den bruker en måling, kalles slik styring i mange bøker også <strong>av/på-regulering</strong> eller topunktsregulering. Det er det samme som du lærer om her.</p>
+
+<h2>Hvorfor to grenser?</h2>
+<p>Hva om pumpa startet og stoppet på samme nivå, for eksempel 50 %? Da ville pumpa startet straks nivået kom over 50 %, og stoppet like etter når nivået var under igjen. Pumpa ville startet og stoppet hele tiden. Hver start gir en stor strøm i motoren og slitasje på pumpa, og motoren kan bli overopphetet.</p>
+<p>Avstanden mellom startgrensen og stoppgrensen kalles <strong>hysterese</strong>. Stor hysterese gir få starter. Liten hysterese gir mange starter, men nivået holder seg nærmere midten.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvor ofte starter pumpa?</div>
+  <p><strong>Oppgave:</strong> Tanken i figuren rommer 10 m³. Det renner inn 2 m³/h hele tiden, og pumpa tar ut 5 m³/h når den går. Pumpa starter ved 80 % og stopper ved 20 %. Hvor mange ganger starter pumpa i døgnet?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Volumet mellom grensene: 80 % − 20 % = 60 % av 10 m³ = 6 m³.</li>
+    <li>Tiden det tar å fylle 6 m³ når pumpa står: \( t = \dfrac{6\ \text{m}^3}{2\ \text{m}^3/\text{h}} = 3\ \text{h} \)</li>
+    <li>Når pumpa går, renner det fortsatt inn 2 m³/h. Tanken tømmes derfor med 5 − 2 = 3 m³/h: \( t = \dfrac{6\ \text{m}^3}{3\ \text{m}^3/\text{h}} = 2\ \text{h} \)</li>
+    <li>Én runde tar 3 h + 2 h = 5 h. I døgnet blir det \( \dfrac{24\ \text{h}}{5\ \text{h}} = 4{,}8 \) runder.</li>
+  </ol>
+  <p><strong>Svar:</strong> Pumpa starter omtrent 5 ganger i døgnet.</p>
+  <p><strong>Sammenlign:</strong> Med grensene 55 % og 45 % er volumet mellom grensene bare 1 m³. Fyllingen tar 30 minutter og tømmingen 20 minutter. Da starter pumpa omtrent 29 ganger i døgnet.</p>
+</div>
+
+<h2>Termostaten: samme idé med temperatur</h2>
+<p>En <strong>termostat</strong> slår et varmeelement av og på etter temperaturen. Den virker som nivåbryterne på tanken, med to grenser. Et eksempel er en lagertank med et stoff som blir tykt og vanskelig å pumpe når det blir kaldt. Termostaten slår på varmen når temperaturen synker til 40 °C, og slår den av igjen ved 45 °C. Temperaturen går da opp og ned mellom 40 °C og 45 °C.</p>
+<p>Skal temperaturen holdes nøyaktig på én verdi, holder ikke av/på-styring. Da trengs regulering, som du lærer om i emnet <a href="reguleringssloyfen.html">Regulering</a>.</p>
+
+<h2>Tilbakemelding: gjorde utstyret det det fikk beskjed om?</h2>
+<p>At styringen sender «start», betyr ikke at pumpa går. En sikring kan ha gått, eller motoren kan være ødelagt. Derfor sender mye utstyr en <strong>tilbakemelding</strong> til styresystemet:</p>
+<ul>
+  <li>En motor melder «går» når kontaktoren har slått på.</li>
+  <li>En av/på-ventil har ofte <strong>endebrytere</strong> som melder «helt åpen» og «helt stengt».</li>
+</ul>
+<p>Får styringen ikke tilbakemelding i løpet av noen sekunder, gir den en alarm, for eksempel «startfeil» eller «ventilen nådde ikke stengt stilling». Uten tilbakemelding vet ingen om utstyret faktisk gjorde det det fikk beskjed om.</p>
+<p>Bland ikke sammen tilbakemelding og tilbakekobling. En <em>tilbakemelding</em> viser hva utstyret gjør, for eksempel at pumpa går. <em>Tilbakekobling</em> er at måleverdien sendes tilbake til en regulator, slik du så på siden <a href="styring-og-regulering.html">Styring og regulering</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Pumpa går tørr</div>
+  <p>På runde i anlegget hører du at pumpa under tanken lager mye støy. Seglasset viser at tanken er nesten tom, men pumpa går. Den burde ha stoppet ved 20 %.</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Pumpa suger luft og kan bli ødelagt. Stopp den med en gang etter bedriftens rutine, og meld fra.</li>
+    <li>Sjekk bryteren ved motoren. Står den i <em>hånd</em>, går pumpa uansett hva nivåbryterne melder. Kanskje noen glemte den der etter en prøvekjøring.</li>
+    <li>Står bryteren i <em>auto</em>, er det trolig nivåbryteren som er feil. Se i skjermbildet hva den lave nivåbryteren melder. Melder den «væske» selv om tanken er tom, henger den. Belegg eller slam kan få en flottør til å sette seg fast.</li>
+    <li>Nivåbryteren må rengjøres eller byttes og testes før pumpa settes i auto igjen.</li>
+  </ol>
+  <p><strong>Det du lærer:</strong> Av/på-styring er aldri bedre enn målingen den bygger på. Når utstyret ikke stopper eller starter som det skal, sjekker du både bryterstillingen ved utstyret og målingen som styrer det.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>En pumpe i auto kan starte når som helst, også om den står stille akkurat nå. Før arbeid på utstyret må det sikres etter bedriftens prosedyre, for eksempel ved at arbeidsbryteren ved motoren slås av og låses.</li>
+    <li>I <em>hånd</em> stopper ikke utstyret av seg selv. Sett bryteren tilbake i <em>auto</em> når du er ferdig, og si fra til kontrollrommet.</li>
+    <li>En pumpe som går tørr eller mot stengt ventil, blir fort varm og kan bli ødelagt. Følg med når du starter for hånd.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva kjennetegner av/på-styring?</p>
+  <ul>
+    <li>Utstyret justeres gradvis mellom 0 % og 100 %.</li>
+    <li data-riktig>Utstyret har bare to tilstander, for eksempel går eller står, åpen eller stengt.</li>
+    <li>Utstyret kan bare styres for hånd.</li>
+  </ul>
+  <p class="forklaring">Ved av/på-styring finnes ingen mellomting. Av/på-styring kan gjøres både for hånd og automatisk, for eksempel etter en nivåbryter.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor starter pumpa ved 80 % og stopper ved 20 %, i stedet for å starte og stoppe ved 50 %?</p>
+  <ul>
+    <li>For at tanken alltid skal være halvfull</li>
+    <li data-riktig>For at pumpa ikke skal starte og stoppe hele tiden</li>
+    <li>Fordi nivåbrytere ikke kan sitte midt på tanken</li>
+  </ul>
+  <p class="forklaring">Med bare én grense ville pumpa startet og stoppet hele tiden. Hver start sliter på pumpa og motoren. Avstanden mellom grensene kalles hysterese.</p>
+</div>
+
+<div class="quiz">
+  <p>Tanken i figuren har nivå 50 %, og nivået synker. Går pumpa?</p>
+  <ul>
+    <li data-riktig>Ja. Den startet ved 80 % og går til nivået når 20 %.</li>
+    <li>Nei. Den går bare når nivået er over 80 %.</li>
+    <li>Det kan ikke avgjøres.</li>
+  </ul>
+  <p class="forklaring">Mellom grensene blir pumpa stående i den tilstanden den har. Synker nivået, går pumpa. Stiger nivået, står den.</p>
+</div>
+
+<div class="quiz">
+  <p>Bryteren ved en pumpemotor står i <em>hånd</em>. Hva betyr det?</p>
+  <ul>
+    <li>Styresystemet bestemmer når pumpa går.</li>
+    <li>Pumpa står og kan ikke startes.</li>
+    <li data-riktig>Pumpa går, ofte uten at automatikken kan stoppe den.</li>
+  </ul>
+  <p class="forklaring">I hånd går pumpa uansett hva nivåbryterne melder, og om forriglingene virker, avhenger av anlegget. Derfor må bryteren settes tilbake i auto etter for eksempel en prøvekjøring.</p>
+</div>
+
+<div class="quiz">
+  <p>Styringen sender «start» til en pumpe, men får ingen tilbakemelding om at den går. Hva skjer?</p>
+  <ul>
+    <li>Ingenting, fordi styringen har gjort jobben sin</li>
+    <li data-riktig>Styringen gir en alarm, for eksempel «startfeil»</li>
+    <li>Styringen åpner en ventil i stedet</li>
+  </ul>
+  <p class="forklaring">Tilbakemeldingen viser om utstyret faktisk gjorde det det fikk beskjed om. Kommer den ikke, får operatøren en alarm. Feilen kan for eksempel være at bryteren ved motoren står i 0, at en sikring har gått, eller at motoren er ødelagt.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>av/på-styring</td><td>Styring av utstyr som bare har to tilstander, for eksempel en pumpe som går eller står, eller en ventil som er åpen eller stengt.</td><td>on/off control</td></tr>
+    <tr><td>nivåbryter</td><td>Nivåmåler som bare sier fra når væsken når et bestemt punkt i tanken. Den er enten av eller på.</td><td>level switch</td></tr>
+    <tr><td>hysterese</td><td>Avstanden mellom grensen der utstyret slås på, og grensen der det slås av. Hindrer at utstyret starter og stopper hele tiden.</td><td>hysteresis</td></tr>
+    <tr><td>termostat</td><td>Bryter som slår varme eller kjøling av og på etter temperaturen, med en grense for på og en for av.</td><td>thermostat</td></tr>
+    <tr><td>kontaktor</td><td>Stor elektrisk bryter som slår en motor av og på når den får signal, for eksempel fra en PLS.</td><td>contactor</td></tr>
+    <tr><td>magnetventil</td><td>Ventil som åpnes og lukkes elektrisk av en spole. Den er enten helt åpen eller helt lukket.</td><td>solenoid valve</td></tr>
+    <tr><td>av/på-ventil</td><td>Ventil som bare er helt åpen eller helt stengt, og som ikke kan stå delvis åpen.</td><td>on/off valve</td></tr>
+    <tr><td>hånd – 0 – auto</td><td>Bryter ved utstyret med tre stillinger. I hånd går utstyret, i 0 står det, og i auto bestemmer styresystemet.</td><td>hand-off-auto (HOA)</td></tr>
+    <tr><td>tilbakemelding</td><td>Signal fra utstyret til styresystemet som viser hva utstyret faktisk gjør, for eksempel at en pumpe går eller at en ventil er stengt.</td><td>feedback signal</td></tr>
+    <tr><td>endebryter</td><td>Bryter på en ventil som melder fra når ventilen er helt åpen eller helt stengt.</td><td>limit switch</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="nivamaling.html">Nivåmåling</a> i emnet Måling i anlegget forklarer nivåbrytere og høynivåvern.</li>
+  <li><a href="pls.html">PLS</a> i emnet Styresystemer viser hvordan av/på-styringen er programmert, og hvordan du feilsøker med lampene på PLS-en.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

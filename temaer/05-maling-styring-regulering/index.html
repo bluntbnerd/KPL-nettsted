@@ -19,7 +19,7 @@
 <p>Når du er ferdig med dette temaet, skal du kunne</p>
 <ul>
   <li>forklare hvordan måle-, styre- og reguleringsutstyr virker, og bruke det på laben</li>
-  <li>beskrive ulike reguleringsprinsipper, for eksempel av/på-regulering og PID-regulering</li>
+  <li>beskrive ulike reguleringsprinsipper, for eksempel av/på-styring (av/på-regulering) og PID-regulering</li>
   <li>forklare start- og stopp-prosedyrer for utstyr og anlegg</li>
   <li>forklare hvordan skjermbaserte styrings- og overvåkingssystemer virker</li>
   <li>finne og rette feil og avvik på måle- og reguleringsutstyr</li>
@@ -46,6 +46,11 @@
   <li><a href="nivamaling.html">Nivåmåling</a></li>
   <li><a href="mengdemaling.html">Mengdemåling</a></li>
   <li><a href="maling-hva-kan-du-na.html">Hva kan du nå? (Måling i anlegget)</a></li>
+  <li><a href="styring-og-regulering.html">Styring og regulering – forskjellen</a></li>
+  <li><a href="av-pa-styring.html">Av/på-styring</a></li>
+  <li><a href="forriglinger.html">Forriglinger</a></li>
+  <li><a href="sekvenser.html">Sekvenser</a></li>
+  <li><a href="styring-hva-kan-du-na.html">Hva kan du nå? (Styring)</a></li>
   <li><a href="reguleringssloyfen.html">Reguleringssløyfen</a></li>
   <li><a href="settpunkt-maleverdi-avvik.html">Settpunkt, måleverdi og avvik</a></li>
   <li><a href="p-regulering.html">P-regulering</a></li>
@@ -71,6 +76,26 @@
     <tr><td>virkningsretning</td><td>Innstillingen som bestemmer om regulatoren skal øke eller minske pådraget når måleverdien stiger.</td><td>controller action (direct/reverse)</td></tr>
     <tr><td>trend</td><td>Kurve som viser hvordan en måleverdi har endret seg over tid.</td><td>trend</td></tr>
     <tr><td>PI-regulator</td><td>Regulator med P-del og I-del. Den vanligste regulatoren i prosessanlegg.</td><td>PI controller</td></tr>
+    <tr><td>styring</td><td>Å få utstyr til å gjøre noe etter en plan eller en kommando, uten å justere etter resultatet. I anlegget brukes ordet om å starte og stoppe, åpne og stenge.</td><td>open-loop control</td></tr>
+    <tr><td>åpen sløyfe</td><td>Signalet går bare én vei, fra innstillingen eller kommandoen til utstyret. Resultatet blir ikke målt og sendt tilbake.</td><td>open loop</td></tr>
+    <tr><td>lukket sløyfe</td><td>Signalet går i ring: Resultatet blir målt og sendt tilbake til regulatoren, som retter opp.</td><td>closed loop</td></tr>
+    <tr><td>doseringspumpe</td><td>Liten pumpe som tilsetter en nøyaktig mengde av et kjemikalie, for eksempel lut eller fellingskjemikalie.</td><td>dosing pump</td></tr>
+    <tr><td>av/på-styring</td><td>Styring av utstyr som bare har to tilstander, for eksempel en pumpe som går eller står, eller en ventil som er åpen eller stengt.</td><td>on/off control</td></tr>
+    <tr><td>hysterese</td><td>Avstanden mellom grensen der utstyret slås på, og grensen der det slås av. Hindrer at utstyret starter og stopper hele tiden.</td><td>hysteresis</td></tr>
+    <tr><td>termostat</td><td>Bryter som slår varme eller kjøling av og på etter temperaturen, med en grense for på og en for av.</td><td>thermostat</td></tr>
+    <tr><td>hånd – 0 – auto</td><td>Bryter ved utstyret med tre stillinger. I hånd går utstyret, i 0 står det, og i auto bestemmer styresystemet.</td><td>hand-off-auto (HOA)</td></tr>
+    <tr><td>tilbakemelding</td><td>Signal fra utstyret til styresystemet som viser hva utstyret faktisk gjør, for eksempel at en pumpe går eller at en ventil er stengt.</td><td>feedback signal</td></tr>
+    <tr><td>startbetingelse</td><td>Forrigling som hindrer at utstyr startes før forholdene er trygge, for eksempel før en ventil er åpen.</td><td>start permissive</td></tr>
+    <tr><td>tilbakestilling</td><td>Å oppheve et låst stopp etter at en forrigling har slått inn og årsaken er rettet. Utstyret starter ikke av seg selv.</td><td>reset</td></tr>
+    <tr><td>forbikobling</td><td>Å koble ut en forrigling for en kort tid, for eksempel ved bytte av en bryter. Krever tillatelse.</td><td>bypass, override</td></tr>
+    <tr><td>forriglingsmatrise</td><td>En tabell som viser hvilke hendelser (årsaker) som utløser hvilke automatiske handlinger (virkninger), for eksempel at en pumpe stopper ved for høyt nivå i en tank.</td><td>cause and effect matrix</td></tr>
+    <tr><td>nødstopp</td><td>Stor rød knapp som stopper utstyret med en gang når noen trykker på den.</td><td>emergency stop</td></tr>
+    <tr><td>sekvens</td><td>Styring som går gjennom flere steg i fast rekkefølge. Den går videre til neste steg når en betingelse er oppfylt.</td><td>sequence</td></tr>
+    <tr><td>steg</td><td>Én del av en sekvens. I hvert steg skjer bestemte ting, for eksempel at en ventil åpner eller en pumpe starter.</td><td>step</td></tr>
+    <tr><td>betingelse</td><td>Det som må være oppfylt før sekvensen går videre til neste steg, for eksempel et nivå, en mengde eller en tid.</td><td>transition condition</td></tr>
+    <tr><td>batch</td><td>Én porsjon som lages ferdig fra start til slutt, før neste porsjon begynner.</td><td>batch</td></tr>
+    <tr><td>oppstartssekvens</td><td>De stegene som skal gjøres i riktig rekkefølge når utstyr eller et anlegg startes.</td><td>start-up sequence</td></tr>
+    <tr><td>nedstengningssekvens</td><td>De stegene som skal gjøres i riktig rekkefølge når utstyr eller et anlegg stoppes.</td><td>shutdown sequence</td></tr>
     <tr><td>forrigling</td><td>Automatisk sikring som stopper utstyr eller hindrer en handling når en farlig tilstand oppstår.</td><td>interlock</td></tr>
     <tr><td>styresystem</td><td>Hele datasystemet som overvåker og styrer anlegget: styringene (PLS-er eller kontrollere), nettverket og operatørstasjonene i kontrollrommet.</td><td>control system (DCS/SCADA)</td></tr>
   </tbody>

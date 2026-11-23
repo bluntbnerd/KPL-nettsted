@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forriglinger – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Forriglinger</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT4, PT8</div>
+
+<p class="ingress">Noen ting skal aldri skje i et anlegg: at en tank renner over, at en pumpe går tørr, eller at utstyr starter før det er trygt. Forriglinger er automatiske sperrer som hindrer dette. Her lærer du hvordan forriglinger virker, hvorfor de må tilbakestilles, og hvorfor du aldri skal koble dem ut på egen hånd.</p>
+
+<h2>Hva er en forrigling?</h2>
+<p>En <strong>forrigling</strong> er en automatisk sperre i styringen. Den stopper utstyr eller hindrer en handling når noe er farlig eller galt. Forriglingen gjør dette selv, uten at operatøren trenger å gjøre noe. Den virker også om operatøren prøver å starte utstyret.</p>
+<p>Forriglinger finnes i to former:</p>
+<ul>
+  <li><strong>Forriglinger som stopper:</strong> Utstyr som går, blir stoppet når noe blir farlig. Eksempel: Pumpa stopper når tanken den fyller, er nesten full.</li>
+  <li><strong>Startbetingelser:</strong> Utstyr får ikke starte før forholdene er trygge. Eksempel: Pumpa får ikke starte før ventilen på sugesiden er åpen.</li>
+</ul>
+
+<h2>Et eksempel: pumpe mellom to tanker</h2>
+<figure>
+  <img src="bilder/forriglinger-pumpe.svg" alt="En pumpe pumper væske fra tank 1 til tank 2. Før pumpa sitter en ventil med endebryter. Tank 1 har en nivåbryter ved 10 prosent, merket lav-lav, som stopper pumpa. Tank 2 har en nivåbryter ved 90 prosent, merket høy-høy, som stopper pumpa. Endebryteren melder om ventilen er åpen. Alle tre sender signal til en boks merket styringen, forriglinger. Fra styringen går et signal til pumpa som kan stoppe den eller hindre at den starter." width="640">
+  <figcaption>Figur: Tre forriglinger på en pumpe. De stiplede linjene er signaler. Nivåbryterne og endebryteren melder til styringen, og styringen stopper pumpa eller hindrer at den starter.</figcaption>
+</figure>
+<p>Pumpa i figuren har tre forriglinger:</p>
+<ol>
+  <li><strong>Lav-lav nivå i tank 1 (10 %, LALL).</strong> Tanken pumpa suger fra, er nesten tom. Pumpa stopper, så den ikke går tørr og blir ødelagt.</li>
+  <li><strong>Høy-høy nivå i tank 2 (90 %, LAHH).</strong> Tanken pumpa fyller, er nesten full. Pumpa stopper, så tanken ikke renner over.</li>
+  <li><strong>Ventilen på sugesiden er ikke åpen.</strong> Endebryteren melder ikke «åpen». Pumpa får ikke starte, fordi den ville gått uten væske. Stenges ventilen mens pumpa går, stopper pumpa også.</li>
+</ol>
+<p>Bokstavene i parentes er navnene du ser i flytskjemaer og alarmlister, for eksempel i HMS-øvingen <a href="../01-hms/06-overfylling.html">Overfylling av tank</a>. L står for nivå, A for alarm, og HH og LL for høy-høy og lav-lav.</p>
+<p>Mange anlegg har i tillegg en <strong>nødstopp</strong>, en stor rød knapp som stopper utstyret med en gang når noen trykker på den.</p>
+
+<h2>Forriglingsmatrisen</h2>
+<p>Hvilke forriglinger et anlegg har, står i en <strong>forriglingsmatrise</strong>. Det er en tabell som viser hvilke hendelser (årsaker) som utløser hvilke automatiske handlinger (virkninger). For pumpa i figuren kan den se slik ut:</p>
+<table>
+  <thead><tr><th>Årsak</th><th>Stopper pumpa</th><th>Hindrer start</th><th>Alarm</th></tr></thead>
+  <tbody>
+    <tr><td>Nivå lav-lav i tank 1</td><td>X</td><td>X</td><td>X</td></tr>
+    <tr><td>Nivå høy-høy i tank 2</td><td>X</td><td>X</td><td>X</td></tr>
+    <tr><td>Ventil på sugesiden ikke åpen</td><td>X</td><td>X</td><td></td></tr>
+    <tr><td>Nødstopp trykket inn</td><td>X</td><td>X</td><td>X</td></tr>
+  </tbody>
+</table>
+<p>Du leser matrisen rad for rad: Når nivået i tank 2 når høy-høy, stopper pumpa, den kan ikke startes, og det kommer en alarm. Hvordan du leser og tegner en forriglingsmatrise for et helt anlegg, lærer du i temaet <a href="../11-tekniske-flytskjemaer/index.html">Tekniske flytskjemaer</a>.</p>
+
+<h2>Forrigling eller vanlig styring?</h2>
+<p>På siden <a href="av-pa-styring.html">Av/på-styring</a> stoppet pumpa ved 20 % nivå. Det er vanlig drift: Pumpa stopper der hver gang. Forriglingen ved 10 % skal bare slå inn når noe annet har sviktet, for eksempel når den vanlige stoppen ikke virket. Forskjellen er denne:</p>
+<table>
+  <thead><tr><th></th><th>Vanlig styring</th><th>Forrigling</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Når slår den inn?</strong></td><td>Hele tiden, som en del av vanlig drift</td><td>Bare når noe har gått galt</td></tr>
+    <tr><td><strong>Hva skal den gjøre?</strong></td><td>Få prosessen til å gå</td><td>Hindre skade på folk, utstyr og miljø</td></tr>
+    <tr><td><strong>Måling</strong></td><td>Den vanlige måleren</td><td>Helst en egen måler eller bryter</td></tr>
+    <tr><td><strong>Etterpå</strong></td><td>Utstyret starter igjen av seg selv</td><td>Må tilbakestilles før utstyret kan startes</td></tr>
+  </tbody>
+</table>
+<p>Forriglingen bør ha sin egen nivåbryter. Bruker den samme måler som den vanlige styringen, kan én feil på måleren slå ut begge deler på en gang. Det kalles en <strong>felles feil</strong>.</p>
+
+<h2>Lag på lag</h2>
+<p>Forriglinger er én av flere sikringer som ligger lag på lag. For en tank som fylles, kan lagene være:</p>
+<ol>
+  <li><strong>Regulering eller vanlig styring</strong> holder nivået der det skal være.</li>
+  <li><strong>Høy alarm</strong> varsler operatøren, som skal finne årsaken og gripe inn.</li>
+  <li><strong>Forriglingen ved høy-høy nivå</strong> stopper pumpa automatisk.</li>
+  <li><strong>Et overløp</strong> leder væsken et trygt sted hvis alt annet svikter.</li>
+</ol>
+<p>Forriglinger som skal hindre store ulykker, for eksempel eksplosjon eller store utslipp, ligger ofte i et eget <strong>sikkerhetssystem (SIS)</strong>, atskilt fra den vanlige styringen. Mer om lagene lærer du i HMS, på sidene <a href="../01-hms/06-overfylling.html">Overfylling av tank</a> og <a href="../01-hms/06-barrierer.html">Barrierer</a>.</p>
+
+<h2>Tilbakestilling</h2>
+<p>Når en forrigling har stoppet utstyret, blir stoppet låst. Selv om nivået i tank 2 synker under 90 % igjen, starter ikke pumpa. Forriglingen må <strong>tilbakestilles</strong> av en operatør først. Slik er det med vilje: Noen skal finne ut <em>hvorfor</em> forriglingen slo inn, før anlegget startes igjen.</p>
+<p>Rekkefølgen er alltid:</p>
+<ol>
+  <li>Finn årsaken til at forriglingen slo inn, og rett den.</li>
+  <li>Sjekk at forholdene er normale igjen, for eksempel at nivået er under grensen.</li>
+  <li>Tilbakestill forriglingen. Det går bare når den farlige tilstanden er borte, for eksempel når nivået er under grensen igjen. Styringen kan ikke se om årsaken er funnet. Det er ditt ansvar.</li>
+  <li>Start utstyret på vanlig måte. Tilbakestilling starter ikke utstyret av seg selv.</li>
+</ol>
+
+<h2>Forbikobling: bare med tillatelse</h2>
+<p>Noen ganger må en forrigling kobles ut for en kort tid, for eksempel når en nivåbryter skal byttes eller testes. Det kalles <strong>forbikobling</strong>. Mens forriglingen er forbikoblet, er sikringen borte, og anlegget er mindre trygt. Derfor gjelder strenge regler:</p>
+<ul>
+  <li>Forbikobling krever tillatelse etter bedriftens prosedyre, ofte som en del av arbeidstillatelsen.</li>
+  <li>Det skal vises tydelig i styresystemet at forriglingen er forbikoblet.</li>
+  <li>Operatøren må følge ekstra godt med så lenge forbikoblingen står.</li>
+  <li>Forbikoblingen fjernes så snart arbeidet er ferdig.</li>
+</ul>
+<p>En forrigling skal aldri kobles ut for å «få anlegget i gang». Mange alvorlige ulykker har skjedd fordi en sikring var koblet ut.</p>
+
+<h2>Feilsikker kobling</h2>
+<p>Hva skjer hvis ledningen fra nivåbryteren blir revet av? Forriglinger kobles slik at et brudd gir det samme som en farlig tilstand. Signalet betyr «alt er i orden» bare så lenge det er strøm i ledningen. Blir ledningen brutt, eller forsvinner strømmen, stopper pumpa. Dette kalles <strong>feilsikker</strong> kobling. Du kan lese mer om det på siden <a href="pls.html">PLS</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Pumpa vil ikke starte</div>
+  <p>Tank 2 skal fylles. Du klikker på start for pumpa i skjermbildet, men ingenting skjer. Skjermbildet viser «forrigling aktiv».</p>
+  <p><strong>Slik tenker du:</strong></p>
+  <ol>
+    <li>Styringen gjør trolig det den skal. En forrigling hindrer starten. Finn ut hvilken.</li>
+    <li>Nivået i tank 1 er 55 %, og nivået i tank 2 er 30 %. Nivåforriglingene skal altså ikke være aktive.</li>
+    <li>Styringen viser at ventilen på sugesiden ikke er åpen. Du går ut og ser at ventilen står helt åpen.</li>
+    <li>Da er det trolig endebryteren som er feil. Den kan være skadet eller ha flyttet seg, så den ikke melder «åpen».</li>
+    <li>Meld fra til automatiker eller elektriker. Ikke forbikoble forriglingen for å få startet pumpa.</li>
+  </ol>
+  <p><strong>Det du lærer:</strong> Når utstyr ikke vil starte, sjekker du først hvilke forriglinger og startbetingelser som er aktive. Er forholdene i orden ute i anlegget, er feilen ofte i bryteren som melder dem.</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Koble aldri ut en forrigling uten tillatelse etter bedriftens prosedyre.</li>
+    <li>Tilbakestill ikke en forrigling før du vet hvorfor den slo inn.</li>
+    <li>En forrigling er ikke en sikring når du skal arbeide på utstyret. Skal du arbeide på en pumpe, må den sikres med arbeidsbryteren og låses etter bedriftens prosedyre.</li>
+    <li>Kommer den samme forriglingen igjen og igjen, er det et tegn på at noe er galt. Meld fra.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva er en forrigling?</p>
+  <ul>
+    <li>En alarm som ber operatøren stoppe utstyret</li>
+    <li data-riktig>En automatisk sperre som stopper utstyr eller hindrer en handling når noe er farlig</li>
+    <li>En regulator som holder nivået i en tank jevnt</li>
+  </ul>
+  <p class="forklaring">En forrigling virker automatisk, uten at operatøren gjør noe. En alarm varsler bare, og en regulator holder prosessen jevn i vanlig drift.</p>
+</div>
+
+<div class="quiz">
+  <p>Pumpa får ikke starte før ventilen på sugesiden er åpen. Hva kalles en slik forrigling?</p>
+  <ul>
+    <li data-riktig>En startbetingelse</li>
+    <li>En nødstopp</li>
+    <li>En forbikobling</li>
+  </ul>
+  <p class="forklaring">En startbetingelse hindrer at utstyr startes før forholdene er trygge. Her ville pumpa gått uten væske hvis ventilen var stengt.</p>
+</div>
+
+<div class="quiz">
+  <p>Forriglingen ved høy-høy nivå har stoppet pumpa. Nivået har sunket igjen. Hvorfor starter ikke pumpa av seg selv?</p>
+  <ul>
+    <li>Fordi nivåbryteren er ødelagt</li>
+    <li data-riktig>Fordi stoppet er låst til en operatør har funnet årsaken og tilbakestilt forriglingen</li>
+    <li>Fordi pumpa må kjøles ned først</li>
+  </ul>
+  <p class="forklaring">Forriglingen låser stoppet med vilje. Noen skal finne ut hvorfor nivået ble så høyt, før anlegget startes igjen.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor bør forriglingen ha sin egen nivåbryter, og ikke bruke den vanlige nivåmåleren?</p>
+  <ul>
+    <li>Fordi en nivåbryter er billigere</li>
+    <li>Fordi den vanlige måleren er for nøyaktig</li>
+    <li data-riktig>Fordi én feil på den vanlige måleren da ikke kan slå ut både styringen og forriglingen</li>
+  </ul>
+  <p class="forklaring">Viser den vanlige måleren for lavt nivå, kan tanken bli fylt for mye. Bruker forriglingen samme måler, merker den heller ingenting. Det kalles en felles feil.</p>
+</div>
+
+<div class="quiz">
+  <p>En nivåbryter skal byttes, og forriglingen må kobles ut mens arbeidet pågår. Hva er riktig?</p>
+  <ul>
+    <li>Operatøren kobler den ut og setter den inn igjen neste dag.</li>
+    <li data-riktig>Forbikoblingen krever tillatelse, skal vises i styresystemet og fjernes så snart arbeidet er ferdig.</li>
+    <li>Forriglinger kan aldri kobles ut, heller ikke ved arbeid.</li>
+  </ul>
+  <p class="forklaring">Forbikobling er noen ganger nødvendig, men anlegget er mindre trygt mens sikringen er borte. Derfor krever den tillatelse, tydelig merking, ekstra oppfølging og rask fjerning.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>forrigling</td><td>Automatisk sikring som stopper utstyr eller hindrer en handling når en farlig tilstand oppstår.</td><td>interlock</td></tr>
+    <tr><td>startbetingelse</td><td>Forrigling som hindrer at utstyr startes før forholdene er trygge, for eksempel før en ventil er åpen.</td><td>start permissive</td></tr>
+    <tr><td>forriglingsmatrise</td><td>En tabell som viser hvilke hendelser (årsaker) som utløser hvilke automatiske handlinger (virkninger), for eksempel at en pumpe stopper ved for høyt nivå i en tank.</td><td>cause and effect matrix</td></tr>
+    <tr><td>nødstopp</td><td>Stor rød knapp som stopper utstyret med en gang når noen trykker på den.</td><td>emergency stop</td></tr>
+    <tr><td>tilbakestilling</td><td>Å oppheve et låst stopp etter at en forrigling har slått inn og årsaken er rettet. Utstyret starter ikke av seg selv.</td><td>reset</td></tr>
+    <tr><td>forbikobling</td><td>Å koble ut en forrigling for en kort tid, for eksempel ved bytte av en bryter. Krever tillatelse.</td><td>bypass, override</td></tr>
+    <tr><td>felles feil</td><td>Én feil som slår ut flere sikringer på en gang, for eksempel fordi de bruker samme måler.</td><td>common cause failure</td></tr>
+    <tr><td>feilsikker</td><td>Koblet slik at en feil, for eksempel et brudd i ledningen, får anlegget til å gå til en trygg tilstand.</td><td>fail-safe</td></tr>
+    <tr><td>sikkerhetssystem (SIS)</td><td>Eget styresystem, atskilt fra den vanlige styringen, som stenger ned anlegget automatisk når en farlig grense nås.</td><td>safety instrumented system (SIS)</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../01-hms/06-overfylling.html">Overfylling av tank</a> i HMS er en øving der du ser alarm, forrigling og overløp virke lag på lag, og prøver tilbakestilling.</li>
+  <li><a href="../01-hms/06-barrierer.html">Barrierer</a> i HMS forklarer hvorfor et anlegg har mange sikringer etter hverandre.</li>
+  <li><a href="operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a> i emnet Styresystemer forklarer alarmgrensene H, HH, L og LL.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

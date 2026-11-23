@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Givere og transmittere – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Givere og transmittere</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT3, PT8</div>
+
+<p class="ingress">Når du ser en temperatur eller et trykk på skjermen i kontrollrommet, har målingen gått en lang vei fra prosessen. Den viktigste delen av veien er giveren. Her lærer du hva en giver gjør, hva som stilles inn i den, og hvordan du finner ut om det er giveren som viser feil.</p>
+
+<h2>Fra prosessen til skjermen</h2>
+<p>I emnet Måling i anlegget lærte du om trykkgivere og temperaturgivere. Nå skal vi se på hva som skjer fra målepunktet og fram til tallet på skjermen.</p>
+
+<figure>
+  <img src="bilder/giver-signalvei.svg" alt="Til venstre et prosessrør. En føler stikker ned i røret, og på toppen av føleren sitter en giver med et lite display som viser 65,2. Fra giveren går en kabel med to ledere bort til en boks merket styresystem, for eksempel PLS. Under kabelen står det at den ofte også fører strøm til giveren. Fra styresystemet går en stiplet linje merket nettverk til en skjerm i kontrollrommet. På skjermen står TT-101 og 65,2 grader celsius. Delene er nummerert fra 1 til 5: føler, giver, kabel, styresystem og skjerm." width="680">
+  <figcaption>Figur: Veien fra måling til skjerm. Føleren merker temperaturen, og giveren gjør målingen om til et signal. Kabelen fører signalet til styresystemet, som viser verdien på skjermen. Figuren er forenklet.</figcaption>
+</figure>
+
+<ol>
+  <li><strong>Føleren</strong> er delen som er i kontakt med prosessen og merker endringen. I en trykkgiver er det membranen. Ved temperaturmåling er det for eksempel en Pt100 eller et termoelement.</li>
+  <li><strong>Giveren</strong> leser av føleren og gjør målingen om til et signal som kan sendes langt.</li>
+  <li><strong>Kabelen</strong> fører signalet til styresystemet, ofte flere hundre meter.</li>
+  <li><strong>Styresystemet</strong>, for eksempel en PLS, gjør signalet om til et tall med riktig enhet. Det bruker verdien til regulering, alarmer og forriglinger.</li>
+  <li><strong>Skjermen</strong> i kontrollrommet viser verdien for operatøren.</li>
+</ol>
+<p>Føler og giver sitter ofte sammen i ett instrument, for eksempel en trykkgiver. I en temperaturmåling er de ofte to deler: føleren står i lommerøret, og giveren sitter i et hode på toppen.</p>
+
+<h2>Giver eller transmitter?</h2>
+<p>En <strong>giver</strong> kalles også en <strong>transmitter</strong>. Det er to ord for det samme. «Transmitter» kommer fra engelsk og betyr «sender». Begge ordene brukes i industrien, og på engelske datablader og i manualer står det alltid transmitter.</p>
+<p>Derfor står bokstaven T for giver i bokstavkoden til instrumentet. TT-101 er en temperaturgiver, PT er en trykkgiver, LT er en nivågiver og FT er en mengdegiver. Hvordan bokstavkodene leses, lærer du mer om på siden Instrumentsymboler og P&amp;ID.</p>
+
+<h2>Hva giveren gjør</h2>
+<p>En giver gjør tre ting:</p>
+<ul>
+  <li><strong>Den måler.</strong> Giveren leser av føleren, for eksempel hvor mye membranen bøyer seg, eller hvor stor motstanden i en Pt100 er.</li>
+  <li><strong>Den regner om.</strong> Giveren gjør avlesningen om til trykk, temperatur, nivå eller mengde. En nivågiver som måler trykket i bunnen av en tank, regner for eksempel om fra trykk til høyde.</li>
+  <li><strong>Den sender.</strong> Giveren sender verdien som et standardsignal til styresystemet.</li>
+</ul>
+<p>Et <strong>standardsignal</strong> betyr at alle givere sender samme slags signal, uansett hva de måler. Da kan styresystemet ta imot signal fra en trykkgiver og en temperaturgiver på samme måte. Det vanligste standardsignalet er en elektrisk strøm på 4–20 mA. Det lærer du om på neste side.</p>
+<p>Mange givere får strømmen de trenger gjennom de samme to lederne som signalet går i. Da trengs det bare én kabel med to ledere fra giveren til styresystemet.</p>
+
+<h2>Måleområdet stilles inn i giveren</h2>
+<p>Hver giver har et <strong>måleområde</strong>, for eksempel 0–10 bar eller 0–150 °C. Giveren sender verdien som en andel av måleområdet. Ved 0 bar sender den laveste verdi (0 %), og ved 10 bar sender den høyeste verdi (100 %). Ved 5 bar sender den 50 %.</p>
+<p>Måleområdet trenger ikke å starte på null. En temperaturgiver kan for eksempel være stilt inn på 50–150 °C hvis temperaturen aldri skal under 50 °C.</p>
+<p>Styresystemet må vite hvilket måleområde giveren er stilt inn på. Ellers regner det om feil. Det er derfor viktig at måleområdet er det samme i giveren og i styresystemet.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Giveren og styresystemet er ikke enige</div>
+  <p><strong>Oppgave:</strong> En trykkgiver er byttet. Den nye giveren er stilt inn på 0–16 bar, men styresystemet er fortsatt satt opp for 0–10 bar, som den gamle giveren hadde. Det virkelige trykket er 8 bar. Hva viser skjermen?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Giveren: 8 bar av et måleområde på 0–16 bar er \( \dfrac{8}{16} = 0{,}50 \), altså 50 %. Giveren sender et signal som betyr 50 %.</li>
+    <li>Styresystemet tror måleområdet er 0–10 bar. Det regner ut 50 % av 10 bar: \( 0{,}50 \cdot 10 \text{ bar} = 5{,}0 \text{ bar} \).</li>
+  </ol>
+  <p><strong>Svar:</strong> Skjermen viser 5,0 bar, men det virkelige trykket er 8 bar. Operatøren tror trykket er lavere enn det er. Etter at en giver er byttet, må noen sjekke at måleområdet stemmer i giveren og i styresystemet.</p>
+</div>
+
+<h2>Smarte givere</h2>
+<p>De fleste nye givere er <strong>smarte givere</strong>. De har en liten datamaskin inni seg. Instrumentteknikeren kan koble til et håndholdt verktøy eller bruke et dataprogram, og så lese og endre innstillingene, for eksempel måleområdet og enheten.</p>
+<p>En smart giver kan også sjekke seg selv og melde fra hvis noe er galt, for eksempel at føleren er ødelagt. Mange sender slik informasjon i tillegg til selve målingen. Et vanlig system for dette heter HART.</p>
+
+<h2>Giver eller bryter?</h2>
+<p>En giver sender en verdi som kan ligge hvor som helst i måleområdet. Det kalles et analogt signal. En <strong>bryter</strong> sier bare fra når en grense er nådd, for eksempel en nivåbryter høyt i tanken eller en trykkbryter som slår ut ved 6 bar. Bryteren er enten av eller på, og sender et digitalt signal. Forskjellen på analoge og digitale signaler lærte du på siden <a href="pls.html">PLS</a>.</p>
+
+<table>
+  <thead><tr><th>Måling</th><th>Lokal måler (viser på stedet)</th><th>Giver (sender verdien hele tiden)</th><th>Bryter (av eller på ved en grense)</th></tr></thead>
+  <tbody>
+    <tr><td>Trykk</td><td>Manometer</td><td>Trykkgiver (PT)</td><td>Trykkbryter</td></tr>
+    <tr><td>Temperatur</td><td>Bimetalltermometer</td><td>Temperaturgiver (TT)</td><td>Termostat</td></tr>
+    <tr><td>Nivå</td><td>Seglass</td><td>Nivågiver (LT)</td><td>Nivåbryter</td></tr>
+    <tr><td>Mengde</td><td>Rotameter</td><td>Mengdegiver (FT)</td><td>Strømningsbryter</td></tr>
+  </tbody>
+</table>
+
+<h2>Når verdien på skjermen er feil</h2>
+<p>Viser skjermen en verdi som ikke stemmer, kan feilen sitte hvor som helst på veien i figuren: i prosessen, i føleren, i giveren, i kabelen eller i styresystemet. Prøv å finne ut hvor:</p>
+<ul>
+  <li><strong>Sammenlign med en lokal måler.</strong> Sitter det et manometer eller et termometer i nærheten, kan du se om det viser det samme som skjermen.</li>
+  <li><strong>Se på giverens display.</strong> Viser giveren riktig verdi, men skjermen feil, sitter feilen etter giveren: i kabelen eller i oppsettet i styresystemet. Viser også giveren feil, sitter feilen i giveren, føleren eller tilkoblingen til prosessen.</li>
+  <li><strong>Verdien står helt stille.</strong> En måling i en prosess som går, svinger nesten alltid litt. Står verdien helt stille, kan impulsrøret være tett, instrumentventilen stengt eller giveren ha hengt seg opp.</li>
+  <li><strong>Verdien står helt nede eller helt oppe.</strong> Det kan bety brudd i kabelen eller en ødelagt giver. Hvordan du kjenner igjen dette ut fra signalet, lærer du på neste side.</li>
+  <li><strong>Verdien er feil med samme forhold hele tiden.</strong> Da kan måleområdet være forskjellig i giveren og i styresystemet, som i eksemplet over.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Arbeid på givere</div>
+  <ul>
+    <li><strong>Meld fra til kontrollrommet før en giver tas ut av drift.</strong> Regulatorer, alarmer og forriglinger bruker verdien fra giveren. Faller verdien plutselig, kan en regulator åpne en ventil helt, eller en forrigling kan stoppe en pumpe.</li>
+    <li>En giver som sitter på prosessen, har trykk og kanskje farlig eller varmt stoff bak seg. Steng instrumentventilen og slipp ut trykket etter prosedyren før giveren skrus løs.</li>
+    <li>I områder der det kan være brennbar gass eller damp (Ex-områder), må givere være godkjent for det. Giverhuset skal ikke åpnes mens det er spenning på, uten tillatelse.</li>
+    <li>Etter arbeidet: åpne instrumentventilen igjen, og sjekk at verdien på skjermen er rimelig før regulatoren settes tilbake i auto.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva er forskjellen på en føler og en giver?</p>
+  <ul>
+    <li>Det er to ord for det samme.</li>
+    <li data-riktig>Føleren merker endringen i prosessen, og giveren gjør målingen om til et signal og sender det.</li>
+    <li>Føleren sitter i kontrollrommet, og giveren sitter ute i anlegget.</li>
+  </ul>
+  <p class="forklaring">Føleren er i kontakt med prosessen, for eksempel en membran eller en Pt100. Giveren leser av føleren, regner om og sender et standardsignal til styresystemet. Det er giver og transmitter som er to ord for det samme.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva betyr den siste T-en i TT-101?</p>
+  <ul>
+    <li>Temperatur</li>
+    <li>Tank</li>
+    <li data-riktig>Transmitter, altså giver</li>
+  </ul>
+  <p class="forklaring">Den første T-en sier hva som måles (temperatur). Den siste T-en sier hva instrumentet gjør: det er en transmitter, altså en giver.</p>
+</div>
+
+<div class="quiz">
+  <p>En temperaturgiver har måleområdet 0–200 °C. Temperaturen er 50 °C. Hvor stor del av måleområdet sender giveren?</p>
+  <ul>
+    <li data-riktig>25 %</li>
+    <li>50 %</li>
+    <li>40 %</li>
+  </ul>
+  <p class="forklaring">50 °C av 200 °C er \( \dfrac{50}{200} = 0{,}25 \), altså 25 % av måleområdet.</p>
+</div>
+
+<div class="quiz">
+  <p>Du vil se nivået i en tank hele tiden på skjermen i kontrollrommet. Hva trenger du?</p>
+  <ul>
+    <li>En nivåbryter</li>
+    <li data-riktig>En nivågiver</li>
+    <li>Et seglass</li>
+  </ul>
+  <p class="forklaring">En nivågiver sender nivået hele tiden. En nivåbryter sier bare fra når væsken når ett bestemt punkt, og et seglass kan bare leses av på stedet.</p>
+</div>
+
+<div class="quiz">
+  <p>En trykkgiver skal byttes. Hva gjør du før du stenger instrumentventilen?</p>
+  <ul>
+    <li>Ingenting, giveren kan byttes når som helst.</li>
+    <li>Slår av strømmen til hele anlegget.</li>
+    <li data-riktig>Melder fra til kontrollrommet, fordi regulatorer, alarmer og forriglinger bruker verdien fra giveren.</li>
+  </ul>
+  <p class="forklaring">Når giveren tas ut, endrer verdien seg på skjermen. En regulator kan da åpne eller stenge en ventil, og en forrigling kan stoppe utstyr. Kontrollrommet må vite om arbeidet og kunne sette regulatoren i manuell.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>føler</td><td>Delen av et måleinstrument som er i kontakt med prosessen og merker endringen, for eksempel en membran eller en Pt100.</td><td>sensor, sensing element</td></tr>
+    <tr><td>giver</td><td>Instrument som leser av en føler, gjør målingen om til et standardsignal og sender det til styresystemet. Kalles også transmitter.</td><td>transmitter</td></tr>
+    <tr><td>standardsignal</td><td>Signal som alle givere sender på samme måte, uansett hva de måler, for eksempel 4–20 mA.</td><td>standard signal</td></tr>
+    <tr><td>måleområde</td><td>Området mellom laveste og høyeste verdi et instrument kan måle, for eksempel 0–10 bar.</td><td>measuring range</td></tr>
+    <tr><td>smart giver</td><td>Giver med en liten datamaskin inni, der innstillingene kan leses og endres med et verktøy, og som kan melde fra om egne feil.</td><td>smart transmitter</td></tr>
+    <tr><td>bryter</td><td>Instrument som bare sier fra når en grense er nådd, for eksempel et bestemt trykk eller nivå. Den er enten av eller på.</td><td>switch</td></tr>
+    <tr><td>lokal måler</td><td>Måler som bare viser verdien der den sitter i anlegget, for eksempel et manometer eller et seglass.</td><td>local gauge</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="trykkmaling.html">Trykkmåling</a>, <a href="temperaturmaling.html">Temperaturmåling</a> og <a href="nivamaling.html">Nivåmåling</a> forklarer hvordan følerne virker.</li>
+  <li><a href="pls.html">PLS</a> forklarer hva som skjer med signalet når det kommer fram til styresystemet.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -25,7 +25,7 @@ KPL.sti("05-maling-styring-regulering", [
   {
     emne: "Signaler og instrumentering",
     sider: [
-      { tittel: "Givere og transmittere", status: "planlagt" },
+      { fil: "givere-og-transmittere.html", tittel: "Givere og transmittere", meny: "Givere", type: "fagstoff", status: "utkast" },
       { tittel: "Signalet 4–20 mA", status: "planlagt" },
       { tittel: "Instrumentsymboler og P&ID", status: "planlagt" },
       { tittel: "Hva kan du nå?", status: "planlagt" }
@@ -34,11 +34,11 @@ KPL.sti("05-maling-styring-regulering", [
   {
     emne: "Styring",
     sider: [
-      { tittel: "Styring og regulering – forskjellen", status: "planlagt" },
-      { tittel: "Av/på-styring", status: "planlagt" },
-      { tittel: "Forriglinger", status: "planlagt" },
-      { tittel: "Sekvenser", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "styring-og-regulering.html", tittel: "Styring og regulering – forskjellen", meny: "Styring og regulering", type: "fagstoff", status: "ferdig" },
+      { fil: "av-pa-styring.html", tittel: "Av/på-styring", type: "fagstoff", status: "ferdig" },
+      { fil: "forriglinger.html", tittel: "Forriglinger", type: "fagstoff", status: "ferdig" },
+      { fil: "sekvenser.html", tittel: "Sekvenser", type: "fagstoff", status: "ferdig" },
+      { fil: "styring-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {
