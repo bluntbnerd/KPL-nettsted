@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva viser et prosessflytskjema? – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Hva viser et prosessflytskjema?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Blokkskjemaet viser hvilke trinn en prosess har. Prosessflytskjemaet går et steg videre: Det viser utstyret som gjør jobben, og hvordan anlegget går når alt er normalt. På engelsk heter det <em>process flow diagram</em>, og forkortelsen PFD brukes også på norsk.</p>
+
+<h2>Fra bokser til utstyr</h2>
+<p>I et blokkskjema er hvert trinn en boks. I et prosessflytskjema tegner vi i stedet utstyret: tanker, pumper, varmevekslere, kolonner og reaktorer. Hver type utstyr har sitt eget symbol, slik at alle som leser skjemaet, forstår det på samme måte.</p>
+<p>Hvert utstyr har også et <strong>tagnummer</strong>, for eksempel P-12001. Bokstaven forteller hva slags utstyr det er: P betyr pumpe, og T betyr tank. Tallet skiller utstyret fra alt annet i anlegget. Det samme tagnummeret står på skiltet på pumpa ute i anlegget.</p>
+
+<h2>Hva står i et prosessflytskjema?</h2>
+<ul>
+  <li><strong>Alt hovedutstyr</strong>, tegnet med symboler og med tagnummer.</li>
+  <li><strong>Strømmene mellom utstyret.</strong> De viktigste rørene er tegnet med piler, og hver strøm har et nummer.</li>
+  <li><strong>Normale driftsbetingelser.</strong> For hver strøm står det hvor mye som strømmer, og hvilken temperatur og hvilket trykk den har når anlegget går som normalt. Tallene står ofte i en strømtabell under skjemaet.</li>
+  <li><strong>Tekniske data</strong> for utstyret, for eksempel størrelsen på en tank eller effekten til en pumpe.</li>
+  <li><strong>Den viktigste reguleringen</strong>, forenklet. Skjemaet viser for eksempel at nivået i en tank holdes stabilt av en regulator og en ventil, men ikke alle målere og alle detaljer.</li>
+</ul>
+<p>Strømtabellen gjør det mulig å regne på anlegget. Den viser hvor mye som går inn og ut av hvert utstyr (massebalanse). I anlegg der noe varmes opp eller kjøles ned, viser den også hvor mye energi som tilføres eller fjernes (energibalanse). Dette lærer du mer om i temaet <a href="../04-masse-og-energibalanser/index.html">Fysiske prinsipper</a>.</p>
+
+<h2>Eksempel: pumperommet</h2>
+<p>På siden <a href="tegn-et-blokkskjema.html">Tegn et blokkskjema</a> laget vi et blokkskjema for pumperommet. Figuren under viser det samme anlegget som et forenklet prosessflytskjema.</p>
+
+<figure>
+  <img src="bilder/prosessflytskjema-pumperom.svg" alt="Forenklet prosessflytskjema for pumperommet. Tre pumper, P-12001, P-12002 og P-12003, suger vann fra tank 3 (T-12053) nederst. Pumpe 1 pumper til tank 2 (T-12052). Pumpe 2 pumper gjennom reguleringsventilen LCV-12022 til tank 1 eller tank 2. Pumpe 3 pumper gjennom reguleringsventilen LCV-12032 til tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen LCV-12032. En annen nivåregulator styrer ventilen LCV-12022 og får nivået fra tank 1 eller tank 2. Fra tank 1 og tank 2 renner vannet tilbake til tank 3. Strømmene har nummer fra 1 til 6." width="820">
+  <figcaption>Figur: Forenklet prosessflytskjema for pumperommet. Blå ruter med tall er strømnumre. Den stiplede linja er et styresignal. Skjemaet er forenklet: Mange ventiler, målere og rør er utelatt.</figcaption>
+</figure>
+
+<h3>Utstyrsliste</h3>
+<table>
+  <thead><tr><th>Tagnummer</th><th>Utstyr</th><th>Tekniske data</th></tr></thead>
+  <tbody>
+    <tr><td>T-12053</td><td>Tank 3</td><td>Diameter 1,2 m, høyde 1,25 m</td></tr>
+    <tr><td>P-12001</td><td>Pumpe 1</td><td>7,5 kW, 2900 o/min, 36–90 m³/h</td></tr>
+    <tr><td>P-12002</td><td>Pumpe 2</td><td>2,2 kW, 1450 o/min, 20 m³/h</td></tr>
+    <tr><td>P-12003</td><td>Pumpe 3</td><td>5,5 kW, 1450 o/min, 80 m³/h</td></tr>
+    <tr><td>T-12051</td><td>Tank 1</td><td>Diameter 0,79 m, høyde 1,25 m</td></tr>
+    <tr><td>T-12052</td><td>Tank 2</td><td>Diameter 0,79 m, høyde 1,25 m</td></tr>
+  </tbody>
+</table>
+
+<h3>Strømtabell</h3>
+<p>I et prosessflytskjema for en fabrikk står normal mengde, temperatur og trykk for hver strøm. I pumperommet er det bare vann ved romtemperatur, så her viser vi hvor mye hver pumpe kan levere.</p>
+<table>
+  <thead><tr><th>Strøm</th><th>Fra → til</th><th>Stoff</th><th>Mengde</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Tank 3 → pumpene</td><td>vann</td><td>summen av pumpene som går</td></tr>
+    <tr><td>2</td><td>Pumpe 1 → tank 2</td><td>vann</td><td>opptil 90 m³/h</td></tr>
+    <tr><td>3</td><td>Pumpe 2 → tank 1 eller tank 2</td><td>vann</td><td>opptil 20 m³/h</td></tr>
+    <tr><td>4</td><td>Pumpe 3 → tank 1</td><td>vann</td><td>opptil 80 m³/h</td></tr>
+    <tr><td>5</td><td>Tank 1 → tank 3</td><td>vann</td><td>renner ned av seg selv</td></tr>
+    <tr><td>6</td><td>Tank 2 → tank 3</td><td>vann</td><td>renner ned av seg selv</td></tr>
+  </tbody>
+</table>
+
+<h3>Reguleringen</h3>
+<p>Nivået i tank 1 skal holdes stabilt. Regulatoren LIC (nivåregulator) får signal om nivået i tanken og åpner eller struper ventilen LCV-12032 på røret fra pumpe 3. Blir nivået for høyt, struper den ventilen, slik at det kommer mindre vann inn. Den stiplede linja i figuren er signalet.</p>
+<p>Pumpe 2 kan kjøre til både tank 1 og tank 2. Ventilen LCV-12022 styres av en egen nivåregulator. På skjermen i kontrollrommet velger operatøren hvilken tank regulatoren skal få nivåmålingen fra, alt etter hvilken tank vannet skal kjøres til. Hvordan regulering virker, lærer du i temaet <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+
+<h2>Hva viser ikke et prosessflytskjema?</h2>
+<p>Prosessflytskjemaet viser hvordan prosessen virker, men ikke alt som skal til for å bygge og drive den. Det viser ikke alle ventiler, små rør, rørdimensjoner og alle målere. Alt dette står i det tekniske flytskjemaet (P&amp;ID), som du lærer om i neste emne.</p>
+
+<table>
+  <thead><tr><th>Skjema</th><th>Hva det viser</th></tr></thead>
+  <tbody>
+    <tr><td>Blokkskjema</td><td>Trinnene i prosessen og strømmene mellom dem</td></tr>
+    <tr><td><strong>Prosessflytskjema</strong></td><td><strong>Hovedutstyret, de viktigste strømmene med driftsdata og den viktigste reguleringen</strong></td></tr>
+    <tr><td>Teknisk flytskjema (P&amp;ID)</td><td>Alt utstyr, alle rør, ventiler og instrumenter, tegnet med faste symboler</td></tr>
+  </tbody>
+</table>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva viser et prosessflytskjema som et blokkskjema ikke viser?</p>
+  <ul>
+    <li>Hvilken vei stoffene går</li>
+    <li data-riktig>Utstyret, med tagnummer og driftsdata</li>
+    <li>Alle ventiler og rørdimensjoner</li>
+  </ul>
+  <p class="forklaring">Begge skjemaene viser hvilken vei stoffene går. Prosessflytskjemaet viser i tillegg utstyret og driftsdataene. Alle ventiler og rørdimensjoner står først i P&amp;ID-en.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hva betyr bokstaven P i tagnummeret P-12003?</p>
+  <ul>
+    <li data-riktig>Pumpe</li>
+    <li>Prosess</li>
+    <li>Trykk (pressure)</li>
+  </ul>
+  <p class="forklaring">Bokstaven i et utstyrsnummer sier hva slags utstyr det er. P er pumpe, og T er tank.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva står i en strømtabell?</p>
+  <ul>
+    <li>Navnene på dem som har tegnet skjemaet</li>
+    <li data-riktig>Mengde, temperatur og trykk for hver nummererte strøm</li>
+    <li>Hvor ofte utstyret skal ha vedlikehold</li>
+  </ul>
+  <p class="forklaring">Strømtabellen viser de normale driftsdataene for hver strøm. Den brukes til masse- og energibalanser.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hva gjør LIC og LCV-12032 i pumperommet?</p>
+  <ul>
+    <li>De stopper alle pumpene ved nødstopp</li>
+    <li>De måler temperaturen i tank 3</li>
+    <li data-riktig>De holder nivået i tank 1 stabilt ved å regulere vannet fra pumpe 3</li>
+  </ul>
+  <p class="forklaring">LIC er en nivåregulator. Den åpner eller struper ventilen LCV-12032, slik at det kommer passe mye vann inn i tank 1.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Du skal finne ut hvilken dimensjon røret fra pumpe 2 har. Hvilket skjema ser du i?</p>
+  <ul>
+    <li>Blokkskjemaet</li>
+    <li>Prosessflytskjemaet</li>
+    <li data-riktig>Det tekniske flytskjemaet (P&amp;ID)</li>
+  </ul>
+  <p class="forklaring">Rørdimensjoner, alle ventiler og alle målere står i P&amp;ID-en. Prosessflytskjemaet viser bare de viktigste strømmene.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>prosessflytskjema</td><td>En tegning av prosessen som viser hovedutstyret og de viktigste strømmene, ofte med mengde, temperatur og trykk. Den har færre detaljer enn et teknisk flytskjema.</td><td>process flow diagram (PFD)</td></tr>
+    <tr><td>tagnummer</td><td>Den faste merkingen til en utstyrsdel eller et instrument, for eksempel en pumpe eller en nivåmåler. Den står både i skjemaet og på utstyret i anlegget.</td><td>tag number</td></tr>
+    <tr><td>driftsbetingelser</td><td>Verdiene for mengde, temperatur og trykk når anlegget går som normalt.</td><td>operating conditions</td></tr>
+    <tr><td>strømtabell</td><td>En tabell til prosessflytskjemaet som viser mengde, temperatur og trykk for hver nummererte strøm.</td><td>stream table</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="tegn-et-blokkskjema.html">Tegn et blokkskjema</a> viser blokkskjemaet for det samme pumperommet.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Eksemplet bygger på det tekniske flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

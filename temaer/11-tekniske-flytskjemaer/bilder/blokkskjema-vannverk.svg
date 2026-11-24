@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 310" width="860" height="310" font-family="Segoe UI, Arial, sans-serif">
+  <title>Blokkskjema for et vannverk. Råvann går inn fra venstre og gjennom fire trinn: felling, sedimentering, filtrering og desinfisering. Rentvann kommer ut til høyre. Fellingskjemikalie tilsettes i fellingen, og klor tilsettes i desinfiseringen. Slam går ut fra sedimenteringen. Spylevann fra filtreringen sendes tilbake til innløpet.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="310" rx="10" fill="#ffffff"/>
+
+  <!-- bokser (trinn) -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="100" y="110" width="130" height="60" rx="6"/>
+    <rect x="270" y="110" width="140" height="60" rx="6"/>
+    <rect x="450" y="110" width="120" height="60" rx="6"/>
+    <rect x="610" y="110" width="130" height="60" rx="6"/>
+  </g>
+  <g font-size="15" fill="#1c2828" text-anchor="middle" font-weight="bold">
+    <text x="165" y="145">Felling</text>
+    <text x="340" y="145">Sedimentering</text>
+    <text x="510" y="145">Filtrering</text>
+    <text x="675" y="145">Desinfisering</text>
+  </g>
+
+  <!-- hovedstrømmen -->
+  <g stroke="#1c2828" stroke-width="3" fill="none" marker-end="url(#pil)">
+    <line x1="10" y1="140" x2="98" y2="140"/>
+    <line x1="230" y1="140" x2="268" y2="140"/>
+    <line x1="410" y1="140" x2="448" y2="140"/>
+    <line x1="570" y1="140" x2="608" y2="140"/>
+    <line x1="740" y1="140" x2="790" y2="140"/>
+  </g>
+  <g font-size="14" fill="#1c2828">
+    <text x="12" y="128">Råvann</text>
+    <text x="760" y="128" font-weight="bold">Rentvann</text>
+    <text x="760" y="160">(produkt)</text>
+  </g>
+
+  <!-- tilsetninger inn ovenfra -->
+  <g stroke="#2e7d6b" stroke-width="2" fill="none" marker-end="url(#pilg)">
+    <line x1="165" y1="58" x2="165" y2="108"/>
+    <line x1="675" y1="58" x2="675" y2="108"/>
+  </g>
+  <g font-size="14" fill="#2e7d6b" text-anchor="middle">
+    <text x="165" y="48">Fellingskjemikalie</text>
+    <text x="675" y="48">Klor</text>
+  </g>
+
+  <!-- slam ut nedover -->
+  <line x1="340" y1="170" x2="340" y2="218" stroke="#2e7d6b" stroke-width="2" marker-end="url(#pilg)"/>
+  <text x="350" y="212" font-size="14" fill="#2e7d6b">Slam (avfall)</text>
+
+  <!-- resirkulering av spylevann -->
+  <path d="M510,170 L510,262 L55,262 L55,147" stroke="#2e7d6b" stroke-width="2" fill="none" stroke-dasharray="none" marker-end="url(#pilg)"/>
+  <text x="282" y="286" font-size="14" fill="#2e7d6b" text-anchor="middle">Spylevann sendes tilbake til innløpet (resirkulering)</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" width="860" height="330" font-family="Segoe UI, Arial, sans-serif">
+  <title>Blokkskjema for pumperommet på skolen. Vann kommer inn i lagringen i tank 3. Derfra går det til pumpingen med pumpe 1 til 3, videre til tank 1 og så til tank 2. Pumpene kan også sende vann rett til tank 2. Fra tank 1 og tank 2 renner vannet tilbake til tank 3. Fra tank 3 kan anlegget tømmes.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="330" rx="10" fill="#ffffff"/>
+
+  <!-- bokser -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="120" y="120" width="130" height="60" rx="6"/>
+    <rect x="300" y="120" width="130" height="60" rx="6"/>
+    <rect x="480" y="120" width="130" height="60" rx="6"/>
+    <rect x="660" y="120" width="140" height="60" rx="6"/>
+  </g>
+  <g font-size="15" fill="#1c2828" text-anchor="middle" font-weight="bold">
+    <text x="185" y="146">Lagring</text>
+    <text x="365" y="146">Pumping</text>
+    <text x="545" y="155">Tank 1</text>
+    <text x="730" y="155">Tank 2</text>
+  </g>
+  <g font-size="13" fill="#1c2828" text-anchor="middle">
+    <text x="185" y="166">tank 3</text>
+    <text x="365" y="166">pumpe 1–3</text>
+  </g>
+
+  <!-- hovedstrømmen -->
+  <g stroke="#1c2828" stroke-width="3" fill="none" marker-end="url(#pil)">
+    <line x1="10" y1="150" x2="118" y2="150"/>
+    <line x1="250" y1="150" x2="298" y2="150"/>
+    <line x1="430" y1="150" x2="478" y2="150"/>
+    <line x1="610" y1="150" x2="658" y2="150"/>
+  </g>
+  <text x="12" y="138" font-size="14" fill="#1c2828">Vann inn</text>
+
+  <!-- pumpene kan sende rett til tank 2 -->
+  <path d="M365,120 L365,70 L730,70 L730,118" stroke="#2e7d6b" stroke-width="2" fill="none" marker-end="url(#pilg)"/>
+  <text x="547" y="60" font-size="14" fill="#2e7d6b" text-anchor="middle">Pumpene kan også sende vannet rett til tank 2</text>
+
+  <!-- tilbake til tank 3 -->
+  <g stroke="#2e7d6b" stroke-width="2" fill="none">
+    <path d="M730,180 L730,250 L215,250 L215,182" marker-end="url(#pilg)"/>
+    <line x1="545" y1="180" x2="545" y2="250"/>
+  </g>
+  <text x="472" y="274" font-size="14" fill="#2e7d6b" text-anchor="middle">Vannet renner tilbake til tank 3 (resirkulering)</text>
+
+  <!-- tømming -->
+  <line x1="150" y1="180" x2="150" y2="292" stroke="#2e7d6b" stroke-width="2" marker-end="url(#pilg)"/>
+  <text x="160" y="312" font-size="14" fill="#2e7d6b">Tømming</text>
+</svg>

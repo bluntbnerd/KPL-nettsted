@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470" font-family="Segoe UI, Arial, sans-serif">
+  <title>Forenklet prosessflytskjema for pumperommet. Tre pumper, P-12001, P-12002 og P-12003, suger vann fra tank 3 (T-12053) nederst. Pumpe 1 pumper til tank 2 (T-12052). Pumpe 2 pumper gjennom reguleringsventilen LCV-12022 til tank 1 eller tank 2. Pumpe 3 pumper gjennom reguleringsventilen LCV-12032 til tank 1 (T-12051). En nivåregulator (LIC) styrer LCV-12032 og holder nivået i tank 1. En annen nivåregulator styrer LCV-12022 og får nivået fra tank 1 eller tank 2, alt etter hvilken tank pumpe 2 kjører til. Fra tank 1 og tank 2 renner vannet tilbake til tank 3. Strømmene er nummerert fra 1 til 6.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="470" rx="10" fill="#ffffff"/>
+
+  <!-- rør (prosesslinjer) -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none">
+    <!-- sugeledning fra tank 3 -->
+    <line x1="470" y1="400" x2="110" y2="400"/>
+    <line x1="110" y1="400" x2="110" y2="323" marker-end="url(#pil)"/>
+    <line x1="220" y1="400" x2="220" y2="323" marker-end="url(#pil)"/>
+    <line x1="330" y1="400" x2="330" y2="323" marker-end="url(#pil)"/>
+    <!-- pumpe 1 til tank 2 -->
+    <path d="M110,280 L110,50 L710,50 L710,148" marker-end="url(#pil)"/>
+    <!-- pumpe 2 til tank 2, med grein til tank 1 -->
+    <path d="M220,280 L220,80 L665,80 L665,148" marker-end="url(#pil)"/>
+    <line x1="540" y1="80" x2="540" y2="148" marker-end="url(#pil)"/>
+    <!-- pumpe 3 til tank 1 -->
+    <path d="M330,280 L330,110 L515,110 L515,148" marker-end="url(#pil)"/>
+    <!-- tilbake til tank 3 -->
+    <line x1="515" y1="270" x2="515" y2="338" marker-end="url(#pil)"/>
+    <line x1="685" y1="270" x2="685" y2="338" marker-end="url(#pil)"/>
+  </g>
+  <circle cx="540" cy="80" r="3.5" fill="#1c2828"/>
+  <circle cx="220" cy="400" r="3.5" fill="#1c2828"/>
+  <circle cx="330" cy="400" r="3.5" fill="#1c2828"/>
+
+  <!-- inn og ut av anlegget -->
+  <g stroke="#2e7d6b" stroke-width="2" fill="none" marker-end="url(#pilg)">
+    <line x1="420" y1="452" x2="420" y2="403"/>
+    <line x1="740" y1="410" x2="740" y2="455"/>
+  </g>
+  <g font-size="13" fill="#2e7d6b">
+    <text x="428" y="448">Vann inn</text>
+    <text x="748" y="452">Tømming</text>
+  </g>
+
+  <!-- tanker -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="470" y="150" width="90" height="120" rx="12"/>
+    <rect x="640" y="150" width="90" height="120" rx="12"/>
+    <rect x="470" y="340" width="290" height="70" rx="10"/>
+  </g>
+  <g fill="#1c2828" text-anchor="middle">
+    <text x="515" y="208" font-size="14" font-weight="bold">Tank 1</text>
+    <text x="515" y="226" font-size="12">T-12051</text>
+    <text x="685" y="208" font-size="14" font-weight="bold">Tank 2</text>
+    <text x="685" y="226" font-size="12">T-12052</text>
+    <text x="615" y="372" font-size="14" font-weight="bold">Tank 3</text>
+    <text x="615" y="390" font-size="12">T-12053</text>
+  </g>
+
+  <!-- pumper -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <circle cx="110" cy="300" r="20"/>
+    <circle cx="220" cy="300" r="20"/>
+    <circle cx="330" cy="300" r="20"/>
+  </g>
+  <g fill="#586868">
+    <path d="M102,307 L118,307 L110,291 Z"/>
+    <path d="M212,307 L228,307 L220,291 Z"/>
+    <path d="M322,307 L338,307 L330,291 Z"/>
+  </g>
+  <g font-size="12" fill="#1c2828" text-anchor="end">
+    <text x="86" y="304">P-12001</text>
+    <text x="196" y="304">P-12002</text>
+    <text x="306" y="304">P-12003</text>
+  </g>
+
+  <!-- reguleringsventiler -->
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="2">
+    <path d="M280,72 L300,88 L300,72 L280,88 Z"/>
+    <path d="M410,102 L430,118 L430,102 L410,118 Z"/>
+  </g>
+  <g stroke="#1c2828" stroke-width="1.5" fill="#ffffff">
+    <line x1="290" y1="80" x2="290" y2="66"/>
+    <path d="M282,66 A8,8 0 0 1 298,66 Z"/>
+    <line x1="420" y1="110" x2="420" y2="96"/>
+    <path d="M412,96 A8,8 0 0 1 428,96 Z"/>
+  </g>
+  <g font-size="11" fill="#1c2828" text-anchor="middle">
+    <text x="255" y="99">LCV-12022</text>
+    <text x="378" y="130">LCV-12032</text>
+  </g>
+
+  <!-- nivåregulering av tank 1 -->
+  <g stroke="#1c2828" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+    <line x1="420" y1="173" x2="420" y2="118"/>
+    <line x1="437" y1="190" x2="470" y2="190"/>
+  </g>
+  <circle cx="420" cy="190" r="17" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="420" y="194" font-size="11" fill="#1c2828" text-anchor="middle">LIC</text>
+
+  <!-- nivåregulering for pumpe 2: måler tank 1 eller tank 2 (velges på skjermen) -->
+  <line x1="290" y1="123" x2="290" y2="88" stroke="#1c2828" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <circle cx="290" cy="140" r="17" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="290" y="144" font-size="11" fill="#1c2828" text-anchor="middle">LIC</text>
+  <g font-size="10" fill="#1c2828" text-anchor="middle">
+    <text x="290" y="172">nivå fra</text>
+    <text x="290" y="184">tank 1 eller 2</text>
+  </g>
+
+  <!-- strømnummer -->
+  <g fill="#ffffff" stroke="#2c6ea6" stroke-width="1.5">
+    <path d="M400,391 L409,400 L400,409 L391,400 Z"/>
+    <path d="M110,141 L119,150 L110,159 L101,150 Z"/>
+    <path d="M220,171 L229,180 L220,189 L211,180 Z"/>
+    <path d="M330,191 L339,200 L330,209 L321,200 Z"/>
+    <path d="M515,296 L524,305 L515,314 L506,305 Z"/>
+    <path d="M685,296 L694,305 L685,314 L676,305 Z"/>
+  </g>
+  <g font-size="11" fill="#2c6ea6" text-anchor="middle" font-weight="bold">
+    <text x="400" y="404">1</text>
+    <text x="110" y="154">2</text>
+    <text x="220" y="184">3</text>
+    <text x="330" y="204">4</text>
+    <text x="515" y="309">5</text>
+    <text x="685" y="309">6</text>
+  </g>
+</svg>

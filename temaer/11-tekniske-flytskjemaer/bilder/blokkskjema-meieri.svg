@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250" font-family="Segoe UI, Arial, sans-serif">
+  <title>Fasit: blokkskjema for et meieri. Råmelk går gjennom separering, pasteurisering, kjøling og tapping, og ut kommer melk på kartong. Fløte går ut fra separeringen. Kartonger kommer inn til tappingen.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="860" height="250" rx="10" fill="#ffffff"/>
+
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="100" y="100" width="130" height="60" rx="6"/>
+    <rect x="270" y="100" width="140" height="60" rx="6"/>
+    <rect x="450" y="100" width="120" height="60" rx="6"/>
+    <rect x="610" y="100" width="120" height="60" rx="6"/>
+  </g>
+  <g font-size="15" fill="#1c2828" text-anchor="middle" font-weight="bold">
+    <text x="165" y="135">Separering</text>
+    <text x="340" y="135">Pasteurisering</text>
+    <text x="510" y="135">Kjøling</text>
+    <text x="670" y="135">Tapping</text>
+  </g>
+
+  <g stroke="#1c2828" stroke-width="3" fill="none" marker-end="url(#pil)">
+    <line x1="10" y1="130" x2="98" y2="130"/>
+    <line x1="230" y1="130" x2="268" y2="130"/>
+    <line x1="410" y1="130" x2="448" y2="130"/>
+    <line x1="570" y1="130" x2="608" y2="130"/>
+    <line x1="730" y1="130" x2="780" y2="130"/>
+  </g>
+  <g font-size="14" fill="#1c2828">
+    <text x="12" y="118">Råmelk</text>
+    <text x="745" y="118" font-weight="bold">Melk</text>
+    <text x="745" y="150">(produkt)</text>
+  </g>
+
+  <line x1="165" y1="160" x2="165" y2="205" stroke="#2e7d6b" stroke-width="2" marker-end="url(#pilg)"/>
+  <text x="175" y="225" font-size="14" fill="#2e7d6b">Fløte (biprodukt)</text>
+
+  <line x1="670" y1="45" x2="670" y2="98" stroke="#2e7d6b" stroke-width="2" marker-end="url(#pilg)"/>
+  <text x="670" y="35" font-size="14" fill="#2e7d6b" text-anchor="middle">Kartonger</text>
+</svg>

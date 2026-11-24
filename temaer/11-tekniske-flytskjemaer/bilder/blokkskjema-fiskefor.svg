@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Blokkskjema for en fabrikk som lager fiskefôr. Råvarer går inn fra venstre og gjennom seks trinn: blanding, ekstrudering, tørking, oljebelegging, kjøling og sikting. Fôr kommer ut til høyre. Vann og damp tilsettes i blandingen, og fiskeolje tilsettes i oljebeleggingen. Vanndamp går ut fra tørkingen. Støv og småbiter fra siktingen sendes tilbake til blandingen.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="300" rx="10" fill="#ffffff"/>
+
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="100" y="110" width="110" height="60" rx="6"/>
+    <rect x="240" y="110" width="110" height="60" rx="6"/>
+    <rect x="380" y="110" width="110" height="60" rx="6"/>
+    <rect x="520" y="110" width="110" height="60" rx="6"/>
+    <rect x="660" y="110" width="110" height="60" rx="6"/>
+    <rect x="800" y="110" width="110" height="60" rx="6"/>
+  </g>
+  <g font-size="14" fill="#1c2828" text-anchor="middle" font-weight="bold">
+    <text x="155" y="145">Blanding</text>
+    <text x="295" y="145">Ekstrudering</text>
+    <text x="435" y="145">Tørking</text>
+    <text x="575" y="145">Oljebelegging</text>
+    <text x="715" y="145">Kjøling</text>
+    <text x="855" y="145">Sikting</text>
+  </g>
+
+  <g stroke="#1c2828" stroke-width="3" fill="none" marker-end="url(#pil)">
+    <line x1="10" y1="140" x2="98" y2="140"/>
+    <line x1="210" y1="140" x2="238" y2="140"/>
+    <line x1="350" y1="140" x2="378" y2="140"/>
+    <line x1="490" y1="140" x2="518" y2="140"/>
+    <line x1="630" y1="140" x2="658" y2="140"/>
+    <line x1="770" y1="140" x2="798" y2="140"/>
+    <line x1="910" y1="140" x2="950" y2="140"/>
+  </g>
+  <g font-size="14" fill="#1c2828">
+    <text x="12" y="128">Råvarer</text>
+    <text x="925" y="128" font-weight="bold">Fôr</text>
+  </g>
+
+  <g stroke="#2e7d6b" stroke-width="2" fill="none" marker-end="url(#pilg)">
+    <line x1="155" y1="58" x2="155" y2="108"/>
+    <line x1="575" y1="58" x2="575" y2="108"/>
+    <line x1="435" y1="170" x2="435" y2="215"/>
+  </g>
+  <g font-size="14" fill="#2e7d6b">
+    <text x="155" y="48" text-anchor="middle">Vann og damp</text>
+    <text x="575" y="48" text-anchor="middle">Fiskeolje</text>
+    <text x="445" y="212">Vanndamp</text>
+  </g>
+
+  <path d="M855,170 L855,250 L185,250 L185,172" stroke="#2e7d6b" stroke-width="2" fill="none" marker-end="url(#pilg)"/>
+  <text x="520" y="276" font-size="14" fill="#2e7d6b" text-anchor="middle">Støv og småbiter sendes tilbake til blandingen</text>
+</svg>
