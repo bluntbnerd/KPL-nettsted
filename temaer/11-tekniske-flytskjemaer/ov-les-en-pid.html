@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: les en P&amp;ID – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Øv: les en P&amp;ID</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Det er én ting å kjenne symbolene. Det er noe annet å bruke tegningen til å finne fram og forstå hva som skjer i anlegget. Her øver du på begge deler, først med pumperommet og så med en tegning du får av læreren.</p>
+
+<h2>Del 1: Pumpe 3 i pumperommet</h2>
+<p>Bruk utsnittet av P&amp;ID-en for pumperommet. Det viser linja fra tank 3 gjennom pumpe 3 til tank 1. Har du glemt hva noe betyr, finner du det på sidene <a href="ror-og-ventiler.html">Rør og ventiler</a> og <a href="instrumenter-og-tagnummer.html">Instrumenter og tagnummer</a>.</p>
+
+<figure>
+  <img src="bilder/pid-pumpe3-pumperom.svg" alt="Forenklet utsnitt av P&amp;ID-en for pumperommet, fra tank 3 gjennom pumpe 3 til tank 1. Nede til venstre kommer sugeledningen W-12101-150-16 fra tank 3. Røret går opp gjennom en overgang, stengeventilen V-12030 og strømningsvakten FZ 12073 til pumpa P-12003, som drives av en motor (M). Etter pumpa sitter trykkindikatoren PI 12066 og stengeventilen V-12031. Røret W-12133-80-16 går videre til reguleringsventilen LCV-12032, merket FO, og ned i tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen og får signal fra nivågiveren LT 12075 på tanken. På høyre side av tanken sitter LZ 12076 (HH), LA 12077 (H) og LZ 12078 (L). Fra bunnen av tanken går et rør med ventilen V-12050 tilbake til tank 3. Stiplede linjer fra FZ 12073, LZ 12076, LA 12077 og LZ 12078 viser signaler til forrigling og alarm." width="900">
+  <figcaption>Figur: Utsnitt av P&amp;ID-en for pumperommet: pumpe 3 og tank 1. Sirkelen i firkanten (LIC) er en regulator i styresystemet. Utsnittet er forenklet.</figcaption>
+</figure>
+
+<h3>Finn fram i tegningen</h3>
+
+<div class="quiz">
+  <p>1. Du vil hindre at vann renner fra tank 3 inn til pumpe 3. Hvilken ventil stenger du?</p>
+  <ul>
+    <li data-riktig>V-12030</li>
+    <li>V-12031</li>
+    <li>V-12050</li>
+  </ul>
+  <p class="forklaring">V-12030 sitter på sugesiden, mellom tank 3 og pumpa. V-12031 sitter på trykksiden, etter pumpa.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hvilket instrument viser trykket etter pumpe 3?</p>
+  <ul>
+    <li>FZ 12073</li>
+    <li data-riktig>PI 12066</li>
+    <li>LT 12075</li>
+  </ul>
+  <p class="forklaring">P betyr trykk, og I betyr at instrumentet viser verdien. PI 12066 sitter på trykksiden av pumpa.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvor stort er røret fra pumpe 3 til tank 1?</p>
+  <ul>
+    <li>DN150</li>
+    <li>DN100</li>
+    <li data-riktig>DN80</li>
+  </ul>
+  <p class="forklaring">Linjenummeret er W-12133-80-16. Tallet 80 er dimensjonen. Sugeledningen fra tank 3, W-12101-150-16, er DN150.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvilket instrument sender nivået i tank 1 til regulatoren?</p>
+  <ul>
+    <li data-riktig>LT 12075</li>
+    <li>LA 12077</li>
+    <li>LZ 12076</li>
+  </ul>
+  <p class="forklaring">LT er en nivågiver, og den stiplede signallinja går fra LT 12075 til LIC. LA og LZ er alarm og bryter.</p>
+</div>
+
+<h3>Hva skjer hvis …?</h3>
+
+<div class="quiz">
+  <p>5. Trykklufta til LCV-12032 forsvinner. Hva skjer?</p>
+  <ul>
+    <li>Ventilen stenger, og tank 1 tømmes</li>
+    <li data-riktig>Ventilen går helt åpen, nivået i tank 1 stiger, og ved høyt-høyt nivå stopper LZ 12076 pumpa</li>
+    <li>Ingenting, ventilen blir stående der den er</li>
+  </ul>
+  <p class="forklaring">LCV-12032 er merket FO, så den går helt åpen. Da kommer det mer vann inn i tank 1 enn regulatoren vil. Først kommer alarmen fra LA 12077 (H). Når nivået når HH, stopper sikkerhetssystemet pumpa.</p>
+</div>
+
+<div class="quiz">
+  <p>6. Strømningsvakten FZ 12073 melder for lite strømning (LL), og pumpe 3 stopper. Hva er en mulig årsak?</p>
+  <ul>
+    <li>Tank 1 er full</li>
+    <li data-riktig>V-12030 er stengt, eller det er for lite vann i tank 3</li>
+    <li>LCV-12032 står helt åpen</li>
+  </ul>
+  <p class="forklaring">FZ 12073 sitter på innløpet til pumpa. Får pumpa for lite vann inn, kan den bli skadet. Derfor stopper den. Vanlige årsaker er en stengt ventil på sugesiden eller lavt nivå i tanken pumpa suger fra.</p>
+</div>
+
+<details>
+  <summary>7. Nivågiveren LT 12075 viser for lavt nivå, selv om tanken er nesten full. Hva gjør regulatoren, og hvorfor går det likevel bra?</summary>
+  <p>Regulatoren tror nivået er for lavt og åpner LCV-12032 mer. Da fylles tanken. Det går likevel bra fordi nivåbryteren LZ 12076 (HH) er et eget instrument, uavhengig av LT 12075. Når nivået når HH, stopper den pumpa. Det er derfor sikkerhetsfunksjoner har egne instrumenter og ikke bruker giveren som regulerer.</p>
+</details>
+
+<details>
+  <summary>8. Du skal skifte pakning på pumpe 3. Skriv en liste over hva som må gjøres før arbeidet begynner. Bruk tagnumrene.</summary>
+  <ol>
+    <li>Stopp pumpe 3 (P-12003).</li>
+    <li>Gjør motoren strømløs, og lås og merk bryteren.</li>
+    <li>Steng V-12030 (sugesiden) og V-12031 (trykksiden). Lås og merk ventilene.</li>
+    <li>Tøm pumpa gjennom tømmeventilen V-12036. Den er ikke tegnet i utsnittet, men står i den fulle P&amp;ID-en.</li>
+    <li>Sjekk at pumpa er tom og uten trykk, for eksempel på PI 12066.</li>
+  </ol>
+  <p>Arbeidet skal ha arbeidstillatelse, og du skal følge prosedyren på arbeidsplassen.</p>
+</details>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Oppgave 8 er en øvelse i å lese tegningen. I et virkelig anlegg skal alt arbeid på utstyr ha arbeidstillatelse, og avstengingen skal kontrolleres før arbeidet begynner. Les mer i temaet <a href="../01-hms/index.html">HMS</a>.</p>
+</div>
+
+<h2>Del 2: En tegning fra læreren</h2>
+<p>Læreren deler ut en P&amp;ID fra et større anlegg, med symbolforklaring. Bruk den til oppgavene under. Svarene får du av læreren.</p>
+
+<ol>
+  <li><strong>Tegningsrammen:</strong> Finn tegningsnummeret, revisjonen og datoen. Hva heter anlegget?</li>
+  <li><strong>Symbolforklaringen:</strong> Hvor mange ark har den? Hva viser hvert ark?</li>
+  <li><strong>En pumpe:</strong> Velg en pumpe. Skriv tagnummeret, og forklar hva hver del av det betyr. Finn stengeventilene før og etter pumpa, og instrumentene som sitter på den.</li>
+  <li><strong>En reguleringssløyfe:</strong> Finn en giver, en regulator og en reguleringsventil som hører sammen. Hvordan ser du at de hører sammen? Hvilken feilstilling har ventilen?</li>
+  <li><strong>En sikkerhetsventil:</strong> Finn en sikkerhetsventil. Hvilket utstyr verner den, og hvor går det som slippes ut?</li>
+  <li><strong>Et linjenummer:</strong> Velg et rør. Forklar linjenummeret ved hjelp av symbolforklaringen.</li>
+  <li><strong>Et blokkskjema:</strong> Tegn et blokkskjema for den delen av anlegget som tegningen viser.</li>
+</ol>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips</div>
+  <p>En stor P&amp;ID kan virke uoversiktlig. Begynn med å finne hovedutstyret og hovedstrømmen, slik du gjør i et blokkskjema. Så går du inn i detaljene rundt ett og ett utstyr.</p>
+</div>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="fra-prosessflytskjema-til-pid.html">Fra prosessflytskjema til P&amp;ID</a></li>
+  <li><a href="ror-og-ventiler.html">Rør og ventiler</a></li>
+  <li><a href="instrumenter-og-tagnummer.html">Instrumenter og tagnummer</a></li>
+</ul>
+<p><small>Om kildene: Teksten, oppgavene og figurene på denne siden er laget for dette nettstedet. Eksemplet bygger på det tekniske flytskjemaet og forriglingsmatrisen for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

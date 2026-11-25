@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Fra prosessflytskjema til P&amp;ID</h1>
@@ -44,8 +44,8 @@
 <p>På siden <a href="hva-viser-et-prosessflytskjema.html">Hva viser et prosessflytskjema?</a> var pumpe 3 bare en pumpe, et rør og en reguleringsventil på vei til tank 1. Figuren under viser den samme linja slik den ser ut i P&amp;ID-en, men forenklet.</p>
 
 <figure>
-  <img src="bilder/pid-pumpe3-pumperom.svg" alt="Forenklet utsnitt av P&amp;ID-en for pumperommet, fra tank 3 gjennom pumpe 3 til tank 1. Nede til venstre kommer sugeledningen W-12101-150-16 fra tank 3. Røret går opp gjennom en overgang, stengeventilen V-12030 og strømningsvakten FZ 12073 til pumpa P-12003, som drives av en motor (M). Etter pumpa sitter trykkindikatoren PI 12066 og stengeventilen V-12031. Røret W-12133-80-16 går videre til reguleringsventilen LCV-12032, merket FO, og ned i tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen og får signal fra nivågiveren LT 12075 på tanken. På høyre side av tanken sitter LZ 12076 (HH), LA 12077 (H) og LZ 12078 (L). Fra bunnen av tanken går et rør med ventilen V-12050 tilbake til tank 3." width="820">
-  <figcaption>Figur: Utsnitt av P&amp;ID-en for pumperommet: linja fra tank 3 gjennom pumpe 3 til tank 1. Utsnittet er forenklet, og noen ventiler og instrumenter er utelatt. Sirklene er instrumenter, og de stiplede linjene er signaler.</figcaption>
+  <img src="bilder/pid-pumpe3-pumperom.svg" alt="Forenklet utsnitt av P&amp;ID-en for pumperommet, fra tank 3 gjennom pumpe 3 til tank 1. Nede til venstre kommer sugeledningen W-12101-150-16 fra tank 3. Røret går opp gjennom en overgang, stengeventilen V-12030 og strømningsvakten FZ 12073 til pumpa P-12003, som drives av en motor (M). Etter pumpa sitter trykkindikatoren PI 12066 og stengeventilen V-12031. Røret W-12133-80-16 går videre til reguleringsventilen LCV-12032, merket FO, og ned i tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen og får signal fra nivågiveren LT 12075 på tanken. På høyre side av tanken sitter LZ 12076 (HH), LA 12077 (H) og LZ 12078 (L). Fra bunnen av tanken går et rør med ventilen V-12050 tilbake til tank 3. Stiplede linjer fra FZ 12073, LZ 12076, LA 12077 og LZ 12078 viser signaler til forrigling og alarm." width="900">
+  <figcaption>Figur: Utsnitt av P&amp;ID-en for pumperommet: linja fra tank 3 gjennom pumpe 3 til tank 1. Utsnittet er forenklet, og noen ventiler og instrumenter er utelatt. Sirklene er instrumenter ute i anlegget. Sirkelen i firkanten (LIC) er en regulator i styresystemet. De stiplede linjene er signaler.</figcaption>
 </figure>
 
 <p>Dette er nytt sammenlignet med prosessflytskjemaet:</p>
@@ -66,14 +66,14 @@
   <tbody>
     <tr><td>Stoff</td><td>W</td><td>Hva som går i røret, her vann</td></tr>
     <tr><td>Nummer</td><td>12133</td><td>Rørets eget nummer</td></tr>
-    <tr><td>Dimensjon</td><td>80</td><td>Hvor stort røret er (DN 80, omtrent 80 mm innvendig)</td></tr>
-    <tr><td>Trykklasse</td><td>16</td><td>Hvor høyt trykk røret er laget for (PN 16, 16 bar)</td></tr>
+    <tr><td>Dimensjon</td><td>80</td><td>Hvor stort røret er (DN80, omtrent 80 mm innvendig)</td></tr>
+    <tr><td>Trykklasse</td><td>16</td><td>Hvor høyt trykk røret er laget for (PN16, 16 bar)</td></tr>
   </tbody>
 </table>
 <p>Oppbygningen varierer mellom firmaer, så sjekk symbolforklaringen på tegningen. Mer om rør og ventiler kommer på neste side.</p>
 
 <h2>Merknadene</h2>
-<p>En P&amp;ID har ofte merknader i margen. De forklarer det som er vanskelig å vise med symboler. I pumperommet står det for eksempel at for lav strømning inn på pumpene (LL) stopper pumpene, og at høyt-høyt nivå (HH) i tankene stopper pumpene. Slike stopp kalles forriglinger, og du lærer mer om dem i emnet om forriglingsmatrise.</p>
+<p>En P&amp;ID har ofte merknader i margen. De forklarer det som er vanskelig å vise med symboler. I pumperommet står det for eksempel at for lav strømning inn på en pumpe (LL) stopper den pumpa, og at høyt-høyt nivå (HH) i en tank stopper én eller flere pumper. Slike stopp kalles forriglinger, og du lærer mer om dem i emnet om forriglingsmatrise.</p>
 
 <h2>Instrumentene</h2>
 <p>Bokstavene i instrumentenes tagnummer forteller hva som måles og hva instrumentet gjør. LT betyr for eksempel nivå (L) og giver (T). Hvordan du leser bokstavkodene og instrumentsymbolene, lærer du på siden <a href="../05-maling-styring-regulering/instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a> i temaet Automasjon.</p>
@@ -109,7 +109,7 @@
   <p>3. Hva betyr tallet 80 i linjenummeret W-12133-80-16?</p>
   <ul>
     <li>Hvor mange meter røret er</li>
-    <li data-riktig>Hvor stort røret er (DN 80)</li>
+    <li data-riktig>Hvor stort røret er (DN80)</li>
     <li>Hvor mange kubikkmeter vann som går gjennom røret i timen</li>
   </ul>
   <p class="forklaring">Tallet etter nummeret er dimensjonen til røret. Det siste tallet, 16, er trykklassen.</p>
@@ -140,7 +140,7 @@
   <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
   <tbody>
     <tr><td>teknisk flytskjema</td><td>En detaljert tegning av anlegget med utstyr, rør, ventiler og instrumenter, tegnet med faste symboler. Kalles også P&amp;ID.</td><td>piping and instrumentation diagram (P&amp;ID)</td></tr>
-    <tr><td>linjenummer</td><td>Nummeret på et rør i en P&amp;ID. Det sier ofte hva som går i røret, og hvor stort røret er.</td><td>line number</td></tr>
+    <tr><td>linjenummer</td><td>Merkingen av en rørlinje på flytskjemaet. Den viser blant annet hva som går i røret, størrelsen og trykklassen.</td><td>line number</td></tr>
     <tr><td>stengeventil</td><td>Ventil som er helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>isolation valve</td></tr>
     <tr><td>revisjon</td><td>En ny utgave av en tegning etter at noe er endret. Revisjonen har et nummer eller en bokstav.</td><td>revision</td></tr>
   </tbody>

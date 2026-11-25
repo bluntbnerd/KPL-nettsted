@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" width="820" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Slik er et tagnummer bygd opp. Til venstre instrumentet LT 12075 i pumperommet: L betyr at det måler nivå, T betyr at det er en giver, og 12075 er nummeret. Til høyre et tagnummer for utstyr i et annet anlegg, 20-PA-101A: 20 er systemnummeret, PA er utstyrsklassen (sentrifugalpumpe), 101 er nummeret, og A betyr at det er pumpe A av to like pumper.</title>
+  <rect x="0" y="0" width="820" height="300" rx="10" fill="#ffffff"/>
+  <line x1="410" y1="20" x2="410" y2="280" stroke="#e3e8e8" stroke-width="1.5"/>
+
+  <!-- venstre: instrument i pumperommet -->
+  <text x="20" y="34" font-size="15" font-weight="bold" fill="#1c2828">Instrument i pumperommet</text>
+  <circle cx="110" cy="150" r="50" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <text x="110" y="143" font-size="26" font-weight="bold" fill="#1c2828" text-anchor="middle">LT</text>
+  <text x="110" y="173" font-size="20" fill="#1c2828" text-anchor="middle">12075</text>
+
+  <g stroke="#2e7d6b" stroke-width="1.5" fill="none">
+    <path d="M97,120 L97,80 L190,80"/>
+    <path d="M122,120 L122,100 L190,100"/>
+    <path d="M150,168 L190,168"/>
+  </g>
+  <g font-size="13" fill="#1c2828">
+    <text x="196" y="84"><tspan font-weight="bold">L</tspan> = hva som måles (nivå)</text>
+    <text x="196" y="104"><tspan font-weight="bold">T</tspan> = hva det gjør (giver)</text>
+    <text x="196" y="172"><tspan font-weight="bold">12075</tspan> = nummeret</text>
+  </g>
+  <text x="20" y="250" font-size="13" fill="#1c2828">Sirkelen betyr at instrumentet sitter</text>
+  <text x="20" y="268" font-size="13" fill="#1c2828">ute i anlegget.</text>
+
+  <!-- høyre: utstyr i et annet anlegg -->
+  <text x="430" y="34" font-size="15" font-weight="bold" fill="#1c2828">Utstyr i et annet anlegg</text>
+  <g font-size="34" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="480" y="120">20</text>
+    <text x="580" y="120">PA</text>
+    <text x="680" y="120">101</text>
+    <text x="765" y="120">A</text>
+  </g>
+  <g font-size="34" fill="#586868" text-anchor="middle">
+    <text x="530" y="118">-</text>
+    <text x="630" y="118">-</text>
+  </g>
+  <g stroke="#2e7d6b" stroke-width="1.5" fill="none">
+    <path d="M458,132 L458,140 L502,140 L502,132 M480,140 L480,160"/>
+    <path d="M556,132 L556,140 L604,140 L604,132 M580,140 L580,210"/>
+    <path d="M652,132 L652,140 L708,140 L708,132 M680,140 L680,160"/>
+    <path d="M750,132 L750,140 L780,140 L780,132 M765,140 L765,210"/>
+  </g>
+  <g font-size="12" fill="#1c2828" text-anchor="middle">
+    <text x="480" y="176" font-weight="bold">systemnummer</text>
+    <text x="480" y="191">(20 = oljeproduksjon)</text>
+    <text x="580" y="226" font-weight="bold">utstyrsklasse</text>
+    <text x="580" y="241">(PA = sentrifugalpumpe)</text>
+    <text x="680" y="176" font-weight="bold">nummer</text>
+    <text x="755" y="226" font-weight="bold">bokstav</text>
+    <text x="755" y="241">(pumpe A av to like)</text>
+  </g>
+</svg>

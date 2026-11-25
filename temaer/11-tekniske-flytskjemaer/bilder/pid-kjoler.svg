@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" width="880" height="430" font-family="Segoe UI, Arial, sans-serif">
+  <title>P&amp;ID for kjøling av et produkt. Fra produkttanken T-101 går røret PR-1001-80-16 gjennom stengeventilen V-110 og en sil til pumpa P-102, som drives av en motor. Pumpa har tømmeventilen V-114. Rett etter pumpa sitter trykkindikatoren PI 107, og så tilbakeslagsventilen V-112 og stengeventilen V-111. Røret PR-1002-50-16 går til kjøleren E-103 og videre til lagertanken T-104. Temperaturgiveren TT 105 måler temperaturen etter kjøleren og sender den til temperaturregulatoren TIC 105, som styrer reguleringsventilen TCV-105 på sjøvannet. TCV-105 er merket FO. Sjøvannet går i røret SW-1004-100-10. Lagertanken har nivåalarmen LA 108 for høyt nivå.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2c6ea6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="880" height="430" rx="10" fill="#ffffff"/>
+
+  <!-- produktlinjer -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none">
+    <path d="M80,240 L80,330 L135,330"/>
+    <line x1="165" y1="330" x2="190" y2="330"/>
+    <line x1="216" y1="330" x2="258" y2="330" marker-end="url(#pil)"/>
+    <path d="M270,306 L330,306"/>
+    <line x1="360" y1="306" x2="390" y2="306"/>
+    <path d="M420,306 L480,306 L480,150 L524,150" marker-end="url(#pil)"/>
+    <path d="M594,150 L700,150 L700,110 L718,110" marker-end="url(#pil)"/>
+    <line x1="760" y1="230" x2="760" y2="290" marker-end="url(#pil)"/>
+  </g>
+  <g font-size="11" fill="#1c2828">
+    <text x="88" y="290">PR-1001-80-16</text>
+    <text transform="translate(470,255) rotate(-90)">PR-1002-50-16</text>
+    <text x="770" y="305">Til tapping</text>
+  </g>
+
+  <!-- sjøvann -->
+  <g stroke="#2c6ea6" stroke-width="2.5" fill="none">
+    <line x1="560" y1="410" x2="560" y2="305"/>
+    <line x1="560" y1="275" x2="560" y2="186" marker-end="url(#pilb)"/>
+    <line x1="560" y1="116" x2="560" y2="30" marker-end="url(#pilb)"/>
+  </g>
+  <g font-size="12" fill="#2c6ea6">
+    <text x="570" y="408">Sjøvann inn</text>
+    <text x="570" y="40">Sjøvann ut</text>
+    <text transform="translate(550,400) rotate(-90)" font-size="11">SW-1004-100-10</text>
+  </g>
+
+  <!-- tanker -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="40" y="100" width="80" height="140" rx="40" ry="16"/>
+    <rect x="720" y="90" width="80" height="140" rx="40" ry="16"/>
+  </g>
+  <g fill="#1c2828" text-anchor="middle">
+    <text x="80" y="166" font-size="13" font-weight="bold">Produkt-</text>
+    <text x="80" y="182" font-size="13" font-weight="bold">tank</text>
+    <text x="80" y="200" font-size="12">T-101</text>
+    <text x="760" y="156" font-size="13" font-weight="bold">Lager-</text>
+    <text x="760" y="172" font-size="13" font-weight="bold">tank</text>
+    <text x="760" y="190" font-size="12">T-104</text>
+  </g>
+
+  <!-- stengeventiler -->
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="2">
+    <path d="M135,318 L165,342 L165,318 L135,342 Z"/>
+    <path d="M390,294 L420,318 L420,294 L390,318 Z"/>
+  </g>
+  <!-- tilbakeslagsventil -->
+  <path d="M330,294 L345,306 L330,318 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <path d="M360,294 L345,306 L360,318 Z" fill="#1c2828" stroke="#1c2828" stroke-width="2"/>
+  <!-- sil -->
+  <rect x="190" y="317" width="26" height="26" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <line x1="190" y1="343" x2="216" y2="317" stroke="#1c2828" stroke-width="1.5"/>
+  <g font-size="11" fill="#1c2828" text-anchor="middle">
+    <text x="150" y="360">V-110</text>
+    <text x="203" y="360">sil</text>
+    <text x="345" y="288">V-112</text>
+    <text x="405" y="288">V-111</text>
+  </g>
+
+  <!-- pumpe med motor -->
+  <circle cx="270" cy="330" r="24" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <path d="M255,350 L246,366 L294,366 L285,350" fill="none" stroke="#586868" stroke-width="2"/>
+  <line x1="294" y1="338" x2="309" y2="342" stroke="#1c2828" stroke-width="2"/>
+  <circle cx="322" cy="345" r="13" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <text x="322" y="350" font-size="12" font-weight="bold" fill="#1c2828" text-anchor="middle">M</text>
+  <text x="270" y="384" font-size="12" fill="#1c2828" text-anchor="middle">P-102</text>
+
+  <!-- tømmeventil på pumpa -->
+  <g stroke="#1c2828" stroke-width="1.5">
+    <line x1="235" y1="330" x2="235" y2="345"/>
+    <line x1="235" y1="361" x2="235" y2="372"/>
+  </g>
+  <path d="M229,345 L241,345 L229,361 L241,361 Z" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="235" y="398" font-size="11" fill="#1c2828" text-anchor="middle">V-114</text>
+
+  <!-- kjøler -->
+  <circle cx="560" cy="150" r="34" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <path d="M560,186 L560,172 L546,164 L574,150 L546,136 L560,128 L560,116" fill="none" stroke="#2c6ea6" stroke-width="2.5"/>
+  <g font-size="12" fill="#1c2828" text-anchor="end">
+    <text x="522" y="104" font-weight="bold">Kjøler</text>
+    <text x="522" y="119">E-103</text>
+  </g>
+
+  <!-- TCV-105 -->
+  <path d="M548,275 L572,275 L548,305 L572,305 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <line x1="560" y1="290" x2="580" y2="290" stroke="#1c2828" stroke-width="1.5"/>
+  <path d="M580,278 A12,12 0 0 1 580,302 Z" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="540" y="295" font-size="11" fill="#1c2828" text-anchor="end">TCV-105</text>
+  <text x="586" y="318" font-size="11" fill="#1c2828">FO</text>
+
+  <!-- instrumenter -->
+  <g stroke="#1c2828" stroke-width="1.5">
+    <line x1="300" y1="306" x2="300" y2="277"/>
+    <line x1="650" y1="150" x2="650" y2="183"/>
+    <line x1="800" y1="130" x2="818" y2="130"/>
+  </g>
+  <g stroke="#1c2828" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+    <line x1="650" y1="217" x2="650" y2="253"/>
+    <path d="M633,270 L605,270 L605,290 L593,290"/>
+  </g>
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="1.5">
+    <circle cx="300" cy="260" r="17"/>
+    <circle cx="650" cy="200" r="17"/>
+    <circle cx="835" cy="130" r="17"/>
+  </g>
+  <g font-size="10" fill="#1c2828" text-anchor="middle">
+    <text x="300" y="257">PI</text><text x="300" y="268">107</text>
+    <text x="650" y="197">TT</text><text x="650" y="208">105</text>
+    <text x="835" y="127">LA</text><text x="835" y="138">108</text>
+  </g>
+  <text x="831" y="162" font-size="11" font-weight="bold" fill="#1c2828">H</text>
+  <line x1="835" y1="113" x2="835" y2="75" stroke="#1c2828" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="835" y="68" font-size="10" fill="#1c2828" text-anchor="middle">til alarm</text>
+
+  <!-- TIC 105: funksjon i styresystemet (sirkel i firkant med vannrett strek) -->
+  <rect x="633" y="253" width="34" height="34" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <circle cx="650" cy="270" r="17" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <line x1="633" y1="270" x2="667" y2="270" stroke="#1c2828" stroke-width="1.5"/>
+  <g font-size="10" fill="#1c2828" text-anchor="middle">
+    <text x="650" y="266">TIC</text><text x="650" y="282">105</text>
+  </g>
+</svg>

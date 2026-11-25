@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250" font-family="Segoe UI, Arial, sans-serif">
-  <title>Fasit: blokkskjema for et meieri. Råmelk går gjennom separering, pasteurisering, kjøling og tapping, og ut kommer melk på kartong. Fløte går ut fra separeringen. Kartonger kommer inn til tappingen.</title>
+  <title>Fasit: blokkskjema for et meieri. Rå melk går gjennom separering, pasteurisering, kjøling og tapping, og ut kommer melk på kartong. Fløte går ut fra separeringen. Kartonger kommer inn til tappingen.</title>
   <defs>
     <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
     <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
@@ -27,7 +27,7 @@
     <line x1="730" y1="130" x2="780" y2="130"/>
   </g>
   <g font-size="14" fill="#1c2828">
-    <text x="12" y="118">Råmelk</text>
+    <text x="12" y="118">Rå melk</text>
     <text x="745" y="118" font-weight="bold">Melk</text>
     <text x="745" y="150">(produkt)</text>
   </g>

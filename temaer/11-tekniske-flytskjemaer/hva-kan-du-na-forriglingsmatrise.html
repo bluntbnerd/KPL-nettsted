@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Forriglingsmatrise – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Dette er siste steg i emnet «Forriglingsmatrise». Gå gjennom sjekklisten, svar på quizen og lag en forriglingsmatrise selv. Står du fast, går du tilbake til siden det gjelder.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare hva en forrigling er, og hvordan den skiller seg fra regulering og alarm.</li>
+  <li>Jeg kan forklare hvorfor en forrigling bør ha sin egen bryter.</li>
+  <li>Jeg vet hva ESD og PSD betyr.</li>
+  <li>Jeg kan forklare hva årsak, virkning og kryss betyr i en forriglingsmatrise.</li>
+  <li>Jeg kan lese en matrise rad for rad: Hva skjer når …?</li>
+  <li>Jeg kan lese en matrise kolonne for kolonne: Hva kan stoppe …?</li>
+  <li>Jeg kan bruke matrisen sammen med P&amp;ID-en til å finne årsaken til en stans.</li>
+  <li>Jeg kan lage en forriglingsmatrise ut fra en beskrivelse av forriglingene.</li>
+</ul>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>1. Hva er forskjellen på en alarm og en forrigling?</p>
+  <ul>
+    <li>Det er ingen forskjell</li>
+    <li data-riktig>En alarm varsler operatøren. En forrigling griper inn av seg selv.</li>
+    <li>En alarm stopper pumpa. En forrigling varsler operatøren.</li>
+  </ul>
+  <p class="forklaring">Alarmen gir operatøren mulighet til å gripe inn. Forriglingen er neste lag og stopper utstyret automatisk.</p>
+</div>
+
+<div class="quiz">
+  <p>2. I matrisen for pumperommet har raden for LZ 12076 HH kryss under PSD 3.2 og PSD 3.3. Hva betyr det?</p>
+  <ul>
+    <li>At pumpe 2 og 3 starter</li>
+    <li data-riktig>At pumpe 2 og 3 stopper når nivået i tank 1 når høyt-høyt</li>
+    <li>At det bare kommer en alarm</li>
+  </ul>
+  <p class="forklaring">Raden er årsaken, og kryssene viser virkningene. PSD 3.2 og PSD 3.3 stopper pumpe 2 og pumpe 3.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Kolonnen for PSD 3.3 (pumpe 3 stopper) har kryss ved FZ 12073 LL, LZ 12076 HH og LZ 12081 HH. Pumpe 3 har stoppet, og nivåene i begge tankene er normale. Hva sjekker du først?</p>
+  <ul>
+    <li>Nivåbryteren i tank 2</li>
+    <li data-riktig>Strømningsvakten FZ 12073: om det kommer nok vann inn til pumpa</li>
+    <li>Lufttrykket på PT 12051</li>
+  </ul>
+  <p class="forklaring">Er nivåene normale, er HH trolig ikke årsaken. Da står FZ 12073 LL igjen. Sjekk stengeventilen på sugesiden og nivået i tank 3. Husk at også nødstopp (ESD 2) stopper pumpa.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hva betyr ESD?</p>
+  <ul>
+    <li data-riktig>Nødavstengning</li>
+    <li>Prosessavstengning</li>
+    <li>Elektrisk styring</li>
+  </ul>
+  <p class="forklaring">ESD står for <em>emergency shutdown</em>, nødavstengning. I pumperommet stopper ESD 2 alle pumpene.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Du tester forriglingen LZ 12081 HH. Pumpe 1 og 2 stopper, men pumpe 3 går videre. Hva gjør du?</p>
+  <ul>
+    <li>Ingenting, det er greit at én pumpe går</li>
+    <li>Kobler ut forriglingen</li>
+    <li data-riktig>Melder fra om feilen, fordi matrisen sier at alle tre skal stoppe</li>
+  </ul>
+  <p class="forklaring">Ved testing skal alle virkningene med kryss skje. Her mangler én. Feilen skal meldes og rettes før anlegget brukes som normalt.</p>
+</div>
+
+<h2>Lag en forriglingsmatrise: kjøleanlegget</h2>
+<p>Kjøleanlegget fra <a href="hva-kan-du-na-pid.html">Hva kan du nå?</a> for P&amp;ID har disse forriglingene og alarmene. Bare LA 108 er tegnet i P&amp;ID-en. De andre bryterne kommer i tillegg.</p>
+<div class="boks">
+  <div class="boks-tittel">Oppgave</div>
+  <ol>
+    <li>Nivåbryteren LZ 110 melder lavt-lavt nivå (LL) i produkttanken T-101. Da stopper pumpa P-102, så den ikke går tørr.</li>
+    <li>Nivåalarmen LA 108 melder høyt nivå (H) i lagertanken T-104. Da kommer det en alarm i kontrollrommet.</li>
+    <li>Nivåbryteren LZ 109 melder høyt-høyt nivå (HH) i lagertanken. Da stopper P-102.</li>
+    <li>Temperaturbryteren TZ 111 melder at produktet etter kjøleren er for varmt (HH). Da stopper P-102, og det kommer en alarm.</li>
+    <li>Strømningsvakten FZ 112 melder for lite sjøvann (L). Da kommer det en alarm.</li>
+    <li>Noen trykker på nødstopp. Da stopper P-102.</li>
+  </ol>
+  <p>Lag en forriglingsmatrise på papir. Sett årsakene i radene og to virkninger i kolonnene: «P-102 stopper» og «Alarm i kontrollrommet». Sett kryss der årsaken utløser virkningen.</p>
+</div>
+
+<details class="fasit">
+  <summary>Fasit</summary>
+  <table>
+    <thead><tr><th>Årsak</th><th>P-102 stopper</th><th>Alarm i kontrollrommet</th></tr></thead>
+    <tbody>
+      <tr><td>LZ 110 LL (lavt-lavt nivå i T-101)</td><td>X</td><td></td></tr>
+      <tr><td>LA 108 H (høyt nivå i T-104)</td><td></td><td>X</td></tr>
+      <tr><td>LZ 109 HH (høyt-høyt nivå i T-104)</td><td>X</td><td></td></tr>
+      <tr><td>TZ 111 HH (for varmt produkt etter kjøleren)</td><td>X</td><td>X</td></tr>
+      <tr><td>FZ 112 L (for lite sjøvann)</td><td></td><td>X</td></tr>
+      <tr><td>Nødstopp</td><td>X</td><td></td></tr>
+    </tbody>
+  </table>
+  <p>Har du snudd matrisen, med årsakene i kolonnene og virkningene i radene, er det også riktig. Sjekk at kryssene står på de samme stedene.</p>
+</details>
+
+<h2>Forklar med egne ord</h2>
+<p>Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Sjøvannet til kjøleren svikter. Bruk matrisen du laget, og forklar hva som skjer steg for steg.</summary>
+  <p>Først melder FZ 112 for lite sjøvann, og det kommer en alarm. Operatøren kan da prøve å finne feilen. Blir det ikke rettet, blir produktet etter kjøleren varmere og varmere. Når temperaturen når HH, stopper TZ 111 pumpa, og det kommer en ny alarm. Da kommer det ikke mer varmt produkt inn i lagertanken.</p>
+</details>
+
+<details>
+  <summary>2. Hvorfor bør LZ 109 være en egen bryter, og ikke den samme måleren som gir alarm ved høyt nivå?</summary>
+  <p>Hvis alarmen og forriglingen bruker samme måler, kan én feil på måleren slå ut begge. Da får operatøren ingen alarm, og pumpa stopper heller ikke. Med egen bryter virker forriglingen selv om måleren for alarmen er feil.</p>
+</details>
+
+<details>
+  <summary>3. Hvorfor er det viktig at forriglingsmatrisen stemmer med anlegget?</summary>
+  <p>Operatøren bruker matrisen til å forstå hvorfor utstyr har stoppet, og den brukes når forriglingene testes. Er matrisen feil, kan du lete etter feil årsak, eller tro at anlegget er sikret når det ikke er det.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="hva-er-en-forrigling.html">Hva er en forrigling?</a></li>
+  <li><a href="les-en-forriglingsmatrise.html">Les en forriglingsmatrise</a></li>
+  <li><a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a> i temaet Automasjon</li>
+</ul>
+<p><small>Om kildene: Teksten, oppgavene og tabellene på denne siden er laget for dette nettstedet. Kjøleanlegget og forriglingene i oppgaven er laget som eksempel. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

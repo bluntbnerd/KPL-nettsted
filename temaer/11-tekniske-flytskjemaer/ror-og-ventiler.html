@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Rør og ventiler</h1>
@@ -19,8 +19,8 @@
 <h2>Rørene</h2>
 <p>Hvert rør har et linjenummer, for eksempel W-12133-80-16. Du så på siden <a href="fra-prosessflytskjema-til-pid.html">Fra prosessflytskjema til P&amp;ID</a> at det sier hva som går i røret (W for vann), rørets nummer, dimensjonen og trykklassen.</p>
 <ul>
-  <li><strong>Dimensjonen</strong> oppgis som <strong>DN</strong> (nominell diameter). DN er standardstørrelsen på et rør. DN 80 er omtrent 80 mm innvendig.</li>
-  <li><strong>Trykklassen</strong> oppgis som <strong>PN</strong>. PN 16 betyr at røret med flenser og ventiler er laget for et trykk på opptil 16 bar.</li>
+  <li><strong>Dimensjonen</strong> oppgis som <strong>DN</strong> (nominell diameter). DN er standardstørrelsen på et rør. DN80 er omtrent 80 mm innvendig.</li>
+  <li><strong>Trykklassen</strong> oppgis som <strong>PN</strong>. PN16 betyr at røret med flenser og ventiler er laget for et trykk på opptil 16 bar.</li>
 </ul>
 
 <h3>Vanlige rør og tynne rør</h3>
@@ -29,7 +29,7 @@
   <thead><tr><th></th><th>Vanlige rør (piping)</th><th>Tynne rør (tubing)</th></tr></thead>
   <tbody>
     <tr><td><strong>Størrelse oppgis som</strong></td><td>DN, omtrent innvendig diameter</td><td>Utvendig diameter i mm</td></tr>
-    <tr><td><strong>Eksempel fra pumperommet</strong></td><td>W-12133-80-16 (DN 80)</td><td>W-12148-33,7-16 (33,7 mm utvendig)</td></tr>
+    <tr><td><strong>Eksempel fra pumperommet</strong></td><td>W-12133-80-16 (DN80)</td><td>W-12148-33,7-16 (33,7 mm utvendig)</td></tr>
   </tbody>
 </table>
 
@@ -69,7 +69,7 @@
   <thead><tr><th>Kode</th><th>Engelsk</th><th>Betyr</th></tr></thead>
   <tbody>
     <tr><td>FO</td><td><em>fail open</em></td><td>Ventilen går helt åpen.</td></tr>
-    <tr><td>FC</td><td><em>fail close</em></td><td>Ventilen stenger helt.</td></tr>
+    <tr><td>FC</td><td><em>fail closed</em></td><td>Ventilen stenger helt.</td></tr>
     <tr><td>FL</td><td><em>fail lock</em> eller <em>fail stayput</em></td><td>Ventilen blir stående der den er.</td></tr>
   </tbody>
 </table>
@@ -84,13 +84,13 @@
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet</div>
-  <p>Før du arbeider på utstyr, må det stenges av med ventilene som P&amp;ID-en viser, og tømmes. Ventilene som er stengt, skal låses og merkes, slik at ingen åpner dem mens du arbeider. Følg alltid arbeidstillatelsen. Stenger du feil ventil, kan det komme væske eller trykk der du ikke venter det. En sikkerhetsventil skal aldri stenges av eller blokkeres. Les mer i temaet <a href="../01-hms/index.html">HMS</a>.</p>
+  <p>Før du arbeider på utstyr, må det stenges av med ventilene som P&amp;ID-en viser, tømmes og trykkavlastes. Er det en pumpe, skal motoren også gjøres strømløs, og bryteren skal låses og merkes. Ventilene som er stengt, skal låses og merkes, slik at ingen åpner dem mens du arbeider. Følg alltid arbeidstillatelsen. Stenger du feil ventil, kan det komme væske eller trykk der du ikke venter det. En sikkerhetsventil skal aldri stenges av eller blokkeres. Les mer i temaet <a href="../01-hms/index.html">HMS</a>.</p>
 </div>
 
 <h2>Test deg selv</h2>
 
 <div class="quiz">
-  <p>1. Hva betyr DN 50 i et linjenummer?</p>
+  <p>1. Hva betyr DN50 i et linjenummer?</p>
   <ul>
     <li>At røret tåler 50 bar</li>
     <li data-riktig>At røret er omtrent 50 mm innvendig</li>
@@ -126,7 +126,7 @@
     <li data-riktig>Ventilen stenger helt</li>
     <li>Ventilen blir stående der den er</li>
   </ul>
-  <p class="forklaring">FC står for <em>fail close</em>. FO betyr at den går åpen, og FL at den blir stående.</p>
+  <p class="forklaring">FC står for <em>fail closed</em>. FO betyr at den går åpen, og FL at den blir stående.</p>
 </div>
 
 <div class="quiz">
@@ -134,9 +134,9 @@
   <ul>
     <li>Ingenting, pumpa er stoppet</li>
     <li>Sikkerhetsventilen stenges</li>
-    <li data-riktig>Ventilene før og etter pumpa stenges, låses og merkes, og pumpa tømmes</li>
+    <li data-riktig>Motoren gjøres strømløs, ventilene før og etter pumpa stenges, låses og merkes, og pumpa tømmes</li>
   </ul>
-  <p class="forklaring">Pumpa må stenges av fra resten av anlegget og tømmes. Ventilene låses og merkes, slik at ingen åpner dem mens du arbeider. En sikkerhetsventil skal aldri stenges.</p>
+  <p class="forklaring">Pumpa må stenges av fra resten av anlegget, tømmes og trykkavlastes, og motoren må gjøres strømløs. Ventilene låses og merkes, slik at ingen åpner dem mens du arbeider. En sikkerhetsventil skal aldri stenges.</p>
 </div>
 
 <h2>Ordliste</h2>
@@ -144,7 +144,7 @@
   <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
   <tbody>
     <tr><td>DN</td><td>Nominell diameter: standardstørrelsen på et rør. DN40 er omtrent 40 mm innvendig.</td><td>nominal diameter (DN)</td></tr>
-    <tr><td>PN</td><td>Trykklassen til rør, flenser og ventiler. PN 16 betyr at de er laget for opptil 16 bar.</td><td>pressure nominal (PN)</td></tr>
+    <tr><td>PN</td><td>Trykklasse: hvor høyt trykk rør, flenser og ventiler er laget for. PN16 tåler 16 bar.</td><td>nominal pressure (PN)</td></tr>
     <tr><td>overgang</td><td>En rørdel der røret går over fra én dimensjon til en annen.</td><td>reducer</td></tr>
     <tr><td>stengeventil</td><td>Ventil som er helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>isolation valve</td></tr>
     <tr><td>tilbakeslagsventil</td><td>En ventil som slipper væsken bare én vei og stenger av seg selv hvis strømmen snur.</td><td>check valve, non-return valve</td></tr>

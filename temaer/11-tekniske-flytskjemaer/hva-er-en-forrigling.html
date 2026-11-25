@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva er en forrigling? – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva er en forrigling?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">En forrigling griper inn av seg selv når noe går galt i anlegget, for eksempel ved å stoppe en pumpe før en tank renner over. På denne siden ser du hvilke forriglinger pumperommet har, og hvordan du finner dem på tegningene. Det er grunnlaget for å lese en forriglingsmatrise.</p>
+
+<h2>Kort om forriglinger</h2>
+<p>En <strong>forrigling</strong> er en automatisk sikring som stopper utstyr eller hindrer en handling når en farlig tilstand oppstår. Den virker uten at operatøren gjør noe. Når en forrigling har slått inn, må den tilbakestilles før utstyret kan startes igjen.</p>
+<p>Hvordan forriglinger virker, hvorfor de må tilbakestilles, og hvorfor de aldri skal kobles ut på egen hånd, lærer du på siden <a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a> i temaet Automasjon. Her ser vi på hvordan forriglingene vises i skjemaene.</p>
+
+<h2>Regulering, alarm og forrigling</h2>
+<p>I en tank er det ofte flere lag med sikring. Figuren viser de tre første lagene i tank 1 i pumperommet. I tillegg har tanken et overløp i toppen.</p>
+
+<figure>
+  <img src="bilder/lag-tank1-pumperom.svg" alt="Tank 1 i pumperommet med tre lag sikring. Lag 1 er det normale området i midten av tanken, der nivåregulatoren LIC holder nivået ved å åpne og strupe LCV-12032. Lag 2 er to alarmgrenser: H, der LA 12077 varsler kontrollrommet, og L, der LZ 12078 varsler kontrollrommet. Lag 3 er grensen HH øverst, der forriglingen LZ 12076 stopper pumpe 2 og pumpe 3." width="820">
+  <figcaption>Figur: Tre lag sikring i tank 1. Reguleringen holder nivået, alarmene varsler operatøren, og forriglingen griper inn hvis de to første ikke er nok. Figuren er forenklet: Tank 1 kan også fylles av pumpe 2 gjennom LCV-12022, og overløpet er ikke tegnet. Høydene på grensene er ikke målt.</figcaption>
+</figure>
+
+<ol>
+  <li><strong>Regulering:</strong> LIC holder nivået i det normale området. Slik går anlegget hver dag.</li>
+  <li><strong>Alarm:</strong> Blir nivået for høyt (H) eller for lavt (L), får operatøren en alarm og kan gripe inn.</li>
+  <li><strong>Forrigling:</strong> Fortsetter nivået å stige til høyt-høyt (HH), stopper sikkerhetssystemet pumpe 2 og 3 av seg selv.</li>
+  <li><strong>Overløp:</strong> Svikter alt annet, renner vannet ut gjennom overløpsrøret i toppen av tanken, til tank 2.</li>
+</ol>
+<p>Forriglingen har sin egen nivåbryter (LZ 12076). Den bruker ikke nivågiveren som reguleringen bruker (LT 12075). Viser LT 12075 feil, virker forriglingen likevel.</p>
+
+<h2>Forriglingene i pumperommet</h2>
+<p>Pumperommet har tre slags forriglinger:</p>
+<table>
+  <thead><tr><th>Hva skjer</th><th>Hvem merker det</th><th>Hva forriglingen gjør</th><th>Hvorfor</th></tr></thead>
+  <tbody>
+    <tr><td>For lite vann strømmer inn til en pumpe (LL)</td><td>Strømningsvakten på pumpa: FZ 12071, 12072 eller 12073</td><td>Stopper den pumpa</td><td>En pumpe som går uten vann, kan bli ødelagt.</td></tr>
+    <tr><td>Høyt-høyt nivå (HH) i tank 1 eller tank 2</td><td>Nivåbryterne LZ 12076 (tank 1) og LZ 12081 (tank 2)</td><td>Stopper pumpene som kan fylle tanken</td><td>Tanken skal ikke renne over.</td></tr>
+    <tr><td>Noen trykker på nødstopp</td><td>Nødstoppknappen i pumperommet eller i kontrollrommet</td><td>Stopper alle pumpene</td><td>Alt skal kunne stoppes med en gang hvis noe skjer.</td></tr>
+  </tbody>
+</table>
+<p>Høyt-høyt nivå i tank 2 stopper alle tre pumpene. Pumpe 3 pumper bare til tank 1, men tank 1 har et overløp i toppen som renner til tank 2. Vann fra pumpe 3 kan derfor havne i tank 2.</p>
+<p>H og L i tankene og lavt lufttrykk på PT 12051 gir bare alarm. De stopper ingenting.</p>
+
+<h2>ESD og PSD</h2>
+<p>I forriglingsmatrisen for pumperommet står det ESD og PSD. Det er to typer nedstengning:</p>
+<ul>
+  <li><strong>ESD</strong> (nødavstengning, på engelsk <em>emergency shutdown</em>) stenger ned for å verne folk, miljø og anlegg ved en nødsituasjon. I pumperommet stopper ESD 2 alle pumpene. Den utløses av nødstopp.</li>
+  <li><strong>PSD</strong> (prosessavstengning, på engelsk <em>process shutdown</em>) stenger ned en del av prosessen når noe går galt i driften. I pumperommet stopper PSD 3.1, 3.2 og 3.3 hver sin pumpe.</li>
+</ul>
+<p>Tallene viser nivået på nedstengningen. Store anlegg har flere nivåer, og hvert nivå stenger ned en større eller mindre del av anlegget.</p>
+
+<h2>Hvor finner du forriglingene?</h2>
+<ul>
+  <li><strong>I P&amp;ID-en:</strong> Instrumentene som utløser forriglinger, har tagnummer og grense, for eksempel LZ 12076 med HH. Merknadene på tegningen kan forklare hva som skjer, for eksempel at høyt-høyt nivå i en tank stopper én eller flere pumper.</li>
+  <li><strong>I forriglingsmatrisen:</strong> Her står alle forriglingene samlet i én tabell, med hva som utløser dem og hva de gjør. Det lærer du på neste side.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Forriglinger må testes jevnlig for å se at de virker, og resultatet skal skrives ned. En forrigling skal aldri kobles ut (forbikobles) uten tillatelse etter bedriftens prosedyre. Er en forrigling forbikoblet, er sikringen borte, og operatøren må følge ekstra godt med.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er en forrigling?</p>
+  <ul>
+    <li>En alarm som ber operatøren gjøre noe</li>
+    <li data-riktig>En automatisk sikring som stopper utstyr eller hindrer en handling når noe er farlig</li>
+    <li>En regulator som holder nivået stabilt</li>
+  </ul>
+  <p class="forklaring">Forriglingen griper inn av seg selv. En alarm varsler bare, og en regulator styrer den vanlige driften.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Nivået i tank 1 når H. Hva skjer?</p>
+  <ul>
+    <li data-riktig>Det kommer en alarm i kontrollrommet</li>
+    <li>Pumpe 2 og 3 stopper</li>
+    <li>Alle pumpene stopper</li>
+  </ul>
+  <p class="forklaring">H gir alarm fra LA 12077. Først ved HH stopper forriglingen LZ 12076 pumpe 2 og 3.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvorfor stopper pumpa når strømningsvakten melder LL?</p>
+  <ul>
+    <li>For å spare strøm</li>
+    <li>Fordi tanken er full</li>
+    <li data-riktig>Fordi pumpa kan bli ødelagt hvis den går uten vann</li>
+  </ul>
+  <p class="forklaring">Strømningsvakten sitter på innløpet til pumpa. Får pumpa for lite vann, kan den bli skadet.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvorfor har forriglingen i tank 1 sin egen nivåbryter (LZ 12076), og bruker ikke LT 12075?</p>
+  <ul>
+    <li data-riktig>Slik at forriglingen virker selv om LT 12075 viser feil</li>
+    <li>Fordi LT 12075 bare måler temperatur</li>
+    <li>Fordi det er billigere</li>
+  </ul>
+  <p class="forklaring">Bruker forriglingen og reguleringen samme måler, kan én feil slå ut begge. Med egen bryter er forriglingen uavhengig.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hva er forskjellen på ESD og PSD i pumperommet?</p>
+  <ul>
+    <li>Det er ingen forskjell</li>
+    <li data-riktig>ESD 2 stopper alle pumpene ved nødstopp. PSD stopper én pumpe når noe går galt i driften.</li>
+    <li>ESD gir bare alarm, og PSD stopper pumpene</li>
+  </ul>
+  <p class="forklaring">ESD er nødavstengning og stopper hele pumperommet. PSD er prosessavstengning og stopper bare den pumpa det gjelder.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>forrigling</td><td>Automatisk sikring som stopper utstyr eller hindrer en handling når en farlig tilstand oppstår.</td><td>interlock</td></tr>
+    <tr><td>nødstopp</td><td>Stor rød knapp som stopper utstyret med en gang når noen trykker på den.</td><td>emergency stop</td></tr>
+    <tr><td>nødavstengning (ESD)</td><td>Nedstengning som verner folk, miljø og anlegg i en nødsituasjon.</td><td>emergency shutdown (ESD)</td></tr>
+    <tr><td>prosessavstengning (PSD)</td><td>Nedstengning av en del av prosessen når noe går galt i driften.</td><td>process shutdown (PSD)</td></tr>
+    <tr><td>forbikobling</td><td>Å gå utenom: enten å lede strømmen utenom et utstyr, eller å koble ut en forrigling for en kort tid. Å koble ut en forrigling krever tillatelse.</td><td>bypass, override</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a> i temaet Automasjon: hvordan forriglinger virker, tilbakestilling, forbikobling og feilsikker kobling.</li>
+  <li><a href="../01-hms/06-barrierer.html">Barrierer</a> i temaet HMS: sikringer som ligger lag på lag.</li>
+  <li><a href="instrumenter-og-tagnummer.html">Instrumenter og tagnummer</a>: L, LL, H og HH.</li>
+</ul>
+<p><small>Om kildene: Teksten og figurene på denne siden er laget for dette nettstedet. Eksemplene bygger på det tekniske flytskjemaet og forriglingsmatrisen for pumperommet ved Sauda vgs, slik funksjonene er testet av læreren. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

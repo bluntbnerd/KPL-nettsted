@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Hva viser et prosessflytskjema?</h1>
@@ -28,13 +28,13 @@
   <li><strong>Tekniske data</strong> for utstyret, for eksempel størrelsen på en tank eller effekten til en pumpe.</li>
   <li><strong>Den viktigste reguleringen</strong>, forenklet. Skjemaet viser for eksempel at nivået i en tank holdes stabilt av en regulator og en ventil, men ikke alle målere og alle detaljer.</li>
 </ul>
-<p>Strømtabellen gjør det mulig å regne på anlegget. Den viser hvor mye som går inn og ut av hvert utstyr (massebalanse). I anlegg der noe varmes opp eller kjøles ned, viser den også hvor mye energi som tilføres eller fjernes (energibalanse). Dette lærer du mer om i temaet <a href="../04-masse-og-energibalanser/index.html">Fysiske prinsipper</a>.</p>
+<p>Strømtabellen gjør det mulig å regne på anlegget. Med tallene kan du regne ut hvor mye som går inn og ut av hvert utstyr (massebalanse). I anlegg der noe varmes opp eller kjøles ned, kan du også regne ut hvor mye energi som tilføres eller fjernes (energibalanse). Dette lærer du mer om i temaet <a href="../04-masse-og-energibalanser/index.html">Fysiske prinsipper</a>.</p>
 
 <h2>Eksempel: pumperommet</h2>
 <p>På siden <a href="tegn-et-blokkskjema.html">Tegn et blokkskjema</a> laget vi et blokkskjema for pumperommet. Figuren under viser det samme anlegget som et forenklet prosessflytskjema.</p>
 
 <figure>
-  <img src="bilder/prosessflytskjema-pumperom.svg" alt="Forenklet prosessflytskjema for pumperommet. Tre pumper, P-12001, P-12002 og P-12003, suger vann fra tank 3 (T-12053) nederst. Pumpe 1 pumper til tank 2 (T-12052). Pumpe 2 pumper gjennom reguleringsventilen LCV-12022 til tank 1 eller tank 2. Pumpe 3 pumper gjennom reguleringsventilen LCV-12032 til tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen LCV-12032. En annen nivåregulator styrer ventilen LCV-12022 og får nivået fra tank 1 eller tank 2. Fra tank 1 og tank 2 renner vannet tilbake til tank 3, og tank 1 kan også renne over til tank 2. Strømmene har nummer fra 1 til 7." width="820">
+  <img src="bilder/prosessflytskjema-pumperom.svg" alt="Forenklet prosessflytskjema for pumperommet. Tre pumper, P-12001, P-12002 og P-12003, suger vann fra tank 3 (T-12053) nederst. Pumpe 1 pumper til tank 2 (T-12052). Pumpe 2 pumper gjennom reguleringsventilen LCV-12022 til tank 1 eller tank 2. Pumpe 3 pumper gjennom reguleringsventilen LCV-12032 til tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen LCV-12032. En annen nivåregulator styrer ventilen LCV-12022 og får nivået fra tank 1 eller tank 2. Fra tank 1 og tank 2 renner vannet tilbake til tank 3, og i toppen har tankene et overløp: tank 1 renner over til tank 2, og tank 2 renner over til tank 3. Strømmene har nummer fra 1 til 8." width="820">
   <figcaption>Figur: Forenklet prosessflytskjema for pumperommet. Blå ruter med tall er strømnumre. Den stiplede linja er et styresignal. Skjemaet er forenklet: Mange ventiler, målere og rør er utelatt.</figcaption>
 </figure>
 
@@ -62,7 +62,8 @@
     <tr><td>4</td><td>Pumpe 3 → tank 1</td><td>vann</td><td>opptil 80 m³/h</td></tr>
     <tr><td>5</td><td>Tank 1 → tank 3</td><td>vann</td><td>renner ned av seg selv</td></tr>
     <tr><td>6</td><td>Tank 2 → tank 3</td><td>vann</td><td>renner ned av seg selv</td></tr>
-    <tr><td>7</td><td>Tank 1 → tank 2</td><td>vann</td><td>renner over av seg selv</td></tr>
+    <tr><td>7</td><td>Tank 1 → tank 2 (overløp i toppen)</td><td>vann</td><td>bare når tank 1 er full</td></tr>
+    <tr><td>8</td><td>Tank 2 → tank 3 (overløp i toppen)</td><td>vann</td><td>bare når tank 2 er full</td></tr>
   </tbody>
 </table>
 

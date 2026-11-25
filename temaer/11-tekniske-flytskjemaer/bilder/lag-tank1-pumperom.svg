@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" font-family="Segoe UI, Arial, sans-serif">
+  <title>Tank 1 i pumperommet med tre lag sikring. Nederst er grensen L, der LZ 12078 gir alarm i kontrollrommet. I midten er det normale området der nivåregulatoren LIC holder nivået. Høyere opp er grensen H, der LA 12077 gir alarm i kontrollrommet. Øverst er grensen HH, der forriglingen LZ 12076 stopper pumpe 2 og pumpe 3.</title>
+  <rect x="0" y="0" width="820" height="380" rx="10" fill="#ffffff"/>
+
+  <!-- tank med vann -->
+  <rect x="200" y="200" width="140" height="140" fill="#bcd9ee"/>
+  <rect x="200" y="150" width="140" height="110" fill="#2c6ea6" fill-opacity="0.12"/>
+  <rect x="200" y="40" width="140" height="300" rx="10" fill="none" stroke="#586868" stroke-width="2.5"/>
+  <text x="270" y="365" font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">Tank 1 (T-12051)</text>
+
+  <!-- grenser -->
+  <g stroke-width="2.5">
+    <line x1="190" y1="80" x2="350" y2="80" stroke="#1c2828"/>
+    <line x1="190" y1="120" x2="350" y2="120" stroke="#2e7d6b" stroke-dasharray="8 5"/>
+    <line x1="190" y1="300" x2="350" y2="300" stroke="#2e7d6b" stroke-dasharray="8 5"/>
+  </g>
+  <g font-size="14" font-weight="bold" text-anchor="end">
+    <text x="182" y="85" fill="#1c2828">HH</text>
+    <text x="182" y="125" fill="#2e7d6b">H</text>
+    <text x="182" y="305" fill="#2e7d6b">L</text>
+  </g>
+
+  <!-- forklaringer -->
+  <g font-size="13" fill="#1c2828">
+    <text x="365" y="78" font-weight="bold">Forrigling: LZ 12076 stopper pumpe 2 og 3</text>
+    <text x="365" y="95">Sikkerhetssystemet griper inn av seg selv.</text>
+    <text x="365" y="125" font-weight="bold" fill="#2e7d6b">Alarm: LA 12077 varsler kontrollrommet</text>
+    <text x="365" y="200" font-weight="bold" fill="#2c6ea6">Normalt område: LIC holder nivået her</text>
+    <text x="365" y="217">Reguleringen åpner og struper LCV-12032.</text>
+    <text x="365" y="305" font-weight="bold" fill="#2e7d6b">Alarm: LZ 12078 varsler kontrollrommet</text>
+  </g>
+
+  <!-- lag -->
+  <g font-size="12" fill="#586868">
+    <text x="20" y="85">Lag 3</text>
+    <text x="20" y="125">Lag 2</text>
+    <text x="20" y="205">Lag 1</text>
+    <text x="20" y="305">Lag 2</text>
+  </g>
+</svg>

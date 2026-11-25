@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Teknisk flytskjema (P&amp;ID) – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Dette er siste steg i emnet «Teknisk flytskjema (P&amp;ID)». Gå gjennom sjekklisten, les P&amp;ID-en og svar på quizen. Står du fast, går du tilbake til siden det gjelder.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare hva en P&amp;ID viser i tillegg til et prosessflytskjema.</li>
+  <li>Jeg kan lese et linjenummer og forklare DN og PN.</li>
+  <li>Jeg kjenner igjen symbolene for de vanligste ventilene, også reguleringsventil og tilbakeslagsventil.</li>
+  <li>Jeg kan forklare feilstillingene FO, FC og FL.</li>
+  <li>Jeg kan lese et instrumenttagnummer og forklare bokstavene og nummeret, og jeg vet at mange anlegg bruker felles sløyfenummer.</li>
+  <li>Jeg vet hva L, LL, H og HH betyr ved et instrument.</li>
+  <li>Jeg kan bruke en P&amp;ID til å finne ventilene som må stenges før arbeid på utstyr.</li>
+  <li>Jeg vet hvorfor jeg alltid skal bruke siste revisjon av tegningen og sjekke tagnummeret på skiltet.</li>
+</ul>
+
+<h2>Les P&amp;ID-en</h2>
+<p>Figuren viser P&amp;ID-en for det samme kjøleanlegget som du så som prosessflytskjema i <a href="hva-kan-du-na-prosessflytskjema.html">Hva kan du nå?</a> for emnet Prosessflytskjema. I dette anlegget betyr PR produkt og SW sjøvann i linjenummeret.</p>
+
+<figure>
+  <img src="bilder/pid-kjoler.svg" alt="P&amp;ID for kjøling av et produkt. Fra produkttanken T-101 går røret PR-1001-80-16 gjennom stengeventilen V-110 og en sil til pumpa P-102, som drives av en motor (M). Pumpa har tømmeventilen V-114. Rett etter pumpa sitter trykkindikatoren PI 107, og så tilbakeslagsventilen V-112 med den ene trekanten svart og stengeventilen V-111. LA 108 har en stiplet linje til alarm. Røret PR-1002-50-16 går til kjøleren E-103 og videre til lagertanken T-104. Etter kjøleren sitter temperaturgiveren TT 105. Den sender signal til temperaturregulatoren TIC 105, som styrer reguleringsventilen TCV-105 på sjøvannsrøret SW-1004-100-10. TCV-105 er merket FO. Lagertanken har nivåalarmen LA 108, merket H." width="880">
+  <figcaption>Figur: P&amp;ID for kjøling av et produkt med sjøvann. Svarte linjer er produkt, og blå linjer er sjøvann. Sirkelen i firkanten (TIC 105) er en regulator i styresystemet. Anlegget er laget som eksempel.</figcaption>
+</figure>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>1. Du skal skifte pakning på pumpe P-102. Hvilke ventiler stenger du for å skille pumpa fra resten av anlegget?</p>
+  <ul>
+    <li>V-112 og TCV-105</li>
+    <li data-riktig>V-110 og V-111</li>
+    <li>Bare V-110</li>
+  </ul>
+  <p class="forklaring">V-110 sitter på sugesiden og V-111 på trykksiden. Begge må stenges, låses og merkes. V-112 er en tilbakeslagsventil og kan ikke stenges for hånd.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hva er V-112, og hvorfor sitter den der?</p>
+  <ul>
+    <li data-riktig>En tilbakeslagsventil. Den hindrer at produktet renner tilbake gjennom pumpa når den stopper.</li>
+    <li>En sikkerhetsventil. Den slipper ut trykk hvis det blir for høyt.</li>
+    <li>En reguleringsventil. Den styrer hvor mye pumpa gir.</li>
+  </ul>
+  <p class="forklaring">Den svarte trekanten viser at ventilen bare slipper én vei. Uten den kunne produktet renne tilbake fra kjøleren og lagertanken når pumpa stopper.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva er firkanten med den skrå streken mellom V-110 og pumpa?</p>
+  <ul>
+    <li>En tømmeventil</li>
+    <li data-riktig>En sil som holder igjen partikler, slik at de ikke skader pumpa</li>
+    <li>En varmeveksler</li>
+  </ul>
+  <p class="forklaring">Silen sitter på sugesiden og beskytter pumpa. Den må rengjøres med jevne mellomrom.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvor stort er røret fra pumpa til kjøleren?</p>
+  <ul>
+    <li>DN80</li>
+    <li data-riktig>DN50</li>
+    <li>DN100</li>
+  </ul>
+  <p class="forklaring">Linjenummeret er PR-1002-50-16. Tallet 50 er dimensjonen, og 16 er trykklassen.</p>
+</div>
+
+<div class="quiz">
+  <p>5. TT 105, TIC 105 og TCV-105 har samme nummer. Hvorfor?</p>
+  <ul>
+    <li>Det er tilfeldig</li>
+    <li data-riktig>De hører til samme reguleringssløyfe</li>
+    <li>De sitter på samme rør</li>
+  </ul>
+  <p class="forklaring">I dette anlegget har alle instrumentene som hører til samme måling eller regulering, samme sløyfenummer. (I pumperommet har hvert instrument sitt eget nummer.) Giveren måler, regulatoren bestemmer, og ventilen gjør jobben.</p>
+</div>
+
+<div class="quiz">
+  <p>6. TCV-105 er merket FO. Hvorfor er det lurt her?</p>
+  <ul>
+    <li>Da sparer anlegget sjøvann</li>
+    <li data-riktig>Hvis trykklufta forsvinner, går ventilen åpen og gir full kjøling, slik at produktet ikke går for varmt inn i lagertanken</li>
+    <li>Da stopper pumpa av seg selv</li>
+  </ul>
+  <p class="forklaring">Feilstillingen velges slik at anlegget blir trygt når noe svikter. Her er det tryggere å kjøle for mye enn for lite.</p>
+</div>
+
+<div class="quiz">
+  <p>7. Nivået i lagertanken T-104 når grensen ved LA 108. Hva skjer?</p>
+  <ul>
+    <li data-riktig>Det kommer en alarm for høyt nivå, slik at operatøren kan gripe inn</li>
+    <li>Pumpa stopper av seg selv</li>
+    <li>TCV-105 stenger</li>
+  </ul>
+  <p class="forklaring">LA er en nivåalarm, og H betyr høyt nivå. Den gir alarm. En HH-bryter koblet til sikkerhetssystemet ville stoppet pumpa.</p>
+</div>
+
+<div class="quiz">
+  <p>8. Hvor finner du ut hva bokstavene PR og SW i linjenummeret betyr på en ukjent tegning?</p>
+  <ul>
+    <li>I strømtabellen</li>
+    <li data-riktig>I symbolforklaringen</li>
+    <li>På skiltet på pumpa</li>
+  </ul>
+  <p class="forklaring">Symbolforklaringen forklarer symbolene og hvordan tagnumre og linjenumre er bygd opp på akkurat den tegningen.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Hva viser P&amp;ID-en for kjøleanlegget som prosessflytskjemaet ikke viste?</summary>
+  <p>P&amp;ID-en viser alle ventilene (V-110, V-111, tømmeventilen V-114 og tilbakeslagsventilen V-112), silen, motoren, linjenumrene med dimensjon og trykklasse, trykkindikatoren PI 107, nivåalarmen LA 108 og feilstillingen FO på TCV-105. Prosessflytskjemaet viste bare hovedutstyret, strømmene med driftsdata og den forenklede reguleringen.</p>
+</details>
+
+<details>
+  <summary>2. Skriv en liste over hva som må gjøres før pakningen på P-102 kan skiftes.</summary>
+  <ol>
+    <li>Stopp pumpa P-102.</li>
+    <li>Gjør motoren strømløs, og lås og merk bryteren.</li>
+    <li>Steng V-110 og V-111. Lås og merk ventilene.</li>
+    <li>Tøm pumpa gjennom tømmeventilen V-114, og sjekk på PI 107 at den er uten trykk.</li>
+  </ol>
+  <p>Arbeidet skal ha arbeidstillatelse. Tagnumrene på skiltene skal sjekkes mot tegningen før noe stenges.</p>
+</details>
+
+<details>
+  <summary>3. Sjøvannet blir varmere om sommeren. Følg reguleringssløyfen i tegningen og forklar hva som skjer.</summary>
+  <p>Produktet blir varmere etter kjøleren. TT 105 måler den høyere temperaturen og sender den til TIC 105. Regulatoren åpner TCV-105 mer, slik at det kommer mer sjøvann gjennom kjøleren. Da går temperaturen ned igjen.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="fra-prosessflytskjema-til-pid.html">Fra prosessflytskjema til P&amp;ID</a></li>
+  <li><a href="ror-og-ventiler.html">Rør og ventiler</a></li>
+  <li><a href="instrumenter-og-tagnummer.html">Instrumenter og tagnummer</a></li>
+  <li><a href="ov-les-en-pid.html">Øv: les en P&amp;ID</a></li>
+</ul>
+<p><small>Om kildene: Teksten, spørsmålene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

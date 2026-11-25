@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" width="820" height="470" font-family="Segoe UI, Arial, sans-serif">
-  <title>Forenklet prosessflytskjema for pumperommet. Tre pumper, P-12001, P-12002 og P-12003, suger vann fra tank 3 (T-12053) nederst. Pumpe 1 pumper til tank 2 (T-12052). Pumpe 2 pumper gjennom reguleringsventilen LCV-12022 til tank 1 eller tank 2. Pumpe 3 pumper gjennom reguleringsventilen LCV-12032 til tank 1 (T-12051). En nivåregulator (LIC) styrer LCV-12032 og holder nivået i tank 1. En annen nivåregulator styrer LCV-12022 og får nivået fra tank 1 eller tank 2, alt etter hvilken tank pumpe 2 kjører til. Fra tank 1 og tank 2 renner vannet tilbake til tank 3, og tank 1 kan også renne over til tank 2. Strømmene er nummerert fra 1 til 7.</title>
+  <title>Forenklet prosessflytskjema for pumperommet. Tre pumper, P-12001, P-12002 og P-12003, suger vann fra tank 3 (T-12053) nederst. Pumpe 1 pumper til tank 2 (T-12052). Pumpe 2 pumper gjennom reguleringsventilen LCV-12022 til tank 1 eller tank 2. Pumpe 3 pumper gjennom reguleringsventilen LCV-12032 til tank 1 (T-12051). En nivåregulator (LIC) styrer LCV-12032 og holder nivået i tank 1. En annen nivåregulator styrer LCV-12022 og får nivået fra tank 1 eller tank 2, alt etter hvilken tank pumpe 2 kjører til. Fra bunnen av tank 1 og tank 2 renner vannet tilbake til tank 3. I toppen har tankene et overløp: tank 1 renner over til tank 2, og tank 2 renner over til tank 3. Strømmene er nummerert fra 1 til 8.</title>
   <defs>
     <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
     <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d6b"/></marker>
@@ -23,8 +23,9 @@
     <!-- tilbake til tank 3 -->
     <line x1="515" y1="270" x2="515" y2="338" marker-end="url(#pil)"/>
     <line x1="685" y1="270" x2="685" y2="338" marker-end="url(#pil)"/>
-    <!-- tank 1 til tank 2 -->
-    <line x1="560" y1="255" x2="638" y2="255" marker-end="url(#pil)"/>
+    <!-- overløp i toppen: tank 1 til tank 2, og tank 2 til tank 3 -->
+    <line x1="560" y1="165" x2="638" y2="165" marker-end="url(#pil)"/>
+    <path d="M730,165 L750,165 L750,338" marker-end="url(#pil)"/>
   </g>
   <circle cx="540" cy="80" r="3.5" fill="#1c2828"/>
   <circle cx="220" cy="400" r="3.5" fill="#1c2828"/>
@@ -113,7 +114,8 @@
     <path d="M330,191 L339,200 L330,209 L321,200 Z"/>
     <path d="M515,296 L524,305 L515,314 L506,305 Z"/>
     <path d="M685,296 L694,305 L685,314 L676,305 Z"/>
-    <path d="M598,246 L607,255 L598,264 L589,255 Z"/>
+    <path d="M598,156 L607,165 L598,174 L589,165 Z"/>
+    <path d="M750,241 L759,250 L750,259 L741,250 Z"/>
   </g>
   <g font-size="11" fill="#2c6ea6" text-anchor="middle" font-weight="bold">
     <text x="400" y="404">1</text>
@@ -122,6 +124,7 @@
     <text x="330" y="204">4</text>
     <text x="515" y="309">5</text>
     <text x="685" y="309">6</text>
-    <text x="598" y="259">7</text>
+    <text x="598" y="169">7</text>
+    <text x="750" y="254">8</text>
   </g>
 </svg>

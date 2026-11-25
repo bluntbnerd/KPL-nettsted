@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instrumenter og tagnummer – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Instrumenter og tagnummer</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Alt i en P&amp;ID har et tagnummer: hver pumpe, hver tank, hver ventil og hvert instrument. Tagnummeret er navnet på tingen. Det står på tegningen, på skiltet ute i anlegget og på skjermen i kontrollrommet. På denne siden lærer du å lese tagnumrene i pumperommet.</p>
+
+<h2>Fire slags tagnummer</h2>
+<p>I P&amp;ID-en for pumperommet finner du fire slags tagnummer:</p>
+<table>
+  <thead><tr><th>Hva</th><th>Eksempel</th><th>Slik leser du det</th></tr></thead>
+  <tbody>
+    <tr><td>Utstyr</td><td>P-12003, T-12051</td><td>Bokstaven sier hva slags utstyr det er: P er pumpe, og T er tank.</td></tr>
+    <tr><td>Ventiler</td><td>V-12030, LCV-12032</td><td>V er en manuell ventil. LCV er en reguleringsventil for nivå.</td></tr>
+    <tr><td>Rør</td><td>W-12133-80-16</td><td>Linjenummeret sier hva som går i røret, nummeret, dimensjonen og trykklassen.</td></tr>
+    <tr><td>Instrumenter</td><td>LT 12075, PI 12066</td><td>Bokstavene sier hva som måles og hva instrumentet gjør. Tallet er instrumentets nummer.</td></tr>
+  </tbody>
+</table>
+<p>Alle tagnumrene i pumperommet begynner med 12. Det er <strong>systemnummeret</strong> for pumperommet, og det viser at alt hører til samme anlegg. Tallene etter 12 skiller tingene fra hverandre.</p>
+
+<h2>Instrumentene</h2>
+<p>Et instrument tegnes som en sirkel med tagnummeret inni. Bokstavene står øverst, og nummeret står under.</p>
+
+<figure>
+  <img src="bilder/tagnummer-oppbygning.svg" alt="Til venstre instrumentet LT 12075 i pumperommet, tegnet som en sirkel. L betyr at det måler nivå, T betyr at det er en giver, og 12075 er nummeret. Sirkelen betyr at instrumentet sitter ute i anlegget. Til høyre tagnummeret 20-PA-101A for utstyr i et annet anlegg: 20 er systemnummeret (oljeproduksjon), PA er utstyrsklassen (sentrifugalpumpe), 101 er nummeret, og A betyr pumpe A av to like." width="820">
+  <figcaption>Figur: Slik er tagnumrene bygd opp. Til venstre et instrument i pumperommet, og til høyre en pumpe i et anlegg som bruker et annet system for tagnummer. Tagnummeret til høyre er laget som eksempel.</figcaption>
+</figure>
+
+<p><strong>Første bokstav</strong> sier hva som måles, for eksempel L for nivå, F for mengde, P for trykk og T for temperatur. <strong>Bokstavene etter</strong> sier hva instrumentet gjør, for eksempel T for giver, I for viser, C for regulator og A for alarm. En tabell over de vanligste bokstavkodene, og hva sirklene betyr, finner du på siden <a href="../05-maling-styring-regulering/instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a> i temaet Automasjon.</p>
+
+<h3>Eget nummer eller felles sløyfenummer?</h3>
+<p>I pumperommet har hvert instrument sitt eget nummer, også når instrumentene hører til samme regulering. Nivågiveren LT 12075 og reguleringsventilen LCV-12032 har for eksempel ulike tall. Mange andre anlegg bruker et felles <strong>sløyfenummer</strong>: Alle instrumentene i samme måling eller regulering får samme tall, for eksempel TT 105, TIC 105 og TCV-105 i kjøleanlegget du møter senere i emnet. Symbolforklaringen sier hvilket system tegningen bruker.</p>
+
+<h3>Instrumentene i pumperommet</h3>
+<table>
+  <thead><tr><th>Tagnummer</th><th>Hva det er</th><th>Hvor det sitter</th></tr></thead>
+  <tbody>
+    <tr><td>LT 12075</td><td>Nivågiver. Sender nivået til regulatoren.</td><td>Tank 1</td></tr>
+    <tr><td>LA 12077</td><td>Nivåalarm for høyt nivå (H)</td><td>Tank 1</td></tr>
+    <tr><td>LZ 12076</td><td>Nivåbryter for høyt-høyt nivå (HH). Stopper pumpe 2 og 3.</td><td>Tank 1</td></tr>
+    <tr><td>LZ 12078</td><td>Nivåbryter for lavt nivå (L). Gir alarm.</td><td>Tank 1</td></tr>
+    <tr><td>LT 12080</td><td>Nivågiver. Sender nivået til styringen av pumpe 1 og til regulatoren når tank 2 er valgt.</td><td>Tank 2</td></tr>
+    <tr><td>LA 12082</td><td>Nivåalarm for høyt nivå (H)</td><td>Tank 2</td></tr>
+    <tr><td>LZ 12081</td><td>Nivåbryter for høyt-høyt nivå (HH). Stopper alle tre pumpene.</td><td>Tank 2</td></tr>
+    <tr><td>LZ 12083</td><td>Nivåbryter for lavt nivå (L). Gir alarm.</td><td>Tank 2</td></tr>
+    <tr><td>LIC 12094 og LIC 12097</td><td>Nivåregulatorer som også viser nivået. De styrer reguleringsventilene LCV-12022 og LCV-12032.</td><td>I styresystemet</td></tr>
+    <tr><td>FZ 12071–12073</td><td>Strømningsvakter. Merker om det strømmer for lite vann inn til pumpene (LL).</td><td>Innløpet på pumpe 1–3</td></tr>
+    <tr><td>PI 12064–12066</td><td>Trykkindikatorer (manometre). Viser trykket etter pumpene.</td><td>Utløpet på pumpe 1–3</td></tr>
+    <tr><td>PT 12051</td><td>Trykkgiver. Måler lufttrykket til ventilene og gir alarm i kontrollsystemet hvis trykket blir for lavt.</td><td>Trykkluftledningen</td></tr>
+  </tbody>
+</table>
+<p>I pumperommet brukes Z for brytere som er koblet til sikkerhetssystemet. Mange anlegg bruker S for bryter i stedet, for eksempel LSHH for en nivåbryter ved høyt-høyt nivå, slik du ser i Automasjon. Sjekk symbolforklaringen. Noen av bryterne stopper pumper, og andre gir alarm. Hva hver bryter gjør, står i forriglingsmatrisen.</p>
+
+<h2>L, LL, H og HH</h2>
+<p>Ved mange instrumenter står det en eller to bokstaver som viser en grense:</p>
+<ul>
+  <li><strong>H</strong> (høyt) og <strong>L</strong> (lavt): Verdien er utenfor det normale. I pumperommet gir dette en alarm i kontrollrommet, slik at operatøren kan gripe inn.</li>
+  <li><strong>HH</strong> (høyt-høyt) og <strong>LL</strong> (lavt-lavt): Verdien er så høy eller lav at det kan bli farlig eller føre til skade. Da griper sikkerhetssystemet inn av seg selv. I pumperommet stopper det én eller flere pumper. Hvilke, står i forriglingsmatrisen.</li>
+</ul>
+<p>Hva som skjer ved hver grense, står i forriglingsmatrisen. Den lærer du om i neste emne.</p>
+
+<h2>Andre anlegg, andre tagnummer</h2>
+<p>Hvert firma har sitt eget system for tagnummer. Tagnummeret til høyre i figuren er bygd opp slik mange olje- og gassanlegg gjør det. Det begynner også med et systemnummer, her 20, som viser hvilken del av anlegget utstyret hører til. Så kommer en kode på to bokstaver for hva slags utstyr det er, for eksempel PA for sentrifugalpumpe. Til slutt kommer nummeret, og en bokstav hvis det finnes flere like. Pumpe A og pumpe B er da to like pumper der den ene kan ta over for den andre.</p>
+<p>Derfor gjelder det samme som for symbolene: Sjekk symbolforklaringen. Den forklarer også hvordan tagnumrene er bygd opp.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Kontroller alltid at tagnummeret på skiltet ute i anlegget er det samme som på tegningen og i arbeidsordren, før du åpner, stenger eller kobler ut noe. Mange pumper og ventiler ser like ut. Det er tagnummeret som forteller at du står ved riktig.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er PI 12066?</p>
+  <ul>
+    <li>En pumpe</li>
+    <li data-riktig>En trykkindikator, et instrument som viser trykket</li>
+    <li>Et rør</li>
+  </ul>
+  <p class="forklaring">P betyr trykk, og I betyr at instrumentet viser verdien. 12066 er instrumentets nummer.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hva forteller første bokstav i et instrumenttagnummer?</p>
+  <ul>
+    <li data-riktig>Hva som måles</li>
+    <li>Hvem som har montert instrumentet</li>
+    <li>Hvor i anlegget det sitter</li>
+  </ul>
+  <p class="forklaring">Første bokstav sier hva som måles, for eksempel L for nivå. Bokstavene etter sier hva instrumentet gjør.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Ved en nivåbryter står det HH. Hva skjer i pumperommet når nivået når denne grensen?</p>
+  <ul>
+    <li>Det kommer bare en melding på skjermen</li>
+    <li data-riktig>Sikkerhetssystemet stopper én eller flere pumper</li>
+    <li>Ingenting, HH er normalt nivå</li>
+  </ul>
+  <p class="forklaring">HH betyr høyt-høyt. Da griper sikkerhetssystemet inn av seg selv. Ved H kommer det bare en alarm.</p>
+</div>
+
+<div class="quiz">
+  <p>4. I et annet anlegg heter en pumpe 20-PA-101B. Hva betyr B?</p>
+  <ul>
+    <li>At pumpa er i dårlig stand</li>
+    <li data-riktig>At det finnes flere like pumper, og at dette er pumpe B</li>
+    <li>At pumpa pumper bensin</li>
+  </ul>
+  <p class="forklaring">Bokstaven til slutt skiller like utstyrsdeler fra hverandre, for eksempel pumpe A og pumpe B.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Du skal stenge V-12030. Hva gjør du før du stenger?</p>
+  <ul>
+    <li>Ser etter den ventilen som ligner mest</li>
+    <li data-riktig>Sjekker at skiltet på ventilen viser V-12030</li>
+    <li>Spør en kollega om det er riktig ventil</li>
+  </ul>
+  <p class="forklaring">Mange ventiler ser like ut. Tagnummeret på skiltet er den sikre måten å vite at du står ved riktig ventil.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>tagnummer</td><td>Den faste merkingen til en utstyrsdel eller et instrument, for eksempel en pumpe eller en nivåmåler. Den står både i skjemaet og på utstyret i anlegget.</td><td>tag number</td></tr>
+    <tr><td>bokstavkode</td><td>Bokstavene i et tagnummer. Første bokstav sier hva som måles, og bokstavene etter sier hva instrumentet gjør.</td><td>instrument letter code</td></tr>
+    <tr><td>sløyfenummer</td><td>Tallet i et tagnummer. Alle instrumentene som hører til samme måling eller regulering, har samme sløyfenummer.</td><td>loop number</td></tr>
+    <tr><td>systemnummer</td><td>Første del av et tagnummer. Det viser hvilket anlegg eller hvilken del av anlegget utstyret hører til.</td><td>system number</td></tr>
+    <tr><td>strømningsvakt</td><td>En bryter som merker om det strømmer for lite i et rør, for eksempel inn til en pumpe.</td><td>flow switch</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../05-maling-styring-regulering/instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a> i temaet Automasjon: alle bokstavkodene og instrumentsymbolene.</li>
+  <li><a href="fra-prosessflytskjema-til-pid.html">Fra prosessflytskjema til P&amp;ID</a> viser instrumentene på pumpe 3 og tank 1.</li>
+</ul>
+<p><small>Om kildene: Teksten og figurene på denne siden er laget for dette nettstedet. Eksemplene bygger på det tekniske flytskjemaet og forriglingsmatrisen for pumperommet ved Sauda vgs og på symbolforklaringer som brukes i undervisningen. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
