@@ -14,6 +14,9 @@ KPL.sti("04-masse-og-energibalanser", [
     sider: [
       { fil: "storrelser-og-enheter.html", tittel: "Størrelser og enheter", meny: "Enheter", type: "fagstoff", status: "ferdig" },
       { fil: "masse-volum-tetthet.html", tittel: "Masse, volum og tetthet", meny: "Tetthet", type: "fagstoff", status: "ferdig" },
+      { fil: "tetthet-simulering.html", tittel: "Øv: Tetthetstårnet", meny: "Tetthetstårnet", type: "simulering", status: "ferdig" },
+      { fil: "viskositet.html", tittel: "Viskositet: hvor tyktflytende er væsken?", meny: "Viskositet", type: "fagstoff", status: "ferdig" },
+      { fil: "viskositet-simulering.html", tittel: "Øv: Viskositet", meny: "Simuler viskositet", type: "simulering", status: "ferdig" },
       { fil: "kraft-og-trykk.html", tittel: "Kraft og trykk", type: "fagstoff", status: "ferdig" },
       { fil: "energi-arbeid-effekt.html", tittel: "Energi, arbeid og effekt", meny: "Energi og effekt", type: "fagstoff", status: "ferdig" },
       { fil: "temperatur-og-varme.html", tittel: "Temperatur og varme", type: "fagstoff", status: "ferdig" },

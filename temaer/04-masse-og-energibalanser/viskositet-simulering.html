@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Viskositet – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+    .vs-sim { display: grid; grid-template-columns: minmax(200px, 260px) 1fr; gap: 16px; align-items: start; }
+    @media (max-width: 600px) { .vs-sim { grid-template-columns: 1fr; } }
+    .vs-ctrl { font-size: .9rem; }
+    .vs-ctrl .vs-lbl { display: block; font-weight: 700; margin: 10px 0 4px; }
+    .vs-ctrl .vs-lbl:first-child { margin-top: 0; }
+    .vs-ctrl output { float: right; font-variant-numeric: tabular-nums; color: var(--info); }
+    .vs-ctrl input[type=range] { width: 100%; margin: 6px 0 4px; -webkit-appearance: none; appearance: none; height: 4px; border-radius: 2px; background: var(--linje); cursor: pointer; }
+    .vs-ctrl input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--info); border: 0; }
+    .vs-ctrl input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--info); border: 0; }
+    .vs-vaesker { display: flex; flex-wrap: wrap; gap: 4px; }
+    .vs-vaesker button { font-size: .85rem; padding: 3px 8px; margin: 0; }
+    .vs-vaesker button[aria-pressed="true"] { font-weight: bold; outline: 2px solid var(--info); }
+    .vs-knapper { margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .vs-knapper button { margin: 0; }
+    .vs-tall { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 12px; }
+    .vs-tall div { background: var(--flate-2); border-radius: 8px; padding: 4px 6px; text-align: center; }
+    .vs-tall small { display: block; color: var(--dempet); font-weight: 700; font-size: .72rem; }
+    .vs-tall output { font-size: 1rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .vs-tall .vs-tid { grid-column: 1 / -1; background: var(--info-bg); }
+    .vs-tall .vs-tid output { color: var(--info); font-size: 1.3rem; }
+    .vs-glass { text-align: center; }
+    .vs-glass svg { width: 100%; max-width: 220px; height: auto; color: var(--tekst); }
+    .vs-merk { font-size: .8rem; color: var(--dempet); min-height: 1.2em; }
+    .vs-logg { margin-top: 8px; }
+    .vs-logg td, .vs-logg th { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+<main>
+
+<h1>Øv: Viskositet</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> grunnlag for KT6</div>
+
+<p class="ingress">En stålkule slippes ned i et glassrør med væske. Jo mer tyktflytende væsken er, desto saktere synker kula. Her kan du sammenligne væsker og se hva temperaturen gjør med viskositeten. Teorien står på siden <a href="viskositet.html">Viskositet</a>.</p>
+
+<h2>Simulator</h2>
+<p>Velg væske og temperatur, og trykk <strong>Slipp kula</strong>. Simulatoren tar tiden kula bruker mellom de to strekene, 20 cm fra hverandre. Hvert forsøk skrives inn i tabellen under, så du kan sammenligne.</p>
+
+<figure>
+  <div class="vs-sim">
+    <div class="vs-ctrl">
+      <span class="vs-lbl">Væske</span>
+      <div class="vs-vaesker" id="vs-vaesker" role="group" aria-label="Velg væske"></div>
+      <label class="vs-lbl" for="vs-temp">Temperatur <output id="vs-temp-ut"></output></label>
+      <input type="range" id="vs-temp" min="10" max="80" step="5" value="20">
+      <div class="vs-knapper">
+        <button type="button" id="vs-slipp">Slipp kula</button>
+        <button type="button" id="vs-null">Hent kula opp</button>
+      </div>
+      <div class="vs-tall">
+        <div><small>tetthet</small><output id="vs-rho"></output></div>
+        <div><small>viskositet</small><output id="vs-mu"></output></div>
+        <div class="vs-tid"><small>falltid mellom strekene</small><output id="vs-tid" aria-live="polite">–</output></div>
+      </div>
+      <p class="vs-merk" id="vs-merk" aria-live="polite"></p>
+    </div>
+    <div class="vs-glass">
+      <svg id="vs-svg" viewBox="0 0 200 340" role="img" aria-label="Glassrør med væske og en stålkule som synker"></svg>
+    </div>
+  </div>
+  <figcaption>Figur: Stålkula har diameter 2 mm. Tiden måles mellom strekene, 20 cm fra hverandre. Simulatoren bruker en forenklet modell og omtrentlige verdier for viskositet, så tidene er bare omtrentlige. Tettheten regnes som den samme ved alle temperaturer.</figcaption>
+</figure>
+
+<h3>Resultater</h3>
+<table class="vs-logg">
+  <thead><tr><th>Nr.</th><th>Væske</th><th>Temperatur</th><th>Viskositet</th><th>Falltid</th></tr></thead>
+  <tbody id="vs-logg"><tr><td colspan="5">Ingen forsøk ennå.</td></tr></tbody>
+</table>
+<p><button type="button" id="vs-tom">Tøm tabellen</button></p>
+
+<h2>Oppdrag</h2>
+<ol>
+  <li>Slipp kula i alle fem væskene ved 20 °C. Ordne væskene etter falltid, fra kortest til lengst. Stemmer rekkefølgen med viskositeten som vises?</li>
+  <li>Matolje har lavere tetthet enn vann. Hvorfor synker kula likevel mye saktere i matolje enn i vann?</li>
+  <li>Slipp kula i motorolje ved 20 °C og ved 80 °C. Omtrent hvor mange ganger raskere synker den ved 80 °C? Hva betyr det for smøringen rett etter en kaldstart?</li>
+  <li>Tungolje skal pumpes fra en tank. Hvor varm må oljen være for at falltiden skal bli under 3 sekunder? Hvorfor varmes tungolje opp før den pumpes?</li>
+  <li>Slipp kula i vann ved 10 °C og ved 80 °C. Endrer falltiden seg mye? Sammenlign med motorolje.</li>
+</ol>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <ol>
+    <li>Fra kortest til lengst falltid: vann, matolje, motorolje, glyserol, tungolje. Rekkefølgen er den samme som for viskositeten.</li>
+    <li>Det er viskositeten, ikke tettheten, som bremser kula. Matolje er rundt 70 ganger så tyktflytende som vann. Matolje har bare litt lavere tetthet enn vann, og det betyr lite for farten. Det er viskositeten som avgjør.</li>
+    <li>Ca. 6 ganger raskere: fra ca. 3,6 s til ca. 0,6 s. Viskositeten synker enda mer, fra ca. 250 til ca. 25 mPa·s. Kald olje er tykk og sirkulerer dårlig, så smøringen er dårligst rett etter en kaldstart.</li>
+    <li>Ca. 60 °C eller varmere (ca. 2,7 s). Ved 55 °C er falltiden nesten 4 s, og ved 20 °C er den over ett minutt. Tungolje er så tyktflytende ved romtemperatur at den nesten ikke kan pumpes. Varm olje renner lettere, gir mindre friksjon i rørene og trenger mindre pumpearbeid. Grensen på 3 s er bare en øvingsgrense. Den riktige temperaturen for pumping står i databladet for oljen.</li>
+    <li>Nei. Vann er tyntflytende ved alle temperaturene, så kula synker nesten like fort (ca. 0,3 s). Viskositeten til vann synker også med temperaturen, men den er så lav hele tiden at det ikke merkes her. For motorolje gir oppvarmingen stor forskjell.</li>
+  </ol>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Teorien bak: <a href="viskositet.html">Viskositet</a>.</li>
+</ul>
+<p><small>Om kildene: Simulatoren og oppdragene er laget for dette nettstedet. Viskositetene er omtrentlige verdier fra åpne tabeller. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs.</small></p>
+
+</main>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  function tall(x, d) { return x.toLocaleString("nb-NO", { minimumFractionDigits: d, maximumFractionDigits: d }); }
+  function visMu(muPas) {
+    var m = muPas * 1000;
+    if (m < 10) return tall(m, 1) + " mPa·s";
+    if (m < 1000) return tall(Math.round(m), 0) + " mPa·s";
+    return tall(Math.round(m / 100) * 100, 0) + " mPa·s";
+  }
+  function visTid(t) { return t < 10 ? tall(t, 2) + " s" : tall(t, 1) + " s"; }
+
+  // Væsker: tetthet (kg/m³), viskositet ved 20 °C (Pa·s) og hvor sterkt viskositeten avhenger av temperaturen (B, i kelvin).
+  // Viskositeten ved temperatur T regnes som mu = mu20 · exp(B · (1/T − 1/293)). Omtrentlige verdier.
+  var VAESKER = [
+    { id: "vann", navn: "vann", rho: 998, mu20: 0.0010, B: 1786, farge: "#7fc4ea", op: 0.35 },
+    { id: "matolje", navn: "matolje", rho: 915, mu20: 0.070, B: 3040, farge: "#e3bd2f", op: 0.55 },
+    { id: "motorolje", navn: "motorolje", rho: 870, mu20: 0.25, B: 3970, farge: "#a8701c", op: 0.7 },
+    { id: "glyserol", navn: "glyserol", rho: 1260, mu20: 1.41, B: 6520, farge: "#b9bfe6", op: 0.55 },
+    { id: "tungolje", navn: "tungolje", rho: 980, mu20: 4.8, B: 8000, farge: "#2b2118", op: 0.9 }
+  ];
+  var R = 0.001, RHO_K = 7850, G = 9.81, H = 0.20, CD = 0.44;
+
+  function mu(v, tC) { return v.mu20 * Math.exp(v.B * (1 / (tC + 273) - 1 / 293)); }
+  // Synkefart: Stokes' lov for tyktflytende væsker, med en enkel korreksjon for tynne væsker (vann)
+  function fart(v, tC) {
+    var d = RHO_K - v.rho;
+    var vs = 2 * d * G * R * R / (9 * mu(v, tC));
+    var vn = Math.sqrt((8 / 3) * R * G * d / (v.rho * CD));
+    return 1 / (1 / vs + 1 / vn);
+  }
+  function falltid(v, tC) { return H / fart(v, tC); }
+
+  var valgt = VAESKER[0], temp = 20, logg = [], tidtaker = null, pos = 0, tid = null;
+
+  // Glassrøret: strekene ligger 20 cm fra hverandre, fra y = 70 til y = 290
+  var Y0 = 70, Y1 = 290, TOPP = 30, BUNN = 315;
+  function tegn() {
+    var s = "";
+    s += '<rect x="70" y="' + (TOPP + 6) + '" width="60" height="' + (BUNN - TOPP - 6) + '" fill="' + valgt.farge + '" fill-opacity="' + valgt.op + '"/>';
+    s += '<path d="M66 ' + TOPP + ' L66 ' + BUNN + ' Q66 ' + (BUNN + 10) + ' 76 ' + (BUNN + 10) + ' L124 ' + (BUNN + 10) + ' Q134 ' + (BUNN + 10) + ' 134 ' + BUNN + ' L134 ' + TOPP + '" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>';
+    [Y0, Y1].forEach(function (y, i) {
+      s += '<line x1="58" y1="' + y + '" x2="142" y2="' + y + '" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 3"/>';
+      s += '<text x="146" y="' + (y + 4) + '" font-size="12" fill="currentColor">' + (i === 0 ? "start" : "stopp") + '</text>';
+    });
+    s += '<line x1="40" y1="' + Y0 + '" x2="40" y2="' + Y1 + '" stroke="currentColor" stroke-opacity=".5" stroke-width="1.5"/>';
+    s += '<text x="34" y="' + ((Y0 + Y1) / 2) + '" font-size="12" fill="currentColor" fill-opacity=".7" text-anchor="middle" transform="rotate(-90 34 ' + ((Y0 + Y1) / 2) + ')">20 cm</text>';
+    var y = (Y0 - 20) + pos * (Y1 - Y0 + 20);
+    s += '<circle cx="100" cy="' + y.toFixed(1) + '" r="7" fill="#8a9a9a" stroke="#3c4646" stroke-width="1.5"/>';
+    s += '<circle cx="98" cy="' + (y - 2).toFixed(1) + '" r="2" fill="#ffffff" fill-opacity=".8"/>';
+    $("vs-svg").innerHTML = s;
+  }
+
+  function oppdaterTall() {
+    $("vs-temp-ut").textContent = temp + " °C";
+    $("vs-rho").textContent = tall(valgt.rho, 0) + " kg/m³";
+    $("vs-mu").textContent = visMu(mu(valgt, temp));
+  }
+
+  function nullstill() {
+    clearInterval(tidtaker); tidtaker = null; pos = 0; tid = null;
+    $("vs-tid").textContent = "–"; $("vs-merk").textContent = "";
+    $("vs-slipp").disabled = false;
+    tegn();
+  }
+
+  function slipp() {
+    nullstill();
+    var t = falltid(valgt, temp);
+    // Kula faller 20 px før startstreken. Tiden regnes bare mellom strekene.
+    var andelFor = 20 / (Y1 - Y0 + 20);
+    var total = t / (1 - andelFor);
+    // Lange forsøk spilles av raskere, høyst 6 sekunder
+    var spill = Math.min(total, 6), faktor = total / spill;
+    if (faktor >= 1.5) $("vs-merk").textContent = "Spilles av " + tall(faktor, 0) + " ganger raskere enn i virkeligheten.";
+    $("vs-slipp").disabled = true;
+    var start = Date.now(), v = valgt, tc = temp;
+    tidtaker = setInterval(function () {
+      var gaatt = (Date.now() - start) / 1000 / spill;
+      pos = Math.min(1, gaatt);
+      var simTid = Math.max(0, pos * total - (total - t));
+      if (pos >= andelFor) $("vs-tid").textContent = visTid(pos >= 1 ? t : simTid);
+      tegn();
+      if (pos >= 1) {
+        clearInterval(tidtaker); tidtaker = null;
+        $("vs-slipp").disabled = false;
+        logg.push({ navn: v.navn, t: tc, mu: mu(v, tc), tid: t });
+        visLogg();
+      }
+    }, 30);
+  }
+
+  function visLogg() {
+    var b = $("vs-logg");
+    if (!logg.length) { b.innerHTML = '<tr><td colspan="5">Ingen forsøk ennå.</td></tr>'; return; }
+    b.innerHTML = logg.map(function (r, i) {
+      return "<tr><td>" + (i + 1) + "</td><td>" + r.navn + "</td><td>" + r.t + " °C</td><td>" + visMu(r.mu) + "</td><td>" + visTid(r.tid) + "</td></tr>";
+    }).join("");
+  }
+
+  var knapper = $("vs-vaesker");
+  VAESKER.forEach(function (v, i) {
+    var k = document.createElement("button");
+    k.type = "button"; k.textContent = v.navn; k.setAttribute("data-i", i);
+    k.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    knapper.appendChild(k);
+  });
+  knapper.addEventListener("click", function (e) {
+    var k = e.target.closest("button"); if (!k) return;
+    valgt = VAESKER[+k.getAttribute("data-i")];
+    knapper.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === k ? "true" : "false"); });
+    oppdaterTall(); nullstill();
+  });
+  $("vs-temp").addEventListener("input", function () { temp = +this.value; oppdaterTall(); nullstill(); });
+  $("vs-slipp").addEventListener("click", slipp);
+  $("vs-null").addEventListener("click", nullstill);
+  $("vs-tom").addEventListener("click", function () { logg = []; visLogg(); });
+
+  oppdaterTall(); nullstill();
+})();
+</script>
+</body>
+</html>
