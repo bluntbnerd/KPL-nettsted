@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 370" width="820" height="370" font-family="Segoe UI, Arial, sans-serif">
+  <title>Prosessflytskjema for kjøling av et produkt. Varmt produkt går fra produkttanken T-101 til pumpa P-102 og videre gjennom kjøleren E-103 til lagertanken T-104. Sjøvann kommer inn nedenfra gjennom reguleringsventilen TCV-105, går gjennom kjøleren og ut på toppen. En temperaturregulator (TIC) måler temperaturen på produktet etter kjøleren og styrer TCV-105. Strømmene er nummerert fra 1 til 5.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+    <marker id="pilb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2c6ea6"/></marker>
+  </defs>
+  <rect x="0" y="0" width="820" height="370" rx="10" fill="#ffffff"/>
+
+  <!-- produktlinjer -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none">
+    <path d="M80,220 L80,260 L206,260" marker-end="url(#pil)"/>
+    <path d="M210,236 L280,236 L280,150 L364,150" marker-end="url(#pil)"/>
+    <path d="M434,150 L560,150 L560,110 L638,110" marker-end="url(#pil)"/>
+    <path d="M680,220 L680,300" marker-end="url(#pil)"/>
+  </g>
+
+  <!-- sjøvann -->
+  <g stroke="#2c6ea6" stroke-width="2.5" fill="none">
+    <line x1="400" y1="345" x2="400" y2="285"/>
+    <line x1="400" y1="255" x2="400" y2="186" marker-end="url(#pilb)"/>
+    <line x1="400" y1="116" x2="400" y2="30" marker-end="url(#pilb)"/>
+  </g>
+  <g font-size="13" fill="#2c6ea6">
+    <text x="410" y="342">Sjøvann inn</text>
+    <text x="410" y="40">Sjøvann ut</text>
+  </g>
+
+  <!-- tanker -->
+  <g fill="#e3e8e8" stroke="#586868" stroke-width="2">
+    <rect x="40" y="80" width="80" height="140" rx="40" ry="16"/>
+    <rect x="640" y="80" width="80" height="140" rx="40" ry="16"/>
+  </g>
+  <g fill="#1c2828" text-anchor="middle">
+    <text x="80" y="146" font-size="13" font-weight="bold">Produkt-</text>
+    <text x="80" y="162" font-size="13" font-weight="bold">tank</text>
+    <text x="80" y="182" font-size="12">T-101</text>
+    <text x="680" y="146" font-size="13" font-weight="bold">Lager-</text>
+    <text x="680" y="162" font-size="13" font-weight="bold">tank</text>
+    <text x="680" y="182" font-size="12">T-104</text>
+    <text x="680" y="318" font-size="12">Til tapping</text>
+  </g>
+
+  <!-- pumpe -->
+  <circle cx="210" cy="260" r="24" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <path d="M195,280 L186,296 L234,296 L225,280" fill="none" stroke="#586868" stroke-width="2"/>
+  <text x="210" y="316" font-size="12" fill="#1c2828" text-anchor="middle">P-102</text>
+
+  <!-- kjøler (varmeveksler) -->
+  <circle cx="400" cy="150" r="34" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <path d="M400,186 L400,172 L386,164 L414,150 L386,136 L400,128 L400,116" fill="none" stroke="#2c6ea6" stroke-width="2.5"/>
+  <g font-size="12" fill="#1c2828" text-anchor="end">
+    <text x="362" y="104" font-weight="bold">Kjøler</text>
+    <text x="362" y="119">E-103</text>
+  </g>
+
+  <!-- reguleringsventil på sjøvannet -->
+  <path d="M388,255 L412,255 L388,285 L412,285 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2"/>
+  <line x1="400" y1="270" x2="420" y2="270" stroke="#1c2828" stroke-width="1.5"/>
+  <path d="M420,258 A12,12 0 0 1 420,282 Z" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="380" y="300" font-size="11" fill="#1c2828" text-anchor="end">TCV-105</text>
+
+  <!-- temperaturregulering -->
+  <g stroke="#1c2828" stroke-width="1.5" fill="none" stroke-dasharray="5 4">
+    <line x1="500" y1="150" x2="500" y2="223"/>
+    <path d="M500,257 L500,270 L433,270"/>
+  </g>
+  <circle cx="500" cy="240" r="17" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="500" y="244" font-size="11" fill="#1c2828" text-anchor="middle">TIC</text>
+
+  <!-- strømnummer -->
+  <g fill="#ffffff" stroke="#2c6ea6" stroke-width="1.5">
+    <path d="M80,231 L89,240 L80,249 L71,240 Z"/>
+    <path d="M280,181 L289,190 L280,199 L271,190 Z"/>
+    <path d="M600,101 L609,110 L600,119 L591,110 Z"/>
+    <path d="M400,311 L409,320 L400,329 L391,320 Z"/>
+    <path d="M400,66 L409,75 L400,84 L391,75 Z"/>
+  </g>
+  <g font-size="11" fill="#2c6ea6" text-anchor="middle" font-weight="bold">
+    <text x="80" y="244">1</text>
+    <text x="280" y="194">2</text>
+    <text x="600" y="114">3</text>
+    <text x="400" y="324">4</text>
+    <text x="400" y="79">5</text>
+  </g>
+</svg>

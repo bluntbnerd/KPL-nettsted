@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fra prosessflytskjema til P&amp;ID – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Fra prosessflytskjema til P&amp;ID</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Prosessflytskjemaet viser hvordan prosessen virker. Det tekniske flytskjemaet, P&amp;ID-en, viser alt som skal til for å bygge og drive anlegget: hvert rør, hver ventil og hvert instrument. Det er tegningen du bruker mest som operatør.</p>
+
+<h2>Hva er en P&amp;ID?</h2>
+<p>Et <strong>teknisk flytskjema</strong> er en detaljert tegning av anlegget med utstyr, rør, ventiler og instrumenter, tegnet med faste symboler. Det kalles også <strong>P&amp;ID</strong>, som står for det engelske <em>piping and instrumentation diagram</em>, altså tegning av rør og instrumenter.</p>
+<p>P&amp;ID-en brukes hver dag i anlegget:</p>
+<ul>
+  <li>når du skal finne fram til en ventil eller en måler ute i anlegget</li>
+  <li>når utstyr skal stenges av og tømmes før vedlikehold</li>
+  <li>når du skal forstå en alarm eller en stans</li>
+  <li>når anlegget skal bygges om</li>
+</ul>
+
+<h2>Hva kommer i tillegg?</h2>
+<p>P&amp;ID-en bygger på prosessflytskjemaet, men har mye mer med. Tabellen viser forskjellen.</p>
+<table>
+  <thead><tr><th></th><th>Prosessflytskjema</th><th>P&amp;ID</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Utstyr</strong></td><td>Hovedutstyret</td><td>Alt utstyr, også motorer, overganger mellom rørdimensjoner og prøvetakere</td></tr>
+    <tr><td><strong>Rør</strong></td><td>De viktigste strømmene</td><td>Alle rør, hvert med sitt linjenummer, rørdimensjon og trykklasse</td></tr>
+    <tr><td><strong>Ventiler</strong></td><td>Bare de viktigste reguleringsventilene</td><td>Alle ventiler: stengeventiler, reguleringsventiler, tømmeventiler og sikkerhetsventiler</td></tr>
+    <tr><td><strong>Instrumenter</strong></td><td>Den viktigste reguleringen, forenklet</td><td>Alle målere, brytere og alarmer, med tagnummer og signallinjer</td></tr>
+    <tr><td><strong>Driftsdata</strong></td><td>Strømtabell med mengde, temperatur og trykk</td><td>Vanligvis ikke. Utstyret har ofte en boks med tekniske data.</td></tr>
+    <tr><td><strong>Merknader</strong></td><td>Få</td><td>Merknader (på engelsk <em>notes</em>) som forklarer hvordan ting virker, for eksempel hva som stopper en pumpe</td></tr>
+  </tbody>
+</table>
+
+<h2>Eksempel: pumpe 3 i pumperommet</h2>
+<p>På siden <a href="hva-viser-et-prosessflytskjema.html">Hva viser et prosessflytskjema?</a> var pumpe 3 bare en pumpe, et rør og en reguleringsventil på vei til tank 1. Figuren under viser den samme linja slik den ser ut i P&amp;ID-en, men forenklet.</p>
+
+<figure>
+  <img src="bilder/pid-pumpe3-pumperom.svg" alt="Forenklet utsnitt av P&amp;ID-en for pumperommet, fra tank 3 gjennom pumpe 3 til tank 1. Nede til venstre kommer sugeledningen W-12101-150-16 fra tank 3. Røret går opp gjennom en overgang, stengeventilen V-12030 og strømningsvakten FZ 12073 til pumpa P-12003, som drives av en motor (M). Etter pumpa sitter trykkindikatoren PI 12066 og stengeventilen V-12031. Røret W-12133-80-16 går videre til reguleringsventilen LCV-12032, merket FO, og ned i tank 1 (T-12051). En nivåregulator (LIC) styrer ventilen og får signal fra nivågiveren LT 12075 på tanken. På høyre side av tanken sitter LZ 12076 (HH), LA 12077 (H) og LZ 12078 (L). Fra bunnen av tanken går et rør med ventilen V-12050 tilbake til tank 3." width="820">
+  <figcaption>Figur: Utsnitt av P&amp;ID-en for pumperommet: linja fra tank 3 gjennom pumpe 3 til tank 1. Utsnittet er forenklet, og noen ventiler og instrumenter er utelatt. Sirklene er instrumenter, og de stiplede linjene er signaler.</figcaption>
+</figure>
+
+<p>Dette er nytt sammenlignet med prosessflytskjemaet:</p>
+<ul>
+  <li><strong>Stengeventiler</strong> før og etter pumpa (V-12030 og V-12031). Med dem kan pumpa stenges av fra resten av anlegget, for eksempel før vedlikehold.</li>
+  <li><strong>Motoren</strong> (M) som driver pumpa.</li>
+  <li><strong>En overgang</strong> der røret går fra en tykkere til en tynnere dimensjon, rett før stengeventilen V-12030.</li>
+  <li><strong>Linjenummer</strong> på rørene, for eksempel W-12133-80-16.</li>
+  <li><strong>Instrumenter</strong> på pumpa: en strømningsvakt (FZ 12073) som merker om det ikke strømmer nok vann inn til pumpa, og en trykkindikator (PI 12066) som viser trykket etter pumpa.</li>
+  <li><strong>Instrumenter</strong> på tanken: en nivågiver (LT 12075) som sender nivået til regulatoren, og nivåbrytere og en alarm for lavt (L), høyt (H) og høyt-høyt (HH) nivå.</li>
+  <li><strong>FO</strong> ved reguleringsventilen. Det betyr at ventilen går helt åpen hvis den mister trykkluft eller signal (på engelsk <em>fail open</em>).</li>
+</ul>
+
+<h2>Linjenummeret</h2>
+<p>Hvert rør i en P&amp;ID har et linjenummer. I pumperommet er det bygd opp slik:</p>
+<table>
+  <thead><tr><th>Del</th><th>Eksempel</th><th>Betyr</th></tr></thead>
+  <tbody>
+    <tr><td>Stoff</td><td>W</td><td>Hva som går i røret, her vann</td></tr>
+    <tr><td>Nummer</td><td>12133</td><td>Rørets eget nummer</td></tr>
+    <tr><td>Dimensjon</td><td>80</td><td>Hvor stort røret er (DN 80, omtrent 80 mm innvendig)</td></tr>
+    <tr><td>Trykklasse</td><td>16</td><td>Hvor høyt trykk røret er laget for (PN 16, 16 bar)</td></tr>
+  </tbody>
+</table>
+<p>Oppbygningen varierer mellom firmaer, så sjekk symbolforklaringen på tegningen. Mer om rør og ventiler kommer på neste side.</p>
+
+<h2>Merknadene</h2>
+<p>En P&amp;ID har ofte merknader i margen. De forklarer det som er vanskelig å vise med symboler. I pumperommet står det for eksempel at for lav strømning inn på pumpene (LL) stopper pumpene, og at høyt-høyt nivå (HH) i tankene stopper pumpene. Slike stopp kalles forriglinger, og du lærer mer om dem i emnet om forriglingsmatrise.</p>
+
+<h2>Instrumentene</h2>
+<p>Bokstavene i instrumentenes tagnummer forteller hva som måles og hva instrumentet gjør. LT betyr for eksempel nivå (L) og giver (T). Hvordan du leser bokstavkodene og instrumentsymbolene, lærer du på siden <a href="../05-maling-styring-regulering/instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a> i temaet Automasjon.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Bruk alltid siste utgave (revisjon) av P&amp;ID-en. Anlegg bygges om, og en gammel tegning kan vise en ventil som ikke lenger finnes, eller mangle et rør. Stenger du av utstyr etter feil tegning, kan det komme væske eller trykk der du ikke venter det. Revisjonen står i tegningsrammen nederst til høyre.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva står P&amp;ID for?</p>
+  <ul>
+    <li>Prosess og innretning (process and installation diagram)</li>
+    <li data-riktig>Tegning av rør og instrumenter (piping and instrumentation diagram)</li>
+    <li>Pumpe- og innløpsdiagram</li>
+  </ul>
+  <p class="forklaring">P&amp;ID er det engelske <em>piping and instrumentation diagram</em>. På norsk heter det teknisk flytskjema.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hvorfor har pumpe 3 en stengeventil både før og etter seg?</p>
+  <ul>
+    <li data-riktig>Slik at pumpa kan stenges av fra resten av anlegget, for eksempel før vedlikehold</li>
+    <li>Slik at pumpa kan regulere nivået i tank 1</li>
+    <li>Slik at trykket blir høyere</li>
+  </ul>
+  <p class="forklaring">Med begge ventilene stengt kan pumpa tømmes og tas ut, uten at vann renner inn fra tanken eller tilbake fra røret.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva betyr tallet 80 i linjenummeret W-12133-80-16?</p>
+  <ul>
+    <li>Hvor mange meter røret er</li>
+    <li data-riktig>Hvor stort røret er (DN 80)</li>
+    <li>Hvor mange kubikkmeter vann som går gjennom røret i timen</li>
+  </ul>
+  <p class="forklaring">Tallet etter nummeret er dimensjonen til røret. Det siste tallet, 16, er trykklassen.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Ved reguleringsventilen LCV-12032 står det FO. Hva betyr det?</p>
+  <ul>
+    <li>At ventilen er laget av jern (Fe)</li>
+    <li>At ventilen alltid står åpen</li>
+    <li data-riktig>At ventilen går helt åpen hvis den mister trykkluft eller signal</li>
+  </ul>
+  <p class="forklaring">FO står for <em>fail open</em>. Ventilen har en fjær som åpner den hvis trykklufta eller signalet forsvinner.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hvorfor skal du alltid bruke siste revisjon av P&amp;ID-en?</p>
+  <ul>
+    <li>Fordi gamle tegninger har dårligere symboler</li>
+    <li data-riktig>Fordi anlegget kan være bygd om, og en gammel tegning kan være feil</li>
+    <li>Fordi bare den siste revisjonen har tagnummer</li>
+  </ul>
+  <p class="forklaring">En gammel tegning kan vise ventiler eller rør som ikke finnes lenger. Det kan gi farlige feil når utstyr skal stenges av.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>teknisk flytskjema</td><td>En detaljert tegning av anlegget med utstyr, rør, ventiler og instrumenter, tegnet med faste symboler. Kalles også P&amp;ID.</td><td>piping and instrumentation diagram (P&amp;ID)</td></tr>
+    <tr><td>linjenummer</td><td>Nummeret på et rør i en P&amp;ID. Det sier ofte hva som går i røret, og hvor stort røret er.</td><td>line number</td></tr>
+    <tr><td>stengeventil</td><td>Ventil som er helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>isolation valve</td></tr>
+    <tr><td>revisjon</td><td>En ny utgave av en tegning etter at noe er endret. Revisjonen har et nummer eller en bokstav.</td><td>revision</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../05-maling-styring-regulering/instrumentsymboler-og-pid.html">Instrumentsymboler og P&amp;ID</a> i temaet Automasjon forklarer bokstavkodene og instrumentsymbolene.</li>
+  <li><a href="hva-viser-et-prosessflytskjema.html">Hva viser et prosessflytskjema?</a> viser det samme anlegget med færre detaljer.</li>
+</ul>
+<p><small>Om kildene: Teksten og figurene på denne siden er laget for dette nettstedet. Eksemplet bygger på det tekniske flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

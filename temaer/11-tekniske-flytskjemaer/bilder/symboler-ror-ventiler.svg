@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" font-family="Segoe UI, Arial, sans-serif">
+  <title>Symboler for ventiler og rørdeler i P&amp;ID: ventil eller sluseventil, kuleventil, spjeldventil, seteventil, tilbakeslagsventil, reguleringsventil, treveisventil, sikkerhetsventil, overgang, sil, endelokk, og hovedlinje og mindre linje.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="640" rx="10" fill="#ffffff"/>
+
+  <g stroke="#e3e8e8" stroke-width="1.5">
+    <line x1="200" y1="10" x2="200" y2="630"/>
+    <line x1="400" y1="10" x2="400" y2="630"/>
+    <line x1="600" y1="10" x2="600" y2="630"/>
+    <line x1="10" y1="213" x2="790" y2="213"/>
+    <line x1="10" y1="426" x2="790" y2="426"/>
+  </g>
+
+  <!-- rørstubber -->
+  <g stroke="#1c2828" stroke-width="2.5">
+    <line x1="40" y1="100" x2="70" y2="100"/><line x1="130" y1="100" x2="160" y2="100"/>
+    <line x1="240" y1="100" x2="270" y2="100"/><line x1="330" y1="100" x2="360" y2="100"/>
+    <line x1="440" y1="100" x2="470" y2="100"/><line x1="530" y1="100" x2="560" y2="100"/>
+    <line x1="640" y1="100" x2="670" y2="100"/><line x1="730" y1="100" x2="760" y2="100"/>
+
+    <line x1="40" y1="313" x2="70" y2="313"/><line x1="130" y1="313" x2="160" y2="313"/>
+    <line x1="240" y1="313" x2="270" y2="313"/><line x1="330" y1="313" x2="360" y2="313"/>
+    <line x1="440" y1="313" x2="470" y2="313"/><line x1="530" y1="313" x2="560" y2="313"/>
+    <line x1="500" y1="343" x2="500" y2="370"/>
+    <line x1="730" y1="313" x2="760" y2="313"/><line x1="700" y1="343" x2="700" y2="370"/>
+  </g>
+
+  <!-- rad 1 -->
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="2.5">
+    <path d="M70,85 L130,115 L130,85 L70,115 Z"/>
+    <path d="M270,85 L330,115 L330,85 L270,115 Z"/>
+    <path d="M470,85 L530,115 L530,85 L470,115 Z"/>
+    <path d="M670,85 L730,115 L730,85 L670,115 Z"/>
+  </g>
+  <circle cx="300" cy="100" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="500" y1="80" x2="500" y2="120" stroke="#1c2828" stroke-width="2.5"/>
+  <circle cx="700" cy="100" r="6" fill="#1c2828"/>
+
+  <!-- rad 2 -->
+  <!-- tilbakeslagsventil -->
+  <path d="M70,298 L100,313 L70,328 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <path d="M130,298 L100,313 L130,328 Z" fill="#1c2828" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="75" y1="278" x2="125" y2="278" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <!-- reguleringsventil -->
+  <path d="M270,298 L330,328 L330,298 L270,328 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="300" y1="313" x2="300" y2="283" stroke="#1c2828" stroke-width="2.5"/>
+  <path d="M282,283 A18,18 0 0 1 318,283 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <!-- treveisventil -->
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="2.5">
+    <path d="M470,298 L500,313 L470,328 Z"/>
+    <path d="M530,298 L500,313 L530,328 Z"/>
+    <path d="M485,343 L500,313 L515,343 Z"/>
+  </g>
+  <!-- sikkerhetsventil -->
+  <g fill="#ffffff" stroke="#1c2828" stroke-width="2.5">
+    <path d="M685,343 L700,313 L715,343 Z"/>
+    <path d="M730,298 L700,313 L730,328 Z"/>
+  </g>
+  <path d="M700,313 L700,300 L691,295 L709,288 L691,281 L709,274 L700,269 L700,260" fill="none" stroke="#1c2828" stroke-width="2"/>
+
+  <!-- rad 3 -->
+  <!-- overgang -->
+  <line x1="40" y1="526" x2="88" y2="526" stroke="#1c2828" stroke-width="4"/>
+  <path d="M88,512 L112,519 L112,533 L88,540 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="112" y1="526" x2="160" y2="526" stroke="#1c2828" stroke-width="2"/>
+  <!-- sil -->
+  <line x1="240" y1="526" x2="285" y2="526" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="315" y1="526" x2="360" y2="526" stroke="#1c2828" stroke-width="2.5"/>
+  <rect x="285" y="511" width="30" height="30" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <line x1="285" y1="541" x2="315" y2="511" stroke="#1c2828" stroke-width="2"/>
+  <!-- endelokk -->
+  <line x1="440" y1="526" x2="510" y2="526" stroke="#1c2828" stroke-width="2.5"/>
+  <path d="M510,511 A15,15 0 0 1 510,541 Z" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <!-- linjer -->
+  <line x1="630" y1="505" x2="760" y2="505" stroke="#1c2828" stroke-width="4.5" marker-end="url(#pil)"/>
+  <line x1="630" y1="545" x2="760" y2="545" stroke="#1c2828" stroke-width="1.5" marker-end="url(#pil)"/>
+
+  <!-- navn -->
+  <g font-size="15" fill="#1c2828" text-anchor="middle">
+    <text x="100" y="180">Ventil</text>
+    <text x="100" y="197">(sluseventil)</text>
+    <text x="300" y="180">Kuleventil</text>
+    <text x="500" y="180">Spjeldventil</text>
+    <text x="700" y="180">Seteventil</text>
+
+    <text x="100" y="395">Tilbakeslags-</text>
+    <text x="100" y="412">ventil</text>
+    <text x="300" y="395">Reguleringsventil</text>
+    <text x="500" y="395">Treveisventil</text>
+    <text x="700" y="395">Sikkerhetsventil</text>
+
+    <text x="100" y="595">Overgang</text>
+    <text x="300" y="595">Sil</text>
+    <text x="500" y="595">Endelokk</text>
+    <text x="700" y="595">Hovedlinje og</text>
+    <text x="700" y="612">mindre linje</text>
+  </g>
+</svg>

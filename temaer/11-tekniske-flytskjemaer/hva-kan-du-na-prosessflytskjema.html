@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Prosessflytskjema – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Dette er siste steg i emnet «Prosessflytskjema». Gå gjennom sjekklisten, les prosessflytskjemaet og strømtabellen, og svar på quizen. Står du fast, går du tilbake til siden det gjelder.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare hva et prosessflytskjema viser, og hvordan det skiller seg fra et blokkskjema.</li>
+  <li>Jeg vet hva et tagnummer er, og hvor jeg finner det.</li>
+  <li>Jeg kan lese en strømtabell og finne mengde, temperatur og trykk for en strøm.</li>
+  <li>Jeg kan finne den forenklede reguleringen i et prosessflytskjema og forklare hva den gjør.</li>
+  <li>Jeg kjenner igjen symbolene for tank, pumpe, varmeveksler, kompressor, kolonne, ventil og reguleringsventil.</li>
+  <li>Jeg vet at jeg skal sjekke symbolforklaringen når jeg møter et symbol jeg ikke kjenner.</li>
+  <li>Jeg vet hva et prosessflytskjema ikke viser, og hvor jeg finner det.</li>
+</ul>
+
+<h2>Les prosessflytskjemaet</h2>
+<p>Figuren viser en del av et anlegg der et varmt produkt kjøles ned med sjøvann før det lagres. I dette anlegget betyr T tank, P pumpe og E varmeveksler. Bruk figuren og strømtabellen når du svarer på quizen.</p>
+
+<figure>
+  <img src="bilder/prosessflytskjema-kjoler.svg" alt="Prosessflytskjema for kjøling av et produkt. Fra produkttanken T-101 går produktet (strøm 1) til pumpa P-102. Pumpa sender det (strøm 2) inn i kjøleren E-103, og videre (strøm 3) til lagertanken T-104. Fra lagertanken går produktet til tapping. Sjøvann (strøm 4) kommer inn nedenfra gjennom reguleringsventilen TCV-105, går gjennom kjøleren og ut på toppen (strøm 5). En temperaturregulator, TIC, måler temperaturen på produktet etter kjøleren og styrer TCV-105 med en stiplet signallinje." width="820">
+  <figcaption>Figur: Prosessflytskjema for kjøling av et produkt. Svarte linjer er produkt, og blå linjer er sjøvann. Den stiplede linja er et styresignal. Anlegget og tallene er laget som eksempel.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Strøm</th><th>Stoff</th><th>Mengde (kg/h)</th><th>Temperatur (°C)</th><th>Trykk (bar overtrykk)</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>produkt</td><td>10 000</td><td>80</td><td>0,2</td></tr>
+    <tr><td>2</td><td>produkt</td><td>10 000</td><td>80</td><td>3,0</td></tr>
+    <tr><td>3</td><td>produkt</td><td>10 000</td><td>30</td><td>2,5</td></tr>
+    <tr><td>4</td><td>sjøvann</td><td>50 000</td><td>8</td><td>2,0</td></tr>
+    <tr><td>5</td><td>sjøvann</td><td>50 000</td><td>18</td><td>1,5</td></tr>
+  </tbody>
+</table>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>1. Hva er tagnummeret til kjøleren?</p>
+  <ul>
+    <li>P-102</li>
+    <li data-riktig>E-103</li>
+    <li>TCV-105</li>
+  </ul>
+  <p class="forklaring">Kjøleren er en varmeveksler, og i dette anlegget har den tagnummeret E-103. P-102 er pumpa, og TCV-105 er reguleringsventilen.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Hvor varmt er produktet når det kommer til lagertanken?</p>
+  <ul>
+    <li>80 °C</li>
+    <li data-riktig>30 °C</li>
+    <li>18 °C</li>
+  </ul>
+  <p class="forklaring">Produktet går til lagertanken i strøm 3. Strømtabellen viser 30 °C. 18 °C er sjøvannet som går ut av kjøleren.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvorfor er trykket høyere i strøm 2 enn i strøm 1?</p>
+  <ul>
+    <li data-riktig>Fordi pumpa øker trykket</li>
+    <li>Fordi produktet blir kaldere</li>
+    <li>Fordi sjøvannet presser på produktet</li>
+  </ul>
+  <p class="forklaring">Strøm 1 går inn i pumpa, og strøm 2 kommer ut av den. Pumpa øker trykket fra 0,2 til 3,0 bar, slik at produktet kan strømme gjennom kjøleren og opp i lagertanken.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvilken strøm tar opp varmen fra produktet?</p>
+  <ul>
+    <li>Strøm 1</li>
+    <li>Strøm 3</li>
+    <li data-riktig>Sjøvannet, strøm 4 og 5</li>
+  </ul>
+  <p class="forklaring">Sjøvannet kommer inn med 8 °C og går ut med 18 °C. Det har tatt opp varmen som produktet har gitt fra seg.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hva gjør TIC og TCV-105?</p>
+  <ul>
+    <li>De holder nivået i lagertanken stabilt</li>
+    <li data-riktig>De holder temperaturen på produktet etter kjøleren stabil ved å regulere sjøvannet</li>
+    <li>De stopper pumpa hvis det blir for varmt</li>
+  </ul>
+  <p class="forklaring">TIC er en temperaturregulator. Den måler temperaturen på produktet etter kjøleren og åpner eller struper sjøvannsventilen TCV-105.</p>
+</div>
+
+<div class="quiz">
+  <p>6. Du skal finne alle stengeventilene rundt pumpa. Hvor ser du?</p>
+  <ul>
+    <li>I strømtabellen</li>
+    <li>I dette prosessflytskjemaet</li>
+    <li data-riktig>I det tekniske flytskjemaet (P&amp;ID)</li>
+  </ul>
+  <p class="forklaring">Prosessflytskjemaet viser bare hovedutstyret og den viktigste reguleringen. Alle ventiler står i P&amp;ID-en.</p>
+</div>
+
+<h2>Kjenner du igjen symbolene?</h2>
+
+<div class="quiz">
+  <p>7. Hvilket symbol viser en kolonne med bunner (plater)?</p>
+  <ul>
+    <li>En kolonne med et kryss i midten</li>
+    <li data-riktig>En kolonne med streker på tvers</li>
+    <li>Et trapes som er bredt i den ene enden</li>
+  </ul>
+  <p class="forklaring">Strekene på tvers er bunnene i en destillasjonskolonne. Krysset viser fyllmasse, og trapeset er en kompressor.</p>
+</div>
+
+<div class="quiz">
+  <p>8. Hvordan ser du at en ventil er en reguleringsventil?</p>
+  <ul>
+    <li>Den er tegnet med en sirkel rundt</li>
+    <li data-riktig>Den har en stang og en halvsirkel (aktuator) på toppen</li>
+    <li>Den er tegnet med stiplede linjer</li>
+  </ul>
+  <p class="forklaring">Aktuatoren er motoren som beveger ventilen. Den viser at ventilen styres fra en regulator.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Sommeren kommer, og sjøvannet blir varmere. Hva gjør temperaturregulatoren?</summary>
+  <p>Varmere sjøvann kjøler dårligere, så produktet blir varmere enn 30 °C etter kjøleren. TIC merker det og åpner TCV-105 mer, slik at det kommer mer sjøvann gjennom kjøleren. Da blir produktet kjølt ned til 30 °C igjen.</p>
+</details>
+
+<details>
+  <summary>2. Hvorfor er mengden den samme i strøm 1, 2 og 3?</summary>
+  <p>Det er det samme produktet som går gjennom pumpa og kjøleren. Ingenting blir tilsatt eller tatt ut underveis, så det som går inn, må komme ut (massebalanse). Bare trykket og temperaturen endrer seg.</p>
+</details>
+
+<details>
+  <summary>3. Hva er forskjellen på et blokkskjema, et prosessflytskjema og et teknisk flytskjema (P&amp;ID)?</summary>
+  <p>Blokkskjemaet viser bare trinnene og strømmene mellom dem. Prosessflytskjemaet viser hovedutstyret med tagnummer, de viktigste strømmene med driftsdata og den viktigste reguleringen. P&amp;ID-en viser alt utstyr, alle rør, ventiler og instrumenter.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="hva-viser-et-prosessflytskjema.html">Hva viser et prosessflytskjema?</a></li>
+  <li><a href="symboler-for-utstyr.html">Symboler for utstyr</a></li>
+</ul>
+<p><small>Om kildene: Teksten, spørsmålene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

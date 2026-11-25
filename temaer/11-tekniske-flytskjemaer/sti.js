@@ -20,15 +20,15 @@ KPL.sti("11-tekniske-flytskjemaer", [
     emne: "Prosessflytskjema",
     sider: [
       { fil: "hva-viser-et-prosessflytskjema.html", tittel: "Hva viser et prosessflytskjema?", meny: "Hva viser det?", type: "fagstoff", status: "utkast" },
-      { tittel: "Symboler for utstyr", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "symboler-for-utstyr.html", tittel: "Symboler for utstyr", meny: "Symboler", type: "fagstoff", status: "utkast" },
+      { fil: "hva-kan-du-na-prosessflytskjema.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }
     ]
   },
   {
     emne: "Teknisk flytskjema (P&ID)",
     sider: [
-      { tittel: "Fra prosessflytskjema til P&ID", meny: "Fra PFD til P&ID", status: "planlagt" },
-      { tittel: "Rør og ventiler", status: "planlagt" },
+      { fil: "fra-prosessflytskjema-til-pid.html", tittel: "Fra prosessflytskjema til P&ID", meny: "Fra PFD til P&ID", type: "fagstoff", status: "utkast" },
+      { fil: "ror-og-ventiler.html", tittel: "Rør og ventiler", type: "fagstoff", status: "utkast" },
       { tittel: "Instrumenter og tagnummer", meny: "Instrumenter", status: "planlagt" },
       { tittel: "Øv: les en P&ID", status: "planlagt" },
       { tittel: "Hva kan du nå?", status: "planlagt" }

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rør og ventiler – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Rør og ventiler</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT2</div>
+
+<p class="ingress">Det meste av en P&amp;ID er rør og ventiler. Når du skal stenge av en pumpe, tømme en tank eller finne ut hvorfor det ikke kommer nok vann fram, er det disse strekene og symbolene du leser. På denne siden lærer du hvordan rør og ventiler er tegnet og merket.</p>
+
+<h2>Rørene</h2>
+<p>Hvert rør har et linjenummer, for eksempel W-12133-80-16. Du så på siden <a href="fra-prosessflytskjema-til-pid.html">Fra prosessflytskjema til P&amp;ID</a> at det sier hva som går i røret (W for vann), rørets nummer, dimensjonen og trykklassen.</p>
+<ul>
+  <li><strong>Dimensjonen</strong> oppgis som <strong>DN</strong> (nominell diameter). DN er standardstørrelsen på et rør. DN 80 er omtrent 80 mm innvendig.</li>
+  <li><strong>Trykklassen</strong> oppgis som <strong>PN</strong>. PN 16 betyr at røret med flenser og ventiler er laget for et trykk på opptil 16 bar.</li>
+</ul>
+
+<h3>Vanlige rør og tynne rør</h3>
+<p>I P&amp;ID-en for pumperommet har de fleste rør DN i linjenummeret, for eksempel 100, 80 og 50. Noen få rør har tall som 33,7 og 26,9. Det er tynnere rør, som her oppgis med utvendig diameter i millimeter i stedet for DN.</p>
+<table>
+  <thead><tr><th></th><th>Vanlige rør (piping)</th><th>Tynne rør (tubing)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Størrelse oppgis som</strong></td><td>DN, omtrent innvendig diameter</td><td>Utvendig diameter i mm</td></tr>
+    <tr><td><strong>Eksempel fra pumperommet</strong></td><td>W-12133-80-16 (DN 80)</td><td>W-12148-33,7-16 (33,7 mm utvendig)</td></tr>
+  </tbody>
+</table>
+
+<h3>Tykke og tynne streker</h3>
+<p>Tykkelsen på streken sier noe om hvor viktig røret er. Hovedprosesslinjene, der produktet går, tegnes tykt. Mindre linjer, for eksempel til tømming, prøvetaking eller instrumenter, tegnes tynnere. Der røret går over til en annen dimensjon, tegnes en <strong>overgang</strong>.</p>
+
+<h2>Ventilene</h2>
+<p>Ventiler har ulike jobber: Noen skal stenge, noen skal regulere, og noen skal verne anlegget. Hvordan de virker inni, lærer du på siden <a href="../03-enhetsoperasjoner/ventiltyper.html">Ventiltyper</a> i temaet Enhetsoperasjoner. Her ser vi på hvordan de tegnes.</p>
+
+<figure>
+  <img src="bilder/symboler-ror-ventiler.svg" alt="Tolv symboler i et rutenett. Ventil eller sluseventil: to trekanter som møtes i spissen, som en sløyfe. Kuleventil: sløyfe med en sirkel i midten. Spjeldventil: sløyfe med en loddrett strek gjennom midten. Seteventil: sløyfe med en svart prikk i midten. Tilbakeslagsventil: sløyfe der den ene trekanten er svart, med en pil over som viser strømningsretningen. Reguleringsventil: sløyfe med en stang og en halvsirkel på toppen. Treveisventil: tre trekanter som møtes i midten. Sikkerhetsventil: en trekant nedenfra og en fra siden, med en fjær (sikksakk) på toppen. Overgang: et lite trapes mellom en tykk og en tynn strek. Sil: en firkant med en skrå strek. Endelokk: en halvsirkel på enden av et rør. Hovedlinje og mindre linje: en tykk og en tynn strek med pilspiss." width="800">
+  <figcaption>Figur: Vanlige symboler for ventiler og rørdeler i en P&amp;ID. Symbolene kan se litt forskjellige ut fra firma til firma, så sjekk alltid symbolforklaringen.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Symbol</th><th>Jobb</th><th>Kjennetegn i symbolet</th></tr></thead>
+  <tbody>
+    <tr><td>Ventil (sluseventil)</td><td>Stenge</td><td>En enkel sløyfe. Brukes også når det ikke er viktig å vise ventiltypen.</td></tr>
+    <tr><td>Kuleventil</td><td>Stenge</td><td>Sirkel i midten (kula)</td></tr>
+    <tr><td>Spjeldventil</td><td>Stenge og strupe</td><td>Strek gjennom midten (skiva)</td></tr>
+    <tr><td>Seteventil</td><td>Regulere</td><td>Svart prikk i midten</td></tr>
+    <tr><td>Tilbakeslagsventil</td><td>Slippe væsken bare én vei</td><td>Den ene trekanten er svart. Pila viser hvilken vei væsken kan gå.</td></tr>
+    <tr><td>Reguleringsventil</td><td>Regulere etter signal fra en regulator</td><td>Aktuator (halvsirkel) på toppen</td></tr>
+    <tr><td>Treveisventil</td><td>Sende strømmen den ene eller den andre veien</td><td>Tre trekanter</td></tr>
+    <tr><td>Sikkerhetsventil</td><td>Slippe ut trykk når det blir for høyt</td><td>Fjær (sikksakk) på toppen, og røret svinger 90 grader</td></tr>
+  </tbody>
+</table>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Ventilene i pumperommet</div>
+  <p>De manuelle ventilene foran og etter hver pumpe er spjeldventiler. De brukes til å stenge av pumpa. Nivået i tankene styres av to reguleringsventiler, LCV-12022 og LCV-12032. Det finnes ingen tilbakeslagsventil i pumperommet.</p>
+</div>
+
+<h2>Hva skjer hvis ventilen mister signalet?</h2>
+<p>En reguleringsventil får trykkluft og signal for å bevege seg. Forsvinner trykklufta eller signalet, går ventilen til en fast stilling. Den kalles <strong>feilstilling</strong>, og den står ved ventilen i P&amp;ID-en:</p>
+<table>
+  <thead><tr><th>Kode</th><th>Engelsk</th><th>Betyr</th></tr></thead>
+  <tbody>
+    <tr><td>FO</td><td><em>fail open</em></td><td>Ventilen går helt åpen.</td></tr>
+    <tr><td>FC</td><td><em>fail close</em></td><td>Ventilen stenger helt.</td></tr>
+    <tr><td>FL</td><td><em>fail lock</em> eller <em>fail stayput</em></td><td>Ventilen blir stående der den er.</td></tr>
+  </tbody>
+</table>
+<p>Feilstillingen velges slik at anlegget blir så trygt som mulig når noe svikter. I pumperommet er LCV-12032 (fra pumpe 3) merket FO, og LCV-12022 (fra pumpe 2) er merket FC.</p>
+
+<h2>Andre rørdeler</h2>
+<ul>
+  <li><strong>Sil:</strong> holder igjen partikler, for eksempel foran en pumpe, slik at de ikke skader den.</li>
+  <li><strong>Endelokk:</strong> stenger enden av et rør som ikke er i bruk.</li>
+  <li><strong>Tømme- og lufteventiler:</strong> små ventiler på lave og høye punkter. De brukes til å tømme ut væske og slippe ut luft, for eksempel før vedlikehold. I pumperommet sitter det en tømmeventil ved hver pumpe.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>Før du arbeider på utstyr, må det stenges av med ventilene som P&amp;ID-en viser, og tømmes. Ventilene som er stengt, skal låses og merkes, slik at ingen åpner dem mens du arbeider. Følg alltid arbeidstillatelsen. Stenger du feil ventil, kan det komme væske eller trykk der du ikke venter det. En sikkerhetsventil skal aldri stenges av eller blokkeres. Les mer i temaet <a href="../01-hms/index.html">HMS</a>.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva betyr DN 50 i et linjenummer?</p>
+  <ul>
+    <li>At røret tåler 50 bar</li>
+    <li data-riktig>At røret er omtrent 50 mm innvendig</li>
+    <li>At røret er 50 meter langt</li>
+  </ul>
+  <p class="forklaring">DN er nominell diameter, standardstørrelsen på røret. Trykket oppgis med PN.</p>
+</div>
+
+<div class="quiz">
+  <p>2. I et linjenummer står det 33,7 der det vanligvis står DN. Hva betyr det?</p>
+  <ul>
+    <li data-riktig>Det er et tynt rør, og 33,7 er utvendig diameter i millimeter</li>
+    <li>Røret tåler 33,7 bar</li>
+    <li>Det renner 33,7 m³/h gjennom røret</li>
+  </ul>
+  <p class="forklaring">Noen tynne rør oppgis med utvendig diameter i millimeter i stedet for DN.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvordan kjenner du igjen en tilbakeslagsventil i symbolet?</p>
+  <ul>
+    <li>Den har en halvsirkel på toppen</li>
+    <li data-riktig>Den ene trekanten er svart, og en pil kan vise retningen</li>
+    <li>Den har en fjær på toppen</li>
+  </ul>
+  <p class="forklaring">Den svarte trekanten viser at ventilen bare slipper én vei. Halvsirkelen er en aktuator, og fjæra hører til sikkerhetsventilen.</p>
+</div>
+
+<div class="quiz">
+  <p>4. En reguleringsventil er merket FC. Hva skjer hvis trykklufta forsvinner?</p>
+  <ul>
+    <li>Ventilen går helt åpen</li>
+    <li data-riktig>Ventilen stenger helt</li>
+    <li>Ventilen blir stående der den er</li>
+  </ul>
+  <p class="forklaring">FC står for <em>fail close</em>. FO betyr at den går åpen, og FL at den blir stående.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Du skal skifte pakning på en pumpe. Hva må gjøres med ventilene først?</p>
+  <ul>
+    <li>Ingenting, pumpa er stoppet</li>
+    <li>Sikkerhetsventilen stenges</li>
+    <li data-riktig>Ventilene før og etter pumpa stenges, låses og merkes, og pumpa tømmes</li>
+  </ul>
+  <p class="forklaring">Pumpa må stenges av fra resten av anlegget og tømmes. Ventilene låses og merkes, slik at ingen åpner dem mens du arbeider. En sikkerhetsventil skal aldri stenges.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>DN</td><td>Nominell diameter: standardstørrelsen på et rør. DN40 er omtrent 40 mm innvendig.</td><td>nominal diameter (DN)</td></tr>
+    <tr><td>PN</td><td>Trykklassen til rør, flenser og ventiler. PN 16 betyr at de er laget for opptil 16 bar.</td><td>pressure nominal (PN)</td></tr>
+    <tr><td>overgang</td><td>En rørdel der røret går over fra én dimensjon til en annen.</td><td>reducer</td></tr>
+    <tr><td>stengeventil</td><td>Ventil som er helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>isolation valve</td></tr>
+    <tr><td>tilbakeslagsventil</td><td>En ventil som slipper væsken bare én vei og stenger av seg selv hvis strømmen snur.</td><td>check valve, non-return valve</td></tr>
+    <tr><td>sikkerhetsventil</td><td>En fjærbelastet ventil som åpner av seg selv når trykket blir for høyt, og stenger når det har falt.</td><td>safety valve, pressure relief valve</td></tr>
+    <tr><td>feilstilling</td><td>Stillingen en reguleringsventil går til hvis den mister trykkluft eller signal: åpen (FO), stengt (FC) eller der den står (FL).</td><td>fail-safe position</td></tr>
+    <tr><td>sil</td><td>En rørdel med et nett som holder igjen partikler i væsken.</td><td>strainer</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../03-enhetsoperasjoner/ventiltyper.html">Ventiltyper</a> i temaet Enhetsoperasjoner forklarer hvordan ventilene virker.</li>
+  <li><a href="fra-prosessflytskjema-til-pid.html">Fra prosessflytskjema til P&amp;ID</a> forklarer linjenummeret.</li>
+</ul>
+<p><small>Om kildene: Teksten og figurene på denne siden er laget for dette nettstedet. Symbolene er tegnet på nytt etter symbolforklaringer som brukes i undervisningen ved Sauda vgs. Eksemplene bygger på det tekniske flytskjemaet for pumperommet ved Sauda vgs. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
