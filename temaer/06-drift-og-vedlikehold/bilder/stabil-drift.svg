@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>To trender for temperaturen i en reaktor med alarmgrense 85 °C. Til venstre ustabil drift: temperaturen svinger mellom 76 og 84 °C, og settpunktet må ligge på 80 °C. Til høyre stabil drift: temperaturen svinger bare mellom 82 og 84 °C, og settpunktet kan ligge på 83 °C, nærmere grensen.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="300" rx="10" fill="#ffffff"/>
+
+  <!-- Overskrifter -->
+  <g font-size="15" font-weight="bold" fill="#1c2828">
+    <text x="50" y="28">Ustabil drift</text>
+    <text x="360" y="28">Stabil drift</text>
+  </g>
+
+  <!-- y = 50 + (90 - T) * 10 -->
+  <!-- Grensefelt over 85 -->
+  <rect x="50" y="50" width="250" height="50" fill="#f6c6c0"/>
+  <rect x="360" y="50" width="250" height="50" fill="#f6c6c0"/>
+  <g stroke="#b3261e" stroke-width="2">
+    <line x1="50" y1="100" x2="300" y2="100"/>
+    <line x1="360" y1="100" x2="610" y2="100"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="56" y="70">Alarmgrense 85 °C</text>
+    <text x="366" y="70">Alarmgrense 85 °C</text>
+  </g>
+
+  <!-- Settpunkt -->
+  <g stroke="#1c2828" stroke-width="1.5" stroke-dasharray="6 4">
+    <line x1="50" y1="150" x2="300" y2="150"/>
+    <line x1="360" y1="120" x2="610" y2="120"/>
+  </g>
+
+  <!-- Akser -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="50" y1="250" x2="308" y2="250"/>
+    <line x1="50" y1="250" x2="50" y2="42"/>
+    <line x1="360" y1="250" x2="618" y2="250"/>
+    <line x1="360" y1="250" x2="360" y2="42"/>
+  </g>
+  <g font-size="12" fill="#1c2828" text-anchor="end">
+    <text x="44" y="104">85</text>
+    <text x="44" y="154">80</text>
+    <text x="44" y="204">75</text>
+    <text x="354" y="104">85</text>
+    <text x="354" y="154">80</text>
+    <text x="354" y="204">75</text>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="300" y="268" text-anchor="end">tid</text>
+    <text x="610" y="268" text-anchor="end">tid</text>
+    <text x="16" y="150" text-anchor="middle" transform="rotate(-90 16 150)">Temperatur (°C)</text>
+  </g>
+
+  <!-- Kurver -->
+  <polyline points="50,150 75,120 100,110 125,140 150,180 175,190 200,160 225,115 250,110 275,150 300,180" fill="none" stroke="#1f5f9e" stroke-width="3"/>
+  <polyline points="360,120 385,112 410,115 435,126 460,128 485,120 510,111 535,117 560,127 585,124 610,116" fill="none" stroke="#1f5f9e" stroke-width="3"/>
+
+  <!-- Merkelapper -->
+  <g font-size="12" fill="#1c2828">
+    <text x="56" y="232">- - settpunkt 80 °C</text>
+    <text x="366" y="232">- - settpunkt 83 °C</text>
+  </g>
+  <text x="320" y="292" font-size="12" fill="#1c2828" text-anchor="middle">Mindre svingninger gjør at settpunktet kan flyttes nærmere alarmgrensen.</text>
+</svg>

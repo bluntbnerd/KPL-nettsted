@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="Segoe UI, Arial, sans-serif">
+  <title>Kurve for tilstanden til et utstyr over tid. Først er utstyret i god stand, og kurven er flat. I punkt P kan de første tegnene på feil måles, for eksempel vibrasjon, lyd, varme eller slitasje. Så faller kurven stadig raskere ned til punkt F, der utstyret havarerer. Tiden mellom P og F er tiden du har til å planlegge og reparere.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="340" rx="10" fill="#ffffff"/>
+
+  <!-- Akser -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="60" y1="280" x2="610" y2="280"/>
+    <line x1="60" y1="280" x2="60" y2="30"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="606" y="298" text-anchor="end">tid</text>
+    <text x="68" y="40">god</text>
+    <text x="68" y="274">dårlig</text>
+    <text x="30" y="160" text-anchor="middle" transform="rotate(-90 30 160)">Tilstanden til utstyret</text>
+  </g>
+
+  <!-- Stiplede hjelpelinjer -->
+  <g stroke="#1c2828" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="355" y1="81" x2="355" y2="280"/>
+    <line x1="560" y1="262" x2="560" y2="280"/>
+  </g>
+
+  <!-- Kurve -->
+  <path d="M70,60 L280,64 C380,72 480,140 560,262" fill="none" stroke="#1f5f9e" stroke-width="3"/>
+
+  <!-- Punkt P og F -->
+  <circle cx="355" cy="81" r="7" fill="#e0a800" stroke="#1c2828" stroke-width="1.5"/>
+  <circle cx="560" cy="262" r="7" fill="#b3261e" stroke="#1c2828" stroke-width="1.5"/>
+
+  <g font-size="12" fill="#1c2828">
+    <text x="100" y="52">Utstyret er i god stand</text>
+    <text x="345" y="34" font-weight="bold">P: Første tegn på feil kan måles</text>
+    <text x="345" y="50">(vibrasjon, lyd, varme, slitasje)</text>
+    <text x="575" y="258" font-weight="bold">F: Havari</text>
+  </g>
+  <line x1="355" y1="56" x2="355" y2="72" stroke="#1c2828" stroke-width="1.5"/>
+
+  <!-- P–F-tid -->
+  <g stroke="#1c2828" stroke-width="2">
+    <line x1="355" y1="305" x2="560" y2="305"/>
+    <line x1="355" y1="298" x2="355" y2="312"/>
+    <line x1="560" y1="298" x2="560" y2="312"/>
+  </g>
+  <text x="457" y="328" font-size="12" fill="#1c2828" text-anchor="middle">Tid til å planlegge og reparere</text>
+</svg>

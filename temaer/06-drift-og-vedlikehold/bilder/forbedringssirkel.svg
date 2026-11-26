@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" font-family="Segoe UI, Arial, sans-serif">
+  <title>Forbedringssirkelen brukt på silen som går tett. 1. Planlegge: Silen går tett tre ganger i måneden. Årsak: mer partikler i det nye råstoffet. Tiltak: rense den hver mandag. 2. Utføre: Prøv i fire uker og skriv ned trykket. 3. Kontrollere: Ingen stopp på fire uker. 4. Forbedre: Rensingen blir fast rutine. Så begynner sirkelen på nytt.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="400" rx="10" fill="#ffffff"/>
+
+  <!-- Midten -->
+  <circle cx="300" cy="200" r="62" fill="#e3e8e8" stroke="#586868" stroke-width="2"/>
+  <g font-size="14" font-weight="bold" fill="#1c2828" text-anchor="middle">
+    <text x="300" y="195">Litt bedre</text>
+    <text x="300" y="213">hver gang</text>
+  </g>
+
+  <!-- Boksene -->
+  <g stroke="#586868" stroke-width="2">
+    <rect x="190" y="12" width="220" height="92" rx="8" fill="#bcd9ee"/>
+    <rect x="370" y="154" width="220" height="92" rx="8" fill="#fde2b8"/>
+    <rect x="190" y="296" width="220" height="92" rx="8" fill="#cfe8c8"/>
+    <rect x="10" y="154" width="220" height="92" rx="8" fill="#f6c6c0"/>
+  </g>
+  <g fill="#1c2828" text-anchor="middle">
+    <text x="300" y="34" font-size="16" font-weight="bold">1. Planlegge</text>
+    <text x="300" y="54" font-size="12">Silen går tett 3 ganger i måneden.</text>
+    <text x="300" y="71" font-size="12">Årsak: mer partikler i råstoffet.</text>
+    <text x="300" y="88" font-size="12">Tiltak: rense den hver mandag.</text>
+
+    <text x="480" y="180" font-size="16" font-weight="bold">2. Utføre</text>
+    <text x="480" y="202" font-size="12">Prøv i 4 uker.</text>
+    <text x="480" y="220" font-size="12">Skriv ned trykket foran pumpa.</text>
+
+    <text x="300" y="322" font-size="16" font-weight="bold">3. Kontrollere</text>
+    <text x="300" y="344" font-size="12">Ingen stopp på 4 uker.</text>
+    <text x="300" y="362" font-size="12">Tiltaket virket.</text>
+
+    <text x="120" y="180" font-size="16" font-weight="bold">4. Forbedre</text>
+    <text x="120" y="202" font-size="12">Rensingen blir fast rutine</text>
+    <text x="120" y="220" font-size="12">i vedlikeholdsplanen.</text>
+  </g>
+
+  <!-- Piler med klokka -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none" marker-end="url(#pil)">
+    <path d="M412,64 Q474,84 480,150"/>
+    <path d="M480,250 Q474,318 414,334"/>
+    <path d="M186,334 Q126,318 120,250"/>
+    <path d="M120,150 Q126,84 186,64"/>
+  </g>
+</svg>

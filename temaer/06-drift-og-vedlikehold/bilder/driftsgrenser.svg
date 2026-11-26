@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340" font-family="Segoe UI, Arial, sans-serif">
+  <title>Driftsgrenser for temperaturen i en reaktor. Normalområdet er mellom 75 og 85 °C, med settpunkt 80 °C. Mellom 85 og 90 °C og mellom 70 og 75 °C kommer det alarm. Over 90 °C og under 70 °C stopper forriglingen anlegget automatisk. Temperaturkurven ligger stabilt rundt 80 °C, men begynner å stige mot slutten.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="340" rx="10" fill="#ffffff"/>
+
+  <!-- Soner (y = 20 + (95 - T) * 9,333) -->
+  <rect x="70" y="20" width="370" height="46.7" fill="#f6c6c0"/>
+  <rect x="70" y="66.7" width="370" height="46.6" fill="#fde2b8"/>
+  <rect x="70" y="113.3" width="370" height="93.4" fill="#cfe8c8"/>
+  <rect x="70" y="206.7" width="370" height="46.6" fill="#fde2b8"/>
+  <rect x="70" y="253.3" width="370" height="46.7" fill="#f6c6c0"/>
+
+  <!-- Grenselinjer -->
+  <g stroke="#586868" stroke-width="1.5">
+    <line x1="70" y1="66.7" x2="440" y2="66.7"/>
+    <line x1="70" y1="113.3" x2="440" y2="113.3"/>
+    <line x1="70" y1="206.7" x2="440" y2="206.7"/>
+    <line x1="70" y1="253.3" x2="440" y2="253.3"/>
+  </g>
+  <line x1="70" y1="160" x2="440" y2="160" stroke="#1c2828" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Akser -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="70" y1="300" x2="450" y2="300"/>
+    <line x1="70" y1="300" x2="70" y2="12"/>
+  </g>
+  <g font-size="12" fill="#1c2828" text-anchor="end">
+    <text x="64" y="70.7">90</text>
+    <text x="64" y="117.3">85</text>
+    <text x="64" y="164">80</text>
+    <text x="64" y="210.7">75</text>
+    <text x="64" y="257.3">70</text>
+  </g>
+  <text x="18" y="160" font-size="12" fill="#1c2828" text-anchor="middle" transform="rotate(-90 18 160)">Temperatur (°C)</text>
+  <text x="440" y="320" font-size="12" fill="#1c2828" text-anchor="end">tid</text>
+
+  <!-- Temperaturkurve -->
+  <polyline points="70,160 107,155.3 144,163.7 181,158.1 218,161.9 255,156.3 292,150.7 329,143.2 366,135.7 403,128.3 440,120.8" fill="none" stroke="#1f5f9e" stroke-width="3"/>
+
+  <!-- Tekst til høyre -->
+  <g font-size="12" fill="#1c2828">
+    <text x="452" y="40" font-weight="bold">Forrigling</text>
+    <text x="452" y="55">stopper automatisk</text>
+    <text x="452" y="86" font-weight="bold">Alarm (høy)</text>
+    <text x="452" y="101">operatøren må handle</text>
+    <text x="452" y="145" font-weight="bold">Normalområde</text>
+    <text x="452" y="164">- - settpunkt 80 °C</text>
+    <text x="452" y="182">her skal prosessen gå</text>
+    <text x="452" y="226" font-weight="bold">Alarm (lav)</text>
+    <text x="452" y="241">operatøren må handle</text>
+    <text x="452" y="273" font-weight="bold">Forrigling</text>
+    <text x="452" y="288">stopper automatisk</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" font-family="Segoe UI, Arial, sans-serif">
+  <title>En boks i midten: Utstyr svikter. Fem piler går ut til fem bokser, én for hvert driftsmål. Sikkerhet: lekkasje av brennbar eller giftig væske, sikkerhetsventil som ikke åpner. Miljø: utslipp til luft, vann eller grunn. Kvalitet: feil måling eller belegg gir produkt utenfor spesifikasjonen. Mengde: uplanlagt stans, anlegget lager ingenting. Kostnad: dyre reparasjoner, tapt produksjon og salg.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="360" rx="10" fill="#ffffff"/>
+
+  <!-- Piler fra midten -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="260" y1="165" x2="200" y2="105"/>
+    <line x1="380" y1="165" x2="440" y2="105"/>
+    <line x1="250" y1="190" x2="200" y2="190"/>
+    <line x1="390" y1="190" x2="440" y2="190"/>
+    <line x1="320" y1="215" x2="320" y2="268"/>
+  </g>
+
+  <!-- Midten -->
+  <rect x="250" y="160" width="140" height="60" rx="8" fill="#1f5f9e"/>
+  <text x="320" y="196" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Utstyr svikter</text>
+
+  <!-- Boksene -->
+  <g stroke="#1c2828" stroke-width="1.5">
+    <rect x="20" y="20" width="200" height="84" rx="8" fill="#f6c6c0"/>
+    <rect x="420" y="20" width="200" height="84" rx="8" fill="#d6ecd2"/>
+    <rect x="20" y="150" width="180" height="84" rx="8" fill="#fde7b0"/>
+    <rect x="440" y="150" width="180" height="84" rx="8" fill="#dbe7f5"/>
+    <rect x="220" y="270" width="200" height="74" rx="8" fill="#eeeeee"/>
+  </g>
+  <g font-size="14" font-weight="bold" fill="#1c2828">
+    <text x="32" y="42">Sikkerhet</text>
+    <text x="432" y="42">Miljø</text>
+    <text x="32" y="172">Kvalitet</text>
+    <text x="452" y="172">Mengde</text>
+    <text x="232" y="292">Kostnad</text>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="32" y="62">Lekkasje av brennbar eller</text>
+    <text x="32" y="78">giftig væske. Sikkerhetsventil</text>
+    <text x="32" y="94">som ikke åpner.</text>
+    <text x="432" y="62">Utslipp til luft, vann</text>
+    <text x="432" y="78">eller grunn.</text>
+    <text x="32" y="192">Feil måling eller belegg</text>
+    <text x="32" y="208">gir produkt utenfor</text>
+    <text x="32" y="224">spesifikasjonen.</text>
+    <text x="452" y="192">Uplanlagt stans:</text>
+    <text x="452" y="208">anlegget lager</text>
+    <text x="452" y="224">ingenting.</text>
+    <text x="232" y="312">Dyre reparasjoner,</text>
+    <text x="232" y="328">tapt produksjon og salg.</text>
+  </g>
+</svg>

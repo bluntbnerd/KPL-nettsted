@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 290" width="640" height="290" font-family="Segoe UI, Arial, sans-serif">
+  <title>Seks bokser som viser veien til en vedlikeholdsjobb. Øverst fra venstre: 1. Behov: planen sier det er tid, eller noen melder en feil. 2. Arbeidsordre: hva, hvor og hvor viktig. 3. Planlegging: deler, folk, verktøy og arbeidstillatelse. Pil ned til nederste rad, fra høyre: 4. Utførelse: utstyret sikres, og jobben følger prosedyren. 5. Ferdigmelding: utstyret testes og settes i drift igjen. 6. Historikk: hva som ble gjort, funnet og brukt, skrives ned. En stiplet pil går fra historikk tilbake til behov: lære av historikken og forbedre planen.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="640" height="290" rx="10" fill="#ffffff"/>
+
+  <!-- Bokser -->
+  <g stroke="#1c2828" stroke-width="1.5">
+    <rect x="25" y="25" width="180" height="80" rx="8" fill="#dbe7f5"/>
+    <rect x="230" y="25" width="180" height="80" rx="8" fill="#dbe7f5"/>
+    <rect x="435" y="25" width="180" height="80" rx="8" fill="#dbe7f5"/>
+    <rect x="435" y="175" width="180" height="80" rx="8" fill="#d6ecd2"/>
+    <rect x="230" y="175" width="180" height="80" rx="8" fill="#d6ecd2"/>
+    <rect x="25" y="175" width="180" height="80" rx="8" fill="#fde7b0"/>
+  </g>
+
+  <!-- Piler -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="205" y1="65" x2="228" y2="65"/>
+    <line x1="410" y1="65" x2="433" y2="65"/>
+    <line x1="525" y1="105" x2="525" y2="173"/>
+    <line x1="435" y1="215" x2="412" y2="215"/>
+    <line x1="230" y1="215" x2="207" y2="215"/>
+  </g>
+  <line x1="115" y1="175" x2="115" y2="107" stroke="#1c2828" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#pil)"/>
+  <text x="125" y="140" font-size="12" font-style="italic" fill="#1c2828">Lære av historikken og forbedre planen</text>
+
+  <!-- Tekst -->
+  <g font-size="14" font-weight="bold" fill="#1c2828">
+    <text x="37" y="48">1. Behov</text>
+    <text x="242" y="48">2. Arbeidsordre</text>
+    <text x="447" y="48">3. Planlegging</text>
+    <text x="447" y="198">4. Utførelse</text>
+    <text x="242" y="198">5. Ferdigmelding</text>
+    <text x="37" y="198">6. Historikk</text>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="37" y="70">Planen sier det er tid,</text>
+    <text x="37" y="86">eller noen melder en feil.</text>
+    <text x="242" y="70">Hva skal gjøres, hvor,</text>
+    <text x="242" y="86">og hvor viktig er det?</text>
+    <text x="447" y="70">Deler, folk, verktøy</text>
+    <text x="447" y="86">og arbeidstillatelse.</text>
+    <text x="447" y="220">Utstyret sikres, og</text>
+    <text x="447" y="236">jobben følger prosedyren.</text>
+    <text x="242" y="220">Utstyret testes og</text>
+    <text x="242" y="236">settes i drift igjen.</text>
+    <text x="37" y="220">Hva ble gjort, funnet</text>
+    <text x="37" y="236">og brukt? Skrives ned.</text>
+  </g>
+</svg>

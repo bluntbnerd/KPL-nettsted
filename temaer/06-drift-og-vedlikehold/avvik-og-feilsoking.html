@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avvik og feilsøking – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Avvik og feilsøking</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> PT6</div>
+
+<p class="ingress">Før eller senere går noe galt i alle anlegg. En temperatur stiger, en pumpe gir for lite, eller produktet blir utenfor spesifikasjonen. En god operatør gjetter ikke, men leter etter årsaken på en ryddig måte, steg for steg.</p>
+
+<h2>Hva er et avvik?</h2>
+<p>Et <strong>avvik</strong> er noe som ikke gikk som det skulle, eller som bryter med en regel eller prosedyre. I driften betyr det at prosessen, produktet eller utstyret ikke er slik det skal være. Eksempler:</p>
+<ul>
+  <li>En temperatur er utenfor normalområdet.</li>
+  <li>En prøve viser at produktet er utenfor spesifikasjonen.</li>
+  <li>En pumpe vibrerer eller lager ny lyd.</li>
+  <li>Noen har gjort en jobb uten å følge prosedyren.</li>
+</ul>
+
+<div class="boks">
+  <div class="boks-tittel">Ordet «avvik» har to betydninger</div>
+  <p>I <a href="../05-maling-styring-regulering/settpunkt-maleverdi-avvik.html">regulering</a> betyr avvik forskjellen mellom settpunktet og måleverdien. Det er et tall som regulatoren bruker hele tiden, og et lite avvik er helt normalt. På denne siden, og i <a href="../01-hms/01-internkontroll.html">HMS</a>, betyr avvik at noe ikke er som det skal. Det må du gjøre noe med.</p>
+</div>
+
+<h2>Først: sikre</h2>
+<p>Når du oppdager et avvik, er det første spørsmålet alltid: <strong>Er det fare for folk, miljø eller utstyr?</strong> Hvis ja, skal du først gjøre anlegget trygt og varsle. Det kan bety å stoppe utstyr, gå over til reserveutstyr eller kjøre anlegget ned til en <strong>sikker tilstand</strong>, altså en tilstand der det ikke kan skje noe farlig. Følg prosedyren for nødstopp eller nedkjøring. Å finne årsaken kommer etterpå.</p>
+
+<h2>Feilsøking steg for steg</h2>
+<p><strong>Feilsøking</strong> er å finne årsaken til et avvik og rette den opp. Det går raskere og blir sikrere når du gjør det i en fast rekkefølge.</p>
+
+<figure>
+  <img src="bilder/feilsoking-steg.svg" alt="Seks bokser med piler mellom: 1. Sikre: Er det fare? Gjør anlegget trygt. 2. Beskriv problemet: Hva er galt, hvor, og når begynte det? 3. Samle fakta: trender, alarmer, runde, logg og kolleger. 4. Finn mulige årsaker: Er målingen riktig? Hva er endret? 5. Rett opp: den mest sannsynlige årsaken først, én ting om gangen. 6. Kontroller og logg: Virker det? Skriv i loggen og meld avvik." width="640">
+  <figcaption>Figur: Seks steg i feilsøking. Det første steget er alltid å sikre.</figcaption>
+</figure>
+
+<ol>
+  <li><strong>Sikre:</strong> Gjør anlegget trygt, slik det står over.</li>
+  <li><strong>Beskriv problemet:</strong> Hva er galt? Hvor i anlegget? Når begynte det? Kom det plutselig eller sakte? En presis beskrivelse gjør det lettere å finne årsaken, og lettere for andre å hjelpe deg.</li>
+  <li><strong>Samle fakta:</strong> Se på trendene og alarmlisten. Gå ut og se på utstyret. Les driftsloggen, og spør dem som var på jobb før deg.</li>
+  <li><strong>Finn mulige årsaker:</strong> Still disse spørsmålene:
+    <ul>
+      <li><strong>Er målingen riktig?</strong> Kanskje er det måleren som viser feil, ikke prosessen. Sammenlign med en lokal måler eller en annen måling som henger sammen med den.</li>
+      <li><strong>Hva er endret?</strong> Nytt råstoff, nytt settpunkt, vedlikehold i går, et annet vær? Avvik starter ofte rett etter en endring.</li>
+      <li><strong>Hvor starter det?</strong> Følg prosessen <strong>oppstrøms</strong> (dit stoffet kommer fra) og <strong>nedstrøms</strong> (dit det går videre). Et avvik i én tank kan ha årsak et helt annet sted.</li>
+    </ul>
+  </li>
+  <li><strong>Rett opp:</strong> Prøv den mest sannsynlige årsaken først, og helst det som er enklest og sikrest å sjekke. Endre én ting om gangen. Endrer du mange ting samtidig, vet du ikke hva som hjalp.</li>
+  <li><strong>Kontroller og logg:</strong> Følg med på trendene og se at prosessen kommer tilbake i normalområdet. Skriv i driftsloggen hva som skjedde, hva du fant og hva du gjorde.</li>
+</ol>
+
+<h2>Eksempel fra anlegget</h2>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Nivået i buffertanken stiger</div>
+  <p><strong>Situasjon:</strong> En buffertank tar imot væske fra en reaktor. En pumpe tar væsken ut av tanken og sender den videre. En nivåregulator styrer en ventil på utløpet, slik at nivået holdes på 50 %. Klokka 10 kommer alarmen «høyt nivå» ved 70 %.</p>
+  <p><strong>Feilsøkingen:</strong></p>
+  <ol>
+    <li><strong>Sikre:</strong> Nivået er 70 %, og forriglingen stopper innløpet ved 90 %. Det er tid til å feilsøke, men operatøren følger med på nivået hele tiden.</li>
+    <li><strong>Beskriv:</strong> Trenden viser at nivået har steget jevnt fra 50 % klokka 08 til 70 % klokka 10.</li>
+    <li><strong>Samle fakta:</strong> Ventilen på utløpet er 100 % åpen. Mengdemåleren på innløpet viser normalt, 12 m³/h. Mengdemåleren på utløpet viser bare 8 m³/h. Normalt er den 12 m³/h.</li>
+    <li><strong>Mulige årsaker:</strong>
+      <ul>
+        <li><em>Er målingen riktig?</em> Nivåglasset på tanken viser også omtrent 70 %. Tanken tar 40 m³. Det kommer inn 4 m³/h mer enn det går ut, og på 2 timer blir det 4 m³/h · 2 h = 8 m³. Det er 8 m³ / 40 m³ = 0,20, altså 20 % av tanken. Det stemmer med at nivået har steget fra 50 til 70 %. Målingene henger sammen, så det er prosessen som har et problem.</li>
+        <li><em>Hvor er problemet?</em> Innløpet er normalt. Ventilen er helt åpen, men det går lite ut. Problemet ligger altså i utløpet: i pumpa eller i røret.</li>
+        <li><em>Hva sier runden?</em> Pumpa lager en knitrende lyd. Trykkmåleren på sugesiden, foran pumpa, viser lavere trykk enn vanlig, og trykket ut av pumpa er også lavt. Det tyder på at pumpa får for lite væske inn. Lyden kan være <a href="../03-enhetsoperasjoner/pumpetyper.html">kavitasjon</a>.</li>
+        <li><em>Hva er endret?</em> Driftsloggen viser at det i går kom råstoff fra en ny leverandør.</li>
+      </ul>
+      Den mest sannsynlige årsaken er at <strong>silen</strong> foran pumpa er i ferd med å gå tett av partikler. En sil er en rørdel med et nett som holder igjen partikler i væsken.
+    </li>
+    <li><strong>Rett opp:</strong> Operatøren starter reservepumpa, som har en ren sil, og stopper pumpa med den tette silen. Vedlikehold får beskjed om å rense silen.</li>
+    <li><strong>Kontroller og logg:</strong> Utløpet går opp til 15 m³/h, og nivået synker mot 50 %. Da lukker regulatoren ventilen litt, og utløpet går tilbake til omtrent 12 m³/h. Operatøren skriver i loggen og melder avvik.</li>
+  </ol>
+</div>
+
+<h2>Finn rotårsaken</h2>
+<p>I eksemplet er problemet løst for i dag. Men hvis ingenting mer blir gjort, går silen tett igjen om noen dager. Den egentlige årsaken bak et avvik kalles <strong>rotårsaken</strong>. En enkel måte å finne den på er å spørre <em>hvorfor</em> flere ganger:</p>
+<ul>
+  <li>Hvorfor steg nivået? Fordi pumpa ga for lite.</li>
+  <li>Hvorfor ga pumpa for lite? Fordi silen var nesten tett.</li>
+  <li>Hvorfor gikk silen tett? Fordi det var mer partikler i væsken enn vanlig.</li>
+  <li>Hvorfor var det mer partikler? Fordi råstoffet fra den nye leverandøren har mer partikler.</li>
+</ul>
+<p>Nå vet bedriften hva som må gjøres: stille krav til leverandøren, eller rense silene oftere så lenge dette råstoffet brukes. Det er ikke alltid operatøren som finner rotårsaken alene. Men operatørens observasjoner og logg er ofte det som gjør det mulig.</p>
+
+<h2>Meld avviket</h2>
+<p>Bedriften har et system for <strong>avviksmeldinger</strong>. Der skriver du kort hva som skjedde, hva du gjorde og hva du tror årsaken er. Meldingen blir fulgt opp, slik at det samme ikke skjer igjen. Avviksmeldinger er ikke for å finne noen å skylde på, men for å lære. Det gjelder også nesten-ulykker og små feil. Les mer i <a href="../01-hms/01-internkontroll.html">Internkontroll</a>.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Sikre først:</strong> Ikke la feilsøkingen ta så lang tid at situasjonen blir farlig. Er du i tvil, gå til sikker tilstand og varsle.</li>
+    <li><strong>Ikke åpne utstyr i drift:</strong> En sil, en pumpe eller en ventil kan ha trykk, høy temperatur eller farlige kjemikalier. Utstyret skal stoppes, tømmes og sikres med <a href="../01-hms/06-loto.html">lås og merk</a> før det åpnes.</li>
+    <li><strong>Ikke stol blindt på én måling:</strong> En måler som viser feil, kan få deg til å gjøre feil ting. Sjekk med en annen måling når du kan.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Du oppdager et avvik. Hva gjør du først?</p>
+  <ul>
+    <li>Finner årsaken</li>
+    <li data-riktig>Vurderer om det er fare, og gjør anlegget trygt hvis det trengs</li>
+    <li>Skriver en avviksmelding</li>
+  </ul>
+  <p class="forklaring">Sikkerhet kommer først. Først når anlegget er trygt, leter du etter årsaken. Avviksmeldingen skrives til slutt.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En temperatur på skjermen er høyere enn vanlig. Hva er et godt første spørsmål når du leter etter årsaken?</p>
+  <ul>
+    <li data-riktig>Er målingen riktig, eller kan måleren vise feil?</li>
+    <li>Hvem var på jobb i går?</li>
+    <li>Hvor mye koster en ny temperaturmåler?</li>
+  </ul>
+  <p class="forklaring">Det kan være måleren og ikke prosessen som er feil. Sammenlign med en lokal måler eller en annen måling som henger sammen med den.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvorfor skal du bare endre én ting om gangen når du retter opp?</p>
+  <ul>
+    <li>Fordi det går fortere</li>
+    <li data-riktig>Fordi du ellers ikke vet hva som hjalp</li>
+    <li>Fordi styresystemet bare tillater én endring om gangen</li>
+  </ul>
+  <p class="forklaring">Endrer du flere ting samtidig, vet du ikke hvilken av dem som løste problemet, eller om én av dem gjorde noe annet verre.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hva er en rotårsak?</p>
+  <ul>
+    <li>Den første alarmen som kom</li>
+    <li>Feil på et rør</li>
+    <li data-riktig>Den egentlige årsaken bak et avvik</li>
+  </ul>
+  <p class="forklaring">Rotårsaken er den egentlige årsaken. Hvis bare symptomet rettes opp, for eksempel ved å rense en tett sil, kommer avviket tilbake. Du finner rotårsaken ved å spørre hvorfor flere ganger.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hva er hovedhensikten med en avviksmelding?</p>
+  <ul>
+    <li>Å finne ut hvem som gjorde feil</li>
+    <li data-riktig>Å lære, slik at det samme ikke skjer igjen</li>
+    <li>Å få fri fra skiftet</li>
+  </ul>
+  <p class="forklaring">Avviksmeldinger blir fulgt opp for å finne og fjerne årsaken. De skal ikke brukes til å skylde på noen. Derfor er det viktig å melde også små feil og nesten-ulykker.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>avvik</td><td>Noe som ikke gikk som det skulle, eller som bryter med en regel eller prosedyre.</td><td>deviation / non-conformity</td></tr>
+    <tr><td>sikker tilstand</td><td>En tilstand der anlegget eller utstyret ikke kan føre til at noe farlig skjer, for eksempel stoppet og trykkløst.</td><td>safe state</td></tr>
+    <tr><td>feilsøking</td><td>Å finne årsaken til et avvik på en ryddig måte, steg for steg, og rette den opp.</td><td>troubleshooting</td></tr>
+    <tr><td>oppstrøms</td><td>Det som ligger før et trinn i anlegget, i den retningen stoffene kommer fra.</td><td>upstream</td></tr>
+    <tr><td>nedstrøms</td><td>Det som ligger etter et trinn i anlegget, i den retningen stoffene strømmer videre.</td><td>downstream</td></tr>
+    <tr><td>sil</td><td>En rørdel med et nett som holder igjen partikler i væsken.</td><td>strainer</td></tr>
+    <tr><td>rotårsak</td><td>Den egentlige årsaken bak et avvik. Rettes bare symptomet opp, kommer avviket tilbake.</td><td>root cause</td></tr>
+    <tr><td>avviksmelding</td><td>En skriftlig melding om et avvik, slik at det blir fulgt opp og det samme ikke skjer igjen.</td><td>deviation report, incident report</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="kontroll-av-prosessen.html">Kontroll av prosessen</a>: forrige side.</li>
+  <li><a href="../05-maling-styring-regulering/operatorbilder-og-alarmer.html">Operatørbilder og alarmer</a>: slik håndterer du en alarm.</li>
+  <li><a href="../01-hms/01-internkontroll.html">Internkontroll</a>: avvik og avviksmeldinger i HMS-arbeidet.</li>
+  <li><a href="../03-enhetsoperasjoner/pumpetyper.html">Pumpetyper</a>: om kavitasjon.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
