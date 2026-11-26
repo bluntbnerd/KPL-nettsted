@@ -44,12 +44,12 @@ KPL.sti("06-drift-og-vedlikehold", [
   {
     emne: "Kalibrering",
     sider: [
-      { tittel: "Hvorfor kalibrere?", status: "planlagt" },
-      { tittel: "Kalibrering av laboratorieutstyr", meny: "Laboratorieutstyr", status: "planlagt" },
-      { tittel: "Kalibrering av instrumenter i anlegget", meny: "Instrumenter i anlegget", status: "planlagt" },
-      { tittel: "Kalibreringsprotokoll og dokumentasjon", meny: "Kalibreringsprotokoll", status: "planlagt" },
-      { tittel: "Lab: kalibrering", type: "lab", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "hvorfor-kalibrere.html", tittel: "Hvorfor kalibrere?", status: "utkast" },
+      { fil: "kalibrering-laboratorieutstyr.html", tittel: "Kalibrering av laboratorieutstyr", meny: "Laboratorieutstyr", status: "utkast" },
+      { fil: "kalibrering-instrumenter-anlegg.html", tittel: "Kalibrering av instrumenter i anlegget", meny: "Instrumenter i anlegget", status: "utkast" },
+      { fil: "kalibreringsprotokoll.html", tittel: "Kalibreringsprotokoll og dokumentasjon", meny: "Protokoll", status: "utkast" },
+      { fil: "lab-kalibrering.html", tittel: "Lab: kalibrering", type: "lab", status: "utkast" },
+      { fil: "hva-kan-du-na-kalibrering.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }
     ]
   }
 ]);

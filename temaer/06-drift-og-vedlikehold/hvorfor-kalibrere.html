@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hvorfor kalibrere? – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Hvorfor kalibrere?</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK3, PT9</div>
+
+<p class="ingress">Alle beslutninger i anlegget og på laben bygger på tall fra instrumenter. Men et instrument kan vise feil uten at du merker det. Kalibrering er måten vi sjekker at tallene er til å stole på. Her lærer du hva kalibrering er, hvorfor instrumenter begynner å vise feil, og hvordan vi avgjør om en feil er liten nok.</p>
+
+<h2>Hva er kalibrering?</h2>
+<p>På siden <a href="../05-maling-styring-regulering/hvorfor-vi-maler.html">Hvorfor vi måler</a> i Automasjon så du at et måleinstrument kan vise feil. For å finne ut om det gjør det, sammenligner vi det med en <strong>referanse</strong>. En referanse er noe vi vet viser eller har riktig verdi, for eksempel en trykkmåler som selv er kalibrert, eller en bufferløsning med kjent pH. Referansen kalles også en <em>standard</em>.</p>
+<p><strong>Kalibrering</strong> er å sammenligne et instrument med en referanse og justere det ved behov, slik at det måler riktig. En kalibrering har tre steg:</p>
+<ol>
+  <li><strong>Sammenligne:</strong> Du gir instrumentet en kjent verdi fra referansen og leser av hva instrumentet viser. Det gjøres ofte på flere punkter i måleområdet, for eksempel ved 0 %, 50 % og 100 %.</li>
+  <li><strong>Justere ved behov:</strong> Er feilen for stor, stiller du instrumentet slik at det viser riktig. Det kalles <strong>justering</strong>. Går det ikke, må instrumentet repareres eller byttes.</li>
+  <li><strong>Dokumentere:</strong> Du skriver ned hva instrumentet viste før og etter, hvilken referanse du brukte, dato og hvem som gjorde jobben. Det lærer du mer om på siden «Kalibreringsprotokoll og dokumentasjon» senere i emnet.</li>
+</ol>
+<p>Strengt tatt er kalibrering bare selve sammenligningen, og justeringen er et eget steg. I det daglige bruker vi ordet kalibrering om hele jobben.</p>
+
+<h2>Hvorfor begynner instrumenter å vise feil?</h2>
+<p>Et nytt instrument er stilt inn riktig fra fabrikken. Likevel begynner nesten alle instrumenter å vise litt feil etter en tid. Det kan skyldes</p>
+<ul>
+  <li><strong>slitasje og aldring:</strong> Følere og elektroder blir dårligere med tiden. Elektroden i et pH-meter er et typisk eksempel.</li>
+  <li><strong>belegg og smuss:</strong> Kalk, olje eller produkt legger seg på føleren, slik at den reagerer annerledes.</li>
+  <li><strong>temperatur og vibrasjon:</strong> Mange instrumenter tåler ikke store temperaturendringer eller risting over lang tid.</li>
+  <li><strong>støt og feil bruk:</strong> En vekt som blir flyttet, eller en giver som får et slag, kan vise feil med en gang.</li>
+</ul>
+<p>Ofte skjer endringen så sakte at ingen merker den fra dag til dag. At et instrument gradvis viser mer og mer feil over tid, kalles <strong>avdrift</strong>. Avdrift er hovedgrunnen til at instrumenter må kalibreres jevnlig, også når de ser ut til å virke fint.</p>
+
+<h2>Målefeil og toleranse</h2>
+<p><strong>Målefeilen</strong> er forskjellen mellom det instrumentet viser og den riktige verdien fra referansen:</p>
+<p>\[ \text{målefeil} = \text{vist verdi} - \text{riktig verdi} \]</p>
+<p>Er målefeilen positiv, viser instrumentet for mye. Er den negativ, viser det for lite.</p>
+<p>Ingen instrumenter er helt perfekte. Derfor har hvert instrument en <strong>toleranse</strong>, altså hvor stor målefeil som er godtatt. Toleransen står i instruksen eller vedlikeholdsplanen, for eksempel ±0,5 °C for en temperaturgiver. Er målefeilen innenfor toleransen, er instrumentet godkjent. Er den utenfor, må instrumentet justeres.</p>
+
+<h2>To vanlige typer feil</h2>
+<p>Når du sammenligner på flere punkter, kan du se <em>hvordan</em> instrumentet viser feil. To typer går igjen:</p>
+
+<figure>
+  <img src="bilder/kalibrering-feiltyper.svg" alt="Graf med riktig verdi langs den vannrette aksen og verdien instrumentet viser langs den loddrette aksen, begge fra 0 til 100 prosent. Den heltrukne linja er et riktig instrument som viser det samme som referansen. Den stiplede linja viser nullpunktsfeil: hele linja er flyttet 10 prosent opp, så instrumentet viser 10 for mye overalt. Den prikkete linja viser spennfeil: instrumentet viser riktig ved 0, men feilen vokser oppover, og ved 100 viser det bare 85." width="640">
+  <figcaption>Figur: Et riktig instrument følger den heltrukne linja. Ved nullpunktsfeil er hele linja flyttet opp eller ned. Ved spennfeil er linja for bratt eller for slak, så feilen blir større jo høyere verdien er. Tallene er bare et eksempel.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Nullpunktsfeil:</strong> Instrumentet viser like mye for mye, eller for lite, over hele måleområdet. En vekt som viser 0,3 g når den er tom, har nullpunktsfeil.</li>
+  <li><strong>Spennfeil:</strong> Instrumentet viser riktig i den ene enden, men feilen vokser jo lenger opp i måleområdet du kommer. Ordet kommer av <em>spenn</em>, som er avstanden mellom laveste og høyeste verdi i måleområdet.</li>
+</ul>
+<p>Et instrument kan ha begge feilene samtidig. Derfor sjekker vi helst minst to punkter, ett nederst og ett øverst i måleområdet. Med bare ett punkt kan du ikke se forskjell på de to feilene.</p>
+
+<h2>Regneeksempel</h2>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Kalibrering av en temperaturgiver</div>
+  <p><strong>Oppgave:</strong> En temperaturgiver i en reaktor har måleområde 0–100 °C og toleranse ±0,5 °C. Automatikeren setter føleren i en kalibreringsovn, en metallblokk som kan varmes eller kjøles til en kjent temperatur, og sammenligner med et kalibrert referansetermometer. Resultatet:</p>
+  <table>
+    <thead><tr><th>Riktig verdi (referanse)</th><th>Vist verdi</th></tr></thead>
+    <tbody>
+      <tr><td>0,0 °C</td><td>1,5 °C</td></tr>
+      <tr><td>50,0 °C</td><td>51,4 °C</td></tr>
+      <tr><td>100,0 °C</td><td>101,6 °C</td></tr>
+    </tbody>
+  </table>
+  <p>Er giveren godkjent? Hvilken type feil har den?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Regn ut målefeilen i hvert punkt: 1,5 − 0,0 = +1,5 °C, 51,4 − 50,0 = +1,4 °C og 101,6 − 100,0 = +1,6 °C.</li>
+    <li>Sammenlign med toleransen: Alle feilene er større enn 0,5 °C. Giveren er ikke godkjent.</li>
+    <li>Se på mønsteret: Feilen er omtrent like stor, rundt +1,5 °C, i hele måleområdet. Det er en nullpunktsfeil.</li>
+  </ol>
+  <p><strong>Svar:</strong> Giveren viser omtrent 1,5 °C for mye overalt og er utenfor toleransen. Automatikeren justerer nullpunktet og sjekker de tre punktene på nytt. Begge målingene, før og etter, skrives i kalibreringsprotokollen.</p>
+  <p><strong>Hva betyr det for driften?</strong> Reaktoren skal holde 80 °C. Med denne feilen viser skjermen 80 °C når det egentlig er omtrent 78,5 °C i reaktoren. Det kan være nok til at reaksjonen går saktere og produktet blir dårligere.</p>
+</div>
+
+<h2>Hva skjer hvis vi ikke kalibrerer?</h2>
+<p>Et instrument som viser feil, rammer de samme målene som drift skal nå, se <a href="hva-er-drift.html">Hva er drift?</a>:</p>
+<ul>
+  <li><strong>Sikkerhet:</strong> Alarmer og forriglinger reagerer på måleverdien. Viser en nivåmåler for lite, kan tanken gå full før alarmen kommer. Se <a href="../01-hms/06-overfylling.html">eksemplet med overfylling</a> i HMS.</li>
+  <li><strong>Kvalitet:</strong> Feil temperatur, trykk eller pH i prosessen gir produkt utenfor spesifikasjonen. Feil på et laboratorieinstrument gir analysesvar som ikke stemmer, og da kan dårlig produkt bli godkjent.</li>
+  <li><strong>Miljø:</strong> Utslipp måles for å vise at bedriften holder kravene. Er måleren feil, vet ingen om kravene holdes.</li>
+  <li><strong>Kostnad:</strong> En mengdemåler som viser for lite, gjør at du bruker mer råstoff eller selger mer produkt enn du tror.</li>
+  <li><strong>Tillit og krav:</strong> Kunder og myndigheter krever ofte å få se at instrumentene er kalibrert. Uten dokumentasjon kan ikke bedriften bevise at målingene er riktige.</li>
+</ul>
+
+<h2>Sporbarhet: hvem kalibrerer referansen?</h2>
+<p>En referanse er bare til å stole på hvis den selv er riktig. Derfor er også referansene kalibrert, mot en enda bedre referanse. Slik henger det sammen i en kjede:</p>
+<ol>
+  <li>Instrumentet i anlegget eller på laben kalibreres mot bedriftens referanse.</li>
+  <li>Bedriftens referanse sendes jevnlig til et kalibreringslaboratorium.</li>
+  <li>Kalibreringslaboratoriet kalibrerer sitt utstyr mot den nasjonale standarden. I Norge har <strong>Justervesenet</strong> ansvaret for de nasjonale normalene, altså de nasjonale standardene.</li>
+</ol>
+<p>At en måling kan følges trinn for trinn gjennom en slik kjede, kalles <strong>sporbarhet</strong>. Referansen bør også være flere ganger mer nøyaktig enn instrumentet du kalibrerer. Du kan ikke sjekke en temperaturgiver med toleranse ±0,5 °C mot et termometer som selv kan vise 1 °C feil.</p>
+
+<h2>Hvor ofte skal det kalibreres?</h2>
+<p>Hvor lang tid det går mellom hver kalibrering, kalles <strong>kalibreringsintervallet</strong>. Det står i vedlikeholdsplanen, se <a href="systematisk-vedlikehold.html">Systematisk vedlikehold</a>. Intervallet bestemmes ut fra</p>
+<ul>
+  <li>hvor viktig målingen er. Instrumenter som brukes i sikkerhetsfunksjoner, kalibreres oftere.</li>
+  <li>hvor fort instrumentet pleier å få avdrift. Et pH-meter på laben kalibreres ofte hver dag det brukes, mens en trykkgiver i anlegget kanskje kalibreres én gang i året.</li>
+  <li>hva tidligere kalibreringer har vist. Har instrumentet vært innenfor toleransen mange ganger på rad, kan intervallet kanskje gjøres lengre. Har det vært utenfor, gjøres det kortere.</li>
+</ul>
+<p>I tillegg kalibreres et instrument etter reparasjon, etter et støt eller en flytting, og når du mistenker at det viser feil. Kalibrering etter fast plan er et eksempel på tidsbasert vedlikehold, se <a href="typer-vedlikehold.html">Typer vedlikehold</a>.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Kalibrering i anlegget påvirker styresystemet.</strong> Mens en giver kalibreres, sender den verdier som ikke er ekte måleverdier. Regulatoren må settes i manuell, og forriglingene på den målingen må forbikobles etter prosedyren, og kontrollrommet må vite om jobben. Se <a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a> i Automasjon.</li>
+    <li><strong>Arbeid på instrumenter krever tillatelse.</strong> En giver som skal tas ut, sitter ofte på en tank eller et rør med trykk og kjemikalier. Den må stenges av og trykkavlastes først, se <a href="sikker-jobbing-vedlikehold.html">Sikker jobbing ved vedlikehold</a>.</li>
+    <li><strong>Husk å fjerne forbikoblingen.</strong> En forrigling som er glemt forbikoblet etter kalibreringen, er en barriere som ikke virker. Se <a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a> i Automasjon.</li>
+  </ul>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Kalibrering i hverdagen</div>
+  <p>Kjøkkenvekta har en knapp som setter den til null. Trykker du på den mens vekta er tom, retter du opp en liten nullpunktsfeil. Det er en enkel justering. Og hvis klokka på komfyren går fem minutter for fort, sammenligner du den med klokka på mobilen og stiller den. Mobilen er referansen, og den får tiden sin fra et sporbart klokkesystem.</p>
+</div>
+
+<p>På de neste sidene lærer du hvordan kalibrering gjøres i praksis, først på laboratorieutstyr og så på instrumenter i anlegget.</p>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva er kalibrering?</p>
+  <ul>
+    <li>Å bytte ut et instrument som er gammelt</li>
+    <li data-riktig>Å sammenligne et instrument med en referanse og justere det ved behov, slik at det måler riktig</li>
+    <li>Å rengjøre føleren på et instrument</li>
+  </ul>
+  <p class="forklaring">Ved kalibrering sammenligner du instrumentet med noe som har kjent, riktig verdi. Er feilen for stor, justeres instrumentet. Til slutt dokumenteres resultatet.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Et pH-meter står i en bufferløsning med pH 7,00 og viser 7,12. Toleransen er ±0,05. Hva er riktig?</p>
+  <ul>
+    <li>Målefeilen er −0,12, og pH-meteret er godkjent.</li>
+    <li>Målefeilen er +0,12, og pH-meteret er godkjent.</li>
+    <li data-riktig>Målefeilen er +0,12, og pH-meteret må justeres.</li>
+  </ul>
+  <p class="forklaring">Målefeil = vist verdi − riktig verdi = 7,12 − 7,00 = +0,12. Det er mer enn toleransen på 0,05, så pH-meteret må justeres før det brukes.</p>
+</div>
+
+<div class="quiz">
+  <p>3. En trykkgiver viser 0,3 bar for mye både ved 0 bar, 5 bar og 10 bar. Hvilken type feil er det?</p>
+  <ul>
+    <li data-riktig>Nullpunktsfeil</li>
+    <li>Spennfeil</li>
+    <li>Ingen feil, siden feilen er like stor overalt</li>
+  </ul>
+  <p class="forklaring">Når feilen er like stor over hele måleområdet, er hele linja flyttet opp. Det er en nullpunktsfeil. Ved spennfeil blir feilen større jo høyere opp i måleområdet du kommer.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Hvorfor må instrumenter kalibreres jevnlig, selv om de virker fint?</p>
+  <ul>
+    <li>Fordi de alltid viser feil fra fabrikken</li>
+    <li data-riktig>Fordi de kan få avdrift og gradvis vise mer feil uten at noen merker det</li>
+    <li>Fordi kalibrering gjør at instrumentet varer lenger</li>
+  </ul>
+  <p class="forklaring">Avdrift skjer så sakte at du ikke ser det fra dag til dag. Bare en sammenligning med en referanse avslører det.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hva betyr sporbarhet?</p>
+  <ul>
+    <li>At instrumentet har et tagnummer, så du finner det i anlegget</li>
+    <li data-riktig>At målingen kan føres tilbake til den nasjonale standarden gjennom en ubrutt kjede av kalibreringer</li>
+    <li>At måleverdiene lagres, så du kan se dem i ettertid</li>
+  </ul>
+  <p class="forklaring">Sporbarhet betyr at du kan følge kalibreringene trinn for trinn fra instrumentet ditt, via bedriftens referanse og et kalibreringslaboratorium, til den nasjonale standarden.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>kalibrering</td><td>Å sammenligne et instrument med en kjent standard og justere det ved behov, slik at det måler riktig.</td><td>calibration</td></tr>
+    <tr><td>referanse</td><td>Et instrument eller et stoff med kjent, riktig verdi, som andre instrumenter sammenlignes med. Kalles også standard.</td><td>reference standard</td></tr>
+    <tr><td>justering</td><td>Å stille et instrument slik at det viser riktig, etter at kalibreringen har vist at feilen er for stor.</td><td>adjustment</td></tr>
+    <tr><td>avdrift</td><td>At et instrument gradvis viser mer og mer feil over tid, uten at noen har endret på det.</td><td>drift</td></tr>
+    <tr><td>målefeil</td><td>Forskjellen mellom det instrumentet viser og den riktige verdien: vist verdi minus riktig verdi.</td><td>measurement error</td></tr>
+    <tr><td>toleranse</td><td>Hvor stor målefeil som er godtatt for et instrument, for eksempel ±0,5 °C.</td><td>tolerance</td></tr>
+    <tr><td>nullpunktsfeil</td><td>Feil der instrumentet viser like mye for mye eller for lite over hele måleområdet.</td><td>zero error</td></tr>
+    <tr><td>spennfeil</td><td>Feil der instrumentet viser riktig i den ene enden av måleområdet, men feilen vokser mot den andre enden.</td><td>span error</td></tr>
+    <tr><td>sporbarhet</td><td>At en måling kan føres tilbake til den nasjonale standarden gjennom en ubrutt og dokumentert kjede av kalibreringer.</td><td>traceability</td></tr>
+    <tr><td>kalibreringsintervall</td><td>Tiden mellom to kalibreringer av samme instrument.</td><td>calibration interval</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../05-maling-styring-regulering/hvorfor-vi-maler.html">Hvorfor vi måler</a> i Automasjon: måleverdi, måleområde og hvorfor du ikke kan stole blindt på en måling.</li>
+  <li><a href="../05-maling-styring-regulering/givere-og-transmittere.html">Givere og transmittere</a> i Automasjon: instrumentene som kalibreres i anlegget.</li>
+  <li><a href="systematisk-vedlikehold.html">Systematisk vedlikehold</a>: vedlikeholdsplan og loggbok, der kalibreringene planlegges og føres.</li>
+  <li>Usikkerhet og feilkilder i analyser kommer i emnet Rapportering og kvalitet i <a href="../07-laboratorium-og-analyse/index.html">Laboratorium og analyse</a> (kommer).</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplet og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

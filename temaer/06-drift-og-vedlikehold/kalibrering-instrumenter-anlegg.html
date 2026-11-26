@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalibrering av instrumenter i anlegget – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Kalibrering av instrumenter i anlegget</h1>
+<div class="merker"><span class="fag">PT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> PT9, ADK3</div>
+
+<p class="ingress">Givere for trykk, temperatur, nivå og mengde styrer anlegget dag og natt. Viser en av dem feil, regulerer styresystemet feil, og alarmer og forriglinger kan komme for sent. Her lærer du hvordan en giver kalibreres i anlegget, hvordan du regner ut om den er innenfor toleransen, og hva operatøren må gjøre før, under og etter jobben.</p>
+
+<h2>Hva kalibreres?</h2>
+<p>På siden <a href="../05-maling-styring-regulering/givere-og-transmittere.html">Givere og transmittere</a> i Automasjon lærte du at en måling i anlegget består av en <strong>føler</strong>, som merker endringen i prosessen, og en <strong>giver</strong>, som sender verdien som et signal på 4–20 mA til styresystemet. Det er særlig giveren og føleren som kalibreres.</p>
+<p>Prinsippet er det samme som på <a href="hvorfor-kalibrere.html">Hvorfor kalibrere?</a>: Du gir føleren en kjent verdi fra en referanse, og ser om giveren sender riktig strøm. Er feilen større enn toleransen, justerer du nullpunktet og spennet.</p>
+<p>Jobben gjøres vanligvis av en <strong>automatiker</strong> (instrumenttekniker) etter en arbeidsordre fra vedlikeholdssystemet, se <a href="systematisk-vedlikehold.html">Systematisk vedlikehold</a>. Operatøren har likevel en viktig rolle, som du ser lenger ned.</p>
+
+<h2>Referansene i anlegget</h2>
+<p>Instrumenter i anlegget kan ikke tas med til laben. Derfor tar automatikeren med seg referansene ut. Det er bærbare instrumenter som selv er kalibrert og sporbare:</p>
+<table>
+  <thead><tr><th>Hva skal kalibreres?</th><th>Referanse</th><th>Slik gjøres det</th></tr></thead>
+  <tbody>
+    <tr><td>Trykkgiver</td><td><strong>Trykkalibrator</strong>: en liten pumpe med en nøyaktig referansemåler</td><td>Giveren stenges av fra prosessen. Kalibratoren kobles til og lager kjente trykk.</td></tr>
+    <tr><td>Temperaturgiver</td><td><strong>Kalibreringsovn</strong>: en liten metallblokk som varmes eller kjøles til en kjent temperatur, ofte med et referansetermometer</td><td>Føleren trekkes ut av <a href="../05-maling-styring-regulering/temperaturmaling.html">lommerøret</a> og settes i ovnen. Prosessen trenger ikke åpnes.</td></tr>
+    <tr><td>Signalet til styresystemet</td><td><strong>Sløyfekalibrator</strong></td><td>Måler strømmen fra giveren, eller sender en kjent strøm inn i sløyfa, se <a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a>.</td></tr>
+    <tr><td>Nivå- og mengdegivere</td><td>Varierer</td><td>Ofte sammenlignes de med en lokal måler eller et seglass, eller giveren kalibreres med trykk. Store mengdemålere sendes noen ganger til et kalibreringslaboratorium.</td></tr>
+  </tbody>
+</table>
+<p>Mange givere er <strong>smarte givere</strong>. Da kan automatikeren lese innstillingene og justere nullpunkt og spenn med et håndholdt verktøy, uten å åpne giveren. Referansen trengs likevel. Verktøyet erstatter skruene på giveren, ikke kalibratoren.</p>
+
+<figure>
+  <img src="bilder/kalibrering-trykkgiver.svg" alt="Oppkobling for kalibrering av en trykkgiver i anlegget. Øverst er prosessrøret. Instrumentventilen mellom røret og giveren er stengt, så giveren er skilt fra prosessen. En slange går fra testtilkoblingen ved giveren til en trykkalibrator, som lager et kjent trykk og viser det på en referansemåler, her 5,000 bar. Kabelen fra giveren går gjennom en sløyfekalibrator som måler strømmen, her 12,13 milliampere, og videre til styresystemet. En tekst forklarer at 5,000 bar skal gi 12,00 mA, så feilen er pluss 0,13 mA." width="680">
+  <figcaption>Figur: Kalibrering av trykkgiveren PT-101 med måleområde 0–10 bar. Instrumentventilen er stengt, trykkalibratoren lager et kjent trykk, og sløyfekalibratoren måler strømmen fra giveren. 5,000 bar er 50 % av måleområdet og skal gi 12,00 mA. Figuren er forenklet.</figcaption>
+</figure>
+
+<h2>Slik kalibreres en giver</h2>
+<ol>
+  <li><strong>Forbered jobben.</strong> Arbeidsordre og arbeidstillatelse er i orden. Kontrollrommet vet om jobben. Regulatoren som bruker målingen, settes i manuell, og forriglinger på målingen forbikobles etter prosedyren, se <a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a>.</li>
+  <li><strong>Skill giveren fra prosessen.</strong> Steng <strong>instrumentventilen</strong> og trykkavlast eller tøm giveren til et trygt sted. Ved temperaturmåling trekkes føleren ut av lommerøret.</li>
+  <li><strong>Koble til referansene.</strong> Trykkalibratoren kobles til <strong>testtilkoblingen</strong>, en liten tilkobling mellom instrumentventilen og giveren. Ved temperaturmåling settes føleren i kalibreringsovnen. Sløyfekalibratoren kobles inn i sløyfa og måler strømmen.</li>
+  <li><strong>Sjekk «som funnet».</strong> Gi giveren kjente verdier i flere punkter, ofte 0, 25, 50, 75 og 100 % av måleområdet. Skriv ned strømmen i hvert punkt <em>før</em> du justerer noe. Det kalles verdiene <strong>som funnet</strong>.</li>
+  <li><strong>Juster ved behov.</strong> Er feilen utenfor toleransen, justeres nullpunktet og spennet. Er den innenfor, lar du giveren være.</li>
+  <li><strong>Sjekk «som etterlatt».</strong> Gjenta punktene etter justeringen og skriv ned verdiene <strong>som etterlatt</strong>. Nå skal alle være innenfor toleransen.</li>
+  <li><strong>Sett i drift igjen.</strong> Koble fra kalibratorene, lukk testtilkoblingen og åpne instrumentventilen sakte. Sjekk at verdien på skjermen er rimelig, gjerne mot en lokal måler. Fjern forbikoblingene, sett regulatoren tilbake i automatisk og gi beskjed til kontrollrommet.</li>
+</ol>
+<p>Verdiene som funnet er viktige selv om giveren justeres. De viser hvor stor feilen var mens giveren var i drift. Var den stor, kan prosessen ha gått feil en stund, og kanskje må kalibreringsintervallet gjøres kortere.</p>
+
+<h2>Regneeksempel</h2>
+<p>Toleransen for givere oppgis ofte i prosent av <strong>spennet</strong>, altså bredden på måleområdet (høyeste minus laveste verdi). Hele signalområdet er 16 mA (fra 4 til 20 mA). En toleranse på ±0,5 % av spennet blir da 0,005 · 16 mA = ±0,08 mA. Hvordan du regner fra måleverdi til mA, står på siden <a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Trykkgiveren PT-101</div>
+  <p><strong>Oppgave:</strong> PT-101 har måleområde 0–10 bar og toleranse ±0,5 % av spennet. Automatikeren får disse verdiene som funnet:</p>
+  <table>
+    <thead><tr><th>Trykk fra kalibratoren</th><th>Riktig strøm</th><th>Målt strøm</th><th>Feil</th></tr></thead>
+    <tbody>
+      <tr><td>0,000 bar (0 %)</td><td>4,00 mA</td><td>4,02 mA</td><td>+0,02 mA</td></tr>
+      <tr><td>2,500 bar (25 %)</td><td>8,00 mA</td><td>8,07 mA</td><td>+0,07 mA</td></tr>
+      <tr><td>5,000 bar (50 %)</td><td>12,00 mA</td><td>12,13 mA</td><td>+0,13 mA</td></tr>
+      <tr><td>7,500 bar (75 %)</td><td>16,00 mA</td><td>16,18 mA</td><td>+0,18 mA</td></tr>
+      <tr><td>10,000 bar (100 %)</td><td>20,00 mA</td><td>20,24 mA</td><td>+0,24 mA</td></tr>
+    </tbody>
+  </table>
+  <p>Er giveren godkjent? Hvilken type feil har den?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Toleransen er ±0,5 % av 16 mA = ±0,08 mA.</li>
+    <li>Ved 0 % og 25 % er feilen innenfor (0,02 og 0,07 mA). Ved 50 %, 75 % og 100 % er den utenfor (0,13, 0,18 og 0,24 mA). Giveren er ikke godkjent.</li>
+    <li>Feilen er nesten null nederst og vokser jevnt oppover. Det er en <strong>spennfeil</strong>.</li>
+    <li>Den største feilen er 0,24 mA. I prosent av spennet: 0,24 mA / 16 mA = 0,015 = 1,5 %. I bar: 0,015 · 10 bar = 0,15 bar.</li>
+  </ol>
+  <p><strong>Svar:</strong> Giveren er utenfor toleransen og har en spennfeil. Ved 10,000 bar viser skjermen omtrent 10,15 bar. Automatikeren justerer spennet og sjekker alle fem punktene på nytt som etterlatt. Alle verdiene skrives i kalibreringsprotokollen, som du lærer om på neste side.</p>
+</div>
+
+<h2>Sløyfetest og funksjonstest</h2>
+<p>Selv om giveren sender riktig strøm, kan feilen sitte et annet sted, for eksempel i kabelen eller i måleområdet som er lagt inn i styresystemet. Derfor gjøres det også en <strong>sløyfetest</strong>: Automatikeren sender en kjent strøm inn i sløyfa med sløyfekalibratoren, for eksempel 12 mA, og sjekker at skjermen i kontrollrommet viser 50 %.</p>
+<p>Instrumenter som er en del av en <a href="../05-maling-styring-regulering/forriglinger.html">forrigling</a> eller et annet sikkerhetssystem, får i tillegg en <strong>funksjonstest</strong>. Da sjekker man at hele sikkerhetsfunksjonen virker: at forriglingen løser ut ved riktig grense, og at pumpa faktisk stopper eller ventilen faktisk stenger. Dette er viktig fordi feil i sikkerhetsutstyr ofte er <a href="hvorfor-vedlikehold.html">skjulte feil</a>, som ingen merker før utstyret trengs.</p>
+
+<h2>Operatørens rolle</h2>
+<ul>
+  <li><strong>Oppdage:</strong> Sammenlign målinger som skal henge sammen, og sammenlign giveren med den lokale måleren på runden. Står en verdi helt stille, kan impulsrøret være tett eller giveren ha hengt seg opp. Passer verdien ikke med resten, kan giveren ha avdrift. Se <a href="../05-maling-styring-regulering/hvorfor-vi-maler.html">Hvorfor vi måler</a>.</li>
+  <li><strong>Melde fra:</strong> Skriv en melding i vedlikeholdssystemet, slik at giveren blir sjekket.</li>
+  <li><strong>Klargjøre:</strong> Sett regulatoren i manuell og hold prosessen stabil mens giveren er ute av drift. Følg med på andre målinger.</li>
+  <li><strong>Sette i drift:</strong> Sjekk at verdien er rimelig når giveren er tilbake, før regulatoren settes i automatisk igjen.</li>
+</ul>
+<p>Operatøren justerer ikke givere selv. En justering som ikke er dokumentert, gjør at ingen kan vite hvilke målinger som var riktige.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li><strong>Avtal med kontrollrommet.</strong> Mens giveren kalibreres, sender den verdier som ikke er ekte. Regulatoren må stå i manuell, og forriglingene må være forbikoblet etter prosedyren.</li>
+    <li><strong>Trykkavlast før du kobler til.</strong> Giveren og impulsrøret kan stå under trykk og inneholde varme eller etsende kjemikalier, selv når instrumentventilen er stengt. Tøm til et trygt sted og bruk verneutstyr etter sikkerhetsdatabladet. Se <a href="sikker-jobbing-vedlikehold.html">Sikker jobbing ved vedlikehold</a>.</li>
+    <li><strong>Føleren kan være varm.</strong> En temperaturføler som trekkes ut av et lommerør, kan ha samme temperatur som prosessen.</li>
+    <li><strong>Ex-område:</strong> Kalibratorer og verktøy må være godkjent for området, og arbeidet krever tillatelse.</li>
+    <li><strong>Ikke over måleområdet.</strong> Pump aldri høyere trykk enn giveren og kalibratoren tåler. Da kan de bli ødelagt.</li>
+    <li><strong>Fjern forbikoblingene.</strong> Før jobben er ferdig, skal forbikoblingene være fjernet og regulatoren tilbake i automatisk. En glemt forbikobling er en barriere som ikke virker.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hva betyr «som funnet» i en kalibrering?</p>
+  <ul>
+    <li data-riktig>Verdiene giveren viste før noe ble justert</li>
+    <li>Verdiene giveren viser etter justeringen</li>
+    <li>Måleområdet som står på giveren</li>
+  </ul>
+  <p class="forklaring">Som funnet er verdiene før justering. De viser hvor stor feilen var mens giveren var i drift. Verdiene etter justeringen kalles som etterlatt.</p>
+</div>
+
+<div class="quiz">
+  <p>2. En temperaturgiver har måleområde 0–200 °C og toleranse ±0,5 % av spennet. Hvor stor feil i mA er godtatt?</p>
+  <ul>
+    <li>±0,05 mA</li>
+    <li data-riktig>±0,08 mA</li>
+    <li>±1,0 mA</li>
+  </ul>
+  <p class="forklaring">Toleransen i prosent av spennet gjelder hele signalområdet på 16 mA, uansett hva giveren måler: 0,005 · 16 mA = 0,08 mA. I °C er det 0,005 · 200 °C = 1,0 °C.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hvorfor settes regulatoren i manuell før en giver kalibreres?</p>
+  <ul>
+    <li>For at giveren skal bli fortere ferdig</li>
+    <li data-riktig>Fordi giveren sender verdier fra kalibratoren og ikke fra prosessen, og regulatoren ville reagert på dem</li>
+    <li>Fordi kalibratoren ikke virker når regulatoren står i automatisk</li>
+  </ul>
+  <p class="forklaring">Under kalibreringen ser styresystemet trykkene eller temperaturene fra kalibratoren. Står regulatoren i automatisk, kan den åpne eller stenge ventiler helt feil.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Giveren sender riktig strøm, men skjermen i kontrollrommet viser feil verdi. Hva er en sannsynlig årsak?</p>
+  <ul>
+    <li>Føleren har avdrift</li>
+    <li data-riktig>Feil måleområde er lagt inn i styresystemet</li>
+    <li>Instrumentventilen er stengt</li>
+  </ul>
+  <p class="forklaring">Sender giveren riktig strøm, er føleren og giveren i orden. Da kan feilen sitte i kabelen eller i styresystemet, for eksempel feil måleområde. Det finner du med en sløyfetest.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Hva er en funksjonstest?</p>
+  <ul>
+    <li>Å sjekke at giveren har strøm</li>
+    <li>Å sammenligne giveren med en lokal måler</li>
+    <li data-riktig>Å sjekke at hele sikkerhetsfunksjonen virker, fra målingen til at pumpa stopper eller ventilen stenger</li>
+  </ul>
+  <p class="forklaring">En funksjonstest viser at en forrigling eller et annet sikkerhetssystem faktisk gjør jobben sin. Uten testen kan en feil være skjult til den dagen funksjonen trengs.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>trykkalibrator</td><td>Bærbart instrument med pumpe og nøyaktig referansemåler, som lager kjente trykk når en trykkgiver skal kalibreres.</td><td>pressure calibrator</td></tr>
+    <tr><td>kalibreringsovn</td><td>Liten bærbar metallblokk som varmes eller kjøles til en kjent temperatur, slik at en temperaturføler kan kalibreres.</td><td>dry-block calibrator</td></tr>
+    <tr><td>testtilkobling</td><td>Liten tilkobling mellom instrumentventilen og giveren, der en kalibrator kan kobles på.</td><td>test connection</td></tr>
+    <tr><td>som funnet</td><td>Verdiene et instrument viser ved kalibreringen før noe er justert.</td><td>as found</td></tr>
+    <tr><td>som etterlatt</td><td>Verdiene et instrument viser ved kalibreringen etter justering, slik det blir satt i drift igjen.</td><td>as left</td></tr>
+    <tr><td>spenn</td><td>Avstanden mellom laveste og høyeste verdi i måleområdet. Måleområdet 0–10 bar har spennet 10 bar.</td><td>span</td></tr>
+    <tr><td>sløyfetest</td><td>Test der en kjent strøm sendes inn i sløyfa for å sjekke at styresystemet viser riktig verdi.</td><td>loop test</td></tr>
+    <tr><td>funksjonstest</td><td>Test som viser at en hel sikkerhetsfunksjon virker, fra målingen til at utstyret faktisk stopper eller stenger.</td><td>function test, proof test</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="../05-maling-styring-regulering/givere-og-transmittere.html">Givere og transmittere</a>, <a href="../05-maling-styring-regulering/trykkmaling.html">Trykkmåling</a> og <a href="../05-maling-styring-regulering/temperaturmaling.html">Temperaturmåling</a> i Automasjon: instrumentene som kalibreres.</li>
+  <li><a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a> i Automasjon: å regne mellom mA og måleverdi, og sløyfekalibratoren.</li>
+  <li><a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a> i Automasjon: sikkerhetsfunksjonene som må funksjonstestes.</li>
+  <li><a href="hvorfor-kalibrere.html">Hvorfor kalibrere?</a>: målefeil, toleranse, nullpunktsfeil og spennfeil.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplet og figuren på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" width="700" height="290" font-family="Segoe UI, Arial, sans-serif">
+  <title>Oppkobling for kalibrering av en trykkgiver i anlegget. Øverst er prosessrøret. Instrumentventilen mellom røret og giveren er stengt, så giveren er skilt fra prosessen. En slange går fra testtilkoblingen ved giveren til en trykkalibrator, som lager et kjent trykk og viser det på en referansemåler, her 5,000 bar. Kabelen fra giveren går gjennom en sløyfekalibrator som måler strømmen, her 12,13 milliampere, og videre til styresystemet.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="700" height="290" rx="10" fill="#ffffff"/>
+
+  <!-- Prosessrør -->
+  <rect x="30" y="24" width="320" height="26" fill="#cfd8dc" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="40" y="42" font-size="12" fill="#1c2828">Prosessrør (med trykk)</text>
+
+  <!-- Impulsrør og instrumentventil -->
+  <line x1="150" y1="50" x2="150" y2="140" stroke="#1c2828" stroke-width="3"/>
+  <g stroke="#1c2828" stroke-width="1.5" fill="#1c2828">
+    <path d="M140,68 L160,68 L150,80 Z"/>
+    <path d="M140,92 L160,92 L150,80 Z"/>
+  </g>
+  <text x="166" y="78" font-size="12" fill="#b3261e" font-weight="bold">Instrumentventil</text>
+  <text x="166" y="93" font-size="12" fill="#b3261e">stengt</text>
+
+  <!-- Testtilkobling og slange til trykkalibrator -->
+  <line x1="150" y1="118" x2="300" y2="118" stroke="#1f5f9e" stroke-width="3"/>
+  <circle cx="150" cy="118" r="4" fill="#1c2828"/>
+  <text x="200" y="110" font-size="11" fill="#1f5f9e">slange</text>
+
+  <!-- Trykkalibrator -->
+  <rect x="300" y="88" width="150" height="92" rx="8" fill="#eef4fa" stroke="#1c2828" stroke-width="1.5"/>
+  <rect x="324" y="100" width="102" height="30" rx="4" fill="#1c2828"/>
+  <text x="375" y="121" font-size="15" fill="#a5d6a7" text-anchor="middle" font-family="Consolas, monospace">5,000 bar</text>
+  <text x="375" y="150" font-size="12" fill="#1c2828" text-anchor="middle" font-weight="bold">Trykkalibrator</text>
+  <text x="375" y="166" font-size="11" fill="#1c2828" text-anchor="middle">pumpe og referansemåler</text>
+
+  <!-- Trykkgiver -->
+  <rect x="105" y="140" width="90" height="60" rx="8" fill="#e8f5e9" stroke="#1c2828" stroke-width="1.5"/>
+  <text x="150" y="166" font-size="12" fill="#1c2828" text-anchor="middle" font-weight="bold">Trykkgiver</text>
+  <text x="150" y="182" font-size="12" fill="#1c2828" text-anchor="middle">PT-101</text>
+  <text x="150" y="216" font-size="11" fill="#1c2828" text-anchor="middle">0–10 bar, 4–20 mA</text>
+
+  <!-- Kabel -->
+  <path d="M195,190 L250,190 L250,250 L480,250" fill="none" stroke="#1c2828" stroke-width="2"/>
+  <path d="M610,250 L660,250" fill="none" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="300" y="268" font-size="11" fill="#1c2828">kabel (strømsløyfe)</text>
+
+  <!-- Sløyfekalibrator -->
+  <rect x="480" y="196" width="130" height="80" rx="8" fill="#fff8e1" stroke="#1c2828" stroke-width="1.5"/>
+  <rect x="494" y="206" width="102" height="30" rx="4" fill="#1c2828"/>
+  <text x="545" y="227" font-size="15" fill="#a5d6a7" text-anchor="middle" font-family="Consolas, monospace">12,13 mA</text>
+  <text x="545" y="256" font-size="12" fill="#1c2828" text-anchor="middle" font-weight="bold">Sløyfekalibrator</text>
+  <text x="545" y="270" font-size="11" fill="#1c2828" text-anchor="middle">måler strømmen</text>
+
+  <text x="614" y="242" font-size="10" fill="#1c2828">til styresystemet</text>
+
+  <!-- Forklaring -->
+  <g font-size="12" fill="#1c2828">
+    <text x="455" y="40" font-weight="bold">Sammenlign:</text>
+    <text x="455" y="58">Kjent trykk 5,000 bar</text>
+    <text x="455" y="74">skal gi 12,00 mA.</text>
+    <text x="455" y="94">Giveren sender 12,13 mA.</text>
+    <text x="455" y="110">Feil: +0,13 mA.</text>
+  </g>
+</svg>

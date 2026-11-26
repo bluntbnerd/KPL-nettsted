@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 350" width="680" height="350" font-family="Segoe UI, Arial, sans-serif">
+  <title>Graf med riktig verdi langs den vannrette aksen og verdien instrumentet viser langs den loddrette aksen, begge fra 0 til 100 prosent. Den heltrukne linja er et riktig instrument: det viser det samme som referansen. Den stiplede linja er et instrument med nullpunktsfeil: hele linja er flyttet 10 prosent opp, så det viser 10 for mye overalt. Den prikkete linja er et instrument med spennfeil: det viser riktig ved 0, men feilen vokser oppover, og ved 100 viser det bare 85.</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="350" rx="10" fill="#ffffff"/>
+
+  <!-- Rutenett -->
+  <g stroke="#d5dcdc" stroke-width="1">
+    <line x1="320" y1="290" x2="320" y2="50"/>
+    <line x1="560" y1="290" x2="560" y2="50"/>
+    <line x1="80" y1="170" x2="560" y2="170"/>
+    <line x1="80" y1="50" x2="560" y2="50"/>
+  </g>
+
+  <!-- Akser -->
+  <g stroke="#1c2828" stroke-width="2" fill="none" marker-end="url(#pil)">
+    <line x1="80" y1="290" x2="590" y2="290"/>
+    <line x1="80" y1="290" x2="80" y2="25"/>
+  </g>
+  <g font-size="12" fill="#1c2828">
+    <text x="80" y="308" text-anchor="middle">0</text>
+    <text x="320" y="308" text-anchor="middle">50</text>
+    <text x="560" y="308" text-anchor="middle">100</text>
+    <text x="72" y="294" text-anchor="end">0</text>
+    <text x="72" y="174" text-anchor="end">50</text>
+    <text x="72" y="54" text-anchor="end">100</text>
+    <text x="320" y="334" text-anchor="middle">Riktig verdi fra referansen (%)</text>
+    <text x="30" y="170" text-anchor="middle" transform="rotate(-90 30 170)">Verdien instrumentet viser (%)</text>
+  </g>
+
+  <!-- Riktig instrument -->
+  <line x1="80" y1="290" x2="560" y2="50" stroke="#1f5f9e" stroke-width="3"/>
+  <!-- Nullpunktsfeil: +10 overalt -->
+  <line x1="80" y1="266" x2="512" y2="50" stroke="#b3261e" stroke-width="3" stroke-dasharray="10 6"/>
+  <!-- Spennfeil: riktig ved 0, viser 85 ved 100 -->
+  <line x1="80" y1="290" x2="560" y2="86" stroke="#2e7d32" stroke-width="3" stroke-dasharray="2 5" stroke-linecap="round"/>
+
+  <!-- Merking av feilen ved 0 og ved 100 -->
+  <g stroke="#b3261e" stroke-width="1.5">
+    <line x1="92" y1="266" x2="92" y2="290"/>
+    <line x1="88" y1="266" x2="96" y2="266"/>
+    <line x1="88" y1="290" x2="96" y2="290"/>
+  </g>
+  <line x1="104" y1="184" x2="95" y2="262" stroke="#b3261e" stroke-width="1"/>
+  <text x="96" y="178" font-size="11" fill="#b3261e">10 for mye allerede ved 0</text>
+  <g stroke="#2e7d32" stroke-width="1.5">
+    <line x1="548" y1="50" x2="548" y2="86"/>
+    <line x1="544" y1="50" x2="552" y2="50"/>
+    <line x1="544" y1="86" x2="552" y2="86"/>
+  </g>
+  <line x1="540" y1="160" x2="546" y2="96" stroke="#2e7d32" stroke-width="1"/>
+  <text x="545" y="174" font-size="11" fill="#2e7d32" text-anchor="end">15 for lite ved 100</text>
+
+  <!-- Navn på linjene -->
+  <g font-size="12" font-weight="bold">
+    <text x="568" y="48" fill="#1f5f9e">Riktig</text>
+    <text x="470" y="40" fill="#b3261e" text-anchor="end">Nullpunktsfeil</text>
+    <text x="568" y="90" fill="#2e7d32">Spennfeil</text>
+  </g>
+</svg>

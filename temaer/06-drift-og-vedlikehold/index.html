@@ -79,6 +79,7 @@
     <tr><td>korrosjon</td><td>At et metall reagerer med stoffer rundt seg, for eksempel vann og oksygen, og sakte blir ødelagt.</td><td>corrosion</td></tr>
     <tr><td>rust</td><td>Det rødbrune, porøse stoffet som dannes når jern og stål korroderer. Rust er jernoksid som inneholder vann.</td><td>rust</td></tr>
     <tr><td>oksidasjon</td><td>Reaksjon der et stoff gir fra seg elektroner. Når jern korroderer, blir jernet oksidert.</td><td></td></tr>
+    <tr><td>reduksjon</td><td>Reaksjon der et stoff tar opp elektroner. Når jern korroderer, blir oksygenet redusert.</td><td></td></tr>
     <tr><td>elektrolytt</td><td>Væske med oppløste ioner, som leder strøm. Vann med salt er en god elektrolytt.</td><td></td></tr>
     <tr><td>oksidlag</td><td>Tynt lag av metalloksid på overflaten av et metall. Et tett oksidlag, som på aluminium og rustfritt stål, beskytter metallet under.</td><td></td></tr>
     <tr><td>korrosjonshastighet</td><td>Hvor fort et metall korroderer, ofte oppgitt som hvor mange millimeter veggen blir tynnere per år (mm/år).</td><td>corrosion rate</td></tr>
@@ -132,9 +133,40 @@
     <tr><td>ultralydmåling</td><td>Måling av veggtykkelse med en lydpuls som sendes inn i veggen. Tiden ekkoet bruker, gir tykkelsen.</td><td>ultrasonic thickness measurement</td></tr>
     <tr><td>korrosjonskupong</td><td>En liten metallbit som henges inn i prosessen og veies før og etter, for å finne korrosjonshastigheten.</td><td>corrosion coupon</td></tr>
     <tr><td>målepunkt</td><td>Et fast, merket sted på et rør eller en tank der veggtykkelsen måles hver gang, slik at målingene kan sammenlignes.</td><td>measurement point</td></tr>
+    <tr><td>referanse</td><td>Et instrument eller et stoff med kjent, riktig verdi, som andre instrumenter sammenlignes med. Kalles også standard.</td><td>reference standard</td></tr>
+    <tr><td>justering</td><td>Å stille et instrument slik at det viser riktig, etter at kalibreringen har vist at feilen er for stor.</td><td>adjustment</td></tr>
+    <tr><td>avdrift</td><td>At et instrument gradvis viser mer og mer feil over tid, uten at noen har endret på det.</td><td>drift</td></tr>
+    <tr><td>målefeil</td><td>Forskjellen mellom det instrumentet viser og den riktige verdien: vist verdi minus riktig verdi.</td><td>measurement error</td></tr>
+    <tr><td>toleranse</td><td>Hvor stor målefeil som er godtatt for et instrument, for eksempel ±0,5 °C.</td><td>tolerance</td></tr>
+    <tr><td>nullpunktsfeil</td><td>Feil der instrumentet viser like mye for mye eller for lite over hele måleområdet.</td><td>zero error</td></tr>
+    <tr><td>spennfeil</td><td>Feil der instrumentet viser riktig i den ene enden av måleområdet, men feilen vokser mot den andre enden.</td><td>span error</td></tr>
+    <tr><td>sporbarhet</td><td>At en måling kan føres tilbake til den nasjonale standarden gjennom en ubrutt og dokumentert kjede av kalibreringer.</td><td>traceability</td></tr>
+    <tr><td>kalibreringsintervall</td><td>Tiden mellom to kalibreringer av samme instrument.</td><td>calibration interval</td></tr>
+    <tr><td>analysevekt</td><td>Nøyaktig vekt som veier med flere desimaler, ofte 0,0001 g.</td><td>analytical balance</td></tr>
+    <tr><td>kontrollvekt</td><td>Et lodd med kjent masse som brukes til å sjekke at en vekt viser riktig.</td><td>check weight</td></tr>
+    <tr><td>tarere</td><td>Å nullstille vekta med tom skål eller med beholderen på, slik at bare det du legger i, blir veid.</td><td>tare</td></tr>
+    <tr><td>kalibreringssertifikat</td><td>Dokument fra en full kalibrering som viser resultatene og hvilke sporbare referanser som er brukt.</td><td>calibration certificate</td></tr>
+    <tr><td>pH-meter</td><td>Instrument som måler hvor surt eller basisk en løsning er, med en elektrode av glass.</td><td>pH meter</td></tr>
+    <tr><td>bufferløsning</td><td>Løsning med kjent pH som holder seg stabil. Brukes som referanse når pH-meteret kalibreres.</td><td>buffer solution</td></tr>
+    <tr><td>topunktskalibrering</td><td>Kalibrering med to referanser, slik at både nullpunktet og stigningen blir riktige.</td><td>two-point calibration</td></tr>
+    <tr><td>stigning</td><td>Hvor mye signalet fra et instrument endrer seg når det målte endrer seg. For et pH-meter oppgis den i prosent av en perfekt elektrode.</td><td>slope</td></tr>
+    <tr><td>volumetrisk utstyr</td><td>Glassutstyr som er kalibrert for å måle nøyaktige volumer, for eksempel fullpipette, byrette og målekolbe.</td><td>volumetric glassware</td></tr>
+    <tr><td>gravimetrisk kontroll</td><td>Å sjekke et volum ved å veie vannet og regne om til volum med tettheten.</td><td>gravimetric check</td></tr>
+    <tr><td>trykkalibrator</td><td>Bærbart instrument med pumpe og nøyaktig referansemåler, som lager kjente trykk når en trykkgiver skal kalibreres.</td><td>pressure calibrator</td></tr>
+    <tr><td>kalibreringsovn</td><td>Liten bærbar metallblokk som varmes eller kjøles til en kjent temperatur, slik at en temperaturføler kan kalibreres.</td><td>dry-block calibrator</td></tr>
+    <tr><td>testtilkobling</td><td>Liten tilkobling mellom instrumentventilen og giveren, der en kalibrator kan kobles på.</td><td>test connection</td></tr>
+    <tr><td>som funnet</td><td>Verdiene et instrument viser ved kalibreringen før noe er justert.</td><td>as found</td></tr>
+    <tr><td>som etterlatt</td><td>Verdiene et instrument viser ved kalibreringen etter justering, slik det blir satt i drift igjen.</td><td>as left</td></tr>
+    <tr><td>spenn</td><td>Avstanden mellom laveste og høyeste verdi i måleområdet. Måleområdet 0–10 bar har spennet 10 bar.</td><td>span</td></tr>
+    <tr><td>sløyfetest</td><td>Test der en kjent strøm sendes inn i sløyfa for å sjekke at styresystemet viser riktig verdi.</td><td>loop test</td></tr>
+    <tr><td>funksjonstest</td><td>Test som viser at en hel sikkerhetsfunksjon virker, fra målingen til at utstyret faktisk stopper eller stenger.</td><td>function test, proof test</td></tr>
+    <tr><td>kalibreringsprotokoll</td><td>Skjema der en kalibrering skrives ned: instrument, referanser, verdier som funnet og som etterlatt, konklusjon, dato og signatur.</td><td>calibration record</td></tr>
+    <tr><td>kalibreringsetikett</td><td>Merke på et instrument som viser når det sist ble kalibrert, når det skal kalibreres neste gang, og av hvem.</td><td>calibration label</td></tr>
+    <tr><td>loggbok</td><td>Bok eller skjema som hører til et instrument, der kontroller, kalibreringer, service og feil skrives ned.</td><td>logbook</td></tr>
+    <tr><td>akkreditering</td><td>Offentlig godkjenning av at et laboratorium har kompetanse og et kvalitetssystem til å gjøre bestemte analyser eller kalibreringer.</td><td>accreditation</td></tr>
     <tr><td>vedlikehold</td><td>Arbeid som holder utstyret i god stand, eller reparerer det når det svikter.</td><td>maintenance</td></tr>
     <tr><td>forebyggende vedlikehold</td><td>Planlagt vedlikehold som gjøres før utstyret svikter, for eksempel faste ettersyn og bytte av deler.</td><td>preventive maintenance</td></tr>
-    <tr><td>kalibrering</td><td>Å sammenligne et instrument med en kjent standard og justere det, slik at det måler riktig.</td><td>calibration</td></tr>
+    <tr><td>kalibrering</td><td>Å sammenligne et instrument med en kjent standard og justere det ved behov, slik at det måler riktig.</td><td>calibration</td></tr>
     <tr><td>optimalisering</td><td>Å forbedre en prosess så den gir mer produkt, bedre kvalitet, mindre sløsing eller lavere energibruk.</td><td>optimization</td></tr>
   </tbody>
 </table>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalibreringsprotokoll og dokumentasjon – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Kalibreringsprotokoll og dokumentasjon</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">PT</span> <strong>Kompetansemål:</strong> ADK3, PT9</div>
+
+<p class="ingress">I industrien sier man ofte: Det som ikke er skrevet ned, er ikke gjort. En kalibrering er bare verdt noe hvis noen i ettertid kan se hva som ble funnet, hva som ble gjort, og hvilken referanse som ble brukt. Her lærer du hva som skal stå i en kalibreringsprotokoll og en loggbok, og hvordan du skriver det slik at det kan stoles på.</p>
+
+<h2>Hvorfor skrive ned?</h2>
+<ul>
+  <li><strong>Bevis:</strong> Dokumentasjonen viser at instrumentet var riktig da målingene ble gjort. Uten den kan ingen bevise at et analysesvar eller en utslippsmåling stemmer.</li>
+  <li><strong>Sporbarhet:</strong> Når det står hvilken referanse som er brukt, og når den selv ble kalibrert, kan målingen følges hele veien til den nasjonale standarden. Se <a href="hvorfor-kalibrere.html">Hvorfor kalibrere?</a>.</li>
+  <li><strong>Se bakover:</strong> Var instrumentet utenfor toleransen, viser datoene hvilke analyser eller hvilket produkt som kan være berørt.</li>
+  <li><strong>Se framover:</strong> Resultatene over tid viser hvor fort instrumentet får avdrift. Da kan kalibreringsintervallet gjøres kortere eller lengre, og slitte deler kan byttes i tide.</li>
+  <li><strong>Krav:</strong> Kunder, myndigheter og kvalitetssystemer krever det. Standarden ISO 9001, som mange bedrifter følger, krever at måleutstyr som brukes til å kontrollere produktet, er kalibrert eller kontrollert mot sporbare referanser, og at resultatene dokumenteres. Et <strong>akkreditert</strong> laboratorium er godkjent av Norsk akkreditering for bestemte analyser eller kalibreringer, etter standarden ISO/IEC 17025. Der er kravene til dokumentasjon enda strengere.</li>
+</ul>
+
+<h2>Kalibreringsprotokollen</h2>
+<p>En <strong>kalibreringsprotokoll</strong> er skjemaet der en kalibrering skrives ned. Den kan være på papir eller i et dataprogram. Mange kalibratorer lagrer resultatene selv og sender dem rett inn i <a href="systematisk-vedlikehold.html">vedlikeholdssystemet</a>. Uansett form skal protokollen svare på seks spørsmål:</p>
+<table>
+  <thead><tr><th>Spørsmål</th><th>Hva som skal stå</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hvilket instrument?</strong></td><td>Tagnummer, type, måleområde og toleranse</td></tr>
+    <tr><td><strong>Med hva?</strong></td><td>Referansene som er brukt, med serienummer og når de selv ble kalibrert</td></tr>
+    <tr><td><strong>Hva ble funnet?</strong></td><td>Verdiene som funnet, i alle punktene, med feil og om de er innenfor toleransen</td></tr>
+    <tr><td><strong>Hva ble gjort?</strong></td><td>Justering, rengjøring eller bytte, og verdiene som etterlatt</td></tr>
+    <tr><td><strong>Hva er konklusjonen?</strong></td><td>Godkjent eller ikke godkjent, og om det er skrevet en avviksmelding</td></tr>
+    <tr><td><strong>Når og av hvem?</strong></td><td>Dato, arbeidsordre, signatur og dato for neste kalibrering</td></tr>
+  </tbody>
+</table>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Kalibreringsprotokoll for PT-101</div>
+  <p>Dette er protokollen fra kalibreringen på siden <a href="kalibrering-instrumenter-anlegg.html">Kalibrering av instrumenter i anlegget</a>. Navn og numre er tenkte.</p>
+  <table>
+    <tbody>
+      <tr><th>Tagnummer</th><td>PT-101, trykkgiver på reaktor R-1</td></tr>
+      <tr><th>Måleområde</th><td>0–10 bar = 4–20 mA</td></tr>
+      <tr><th>Toleranse</th><td>±0,5 % av spennet = ±0,08 mA</td></tr>
+      <tr><th>Referanser</th><td>Trykkalibrator nr. TK-03, kalibrert 14.03.2026<br>Sløyfekalibrator nr. SK-07, kalibrert 02.05.2026</td></tr>
+      <tr><th>Arbeidsordre</th><td>AO-26-1184</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Trykk</th><th>Riktig</th><th>Som funnet</th><th>Feil (mA)</th><th>Som etterlatt</th><th>Feil (mA)</th></tr></thead>
+    <tbody>
+      <tr><td>0,000 bar</td><td>4,00 mA</td><td>4,02 mA</td><td>+0,02</td><td>4,01 mA</td><td>+0,01</td></tr>
+      <tr><td>2,500 bar</td><td>8,00 mA</td><td>8,07 mA</td><td>+0,07</td><td>8,01 mA</td><td>+0,01</td></tr>
+      <tr><td>5,000 bar</td><td>12,00 mA</td><td>12,13 mA</td><td><strong>+0,13</strong></td><td>12,02 mA</td><td>+0,02</td></tr>
+      <tr><td>7,500 bar</td><td>16,00 mA</td><td>16,18 mA</td><td><strong>+0,18</strong></td><td>16,01 mA</td><td>+0,01</td></tr>
+      <tr><td>10,000 bar</td><td>20,00 mA</td><td>20,24 mA</td><td><strong>+0,24</strong></td><td>20,02 mA</td><td>+0,02</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <tbody>
+      <tr><th>Som funnet</th><td>Ikke godkjent. Spennfeil, største feil +0,24 mA (+0,15 bar).</td></tr>
+      <tr><th>Tiltak</th><td>Spennet justert. Sløyfetest mot kontrollrommet utført: 12,00 mA ga 50,0 %.</td></tr>
+      <tr><th>Som etterlatt</th><td>Godkjent. Alle punkter innenfor ±0,08 mA.</td></tr>
+      <tr><th>Avvik</th><td>Avviksmelding skrevet. Trykket kan ha vist opptil 0,15 bar for høyt siden forrige kalibrering.</td></tr>
+      <tr><th>Neste kalibrering</th><td>Om 6 måneder i stedet for 12, på grunn av stor feil som funnet</td></tr>
+      <tr><th>Utført av</th><td>Dato og signatur fra automatikeren</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Legg merke til at verdiene som funnet står i protokollen selv om giveren ble justert. Det er de som viser at det har vært en feil i drift, og de er grunnen til avviksmeldingen og det kortere intervallet.</p>
+
+<h2>Når instrumentet var utenfor toleransen</h2>
+<p>Var instrumentet utenfor toleransen som funnet, er det ikke nok å justere det. Målingene det har gjort siden forrige godkjente kalibrering, kan også være feil. Da skrives det en avviksmelding, se <a href="avvik-og-feilsoking.html">Avvik og feilsøking</a>, og noen må vurdere</p>
+<ul>
+  <li>hvor stor feilen var, og i hvilken retning</li>
+  <li>om feilen kan ha gitt produkt utenfor spesifikasjonen, feil analysesvar eller for sene alarmer</li>
+  <li>om produkt eller analyser må sjekkes på nytt eller holdes tilbake</li>
+  <li>om kalibreringsintervallet må bli kortere</li>
+</ul>
+
+<h2>Merking og loggbok</h2>
+<p>Mange instrumenter har en <strong>kalibreringsetikett</strong>. Den viser når instrumentet sist ble kalibrert, når det skal kalibreres neste gang, og hvem som gjorde det. Da ser du med en gang om instrumentet kan brukes. Har datoen for neste kalibrering gått ut, skal du ikke bruke instrumentet før det er kalibrert.</p>
+<p>På laboratoriet har mange instrumenter en <strong>loggbok</strong>. Der skriver du hver daglig kontroll og kalibrering, i tillegg til service og feil, se <a href="kalibrering-laboratorieutstyr.html">Kalibrering av laboratorieutstyr</a>. Her er et utdrag av loggboka for et pH-meter. Meteret kalibreres hver dag det brukes, men utdraget viser bare den første kalibreringen i hver måned:</p>
+
+<table>
+  <thead><tr><th>Dato</th><th>Buffere</th><th>Stigning</th><th>Kontroll pH 10,00</th><th>Godkjent?</th><th>Signatur</th></tr></thead>
+  <tbody>
+    <tr><td>03.08.2026</td><td>7,00 og 4,00</td><td>99 %</td><td>10,01</td><td>Ja</td><td>…</td></tr>
+    <tr><td>01.09.2026</td><td>7,00 og 4,00</td><td>98 %</td><td>10,00</td><td>Ja</td><td>…</td></tr>
+    <tr><td>05.10.2026</td><td>7,00 og 4,00</td><td>97 %</td><td>10,02</td><td>Ja</td><td>…</td></tr>
+    <tr><td>02.11.2026</td><td>7,00 og 4,00</td><td>96 %</td><td>10,01</td><td>Ja</td><td>…</td></tr>
+  </tbody>
+</table>
+<p>I en ekte loggbok står det også hvilke flasker med buffer som er brukt (batchnummer og utløpsdato), så det er sporbart.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hva forteller loggboka?</div>
+  <p><strong>Oppgave:</strong> Laboratoriet godtar stigning ned til 95 %. Bruk loggboka over. Hvor lenge kan elektroden brukes før den må byttes?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Stigningen har falt fra 99 % til 96 % på tre måneder, fra august til november.</li>
+    <li>Det er (99 − 96) / 3 = 1 prosentpoeng per måned.</li>
+    <li>Fra 96 % til 95 % er det 1 prosentpoeng. Med samme fart tar det omtrent én måned.</li>
+  </ol>
+  <p><strong>Svar:</strong> Stigningen når grensen rundt begynnelsen av desember. Hvert kalibreringsresultat var godkjent, men loggboka viser at elektroden blir dårligere. Bestill en ny elektrode nå, så du har den før den gamle må tas ut av bruk. Dette er et eksempel på tilstandsbasert vedlikehold, se <a href="typer-vedlikehold.html">Typer vedlikehold</a>.</p>
+</div>
+
+<h2>Gode regler for dokumentasjon</h2>
+<ul class="sjekk">
+  <li><strong>Skriv med en gang,</strong> mens du gjør jobben. Ikke stol på hukommelsen etterpå.</li>
+  <li><strong>Skriv tallene, ikke bare «OK».</strong> Bare med tall kan noen se avdrift over tid.</li>
+  <li><strong>Ta med enheten,</strong> for eksempel 12,13 mA eller pH 7,01, og hvilken referanse du brukte.</li>
+  <li><strong>Ikke visk ut eller skriv over.</strong> Skriver du feil på papir, setter du én strek over, slik at det gamle fortsatt kan leses. Skriv det riktige ved siden av, med dato, signatur og gjerne kort hvorfor. Bruk aldri korrekturlakk.</li>
+  <li><strong>Skriv tydelig,</strong> slik at andre kan lese det, også om flere år.</li>
+  <li><strong>Signer bare for det du selv har gjort.</strong> Signaturen betyr at du står inne for at tallene er riktige.</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Dokumentasjon er også en barriere</div>
+  <ul>
+    <li>Når en forrigling forbikobles under kalibreringen, skal det skrives i en egen logg for forbikoblinger, og kontrollrommet skal vite om det. Se <a href="../05-maling-styring-regulering/forriglinger.html">Forriglinger</a> i Automasjon. Loggen gjør at ingen glemmer å fjerne forbikoblingen, også om jobben går over et skiftbytte. Se <a href="forbedring-og-vaktoverlevering.html">Kontinuerlig forbedring og vaktoverlevering</a>.</li>
+    <li>Et instrument som ikke er godkjent, skal merkes tydelig, slik at ingen tar det i bruk ved en feil.</li>
+    <li>Falske eller pyntede tall i en protokoll er alvorlig. Det kan føre til at farlig utstyr blir stående i drift.</li>
+  </ul>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>1. Hvorfor skal verdiene som funnet stå i protokollen, også når instrumentet er justert etterpå?</p>
+  <ul>
+    <li>Fordi det ser bedre ut med mange tall</li>
+    <li data-riktig>Fordi de viser hvor stor feilen var mens instrumentet var i drift</li>
+    <li>Fordi verdiene som etterlatt ikke er til å stole på</li>
+  </ul>
+  <p class="forklaring">Verdiene som funnet viser om målingene før kalibreringen kan ha vært feil. Var de utenfor toleransen, må det skrives en avviksmelding, og analyser eller produkt kan være berørt.</p>
+</div>
+
+<div class="quiz">
+  <p>2. Du skriver 7,10 i loggboka, men det skulle vært 7,01. Hva gjør du?</p>
+  <ul>
+    <li>Visker ut og skriver 7,01</li>
+    <li>Dekker over med korrekturlakk og skriver 7,01</li>
+    <li data-riktig>Setter én strek over 7,10, skriver 7,01 ved siden av og signerer med dato</li>
+  </ul>
+  <p class="forklaring">Det som var skrevet, skal fortsatt kunne leses. Da kan alle se hva som er rettet, når og av hvem.</p>
+</div>
+
+<div class="quiz">
+  <p>3. Hva skal stå om referansen i en kalibreringsprotokoll?</p>
+  <ul>
+    <li>Bare navnet på produsenten</li>
+    <li data-riktig>Hvilken referanse som er brukt, med serienummer, og når den selv ble kalibrert</li>
+    <li>Ingenting, det er nok at instrumentet er godkjent</li>
+  </ul>
+  <p class="forklaring">Med serienummer og kalibreringsdato for referansen er målingen sporbar. Viser det seg senere at referansen var feil, vet man hvilke kalibreringer som må gjøres om.</p>
+</div>
+
+<div class="quiz">
+  <p>4. Kalibreringsetiketten på en vekt viser at neste kalibrering skulle vært gjort for to måneder siden. Hva gjør du?</p>
+  <ul>
+    <li>Bruker vekta. Den virket jo i går.</li>
+    <li data-riktig>Bruker ikke vekta og melder fra, slik at den blir kalibrert</li>
+    <li>Skriver ny dato på etiketten</li>
+  </ul>
+  <p class="forklaring">Når datoen har gått ut, er det ikke dokumentert at vekta viser riktig. Den skal ikke brukes før den er kalibrert. Bare den som har kalibrert, skal skrive på etiketten.</p>
+</div>
+
+<div class="quiz">
+  <p>5. Loggboka viser at stigningen på et pH-meter har falt litt hver måned, men alle kalibreringene er godkjent. Hva forteller det deg?</p>
+  <ul>
+    <li>Ingenting, så lenge kalibreringene er godkjent</li>
+    <li data-riktig>At elektroden blir dårligere, og at det snart er tid for å bytte den</li>
+    <li>At bufferløsningene er feil</li>
+  </ul>
+  <p class="forklaring">En jevn nedgang viser hvor elektroden er på vei. Ved å følge med i loggboka kan du bytte elektroden før den gir feil, i stedet for å bli overrasket en dag kalibreringen ikke går gjennom.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>kalibreringsprotokoll</td><td>Skjema der en kalibrering skrives ned: instrument, referanser, verdier som funnet og som etterlatt, konklusjon, dato og signatur.</td><td>calibration record</td></tr>
+    <tr><td>kalibreringsetikett</td><td>Merke på et instrument som viser når det sist ble kalibrert, når det skal kalibreres neste gang, og av hvem.</td><td>calibration label</td></tr>
+    <tr><td>loggbok</td><td>Bok eller skjema som hører til et instrument, der kontroller, kalibreringer, service og feil skrives ned.</td><td>logbook</td></tr>
+    <tr><td>akkreditering</td><td>Offentlig godkjenning av at et laboratorium har kompetanse og et kvalitetssystem til å gjøre bestemte analyser eller kalibreringer.</td><td>accreditation</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="systematisk-vedlikehold.html">Systematisk vedlikehold</a>: arbeidsordre, vedlikeholdshistorikk og vedlikeholdssystem.</li>
+  <li><a href="avvik-og-feilsoking.html">Avvik og feilsøking</a>: hva et avvik er, og hvordan det meldes.</li>
+  <li>Kvalitetssystem og avvik på laboratoriet kommer i emnet Rapportering og kvalitet i <a href="../07-laboratorium-og-analyse/index.html">Laboratorium og analyse</a> (kommer).</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
