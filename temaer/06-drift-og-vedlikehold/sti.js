@@ -35,10 +35,10 @@ KPL.sti("06-drift-og-vedlikehold", [
   {
     emne: "Korrosjon",
     sider: [
-      { fil: "hva-er-korrosjon.html", tittel: "Hva er korrosjon?", status: "utkast" },
-      { tittel: "Typer korrosjon i prosessanlegg", meny: "Typer korrosjon", status: "planlagt" },
-      { tittel: "Korrosjonsbeskyttelse og inspeksjon", meny: "Beskyttelse og inspeksjon", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "hva-er-korrosjon.html", tittel: "Hva er korrosjon?", status: "ferdig" },
+      { fil: "typer-korrosjon.html", tittel: "Typer korrosjon i prosessanlegg", meny: "Typer korrosjon", status: "ferdig" },
+      { fil: "korrosjonsbeskyttelse.html", tittel: "Korrosjonsbeskyttelse og inspeksjon", meny: "Beskyttelse og inspeksjon", status: "ferdig" },
+      { fil: "hva-kan-du-na-korrosjon.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {
