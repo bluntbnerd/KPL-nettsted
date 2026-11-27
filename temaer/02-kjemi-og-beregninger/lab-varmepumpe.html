@@ -64,13 +64,43 @@
 </table>
 
 <h2>Utregninger</h2>
+<p>Trykk på «Se eksempel» under hvert steg for å se en utregning med typiske måleverdier. Bytt ut tallene med deres egne.</p>
 <ol>
-  <li>Massen av vannet i hver beholder.</li>
-  <li>Varmen som ble tilført vannet «inne»: \( Q_\text{rom} = m \cdot c \cdot \Delta T \).</li>
-  <li>Energien kompressoren brukte: \( W_\text{strøm} = P \cdot t \).</li>
-  <li>Varmefaktoren: \( \text{COP} = \dfrac{Q_\text{rom}}{W_\text{strøm}} \).</li>
+  <li>Massen av vannet i hver beholder.
+    <details class="fasit"><summary>Se eksempel</summary>
+      <p>Dere har målt 2,00 L vann. 1 mL vann veier omtrent 1 g, så 1 L veier omtrent 1 kg.</p>
+      <p>\( m = 2{,}00 \text{ L} \cdot 1 \text{ kg/L} = 2{,}00 \text{ kg} \)</p>
+    </details>
+  </li>
+  <li>Varmen som ble tilført vannet «inne»: \( Q_\text{rom} = m \cdot c \cdot \Delta T \).
+    <details class="fasit"><summary>Se eksempel</summary>
+      <p>Temperaturen inne gikk fra 18,0 °C til 33,0 °C, så \( \Delta T = 33{,}0 - 18{,}0 = 15{,}0 \text{ °C} \). For vann er \( c = 4{,}18 \text{ kJ/(kg·°C)} \).</p>
+      <p>\( Q_\text{rom} = 2{,}00 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 15{,}0 \text{ °C} = 125 \text{ kJ} \)</p>
+    </details>
+  </li>
+  <li>Energien kompressoren brukte: \( W_\text{strøm} = P \cdot t \).
+    <details class="fasit"><summary>Se eksempel</summary>
+      <p>Effekten dere noterte, var 118, 121, 120, 122, 119, 120, 121, 119, 120 og 120 W. Gjennomsnittet er summen delt på 10: \( P = 1200 \text{ W} / 10 = 120 \text{ W} \).</p>
+      <p>Tiden må være i sekunder: 10 min = 600 s.</p>
+      <p>\( W_\text{strøm} = 120 \text{ W} \cdot 600 \text{ s} = 72\,000 \text{ J} = 72{,}0 \text{ kJ} \)</p>
+      <p>Del på 1000 for å gå fra J til kJ, slik at du har samme enhet som Q.</p>
+    </details>
+  </li>
+  <li>Varmefaktoren: \( \text{COP} = \dfrac{Q_\text{rom}}{W_\text{strøm}} \).
+    <details class="fasit"><summary>Se eksempel</summary>
+      <p>\( \text{COP} = \dfrac{125 \text{ kJ}}{72{,}0 \text{ kJ}} = 1{,}7 \)</p>
+      <p>Vannet fikk 1,7 ganger så mye energi som kompressoren brukte strøm.</p>
+    </details>
+  </li>
+  <li>Kontroll: varmen som ble hentet fra vannet «ute», og energibalansen.
+    <details class="fasit"><summary>Se eksempel</summary>
+      <p>Temperaturen ute gikk fra 18,0 °C til 11,5 °C, altså 6,5 °C kaldere, og det var også 2,00 kg vann.</p>
+      <p>\( Q_\text{ute} = 2{,}00 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 6{,}5 \text{ °C} = 54 \text{ kJ} \)</p>
+      <p>\( Q_\text{ute} + W_\text{strøm} = 54 \text{ kJ} + 72 \text{ kJ} = 126 \text{ kJ} \), nesten det samme som \( Q_\text{rom} = 125 \text{ kJ} \). Forskjellen skyldes varmetap og målefeil.</p>
+    </details>
+  </li>
 </ol>
-<p>Se <a href="varmepumpe-regnehjelp.html">Regnehjelp: varmepumpeforsøket</a> for et gjennomregnet eksempel steg for steg.</p>
+<p>Hele utregningen med forklaringer står på <a href="varmepumpe-regnehjelp.html">Regnehjelp: varmepumpeforsøket</a>.</p>
 
 <h2>Konklusjon og diskusjon</h2>
 <ul>
