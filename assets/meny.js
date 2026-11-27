@@ -1107,6 +1107,59 @@
     document.head.appendChild(mj);
   }
 
+  // ---------- «Alle sider i temaet» på temaets oversiktsside ----------
+  // Lages automatisk fra sti.js, ordnet etter emne, i en sammenleggbar boks.
+  // Erstatter en eventuell håndskrevet seksjon <h2>Fagstoff</h2> (den fjernes fra siden).
+  function byggAlleSider() {
+    if (!TEMA || !/\/index\.html$/.test(HER)) return;
+    var gammel = Array.prototype.filter.call(main.querySelectorAll("h2"), function (h) { return /^\s*fagstoff\s*$/i.test(h.textContent); })[0];
+    var grupper = emner(TEMA).filter(function (e) { return e.sider.length; });
+    var antall = grupper.reduce(function (n, e) { return n + e.sider.filter(function (s) { return s.fil; }).length; }, 0);
+    var plass = null;
+    if (gammel) {
+      plass = gammel;
+      var el = gammel.nextElementSibling;
+      while (el && el.tagName !== "H2") { var neste = el.nextElementSibling; el.remove(); el = neste; }
+    }
+    if (!antall) { if (gammel) gammel.remove(); return; }
+    var d = lag("details", "ordliste-boks alle-sider");
+    d.id = "alle-sider";
+    var sum = lag("summary");
+    sum.innerHTML = "Alle sider i temaet <span>(" + antall + " sider)</span>";
+    d.appendChild(sum);
+    grupper.forEach(function (e) {
+      if (e.navn) d.appendChild(lag("h3", "alle-sider-emne", e.navn));
+      // Samme utseende som læringsstien: nummerbrikke (hake når ferdig), tittel og sidetype
+      var ol = lag("ol", "sti");
+      var nr = 0;
+      e.sider.forEach(function (s) {
+        var merke = s.fordypning ? "+" : (erOppslag(TEMA) && !e.navn) ? "•" : String(++nr);
+        var li = lag("li");
+        if (s.type !== "fagstoff") li.className = "sti-" + s.type;
+        if (s.fordypning) li.classList.add("sti-fordypning");
+        var a;
+        if (s.type === "planlagt") {
+          a = lag("span", "sti-lenke");
+          a.innerHTML = '<span class="sti-nr">' + merke + '</span><span class="sti-tittel"></span><span class="kommer-merke">' + ikon("laas", "laas") + "kommer</span>";
+        } else {
+          a = lenke(s.fil, "");
+          var ferdig = erFerdig(s.fil);
+          a.innerHTML = '<span class="sti-nr' + (ferdig ? " ferdig" : "") + '">' + (ferdig ? ikon("hake") : merke) + '</span><span class="sti-tittel"></span>';
+          if (s.sidetype) a.appendChild(lag("span", "type-merke type-" + s.sidetype, SIDETYPER[s.sidetype]));
+        }
+        a.querySelector(".sti-tittel").textContent = s.tittel;
+        li.appendChild(a);
+        ol.appendChild(li);
+      });
+      d.appendChild(ol);
+    });
+    if (plass) { plass.parentNode.insertBefore(d, plass); plass.remove(); }
+    else {
+      var ord = document.getElementById("ordliste");
+      if (ord) ord.parentNode.insertBefore(d, ord); else main.appendChild(d);
+    }
+  }
+
   // ---------- Start ----------
   byggQuiz();
   byggOrdkort();
@@ -1118,6 +1171,7 @@
     byggBanner();
     byggSidetype();
     byggEmnekort();
+    byggAlleSider();
     byggUndertemakort();
     if (!erForside) { byggSidemeny(); byggBla(); byggToc(); }
     byggTemakort();

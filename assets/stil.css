@@ -628,6 +628,9 @@ details.ordliste-boks { margin: 2em 0 1em; border-left: 4px solid var(--tema); }
 details.ordliste-boks > summary { font-size: 1.1rem; }
 details.ordliste-boks > summary span { font-weight: 400; color: var(--dempet); font-size: .9rem; }
 details.ordliste-boks > summary::before { background: var(--tema-lys); color: var(--tema); }
+details.alle-sider .alle-sider-emne { font-size: 1rem; margin: 1em 18px .3em; text-transform: none; letter-spacing: 0; }
+details.alle-sider ol { margin: 0 18px .6em; }
+details.alle-sider .alle-sider-merke { color: var(--dempet); font-size: .9em; }
 .ps-sidemeny + .ps-sidemeny { margin-top: 6px; }
 a.ps-knapp { text-decoration: none; }
 
