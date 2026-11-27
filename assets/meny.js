@@ -23,7 +23,8 @@
   // Sidetyper. Settes med type: "…" i sti.js, ellers gjettes den ut fra tittelen.
   var SIDETYPER = {
     oversikt: "Oversikt", fagstoff: "Teori", simulering: "Simulering", lab: "Lab",
-    sjekk: "Quiz", oppgaver: "Oppgaver", ressurser: "Ressurser", video: "Video", fordypning: "Fordypning"
+    sjekk: "Quiz", oppgaver: "Oppgaver", ressurser: "Ressurser", video: "Video", fordypning: "Fordypning",
+    vurdering: "Vurdering"
   };
   // Kort tittel i venstremenyen: meny: "…" i sti.js, ellers fjernes «Øv:» og «(PhET)»,
   // siden sidetype-merket allerede sier at det er en simulering.

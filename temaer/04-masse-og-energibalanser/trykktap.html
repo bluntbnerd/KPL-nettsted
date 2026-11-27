@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Trykktap</h1>
@@ -17,18 +17,18 @@
 <p class="ingress">Når væske strømmer gjennom rør, bend og ventiler, faller trykket litt etter litt. Det kalles trykktap. Pumpen må lage nok trykk til å dekke tapet, ellers kommer ikke væsken fram. Her lærer du hva som gir trykktap, hvordan du leser det av trykkmålere, og hvordan du kan måle det selv i pumperommet.</p>
 
 <h2>Hvorfor faller trykket?</h2>
-<p>Væsken gnir mot rørveggen, og lagene i væsken gnir mot hverandre. Denne <strong>friksjonen</strong> bremser strømmen. Pumpen har gitt væsken energi i form av trykk, og friksjonen gjør litt av denne energien om til varme. Derfor er trykket lavere langt ute i røret enn rett etter pumpen. Tapet av trykk kalles <strong>trykktap</strong>.</p>
+<p>Væsken gnir mot rørveggen, og <a href="viskositet.html">lagene i væsken gnir mot hverandre</a>. Denne <strong>friksjonen</strong> bremser strømmen. Pumpen har gitt væsken energi i form av trykk, og friksjonen gjør litt av denne energien om til varme. Derfor er trykket lavere langt ute i røret enn rett etter pumpen. Tapet av trykk kalles <strong>trykktap</strong>.</p>
 <p>Energien forsvinner ikke, men den blir til varme som du ikke kan bruke til å flytte væsken. Varmen er så liten at du sjelden merker den på temperaturen.</p>
 
 <figure>
-  <img src="bilder/trykktap-langs-ror.svg" alt="Et rør fra en pumpe til en tank, med fire trykkmålere. Punkt A rett etter pumpen viser 1,50 bar. Etter 10 meter rett rør viser punkt B 1,40 bar, et tap på 0,10 bar. Etter to bend viser punkt C 1,35 bar, et tap på 0,05 bar. Etter en delvis stengt ventil viser punkt D 0,95 bar, et tap på 0,40 bar." width="600">
+  <img src="bilder/trykktap-langs-ror.svg" alt="Et rør fra en pumpe til en tank, med fire trykkmålere. Punkt A rett etter pumpen viser 1,50 bar. Etter 10 meter rett rør viser punkt B 1,40 bar, et tap på 0,10 bar. Etter fire bend viser punkt C 1,35 bar, et tap på 0,05 bar. Etter en delvis stengt ventil viser punkt D 0,95 bar, et tap på 0,40 bar." width="600">
   <figcaption>Figur: Trykket faller fra punkt A til punkt D. Hver del av røret tar sin del av trykket. Her er det den delvis stengte ventilen som gir størst tap. Tallene er tenkte.</figcaption>
 </figure>
 
 <h2>Les trykktapet av trykkmålere</h2>
 <p>Trykktapet over en del av røret er forskjellen mellom trykket før og trykket etter:</p>
 <p>\[ \Delta p = p_{\text{før}} - p_{\text{etter}} \]</p>
-<p>Forskjellen mellom to trykk kalles <strong>differansetrykk</strong>. Det er det samme som trykktapet over den delen av røret.</p>
+<p>Forskjellen mellom to trykk kalles <strong>differansetrykk</strong>. Ligger røret vannrett og har samme diameter hele veien, er differansetrykket lik trykktapet over den delen av røret.</p>
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel: Trykktap over ventilen og i hele røret</div>
@@ -70,7 +70,7 @@
 </div>
 
 <h2>Hvor mye trykk må pumpen lage?</h2>
-<p>Pumpen må dekke to ting:</p>
+<p>Når pumpen tar vann fra en åpen tank og pumper det til en annen åpen tank, må den dekke to ting:</p>
 <ol>
   <li><strong>Høydeforskjellen:</strong> trykket som trengs for å løfte væsken, \( \rho \cdot g \cdot h \). Se <a href="trykk-i-vaesker.html">Trykk i væsker</a>.</li>
   <li><strong>Trykktapet</strong> i rør, bend, ventiler og filtre.</li>
@@ -96,11 +96,13 @@
   <p><strong>Mål:</strong> Se hvordan struping påvirker trykk og volumstrøm, og sammenlign med pumpekurven.</p>
   <p><strong>Før du starter:</strong> Hva tror du skjer med trykket på pumpens trykkmåler og med volumstrømmen når du struper ventilen? Skriv ned svaret.</p>
   <ol>
+    <li>Spør læreren om å sette nivåregulatoren for LCV-12022 i manuell, med ventilen helt åpen. Da er det bare spjeldventilen som endrer motstanden.</li>
+    <li>Spjeldventilen på sugesiden (foran pumpen) skal stå helt åpen hele tiden.</li>
     <li>Start pumpe 2 etter driftsprosedyren, og kjør den mot tank 2 med stengt bunnventil og spjeldventilen etter pumpen helt åpen. Les av trykkmåleren på pumpeutløpet (PI 12065).</li>
-    <li>Mål volumstrømmen med nivåstigning i tank 2, som på siden <a href="stromning.html">Strømning i rør</a>.</li>
-    <li>Strup spjeldventilen på trykksiden av pumpen til halvt åpen. Les av trykket og mål volumstrømmen igjen.</li>
-    <li>Strup enda mer og mål en gang til.</li>
-    <li>Regn ut den hydrauliske effekten for hver måling, \( P = \Delta p \cdot Q \).</li>
+    <li>Mål volumstrømmen med nivåstigning i tank 2, som på siden <a href="stromning.html">Strømning i rør</a>. Mål tiden det tar for nivået å stige for eksempel 0,30 m.</li>
+    <li>Tøm tank 2 til samme startnivå. Strup spjeldventilen på trykksiden til halvt åpen. Les av trykket og mål volumstrømmen igjen.</li>
+    <li>Tøm til samme startnivå igjen, strup enda mer og mål en gang til. Med spjeldventilen nesten stengt kan strømningsvakten stoppe pumpen fordi det strømmer for lite. Da noterer du det og avslutter.</li>
+    <li>Regn ut den hydrauliske effekten for hver måling, \( P = \Delta p \cdot Q \). Bruk trykket på PI 12065 som Δ<em>p</em>. Det er en forenkling, for vi ser bort fra trykket inn til pumpen. Husk å gjøre om: bar · 100 000 = Pa, og L/s : 1000 = m<sup>3</sup>/s.</li>
   </ol>
   <table>
     <thead><tr><th>Ventil</th><th>Trykk PI 12065 (bar)</th><th>Δh i tank 2 (m)</th><th>Tid (s)</th><th>Q (L/s)</th><th>P (W)</th></tr></thead>
@@ -117,7 +119,7 @@
   <div class="boks-tittel">Sikkerhet</div>
   <ul>
     <li>Følg driftsprosedyrene for start og stopp av pumpene, og spør læreren før du endrer ventiler.</li>
-    <li>Ikke steng ventilen helt mens pumpen går. Pumpen blir varm når ingenting strømmer gjennom den.</li>
+    <li>Pumpen skal ikke gå lenge mot stengt ventil. Når ingenting strømmer gjennom pumpen, blir den varm. Driftsprosedyren starter pumpen mot stengt ventil bare en kort stund, og den skal følges.</li>
     <li>Foran en stengt ventil kan trykket bli så høyt som pumpen klarer å lage. Alle deler må tåle det (se PN på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>).</li>
     <li>Følg med på nivået i tanken du fyller. Pumpene stopper ved HH-nivå, men du skal ikke stole på at vernet alltid virker.</li>
     <li>Stort trykktap over et filter eller en sil betyr ofte at det er tett. Det skal meldes og rengjøres etter prosedyren, ikke ignoreres.</li>

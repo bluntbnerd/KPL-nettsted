@@ -7,6 +7,7 @@
  * Planlagt side (ikke skrevet ennå): { tittel: "Tittel", status: "planlagt" }
  *
  * Fem emner fra 20.11.2026 (prosesslæreren). Hvert emne har sin egen emneøkt.
+ * Massebalanser er flyttet til rett etter grunnbegrepene 27.11.2026, slik at systemgrense og massebalanse er lært før Fluidmekanikk og energibalansene.
  */
 KPL.sti("04-masse-og-energibalanser", [
   {
@@ -24,12 +25,20 @@ KPL.sti("04-masse-og-energibalanser", [
     ]
   },
   {
+    emne: "Massebalanser i prosessanlegg",
+    sider: [
+      { fil: "massebalanse-i-anlegg.html", tittel: "Massebalanse i et anlegg", meny: "Massebalanse", type: "fagstoff", status: "ferdig" },
+      { fil: "separasjon.html", tittel: "Separasjon", type: "fagstoff", status: "ferdig" },
+      { fil: "resirkulering-og-utbytte.html", tittel: "Resirkulering og utbytte", meny: "Resirkulering", type: "fagstoff", status: "ferdig" }
+    ]
+  },
+  {
     emne: "Fluidmekanikk",
     sider: [
-      { fil: "trykk-i-vaesker.html", tittel: "Trykk i væsker", type: "fagstoff", status: "utkast" },
-      { fil: "stromning.html", tittel: "Strømning i rør", meny: "Strømning", type: "fagstoff", status: "utkast" },
-      { fil: "ror-ventiler-pumper.html", tittel: "Rør, ventiler og pumper", meny: "Rør og pumper", type: "fagstoff", status: "utkast" },
-      { fil: "trykktap.html", tittel: "Trykktap", type: "fagstoff", status: "utkast" }
+      { fil: "trykk-i-vaesker.html", tittel: "Trykk i væsker", type: "fagstoff", status: "ferdig" },
+      { fil: "stromning.html", tittel: "Strømning i rør", meny: "Strømning", type: "fagstoff", status: "ferdig" },
+      { fil: "ror-ventiler-pumper.html", tittel: "Rør, ventiler og pumper", meny: "Rør og pumper", type: "fagstoff", status: "ferdig" },
+      { fil: "trykktap.html", tittel: "Trykktap", type: "fagstoff", status: "ferdig" }
     ]
   },
   {
@@ -43,17 +52,9 @@ KPL.sti("04-masse-og-energibalanser", [
   {
     emne: "Energi i prosessindustrien",
     sider: [
-      { fil: "varmeveksler.html", tittel: "Energibalanse i en varmeveksler", meny: "Varmeveksler", type: "fagstoff", status: "utkast" },
-      { fil: "varmetap.html", tittel: "Varmetap og virkningsgrad", meny: "Varmetap", type: "fagstoff", status: "utkast" },
-      { fil: "energigjenvinning.html", tittel: "Energigjenvinning", type: "fagstoff", status: "utkast" }
-    ]
-  },
-  {
-    emne: "Massebalanser i prosessanlegg",
-    sider: [
-      { fil: "massebalanse-i-anlegg.html", tittel: "Massebalanse i et anlegg", meny: "Massebalanse", type: "fagstoff", status: "ferdig" },
-      { fil: "separasjon.html", tittel: "Separasjon", type: "fagstoff", status: "ferdig" },
-      { fil: "resirkulering-og-utbytte.html", tittel: "Resirkulering og utbytte", meny: "Resirkulering", type: "fagstoff", status: "ferdig" }
+      { fil: "varmeveksler.html", tittel: "Energibalanse i en varmeveksler", meny: "Varmeveksler", type: "fagstoff", status: "ferdig" },
+      { fil: "varmetap.html", tittel: "Varmetap og virkningsgrad", meny: "Varmetap", type: "fagstoff", status: "ferdig" },
+      { fil: "energigjenvinning.html", tittel: "Energigjenvinning", type: "fagstoff", status: "ferdig" }
     ]
   }
 ]);

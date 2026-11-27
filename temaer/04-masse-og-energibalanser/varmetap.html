@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Varmetap og virkningsgrad</h1>
@@ -22,8 +22,9 @@
 <p><strong>Virkningsgraden</strong> er den nyttige energien delt på den tilførte energien. Den skrives med den greske bokstaven \( \eta \) («eta»):</p>
 <p>\[ \eta = \frac{E_\text{nyttig}}{E_\text{tilført}} \]</p>
 <p>Begge energiene må ha samme enhet, for eksempel kJ. Svaret er et tall mellom 0 og 1, og vi gjør det om til prosent ved å gange med 100. Formelen virker også med effekt i kW, for eksempel nyttig effekt delt på tilført effekt.</p>
-<p>Energi kan ikke lages av ingenting. Den nyttige energien kan derfor aldri bli større enn den tilførte, og virkningsgraden er alltid under 100 %. Resten er tap:</p>
+<p>Energi kan ikke lages av ingenting. Den nyttige energien kan derfor aldri bli større enn den tilførte, og virkningsgraden kan aldri bli over 100 %. I praksis er det alltid noe tap, så den blir under 100 %. Tapet er resten:</p>
 <p>\[ E_\text{tap} = E_\text{tilført} - E_\text{nyttig} \]</p>
+<p>En varmepumpe kan levere mer varme enn strømmen den bruker (COP over 1). Det bryter ikke regelen, for varmepumpen lager ikke varmen. Den henter den fra omgivelsene. Se <a href="varmepumpe.html">Varmepumpe og COP</a>.</p>
 
 <h2>Hvor blir energien av?</h2>
 <p>Energien som går tapt, forsvinner ikke. Den går ut til omgivelsene, nesten alltid som varme. Figuren viser hvor energien i en gasskjel blir av.</p>
@@ -52,7 +53,7 @@
     <li>Virkningsgrad: \( \eta = \dfrac{136 \text{ MJ}}{162 \text{ MJ}} = 0{,}84 = 84 \,\% \)</li>
     <li>Tap: \( 162 \text{ MJ} - 136 \text{ MJ} = 26 \text{ MJ} \)</li>
   </ol>
-  <p><strong>Svar:</strong> Virkningsgraden er ca. 84 %, og ca. 26 MJ går tapt, mest gjennom tankveggen og lokket.</p>
+  <p><strong>Svar:</strong> Virkningsgraden er ca. 84 %, og ca. 26 MJ blir ikke til nyttig varme i vannet. Noe går til å varme opp selve tanken, og resten går tapt til lufta gjennom tankveggen og lokket.</p>
 </div>
 
 <h2>Isolasjon</h2>
@@ -104,13 +105,14 @@
 <ul>
   <li>Hvor ble energien som ikke gikk til vannet, av?</li>
   <li>Effekten på typeskiltet er en omtrentlig verdi. Den virkelige effekten kan være litt høyere eller lavere, blant annet fordi spenningen i stikkontakten varierer. Hvordan påvirker det svaret ditt?</li>
+  <li>Vannet har kanskje kokt en stund før vannkokeren slo seg av. Hvordan påvirker det svaret?</li>
   <li>Tror du virkningsgraden blir høyere eller lavere hvis du bare koker en liten skvett vann? Begrunn svaret.</li>
   <li>Hvordan kunne vannkokeren vært bygd for å få høyere virkningsgrad?</li>
 </ul>
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet</div>
-  <p>Kokende vann og damp fra tuten gir brannskader. Hold hendene unna tuten, og ikke flytt vannkokeren mens vannet koker. Mål temperaturen før du slår på, ikke mens vannet koker. I anlegget kan uisolerte damprør og varme tanker være over 100 °C. Ta aldri på et rør eller utstyr du ikke vet temperaturen på, og meld fra om skadet isolasjon.</p>
+  <p>Kokende vann og damp fra tuten gir brannskader. Hold hendene unna tuten, og ikke flytt vannkokeren mens vannet koker. Fyll vannet mellom min- og maks-merket, og søl ikke vann på sokkelen eller ledningen. Mål temperaturen før du slår på, ikke mens vannet koker. I anlegget kan uisolerte damprør og varme tanker være over 100 °C. Ta aldri på et rør eller utstyr du ikke vet temperaturen på, og meld fra om skadet isolasjon.</p>
 </div>
 
 <h2>Test deg selv</h2>

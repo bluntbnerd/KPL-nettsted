@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Energibalanse i en varmeveksler</h1>
@@ -23,7 +23,7 @@
 <p>Med massestrømmen \( \dot{m} \) i kg/s og \( c \) i kJ/(kg·°C) får du svaret i kW.</p>
 
 <h2>Energibalansen</h2>
-<p>Vi tegner en <a href="massebalanse-i-anlegg.html">systemgrense</a> rundt varmeveksleren, slik vi gjør i en massebalanse. Fire strømmer krysser grensen: varm strøm inn og ut, og kald strøm inn og ut.</p>
+<p>Vi tegner en systemgrense rundt varmeveksleren, slik vi gjør i en <a href="massebalanse-i-anlegg.html">massebalanse</a>. Fire strømmer krysser grensen: varm strøm inn og ut, og kald strøm inn og ut.</p>
 
 <figure>
   <img src="bilder/varmeveksler-energibalanse.svg" alt="Skisse av en varmeveksler med to kanaler og en vegg imellom. Varm strøm går inn på 80 grader og ut på 60 grader. Kjølevann går motsatt vei, inn på 10 grader og ut på 25 grader. Piler viser varme gjennom veggen og litt tap til omgivelsene. En stiplet systemgrense går rundt varmeveksleren." width="620">
@@ -32,7 +32,8 @@
 
 <p>Energi kan ikke forsvinne. Varmen den varme strømmen gir fra seg, må derfor havne et sted. Det meste går til den kalde strømmen, og resten går tapt til lufta rundt varmeveksleren:</p>
 <p>\[ \text{avgitt varme} = \text{opptatt varme} + \text{tap} \]</p>
-<p>Avgitt varme regner du ut med tallene for den varme siden, og opptatt varme med tallene for den kalde siden. I begge tilfeller er \( \Delta T \) forskjellen mellom høyeste og laveste temperatur, slik at svaret blir positivt.</p>
+<p>Avgitt varme regner du ut med tallene for den varme siden, og opptatt varme med tallene for den kalde siden. På hver side er \( \Delta T \) forskjellen mellom temperaturen inn og temperaturen ut, regnet slik at svaret blir positivt.</p>
+<p>Dette gjelder når driften er jevn, altså når temperaturene ikke endrer seg.</p>
 <p>En godt isolert varmeveksler har lite tap. Da kan vi regne som om tapet er null. Avgitt varme er da like stor som opptatt varme. Det gjør at vi kan finne én ukjent størrelse, for eksempel en temperatur vi ikke har målt.</p>
 
 <div class="boks eksempel">
@@ -78,7 +79,7 @@
 </figure>
 
 <p>Varme går alltid fra varmt til kaldt. Ved medstrøm kommer de to strømmene inn i samme ende. Der er forskjellen stor, men etter hvert som de går sammen gjennom varmeveksleren, nærmer temperaturene seg hverandre. Den kalde strømmen kan derfor aldri bli varmere enn den varme strømmen er når den går ut.</p>
-<p>Ved motstrøm møter den kalde strømmen det varmeste produktet helt til slutt, rett før den går ut. Det er en temperaturforskjell som driver varmen hele veien gjennom varmeveksleren. Derfor kan motstrøm flytte mer varme med den samme varmeveksleren. De fleste varmevekslere i industrien er koplet i motstrøm.</p>
+<p>Ved motstrøm møter den kalde strømmen det varmeste produktet helt til slutt, rett før den går ut. Temperaturforskjellen mellom strømmene holder seg jevn langs hele varmeveksleren, i stedet for å bli liten mot slutten. Derfor kan motstrøm flytte mer varme med den samme varmeveksleren. De fleste varmevekslere i industrien er koplet i motstrøm.</p>
 <p>Energibalansen regnes på samme måte for medstrøm og motstrøm. Det er bare temperaturene som blir forskjellige.</p>
 
 <h2>Forsøk: Energibalanse på skolens varmeveksler</h2>
@@ -104,7 +105,7 @@
 
 <div class="boks tips">
   <div class="boks-tittel">Tips: Fra L/min til kg/s</div>
-  <p>1 liter vann veier omtrent 1 kg. Del på 60 for å få per sekund. Eksempel: 12 L/min = 12 kg/min = 12 / 60 = 0,20 kg/s.</p>
+  <p>Sjekk først om måleren viser L/min eller m³/h. 1 liter vann veier omtrent 1 kg. For varmt vann er det litt under 1 kg, men forskjellen er bare 2–3 %. Del på 60 for å få per sekund. Eksempel: 12 L/min = 12 kg/min = 12 / 60 = 0,20 kg/s.</p>
 </div>
 
 <p>Spørsmål til rapporten:</p>

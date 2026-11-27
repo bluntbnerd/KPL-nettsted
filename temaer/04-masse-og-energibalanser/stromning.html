@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Strømning i rør</h1>
@@ -40,7 +40,7 @@
 
 <figure>
   <img src="bilder/volumstrom-nivastigning.svg" alt="Pumpe 2 fyller tank 2 gjennom et rør ovenfra. Bunnarealet i tanken er 0,490 kvadratmeter. Nivået stiger fra 0,40 meter ved start til 1,00 meter etter 60 sekunder. Stigningen, delta h, er 0,60 meter." width="600">
-  <figcaption>Figur: Nivået i tank 2 stiger 0,60 m på 60 sekunder. Volumet som har kommet inn, er bunnarealet ganger stigningen.</figcaption>
+  <figcaption>Figur: Nivået i tank 2 stiger 0,60 m på 60 sekunder. Volumet som har kommet inn, er bunnarealet ganger stigningen. Tallene er tenkte.</figcaption>
 </figure>
 
 <div class="boks eksempel">
@@ -52,18 +52,18 @@
     <li>Volumstrøm: \( Q = \dfrac{V}{t} = \dfrac{0{,}294 \text{ m}^3}{60 \text{ s}} = 0{,}004\,90 \text{ m}^3\text{/s} \)</li>
     <li>I andre enheter: 4,90 L/s, eller \( 0{,}004\,90 \cdot 3600 \approx 17{,}6 \text{ m}^3\text{/h} \)</li>
   </ol>
-  <p><strong>Svar:</strong> Volumstrømmen er ca. 4,9 L/s, eller ca. 18 m<sup>3</sup>/h. Det er litt mindre enn 20 m<sup>3</sup>/h som står på skiltet. Pumpen må presse vannet gjennom rør og ventiler, og da gir den mindre. Det lærer du mer om på siden <a href="trykktap.html">Trykktap</a>.</p>
+  <p><strong>Svar:</strong> Volumstrømmen er ca. 4,9 L/s, eller ca. 18 m<sup>3</sup>/h. Det er litt mindre enn 20 m<sup>3</sup>/h som står på skiltet. Hvor mye pumpen gir, avhenger av motstanden i anlegget. Skiltet viser ett driftspunkt: 20 m<sup>3</sup>/h ved 15 mVs. Mer motstand gir mindre volumstrøm, se pumpekurven på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>.</p>
 </div>
 
 <h2>Massestrøm: hvor mange kilo per tid</h2>
-<p>I massebalanser regner du i kilo, ikke liter. <strong>Massestrøm</strong> er hvor mange kilo som strømmer forbi per tid. Du finner den fra volumstrømmen og tettheten:</p>
+<p>I massebalanser regner du i kilo, ikke liter. Det så du på siden <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a>. <strong>Massestrøm</strong> er hvor mange kilo som strømmer forbi per tid. Du finner den fra volumstrømmen og tettheten:</p>
 <p>\[ \dot{m} = \rho \cdot Q \]</p>
 <ul>
   <li>\( \dot{m} \) = massestrøm (kg/s). Prikken over <em>m</em> betyr «per tid».</li>
   <li><em>ρ</em> = tetthet (kg/m<sup>3</sup>)</li>
   <li><em>Q</em> = volumstrøm (m<sup>3</sup>/s)</li>
 </ul>
-<p>For vann er tettheten ca. 1000 kg/m<sup>3</sup>. Da er 1 L omtrent 1 kg, og 4,90 L/s vann er ca. 4,90 kg/s. For andre væsker må du bruke tettheten deres. Slik bruker du massestrømmen videre i <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a>.</p>
+<p>For vann er tettheten ca. 1000 kg/m<sup>3</sup>. Da er 1 L omtrent 1 kg, og 4,90 L/s vann er ca. 4,90 kg/s. For andre væsker må du bruke tettheten deres.</p>
 
 <h2>Strømningshastighet: hvor fort det går</h2>
 <p><strong>Strømningshastighet</strong> er hvor fort væsken beveger seg inne i røret, i m/s. Den avhenger av volumstrømmen og hvor stort <strong>tverrsnittsarealet</strong> av røret er, altså arealet av sirkelen du ser hvis du kapper røret på tvers.</p>
@@ -91,22 +91,24 @@
     <li>Areal DN40: \( A = \dfrac{\pi \cdot (0{,}040 \text{ m})^2}{4} = 0{,}001\,26 \text{ m}^2 \)</li>
     <li>Hastighet DN40: \( v = \dfrac{0{,}005\,56 \text{ m}^3\text{/s}}{0{,}001\,26 \text{ m}^2} \approx 4{,}4 \text{ m/s} \)</li>
   </ol>
-  <p><strong>Svar:</strong> Ca. 1,7 m/s inn til pumpen og ca. 4,4 m/s ut fra pumpen.</p>
+  <p><strong>Svar:</strong> Ca. 1,7 m/s inn til pumpen og ca. 4,4 m/s ut fra pumpen. 4,4 m/s er høyt for vann i et rør. Det gir stort trykktap i DN40-røret.</p>
 </div>
 
 <h2>Det som går inn, må komme ut</h2>
-<p>Når røret er fullt av væske, kan ikke vannet hope seg opp eller bli borte på veien. Like mye må passere hvert sted i røret hvert sekund. Volumstrømmen er derfor den samme i den vide og den smale delen. Det er massebalansen igjen, bare for et rør.</p>
+<p>Når røret er fullt av væske, kan ikke vannet hope seg opp eller bli borte på veien. Like mye må passere hvert sted i røret hvert sekund. Volumstrømmen er derfor den samme i den vide og den smale delen. Dette er massebalansen fra siden <a href="massebalanse-i-anlegg.html">Massebalanse i et anlegg</a>, brukt på et rør.</p>
+<p>At volumstrømmen er lik overalt, gjelder for væsker. Væske lar seg nesten ikke presse sammen, så 1 L væske tar like stor plass i hele røret. En gass kan presses sammen. Da er det massestrømmen som er lik overalt, ikke volumstrømmen.</p>
 <p>\[ Q = v_1 \cdot A_1 = v_2 \cdot A_2 \]</p>
 <p>Diameteren står i annen potens i arealet. Halverer du diameteren, blir arealet fire ganger mindre, og hastigheten blir <strong>fire ganger</strong> så stor.</p>
 
 <div class="boks">
   <div class="boks-tittel">Hvorfor er ikke hastigheten likegyldig?</div>
-  <p>Høy hastighet gir mer friksjon, mer støy og mer slitasje i rør og ventiler. Den gir også større <a href="trykktap.html">trykktap</a>, slik at pumpen må jobbe hardere. Svært lav hastighet krever dyre, tykke rør, og partikler i væsken kan legge seg på bunnen. For vann i pumperør er en hastighet på omtrent 1–3 m/s vanlig. Inn til en pumpe holdes hastigheten ofte lavere enn ut fra den.</p>
+  <p>Høy hastighet gir mer friksjon, mer støy og mer slitasje i rør og ventiler. Den gir også større <a href="trykktap.html">trykktap</a>, slik at pumpen må jobbe hardere. Svært lav hastighet krever store og dyre rør, og partikler i væsken kan legge seg på bunnen. For vann i pumperør er en hastighet på omtrent 1–3 m/s vanlig.</p>
+  <p>Inn til en pumpe holdes hastigheten lavere enn ut fra den. Da blir trykktapet i sugerøret lite, og trykket inn til pumpen holder seg høyt nok. Blir trykket for lavt, kan væsken koke inne i pumpen selv om den er kald. Det dannes dampbobler som klapper sammen og skader pumpehjulet. Det kalles <strong>kavitasjon</strong>. Mer om dette lærer du i <a href="../03-enhetsoperasjoner/index.html">Enhetsoperasjoner</a>.</p>
 </div>
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet: Væskeslag</div>
-  <p>Vann i fart har mye bevegelse. Stenger du en ventil brått, må all væsken i røret stoppe på et øyeblikk. Da kan trykket stige kraftig i et kort støt. Det kalles <strong>væskeslag</strong>, og det kan høres som et smell i røret. Væskeslag kan skade rør, pakninger og målere. Steng og åpne ventiler rolig, særlig når hastigheten er høy.</p>
+  <p>Vann i fart er tungt og vanskelig å stoppe. Stenger du en ventil brått, må all væsken i røret stoppe på et øyeblikk. Da kan trykket stige kraftig i et kort støt. Det kalles <strong>væskeslag</strong>, og det kan høres som et smell i røret. Væskeslag kan skade rør, pakninger og målere. Steng og åpne ventiler rolig, særlig når hastigheten er høy.</p>
 </div>
 
 <h2>Test deg selv</h2>
@@ -170,6 +172,7 @@
     <tr><td>strømningshastighet</td><td>Hvor fort væsken eller gassen beveger seg i røret, målt i meter per sekund.</td><td></td></tr>
     <tr><td>tverrsnittsareal</td><td>Arealet av flaten du ser når du kapper et rør på tvers. For et rundt rør er det π · d² / 4.</td><td></td></tr>
     <tr><td>DN</td><td>Nominell diameter: standardstørrelsen på et rør. DN40 er omtrent 40 mm innvendig.</td><td>nominal diameter (DN)</td></tr>
+    <tr><td>kavitasjon</td><td>Når væsken koker i pumpen fordi trykket blir for lavt, og dampboblene klapper sammen igjen der trykket er høyere. Gir støy og skader pumpehjulet.</td><td>cavitation</td></tr>
     <tr><td>væskeslag</td><td>Kraftig trykkstøt i et rør når væske i fart stoppes brått, for eksempel når en ventil stenges for fort.</td><td>water hammer</td></tr>
   </tbody>
 </table>

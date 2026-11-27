@@ -10,13 +10,13 @@
   <text x="129" y="255" font-size="14" text-anchor="middle" fill="#1c2828" font-weight="bold">Tank 1</text>
   <text x="129" y="272" font-size="12" text-anchor="middle" fill="#586868">diameter 0,79 m, ca. 590 kg vann</text>
   <!-- tank 3: diameter 1,2 m -> 120 px -->
-  <rect x="330" y="70" width="180" height="160" fill="#cfe4f7"/>
-  <path d="M330,45 L330,230 L510,230 L510,45" fill="none" stroke="#586868" stroke-width="3"/>
-  <text x="420" y="255" font-size="14" text-anchor="middle" fill="#1c2828" font-weight="bold">Tank 3</text>
-  <text x="420" y="272" font-size="12" text-anchor="middle" fill="#586868">diameter 1,2 m, ca. 1 360 kg vann</text>
+  <rect x="330" y="70" width="120" height="160" fill="#cfe4f7"/>
+  <path d="M330,45 L330,230 L450,230 L450,45" fill="none" stroke="#586868" stroke-width="3"/>
+  <text x="390" y="255" font-size="14" text-anchor="middle" fill="#1c2828" font-weight="bold">Tank 3</text>
+  <text x="390" y="272" font-size="12" text-anchor="middle" fill="#586868">diameter 1,2 m, ca. 1 360 kg vann</text>
   <!-- trykk i bunnen -->
   <g font-size="14" text-anchor="middle" fill="#c0392b" font-weight="bold">
     <text x="129" y="218">11 800 Pa</text>
-    <text x="420" y="218">11 800 Pa</text>
+    <text x="390" y="218">11 800 Pa</text>
   </g>
 </svg>

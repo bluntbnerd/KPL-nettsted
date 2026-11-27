@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Trykk i væsker</h1>
@@ -19,7 +19,7 @@
 <h2>Væsken over presser nedover</h2>
 <p>Hva trykk er, og forskjellen på overtrykk og absolutt trykk, lærte du i <a href="kraft-og-trykk.html">Kraft og trykk</a>. Nå ser vi på trykket <em>inne i</em> en væske.</p>
 <p>Tenk deg et punkt nede i en tank. Over punktet står det en <strong>væskesøyle</strong>: all væsken rett over, helt opp til overflaten. Tyngden av denne væsken presser ned på punktet. Jo høyere søylen er, jo tyngre er den, og jo høyere blir trykket.</p>
-<p>Trykket fra væskesøylen kalles <strong>hydrostatisk trykk</strong>. Det virker i alle retninger, også sidelengs mot tankveggen. Derfor lekker det mer fra et hull nederst i en tank enn fra et hull høyt oppe.</p>
+<p>Trykket fra væskesøylen kalles <strong>hydrostatisk trykk</strong>. Det virker i alle retninger, også sidelengs mot tankveggen. Fordi trykket øker med dybden, spruter det kraftigere fra et hull nederst i en tank enn fra et hull høyt oppe.</p>
 
 <figure>
   <img src="bilder/trykk-og-dybde.svg" alt="Tank 1 i pumperommet med vann 1,20 meter høyt. Tre punkter er merket. 0,30 meter under overflaten er trykket ca. 2 900 pascal, 0,60 meter under er det ca. 5 900 pascal, og i bunnen, 1,20 meter under, er det ca. 11 800 pascal. Pilene blir lengre jo dypere punktet ligger." width="600">
@@ -60,7 +60,7 @@
 
 <figure>
   <img src="bilder/trykk-uavhengig-av-form.svg" alt="To tanker side om side med vann til samme høyde, 1,20 meter. Tank 1 er smal, 0,79 meter i diameter, med ca. 590 kilo vann. Tank 3 er bred, 1,2 meter i diameter, med ca. 1 360 kilo vann. Trykket i bunnen er 11 800 pascal i begge." width="600">
-  <figcaption>Figur: Tank 3 har over dobbelt så mye vann som tank 1, men trykket i bunnen er det samme. Vannet i tank 3 er tyngre, men det fordeler seg på en like mye større bunn.</figcaption>
+  <figcaption>Figur: Tank 3 har over dobbelt så mye vann som tank 1, men trykket i bunnen er det samme. Vannet i tank 3 er tyngre, men bunnen er like mange ganger større, så trykket blir det samme.</figcaption>
 </figure>
 
 <p>Det samme gjelder i rør. Et tynt rør som går 10 m rett opp, gir like høyt trykk i bunnen som en stor tank som er 10 m høy.</p>
@@ -80,12 +80,12 @@
 <p>Fordi trykket bare avhenger av høyden, kan du oppgi trykk som en høyde. Enheten <strong>meter vannsøyle</strong> (mVs) betyr trykket i bunnen av en vannsøyle som er så mange meter høy.</p>
 <p>\[ 1 \text{ mVs} = 1000 \cdot 9{,}81 \cdot 1 = 9810 \text{ Pa} \approx 0{,}1 \text{ bar} \]</p>
 <p>En nyttig tommelfingerregel er derfor: <strong>10 meter vann gir ca. 1 bar</strong>. En dykker på 10 meters dyp har ca. 2 bar absolutt trykk rundt seg: 1 bar fra lufta og 1 bar fra vannet.</p>
-<p>Pumper oppgis ofte i meter vannsøyle. Det kalles pumpens <strong>løftehøyde</strong>: hvor høyt pumpen kan løfte vann. På skiltet til pumpe 2 i pumperommet står det <em>H = 15 mVs</em>. Pumpen kan altså lage et trykk på ca. 15 · 0,1 bar = 1,5 bar. Mer om pumper kommer på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>.</p>
+<p>Pumper oppgis ofte i meter vannsøyle. Det kalles pumpens <strong>løftehøyde</strong>: hvor høyt pumpen kan løfte vann. På skiltet til pumpe 2 i pumperommet står det <em>H = 15 mVs</em>. Pumpen kan altså øke trykket med ca. 15 · 0,1 bar = 1,5 bar når den gir 20 m<sup>3</sup>/h. Mer om pumper kommer på siden <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>.</p>
 
 <h2>Nivå målt med trykk</h2>
 <p>Du kan også snu formelen. Kjenner du trykket i bunnen, kan du regne ut hvor høyt væsken står:</p>
 <p>\[ h = \frac{p}{\rho \cdot g} \]</p>
-<p>Dette brukes i anlegg. Tank 1 i pumperommet har en <strong>DP-celle</strong> i bunnen. Den måler trykket fra vannet, og styresystemet regner det om til nivå. Hvordan slike målere er bygd og koblet til styresystemet, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+<p>Dette brukes i anlegg. Tank 1 i pumperommet har en <strong>DP-celle</strong> i bunnen. Den måler forskjellen mellom trykket i bunnen og lufttrykket, altså trykket fra vannet. Styresystemet regner det om til nivå. Hvordan slike målere er bygd og koblet til styresystemet, lærer du i <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
 
 <div class="boks eksempel">
   <div class="boks-tittel">Eksempel: Fra trykk til nivå</div>

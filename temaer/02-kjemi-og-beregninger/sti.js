@@ -49,11 +49,11 @@ KPL.sti("02-kjemi-og-beregninger", [
       { fil: "kuldepose-varmepose.html", tittel: "Øv: kuldepose og varmepose (simulering)", meny: "Kuldepose", type: "simulering", status: "ferdig" },
       { fil: "varmepumpe.html", tittel: "Øv: varmepumpe (simulering)", meny: "Varmepumpe", status: "ferdig" },
       { fil: "lab-varmepumpe.html", tittel: "Lab: varmepumpe", meny: "Lab: varmepumpe", type: "lab", status: "utkast" },
-      { fil: "varmepumpe-regnehjelp.html", tittel: "Regnehjelp: varmepumpeforsøket", meny: "Regnehjelp", type: "fagstoff", status: "utkast" },
       { fil: "hva-kan-du-na-2c.html", tittel: "Hva kan du nå?", status: "ferdig" },
-      { fil: "fagsamtale-reaksjoner-energi.html", tittel: "Forbered fagsamtalen: reaksjoner og energi", meny: "Fagsamtale", type: "sjekk", status: "utkast" },
+      { fil: "fagsamtale-reaksjoner-energi.html", tittel: "Forbered fagsamtalen: reaksjoner og energi", meny: "Fagsamtale", type: "vurdering", status: "utkast" },
       { fil: "begrensende-reaktant-utbytte.html", tittel: "Begrensende reaktant og utbytte", meny: "Begrensende reaktant", status: "ferdig", fordypning: true },
       { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "ferdig", fordypning: true },
+      { fil: "varmepumpe-regnehjelp.html", tittel: "Regnehjelp: varmepumpeforsøket", meny: "Regnehjelp", type: "fagstoff", status: "utkast", fordypning: true },
       { fil: "salt-pa-is.html", tittel: "Salt på is – en kuldeblanding", meny: "Salt på is", type: "simulering", status: "utkast", fordypning: true }
     ]
   },
