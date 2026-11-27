@@ -53,7 +53,8 @@ KPL.sti("02-kjemi-og-beregninger", [
       { fil: "hva-kan-du-na-2c.html", tittel: "Hva kan du nå?", status: "ferdig" },
       { fil: "fagsamtale-reaksjoner-energi.html", tittel: "Forbered fagsamtalen: reaksjoner og energi", meny: "Fagsamtale", type: "sjekk", status: "utkast" },
       { fil: "begrensende-reaktant-utbytte.html", tittel: "Begrensende reaktant og utbytte", meny: "Begrensende reaktant", status: "ferdig", fordypning: true },
-      { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "ferdig", fordypning: true }
+      { fil: "reaktanter-og-overskudd.html", tittel: "Øv: reaktanter og overskudd (PhET)", status: "ferdig", fordypning: true },
+      { fil: "salt-pa-is.html", tittel: "Salt på is – en kuldeblanding", meny: "Salt på is", type: "simulering", status: "utkast", fordypning: true }
     ]
   },
   {
