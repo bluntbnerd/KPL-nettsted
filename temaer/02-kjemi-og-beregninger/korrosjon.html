@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Korrosjon – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Korrosjon</h1>
+<div class="merker"><span class="fag">ADK</span> <span class="fag">KT</span> <strong>Kompetansemål:</strong> ADK1, KT4</div>
+
+<p class="ingress">Rør, tanker og stålkonstruksjoner ruster. Det koster industrien store summer og kan gi lekkasjer og ulykker. Korrosjon er en redoksreaksjon, og kjemien forklarer både hvorfor den skjer og hvordan vi kan hindre den.</p>
+
+<h2>Hva er korrosjon?</h2>
+<p><strong>Korrosjon</strong> er når et metall blir ødelagt fordi det reagerer med stoffer i omgivelsene, som oksygen og vann. Metallet blir <strong>oksidert</strong>: Det gir fra seg elektroner og blir til ioner. Når jern og stål korroderer, kaller vi det <strong>rust</strong>.</p>
+<p>Jo mer uedelt et metall er i <a href="redoks-spenningsrekka.html">spenningsrekka</a>, desto lettere korroderer det. Gull korroderer nesten ikke.</p>
+
+<h2>Slik ruster jern</h2>
+<p>Jern ruster bare når det er både <strong>vann</strong> og <strong>oksygen</strong> til stede. En vanndråpe på en jernplate virker som et lite <a href="galvanisk-element.html">galvanisk element</a>:</p>
+<ul>
+  <li>Under midten av dråpen oksideres jern (anode): \( \ce{Fe -> Fe^2+ + 2e-} \)</li>
+  <li>Elektronene går gjennom metallet til kanten av dråpen, der det er mye oksygen. Der reduseres oksygen (katode): \( \ce{O2 + 2H2O + 4e- -> 4OH-} \)</li>
+  <li>Jernionene og hydroksidionene reagerer videre med mer oksygen og danner rødbrun rust (jernoksid med vann).</li>
+</ul>
+
+<figure>
+  <svg viewBox="0 0 520 220" width="520" role="img" aria-labelledby="kor1" style="max-width:100%">
+    <title id="kor1">En vanndråpe på en jernplate. Under midten av dråpen går jern over til jernioner og gir fra seg elektroner. Elektronene går gjennom jernet til kanten av dråpen, der oksygen og vann tar dem opp og blir til hydroksidioner. Rust dannes mellom disse områdene.</title>
+    <defs><marker id="pk" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d33"/></marker></defs>
+    <rect x="20" y="150" width="480" height="50" fill="#9aa3ad" stroke="#555"/>
+    <text x="40" y="182" font-size="14">jern (Fe)</text>
+    <path d="M90 150 Q260 20 430 150 Z" fill="#6fa8dc" opacity="0.5" stroke="#3d78b0"/>
+    <text x="260" y="140" text-anchor="middle" font-size="13">Fe → Fe²⁺ + 2e⁻</text>
+    <text x="260" y="122" text-anchor="middle" font-size="12">(anode, lite O₂)</text>
+    <text x="130" y="105" text-anchor="middle" font-size="12">O₂ + 2H₂O + 4e⁻</text>
+    <text x="130" y="120" text-anchor="middle" font-size="12">→ 4OH⁻</text>
+    <text x="400" y="105" text-anchor="middle" font-size="12">O₂ fra lufta</text>
+    <ellipse cx="190" cy="148" rx="22" ry="5" fill="#a0522d"/><ellipse cx="330" cy="148" rx="22" ry="5" fill="#a0522d"/>
+    <text x="190" y="80" text-anchor="middle" font-size="12" fill="#a0522d">rust</text>
+    <line x1="240" y1="172" x2="140" y2="172" stroke="#d33" stroke-width="2" marker-end="url(#pk)"/>
+    <line x1="280" y1="172" x2="390" y2="172" stroke="#d33" stroke-width="2" marker-end="url(#pk)"/>
+    <text x="260" y="194" text-anchor="middle" font-size="13" fill="#d33">e⁻ gjennom jernet</text>
+  </svg>
+  <figcaption>Figur: Rusting under en vanndråpe (forenklet). Jern oksideres under midten av dråpen, og oksygen reduseres ved kanten.</figcaption>
+</figure>
+
+<p><strong>Salt</strong> gjør at vannet leder strøm bedre. Derfor ruster biler fortere om vinteren når veiene saltes, og stål i sjøvann og ved kysten ruster fort. Syre gir også raskere korrosjon.</p>
+
+<h2>Galvanisk korrosjon: to metaller i kontakt</h2>
+<p>Når to ulike metaller berører hverandre i fuktig miljø, blir det et galvanisk element. Det mest uedle metallet blir anoden og korroderer fort. Det edleste metallet blir beskyttet. Et eksempel er en stålskrue i en kobberplate: Stålet (jern) ruster fortere enn ellers.</p>
+
+<h2>Slik beskytter vi metall</h2>
+<p>Vi kan hindre korrosjon ved å stoppe en av delene i redoksreaksjonen:</p>
+<ul>
+  <li><strong>Holde vann og oksygen unna:</strong> maling, olje, plastbelegg eller tørr luft.</li>
+  <li><strong>Forsinking:</strong> Stålet får et tynt lag sink. Sink er mer uedelt enn jern, så sinken korroderer først, selv om det blir en ripe i laget.</li>
+  <li><strong>Offeranode:</strong> En blokk av sink, aluminium eller magnesium festes til stålet, for eksempel på skipsskrog, kaier og rørledninger i sjøen. Blokken korroderer i stedet for stålet og må byttes med jevne mellomrom.</li>
+  <li><strong>Edlere eller motstandsdyktige materialer:</strong> Rustfritt stål inneholder krom, som danner et tynt, tett oksidlag på overflaten. Aluminium beskytter seg selv på samme måte.</li>
+</ul>
+<p>Hvordan korrosjon oppdages, kontrolleres og hindres i et prosessanlegg, lærer du om i <a href="../06-drift-og-vedlikehold/index.html">Drift og vedlikehold</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvilket metall passer som offeranode?</div>
+  <p>Et stålrør (jern) i sjøen skal beskyttes. Du kan velge mellom kobber, sink og bly.</p>
+  <ol>
+    <li>Offeranoden må korrodere i stedet for jernet. Da må den være <em>mer uedel</em> enn jern.</li>
+    <li>I spenningsrekka står sink til venstre for jern. Kobber og bly står til høyre.</li>
+    <li>Kobber og bly ville gjort korrosjonen av røret <em>verre</em>, fordi jernet da blir anoden.</li>
+  </ol>
+  <p><strong>Svar:</strong> Sink. \( \ce{Zn -> Zn^2+ + 2e-} \) skjer i stedet for \( \ce{Fe -> Fe^2+ + 2e-} \).</p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Korrosjon og utstyr</div>
+  <p>Korroderte rør, tanker og flasker kan bli svake og lekke. Si fra hvis du ser rust, lekkasjer eller skadet utstyr på laben eller i anlegget. Rustfjerningsmidler inneholder ofte syre: Bruk vernebriller og hansker, og les sikkerhetsdatabladet.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva skjer med jern når det korroderer?</p>
+  <ul>
+    <li>Det blir redusert.</li>
+    <li data-riktig>Det blir oksidert og gir fra seg elektroner.</li>
+    <li>Det tar opp elektroner fra vannet.</li>
+  </ul>
+  <p class="forklaring">\( \ce{Fe -> Fe^2+ + 2e-} \). Jern oksideres.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva må til for at jern skal ruste?</p>
+  <ul>
+    <li>bare oksygen</li>
+    <li>bare vann</li>
+    <li data-riktig>både vann og oksygen</li>
+  </ul>
+  <p class="forklaring">Oksygen tar opp elektronene, og vannet trengs for at ionene kan bevege seg.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor ruster en bil fortere når veiene er saltet?</p>
+  <ul>
+    <li data-riktig>Saltvann leder strøm bedre, så korrosjonen går fortere.</li>
+    <li>Salt inneholder oksygen.</li>
+    <li>Salt gjør jernet mer edelt.</li>
+  </ul>
+  <p class="forklaring">Ionene i saltvannet gjør at det lille galvaniske elementet fungerer bedre.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor beskytter sink jern?</p>
+  <ul>
+    <li>Sink er edlere enn jern.</li>
+    <li data-riktig>Sink er mer uedelt enn jern og korroderer først.</li>
+    <li>Sink reagerer ikke med oksygen.</li>
+  </ul>
+  <p class="forklaring">Sink står til venstre for jern i spenningsrekka og gir fra seg elektroner i stedet for jernet.</p>
+</div>
+
+<div class="quiz">
+  <p>En kobberplate festes med en stålskrue og blir stående ute. Hva skjer?</p>
+  <ul>
+    <li>Kobberet korroderer fort.</li>
+    <li data-riktig>Skruen korroderer fortere enn ellers.</li>
+    <li>Ingen av dem korroderer.</li>
+  </ul>
+  <p class="forklaring">Jern er mer uedelt enn kobber og blir anoden i det galvaniske elementet.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>korrosjon</td><td>Når et metall blir ødelagt fordi det oksideres av stoffer i omgivelsene, som oksygen og vann.</td><td>corrosion</td></tr>
+    <tr><td>rust</td><td>Rødbrunt jernoksid med vann som dannes når jern og stål korroderer.</td><td>rust</td></tr>
+    <tr><td>galvanisk korrosjon</td><td>Korrosjon som skjer når to ulike metaller er i kontakt i fuktig miljø. Det mest uedle metallet korroderer.</td><td>galvanic corrosion</td></tr>
+    <tr><td>forsinking</td><td>Stål får et lag av sink, som korroderer i stedet for jernet.</td><td>galvanizing</td></tr>
+    <tr><td>offeranode</td><td>Blokk av et uedelt metall som festes til stål og korroderer i stedet for stålet.</td><td>sacrificial anode</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><em>Kjemien stemmer</em>, kapittelet om redoksreaksjoner og elektrokjemi.</li>
+  <li><a href="../06-drift-og-vedlikehold/index.html">Drift og vedlikehold</a>: korrosjon som vedlikeholdsproblem i industrien.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -24,16 +24,16 @@
     .vp-popup svg { display: block; margin: 6px auto; }
   </style>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Varmepumpe – slik flytter den varme</h1>
-<div class="merker"><span class="fag">ADK</span> <span class="fag">KT</span> <strong>Kompetansemål:</strong> KT3, KT4</div>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT3, KT4</div>
 
-<p class="ingress">En varmepumpe henter varme fra kald uteluft og flytter den inn i huset. Det høres umulig ut, men den bruker bare det du har lært om fordamping, kondensering og trykk. Trykk på de fire delene i figuren for å se hva som skjer i hver av dem.</p>
+<p class="ingress">En varmepumpe henter varme fra kald uteluft og flytter den inn i huset. Det høres umulig ut, men den bruker bare det du har lært om fordamping og kondensering, og at kokepunktet avhenger av trykket. Trykk på de fire delene i figuren for å se hva som skjer i hver av dem.</p>
 
 <h2>Simulering</h2>
-<p>Pilene på rørene viser hvordan <strong>kuldemediet</strong> strømmer rundt i et lukket rør. Kuldemediet er et stoff som koker ved svært lav temperatur. Blått betyr kaldt og lavt trykk, og rødt betyr varmt og høyt trykk. Prikker betyr gass, hel strek betyr væske, og strek med prikk betyr en blanding av væske og gass.</p>
+<p>Pilene på rørene viser hvordan <strong>kuldemediet</strong> strømmer rundt i et lukket rør. Kuldemediet er et stoff som koker ved svært lav temperatur ved vanlig trykk. Blått betyr kaldt og lavt trykk, og rødt betyr varmt og høyt trykk. Prikker betyr gass, hel strek betyr væske, og strek med prikk betyr en blanding av væske og gass.</p>
 
 <figure>
 <div class="vp-omraade">
@@ -148,9 +148,25 @@
   </ol>
 </details>
 
-<p>Varmepumper i anlegg og energibalanser lærer du mer om i <a href="../04-masse-og-energibalanser/index.html">Fysiske prinsipper</a>.</p>
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>varmepumpe</td><td>En maskin som flytter varme fra et kaldt sted til et varmere sted ved hjelp av et kuldemedium og en kompressor.</td><td>heat pump</td></tr>
+    <tr><td>kuldemedium</td><td>Stoffet som går rundt i en varmepumpe eller et kjøleanlegg. Det fordamper ved lav temperatur og tar da opp varme.</td><td>refrigerant</td></tr>
+    <tr><td>kompressor</td><td>Maskin som presser gass sammen, slik at trykket og temperaturen øker.</td><td>compressor</td></tr>
+    <tr><td>strupeventil</td><td>Ventil med en trang åpning som senker trykket i kuldemediet, slik at det blir kaldt.</td><td>expansion valve</td></tr>
+    <tr><td>COP</td><td>Tall som viser hvor god en varmepumpe er: varmen den leverer, delt på strømmen den bruker. Kalles også varmefaktor.</td><td>coefficient of performance</td></tr>
+  </tbody>
+</table>
 
-<p><small>Om kildene: Simuleringen og teksten er laget for dette nettstedet. Temperaturene er typiske eksempler for en luft-til-luft-varmepumpe. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs.</small></p>
+<h2>Les mer</h2>
+<ul>
+  <li><a href="energi-i-reaksjoner.html">Energi i reaksjoner og andre prosesser</a> i dette emnet.</li>
+  <li><a href="../04-masse-og-energibalanser/varmepumpe.html">Varmepumpe og COP</a> i Fysiske prinsipper.</li>
+</ul>
+
+<p><small>Om kildene: Simuleringen og teksten er laget for dette nettstedet. Temperaturene er typiske eksempler for en luft-til-luft-varmepumpe. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
 
 </main>
 
@@ -271,7 +287,7 @@
       tittel: "3 Kondensator (innedel)",
       bilde: kondensatorBilde,
       tekst: "<p>Den varme gassen med høyt trykk går inn i innedelen. Romluften, for eksempel 21 °C, er kaldere enn gassen, så varme strømmer fra kuldemediet og ut i rommet. En vifte blåser den varme lufta ut. Kuldemediet <strong>kondenserer</strong> og blir til væske.</p>" +
-        "<p><strong>Prinsipp:</strong> Kondensering er <strong>eksoterm</strong>. Kuldemediet gir fra seg den samme fordampingsvarmen som det tok opp ute. Fordi trykket er høyt, kondenserer det ved høy temperatur, ca. 40 °C, altså varmere enn rommet.</p>"
+        "<p><strong>Prinsipp:</strong> Kondensering er <strong>eksoterm</strong>. Kuldemediet gir fra seg varmen det tok opp ute, pluss energien fra kompressoren. Fordi trykket er høyt, kondenserer det ved høy temperatur, ca. 40 °C, altså varmere enn rommet.</p>"
     },
     ventil: {
       tittel: "4 Strupeventil (ekspansjonsventil)",

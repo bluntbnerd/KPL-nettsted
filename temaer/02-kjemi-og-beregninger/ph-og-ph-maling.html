@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pH og pH-måling – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>pH og pH-måling</h1>
+<div class="merker"><span class="fag">KT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> KT3, KT4, ADK1</div>
+
+<p class="ingress">pH er et tall som forteller hvor sur eller basisk en løsning er. I industrien måles pH hele tiden: i prosessvann, avløpsvann, kjelevann og produkter. Her lærer du hva tallet betyr, hvordan du regner med det, og hvordan pH måles.</p>
+
+<h2>pH-skalaen</h2>
+<p>pH-skalaen går vanligvis fra 0 til 14:</p>
+<ul>
+  <li><strong>pH under 7:</strong> sur løsning. Det er mer H<sub>3</sub>O<sup>+</sup> enn OH<sup>−</sup>.</li>
+  <li><strong>pH = 7:</strong> nøytral løsning. Like mye H<sub>3</sub>O<sup>+</sup> og OH<sup>−</sup> (rent vann ved 25 °C).</li>
+  <li><strong>pH over 7:</strong> basisk løsning. Det er mer OH<sup>−</sup> enn H<sub>3</sub>O<sup>+</sup>.</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 680 150" role="img" aria-label="pH-skala fra 0 til 14, rød for sur, grønn ved 7 og blå for basisk, med eksempler: saltsyre 1 molar pH 0, magesyre 1 til 2, eddik 3, brus 3, rent vann 7, sjøvann 8, såpevann 10, ammoniakk 11, natronlut 1 molar 14" style="width:100%;max-width:680px;height:auto;color:var(--tekst)">
+  <defs>
+    <linearGradient id="ph-farge" x1="0" x2="1">
+      <stop offset="0" stop-color="#d7263d"/><stop offset=".3" stop-color="#f2a541"/>
+      <stop offset=".5" stop-color="#3bb273"/><stop offset=".75" stop-color="#2e86ab"/>
+      <stop offset="1" stop-color="#4b2a8a"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="50" width="640" height="26" rx="4" fill="url(#ph-farge)"/>
+  <g font-size="12" fill="currentColor" text-anchor="middle">
+    <text x="20" y="94">0</text><text x="66" y="94">1</text><text x="111" y="94">2</text><text x="157" y="94">3</text>
+    <text x="203" y="94">4</text><text x="249" y="94">5</text><text x="294" y="94">6</text><text x="340" y="94">7</text>
+    <text x="386" y="94">8</text><text x="431" y="94">9</text><text x="477" y="94">10</text><text x="523" y="94">11</text>
+    <text x="569" y="94">12</text><text x="614" y="94">13</text><text x="660" y="94">14</text>
+    <text x="150" y="30" font-weight="700" font-size="14">sur</text>
+    <text x="340" y="30" font-weight="700" font-size="14">nøytral</text>
+    <text x="530" y="30" font-weight="700" font-size="14">basisk</text>
+    <text x="40" y="118">1 M HCl</text>
+    <text x="111" y="136">magesyre</text>
+    <text x="157" y="118">eddik, brus</text>
+    <text x="340" y="118">rent vann</text>
+    <text x="386" y="136">sjøvann</text>
+    <text x="477" y="118">såpevann</text>
+    <text x="523" y="136">ammoniakk</text>
+    <text x="635" y="118">1 M NaOH</text>
+  </g>
+</svg>
+<figcaption>Figur: pH-skalaen med noen kjente løsninger. Verdiene er omtrentlige.</figcaption>
+</figure>
+
+<h2>Hva tallet betyr</h2>
+<p>pH regnes ut fra konsentrasjonen av oksoniumioner, [H<sub>3</sub>O<sup>+</sup>], i mol/L. Klammeparentesen betyr «konsentrasjonen av».</p>
+<p>\[ \mathrm{pH} = -\log\,[\ce{H3O+}] \]</p>
+<p>Du trenger ikke kunne logaritmer for å forstå hovedpoenget:</p>
+<div class="boks">
+  <div class="boks-tittel">Det viktigste</div>
+  <p>pH er en <strong>tierskala</strong>. Når pH går <strong>ned</strong> med 1, blir det <strong>10 ganger mer</strong> H<sub>3</sub>O<sup>+</sup>. En løsning med pH 3 er 10 ganger surere enn en med pH 4, og 100 ganger surere enn en med pH 5.</p>
+</div>
+<table>
+  <thead><tr><th>[H<sub>3</sub>O<sup>+</sup>] (mol/L)</th><th>Som tierpotens</th><th>pH</th></tr></thead>
+  <tbody>
+    <tr><td>0,1</td><td>10<sup>−1</sup></td><td>1</td></tr>
+    <tr><td>0,01</td><td>10<sup>−2</sup></td><td>2</td></tr>
+    <tr><td>0,001</td><td>10<sup>−3</sup></td><td>3</td></tr>
+    <tr><td>0,000 000 1</td><td>10<sup>−7</sup></td><td>7</td></tr>
+  </tbody>
+</table>
+<p>Ser du mønsteret? pH er tallet i eksponenten, uten minus.</p>
+
+<h2>Regneeksempler</h2>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Fra konsentrasjon til pH</div>
+  <p><strong>Oppgave:</strong> Saltsyre har konsentrasjonen 0,010 mol/L. Hva er pH?</p>
+  <ol>
+    <li><strong>Saltsyre er en sterk syre.</strong> Alle HCl-molekylene gir fra seg H<sup>+</sup>, så \( [\ce{H3O+}] = 0{,}010 \text{ mol/L} \).</li>
+    <li><strong>Regn ut:</strong> \( \mathrm{pH} = -\log(0{,}010) = 2{,}00 \)</li>
+  </ol>
+  <p><strong>Svar:</strong> pH = 2,00. På kalkulatoren taster du <kbd>(-)</kbd> <kbd>log</kbd> <kbd>0,010</kbd>.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Fra pH til konsentrasjon</div>
+  <p><strong>Oppgave:</strong> Prosessvannet har pH 4,5. Hva er [H<sub>3</sub>O<sup>+</sup>]?</p>
+  <ol>
+    <li><strong>Snu formelen:</strong> \( [\ce{H3O+}] = 10^{-\mathrm{pH}} \)</li>
+    <li><strong>Sett inn:</strong> \( [\ce{H3O+}] = 10^{-4{,}5} = 3{,}2 \cdot 10^{-5} \text{ mol/L} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> 3,2 · 10<sup>−5</sup> mol/L. På kalkulatoren: <kbd>10<sup>x</sup></kbd> <kbd>(-)</kbd> <kbd>4,5</kbd>.</p>
+</div>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Fortynning og pH</div>
+  <p>Fortynner du en sterk syre 10 ganger, blir [H<sub>3</sub>O<sup>+</sup>] 10 ganger mindre, og pH øker med 1. Men du kommer aldri over pH 7 ved å fortynne en syre med vann. Løsningen nærmer seg bare nøytral.</p>
+</div>
+
+<h2>Slik måles pH</h2>
+<h3>Indikator og pH-papir</h3>
+<p>En <strong>indikator</strong> er et fargestoff som skifter farge ved en bestemt pH. Lakmus er rødt i sur løsning og blått i basisk. Fenolftalein er fargeløst i sur løsning og rosa når pH er over ca. 8–10. <strong>pH-papir</strong> inneholder en blanding av indikatorer og gir en farge du sammenligner med en skala. Det gir en grov verdi, ofte bare et helt tall.</p>
+
+<h3>pH-meter</h3>
+<p>Et <strong>pH-meter</strong> gir en nøyaktig verdi, ofte med to desimaler. Det har en elektrode med en tynn glassmembran. Mellom løsningen og innsiden av glasset oppstår en liten elektrisk <strong>spenning</strong>, og den avhenger av hvor mye H<sub>3</sub>O<sup>+</sup> det er i løsningen. Instrumentet måler spenningen og regner den om til pH. Ved 25 °C endrer spenningen seg med ca. 59 mV for hver pH-enhet.</p>
+<p>Fordi spenningen også avhenger av temperaturen og av elektroden selv, må pH-meteret <strong>kalibreres</strong> med løsninger der pH er kjent. Hvordan du kalibrerer og bruker pH-meteret på laben, og hvordan pH brukes i titrering, lærer du i temaet <a href="../07-laboratorium-og-analyse/index.html">Laboratorium og analyse</a>. I prosessanlegget sitter det faste pH-målere i rør og tanker. De hører til temaet <a href="../05-maling-styring-regulering/index.html">Automasjon</a>.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: pH og etsende løsninger</div>
+  <p>Løsninger med pH under 2 eller over 11,5 regnes som etsende. Bruk vernebriller og hansker. Glasselektroden er skjør og må ikke tørke ut. Den oppbevares i lagringsløsning.</p>
+</div>
+
+<p>På neste side prøver du pH-skalaen i en simulering.</p>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>En løsning har pH 9. Hva stemmer?</p>
+  <ul>
+    <li>Den er sur.</li>
+    <li>Den er nøytral.</li>
+    <li data-riktig>Den er basisk.</li>
+  </ul>
+  <p class="forklaring">pH over 7 er basisk.</p>
+</div>
+
+<div class="quiz">
+  <p>Løsning A har pH 3, løsning B har pH 5. Hvor mye mer H<sub>3</sub>O<sup>+</sup> er det i A?</p>
+  <ul>
+    <li>2 ganger</li>
+    <li>20 ganger</li>
+    <li data-riktig>100 ganger</li>
+  </ul>
+  <p class="forklaring">To pH-enheter er 10 · 10 = 100 ganger.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er pH i 0,001 mol/L saltsyre?</p>
+  <ul>
+    <li>1</li>
+    <li data-riktig>3</li>
+    <li>11</li>
+  </ul>
+  <p class="forklaring">\( -\log(10^{-3}) = 3 \)</p>
+</div>
+
+<div class="quiz">
+  <p>Hva måler et pH-meter egentlig?</p>
+  <ul>
+    <li>fargen på løsningen</li>
+    <li data-riktig>en elektrisk spenning over en glassmembran</li>
+    <li>temperaturen i løsningen</li>
+  </ul>
+  <p class="forklaring">Spenningen avhenger av [H<sub>3</sub>O<sup>+</sup>], og instrumentet regner den om til pH.</p>
+</div>
+
+<div class="quiz">
+  <p>Du fortynner saltsyre med pH 2 hundre ganger. Hva blir pH?</p>
+  <ul>
+    <li data-riktig>4</li>
+    <li>7</li>
+    <li>200</li>
+  </ul>
+  <p class="forklaring">100 ganger mindre H<sub>3</sub>O<sup>+</sup> gir 2 pH-enheter høyere.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>pH</td><td>Tall som viser hvor sur eller basisk en løsning er. Under 7 er surt, 7 er nøytralt, over 7 er basisk.</td><td></td></tr>
+    <tr><td>pH-skala</td><td>Skala, vanligvis fra 0 til 14, der hvert trinn betyr ti ganger så mye H<sub>3</sub>O<sup>+</sup>.</td><td></td></tr>
+    <tr><td>nøytral</td><td>Løsning med like mye H<sub>3</sub>O<sup>+</sup> og OH<sup>−</sup>. pH er 7 ved 25 °C.</td><td></td></tr>
+    <tr><td>indikator</td><td>Fargestoff som skifter farge ved en bestemt pH.</td><td></td></tr>
+    <tr><td>pH-papir</td><td>Papir med indikatorer som gir en farge du kan lese av pH fra.</td><td>pH paper</td></tr>
+    <tr><td>pH-meter</td><td>Instrument som måler pH med en elektrode som gir en spenning.</td><td>pH meter</td></tr>
+    <tr><td>kalibrering</td><td>Å justere et instrument mot kjente verdier, slik at det måler riktig.</td><td>calibration</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><em>Kjemien stemmer</em>, kapitlet om syrer og baser (pH).</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

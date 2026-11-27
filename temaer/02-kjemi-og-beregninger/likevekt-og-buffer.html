@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Likevekt og buffer – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Likevekt og buffer</h1>
+<div class="merker"><span class="fag">KT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> KT3, ADK1</div>
+
+<p class="ingress">Mange reaksjoner går ikke helt til ende. De stopper ved en <strong>likevekt</strong>, der både reaktanter og produkter er til stede. Likevekt forklarer hvorfor svake syrer er svake, og hvordan en <strong>buffer</strong> kan holde pH stabil i et prosessbad, i blodet og på laben.</p>
+
+<h2>Reaksjoner som går begge veier</h2>
+<p>Noen reaksjoner kan gå både fram og tilbake. Da skriver vi en dobbeltpil, ⇌. Eddiksyre i vann er et eksempel:</p>
+<p>\[ \ce{CH3COOH + H2O <=> CH3COO- + H3O+} \]</p>
+<p>Fram (mot høyre): eddiksyremolekyler gir H<sup>+</sup> til vann. Tilbake (mot venstre): acetationer (CH<sub>3</sub>COO<sup>−</sup>) tar H<sup>+</sup> tilbake og blir eddiksyre igjen.</p>
+<p>I starten går reaksjonen mest mot høyre. Etter kort tid går den like fort begge veier. Da endrer ikke mengdene seg lenger, selv om partiklene fortsatt reagerer. Dette kalles <strong>kjemisk likevekt</strong>.</p>
+<div class="boks">
+  <div class="boks-tittel">Det viktigste</div>
+  <p>Ved likevekt går reaksjonen <strong>like fort begge veier</strong>. Reaksjonen har ikke stoppet, men mengdene av stoffene holder seg konstante.</p>
+</div>
+<p>For eddiksyre ligger likevekten langt til venstre. Færre enn 1 av 100 molekyler har gitt fra seg H<sup>+</sup> i en vanlig eddikløsning. Derfor er eddiksyre en svak syre. For en sterk syre som HCl ligger likevekten så langt til høyre at vi skriver vanlig pil.</p>
+
+<h2>Når likevekten forstyrres</h2>
+<p>Hvis du endrer noe i en blanding som er i likevekt, vil reaksjonen gå den veien som <strong>motvirker endringen</strong>, til det blir ny likevekt. Dette kalles <strong>Le Chateliers prinsipp</strong>.</p>
+<table>
+  <thead><tr><th>Du gjør dette</th><th>Likevekten forskyves</th></tr></thead>
+  <tbody>
+    <tr><td>tilsetter mer av en reaktant</td><td>mot høyre (mer produkt)</td></tr>
+    <tr><td>fjerner produkt</td><td>mot høyre (det lages nytt produkt)</td></tr>
+    <tr><td>tilsetter mer av et produkt</td><td>mot venstre</td></tr>
+    <tr><td>øker temperaturen</td><td>i den retningen som tar opp varme (den endoterme)</td></tr>
+  </tbody>
+</table>
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Ammoniakkfabrikken</div>
+  <p>Ammoniakk lages av nitrogen og hydrogen: \( \ce{N2 + 3H2 <=> 2NH3} \). Reaksjonen går ikke til ende. I anlegget kjøles gassen slik at ammoniakken blir flytende og kan tappes ut. Når produkt fjernes, forskyves likevekten mot høyre, og det lages mer ammoniakk av gassen som sendes rundt igjen. Høyt trykk hjelper også, fordi det er færre gassmolekyler på høyre side.</p>
+</div>
+
+<h2>Buffer – en løsning som holder pH stabil</h2>
+<p>En <strong>buffer</strong> er en løsning som endrer pH bare litt når du tilsetter litt syre eller base. Den består av en <strong>svak syre og den tilhørende basen</strong>, for eksempel eddiksyre (CH<sub>3</sub>COOH) og acetat (CH<sub>3</sub>COO<sup>−</sup>, fra saltet natriumacetat).</p>
+<ul>
+  <li><strong>Tilsetter du syre</strong> (mer H<sub>3</sub>O<sup>+</sup>), tar acetat imot H<sup>+</sup> og blir eddiksyre:<br>\( \ce{CH3COO- + H3O+ -> CH3COOH + H2O} \)</li>
+  <li><strong>Tilsetter du base</strong> (mer OH<sup>−</sup>), gir eddiksyre fra seg H<sup>+</sup> til OH<sup>−</sup>:<br>\( \ce{CH3COOH + OH- -> CH3COO- + H2O} \)</li>
+</ul>
+<p>Begge veier «fanger» bufferen det du tilsetter, og pH endrer seg lite. Dette er Le Chateliers prinsipp i praksis.</p>
+
+<figure>
+<svg viewBox="0 0 640 200" role="img" aria-label="To begre. Det ene er vann, der noen dråper syre gir pH-fall fra 7 til 3. Det andre er buffer, der like mange dråper syre bare gir pH-fall fra 4,8 til 4,7." style="width:100%;max-width:640px;height:auto;color:var(--tekst)">
+  <g fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M80 60 L80 170 Q80 178 88 178 L222 178 Q230 178 230 170 L230 60"/>
+    <path d="M410 60 L410 170 Q410 178 418 178 L552 178 Q560 178 560 170 L560 60"/>
+  </g>
+  <rect x="82" y="100" width="146" height="76" fill="#2e86ab" fill-opacity=".25"/>
+  <rect x="412" y="100" width="146" height="76" fill="#3bb273" fill-opacity=".3"/>
+  <g fill="#d7263d"><circle cx="155" cy="40" r="4"/><circle cx="155" cy="22" r="4"/><circle cx="485" cy="40" r="4"/><circle cx="485" cy="22" r="4"/></g>
+  <g fill="currentColor" font-size="14" text-anchor="middle">
+    <text x="155" y="130" font-weight="700">vann</text>
+    <text x="155" y="152">pH 7 → 3</text>
+    <text x="485" y="130" font-weight="700">buffer</text>
+    <text x="485" y="152">pH 4,8 → 4,7</text>
+    <text x="230" y="30" font-size="12">+ litt syre</text>
+    <text x="560" y="30" font-size="12">+ litt syre</text>
+  </g>
+</svg>
+<figcaption>Figur: Samme mengde syre gir stort pH-fall i vann, men nesten ingen endring i en buffer. Tallene er omtrentlige og avhenger av hvor mye syre som tilsettes.</figcaption>
+</figure>
+
+<h3>Hvor brukes buffere?</h3>
+<ul>
+  <li><strong>På laben:</strong> pH-meteret kalibreres med bufferløsninger som har kjent og stabil pH, for eksempel pH 4, 7 og 10.</li>
+  <li><strong>I prosessen:</strong> Galvaniske bad, fermentering og biologisk rensing av avløpsvann krever stabil pH. Buffere demper svingningene.</li>
+  <li><strong>I naturen og kroppen:</strong> Blodet holdes på pH ca. 7,4 av en buffer med karbonsyre og hydrogenkarbonat. Kalk i jorda og vannet bufrer mot sur nedbør.</li>
+</ul>
+<p>En buffer har en <strong>kapasitet</strong>. Tilsetter du så mye syre at all basen i bufferen er brukt opp, faller pH brått.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Konsentrerte bufferkomponenter</div>
+  <p>Bufferløsninger er ofte svake og ufarlige, men stoffene de lages av, for eksempel konsentrert eddiksyre og ammoniakk, er etsende og har sterk lukt. Bruk avtrekk, vernebriller og hansker når du lager buffer fra konsentrerte kjemikalier. Les sikkerhetsdatabladet.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva skjer ved kjemisk likevekt?</p>
+  <ul>
+    <li>Reaksjonen har stoppet helt.</li>
+    <li data-riktig>Reaksjonen går like fort begge veier.</li>
+    <li>Alle reaktantene er brukt opp.</li>
+  </ul>
+  <p class="forklaring">Partiklene reagerer fortsatt, men mengdene endrer seg ikke.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor er eddiksyre en svak syre?</p>
+  <ul>
+    <li data-riktig>Likevekten ligger langt til venstre, så få molekyler gir fra seg H<sup>+</sup>.</li>
+    <li>Den er alltid fortynnet.</li>
+    <li>Den inneholder ikke hydrogen.</li>
+  </ul>
+  <p class="forklaring">Færre enn 1 av 100 molekyler har gitt fra seg H<sup>+</sup> i en vanlig eddikløsning.</p>
+</div>
+
+<div class="quiz">
+  <p>\( \ce{N2 + 3H2 <=> 2NH3} \). Ammoniakk tappes ut av anlegget. Hva skjer?</p>
+  <ul>
+    <li>Likevekten forskyves mot venstre.</li>
+    <li data-riktig>Likevekten forskyves mot høyre, og det dannes mer ammoniakk.</li>
+    <li>Ingenting.</li>
+  </ul>
+  <p class="forklaring">Når produkt fjernes, motvirker reaksjonen det ved å lage mer produkt.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva består en buffer av?</p>
+  <ul>
+    <li>en sterk syre og en sterk base</li>
+    <li data-riktig>en svak syre og den tilhørende basen</li>
+    <li>vann og salt</li>
+  </ul>
+  <p class="forklaring">For eksempel eddiksyre og acetat. Den ene tar imot H<sup>+</sup>, den andre gir fra seg H<sup>+</sup>.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor brukes buffere når pH-meteret kalibreres?</p>
+  <ul>
+    <li>De rengjør elektroden.</li>
+    <li data-riktig>De har kjent og stabil pH.</li>
+    <li>De leder ikke strøm.</li>
+  </ul>
+  <p class="forklaring">En buffer holder pH stabil, så instrumentet kan justeres mot en sikker verdi.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>kjemisk likevekt</td><td>Tilstand der en reaksjon går like fort begge veier, slik at mengdene av stoffene ikke endrer seg.</td><td></td></tr>
+    <tr><td>Le Chateliers prinsipp</td><td>Når en likevekt forstyrres, går reaksjonen den veien som motvirker endringen.</td><td></td></tr>
+    <tr><td>buffer</td><td>Løsning av en svak syre og den tilhørende basen. Den holder pH nesten stabil når det tilsettes litt syre eller base.</td><td>buffer solution</td></tr>
+    <tr><td>bufferkapasitet</td><td>Hvor mye syre eller base en buffer kan ta imot før pH endrer seg mye.</td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><em>Kjemien stemmer</em>, kapitlene om syrer og baser og om kjemisk likevekt.</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

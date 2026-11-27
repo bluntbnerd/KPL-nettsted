@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regnehjelp: varmepumpeforsøket – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Regnehjelp: varmepumpeforsøket</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT3, KT4</div>
+
+<p class="ingress">Her regner vi gjennom <a href="lab-varmepumpe.html">varmepumpeforsøket</a> steg for steg med tenkte, men typiske måletall. Bytt ut tallene med deres egne målinger.</p>
+
+<h2>Hva skjer i forsøket?</h2>
+<p>Kuldemediet fordamper i spiralen i «ute»-beholderen. Fordamping er endoterm, så den tar varme fra vannet, og vannet blir kaldere. Kompressoren presser gassen sammen. I spiralen i «inne»-beholderen kondenserer kuldemediet. Kondensering er eksoterm, så vannet blir varmere.</p>
+<p>Varmen inne kommer fra to steder: varmen som ble hentet ute, og strømmen til kompressoren:</p>
+<p>\[ Q_\text{rom} = Q_\text{ute} + W_\text{strøm} \]</p>
+
+<h2>Målingene i eksempelet</h2>
+<table>
+  <thead><tr><th></th><th>Start</th><th>Etter 10 min</th><th>Endring</th></tr></thead>
+  <tbody>
+    <tr><td>Temperatur «inne»</td><td>18,0 °C</td><td>33,0 °C</td><td>+15,0 °C</td></tr>
+    <tr><td>Temperatur «ute»</td><td>18,0 °C</td><td>11,5 °C</td><td>−6,5 °C</td></tr>
+  </tbody>
+</table>
+<p>Begge beholderne har 2,00 L vann. Effekten svinget mellom 110 og 130 W, og gjennomsnittet ble 120 W.</p>
+
+<h2>Steg 1: Massen av vannet</h2>
+<p>1 mL vann veier omtrent 1 g, så 1 L vann veier omtrent 1 kg. 2,00 L vann har massen <strong>2,00 kg</strong>.</p>
+
+<h2>Steg 2: Varmen tilført vannet inne</h2>
+<p>Bruk \( Q = m \cdot c \cdot \Delta T \), der \( c = 4{,}18 \text{ kJ/(kg·°C)} \) er den spesifikke varmekapasiteten til vann:</p>
+<p>\[ Q_\text{rom} = 2{,}00 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 15{,}0 \text{ °C} = 125 \text{ kJ} \]</p>
+
+<h2>Steg 3: Energien kompressoren brukte</h2>
+<p>Effekten varierer litt, så bruk gjennomsnittet av målingene. Tiden må være i sekunder: 10 min = 600 s.</p>
+<p>\[ W_\text{strøm} = P \cdot t = 120 \text{ W} \cdot 600 \text{ s} = 72\,000 \text{ J} = 72{,}0 \text{ kJ} \]</p>
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Samme enhet</div>
+  <p>P · t gir joule (J), mens Q regnes i kJ. Del på 1000, slik at begge er i kJ før du deler dem på hverandre.</p>
+</div>
+
+<h2>Steg 4: Varmefaktoren (COP)</h2>
+<p>\[ \text{COP} = \frac{Q_\text{rom}}{W_\text{strøm}} = \frac{125 \text{ kJ}}{72{,}0 \text{ kJ}} = 1{,}7 \]</p>
+<p>Vannet fikk 1,7 ganger så mye energi som kompressoren brukte strøm.</p>
+
+<h2>Steg 5: Sjekk energibalansen</h2>
+<p>Varmen som ble hentet fra vannet ute:</p>
+<p>\[ Q_\text{ute} = 2{,}00 \text{ kg} \cdot 4{,}18 \text{ kJ/(kg·°C)} \cdot 6{,}5 \text{ °C} = 54 \text{ kJ} \]</p>
+<p>\( Q_\text{ute} + W_\text{strøm} = 54 \text{ kJ} + 72 \text{ kJ} = 126 \text{ kJ} \). Det er nesten det samme som Q<sub>rom</sub> = 125 kJ. Energien går altså opp. Forskjellen skyldes varmetap og målefeil.</p>
+
+<h2>Hvorfor er COP lavere enn i et hus?</h2>
+<ul>
+  <li><strong>Varmetap:</strong> Beholderen inne gir varme til lufta, og beholderen ute får varme fra lufta. Den varmen måler vi ikke.</li>
+  <li><strong>Økende temperaturforskjell:</strong> Vannet inne blir varmere og vannet ute kaldere. Da må kompressoren jobbe hardere, og COP synker utover i forsøket.</li>
+  <li><strong>Liten kompressor:</strong> Små kompressorer har større tap enn store.</li>
+</ul>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvorfor blir vannet i «ute»-beholderen kaldere?</p>
+  <ul>
+    <li>Kompressoren kjøler det ned.</li>
+    <li data-riktig>Kuldemediet fordamper og tar varme fra vannet.</li>
+    <li>Kuldemediet kondenserer i spiralen.</li>
+  </ul>
+  <p class="forklaring">Fordamping er endoterm. Energien tas fra vannet rundt spiralen.</p>
+</div>
+
+<div class="quiz">
+  <p>1,50 L vann blir 10,0 °C varmere. Hvor mye varme er tilført?</p>
+  <ul>
+    <li>15,0 kJ</li>
+    <li data-riktig>62,7 kJ</li>
+    <li>41,8 kJ</li>
+  </ul>
+  <p class="forklaring">Q = 1,50 kg · 4,18 kJ/(kg·°C) · 10,0 °C = 62,7 kJ.</p>
+</div>
+
+<div class="quiz">
+  <p>Kompressoren bruker 100 W i 5,0 minutter. Hvor mye energi er det?</p>
+  <ul>
+    <li>500 J</li>
+    <li data-riktig>30 kJ</li>
+    <li>30 000 kJ</li>
+  </ul>
+  <p class="forklaring">5,0 min = 300 s. W = 100 W · 300 s = 30 000 J = 30 kJ.</p>
+</div>
+
+<div class="quiz">
+  <p>Q<sub>rom</sub> = 90 kJ og W<sub>strøm</sub> = 60 kJ. Hva er COP?</p>
+  <ul>
+    <li>0,67</li>
+    <li data-riktig>1,5</li>
+    <li>150</li>
+  </ul>
+  <p class="forklaring">COP = 90 kJ / 60 kJ = 1,5. Varmen tilført står over brøkstreken.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor blir COP lavere utover i forsøket?</p>
+  <ul>
+    <li>Kuldemediet brukes opp.</li>
+    <li data-riktig>Temperaturforskjellen mellom inne og ute øker, så kompressoren må jobbe hardere.</li>
+    <li>Termometrene blir unøyaktige.</li>
+  </ul>
+  <p class="forklaring">Kuldemediet går i en lukket krets og brukes ikke opp. Når forskjellen øker, kreves mer strøm per kJ varme.</p>
+</div>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="lab-varmepumpe.html">Lab: varmepumpe</a> og <a href="varmepumpe.html">Varmepumpe</a> (simulering) i dette emnet.</li>
+  <li><a href="../04-masse-og-energibalanser/varmepumpe.html">Varmepumpe og COP</a> i Fysiske prinsipper. Der heter størrelsene Q<sub>levert</sub>, Q<sub>hentet</sub> og E<sub>strøm</sub>.</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Tallene er tenkte, men typiske. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

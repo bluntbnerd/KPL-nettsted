@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab: varmepumpe – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Lab: varmepumpe</h1>
+<div class="merker"><span class="fag">KT</span> <strong>Kompetansemål:</strong> KT3, KT4</div>
+
+<p class="ingress">I denne øvelsen bruker dere en liten demonstrasjonsvarmepumpe. Den henter varme fra et begerglass med vann («ute») og gir varmen til et annet begerglass med vann («inne»). Dere måler temperaturene og strømmen kompressoren bruker, og regner ut varmefaktoren (COP).</p>
+
+<h2>Mål</h2>
+<ul>
+  <li>Finne igjen fordamper, kompressor, kondensator og strupeventil på en ekte varmepumpe.</li>
+  <li>Måle hvor mye varme varmepumpen gir, og hvor mye strøm den bruker.</li>
+  <li>Regne ut COP og sammenligne med varmepumper i hus.</li>
+</ul>
+
+<h2>Utstyr</h2>
+<ul>
+  <li>demonstrasjonsvarmepumpe med effektmåler</li>
+  <li>to begerglass eller vannbeholdere</li>
+  <li>målesylinder</li>
+  <li>to termometre</li>
+  <li>stoppeklokke</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <ul>
+    <li>Varmepumpen går på strøm. Hold ledninger og kontakter tørre, og tørk opp sølt vann med en gang.</li>
+    <li>Røret etter kompressoren kan bli varmt. Ikke ta på rørene mens pumpen går.</li>
+    <li>Kuldemediet står under trykk. Åpne aldri koblinger på kretsen.</li>
+  </ul>
+</div>
+
+<h2>Framgangsmåte</h2>
+<ol>
+  <li>Gjør dere kjent med varmepumpen. Finn fordamperen, kompressoren, kondensatoren og strupeventilen. Se <a href="varmepumpe.html">Varmepumpe</a> hvis dere er usikre.</li>
+  <li>Fyll begge vannbeholderne med vann. Vannet skal dekke spiralene, men beholderne skal ikke bli helt fulle.</li>
+  <li>Noter volumet av vann i begge beholderne.</li>
+  <li>Mål temperaturen i begge beholderne.</li>
+  <li>Start varmepumpen og stoppeklokka samtidig.</li>
+  <li>Hvert minutt i 10 minutter noterer dere temperaturen i begge beholderne og effekten (W) kompressoren bruker. Rør forsiktig i vannet før dere leser av.</li>
+  <li>Stopp varmepumpen etter 10 minutter.</li>
+</ol>
+
+<h2>Måleskjema</h2>
+<p>Lag en tabell som denne i labjournalen:</p>
+<table>
+  <thead><tr><th>Tid (min)</th><th>Start</th><th>1</th><th>2</th><th>…</th><th>10</th><th>Endring</th></tr></thead>
+  <tbody>
+    <tr><td>Temperatur «inne» (°C)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Temperatur «ute» (°C)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>Effekt (W)</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+<h2>Utregninger</h2>
+<ol>
+  <li>Massen av vannet i hver beholder.</li>
+  <li>Varmen som ble tilført vannet «inne»: \( Q_\text{rom} = m \cdot c \cdot \Delta T \).</li>
+  <li>Energien kompressoren brukte: \( W_\text{strøm} = P \cdot t \).</li>
+  <li>Varmefaktoren: \( \text{COP} = \dfrac{Q_\text{rom}}{W_\text{strøm}} \).</li>
+</ol>
+<p>Se <a href="varmepumpe-regnehjelp.html">Regnehjelp: varmepumpeforsøket</a> for et gjennomregnet eksempel steg for steg.</p>
+
+<h2>Konklusjon og diskusjon</h2>
+<ul>
+  <li>Varmepumper i hus har ofte COP mellom 3 og 5. Sammenlign med COP for demonstrasjonsmodellen.</li>
+  <li>Diskuter hva forskjellen kan skyldes.</li>
+  <li>Regn ut varmen som ble hentet fra vannet «ute». Er varmen hentet ute pluss W<sub>strøm</sub> omtrent lik varmen tilført «inne»?</li>
+  <li>Hvilke forbedringer kan dere gjøre? Gjenta målingene etter forbedringene. Hvor stort utslag ga de?</li>
+</ul>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="varmepumpe.html">Varmepumpe</a> (simulering) og <a href="energi-i-reaksjoner.html">Energi i reaksjoner og andre prosesser</a> i dette emnet.</li>
+  <li><a href="../04-masse-og-energibalanser/varmepumpe.html">Varmepumpe og COP</a> i Fysiske prinsipper.</li>
+</ul>
+<p><small>Om kildene: Øvelsen bygger på lærerens labøvelse «Varmepumpe» ved Sauda vgs. Teksten er skrevet for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
