@@ -117,7 +117,7 @@
     <tr><td>varmeveksler</td><td>Utstyr som overfører varme fra én strøm til en annen uten at de blandes.</td><td>heat exchanger</td></tr>
     <tr><td>varmetap</td><td>Varme som går ut til omgivelsene i stedet for dit vi vil ha den.</td><td>heat loss</td></tr>
     <tr><td>medstrøm</td><td>Koplingsmåte der begge strømmene i en varmeveksler går i samme retning.</td><td>co-current flow</td></tr>
-    <tr><td>motstrøm</td><td>Koplingsmåte der strømmene i en varmeveksler går mot hverandre. Den flytter mest varme og er vanligst i industrien.</td><td>counter-current flow</td></tr>
+    <tr><td>motstrøm</td><td>Koplingsmåte der strømmene i en varmeveksler går mot hverandre. Den flytter mest varme med den samme varmeveksleren og er vanligst i industrien.</td><td>counter-current flow</td></tr>
     <tr><td>resirkulering</td><td>Å sende en del av en strøm tilbake til et tidligere sted i prosessen, slik at stoffet blir brukt på nytt.</td><td>recycle stream</td></tr>
     <tr><td>returstrøm</td><td>Strømmen som sendes tilbake i prosessen ved resirkulering.</td><td>recycle stream</td></tr>
     <tr><td>finstoff</td><td>Biter av produktet som er for små til å selges, for eksempel etter knusing og sikting.</td><td>fines</td></tr>
@@ -126,7 +126,7 @@
     <tr><td>væskesøyle</td><td>All væsken rett over et punkt, helt opp til overflaten. Tyngden av søylen gir trykket i punktet.</td><td></td></tr>
     <tr><td>hydrostatisk trykk</td><td>Trykket fra en væske som står stille. Det øker med dybden og regnes ut med p = ρ · g · h.</td><td></td></tr>
     <tr><td>meter vannsøyle</td><td>Trykkenhet (mVs) som oppgir trykket som høyden av en vannsøyle. 1 mVs er ca. 0,1 bar.</td><td>metres of water column (mWC)</td></tr>
-    <tr><td>løftehøyde</td><td>Hvor høyt en pumpe kan løfte vann, oppgitt i meter. Er et mål på hvor stort trykk pumpen kan lage.</td><td>pump head</td></tr>
+    <tr><td>løftehøyde</td><td>Trykkøkningen en pumpe gir, oppgitt som høyden av en væskesøyle i meter. 10 m løftehøyde er ca. 1 bar for vann.</td><td>pump head</td></tr>
     <tr><td>DP-celle</td><td>Trykkmåler som måler forskjellen mellom to trykk. I bunnen av en tank brukes den til å måle nivået.</td><td>DP cell (differential pressure transmitter)</td></tr>
     <tr><td>kompresjon</td><td>Å presse en gass sammen til mindre volum. Da stiger trykket, og gassen blir varmere.</td><td>compression</td></tr>
     <tr><td>kompressor</td><td>En maskin som presser sammen gass, for eksempel luft i et trykkluftanlegg eller kuldemedium i en varmepumpe.</td><td>compressor</td></tr>
@@ -134,31 +134,31 @@
     <tr><td>varmepumpe</td><td>En maskin som flytter varme fra et kaldt sted til et varmere sted ved hjelp av et kuldemedium og en kompressor.</td><td>heat pump</td></tr>
     <tr><td>COP</td><td>Tall som viser hvor god en varmepumpe er: varmen den leverer, delt på strømmen den bruker. Kalles også varmefaktor.</td><td>coefficient of performance</td></tr>
     <tr><td>kuldemedium</td><td>Stoffet som går rundt i en varmepumpe eller et kjøleanlegg. Det fordamper ved lav temperatur og tar da opp varme.</td><td>refrigerant</td></tr>
-    <tr><td>spillvarme</td><td>Varme som går ut av et anlegg uten å bli brukt, for eksempel med kjølevann eller avgass.</td><td>waste heat</td></tr>
-    <tr><td>virkningsgrad</td><td>Hvor stor del av den tilførte energien som blir nyttig. Den er nyttig energi delt på tilført energi, og oppgis ofte i prosent.</td><td>efficiency</td></tr>
+    <tr><td>spillvarme</td><td>Varme som blir til overs i en prosess, for eksempel i kjølevann eller avgass. Den kan slippes ut eller gjenvinnes.</td><td>waste heat</td></tr>
+    <tr><td>virkningsgrad</td><td>Et mål på hvor stor del av den tilførte energien som blir nyttig. Den er nyttig energi delt på tilført energi, og oppgis ofte i prosent.</td><td>efficiency</td></tr>
     <tr><td>isolasjon</td><td>Materiale som leder varme dårlig. Det legges rundt rør og tanker for å holde varmen inne eller ute.</td><td>insulation</td></tr>
-    <tr><td>røykgass</td><td>Den varme gassen som går ut av pipa fra en brenner eller kjel. Den tar med seg energi ut av anlegget.</td><td>flue gas</td></tr>
+    <tr><td>røykgass</td><td>Gassen som dannes når brensel brenner i en brenner eller kjel. Den går varm ut av pipa og tar med seg energi ut av anlegget.</td><td>flue gas</td></tr>
     <tr><td>tverrsnittsareal</td><td>Arealet av flaten du ser når du kapper et rør på tvers. For et rundt rør er det π · d² / 4.</td><td></td></tr>
     <tr><td>DN</td><td>Nominell diameter: standardstørrelsen på et rør. DN40 er omtrent 40 mm innvendig.</td><td>nominal diameter (DN)</td></tr>
     <tr><td>kavitasjon</td><td>Når væsken koker i pumpen fordi trykket blir for lavt, og dampboblene klapper sammen igjen der trykket er høyere. Gir støy og skader pumpehjulet.</td><td>cavitation</td></tr>
-    <tr><td>væskeslag</td><td>Kraftig trykkstøt i et rør når væske i fart stoppes brått, for eksempel når en ventil stenges for fort.</td><td>water hammer</td></tr>
+    <tr><td>væskeslag</td><td>Et kraftig trykkstøt i et rør når væske i fart stoppes brått, for eksempel når en ventil stenger fort. Kalles også vannslag.</td><td>water hammer</td></tr>
     <tr><td>linjenummer</td><td>Merkingen av en rørlinje på flytskjemaet. Den viser blant annet hva som går i røret, størrelsen og trykklassen.</td><td>line number</td></tr>
     <tr><td>PN</td><td>Trykklasse: hvor høyt trykk rør, flenser og ventiler er laget for. PN16 tåler 16 bar.</td><td>nominal pressure (PN)</td></tr>
     <tr><td>stengeventil</td><td>Ventil som er helt åpen eller helt stengt. Brukes til å stenge av en del av anlegget.</td><td>isolation valve</td></tr>
     <tr><td>reguleringsventil</td><td>En ventil som kan stå delvis åpen. Den åpner og lukker gradvis etter signal fra en regulator, og slik styrer den hvor mye som strømmer.</td><td>control valve</td></tr>
-    <tr><td>spjeldventil</td><td>Ventil med en rund skive som dreies inne i røret. Kan stenge, åpne og strupe.</td><td>butterfly valve</td></tr>
-    <tr><td>tilbakeslagsventil</td><td>Ventil som slipper væsken bare én vei.</td><td>check valve (non-return valve)</td></tr>
+    <tr><td>spjeldventil</td><td>En ventil med en rund skive i røret som dreies for å åpne, stenge eller strupe.</td><td>butterfly valve</td></tr>
+    <tr><td>tilbakeslagsventil</td><td>En ventil som slipper væsken bare én vei og stenger av seg selv hvis strømmen snur.</td><td>check valve, non-return valve</td></tr>
     <tr><td>sentrifugalpumpe</td><td>Pumpe med et hjul som roterer og slynger væsken utover. Den vanligste pumpen i prosessindustrien.</td><td>centrifugal pump</td></tr>
     <tr><td>pumpekurve</td><td>Graf som viser hvor stor løftehøyde en pumpe gir ved ulik volumstrøm.</td><td>pump curve</td></tr>
     <tr><td>frekvensomformer</td><td>Utstyr som endrer hvor fort en elektrisk motor går. Brukes til å styre pumper.</td><td>variable frequency drive (VFD)</td></tr>
     <tr><td>hydraulisk effekt</td><td>Effekten en pumpe gir til væsken. Regnes ut som trykkøkning ganger volumstrøm.</td><td>hydraulic power</td></tr>
     <tr><td>energigjenvinning</td><td>Å bruke spillvarme eller annen overskuddsenergi på nytt i stedet for å slippe den ut.</td><td>energy recovery</td></tr>
     <tr><td>forvarming</td><td>Å varme opp et råstoff før det går inn i prosessen, ofte med varme fra et produkt som skal kjøles.</td><td>preheating</td></tr>
-    <tr><td>fjernvarme</td><td>Varmt vann som sendes i isolerte rør fra et anlegg til bygninger og varmer dem opp.</td><td>district heating</td></tr>
+    <tr><td>fjernvarme</td><td>Oppvarming av bygninger med varmt vann som sendes i isolerte rør fra et anlegg.</td><td>district heating</td></tr>
     <tr><td>friksjon</td><td>Motstand som oppstår når noe gnir mot noe annet. I rør gnir væsken mot veggen og mot seg selv.</td><td></td></tr>
     <tr><td>differansetrykk</td><td>Forskjellen mellom to trykk, for eksempel før og etter en ventil eller et filter.</td><td>differential pressure</td></tr>
     <tr><td>strupe</td><td>Å gjøre åpningen i en ventil trangere, slik at det strømmer mindre gjennom.</td><td>throttle</td></tr>
-    <tr><td>trykktap</td><td>Trykket faller når væske eller gass strømmer gjennom et rør, fordi friksjon gjør noe av energien om til varme.</td><td>pressure drop</td></tr>
+    <tr><td>trykktap</td><td>Hvor mye trykket faller når væske eller gass strømmer gjennom rør, bend og ventiler. Friksjon gjør noe av energien om til varme.</td><td>pressure drop</td></tr>
     <tr><td>spesifikk varmekapasitet</td><td>Hvor mye energi som trengs for å varme 1 kg av et stoff 1 grad.</td><td></td></tr>
     <tr><td>massestrøm</td><td>Hvor mange kilo som strømmer forbi per tid, for eksempel i kg/s eller kg/h.</td><td>mass flow rate</td></tr>
     <tr><td>varmeeffekt</td><td>Hvor mye varme som tilføres eller føres bort per sekund. Den måles i kW.</td><td>heat duty</td></tr>
