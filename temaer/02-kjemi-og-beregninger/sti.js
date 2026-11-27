@@ -62,6 +62,7 @@ KPL.sti("02-kjemi-og-beregninger", [
     sider: [
       { fil: "redoks-spenningsrekka.html", tittel: "Redoks og spenningsrekka", meny: "Redoks", type: "fagstoff", status: "utkast" },
       { fil: "elektrolyse.html", tittel: "Elektrolyse", type: "fagstoff", status: "utkast" },
+      { fil: "aluminium-elektrolyse.html", tittel: "Øv: aluminiumsverket (simulering)", meny: "Aluminiumsverket", type: "simulering", status: "utkast" },
       { fil: "galvanisk-element.html", tittel: "Galvanisk element", meny: "Galvanisk element", type: "fagstoff", status: "utkast" },
       { fil: "korrosjon.html", tittel: "Korrosjon", type: "fagstoff", status: "utkast" },
       { fil: "hva-kan-du-na-2d.html", tittel: "Hva kan du nå?", type: "sjekk", status: "utkast" }

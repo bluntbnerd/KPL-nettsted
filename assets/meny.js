@@ -1160,7 +1160,24 @@
     }
   }
 
+  // ---------- Tomme seksjoner på temaets oversiktsside ----------
+  // «Test deg selv» skjules så lenge den bare inneholder «Kommer.», og «Videre» skjules
+  // (Oppgaver og Ressurser ligger i læringsstien). Bestemt av kjemilæreren 27.11.2026;
+  // spør læreren om disse når temaet har fullstendig innhold.
+  function fjernTommeSeksjoner() {
+    if (!TEMA || !/\/index\.html$/.test(HER)) return;
+    Array.prototype.forEach.call(main.querySelectorAll("h2"), function (h) {
+      var navn = h.textContent.trim().toLowerCase();
+      if (navn !== "test deg selv" && navn !== "videre") return;
+      var deler = [], el = h.nextElementSibling;
+      while (el && el.tagName !== "H2") { deler.push(el); el = el.nextElementSibling; }
+      var tom = deler.every(function (x) { return x.classList.contains("kommer"); });
+      if (navn === "videre" || tom) { deler.forEach(function (x) { x.remove(); }); h.remove(); }
+    });
+  }
+
   // ---------- Start ----------
+  fjernTommeSeksjoner();
   byggQuiz();
   byggOrdkort();
   byggOrdliste();

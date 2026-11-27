@@ -7,6 +7,15 @@
   <link rel="icon" href="../../assets/favicon.svg">
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
+  <style>
+    .ely-knapper { margin: 10px 0 6px; text-align: center; }
+    .ely-knapper button { margin: 0 6px 6px; padding: 5px 12px; font: inherit; font-size: .9rem; font-weight: 600; color: var(--tekst); background: var(--flate); border: 1.5px solid var(--linje); border-radius: 999px; cursor: pointer; }
+    .ely-knapper button:hover, .ely-knapper button:focus-visible { border-color: var(--aksent); outline: none; }
+    .ely-knapper button:disabled { opacity: .4; cursor: default; }
+    .ely-knapper #ely-strom { border-color: #d9534f; }
+    .ely-knapper #ely-strom[aria-pressed="true"] { background: #d9534f; color: #ffffff; }
+    #ely-lag, #ely-piler { pointer-events: none; }
+  </style>
 </head>
 <body data-status="utkast">
 <main>
@@ -37,27 +46,45 @@
 </div>
 
 <figure>
-  <svg viewBox="0 0 520 300" width="520" role="img" aria-labelledby="ely1" style="max-width:100%">
-    <title id="ely1">Elektrolyse av kobberkloridløsning. Et batteri er koblet til to grafittelektroder i et kar. Ved den negative elektroden, katoden, går kobberioner dit og blir til kobber. Ved den positive elektroden, anoden, går kloridioner dit og blir til klorgass som bobler opp.</title>
-    <rect x="200" y="10" width="120" height="40" fill="#eee" stroke="#555"/>
-    <text x="260" y="36" text-anchor="middle" font-size="15">strømkilde</text>
-    <text x="215" y="66" font-size="18">−</text><text x="296" y="66" font-size="18">+</text>
-    <polyline points="200,30 130,30 130,120" fill="none" stroke="#333" stroke-width="2"/>
-    <polyline points="320,30 390,30 390,120" fill="none" stroke="#333" stroke-width="2"/>
+  <svg id="ely" viewBox="0 0 520 300" width="520" role="img" aria-labelledby="ely1" style="max-width:100%;height:auto" font-family="Segoe UI, Arial, sans-serif">
+    <title id="ely1">Elektrolyse av kobberkloridløsning. En strømkilde er koblet til to grafittelektroder i et kar. Kobberioner går til den negative elektroden, katoden, og blir til kobber. Kloridioner går til den positive elektroden, anoden, og blir til klorgass som bobler opp.</title>
+    <defs><marker id="ely-pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker><marker id="ely-pil-cu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b5651d"/></marker></defs>
+    <rect width="520" height="300" rx="10" fill="#ffffff"/>
+    <path id="ely-vei" d="M390 100 V30 H130 V100" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="200" y="12" width="120" height="36" rx="4" fill="#fde3a7" stroke="#b5530f" stroke-width="2"/>
+    <text x="260" y="35" text-anchor="middle" font-size="14" fill="#1c2828">strømkilde</text>
+    <text x="212" y="66" font-size="18" font-weight="bold" fill="#1e6fb8">−</text><text x="300" y="66" font-size="18" font-weight="bold" fill="#d9534f">+</text>
     <path d="M70 110 V270 H450 V110" fill="none" stroke="#555" stroke-width="2"/>
-    <rect x="72" y="150" width="376" height="118" fill="#6fa8dc" opacity="0.4"/>
+    <rect x="72" y="150" width="376" height="118" fill="#6fa8dc" opacity="0.35"/>
+    <rect id="ely-k-ring" x="112" y="94" width="36" height="164" rx="6" fill="none" stroke="#f2a900" stroke-width="4" display="none"/>
+    <rect id="ely-a-ring" x="372" y="94" width="36" height="164" rx="6" fill="none" stroke="#f2a900" stroke-width="4" display="none"/>
+    <rect id="ely-cu" x="120" y="151" width="20" height="99" rx="2" fill="#b5651d" display="none"/>
     <rect x="120" y="100" width="20" height="150" fill="#444"/>
     <rect x="380" y="100" width="20" height="150" fill="#444"/>
-    <rect x="116" y="200" width="28" height="40" fill="#b5651d" opacity="0.8"/>
-    <circle cx="372" cy="190" r="5" fill="#cde66a" stroke="#777"/><circle cx="408" cy="170" r="6" fill="#cde66a" stroke="#777"/><circle cx="374" cy="160" r="4" fill="#cde66a" stroke="#777"/>
-    <text x="200" y="200" font-size="15">← Cu²⁺</text>
-    <text x="270" y="230" font-size="15">Cl⁻ →</text>
-    <text x="130" y="290" text-anchor="middle" font-size="13">katode (−): reduksjon</text>
-    <text x="390" y="290" text-anchor="middle" font-size="13">anode (+): oksidasjon</text>
-    <text x="40" y="215" font-size="12" text-anchor="middle">Cu</text>
-    <text x="470" y="160" font-size="12" text-anchor="middle">Cl₂</text>
+    <g id="ely-piler" display="none" font-size="14" font-weight="bold">
+      <line x1="230" y1="190" x2="160" y2="190" stroke="#1e6fb8" stroke-width="2.5" marker-end="url(#ely-pil)"/><text x="236" y="195" fill="#1e6fb8">Cu²⁺</text>
+      <line x1="290" y1="230" x2="360" y2="230" stroke="#2e8b57" stroke-width="2.5" marker-end="url(#ely-pil)"/><text x="250" y="235" fill="#2e8b57">Cl⁻</text>
+    </g>
+    <g id="ely-lag"></g>
+    <g font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" pointer-events="none">
+      <text x="130" y="242">−</text>
+      <text x="390" y="242">+</text>
+    </g>
+    <g id="ely-merk" display="none" font-size="13" font-weight="bold" pointer-events="none">
+      <text x="160" y="140" fill="#1c2828">Cu</text>
+      <line x1="162" y1="144" x2="149" y2="162" stroke="#1c2828" stroke-width="1.5" marker-end="url(#ely-pil)"/>
+    </g>
+    <text x="130" y="288" text-anchor="middle" font-size="13" fill="#1c2828">katode</text>
+    <text x="390" y="288" text-anchor="middle" font-size="13" fill="#1c2828">anode</text>
   </svg>
-  <figcaption>Figur: Elektrolyse av kobber(II)kloridløsning med grafittelektroder. Kobber legger seg på katoden, og klorgass bobler opp ved anoden.</figcaption>
+  <p class="ely-knapper"><button type="button" id="ely-strom" aria-pressed="false">⚡ Slå på strømmen</button></p>
+  <p class="ely-knapper">
+    <button type="button" id="ely-forrige">◀ Forrige</button>
+    <strong id="ely-nr">Steg 1 av 5</strong>
+    <button type="button" id="ely-neste">Neste ▶</button>
+  </p>
+  <div class="boks" id="ely-tekst" aria-live="polite"></div>
+  <figcaption>Figur: Elektrolyse av kobber(II)kloridløsning med grafittelektroder, steg for steg. Blå kuler er kobberioner (Cu<sup>2+</sup>), grønne kuler er kloridioner (Cl<sup>−</sup>), og små gule kuler med minustegn er elektroner. Det er dobbelt så mange kloridioner som kobberioner.</figcaption>
 </figure>
 
 <h2>Elektrolyse av kobberklorid</h2>
@@ -75,7 +102,7 @@
 
 <h2>Elektrolyse i industrien</h2>
 <ul>
-  <li><strong>Aluminium</strong> lages ved elektrolyse av aluminiumoksid løst i en saltsmelte ved ca. 960 °C. Aluminiumioner reduseres til flytende aluminium på katoden.</li>
+  <li><strong>Aluminium</strong> lages ved elektrolyse av aluminiumoksid løst i en saltsmelte ved ca. 960 °C. Aluminiumioner reduseres til flytende aluminium på katoden. Se inn i en celle i <a href="aluminium-elektrolyse.html">simuleringen av aluminiumsverket</a>.</li>
   <li><strong>Sink</strong> lages ved elektrolyse av en sinksulfatløsning, for eksempel ved sinkverket i Odda. Sinken legger seg på katodeplater.</li>
   <li><strong>Klor og natronlut</strong> lages ved elektrolyse av saltvann (kloralkaliprosessen).</li>
   <li><strong>Hydrogen</strong> kan lages ved elektrolyse av vann. Med strøm fra vannkraft eller vind blir det «grønt hydrogen».</li>
@@ -166,5 +193,130 @@
 <p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
 
 </main>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var lag = document.getElementById("ely-lag"), vei = document.getElementById("ely-vei");
+  var cu = document.getElementById("ely-cu"), piler = document.getElementById("ely-piler");
+  var kRing = document.getElementById("ely-k-ring"), aRing = document.getElementById("ely-a-ring");
+  var tekst = document.getElementById("ely-tekst"), nr = document.getElementById("ely-nr");
+  var rolig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var lengde = vei.getTotalLength();
+  var steg = 1, gaar = false, sist = 0, cuBredde = 0, clTeller = 0;
+  var STEG = [
+    null,
+    { t: "1 Før strømmen slås på", h: "<p>Kobberkloridløsningen inneholder kobberioner (Cu<sup>2+</sup>) og kloridioner (Cl<sup>−</sup>). Ionene er spredt i hele løsningen. Det er dobbelt så mange Cl<sup>−</sup> som Cu<sup>2+</sup>, så den totale ladningen er null.</p>" },
+    { t: "2 Strømmen slås på", h: "<p>Strømkilden pumper elektroner inn i den venstre elektroden, som blir <strong>negativ</strong> (katoden). Den trekker elektroner ut av den høyre, som blir <strong>positiv</strong> (anoden).</p><p>Motsatte ladninger tiltrekker hverandre: Cu<sup>2+</sup> vandrer mot katoden (−), og Cl<sup>−</sup> vandrer mot anoden (+). Hvert ion flytter seg bare et lite stykke. Det er ionene som er nær hver elektrode, som reagerer der. Elektronene går aldri gjennom væsken, bare i ledningen.</p>" },
+    { t: "3 Ved katoden (−): reduksjon", k: true, h: "<p>Når et kobberion kommer fram til katoden, tar det opp to elektroner og blir til et kobberatom. Kobberet legger seg som et rødbrunt lag på elektroden.</p><p><strong>Cu<sup>2+</sup> + 2 e<sup>−</sup> → Cu</strong></p>" },
+    { t: "4 Ved anoden (+): oksidasjon", a: true, h: "<p>Når kloridioner kommer fram til anoden, gir de fra seg ett elektron hver. To kloratomer går sammen til et klormolekyl. Klorgassen bobler opp.</p><p><strong>2 Cl<sup>−</sup> → Cl<sub>2</sub> + 2 e<sup>−</sup></strong></p><p>Elektronene går gjennom ledningen tilbake til strømkilden.</p>" },
+    { t: "5 Hele reaksjonen", h: "<p>Elektronene som anoden tar fra kloridionene, er de samme som katoden gir til kobberionene. Samlet:</p><p><strong>CuCl<sub>2</sub> → Cu + Cl<sub>2</sub></strong></p><p>Uten strømkilden skjer ingenting. Strømmen driver en reaksjon som ikke går av seg selv. Det er dette som er elektrolyse.</p>" }
+  ];
+
+  function lagEl(n, a) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  function tilf(a, b) { return a + Math.random() * (b - a); }
+  function ion(farge, tegn, r) {
+    var g = lagEl("g", {});
+    g.appendChild(lagEl("circle", { r: r, fill: farge, stroke: "#1c2828", "stroke-width": 1 }));
+    var t = lagEl("text", { "font-size": 8, "text-anchor": "middle", y: 3, fill: "#ffffff", "font-weight": "bold" });
+    t.textContent = tegn; g.appendChild(t); lag.appendChild(g); return g;
+  }
+  function plasser(o) { o.el.setAttribute("transform", "translate(" + o.x.toFixed(1) + "," + o.y.toFixed(1) + ")"); }
+  function spre(o) { o.x = tilf(165, 355); o.y = tilf(165, 255); }
+  var cuIoner = [], clIoner = [], bobler = [], elektroner = [];
+  for (var i = 0; i < 3; i++) { var c = { el: ion("#1e6fb8", "Cu²⁺", 11) }; spre(c); cuIoner.push(c); plasser(c); }
+  for (i = 0; i < 6; i++) { var d = { el: ion("#2e8b57", "Cl⁻", 9) }; spre(d); clIoner.push(d); plasser(d); }
+  // Elektroner: gule kuler med minustegn (blått er brukt for kobberionene)
+  for (i = 0; i < 8; i++) {
+    var e = lagEl("g", { display: "none" });
+    e.appendChild(lagEl("circle", { r: 6, fill: "#f5c518", stroke: "#1c2828", "stroke-width": 0.8 }));
+    var et = lagEl("text", { "font-size": 10, "font-weight": "bold", "text-anchor": "middle", y: 3.5, fill: "#1c2828" }); et.textContent = "−"; e.appendChild(et);
+    lag.appendChild(e); elektroner.push({ el: e, s: i * lengde / 8 });
+  }
+
+  function ramme(t) {
+    if (!gaar) return;
+    var dt = sist ? Math.min((t - sist) / 1000, 0.05) : 0; sist = t;
+    cuIoner.forEach(function (o) {
+      o.x -= 28 * dt;
+      if (o.x <= 152 + cuBredde) { spre(o); o.x = tilf(170, 240); }
+      plasser(o);
+    });
+    clIoner.forEach(function (o) {
+      o.x += 28 * dt;
+      if (o.x >= 370) {
+        if (++clTeller % 2 === 0) { var b = lagEl("g", {}); b.appendChild(lagEl("circle", { r: 10, fill: "#cde66a", stroke: "#5c7a1a", "stroke-width": 1 })); var bt = lagEl("text", { "font-size": 8, "text-anchor": "middle", y: 3, fill: "#1c2828", "font-weight": "bold" }); bt.textContent = "Cl₂"; b.appendChild(bt); lag.appendChild(b); bobler.push({ el: b, x: 368 + tilf(-2, 2), y: o.y }); }
+        spre(o); o.x = tilf(280, 350);
+      }
+      plasser(o);
+    });
+    bobler = bobler.filter(function (b) {
+      b.y -= 35 * dt;
+      if (b.y < 150) { lag.removeChild(b.el); return false; }
+      b.el.setAttribute("transform", "translate(" + b.x.toFixed(1) + "," + b.y.toFixed(1) + ")"); return true;
+    });
+    elektroner.forEach(function (e) {
+      e.s = (e.s + 60 * dt) % lengde;
+      var p = vei.getPointAtLength(e.s); e.el.setAttribute("transform", "translate(" + p.x.toFixed(1) + "," + p.y.toFixed(1) + ")");
+      e.el.setAttribute("opacity", p.y < 50 && p.x > 198 && p.x < 322 ? 0 : 1); // skjult inne i strømkilden
+    });
+    // Kobberlaget starter tynt og blir jevnt tykkere så lenge strømmen går
+    cuBredde = Math.min(9, cuBredde + 0.35 * dt);
+    tegnCu();
+    requestAnimationFrame(ramme);
+  }
+
+  // Laget dekker den delen av katoden som står i væsken, på begge sider og under
+  function tegnCu() {
+    if (cuBredde <= 0) { cu.setAttribute("display", "none"); return; }
+    cu.setAttribute("display", "inline");
+    cu.setAttribute("x", (120 - cuBredde).toFixed(2));
+    cu.setAttribute("width", (20 + 2 * cuBredde).toFixed(2));
+    cu.setAttribute("height", (99 + cuBredde).toFixed(2));
+  }
+  function vis(n) {
+    steg = n;
+    var s = STEG[n];
+    nr.textContent = "Steg " + n + " av 5";
+    tekst.innerHTML = '<div class="boks-tittel">' + s.t + "</div>" + s.h;
+    kRing.setAttribute("display", s.k ? "inline" : "none");
+    aRing.setAttribute("display", s.a ? "inline" : "none");
+    document.getElementById("ely-forrige").disabled = n === 1;
+    document.getElementById("ely-neste").disabled = n === 5;
+    if (n === 1) {
+      strom(false);
+      cuBredde = 0; tegnCu();
+      cuIoner.concat(clIoner).forEach(function (o) { spre(o); plasser(o); });
+    } else if (!paaNa) strom(true);
+  }
+
+  // Strøm på og av
+  var paaNa = false, knapp = document.getElementById("ely-strom");
+  function strom(paa) {
+    paaNa = paa;
+    if (paa && cuBredde < 0.8) { cuBredde = 0.8; tegnCu(); }
+    document.getElementById("ely-merk").setAttribute("display", paa ? "inline" : "none");
+    knapp.setAttribute("aria-pressed", paa ? "true" : "false");
+    knapp.textContent = paa ? "⏸ Slå av strømmen" : "⚡ Slå på strømmen";
+    if (rolig) {
+      piler.setAttribute("display", paa ? "inline" : "none");
+      if (paa) { cuBredde = Math.max(cuBredde, 4); tegnCu(); }
+      return;
+    }
+    elektroner.forEach(function (e) { e.el.setAttribute("display", paa ? "inline" : "none"); });
+    if (!paa) { bobler.forEach(function (b) { lag.removeChild(b.el); }); bobler = []; }
+    if (paa && !gaar) { gaar = true; sist = 0; requestAnimationFrame(ramme); }
+    if (!paa) gaar = false;
+  }
+  knapp.addEventListener("click", function () {
+    strom(!paaNa);
+    if (paaNa && steg === 1) vis(2);
+  });
+  document.getElementById("ely-forrige").addEventListener("click", function () { if (steg > 1) vis(steg - 1); });
+  document.getElementById("ely-neste").addEventListener("click", function () { if (steg < 5) vis(steg + 1); });
+  vis(1);
+})();
+</script>
 </body>
 </html>

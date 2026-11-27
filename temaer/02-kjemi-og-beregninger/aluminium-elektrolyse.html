@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aluminiumsverket – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+  <style>
+    .al-del { cursor: pointer; }
+    .al-del:focus { outline: none; }
+    .al-del:focus .al-ramme, .al-del:hover .al-ramme { stroke: #f2a900; stroke-width: 4; }
+    .al-del.valgt .al-ramme { stroke: #f2a900; stroke-width: 5; }
+    .al-knapper { margin: 12px 0 0; text-align: center; }
+    .al-knapper button { margin: 0 3px 6px; padding: 5px 12px; font: inherit; font-size: .9rem; font-weight: 600; color: var(--tekst); background: var(--flate); border: 1.5px solid var(--linje); border-radius: 999px; cursor: pointer; }
+    .al-knapper button:hover, .al-knapper button:focus-visible { border-color: var(--aksent); outline: none; }
+    .al-knapper button[aria-pressed="true"] { border-color: var(--aksent); background: var(--aksent); color: #1c2828; }
+    .al-knapper .al-strom { border-color: #d9534f; }
+    .al-omraade { position: relative; max-width: 600px; }
+    .al-popup { position: absolute; inset: 0; z-index: 5; margin: 0; overflow-y: auto; background: var(--flate); box-shadow: 0 4px 18px rgba(0,0,0,.25); }
+    .al-popup[hidden] { display: none; }
+    .al-popup .al-lukk { float: right; margin: 0 0 6px 10px; }
+    #al-ioner, #al-statisk { pointer-events: none; }
+    .al-kalk label { display: block; margin: 8px 0 2px; font-weight: 600; }
+    .al-kalk input[type=range] { width: 100%; max-width: 420px; }
+    .al-kalk select { font: inherit; padding: 3px 6px; }
+    .al-kalk output { font-weight: 700; }
+  </style>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Øv: aluminiumsverket (simulering)</h1>
+<div class="merker"><span class="fag">KT</span> <span class="fag">ADK</span> <strong>Kompetansemål:</strong> KT3, KT4, ADK1</div>
+
+<p class="ingress">Norge er Europas største produsent av aluminium. Verkene til Hydro på blant annet Karmøy, Sunndalsøra og Årdal lager aluminium ved elektrolyse. Her ser du inn i én elektrolysecelle. Trykk på delene for å lese mer, og slå på strømmen for å se hva som skjer.</p>
+
+<h2>Simulering</h2>
+<p>Råstoffet er <strong>aluminiumoksid</strong> (Al<sub>2</sub>O<sub>3</sub>), et hvitt pulver. Det smelter først ved over 2000 °C. Derfor løses det i en saltsmelte av <strong>kryolitt</strong> ved ca. 960 °C. Smelten er elektrolytten. Den inneholder aluminiumioner (Al<sup>3+</sup>) og oksidioner (O<sup>2−</sup>).</p>
+
+<figure>
+<div class="al-omraade">
+<svg id="al" viewBox="0 0 600 360" width="600" height="360" style="max-width:100%;height:auto" role="group" aria-label="Snitt gjennom en elektrolysecelle for aluminium. Trykk på en av de sju delene for å lese mer." font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="al-pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="360" rx="10" fill="#ffffff"/>
+
+  <!-- 4 Avgass -->
+  <g class="al-del" data-del="avgass" tabindex="0" role="button" aria-label="Avgassrør">
+    <path class="al-ramme" d="M460 24 V102 H480 V24" fill="#eef2f2" stroke="#586868" stroke-width="2"/>
+    <line x1="470" y1="92" x2="470" y2="30" stroke="#1c2828" stroke-width="2" marker-end="url(#al-pil)"/>
+    <circle cx="450" cy="30" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="450" y="34" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">4</text>
+    <text x="470" y="16" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">avgass ut</text>
+  </g>
+
+  <!-- Ledning: anode (+) til strømkilde til katode (−) -->
+  <path d="M170 64 H430" fill="none" stroke="#d9534f" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Stålkasse og katode av karbon -->
+  <g class="al-del" data-del="aluminium" tabindex="0" role="button" aria-label="Flytende aluminium og katode">
+    <rect x="60" y="100" width="480" height="235" fill="#8a9a9a"/>
+    <rect class="al-ramme" x="70" y="290" width="460" height="38" fill="#3c3c3c" stroke="#3c3c3c" stroke-width="1"/>
+    <rect id="al-metall" x="70" y="255" width="460" height="35" fill="#c9ced6"/>
+    <g font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      <text x="90" y="315">−</text><text x="125" y="315">−</text><text x="160" y="315">−</text><text x="195" y="315">−</text><text x="230" y="315">−</text><text x="265" y="315">−</text><text x="300" y="315">−</text><text x="335" y="315">−</text><text x="370" y="315">−</text><text x="405" y="315">−</text><text x="440" y="315">−</text><text x="475" y="315">−</text><text x="510" y="315">−</text>
+    </g>
+    <text x="300" y="352" font-size="12" text-anchor="middle" fill="#586868">katode</text>
+    <text id="al-metalltekst" x="300" y="276" font-size="13" font-weight="bold" text-anchor="middle" fill="#1c2828">Flytende aluminium: Al³⁺ + 3 e⁻ → Al</text>
+    <circle cx="70" cy="272" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="70" y="276" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">3</text>
+      </g>
+
+  <!-- 2 Elektrolytt -->
+  <g class="al-del" data-del="bad" tabindex="0" role="button" aria-label="Elektrolytt: kryolitt med aluminiumoksid">
+    <rect id="al-bad" class="al-ramme" x="70" y="112" width="460" height="143" fill="#f8d3a5" stroke="#f8d3a5" stroke-width="1"/>
+    <rect x="70" y="100" width="460" height="12" fill="#b9c1c1"/>
+    <!-- Avgassrøret går gjennom skorpen og ned i gassrommet over badet -->
+    <rect x="461" y="98" width="18" height="16" fill="#eef2f2"/>
+    <path d="M460 98 V114 M480 98 V114" stroke="#586868" stroke-width="2"/>
+    <text x="300" y="109" font-size="9" text-anchor="middle" fill="#1c2828">skorpe av størknet bad</text>
+    <text x="300" y="146" font-size="12" text-anchor="middle" fill="#7a4a12">bad (elektrolytt)</text>
+    <text x="300" y="160" font-size="12" text-anchor="middle" fill="#7a4a12">960 °C</text>
+    <circle cx="300" cy="122" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="300" y="126" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">2</text>
+  </g>
+
+  <!-- 1 Anoder -->
+  <g class="al-del" data-del="anode" tabindex="0" role="button" aria-label="Anoder av karbon">
+    <defs><linearGradient id="al-syl" x1="0" x2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="0.35" stop-color="#5a5a5a"/><stop offset="1" stop-color="#111111"/></linearGradient></defs>
+    <path class="al-ramme" d="M165 66 V187 A25 5 0 0 0 215 187 V66" fill="url(#al-syl)" stroke="#111111" stroke-width="1"/>
+    <ellipse cx="190" cy="66" rx="25" ry="5" fill="#4a4a4a" stroke="#111111"/>
+    <path class="al-ramme" d="M385 66 V187 A25 5 0 0 0 435 187 V66" fill="url(#al-syl)" stroke="#111111" stroke-width="1"/>
+    <ellipse cx="410" cy="66" rx="25" ry="5" fill="#4a4a4a" stroke="#111111"/>
+    <g font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      <text x="190" y="128">+</text><text x="190" y="152">+</text><text x="190" y="176">+</text>
+      <text x="410" y="128">+</text><text x="410" y="152">+</text><text x="410" y="176">+</text>
+    </g>
+    <text x="190" y="208" font-size="11" text-anchor="middle" fill="#7a4a12" opacity="0.7">anode</text>
+    <text x="410" y="208" font-size="11" text-anchor="middle" fill="#7a4a12" opacity="0.7">anode</text>
+    <circle cx="165" cy="120" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="165" y="124" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">1</text>
+  </g>
+
+  <!-- 5 Strømkilde -->
+  <g class="al-del" data-del="strom" tabindex="0" role="button" aria-label="Likestrøm inn til anodene">
+    <rect class="al-ramme" x="236" y="46" width="128" height="16" rx="3" fill="#ffffff" stroke="#d9534f" stroke-width="1.5"/>
+    <text x="300" y="58" font-size="11" font-weight="bold" text-anchor="middle" fill="#d9534f">+ likestrøm inn</text>
+    <circle cx="372" cy="54" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="372" y="58" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">5</text>
+  </g>
+
+  <!-- 6 Mater: aluminiumoksid inn -->
+  <g class="al-del" data-del="mater" tabindex="0" role="button" aria-label="Mater som tilsetter aluminiumoksid">
+    <path class="al-ramme" d="M100 4 H136 L128 26 H108 Z" fill="#ffffff" stroke="#586868" stroke-width="2"/>
+    <rect x="114" y="26" width="8" height="88" fill="#d5dbdb" stroke="#586868" stroke-width="1"/>
+    <text x="158" y="16" font-size="11" fill="#1c2828">aluminiumoksid inn</text>
+    <circle cx="144" cy="10" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="144" y="14" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">6</text>
+  </g>
+
+  <!-- 7 Tapping: aluminium ut -->
+  <g class="al-del" data-del="tapping" tabindex="0" role="button" aria-label="Tapperør og tappeøse">
+    <path id="al-tappevei" d="M502 280 V86 H572 V214" fill="none" stroke="#586868" stroke-width="7" stroke-linejoin="round"/>
+    <path class="al-ramme" d="M552 208 H592 L588 258 H556 Z" fill="#eef2f2" stroke="#586868" stroke-width="2"/>
+    <rect id="al-ose" x="557" y="256" width="30" height="0" fill="#c9ced6"/>
+    <text x="572" y="272" font-size="11" text-anchor="middle" fill="#1c2828">tappeøse</text>
+    <text x="572" y="286" font-size="11" text-anchor="middle" fill="#1c2828">Al ut</text>
+    <circle cx="572" cy="198" r="9" fill="#ffffff" stroke="#1c2828" stroke-width="1.5"/><text x="572" y="202" font-size="11" font-weight="bold" text-anchor="middle" fill="#1c2828">7</text>
+  </g>
+
+  <!-- Statiske piler (vises når bevegelse er slått av i maskinen) -->
+  <g id="al-statisk" display="none" font-size="12" font-weight="bold">
+    <line x1="290" y1="205" x2="290" y2="245" stroke="#1c2828" stroke-width="2" marker-end="url(#al-pil)"/><text x="298" y="225" fill="#1c2828">Al³⁺</text>
+    <line x1="420" y1="235" x2="420" y2="195" stroke="#c0392b" stroke-width="2" marker-end="url(#al-pil)"/><text x="428" y="222" fill="#c0392b">O²⁻</text>
+    <text x="258" y="135" fill="#586868">CO₂ ↑</text>
+  </g>
+
+  <!-- Ioner og bobler legges inn her av skriptet -->
+  <g id="al-ioner"></g>
+</svg>
+<div class="boks al-popup" id="al-info" role="dialog" aria-label="Forklaring" hidden></div>
+</div>
+<p class="al-knapper">
+  <button type="button" class="al-strom" id="al-startknapp" aria-pressed="false">⚡ Slå på strømmen</button>
+</p>
+<p class="al-knapper">
+  <button type="button" data-del="anode">1 Anode</button>
+  <button type="button" data-del="bad">2 Elektrolytt</button>
+  <button type="button" data-del="aluminium">3 Aluminium</button>
+  <button type="button" data-del="avgass">4 Avgass</button>
+  <button type="button" data-del="strom">5 Strøm</button>
+  <button type="button" data-del="mater">6 Mater</button>
+  <button type="button" data-del="tapping">7 Tapping</button>
+</p>
+<figcaption>Figur: Forenklet snitt gjennom en elektrolysecelle for aluminium. Grå kuler er aluminiumioner (Al<sup>3+</sup>), røde kuler er oksidioner (O<sup>2−</sup>), og hvite bobler er CO<sub>2</sub>. Trykk på anoden eller aluminiumet for å se delreaksjonene. Strømkretsen utenfor cellen er ikke tegnet. Se <a href="elektrolyse.html">Elektrolyse</a>. Råstoffet kommer inn til venstre og metallet går ut til høyre, så det er lett å følge. I en ekte celle sitter materne i en kanal midt mellom anoderadene, og metallet tappes i den ene enden. En ekte celle er ca. 10–15 meter lang og har 20–40 anoder.</figcaption>
+</figure>
+
+<h2>Reaksjonene i cellen</h2>
+<p>Katoden (−), reduksjon: \( \ce{Al^3+ + 3e- -> Al} \)</p>
+<p>Anoden (+), oksidasjon: \( \ce{C + 2O^2- -> CO2 + 4e-} \)</p>
+<p>Samlet: \[ \ce{2Al2O3 + 3C -> 4Al + 3CO2} \]</p>
+<p>Til forskjell fra grafittelektrodene på laben blir karbonanodene <strong>brukt opp</strong>. De reagerer med oksygenet og blir til CO<sub>2</sub>. Ionene i badet er i virkeligheten mer sammensatte, men resultatet blir det samme.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Hvor mye CO<sub>2</sub> gir 1 tonn aluminium?</div>
+  <ol>
+    <li>Fra ligningen: 4 mol Al gir 3 mol CO<sub>2</sub>.</li>
+    <li>4 mol Al: \( 4 \cdot 26{,}98\ \text{g} = 107{,}9\ \text{g} \). 3 mol CO<sub>2</sub>: \( 3 \cdot 44{,}01\ \text{g} = 132{,}0\ \text{g} \).</li>
+    <li>Forholdet: \( 132{,}0 / 107{,}9 = 1{,}22 \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Minst 1,22 tonn CO<sub>2</sub> per tonn aluminium fra anodene. I praksis blir det litt mer, fordi noe av anoden brenner i lufta.</p>
+</div>
+
+<h2>Strømforbruk</h2>
+<p>Elektrolysen bruker enormt mye strøm. Hver celle har bare ca. 4–4,5 volt, men strømmen er flere hundre tusen ampere. Mange celler står koblet etter hverandre i lange haller. Hydro oppgir at verdensgjennomsnittet er ca. 14,1 kWh per kilo aluminium. Den nye teknologien som er prøvd ut på Karmøy, har målt ca. 12,3 kWh per kilo.</p>
+
+<div class="boks al-kalk">
+  <div class="boks-tittel">Kalkulator: hvor mye strøm bruker verket?</div>
+  <label for="al-tonn">Produksjon i året: <output id="al-tonn-ut">200 000</output> tonn aluminium</label>
+  <input type="range" id="al-tonn" min="10000" max="400000" step="10000" value="200000">
+  <label for="al-tek">Teknologi</label>
+  <select id="al-tek">
+    <option value="14.1">Verdensgjennomsnitt (14,1 kWh/kg)</option>
+    <option value="13.8" selected>Snittet hos Hydro (13,8 kWh/kg)</option>
+    <option value="12.3">Ny teknologi på Karmøy (12,3 kWh/kg)</option>
+  </select>
+  <p id="al-resultat" aria-live="polite"></p>
+  <p><small>En norsk husholdning regnes her å bruke ca. 16 000 kWh strøm i året. CO<sub>2</sub> er bare det som kommer fra anodene, regnet som i eksempelet over.</small></p>
+</div>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet og miljø</div>
+  <p>Badet og metallet holder ca. 960 °C. Fukt eller vann som kommer i kontakt med smeltet metall, kan gi eksplosjoner, så verktøy må være tørt og forvarmet. Arbeiderne bruker varmebestandige klær og visir. De sterke magnetfeltene rundt cellene kan påvirke pacemakere. Avgassen inneholder fluorforbindelser og støv. Den renses ved at den blåses gjennom aluminiumoksid, som så brukes som råstoff i cellene.</p>
+</div>
+
+<h2>Oppdrag</h2>
+<ol>
+  <li>Slå på strømmen. Hvilken vei går Al<sup>3+</sup>-ionene, og hvilken vei går O<sup>2−</sup>-ionene? Forklar hvorfor.</li>
+  <li>Hvilken elektrode er anoden, og hvilken er katoden? Hvilken av dem er koblet til plusspolen?</li>
+  <li>Hvorfor må anodene byttes ut, mens grafittelektrodene på laben kan brukes om igjen?</li>
+  <li>Hvorfor løses aluminiumoksid i kryolitt i stedet for å smeltes alene?</li>
+  <li>Bruk kalkulatoren: Et verk lager 200 000 tonn aluminium i året med Hydros snitt. Hvor mye strøm bruker det, og hvor mange husholdninger svarer det til? Hvor mye sparer verket ved å gå over til Karmøy-teknologien?</li>
+  <li>Hvorfor ligger mange aluminiumsverk i Norge, ofte innerst i fjorder?</li>
+</ol>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <ol>
+    <li>Al<sup>3+</sup> er positive og trekkes ned mot den negative katoden (metallet i bunnen). O<sup>2−</sup> er negative og trekkes mot de positive anodene.</li>
+    <li>Karbonblokkene øverst er anodene og er koblet til plusspolen. Der skjer oksidasjonen. Katoden er bunnen av cellen, der det flytende aluminiumet ligger. Den er koblet til minuspolen.</li>
+    <li>Karbonet i anodene reagerer selv med oksygenet og blir til CO<sub>2</sub>. Anoden blir altså brukt opp. Grafitten på laben reagerer nesten ikke, fordi det er klor og ikke oksygen som dannes der, og temperaturen er lav.</li>
+    <li>Aluminiumoksid smelter først ved over 2000 °C. Løst i kryolitt kan det elektrolyseres ved ca. 960 °C. Det sparer mye energi og gjør cellen mulig å bygge.</li>
+    <li>200 000 000 kg · 13,8 kWh/kg = 2 760 000 000 kWh = 2,76 TWh. Det svarer til ca. 172 500 husholdninger. Med 12,3 kWh/kg blir det 2,46 TWh, altså 0,30 TWh mindre (ca. 18 750 husholdninger).</li>
+    <li>Verkene trenger mye og stabil strøm. Norge har mye vannkraft, og mange verk ble bygd nær kraftverkene i fjordene. Fjorden gir også havn for å frakte inn råstoff og ut metall.</li>
+  </ol>
+</details>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>aluminiumoksid</td><td>Hvitt pulver (Al<sub>2</sub>O<sub>3</sub>) som er råstoffet for aluminium. Det lages av mineralet bauxitt.</td><td>alumina</td></tr>
+    <tr><td>kryolitt</td><td>Salt med natrium, aluminium og fluor som smelter ved lav nok temperatur til å løse aluminiumoksid. Smelten er elektrolytten i cellen.</td><td>cryolite</td></tr>
+    <tr><td>elektrolysecelle</td><td>Stålkasse med karbon i bunnen og anoder ovenfra, der aluminium lages ved elektrolyse. Kalles også ovn eller gryte.</td><td>pot (reduction cell)</td></tr>
+    <tr><td>karbonanode</td><td>Blokk av karbon som er koblet til plusspolen. Den reagerer med oksygen og blir brukt opp.</td><td>carbon anode</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="elektrolyse.html">Elektrolyse</a> i dette emnet.</li>
+  <li><a href="https://hydro.com/en/about-hydro/stories-by-hydro/the-worlds-most-energy-efficient-aluminium-production-technology" target="_blank" rel="noopener">Hydro: om teknologien på Karmøy</a> (engelsk).</li>
+</ul>
+<p><small>Om kildene: Simuleringen, figuren og teksten er laget for dette nettstedet. Tallene for strømforbruk er Hydros egne opplysninger. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var lag = document.getElementById("al-ioner");
+  var metall = document.getElementById("al-metall");
+  var metallTekst = document.getElementById("al-metalltekst");
+  var knapp = document.getElementById("al-startknapp");
+  var statisk = document.getElementById("al-statisk");
+  var rolig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ANODER = [[165, 215], [385, 435]];
+  var BUNN_ANODE = 187, METALL_START = 255, METALL_MAKS = 236;
+  var metallTopp = METALL_START, paa = false, sist = 0;
+  var korn = [], draaper = [], materTid = 0, tapper = false, oseNivaa = 0;
+  var tappevei = document.getElementById("al-tappevei"), tappeLengde = tappevei.getTotalLength();
+  var ose = document.getElementById("al-ose");
+
+  function lagEl(navn, attr) { var e = document.createElementNS(NS, navn); for (var k in attr) e.setAttribute(k, attr[k]); return e; }
+  function tilfeldig(a, b) { return a + Math.random() * (b - a); }
+  function ion(farge, tegn) {
+    var g = lagEl("g", {});
+    g.appendChild(lagEl("circle", { r: 11, fill: farge, stroke: "#1c2828", "stroke-width": 1 }));
+    var t = lagEl("text", { "font-size": 9, "text-anchor": "middle", y: 3, fill: "#ffffff", "font-weight": "bold" });
+    t.textContent = tegn; g.appendChild(t); lag.appendChild(g); return g;
+  }
+  function plasser(o) { o.el.setAttribute("transform", "translate(" + o.x.toFixed(1) + "," + o.y.toFixed(1) + ")"); }
+
+  var alIoner = [], oIoner = [], bobler = [];
+  function nyAl(o) { o.x = tilfeldig(85, 515); o.y = tilfeldig(195, 225); }
+  function nyO(o) { o.x = tilfeldig(85, 515); o.y = tilfeldig(215, metallTopp - 10); }
+  for (var i = 0; i < 9; i++) { var a = { el: ion("#6b7785", "Al³⁺") }; nyAl(a); a.y = tilfeldig(195, 245); alIoner.push(a); }
+  for (i = 0; i < 6; i++) { var o = { el: ion("#c0392b", "O²⁻") }; nyO(o); oIoner.push(o); }
+  function settSynlig(v) {
+    alIoner.concat(oIoner).forEach(function (o) { o.el.setAttribute("display", v ? "inline" : "none"); });
+  }
+  settSynlig(false);
+  alIoner.concat(oIoner).forEach(plasser);
+
+  function nyBoble(x) {
+    var c = lagEl("circle", { r: 4, fill: "#ffffff", stroke: "#586868", "stroke-width": 1.2 });
+    lag.appendChild(c); bobler.push({ el: c, x: x, y: BUNN_ANODE - 4 });
+  }
+  function naermesteAnode(x) {
+    var best = ANODER[0], d = 1e9;
+    ANODER.forEach(function (an) { var m = (an[0] + an[1]) / 2; if (Math.abs(m - x) < d) { d = Math.abs(m - x); best = an; } });
+    return best;
+  }
+
+  function steg(t) {
+    if (!paa) return;
+    var dt = sist ? Math.min((t - sist) / 1000, 0.05) : 0; sist = t;
+    alIoner.forEach(function (o) {
+      o.y += 22 * dt;
+      if (o.y >= metallTopp - 6) {
+        nyAl(o);
+        metallTopp = Math.max(METALL_MAKS, metallTopp - 0.35);
+      }
+      plasser(o);
+    });
+    oIoner.forEach(function (o) {
+      var an = naermesteAnode(o.x);
+      var mx = Math.min(Math.max(o.x, an[0] + 8), an[1] - 8);
+      o.x += (mx - o.x) * 1.2 * dt;
+      o.y -= 20 * dt;
+      if (o.y <= BUNN_ANODE + 6) { nyBoble(o.x < (an[0] + an[1]) / 2 ? an[0] - 6 : an[1] + 6); nyO(o); }
+      plasser(o);
+    });
+    bobler = bobler.filter(function (b) {
+      // Boblene stiger til skorpen, samles og går ut gjennom avgassrøret
+      if (b.y > 116 || Math.abs(b.x - 470) < 3) b.y -= 30 * dt;
+      else b.x += (b.x < 470 ? 1 : -1) * 120 * dt;
+      if (b.y < 26) { lag.removeChild(b.el); return false; }
+      b.el.setAttribute("cx", b.x.toFixed(1)); b.el.setAttribute("cy", b.y.toFixed(1)); return true;
+    });
+    // Mater: korn av aluminiumoksid faller ned i badet
+    materTid += dt;
+    if (materTid > 0.35) {
+      materTid = 0;
+      var k = lagEl("rect", { width: 3, height: 3, fill: "#ffffff", stroke: "#586868", "stroke-width": 0.6 });
+      lag.appendChild(k); korn.push({ el: k, x: tilfeldig(115, 119), y: 22 });
+    }
+    korn = korn.filter(function (o) {
+      o.y += 45 * dt;
+      if (o.y > 128) { lag.removeChild(o.el); return false; }
+      o.el.setAttribute("x", o.x.toFixed(1)); o.el.setAttribute("y", o.y.toFixed(1)); return true;
+    });
+    // Tapping: metallet suges ut gjennom røret og ned i tappeøsa
+    if (!tapper && metallTopp <= METALL_MAKS) { tapper = true; metallTekst.textContent = "aluminium tappes ut"; }
+    if (tapper) {
+      metallTopp += 8 * dt;
+      oseNivaa = Math.min(40, oseNivaa + 18 * dt);
+      if (Math.random() < 12 * dt) {
+        var d = lagEl("circle", { r: 3, fill: "#9aa3ad" });
+        lag.appendChild(d); draaper.push({ el: d, s: 0 });
+      }
+      if (metallTopp >= METALL_START) { metallTopp = METALL_START; tapper = false; metallTekst.textContent = "Flytende aluminium: Al³⁺ + 3 e⁻ → Al"; }
+    } else if (oseNivaa >= 40) { oseNivaa = 0; }
+    draaper = draaper.filter(function (o) {
+      o.s += 110 * dt;
+      if (o.s >= tappeLengde) { lag.removeChild(o.el); return false; }
+      var p = tappevei.getPointAtLength(o.s); o.el.setAttribute("cx", p.x); o.el.setAttribute("cy", p.y); return true;
+    });
+    ose.setAttribute("y", (256 - oseNivaa).toFixed(1)); ose.setAttribute("height", oseNivaa.toFixed(1));
+    metall.setAttribute("y", metallTopp.toFixed(1));
+    metall.setAttribute("height", (290 - metallTopp).toFixed(1));
+    document.getElementById("al-bad").setAttribute("height", (metallTopp - 112).toFixed(1));
+    requestAnimationFrame(steg);
+  }
+
+  knapp.addEventListener("click", function () {
+    paa = !paa;
+    knapp.setAttribute("aria-pressed", paa ? "true" : "false");
+    knapp.textContent = paa ? "⏸ Slå av strømmen" : "⚡ Slå på strømmen";
+    if (rolig) { statisk.setAttribute("display", paa ? "inline" : "none"); return; }
+    settSynlig(paa);
+    if (!paa) { bobler.concat(korn, draaper).forEach(function (b) { lag.removeChild(b.el); }); bobler = []; korn = []; draaper = []; }
+    sist = 0;
+    if (paa) requestAnimationFrame(steg);
+  });
+
+  // Kalkulator
+  var tonn = document.getElementById("al-tonn"), tek = document.getElementById("al-tek");
+  var tonnUt = document.getElementById("al-tonn-ut"), res = document.getElementById("al-resultat");
+  function tall(x, des) { return x.toLocaleString("nb-NO", { minimumFractionDigits: des || 0, maximumFractionDigits: des || 0 }); }
+  function regn() {
+    var t = +tonn.value, k = +tek.value;
+    var kWh = t * 1000 * k;
+    tonnUt.textContent = tall(t);
+    res.innerHTML = "Strøm: <output>" + tall(kWh / 1e9, 2) + " TWh</output> i året (" + tall(kWh / 1e6) + " GWh).<br>" +
+      "Det svarer til strømmen til ca. <output>" + tall(Math.round(kWh / 16000 / 100) * 100) + "</output> husholdninger.<br>" +
+      "CO<sub>2</sub> fra anodene: minst <output>" + tall(t * 1.22) + " tonn</output> i året.";
+  }
+  tonn.addEventListener("input", regn); tek.addEventListener("change", regn); regn();
+
+  // Forklaringer
+  var DELER = {
+    anode: { tittel: "1 Anoder av karbon (+)",
+      tekst: "<p>Anodene er store blokker av karbon som henger ned i badet. De er koblet til plusspolen. Her gir oksidionene fra seg elektroner, og oksygenet reagerer med karbonet:</p><p><strong>C + 2 O<sup>2−</sup> → CO<sub>2</sub> + 4 e<sup>−</sup></strong></p><p>Dette er en <strong>oksidasjon</strong>. Anoden blir brukt opp og må byttes etter omtrent en månedstid. I fremtiden kan anoder som ikke brukes opp, eller nye prosesser uten karbon, kutte CO<sub>2</sub>-utslippet.</p>" },
+    bad: { tittel: "2 Elektrolytt: smeltet kryolitt",
+      tekst: "<p>Badet er smeltet kryolitt ved ca. 960 °C, med noen prosent aluminiumoksid løst i. Det inneholder ioner som kan bevege seg, og derfor leder det strøm. Strømmen som går gjennom badet, holder det varmt, så cellen trenger ingen egen fyring.</p><p>Aluminiumoksid tilsettes jevnlig gjennom hull i skorpen øverst. Blir det for lite oksid i badet, får cellen en <strong>anodeeffekt</strong>: spenningen stiger, og det dannes fluorgasser som er svært sterke klimagasser. Derfor styres tilsetningen nøye.</p>" },
+    aluminium: { tittel: "3 Flytende aluminium og katode (−)",
+      tekst: "<p>Hele bunnen av cellen er katoden: karbonblokker som er koblet til minuspolen. Aluminiumet som dannes, er flytende og tyngre enn badet, så det samler seg i bunnen. Metallet blir selve katoden. Her skjer <strong>reduksjonen</strong>:</p><p><strong>Al<sup>3+</sup> + 3 e<sup>−</sup> → Al</strong></p><p>En gang i døgnet <strong>tappes</strong> metallet ut med et vakuumrør og fraktes til støperiet, der det blir barrer, bolter eller legeringer.</p>" },
+    avgass: { tittel: "4 Avgass og rensing",
+      tekst: "<p>En ekte celle er dekket til med lokk, og gassen suges ut. I figuren er lokket utelatt, og gassen går rett ut gjennom et rør. Den inneholder mest CO<sub>2</sub>, men også fluorforbindelser og støv.</p><p>Gassen blåses gjennom aluminiumoksid i et renseanlegg. Fluoren binder seg til oksidet, og oksidet brukes så som råstoff i cellene. Slik kommer fluoren tilbake til badet i stedet for ut i lufta. CO<sub>2</sub> slippes foreløpig ut.</p>" },
+    mater: { tittel: "6 Mater: aluminiumoksid inn",
+      tekst: "<p>Aluminiumoksid lagres i en silo over cellene og fylles på automatisk. En <strong>mater</strong> slår hull i skorpen med en stålstang og slipper ned en liten porsjon oksid, ca. 1–2 kg, med et par minutters mellomrom. En celle har flere matere, og de sitter i en kanal midt mellom anoderadene. I figuren er materen tegnet til venstre for at det skal være lett å se hvor råstoffet kommer inn.</p><p>Oksidet løser seg i badet og blir til Al<sup>3+</sup> og O<sup>2−</sup>. Styresystemet passer på at det verken blir for lite oksid (anodeeffekt) eller for mye (oksid som ikke løser seg, legger seg på bunnen).</p>" },
+    tapping: { tittel: "7 Tapping: aluminium ut",
+      tekst: "<p>Metallet som samler seg i bunnen, tas ut ca. én gang i døgnet. En stor, varmeisolert <strong>tappeøse</strong> henger i en kran over cellen. Fra lokket på øsa går et rør ned gjennom et tappehull i den ene enden av cellen og ned i metallet. Det lages <strong>vakuum</strong> (undertrykk) i øsa, og metallet suges opp gjennom røret. Det tas ut omtrent like mye metall som cellen har laget siden forrige tapping.</p><p>Øsa kjøres til støperiet. Der blir metallet renset, legert og støpt til barrer, bolter eller plater. Badet blir liggende igjen i cellen.</p>" },
+    strom: { tittel: "5 Likestrøm inn",
+      tekst: "<p>En <strong>likeretter</strong> gjør vekselstrøm fra nettet om til likestrøm. Hver celle trenger bare ca. 4–4,5 volt, men strømmen er flere hundre tusen ampere. Derfor kobles hundrevis av celler i serie, og strømmen går i tykke skinner av aluminium.</p><p>I virkeligheten går strømskinnene fra katoden i én celle videre til anodene i neste celle. Likeretteren sitter i enden av hele rekka. Strømmen kommer inn i anodene (+) ovenfra og går ut gjennom katodebunnen (−). Ute i strømkretsen går elektronene motsatt vei: fra anodene, gjennom likeretteren og inn i katoden. Den store strømmen gir sterke magnetfelt i hallen.</p>" }
+  };
+  var info = document.getElementById("al-info"), forrigeFokus = null;
+  function marker(navn) {
+    document.querySelectorAll(".al-del").forEach(function (g) { g.classList.toggle("valgt", g.getAttribute("data-del") === navn); });
+    document.querySelectorAll(".al-knapper button[data-del]").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-del") === navn ? "true" : "false"); });
+  }
+  function lukk() { if (info.hidden) return; info.hidden = true; marker(null); if (forrigeFokus) forrigeFokus.focus(); }
+  function velg(navn) {
+    var d = DELER[navn]; forrigeFokus = document.activeElement;
+    info.innerHTML = '<button type="button" class="al-lukk">✕ Lukk</button><div class="boks-tittel">' + d.tittel + "</div>" + d.tekst;
+    info.hidden = false; info.scrollTop = 0; marker(navn);
+    var k = info.querySelector(".al-lukk"); k.addEventListener("click", lukk); k.focus();
+    var r = info.parentNode.getBoundingClientRect();
+    if (r.top < 0) info.parentNode.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") lukk(); });
+  document.querySelectorAll(".al-del").forEach(function (g) {
+    g.addEventListener("click", function () { velg(g.getAttribute("data-del")); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); velg(g.getAttribute("data-del")); } });
+  });
+  document.querySelectorAll(".al-knapper button[data-del]").forEach(function (b) {
+    b.addEventListener("click", function () { velg(b.getAttribute("data-del")); });
+  });
+})();
+</script>
+</body>
+</html>
