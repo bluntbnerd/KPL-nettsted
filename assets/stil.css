@@ -694,7 +694,9 @@ body.ps-apent { overflow: hidden; }
 html.design-laeringslab .toc { display: none; }
 @media (min-width: 901px) {
   html.design-laeringslab .oppsett,
-  html.design-laeringslab .oppsett.uten-toc { grid-template-columns: 230px minmax(0, 760px); gap: 0 48px; padding-left: 16px; }
+  html.design-laeringslab .oppsett.uten-toc { grid-template-columns: 230px minmax(0, 760px); gap: 0 clamp(28px, 3vw, 56px); padding-left: clamp(16px, 2.5vw, 48px); }
+  /* Menyen står fast til venstre; ledig plass på brede skjermer havner til høyre for teksten */
+  html.design-laeringslab .oppsett:not(.ingen-sti) { max-width: none; margin: 0; justify-content: start; }
   html.design-laeringslab .oppsett.ingen-sti,
   html.design-laeringslab .oppsett.ingen-sti.uten-toc { grid-template-columns: minmax(0, 820px); }
 }
