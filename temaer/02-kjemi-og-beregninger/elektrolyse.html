@@ -15,6 +15,19 @@
     .ely-knapper #ely-strom { border-color: #d9534f; }
     .ely-knapper #ely-strom[aria-pressed="true"] { background: #d9534f; color: #ffffff; }
     #ely-lag, #ely-piler { pointer-events: none; }
+    .ely-modell { position: relative; }
+    .ely-stromplass { position: absolute; left: 0; top: 0; margin: 0; }
+    .ely-stromplass button { margin: 0; font-size: .8rem; padding: 4px 10px; }
+    .ely-overskrift { margin: 0 0 10px; }
+    .ely-modell svg { display: block; }
+    .ely-side #ely-tekst { margin-top: 4px; margin-bottom: 6px; }
+    .ely-side .ely-knapper { margin-top: 4px; }
+    @media (min-width: 1000px) {
+      .ely-oppsett { display: flex; gap: 18px; align-items: flex-start; }
+      .ely-oppsett .ely-modell { flex: 3 1 0; min-width: 0; }
+      .ely-oppsett .ely-side { flex: 2 1 0; font-size: .92rem; }
+      .ely-oppsett #ely-tekst { margin-top: 0; }
+    }
   </style>
 </head>
 <body data-status="utkast">
@@ -45,15 +58,26 @@
   <p><strong>A</strong>noden – <strong>o</strong>ksidasjon (begge begynner med vokal). <strong>K</strong>atoden – <strong>r</strong>eduksjon (begge begynner med konsonant). Dette gjelder både i elektrolyse og i batterier.</p>
 </div>
 
+<h2>Elektrolyse av kobberklorid</h2>
+<p>En løsning av kobber(II)klorid (CuCl<sub>2</sub>) inneholder Cu<sup>2+</sup>-ioner og Cl<sup>−</sup>-ioner. Når strømmen er på:</p>
+<p>Katoden (−), reduksjon: \( \ce{Cu^2+ + 2e- -> Cu} \)</p>
+<p>Anoden (+), oksidasjon: \( \ce{2Cl- -> Cl2 + 2e-} \)</p>
+<p>Samlet: \[ \ce{CuCl2 -> Cu + Cl2} \]</p>
+<p>Katoden blir dekket av et rødbrunt lag kobber. Ved anoden bobler det, og det kan lukte klor (som klorvann i et svømmebasseng).</p>
+<p>I en vannløsning kan også vannet reagere ved elektrodene. Da kan det i stedet dannes hydrogen eller oksygen. Hvilket stoff som dannes, avhenger blant annet av spenningsrekka og konsentrasjonen. I denne løsningen er det kobber og klor.</p>
+
 <figure>
-  <svg id="ely" viewBox="0 0 520 300" width="520" role="img" aria-labelledby="ely1" style="max-width:100%;height:auto" font-family="Segoe UI, Arial, sans-serif">
+  <figcaption class="ely-overskrift"><strong>Elektrolyse av kobber(II)kloridløsning, steg for steg.</strong> Blå kuler er kobberioner (Cu<sup>2+</sup>), grønne kuler er kloridioner (Cl<sup>−</sup>), og små gule kuler med minustegn er elektroner. Det er dobbelt så mange kloridioner som kobberioner. Elektrodene er av grafitt.</figcaption>
+  <div class="ely-oppsett">
+  <div class="ely-modell">
+  <svg id="ely" viewBox="0 30 520 270" width="520" role="img" aria-labelledby="ely1" style="max-width:100%;height:auto" font-family="Segoe UI, Arial, sans-serif">
     <title id="ely1">Elektrolyse av kobberkloridløsning. En strømkilde er koblet til to grafittelektroder i et kar. Kobberioner går til den negative elektroden, katoden, og blir til kobber. Kloridioner går til den positive elektroden, anoden, og blir til klorgass som bobler opp.</title>
     <defs><marker id="ely-pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker><marker id="ely-pil-cu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b5651d"/></marker></defs>
     <rect width="520" height="300" rx="10" fill="#ffffff"/>
-    <path id="ely-vei" d="M390 100 V30 H130 V100" fill="none" stroke="#333" stroke-width="2"/>
-    <rect x="200" y="12" width="120" height="36" rx="4" fill="#fde3a7" stroke="#b5530f" stroke-width="2"/>
-    <text x="260" y="35" text-anchor="middle" font-size="14" fill="#1c2828">strømkilde</text>
-    <text x="212" y="66" font-size="18" font-weight="bold" fill="#1e6fb8">−</text><text x="300" y="66" font-size="18" font-weight="bold" fill="#d9534f">+</text>
+    <path id="ely-vei" d="M390 100 V70 H130 V100" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="200" y="52" width="120" height="36" rx="4" fill="#fde3a7" stroke="#b5530f" stroke-width="2"/>
+    <text x="260" y="75" text-anchor="middle" font-size="14" fill="#1c2828">strømkilde</text>
+    <text x="212" y="106" font-size="18" font-weight="bold" fill="#1e6fb8">−</text><text x="300" y="106" font-size="18" font-weight="bold" fill="#d9534f">+</text>
     <path d="M70 110 V270 H450 V110" fill="none" stroke="#555" stroke-width="2"/>
     <rect x="72" y="150" width="376" height="118" fill="#6fa8dc" opacity="0.35"/>
     <rect id="ely-k-ring" x="112" y="94" width="36" height="164" rx="6" fill="none" stroke="#f2a900" stroke-width="4" display="none"/>
@@ -77,23 +101,18 @@
     <text x="130" y="288" text-anchor="middle" font-size="13" fill="#1c2828">katode</text>
     <text x="390" y="288" text-anchor="middle" font-size="13" fill="#1c2828">anode</text>
   </svg>
-  <p class="ely-knapper"><button type="button" id="ely-strom" aria-pressed="false">⚡ Slå på strømmen</button></p>
+  <p class="ely-knapper ely-stromplass"><button type="button" id="ely-strom" aria-pressed="false" aria-label="Strøm på eller av">⚡ På</button></p>
+  </div>
+  <div class="ely-side">
+  <div class="boks" id="ely-tekst" aria-live="polite"></div>
   <p class="ely-knapper">
     <button type="button" id="ely-forrige">◀ Forrige</button>
     <strong id="ely-nr">Steg 1 av 5</strong>
     <button type="button" id="ely-neste">Neste ▶</button>
   </p>
-  <div class="boks" id="ely-tekst" aria-live="polite"></div>
-  <figcaption>Figur: Elektrolyse av kobber(II)kloridløsning med grafittelektroder, steg for steg. Blå kuler er kobberioner (Cu<sup>2+</sup>), grønne kuler er kloridioner (Cl<sup>−</sup>), og små gule kuler med minustegn er elektroner. Det er dobbelt så mange kloridioner som kobberioner.</figcaption>
+  </div>
+  </div>
 </figure>
-
-<h2>Elektrolyse av kobberklorid</h2>
-<p>En løsning av kobber(II)klorid (CuCl<sub>2</sub>) inneholder Cu<sup>2+</sup>-ioner og Cl<sup>−</sup>-ioner. Når strømmen er på:</p>
-<p>Katoden (−), reduksjon: \( \ce{Cu^2+ + 2e- -> Cu} \)</p>
-<p>Anoden (+), oksidasjon: \( \ce{2Cl- -> Cl2 + 2e-} \)</p>
-<p>Samlet: \[ \ce{CuCl2 -> Cu + Cl2} \]</p>
-<p>Katoden blir dekket av et rødbrunt lag kobber. Ved anoden bobler det, og det kan lukte klor (som klorvann i et svømmebasseng).</p>
-<p>I en vannløsning kan også vannet reagere ved elektrodene. Da kan det i stedet dannes hydrogen eller oksygen. Hvilket stoff som dannes, avhenger blant annet av spenningsrekka og konsentrasjonen. I denne løsningen er det kobber og klor.</p>
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet: Elektrolyse av kobberklorid</div>
@@ -298,7 +317,7 @@
     if (paa && cuBredde < 0.8) { cuBredde = 0.8; tegnCu(); }
     document.getElementById("ely-merk").setAttribute("display", paa ? "inline" : "none");
     knapp.setAttribute("aria-pressed", paa ? "true" : "false");
-    knapp.textContent = paa ? "⏸ Slå av strømmen" : "⚡ Slå på strømmen";
+    knapp.textContent = paa ? "⏸ Av" : "⚡ På";
     if (rolig) {
       piler.setAttribute("display", paa ? "inline" : "none");
       if (paa) { cuBredde = Math.max(cuBredde, 4); tegnCu(); }
