@@ -417,8 +417,7 @@
     sidemeny.appendChild(mobil);
 
     if (TEMA) {
-      sidemeny.appendChild(lenke("temaer/index.html", "← Alle temaer", "tilbake"));
-      sidemeny.appendChild(lag("div", "sidemeny-overskrift", "Læringssti"));
+      // Panelet starter rett på emnene. Temaet, «Alle temaer» og oversikten nås fra topplinjen og brødsmulestien.
       var b = "temaer/" + TEMA.mappe + "/";
       function stegLi(s, merkeTekst) {
         var li = lag("li");
@@ -440,9 +439,6 @@
         li.appendChild(a);
         return li;
       }
-      var topp = lag("ol", "sti");
-      topp.appendChild(stegLi({ tittel: "Oversikt", fil: b + "index.html", type: "oversikt" }, "i"));
-      sidemeny.appendChild(topp);
 
       var grupper = emner(TEMA);
       // Står eleven i et emne, vises bare det emnet. Ellers vises alle emnene lukket.
