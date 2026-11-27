@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" font-family="Segoe UI, Arial, sans-serif">
+  <title>Tiltakstrappa i seks trinn. Øverst og best: unngå og redusere ved kilden. Så bruke om igjen, gjenvinne materialer, gjenvinne energi, rense. Nederst og dårligst: deponere trygt.</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker></defs>
+  <rect x="0" y="0" width="600" height="360" rx="10" fill="#ffffff"/>
+  <g stroke="#586868" stroke-width="1.5">
+    <rect x="90" y="20" width="440" height="44" rx="6" fill="#2e7d4a" fill-opacity="0.85"/>
+    <rect x="120" y="74" width="380" height="44" rx="6" fill="#3a9d5d" fill-opacity="0.75"/>
+    <rect x="150" y="128" width="320" height="44" rx="6" fill="#7cbf6a" fill-opacity="0.75"/>
+    <rect x="180" y="182" width="260" height="44" rx="6" fill="#e6c34a" fill-opacity="0.75"/>
+    <rect x="210" y="236" width="200" height="44" rx="6" fill="#e08e2b" fill-opacity="0.75"/>
+    <rect x="240" y="290" width="140" height="44" rx="6" fill="#c0392b" fill-opacity="0.7"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="#1c2828" font-weight="bold">
+    <text x="310" y="48" fill="#ffffff">1 Unngå og redusere ved kilden</text>
+    <text x="310" y="102">2 Bruke om igjen</text>
+    <text x="310" y="156">3 Gjenvinne materialer</text>
+    <text x="310" y="210">4 Gjenvinne energi</text>
+    <text x="310" y="264">5 Rense</text>
+    <text x="310" y="318" fill="#ffffff">6 Deponere</text>
+  </g>
+  <line x1="45" y1="320" x2="45" y2="30" stroke="#1c2828" stroke-width="2.5" marker-end="url(#pil)"/>
+  <text x="30" y="180" font-size="13" fill="#1c2828" text-anchor="middle" transform="rotate(-90 30 180)">bedre for miljøet</text>
+</svg>

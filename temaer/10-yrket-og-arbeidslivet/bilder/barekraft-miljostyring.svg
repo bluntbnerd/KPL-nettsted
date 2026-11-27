@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380" font-family="Segoe UI, Arial, sans-serif">
+  <title>Miljøstyring som en sirkel med fire steg som gjentas: planlegge, utføre, kontrollere og forbedre, og så planlegge på nytt.</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker></defs>
+  <rect x="0" y="0" width="520" height="380" rx="10" fill="#ffffff"/>
+  <g stroke="#1c2828" stroke-width="2.5" fill="none">
+    <path d="M330,62 Q430,70 440,140" marker-end="url(#pil)"/>
+    <path d="M440,240 Q430,310 330,318" marker-end="url(#pil)"/>
+    <path d="M190,318 Q90,310 80,240" marker-end="url(#pil)"/>
+    <path d="M80,140 Q90,70 190,62" marker-end="url(#pil)"/>
+  </g>
+  <g stroke="#586868" stroke-width="2">
+    <rect x="190" y="30" width="140" height="64" rx="8" fill="#d6e6f5"/>
+    <rect x="370" y="150" width="140" height="80" rx="8" fill="#d9eedd"/>
+    <rect x="190" y="286" width="140" height="64" rx="8" fill="#fde3a7"/>
+    <rect x="10" y="150" width="140" height="80" rx="8" fill="#f6d5d0"/>
+  </g>
+  <g font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="260" y="56">1 Planlegge</text>
+    <text x="440" y="176">2 Utføre</text>
+    <text x="260" y="312">3 Kontrollere</text>
+    <text x="80" y="176">4 Forbedre</text>
+  </g>
+  <g font-size="12.5" text-anchor="middle" fill="#1c2828">
+    <text x="260" y="76">mål og tiltak</text>
+    <text x="440" y="196">følge prosedyrer,</text>
+    <text x="440" y="213">gjøre tiltakene</text>
+    <text x="260" y="332">måle, analysere</text>
+    <text x="80" y="196">rette avvik,</text>
+    <text x="80" y="213">sette nye mål</text>
+  </g>
+  <text x="260" y="186" font-size="16" font-weight="bold" text-anchor="middle" fill="#2e7d4a">Miljøstyring</text>
+  <text x="260" y="206" font-size="13" text-anchor="middle" fill="#1c2828">gjentas hele tiden</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" width="660" height="420" font-family="Segoe UI, Arial, sans-serif">
+  <title>Et prosessanlegg med det som går inn og ut. Inn: råstoff, energi, vann og hjelpestoffer. Ut: produkt og biprodukter. I tillegg utslipp til luft, spillvarme, utslipp til vann og avfall.</title>
+  <defs><marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  <marker id="pilg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker></defs>
+  <rect x="0" y="0" width="660" height="420" rx="10" fill="#ffffff"/>
+  <rect x="240" y="140" width="180" height="140" rx="10" fill="#e0e4e4" stroke="#586868" stroke-width="2"/>
+  <text x="330" y="205" font-size="16" font-weight="bold" text-anchor="middle" fill="#1c2828">Prosessanlegg</text>
+  <text x="330" y="226" font-size="13" text-anchor="middle" fill="#1c2828">for eksempel et smelteverk</text>
+  <!-- inn -->
+  <g stroke="#1c2828" stroke-width="2.5" fill="none">
+    <line x1="172" y1="165" x2="238" y2="165" marker-end="url(#pil)"/>
+    <line x1="172" y1="195" x2="238" y2="195" marker-end="url(#pil)"/>
+    <line x1="172" y1="225" x2="238" y2="225" marker-end="url(#pil)"/>
+    <line x1="172" y1="255" x2="238" y2="255" marker-end="url(#pil)"/>
+    <line x1="420" y1="185" x2="528" y2="185" marker-end="url(#pil)"/>
+    <line x1="420" y1="235" x2="528" y2="235" marker-end="url(#pil)"/>
+  </g>
+  <g font-size="14" fill="#1c2828" text-anchor="end">
+    <text x="166" y="170">råstoff (malm, koks)</text>
+    <text x="166" y="200">energi (strøm)</text>
+    <text x="166" y="230">vann</text>
+    <text x="166" y="260">hjelpestoffer</text>
+  </g>
+  <g font-size="14" fill="#1c2828" font-weight="bold">
+    <text x="534" y="190">produkt</text>
+    <text x="534" y="240">biprodukter</text>
+  </g>
+  <text x="30" y="125" font-size="14" font-weight="bold" fill="#1c2828">INN</text>
+  <text x="534" y="155" font-size="14" font-weight="bold" fill="#1c2828">UT</text>
+  <!-- utslipp -->
+  <g stroke="#c0392b" stroke-width="2.5" fill="none" stroke-dasharray="7 4">
+    <line x1="290" y1="140" x2="290" y2="62" marker-end="url(#pilg)"/>
+    <line x1="370" y1="140" x2="370" y2="62" marker-end="url(#pilg)"/>
+    <line x1="290" y1="280" x2="290" y2="358" marker-end="url(#pilg)"/>
+    <line x1="370" y1="280" x2="370" y2="358" marker-end="url(#pilg)"/>
+  </g>
+  <g font-size="14" fill="#c0392b" text-anchor="middle">
+    <text x="250" y="36" font-weight="bold">utslipp til luft</text>
+    <text x="250" y="54">CO₂, støv, gasser</text>
+    <text x="420" y="36" font-weight="bold">spillvarme</text>
+    <text x="420" y="54">varme som ikke brukes</text>
+    <text x="250" y="378" font-weight="bold">utslipp til vann</text>
+    <text x="250" y="396">prosessvann, partikler</text>
+    <text x="420" y="378" font-weight="bold">avfall</text>
+    <text x="420" y="396">det ingen kan bruke</text>
+  </g>
+</svg>
