@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" width="620" height="300" font-family="Segoe UI, Arial, sans-serif">
+  <title>Prinsippskisse av en kapasitiv trykkmåler: trykket bøyer en membran nærmere en fast metallplate, og elektronikken måler at avstanden mellom dem blir mindre</title>
+  <rect x="0" y="0" width="620" height="300" rx="10" fill="#ffffff"/>
+
+  <!-- Hus -->
+  <rect x="180" y="40" width="240" height="160" rx="12" fill="#f6f8f8" stroke="#586868" stroke-width="3"/>
+  <!-- Tilkobling til prosessen -->
+  <rect x="270" y="198" width="60" height="62" fill="#2a7a9a" opacity="0.15"/>
+  <line x1="270" y1="200" x2="270" y2="260" stroke="#586868" stroke-width="3"/>
+  <line x1="330" y1="200" x2="330" y2="260" stroke="#586868" stroke-width="3"/>
+  <path d="M205,152 Q300,117 395,152 L395,198 L205,198 Z" fill="#2a7a9a" opacity="0.15"/>
+
+  <!-- Trykkpiler -->
+  <g fill="#2a7a9a" stroke="#2a7a9a" stroke-width="3">
+    <line x1="282" y1="250" x2="282" y2="176"/><polygon points="276,178 282,166 288,178" stroke="none"/>
+    <line x1="300" y1="250" x2="300" y2="166"/><polygon points="294,168 300,156 306,168" stroke="none"/>
+    <line x1="318" y1="250" x2="318" y2="176"/><polygon points="312,178 318,166 324,178" stroke="none"/>
+  </g>
+
+  <!-- Fast plate med feste -->
+  <g stroke="#586868" stroke-width="3">
+    <line x1="230" y1="42" x2="230" y2="94"/>
+    <line x1="370" y1="42" x2="370" y2="94"/>
+  </g>
+  <rect x="215" y="94" width="170" height="9" fill="#b5530f"/>
+
+  <!-- Membranens stilling uten trykk -->
+  <line x1="205" y1="150" x2="395" y2="150" stroke="#8a9a9a" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <rect x="190" y="140" width="16" height="20" fill="#586868"/>
+  <rect x="394" y="140" width="16" height="20" fill="#586868"/>
+  <path d="M205,150 Q300,115 395,150" fill="none" stroke="#b5530f" stroke-width="4"/>
+
+  <!-- Avstand -->
+  <line x1="300" y1="106" x2="300" y2="129" stroke="#1c2828" stroke-width="1.5"/>
+  <polygon points="296,111 300,104 304,111" fill="#1c2828"/>
+  <polygon points="296,124 300,131 304,124" fill="#1c2828"/>
+  <text x="308" y="122" font-size="12" fill="#1c2828">avstand</text>
+
+  <!-- Ledninger til elektronikken -->
+  <g stroke="#1c2828" stroke-width="1.5" fill="none">
+    <polyline points="385,98 450,98"/>
+    <polyline points="410,150 432,150 432,116 450,116"/>
+  </g>
+  <rect x="450" y="86" width="96" height="40" rx="5" fill="#1c2828"/>
+  <text x="498" y="111" font-size="12" text-anchor="middle" fill="#e8f4f4">elektronikk</text>
+
+  <!-- Signal -->
+  <polyline points="498,86 498,24 594,24" fill="none" stroke="#b5530f" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <polygon points="586,18 598,24 586,30" fill="#b5530f"/>
+  <text x="548" y="44" font-size="12" text-anchor="middle" fill="#b5530f">signal</text>
+
+  <!-- Forklaringer til venstre -->
+  <g stroke="#8a9a9a" stroke-width="1.2">
+    <line x1="215" y1="98" x2="168" y2="88"/>
+    <line x1="205" y1="148" x2="168" y2="148"/>
+  </g>
+  <g font-size="13" fill="#1c2828" text-anchor="end">
+    <text x="164" y="76" font-weight="bold" fill="#b5530f">fast metallplate</text>
+    <text x="164" y="92">står stille</text>
+    <text x="164" y="140" font-weight="bold" fill="#b5530f">membran av metall</text>
+    <text x="164" y="156">bøyer seg mot platen</text>
+    <text x="164" y="172">når trykket øker</text>
+  </g>
+  <g font-size="13" fill="#1c2828">
+    <text x="440" y="160">elektronikken merker at</text>
+    <text x="440" y="176">avstanden blir mindre</text>
+  </g>
+  <text x="300" y="284" font-size="13" text-anchor="middle" fill="#2a7a9a" font-weight="bold">trykk fra prosessen</text>
+</svg>

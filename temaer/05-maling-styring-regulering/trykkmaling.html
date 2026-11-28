@@ -39,13 +39,44 @@
 
 <h2>Trykkgiveren</h2>
 <p>Et manometer må leses av på stedet. Skal trykket vises i kontrollrommet, brukes en <strong>trykkgiver</strong>. Den måler trykket og sender verdien som et elektrisk signal til styresystemet.</p>
-<p>Inne i en trykkgiver sitter en tynn metallplate, en <strong>membran</strong>. Trykket fra prosessen presser på membranen, så den bøyer seg litt. Elektronikk i giveren måler hvor mye membranen bøyer seg, og gjør det om til et signal. Hvordan signalet ser ut, og hvordan det kommer fram til kontrollrommet, lærer du i emnet Signaler og instrumentering.</p>
+<p>Inne i en trykkgiver sitter en tynn plate, en <strong>membran</strong>. Trykket fra prosessen presser på membranen, så den bøyer seg litt. Elektronikk i giveren måler hvor mye membranen bøyer seg, og gjør det om til et signal. Hvordan signalet ser ut, og hvordan det kommer fram til kontrollrommet, lærer du i emnet Signaler og instrumentering.</p>
+<p>Det er to vanlige måter å måle hvor mye membranen bøyer seg på.</p>
+
+<h3>Piezoresistiv trykkmåler</h3>
+
+<figure>
+  <img src="bilder/trykkgiver-piezoresistiv.svg" alt="Snitt gjennom en trykkgiver. Nedenfra kommer trykket fra prosessen, vist med blå piler. Det presser en membran oppover, så den bøyer seg. En stiplet linje viser hvor membranen står uten trykk. På oversiden av membranen sitter to små motstander, tegnet som sikksakklinjer. Ledninger går fra motstandene til en elektronikkboks, som sender signal til kontrollrommet." width="620">
+  <figcaption>Figur: Piezoresistiv trykkmåler. Når membranen bøyer seg, blir motstandene på den strukket, og motstanden deres endrer seg. Elektronikken gjør endringen om til et signal. Skissen er forenklet.</figcaption>
+</figure>
+
+<p>I en <strong>piezoresistiv trykkmåler</strong> sitter det små elektriske motstander på selve membranen. En motstand er en liten elektrisk del som gjør det litt vanskeligere for strømmen å komme gjennom. Når membranen bøyer seg, blir motstandene strukket litt, og motstanden deres endrer seg. Elektronikken merker endringen og regner ut trykket. «Piezo» kommer fra et gresk ord som betyr å trykke eller presse, og «resistiv» betyr at det er motstanden som endrer seg.</p>
+<p>Piezoresistive trykkmålere er små, robuste og rimelige. De er svært vanlige i prosessindustrien. Nivåmåleren i bunnen av tank 1 i pumperommet er en slik måler, se <a href="nivamaling.html">Nivåmåling</a>.</p>
+
+<h3>Kapasitiv trykkmåler</h3>
+
+<figure>
+  <img src="bilder/trykkgiver-kapasitiv.svg" alt="Snitt gjennom en trykkgiver. Nedenfra kommer trykket fra prosessen, vist med blå piler, og bøyer en membran av metall oppover. Rett over membranen sitter en fast metallplate. En pil viser avstanden mellom platen og membranen. Ledninger går fra platen og fra membranen til en elektronikkboks, som sender et signal." width="620">
+  <figcaption>Figur: Kapasitiv trykkmåler. Membranen og den faste platen er to metallplater som står nær hverandre. Når trykket øker, kommer membranen nærmere platen. Skissen er forenklet.</figcaption>
+</figure>
+
+<p>I en <strong>kapasitiv trykkmåler</strong> er membranen av metall, og like ved den sitter en fast metallplate. To metallplater som står nær hverandre, kan holde på litt elektrisk ladning når det er spenning mellom dem. Evnen til å holde på ladning kalles <strong>kapasitans</strong>. Jo nærmere platene står, jo større er kapasitansen. Når trykket øker, bøyer membranen seg nærmere platen, og kapasitansen øker. Elektronikken måler endringen og regner ut trykket.</p>
+<p>Kapasitive trykkmålere er svært nøyaktige og er mye brukt når forskjellen mellom to trykk skal måles, se Differansetrykk under.</p>
+
 <p>Mange trykkgivere har også et lite display, så du kan lese av verdien på stedet.</p>
 
 <h2>Differansetrykk</h2>
 <p>Noen ganger vil vi vite <em>forskjellen</em> mellom to trykk. Da brukes en <strong>differansetrykkmåler</strong>. Den har to tilkoblinger og viser hvor mye høyere trykket er på den ene siden enn på den andre.</p>
 <p>Et vanlig eksempel er et filter. Når filteret er rent, er trykket nesten like høyt før og etter. Etter hvert som filteret fylles med partikler, blir det tyngre å presse væsken gjennom, og trykket etter filteret blir lavere enn før. Differansetrykket stiger. Når det når en grense, er det på tide å bytte eller rense filteret.</p>
-<p>Differansetrykk brukes også til å måle nivå og mengde. Det lærer du på sidene <a href="nivamaling.html">Nivåmåling</a> og <a href="mengdemaling.html">Mengdemåling</a>. En differansetrykkmåler som sender verdien til kontrollrommet, kalles en differansetrykkgiver.</p>
+<p>En differansetrykkmåler som sender verdien til kontrollrommet, kalles en <strong>differansetrykkgiver</strong>.</p>
+
+<figure>
+  <img src="bilder/dp-maling-filter.svg" alt="Et prosessrør med et filter i midten. Væsken strømmer fra venstre mot høyre. Over røret sitter en differansetrykkgiver med et lite display som viser 0,35 bar. Ett impulsrør går fra røret før filteret til høy side av giveren, merket pluss. Ett impulsrør går fra røret etter filteret til lav side, merket minus. Begge impulsrørene har en instrumentventil. En stiplet linje går fra giveren til kontrollrommet." width="620">
+  <figcaption>Figur: Differansetrykkmåling over et filter. Trykket før filteret går til høy side (+), og trykket etter filteret til lav side (−). Giveren viser forskjellen, her 0,35 bar. Impulsrørene er tynne rør som fører trykket fram til giveren, og instrumentventilene kan stenge dem av. Mer om dem under «Slik monteres en trykkmåler». Skissen er forenklet.</figcaption>
+</figure>
+
+<p>Inne i en differansetrykkmåler er det, forenklet sagt, to kamre med en membran imellom. Det ene kammeret får trykket fra høy side, merket +, og det andre fra lav side, merket −. Er trykket like stort på begge sider, står membranen rett. Er det større på høy side, bøyer membranen seg mot lav side. Hvor mye den bøyer seg, måles på samme måte som i en vanlig trykkgiver, ofte kapasitivt.</p>
+<p>Det er viktig at rørene fra prosessen kobles til riktig side. Byttes de om, viser måleren feil: et negativt differansetrykk, eller 0 hvis den bare kan vise positive verdier. Da blir et filter som tettes, ikke oppdaget.</p>
+<p>Differansetrykk brukes også til å måle nivå og mengde. Det lærer du på sidene <a href="nivamaling.html">Nivåmåling</a> og <a href="mengdemaling.html">Mengdemåling</a>.</p>
 
 <h2>Slik monteres en trykkmåler</h2>
 
@@ -168,6 +199,8 @@
     <tr><td>trykkgiver</td><td>Instrument som måler trykket og sender verdien som et elektrisk signal til styresystemet.</td><td>pressure transmitter</td></tr>
     <tr><td>membran</td><td>Tynn, bøyelig plate som bøyer seg litt når trykket presser på den, for eksempel i en trykkgiver.</td><td>diaphragm</td></tr>
     <tr><td>overtrykk</td><td>Trykket i forhold til lufttrykket rundt oss. Det er dette en vanlig trykkmåler viser. Skrives ofte barg.</td><td>gauge pressure</td></tr>
+    <tr><td>piezoresistiv trykkmåler</td><td>Trykkmåler med små elektriske motstander på membranen. Når membranen bøyer seg, endrer motstandene seg litt, og det gjøres om til et signal.</td><td>piezoresistive pressure sensor</td></tr>
+    <tr><td>kapasitiv trykkmåler</td><td>Trykkmåler der en membran av metall og en fast metallplate står nær hverandre. Når trykket øker, kommer membranen nærmere platen, og kapasitansen mellom dem øker. Det gjøres om til et signal.</td><td>capacitive pressure sensor</td></tr>
     <tr><td>differansetrykk</td><td>Forskjellen mellom to trykk, for eksempel trykket før og etter et filter.</td><td>differential pressure (DP)</td></tr>
     <tr><td>impulsrør</td><td>Tynt rør som fører trykket fra prosessen fram til en måler.</td><td>impulse line</td></tr>
     <tr><td>instrumentventil</td><td>Liten ventil mellom prosessen og en måler. Når den er stengt, kan måleren tas av.</td><td>instrument valve</td></tr>
@@ -180,7 +213,7 @@
   <li><a href="../04-masse-og-energibalanser/kraft-og-trykk.html">Kraft og trykk</a> og <a href="../04-masse-og-energibalanser/trykk-i-vaesker.html">Trykk i væsker</a> i Fysiske prinsipper forklarer hva trykk er, og forskjellen på overtrykk og absolutt trykk.</li>
   <li><a href="../03-enhetsoperasjoner/tanker-og-beholdere.html">Tanker og beholdere</a> i Enhetsoperasjoner viser hvor manometer og sikkerhetsventil sitter på en trykkbeholder.</li>
 </ul>
-<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+<p><small>Om kildene: Teksten, eksemplene, figurene og skissene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
 
 </main>
 </body>
