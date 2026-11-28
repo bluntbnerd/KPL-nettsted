@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Øv: Kretsbygger – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Øv: Kretsbygger</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT3</div>
+
+<p class="ingress">I denne simulatoren bygger du strømkretser med batteri, ledninger, motstander, lyspærer og brytere, og måler med voltmeter og amperemeter. Du kan prøve alt du vil, også det du aldri skal gjøre på ekte. Teorien står på siden <a href="kretser.html">Kretser i serie og parallell</a>.</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">Slik bruker du simulatoren</div>
+  <ul>
+    <li>Velg skjermen <strong>Introduksjon</strong>.</li>
+    <li>Dra deler fra boksen til venstre ut på flaten. Koble dem sammen ved å dra endene mot hverandre, til de henger sammen.</li>
+    <li>Kryss av for <strong>Verdier</strong> øverst til høyre. Da ser du spenningen på batteriet og resistansen i motstandene.</li>
+    <li>Klikk på en motstand eller et batteri for å endre verdien. Klikk på søppelbøtta for å fjerne en del.</li>
+    <li><strong>Voltmeteret</strong> har en rød og en svart målepinne. Sett dem på hver side av det du vil måle spenningen over.</li>
+    <li><strong>Amperemeteret</strong> i simulatoren er en sonde som du legger over en ledning. Et ekte multimeter må kobles inn i kretsen for å måle strøm, slik du lærte på siden om kretser.</li>
+  </ul>
+  <p>Simulatoren krever internett.</p>
+</div>
+
+<iframe src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_nb.html" width="800" height="600" style="max-width:100%;border:0" allowfullscreen title="PhET-simulator: DC-Kretskonstruksjon"></iframe>
+<p><a href="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_nb.html" target="_blank" rel="noopener">Åpne «DC-Kretskonstruksjon» i et eget vindu</a> (anbefales på mobil og nettbrett).</p>
+
+<h2>Oppdrag</h2>
+
+<h3>Oppdrag 1 – Lukket krets</h3>
+<p>Bygg en krets med et batteri, en lyspære og en bryter. Lukk og åpne bryteren. Hva skjer med lyspæra og med elektronene i ledningene? Hvorfor?</p>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <p>Når bryteren er lukket, går strømmen hele veien rundt, elektronene beveger seg og pæra lyser. Når bryteren åpnes, er kretsen brutt. Da stopper strømmen i hele kretsen, og pæra slukker.</p>
+</details>
+
+<h3>Oppdrag 2 – Ohms lov</h3>
+<p>Bygg en krets med batteriet (9,0 V) og én motstand på 10 Ω. Mål spenningen over motstanden med voltmeteret og strømmen med amperemeteret. Regn ut strømmen med Ohms lov og sammenlign. Endre så motstanden til 20 Ω. Hva skjer med strømmen?</p>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <p>\( I = \dfrac{U}{R} = \dfrac{9{,}0 \text{ V}}{10 \ \Omega} = 0{,}90 \text{ A} \). Simulatoren viser det samme. Med 20 Ω blir strømmen halvparten så stor, 0,45 A. Dobbelt så stor resistans gir halvparten så stor strøm når spenningen er den samme.</p>
+</details>
+
+<h3>Oppdrag 3 – Seriekobling</h3>
+<p>Koble en motstand på 10 Ω og en på 20 Ω i serie med batteriet. Regn først ut strømmen og spenningen over hver motstand. Mål deretter strømmen flere steder i kretsen, og spenningen over hver motstand.</p>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <ul>
+    <li>Samlet resistans: 10 Ω + 20 Ω = 30 Ω.</li>
+    <li>Strøm: \( I = \dfrac{9{,}0 \text{ V}}{30 \ \Omega} = 0{,}30 \text{ A} \), like stor overalt i kretsen.</li>
+    <li>Spenning over 10 Ω: 10 Ω · 0,30 A = 3,0 V. Over 20 Ω: 20 Ω · 0,30 A = 6,0 V. Til sammen 9,0 V, som batteriet.</li>
+  </ul>
+  <p>Forholdet er det samme som i forsøket på koblingsbrettet: den største motstanden får to tredjedeler av spenningen.</p>
+</details>
+
+<h3>Oppdrag 4 – Parallellkobling</h3>
+<p>Koble de samme to motstandene i parallell med batteriet. Regn ut og mål spenningen over hver motstand, strømmen gjennom hver motstand og strømmen fra batteriet.</p>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <ul>
+    <li>Begge motstandene får 9,0 V.</li>
+    <li>Strøm gjennom 10 Ω: 9,0 V / 10 Ω = 0,90 A. Gjennom 20 Ω: 9,0 V / 20 Ω = 0,45 A.</li>
+    <li>Strøm fra batteriet: 0,90 A + 0,45 A = 1,35 A.</li>
+  </ul>
+  <p>Parallellkoblingen gir mer strøm fra batteriet enn hver motstand alene. Den samlede resistansen er 9,0 V / 1,35 A ≈ 6,7 Ω, som er mindre enn den minste motstanden.</p>
+</details>
+
+<h3>Oppdrag 5 – Lyspærer i serie og i parallell</h3>
+<p>Bygg to kretser med to like lyspærer: én der pærene står i serie, og én der de står i parallell. Hvilke pærer lyser sterkest? Fjern så én pære i hver krets. Hva skjer med den andre pæra?</p>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <p>Pærene i parallell lyser sterkest. Hver av dem får hele batterispenningen. I serie deler pærene spenningen, så hver får bare halvparten, og de lyser svakere. Fjerner du én pære i seriekoblingen, blir kretsen brutt og den andre slukker. I parallellkoblingen lyser den andre pæra videre. Derfor er lys og stikkontakter i et bygg koblet i parallell.</p>
+</details>
+
+<h3>Oppdrag 6 – Kortslutning</h3>
+<p>Bygg en krets med batteri og lyspære. Legg så en ledning direkte fra den ene enden av batteriet til den andre. Se på strømmen og på ledningen. Hva skjer, og hvorfor?</p>
+<details class="fasit">
+  <summary>Fasit</summary>
+  <p>Strømmen tar snarveien gjennom ledningen, som nesten ikke har resistans. Pæra slukker, og strømmen blir svært stor. I simulatoren begynner ledningen å brenne. Det kan skje på ekte også. Derfor skal du aldri kortslutte et batteri eller en strømkilde, og derfor har strømnettet sikringer.</p>
+</details>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet</div>
+  <p>I simulatoren er alt trygt. På ekte skal du aldri kortslutte et batteri, og du skal bare bygge kretser med lav spenning, som batterier og koblingsbrett. Etter norske regler skal arbeid på elektriske anlegg gjøres av elektrofagfolk i en registrert elvirksomhet.</p>
+</div>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Teorien bak: <a href="strom-spenning-resistans.html">Strøm, spenning og resistans</a> og <a href="kretser.html">Kretser i serie og parallell</a>.</li>
+</ul>
+<p><small>«DC-Kretskonstruksjon» (Circuit Construction Kit: DC) er laget av PhET Interactive Simulations, University of Colorado Boulder, og er lisensiert under CC BY 4.0. Oppdragene er laget for dette nettstedet og bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs.</small></p>
+
+</main>
+</body>
+</html>

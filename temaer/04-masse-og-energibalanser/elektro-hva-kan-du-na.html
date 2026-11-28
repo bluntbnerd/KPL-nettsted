@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hva kan du nå? Grunnleggende elektro – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Hva kan du nå?</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT1, PT3 og PT9</div>
+
+<p class="ingress">Dette er siste steg i emnet «Grunnleggende elektro». Gå gjennom sjekklisten og quizen. Står du fast, går du tilbake til siden det gjelder.</p>
+
+<h2>Sjekkliste</h2>
+<ul class="sjekk">
+  <li>Jeg kan forklare spenning, strøm og resistans, med enheter, og sammenligne dem med vann i et rør. (<a href="strom-spenning-resistans.html">Strøm, spenning og resistans</a>)</li>
+  <li>Jeg kan bruke Ohms lov, \( U = R \cdot I \), snu formelen og gjøre om mellom mA og A. (<a href="strom-spenning-resistans.html">Strøm, spenning og resistans</a>)</li>
+  <li>Jeg kan forklare forskjellen på en elektrisk leder og en isolator. (<a href="strom-spenning-resistans.html">Strøm, spenning og resistans</a>)</li>
+  <li>Jeg kan regne ut elektrisk effekt med \( P = U \cdot I \), og strømmen med \( I = P/U \). (<a href="elektrisk-effekt.html">Elektrisk effekt og energi</a>)</li>
+  <li>Jeg kan forklare hvorfor sikringen går når for mange apparater står på samme kurs. (<a href="elektrisk-effekt.html">Elektrisk effekt og energi</a>)</li>
+  <li>Jeg kan regne ut energibruk i kWh og hva strømmen koster. (<a href="elektrisk-effekt.html">Elektrisk effekt og energi</a>)</li>
+  <li>Jeg kan forklare forskjellen på likestrøm, vekselstrøm og trefase, og hva 50 Hz betyr. (<a href="vekselstrom.html">Likestrøm, vekselstrøm og trefase</a>)</li>
+  <li>Jeg kan finne omtrent hvor stor strøm en trefasemotor på 400 V trekker, med regelen 2 A per kW. (<a href="vekselstrom.html">Likestrøm, vekselstrøm og trefase</a>)</li>
+  <li>Jeg kan forklare hva som skjer med strøm og spenning i en seriekobling og i en parallellkobling. (<a href="kretser.html">Kretser i serie og parallell</a>)</li>
+  <li>Jeg kan koble et multimeter riktig for å måle spenning, strøm og resistans. (<a href="kretser.html">Kretser i serie og parallell</a> og <a href="kretsbygger.html">Øv: Kretsbygger</a>)</li>
+  <li>Jeg kan lese typeskiltet på en motor og forklare hva startstrøm er. (<a href="elektromotorer.html">Elektromotorer i anlegget</a>)</li>
+  <li>Jeg kan forklare hva sikring, motorvern, kontaktor, frekvensomformer og arbeidsbryter gjør. (<a href="elektromotorer.html">Elektromotorer i anlegget</a>)</li>
+  <li>Jeg kan forklare hvorfor strøm er farlig, og hva jordleder og jordfeilbryter gjør. (<a href="elektrisk-sikkerhet.html">Elektrisk sikkerhet</a>)</li>
+  <li>Jeg vet hva jeg får gjøre selv, og hva jeg gjør hvis noen får strøm gjennom seg. (<a href="elektrisk-sikkerhet.html">Elektrisk sikkerhet</a>)</li>
+</ul>
+
+<h2>Quiz</h2>
+
+<div class="quiz">
+  <p>Signalet fra en giver er 12 mA. Det går gjennom en motstand på 250 Ω. Hvor stor er spenningen over motstanden?</p>
+  <ul>
+    <li>0,048 V</li>
+    <li data-riktig>3,0 V</li>
+    <li>21 V</li>
+  </ul>
+  <p class="forklaring">12 mA = 0,012 A. \( U = R \cdot I = 250 \ \Omega \cdot 0{,}012 \text{ A} = 3{,}0 \text{ V} \). Husk å gjøre om mA til A først.</p>
+</div>
+
+<div class="quiz">
+  <p>En vannkoker på 2000 W og en varmeovn på 1500 W står på samme kurs på 230 V. Hvor stor strøm trekker de til sammen?</p>
+  <ul>
+    <li>ca. 6,5 A</li>
+    <li data-riktig>ca. 15 A</li>
+    <li>ca. 3500 A</li>
+  </ul>
+  <p class="forklaring">Samlet effekt er 3500 W. \( I = \dfrac{P}{U} = \dfrac{3500 \text{ W}}{230 \text{ V}} \approx 15 \text{ A} \). Er sikringen på 10 A, går den.</p>
+</div>
+
+<div class="quiz">
+  <p>Pumpe 1 (7,5 kW) går med full effekt 12 timer hver dag i 30 dager. Hva koster strømmen med en tenkt pris på 1 kr per kWh?</p>
+  <ul>
+    <li>ca. 225 kr</li>
+    <li>ca. 270 kr</li>
+    <li data-riktig>ca. 2700 kr</li>
+  </ul>
+  <p class="forklaring">Tiden er 12 h · 30 = 360 h. \( E = 7{,}5 \text{ kW} \cdot 360 \text{ h} = 2700 \text{ kWh} \), som koster ca. 2700 kr.</p>
+</div>
+
+<div class="quiz">
+  <p>Omtrent hvor stor strøm trekker pumpe 1 (7,5 kW, 400 V trefase) i hver faseleder?</p>
+  <ul>
+    <li>ca. 3,8 A</li>
+    <li data-riktig>ca. 15 A</li>
+    <li>ca. 33 A</li>
+  </ul>
+  <p class="forklaring">Tommelfingerregelen gir \( 7{,}5 \text{ kW} \cdot 2 \text{ A/kW} = 15 \text{ A} \). 33 A får du hvis du regner som om motoren gikk på 230 V med én fase.</p>
+</div>
+
+<div class="quiz">
+  <p>To komponenter er koblet i serie til en strømforsyning på 24 V. Spenningen over den ene er 9,0 V. Hvor stor er spenningen over den andre?</p>
+  <ul>
+    <li>9,0 V</li>
+    <li data-riktig>15 V</li>
+    <li>33 V</li>
+  </ul>
+  <p class="forklaring">I en seriekobling legges spenningene sammen: 24 V − 9,0 V = 15 V.</p>
+</div>
+
+<div class="quiz">
+  <p>Tre lamper er koblet i parallell. Én av dem går i stykker. Hva skjer med de to andre?</p>
+  <ul>
+    <li>De slukker.</li>
+    <li data-riktig>De lyser som før.</li>
+    <li>De lyser sterkere.</li>
+  </ul>
+  <p class="forklaring">I en parallellkobling er hver lampe koblet direkte til strømkilden. Går én i stykker, får de andre fortsatt den samme spenningen.</p>
+</div>
+
+<div class="quiz">
+  <p>En motor har en merkestrøm på 4,6 A. Omtrent hvor stor kan startstrømmen bli ved direkte start?</p>
+  <ul>
+    <li>4,6 A</li>
+    <li data-riktig>ca. 23–37 A</li>
+    <li>ca. 460 A</li>
+  </ul>
+  <p class="forklaring">Startstrømmen er ofte 5–8 ganger merkestrømmen: 5 · 4,6 A ≈ 23 A og 8 · 4,6 A ≈ 37 A.</p>
+</div>
+
+<div class="quiz">
+  <p>En person med våte hender kommer borti 230 V. Resistansen i kroppen er ca. 2000 Ω. Hvor stor blir strømmen, og hvor farlig er det?</p>
+  <ul>
+    <li>ca. 0,12 mA, ufarlig</li>
+    <li>ca. 12 mA, prikking</li>
+    <li data-riktig>ca. 115 mA, livsfarlig</li>
+  </ul>
+  <p class="forklaring">\( I = \dfrac{230 \text{ V}}{2000 \ \Omega} = 0{,}115 \text{ A} = 115 \text{ mA} \). Det er langt over 30 mA, og hjertet kan få flimmer.</p>
+</div>
+
+<div class="quiz">
+  <p>På en jordfeilbryter står det 30 mA. Hva betyr det?</p>
+  <ul>
+    <li>Den tåler en strøm på høyst 30 mA.</li>
+    <li data-riktig>Den bryter hvis 30 mA eller mer lekker ut av kretsen.</li>
+    <li>Den gir 30 mA til apparatet.</li>
+  </ul>
+  <p class="forklaring">Jordfeilbryteren sammenligner strømmen ut og tilbake. Er forskjellen 30 mA eller mer, bryter den på en brøkdel av et sekund.</p>
+</div>
+
+<h2>Forklar med egne ord</h2>
+<p>Slike spørsmål kan du få i en fagsamtale. Svar før du åpner forslaget.</p>
+
+<details>
+  <summary>1. Forklar spenning, strøm og resistans ved å sammenligne med vann i et rør.</summary>
+  <p>Spenningen er som trykket fra en pumpe. Den driver strømmen gjennom kretsen. Strømmen er som vannmengden som renner forbi per sekund. Resistansen er som en trang ventil eller et tynt rør som bremser. Høyere spenning gir mer strøm, og større resistans gir mindre strøm. Det er Ohms lov, \( U = R \cdot I \).</p>
+</details>
+
+<details>
+  <summary>2. Hvorfor bruker industrien 400 V trefase til motorene?</summary>
+  <p>Med trefase når de tre fasene toppen etter tur, så motoren får et jevnt dytt og går jevnt rundt. Trefasemotorer er enkle og robuste. Med trefase deles effekten på tre faseledere. Da blir strømmen i hver leder bare omtrent en tredjedel av det den ville vært med én fase på 230 V, og kablene kan være tynnere.</p>
+</details>
+
+<details>
+  <summary>3. Hvordan kobler du et multimeter for å måle spenning, og hvordan for å måle strøm?</summary>
+  <p>Spenning måles over komponenten, altså parallelt, uten å bryte kretsen. Strøm måles i serie: du bryter kretsen og lar strømmen gå gjennom multimeteret, med den røde ledningen i A- eller mA-kontakten. Etterpå flytter du ledningen tilbake til V-kontakten, så du ikke kortslutter neste gang du måler spenning.</p>
+</details>
+
+<details>
+  <summary>4. Hva er forskjellen på sikring, motorvern og jordfeilbryter?</summary>
+  <p>Sikringen beskytter ledningene. Den bryter raskt ved kortslutning, og etter en stund ved overbelastning. I en motorkurs er sikringen så stor at den tåler startstrømmen, og da tar motorvernet overbelastningen. Motorvernet bryter hvis motoren trekker litt for mye strøm over lengre tid, og beskytter motoren mot overoppheting. Jordfeilbryteren bryter på en brøkdel av et sekund hvis det lekker strøm ut av kretsen, for eksempel gjennom et menneske. Da blir et støt sjelden livsfarlig, og den beskytter også mot brann.</p>
+</details>
+
+<details>
+  <summary>5. Hvorfor er det ikke nok å stoppe en pumpe på skjermen før du arbeider på den?</summary>
+  <p>Styresystemet kan starte pumpen igjen, for eksempel automatisk eller fordi noen trykker start. Derfor skal motoren kobles fra med arbeidsbryteren, låses og merkes etter prosedyren, og du skal kontrollere at den ikke kan startes, før du begynner.</p>
+</details>
+
+<details>
+  <summary>6. Du finner en kollega som har fått strøm gjennom seg. Hva gjør du?</summary>
+  <p>Først bryter du strømmen, med bryteren, sikringen eller ved å trekke ut støpselet. Du rører ikke kollegaen før strømmen er brutt. Klarer du ikke å bryte strømmen ved lav spenning, kan du skyve kollegaen løs med noe tørt som ikke leder, for eksempel en trelist. Ved høyspenning holder du avstand og ringer 113. Så ringer du 113 og gir førstehjelp, med hjerte-lunge-redning hvis kollegaen ikke puster normalt. Alle som har fått strømskade, skal undersøkes av lege, selv om de føler seg bra. Til slutt meldes ulykken etter rutinene.</p>
+</details>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Gå tilbake til fagstoffsidene i dette emnet i læringsstien.</li>
+</ul>
+<p><small>Om kildene: Teksten og spørsmålene på denne siden er laget for dette nettstedet. Strømprisen er en tenkt pris, og effekten på pumpene er hentet fra pumperommet på skolen. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250" font-family="Segoe UI, Arial, sans-serif">
+  <title>Seriekobling og parallellkobling av to motstander</title>
+  <defs>
+    <marker id="rod" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="250" rx="10" fill="#ffffff"/>
+  <line x1="300" y1="15" x2="300" y2="235" stroke="#d8e0e0" stroke-width="1"/>
+
+  <!-- Seriekobling -->
+  <text x="150" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">seriekobling</text>
+  <path d="M60 112 V60 H95 M135 60 H165 M205 60 H240 V180 H60 V128" fill="none" stroke="#1c2828" stroke-width="3"/>
+  <rect x="95" y="52" width="40" height="16" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <rect x="165" y="52" width="40" height="16" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <text x="115" y="44" font-size="12" text-anchor="middle" fill="#1c2828">R1</text>
+  <text x="185" y="44" font-size="12" text-anchor="middle" fill="#1c2828">R2</text>
+  <line x1="45" y1="112" x2="75" y2="112" stroke="#1c2828" stroke-width="3"/>
+  <line x1="52" y1="128" x2="68" y2="128" stroke="#1c2828" stroke-width="6"/>
+  <text x="38" y="110" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+  <text x="38" y="136" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+  <line x1="180" y1="166" x2="120" y2="166" stroke="#c0392b" stroke-width="2.5" marker-end="url(#rod)"/>
+  <text x="150" y="208" font-size="12" text-anchor="middle" fill="#1c2828">Strømmen har bare én vei og går</text>
+  <text x="150" y="225" font-size="12" text-anchor="middle" fill="#1c2828">gjennom begge motstandene.</text>
+
+  <!-- Parallellkobling -->
+  <g transform="translate(300,0)">
+    <text x="150" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">parallellkobling</text>
+    <path d="M60 112 V60 H220 V98 M220 142 V180 H60 V128 M150 60 V98 M150 142 V180" fill="none" stroke="#1c2828" stroke-width="3"/>
+    <circle cx="150" cy="60" r="4" fill="#1c2828"/>
+    <circle cx="150" cy="180" r="4" fill="#1c2828"/>
+    <rect x="142" y="98" width="16" height="44" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+    <rect x="212" y="98" width="16" height="44" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+    <text x="166" y="124" font-size="12" fill="#1c2828">R1</text>
+    <text x="236" y="124" font-size="12" fill="#1c2828">R2</text>
+    <line x1="45" y1="112" x2="75" y2="112" stroke="#1c2828" stroke-width="3"/>
+    <line x1="52" y1="128" x2="68" y2="128" stroke="#1c2828" stroke-width="6"/>
+    <text x="38" y="110" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+    <text x="38" y="136" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+    <line x1="80" y1="48" x2="130" y2="48" stroke="#c0392b" stroke-width="2.5" marker-end="url(#rod)"/>
+    <line x1="138" y1="68" x2="138" y2="90" stroke="#c0392b" stroke-width="2.5" marker-end="url(#rod)"/>
+    <line x1="208" y1="68" x2="208" y2="90" stroke="#c0392b" stroke-width="2.5" marker-end="url(#rod)"/>
+    <text x="150" y="208" font-size="12" text-anchor="middle" fill="#1c2828">Strømmen deler seg. Begge motstandene</text>
+    <text x="150" y="225" font-size="12" text-anchor="middle" fill="#1c2828">får samme spenning som batteriet.</text>
+  </g>
+</svg>

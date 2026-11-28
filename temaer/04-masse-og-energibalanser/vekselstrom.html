@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../assets/stil.css">
   <script src="../../assets/meny.js" defer></script>
 </head>
-<body data-status="utkast">
+<body>
 <main>
 
 <h1>Likestrøm, vekselstrøm og trefase</h1>
@@ -54,11 +54,11 @@
   <li><strong>400 V</strong> mellom to faseledere. Det brukes til motorer og annet stort utstyr.</li>
   <li><strong>230 V</strong> mellom én faseleder og en egen leder som kalles nøytralleder. Det brukes til stikkontakter, lys og mindre utstyr.</li>
 </ul>
-<p>I mange eldre norske boliger er strømnettet bygd på en annen måte, med 230 V mellom fasene og ingen 400 V. I industrien er 400 V det vanlige.</p>
+<p>I mange norske boliger er strømnettet bygd på en annen måte. Det kalles IT-nett og har 230 V mellom fasene, ingen nøytralleder og ingen 400 V. Der er den blå lederen en fase med spenning. I industrien er 400 V det vanlige.</p>
 
 <h2>Hvorfor motorene bruker trefase</h2>
 <p>Med trefase er det alltid minst én fase som er nær toppen. Derfor får en trefasemotor et jevnt «dytt» hele tiden og går jevnt rundt. En trefasemotor er enkel, robust og trenger lite vedlikehold. Nesten alle pumper, vifter og omrørere i prosessindustrien har trefasemotorer.</p>
-<p>Turtallet til en vanlig motor bestemmes av frekvensen. Ved 50 Hz går en slik motor med et fast turtall, for eksempel ca. 1450 eller ca. 2900 omdreininger per minutt. En <strong>frekvensomformer</strong> endrer frekvensen og dermed turtallet. Det lærer du mer om på siden Elektromotorer i anlegget (kommer).</p>
+<p>Turtallet til en vanlig motor bestemmes av frekvensen. Ved 50 Hz går en slik motor med et fast turtall, for eksempel ca. 1450 eller ca. 2900 omdreininger per minutt. En <strong>frekvensomformer</strong> endrer frekvensen og dermed turtallet. Det lærer du mer om på siden <a href="elektromotorer.html">Elektromotorer i anlegget</a>.</p>
 
 <h2>Hvor stor strøm trekker en trefasemotor?</h2>
 <p>For trefase regnes strømmen ikke med \( P = U \cdot I \) alene. Den nøyaktige formelen er mer innviklet. I praksis kan du bruke en tommelfingerregel:</p>
@@ -80,11 +80,11 @@
   <p><strong>Svar:</strong> Pumpe 2 trekker ca. 4,4 A og pumpe 1 ca. 15 A i hver faseleder. Sjekk tallene mot typeskiltet på motorene.</p>
 </div>
 
-<p>Sammenlign med en vanlig motor på 230 V. Med \( I = P/U \) fra siden <a href="elektrisk-effekt.html">Elektrisk effekt og energi</a> ville den samme effekten på 2,2 kW gitt \( 2200 \text{ W} / 230 \text{ V} \approx 9{,}6 \text{ A} \), og enda litt mer fordi motoren har tap. Med trefase på 400 V deles effekten på tre ledere, og spenningen er høyere. Derfor blir strømmen i hver leder mye mindre, og kablene kan være tynnere.</p>
+<p>Sammenlign med en vanlig motor på 230 V. Med \( I = P/U \) fra siden <a href="elektrisk-effekt.html">Elektrisk effekt og energi</a> ville den samme effekten på 2,2 kW gitt \( 2200 \text{ W} / 230 \text{ V} \approx 9{,}6 \text{ A} \), og enda litt mer fordi motoren har tap. Med trefase deles effekten på tre faseledere. Derfor blir strømmen i hver leder bare omtrent en tredjedel, og kablene kan være tynnere.</p>
 
 <div class="boks advarsel">
   <div class="boks-tittel">Sikkerhet: 400 V</div>
-  <p>400 V er enda farligere enn 230 V. Trefaseutstyr kobles ofte til med røde industrikontakter, mens blå industrikontakter har 230 V. Koble bare til og fra trefaseutstyr når prosedyren sier at du kan, og aldri når utstyret går. Arbeid inne i motorer, koblingsbokser og tavler skal bare gjøres av fagfolk med el-utdanning. Etter el-forskriftene er det bare autoriserte fagfolk som får arbeide på elektriske anlegg. Les mer på siden Elektrisk sikkerhet (kommer).</p>
+  <p>400 V er enda farligere enn 230 V. Trefaseutstyr kobles ofte til med røde industrikontakter, mens blå industrikontakter har 230 V. Koble bare til og fra trefaseutstyr når prosedyren sier at du kan, og aldri når utstyret går. Etter norske regler skal arbeid på elektriske anlegg, for eksempel inne i motorer, koblingsbokser og tavler, gjøres av elektrofagfolk i en registrert elvirksomhet. Les mer på siden <a href="elektrisk-sikkerhet.html">Elektrisk sikkerhet</a>.</p>
 </div>
 
 <h2>Test deg selv</h2>
@@ -145,18 +145,18 @@
   <tbody>
     <tr><td>likestrøm</td><td>Strøm som hele tiden går samme vei, for eksempel fra et batteri. Kalles også DC.</td><td>direct current (DC)</td></tr>
     <tr><td>vekselstrøm</td><td>Strøm som går fram og tilbake mange ganger i sekundet. Strømnettet bruker vekselstrøm. Kalles også AC.</td><td>alternating current (AC)</td></tr>
-    <tr><td>frekvens</td><td>Hvor mange ganger per sekund noe gjentar seg, for eksempel hvor mange ganger vekselstrømmen går fram og tilbake. Måles i hertz (Hz).</td><td>frequency</td></tr>
+    <tr><td>frekvens</td><td>Hvor mange ganger per sekund noe gjentar seg, for eksempel hvor mange ganger vekselstrømmen går fram og tilbake. Måles i hertz (Hz).</td><td></td></tr>
     <tr><td>hertz</td><td>Enheten for frekvens. 1 Hz er én gang per sekund.</td><td></td></tr>
     <tr><td>transformator</td><td>Et apparat som gjør vekselspenning høyere eller lavere.</td><td>transformer</td></tr>
     <tr><td>trefase</td><td>Tre vekselspenninger som er like store, men når toppen etter tur. Brukes til motorer og annet stort utstyr i industrien.</td><td>three-phase</td></tr>
     <tr><td>faseleder</td><td>En av de tre lederne med vekselspenning i et trefasenett. De merkes L1, L2 og L3.</td><td>phase conductor</td></tr>
-    <tr><td>frekvensomformer</td><td>Utstyr som endrer hvor fort en elektrisk motor går. Brukes til å styre pumper.</td><td>variable frequency drive (VFD)</td></tr>
+    <tr><td>frekvensomformer</td><td>Elektronisk utstyr som endrer frekvensen på strømmen til en motor, og dermed turtallet.</td><td>variable frequency drive (VFD)</td></tr>
   </tbody>
 </table>
 
 <h2>Les mer</h2>
 <ul>
-  <li>Elektromotorer i anlegget (kommer) bygger videre på denne siden.</li>
+  <li><a href="elektromotorer.html">Elektromotorer i anlegget</a> bygger videre på denne siden.</li>
   <li><a href="../02-kjemi-og-beregninger/elektrolyse.html">Elektrolyse</a> i Kjemiske prinsipper viser hva likestrøm brukes til i kjemisk industri.</li>
 </ul>
 <p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Effekten på pumpene er hentet fra pumperommet på skolen. Tommelfingerregelen gir bare et overslag. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>

@@ -28,14 +28,14 @@ KPL.sti("04-masse-og-energibalanser", [
   {
     emne: "Grunnleggende elektro",
     sider: [
-      { fil: "strom-spenning-resistans.html", tittel: "Strøm, spenning og resistans", meny: "Ohms lov", type: "fagstoff", status: "utkast" },
-      { fil: "elektrisk-effekt.html", tittel: "Elektrisk effekt og energi", meny: "Elektrisk effekt", type: "fagstoff", status: "utkast" },
-      { fil: "vekselstrom.html", tittel: "Likestrøm, vekselstrøm og trefase", meny: "Vekselstrøm", type: "fagstoff", status: "utkast" },
-      { tittel: "Kretser i serie og parallell", meny: "Kretser", status: "planlagt" },
-      { tittel: "Øv: Kretsbygger", meny: "Kretsbygger", status: "planlagt" },
-      { tittel: "Elektromotorer i anlegget", meny: "Elektromotorer", status: "planlagt" },
-      { tittel: "Elektrisk sikkerhet", meny: "El-sikkerhet", status: "planlagt" },
-      { tittel: "Hva kan du nå?", status: "planlagt" }
+      { fil: "strom-spenning-resistans.html", tittel: "Strøm, spenning og resistans", meny: "Ohms lov", type: "fagstoff", status: "ferdig" },
+      { fil: "elektrisk-effekt.html", tittel: "Elektrisk effekt og energi", meny: "Elektrisk effekt", type: "fagstoff", status: "ferdig" },
+      { fil: "vekselstrom.html", tittel: "Likestrøm, vekselstrøm og trefase", meny: "Vekselstrøm", type: "fagstoff", status: "ferdig" },
+      { fil: "kretser.html", tittel: "Kretser i serie og parallell", meny: "Kretser", type: "fagstoff", status: "ferdig" },
+      { fil: "kretsbygger.html", tittel: "Øv: Kretsbygger", meny: "Kretsbygger", type: "simulering", status: "ferdig" },
+      { fil: "elektromotorer.html", tittel: "Elektromotorer i anlegget", meny: "Elektromotorer", type: "fagstoff", status: "ferdig" },
+      { fil: "elektrisk-sikkerhet.html", tittel: "Elektrisk sikkerhet", meny: "El-sikkerhet", type: "fagstoff", status: "ferdig" },
+      { fil: "elektro-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
     ]
   },
   {

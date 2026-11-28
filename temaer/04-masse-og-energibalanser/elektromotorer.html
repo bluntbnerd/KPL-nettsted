@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elektromotorer i anlegget – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Elektromotorer i anlegget</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT1 og PT9</div>
+
+<p class="ingress">Nesten alle pumper, vifter, omrørere og transportbånd i et prosessanlegg drives av en elmotor. Her lærer du hvordan motoren virker i grove trekk, hvordan du leser typeskiltet, og hva som beskytter og styrer motoren.</p>
+
+<h2>Slik virker en elmotor</h2>
+<p>En <strong>elmotor</strong> gjør elektrisk energi om til bevegelse. Inne i motoren går strømmen gjennom spoler av kobbertråd. Strøm gjennom en spole lager et magnetfelt. Med trefase blir magnetfeltet hele tiden flyttet videre fra spole til spole, slik at det går rundt i motoren. Den delen som roterer, kalles rotoren. Rotoren blir dratt med av magnetfeltet, og akselen driver pumpen eller vifta.</p>
+<p>Det meste av energien blir til rotasjon, men litt blir til varme i motoren. Derfor har motorer kjøleribber og ofte en vifte bak på akselen. Hvorfor motorene bruker trefase, står på siden <a href="vekselstrom.html">Likestrøm, vekselstrøm og trefase</a>.</p>
+
+<h2>Typeskiltet</h2>
+<p>Alle motorer har et <strong>typeskilt</strong> med de viktigste opplysningene. Det er det første du ser på når du skal vite hva motoren tåler.</p>
+
+<figure>
+  <img src="bilder/typeskilt-motor.svg" alt="Et metallskilt med overskriften 3~ Motor. Feltene viser effekt 2,2 kW, spenning 400 V, strøm 4,6 A, beskyttelse IP55, frekvens 50 Hz, turtall 2880 r/min, virkningsgrad 85 prosent og driftsform S1." width="520">
+  <figcaption>Figur: Et tenkt og forenklet typeskilt for en trefasemotor på 2,2 kW, omtrent som motoren på pumpe 2. Ekte skilt har flere felt, og ofte to spenninger og to strømmer for to ulike måter å koble motoren på.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Felt på skiltet</th><th>Hva det betyr</th></tr></thead>
+  <tbody>
+    <tr><td>3~</td><td>Trefasemotor.</td></tr>
+    <tr><td>effekt (kW)</td><td>Effekten motoren kan levere på akselen når den går med full last.</td></tr>
+    <tr><td>spenning (V)</td><td>Spenningen motoren skal ha.</td></tr>
+    <tr><td>strøm (A)</td><td>Merkestrømmen: strømmen motoren trekker i hver faseleder ved full last.</td></tr>
+    <tr><td>frekvens (Hz)</td><td>Frekvensen i strømnettet, 50 Hz i Norge.</td></tr>
+    <tr><td>turtall (r/min)</td><td>Hvor mange omdreininger akselen gjør per minutt ved full last. «r/min» er det samme som omdreininger per minutt, ofte skrevet o/min eller rpm.</td></tr>
+    <tr><td>virkningsgrad (%)</td><td>Hvor stor del av den elektriske energien som blir til nyttig bevegelse. Resten blir varme.</td></tr>
+    <tr><td>IP55</td><td><strong>IP-grad</strong>: hvor godt motoren er beskyttet. Første siffer gjelder støv og fremmedlegemer, andre siffer gjelder vann. IP55 er beskyttet mot støv og tåler vannstråler fra alle kanter, for eksempel fra en slange, men ikke høytrykksspyling.</td></tr>
+    <tr><td>S1</td><td>Motoren kan gå hele tiden med full last.</td></tr>
+  </tbody>
+</table>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Stemmer tommelfingerregelen?</div>
+  <p><strong>Oppgave:</strong> På siden om trefase lærte du at en motor på 400 V trekker omtrent 2 A per kW. Sjekk regelen mot typeskiltet over.</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Tommelfingerregelen: \( 2{,}2 \text{ kW} \cdot 2 \text{ A/kW} \approx 4{,}4 \text{ A} \)</li>
+    <li>Skiltet: 4,6 A.</li>
+  </ol>
+  <p><strong>Svar:</strong> Regelen gir et godt overslag, men skiltet viser den riktige verdien. Den bruker du hvis du skal sjekke om motoren går normalt.</p>
+</div>
+
+<p>Turtallet på skiltet er litt lavere enn 3000 r/min. I denne motoren går magnetfeltet rundt 3000 ganger i minuttet ved 50 Hz, men rotoren henger alltid litt etter magnetfeltet når den har last. Andre motorer er laget for ca. 1500 eller ca. 1000 r/min.</p>
+
+<h2>Startstrømmen</h2>
+<p>Når en motor startes direkte på nettet, trekker den mye mer strøm enn vanlig i noen sekunder, til den har fått opp farten. Denne <strong>startstrømmen</strong> er ofte 5–8 ganger merkestrømmen.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Pumpe 3 starter</div>
+  <p><strong>Oppgave:</strong> Pumpe 3 har en motor på 5,5 kW. Den trekker omtrent 11 A når den går. Hvor stor kan startstrømmen bli hvis den startes direkte?</p>
+  <p><strong>Løsning:</strong> \( 5 \cdot 11 \text{ A} = 55 \text{ A} \) og \( 8 \cdot 11 \text{ A} = 88 \text{ A} \)</p>
+  <p><strong>Svar:</strong> Ca. 55–90 A i noen sekunder. Sikringene og motorvernet, som du lærer om lenger ned, må tåle dette uten å løse ut.</p>
+</div>
+
+<p>Den store startstrømmen gir et rykk i strømnettet og i pumpen. Store motorer startes derfor ofte mykere, med en mykstarter eller en frekvensomformer som øker turtallet gradvis.</p>
+
+<h2>Det som styrer og beskytter motoren</h2>
+<table>
+  <thead><tr><th>Utstyr</th><th>Hva det gjør</th></tr></thead>
+  <tbody>
+    <tr><td>sikring</td><td>Bryter strømmen ved kortslutning, når strømmen blir svært stor på et øyeblikk. I en motorkurs er sikringen valgt så stor at den tåler startstrømmen, og da er det motorvernet som tar overbelastning. Se <a href="elektrisk-effekt.html">Elektrisk effekt og energi</a>.</td></tr>
+    <tr><td>motorvern</td><td>Bryter strømmen hvis motoren trekker litt for mye strøm over lengre tid, for eksempel fordi pumpen går tungt. Da beskytter det motoren mot å bli overopphetet.</td></tr>
+    <tr><td>kontaktor</td><td>En stor elektrisk bryter som slår motoren av og på når den får signal fra styresystemet. Se <a href="../05-maling-styring-regulering/av-pa-styring.html">Av/på-styring</a> i Automasjon.</td></tr>
+    <tr><td>frekvensomformer</td><td>Elektronisk utstyr som endrer frekvensen på strømmen til en motor, og dermed turtallet. Da kan pumpen styres uten å strupe med en ventil, og det sparer energi. Se <a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a>.</td></tr>
+    <tr><td>arbeidsbryter</td><td>En bryter ved motoren som brukes til å koble den fra og låse den før vedlikehold.</td></tr>
+  </tbody>
+</table>
+<p>Går ikke pumpen selv om styresystemet sender startsignal, kan feilen sitte i en av disse delene. Det lærer du mer om på siden <a href="../05-maling-styring-regulering/pls.html">PLS</a> i Automasjon.</p>
+
+<h2>Tegn på at noe er galt</h2>
+<p>Som operatør er du ofte den første som merker at noe er galt med en motor. Følg med på dette:</p>
+<ul>
+  <li>Motoren er mye varmere enn den pleier.</li>
+  <li>Den låter annerledes, for eksempel hyler, skraper eller brummer.</li>
+  <li>Den vibrerer mer enn vanlig.</li>
+  <li>Motorstrømmen er høyere enn vanlig, eller nær merkestrømmen, uten at pumpen gjør mer arbeid.</li>
+  <li>Motorvernet løser ut flere ganger.</li>
+</ul>
+<p>Meld fra etter rutinene. Vedlikehold av utstyr lærer du mer om i temaet <a href="../06-drift-og-vedlikehold/index.html">Drift og vedlikehold</a>.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Motoren kan starte av seg selv</div>
+  <p>En motor som står stille, kan starte når som helst hvis styresystemet gir signal. Før du arbeider på en pumpe eller en annen maskin, skal motoren kobles fra og låses med arbeidsbryteren, og utstyret skal merkes etter prosedyren. Se <a href="../01-hms/06-loto.html">Lås og merk</a> i HMS. Kontroller at motoren ikke kan startes før du begynner. Motorer kan også være så varme at du kan brenne deg. Etter norske regler skal arbeid på elektriske anlegg gjøres av elektrofagfolk i en registrert elvirksomhet. Les mer på siden <a href="elektrisk-sikkerhet.html">Elektrisk sikkerhet</a>.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hva gjør en elmotor?</p>
+  <ul>
+    <li>Den gjør bevegelse om til elektrisk energi.</li>
+    <li data-riktig>Den gjør elektrisk energi om til bevegelse.</li>
+    <li>Den gjør vekselstrøm om til likestrøm.</li>
+  </ul>
+  <p class="forklaring">Motoren gjør elektrisk energi om til rotasjon av akselen. Litt av energien blir til varme.</p>
+</div>
+
+<div class="quiz">
+  <p>Typeskiltet viser 4,6 A. Hva betyr det?</p>
+  <ul>
+    <li>Strømmen motoren trekker når den starter.</li>
+    <li data-riktig>Strømmen motoren trekker i hver faseleder ved full last.</li>
+    <li>Den største strømmen sikringen tåler.</li>
+  </ul>
+  <p class="forklaring">Dette er merkestrømmen. Startstrømmen er mye større, ofte 5–8 ganger merkestrømmen.</p>
+</div>
+
+<div class="quiz">
+  <p>En motor har en merkestrøm på 15 A og startes direkte. Omtrent hvor stor kan startstrømmen bli?</p>
+  <ul>
+    <li>ca. 15 A</li>
+    <li>ca. 30 A</li>
+    <li data-riktig>ca. 75–120 A</li>
+  </ul>
+  <p class="forklaring">Startstrømmen er ofte 5–8 ganger merkestrømmen: 5 · 15 A = 75 A og 8 · 15 A = 120 A.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva er forskjellen på sikringen og motorvernet i en motorkurs?</p>
+  <ul>
+    <li data-riktig>Sikringen bryter ved kortslutning, motorvernet ved litt for stor strøm over lengre tid.</li>
+    <li>Sikringen slår motoren av og på, motorvernet endrer turtallet.</li>
+    <li>Det er to navn på det samme.</li>
+  </ul>
+  <p class="forklaring">Sikringen i en motorkurs er så stor at den tåler startstrømmen, og bryter raskt når strømmen blir svært stor. Motorvernet beskytter motoren mot overoppheting når den går tungt over tid.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva må du gjøre før du arbeider på en pumpe?</p>
+  <ul>
+    <li>Stoppe pumpen på skjermen i kontrollrommet.</li>
+    <li data-riktig>Koble fra og låse motoren med arbeidsbryteren, og merke utstyret etter prosedyren.</li>
+    <li>Vente til motoren er kald.</li>
+  </ul>
+  <p class="forklaring">Stopp på skjermen er ikke nok, for motoren kan starte igjen. Den skal kobles fra, låses og merkes etter prosedyren.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>elmotor</td><td>En maskin som gjør elektrisk energi om til rotasjon, for eksempel for å drive en pumpe.</td><td>electric motor</td></tr>
+    <tr><td>typeskilt</td><td>Et skilt på utstyret med de viktigste tekniske opplysningene, som effekt, spenning og strøm.</td><td>nameplate</td></tr>
+    <tr><td>merkestrøm</td><td>Strømmen en motor trekker ved full last. Den står på typeskiltet.</td><td>rated current</td></tr>
+    <tr><td>startstrøm</td><td>Den store strømmen en motor trekker i noen sekunder når den starter. Ofte 5–8 ganger merkestrømmen.</td><td>starting current</td></tr>
+    <tr><td>motorvern</td><td>Et vern som bryter strømmen hvis motoren trekker for mye strøm over lengre tid, slik at den ikke blir overopphetet.</td><td>motor protection</td></tr>
+    <tr><td>IP-grad</td><td>Et merke som viser hvor godt utstyr er beskyttet mot støv og vann, for eksempel IP55.</td><td>IP rating</td></tr>
+    <tr><td>kontaktor</td><td>Stor elektrisk bryter som slår en motor av og på når den får signal, for eksempel fra styresystemet.</td><td>contactor</td></tr>
+    <tr><td>arbeidsbryter</td><td>En bryter ved motoren som kobler den fra strømmen og kan låses, slik at den ikke kan startes under vedlikehold.</td><td>safety switch</td></tr>
+    <tr><td>frekvensomformer</td><td>Elektronisk utstyr som endrer frekvensen på strømmen til en motor, og dermed turtallet.</td><td>variable frequency drive (VFD)</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="ror-ventiler-pumper.html">Rør, ventiler og pumper</a> viser hvordan frekvensomformeren endrer pumpekurven.</li>
+  <li><a href="../05-maling-styring-regulering/av-pa-styring.html">Av/på-styring</a> i Automasjon viser hvordan styresystemet starter og stopper motorer.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figuren på denne siden er laget for dette nettstedet. Typeskiltet er tenkt. Effekten på pumpene er hentet fra pumperommet på skolen. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

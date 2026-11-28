@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kretser i serie og parallell – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body>
+<main>
+
+<h1>Kretser i serie og parallell</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT3 og PT9</div>
+
+<p class="ingress">Utstyr kan kobles etter hverandre eller ved siden av hverandre, og det gir helt forskjellig virkning. Her lærer du forskjellen på seriekobling og parallellkobling, og hvordan du måler spenning og strøm med et multimeter.</p>
+
+<h2>To måter å koble på</h2>
+<p>På siden <a href="strom-spenning-resistans.html">Strøm, spenning og resistans</a> så du en krets med én motstand. Har du to eller flere komponenter, kan de kobles på to måter: i serie eller i parallell.</p>
+
+<figure>
+  <img src="bilder/serie-parallell.svg" alt="To kretser med et batteri og to motstander, R1 og R2. Til venstre er motstandene koblet etter hverandre i den samme ledningen, og en pil viser at strømmen bare har én vei. Til høyre står motstandene ved siden av hverandre i hver sin gren mellom to ledninger. Piler viser at strømmen deler seg og går gjennom begge grenene." width="600">
+  <figcaption>Figur: I seriekoblingen til venstre går den samme strømmen gjennom begge motstandene. I parallellkoblingen til høyre deler strømmen seg, og begge motstandene er koblet direkte til batteriet.</figcaption>
+</figure>
+
+<h2>Seriekobling</h2>
+<p>I en <strong>seriekobling</strong> står komponentene etter hverandre, og strømmen har bare én vei å gå.</p>
+<ul>
+  <li><strong>Strømmen er like stor overalt.</strong> Den samme strømmen går gjennom alle komponentene.</li>
+  <li><strong>Spenningen deles.</strong> Hver komponent får en del av spenningen. Til sammen blir det like mye som spenningen fra batteriet: \( U = U_1 + U_2 \).</li>
+  <li><strong>Resistansene legges sammen:</strong> \( R = R_1 + R_2 \). Jo flere komponenter i serie, jo mindre strøm.</li>
+  <li><strong>Brudd ett sted stopper alt.</strong> Går én komponent i stykker, blir kretsen brutt og strømmen stopper overalt. Slik var det i gamle lysslynger: gikk én pære, ble hele slyngen mørk.</li>
+</ul>
+<p>Et eksempel fra anlegget er signalet fra en giver. Giveren, kabelen og inngangen på styresystemet er koblet i serie i en strømsløyfe. Derfor er strømmen den samme gjennom hele kabelen, uansett hvor lang den er. Se <a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a> i Automasjon.</p>
+
+<h2>Parallellkobling</h2>
+<p>I en <strong>parallellkobling</strong> står komponentene ved siden av hverandre, og strømmen deler seg.</p>
+<ul>
+  <li><strong>Spenningen er den samme.</strong> Alle komponentene er koblet direkte til strømkilden og får hele spenningen.</li>
+  <li><strong>Strømmene legges sammen.</strong> Strømmen fra batteriet er summen av strømmene i hver gren: \( I = I_1 + I_2 \).</li>
+  <li><strong>Den samlede resistansen blir mindre.</strong> Hver ny gren gir strømmen en ekstra vei. Derfor går det mer strøm til sammen, og den samlede resistansen blir mindre enn resistansen i den minste motstanden.</li>
+  <li><strong>Hver gren virker for seg.</strong> Går én komponent i stykker, virker de andre som før.</li>
+</ul>
+<p>Stikkontaktene i et bygg er koblet i parallell. Derfor får alle apparatene 230 V, og du kan slå av ett apparat uten at de andre stopper. Men strømmene legges sammen i kursen. Det er derfor sikringen går når du kobler til for mange apparater, slik du så på siden <a href="elektrisk-effekt.html">Elektrisk effekt og energi</a>.</p>
+
+<table>
+  <thead><tr><th></th><th>Seriekobling</th><th>Parallellkobling</th></tr></thead>
+  <tbody>
+    <tr><td>strøm</td><td>like stor overalt</td><td>deler seg, strømmene legges sammen</td></tr>
+    <tr><td>spenning</td><td>deles, spenningene legges sammen</td><td>den samme over alle</td></tr>
+    <tr><td>samlet resistans</td><td>summen av resistansene</td><td>mindre enn den minste</td></tr>
+    <tr><td>én komponent går i stykker</td><td>alt stopper</td><td>de andre virker</td></tr>
+  </tbody>
+</table>
+
+<h2>Kortslutning</h2>
+<p>En <strong>kortslutning</strong> er en snarvei for strømmen nesten uten resistans. Det kan skje hvis to ledere kommer borti hverandre, for eksempel når isolasjonen er skadet. Etter Ohms lov blir strømmen svært stor når resistansen er nesten null. Ledningene blir varme, og det kan begynne å brenne. Sikringen skal bryte strømmen før det skjer.</p>
+
+<h2>Måling med multimeter</h2>
+<p>Et <strong>multimeter</strong> kan måle spenning, strøm og resistans. Du velger hva du skal måle med bryteren på fronten, og setter de to måleledningene i riktige kontakter. Den svarte ledningen står nesten alltid i COM. Den røde flyttes etter hva du skal måle.</p>
+
+<figure>
+  <img src="bilder/multimeter-kobling.svg" alt="En krets med batteri og motstand. Et multimeter merket V er koblet med to ledninger på hver side av motstanden, ved siden av kretsen, for å måle spenningen over motstanden. Et annet multimeter merket A er satt inn i selve ledningen, slik at kretsen er brutt og all strømmen må gå gjennom multimeteret." width="600">
+  <figcaption>Figur: Spenning måles over komponenten, altså parallelt (V). Strøm måles inne i kretsen, altså i serie (A). Da må kretsen brytes, slik at strømmen går gjennom multimeteret.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Du skal måle</th><th>Bryter</th><th>Rød ledning</th><th>Slik kobler du</th></tr></thead>
+  <tbody>
+    <tr><td>spenning</td><td>V med en hel og en stiplet strek for likespenning, som fra et batteri. V~ for vekselspenning.</td><td>V-kontakten</td><td>over komponenten, parallelt. Kretsen trenger ikke brytes.</td></tr>
+    <tr><td>strøm</td><td>A eller mA</td><td>A- eller mA-kontakten</td><td>inne i kretsen, i serie. Bryt kretsen og la strømmen gå gjennom multimeteret.</td></tr>
+    <tr><td>resistans</td><td>Ω</td><td>V-kontakten (ofte merket VΩ)</td><td>over komponenten, <strong>med strømmen av</strong>.</td></tr>
+  </tbody>
+</table>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Start med det største måleområdet</div>
+  <p>Vet du ikke hvor stor verdien er, starter du med det største måleområdet og går ned til du får en tydelig verdi. Mange multimetre gjør dette selv. Måler du strøm i mA og verdien er for stor, kan sikringen inne i multimeteret gå.</p>
+</div>
+
+<h2>Forsøk: Serie og parallell på koblingsbrettet</h2>
+<p><strong>Utstyr:</strong> koblingsbrett, batteri på 9 V, to motstander på 1,0 kΩ og 2,0 kΩ, ledninger og multimeter. 1 kΩ (kiloohm) er 1000 Ω.</p>
+<p><strong>Før du kobler:</strong> Mål spenningen på batteriet. Et nytt batteri på 9 V gir ofte litt mer enn 9 V. Regn ut verdiene i tabellen med Ohms lov. Bruker du den målte batterispenningen, blir det lettere å sammenligne.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Slik regner du ut verdiene (med 9,0 V)</div>
+  <p><strong>Seriekobling:</strong></p>
+  <ol>
+    <li>Samlet resistans: \( R = 1000 \ \Omega + 2000 \ \Omega = 3000 \ \Omega \)</li>
+    <li>Strømmen: \( I = \dfrac{U}{R} = \dfrac{9{,}0 \text{ V}}{3000 \ \Omega} = 0{,}0030 \text{ A} = 3{,}0 \text{ mA} \)</li>
+    <li>Spenningen over R1: \( U_1 = R_1 \cdot I = 1000 \ \Omega \cdot 0{,}0030 \text{ A} = 3{,}0 \text{ V} \)</li>
+    <li>Spenningen over R2: \( U_2 = 2000 \ \Omega \cdot 0{,}0030 \text{ A} = 6{,}0 \text{ V} \). Kontroll: 3,0 V + 6,0 V = 9,0 V.</li>
+  </ol>
+  <p><strong>Parallellkobling:</strong></p>
+  <ol>
+    <li>Begge motstandene får 9,0 V.</li>
+    <li>Strømmen gjennom R1: \( I_1 = \dfrac{9{,}0 \text{ V}}{1000 \ \Omega} = 0{,}0090 \text{ A} = 9{,}0 \text{ mA} \)</li>
+    <li>Strømmen gjennom R2: \( I_2 = \dfrac{9{,}0 \text{ V}}{2000 \ \Omega} = 0{,}0045 \text{ A} = 4{,}5 \text{ mA} \)</li>
+    <li>Strømmen fra batteriet: \( I = 9{,}0 \text{ mA} + 4{,}5 \text{ mA} = 13{,}5 \text{ mA} \)</li>
+  </ol>
+  <p>Samlet resistans i parallell kan du finne med Ohms lov: \( R = \dfrac{9{,}0 \text{ V}}{0{,}0135 \text{ A}} \approx 670 \ \Omega \). Det er mindre enn den minste motstanden på 1000 Ω.</p>
+</div>
+
+<table>
+  <thead><tr><th>Kobling</th><th>Hva du måler</th><th>Beregnet</th><th>Målt</th></tr></thead>
+  <tbody>
+    <tr><td rowspan="3">serie</td><td>strøm i kretsen</td><td>3,0 mA</td><td></td></tr>
+    <tr><td>spenning over R1</td><td>3,0 V</td><td></td></tr>
+    <tr><td>spenning over R2</td><td>6,0 V</td><td></td></tr>
+    <tr><td rowspan="4">parallell</td><td>spenning over R1 og R2</td><td>9,0 V</td><td></td></tr>
+    <tr><td>strøm gjennom R1</td><td>9,0 mA</td><td></td></tr>
+    <tr><td>strøm gjennom R2</td><td>4,5 mA</td><td></td></tr>
+    <tr><td>strøm fra batteriet</td><td>13,5 mA</td><td></td></tr>
+  </tbody>
+</table>
+
+<p><strong>Etter forsøket:</strong></p>
+<ul>
+  <li>Stemmer de målte verdiene med de beregnede? Hvor stort er avviket?</li>
+  <li>Hva kan avviket komme av? Tenk på batterispenningen, at motstandene sjelden har nøyaktig den verdien som står på dem, og usikkerheten i multimeteret.</li>
+  <li>Stemmer det at spenningene i seriekoblingen legges sammen, og at strømmene i parallellkoblingen legges sammen?</li>
+</ul>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Mål riktig</div>
+  <p>Hold aldri målepinnene rett over et batteri når multimeteret står på strøm (A eller mA). Mål aldri i en stikkontakt. Da går nesten all strømmen gjennom multimeteret, og det blir en kortslutning. Flytt den røde ledningen tilbake til V-kontakten når du er ferdig med å måle strøm. Kortslutter du et batteri, kan det bli varmt eller begynne å brenne. På skolen måler du bare på lav spenning, som batterier og koblingsbrett. Etter norske regler skal arbeid på elektriske anlegg gjøres av elektrofagfolk i en registrert elvirksomhet. Les mer på siden <a href="elektrisk-sikkerhet.html">Elektrisk sikkerhet</a>.</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>To motstander er koblet i serie. Hva er like stort i begge?</p>
+  <ul>
+    <li data-riktig>strømmen</li>
+    <li>spenningen</li>
+    <li>resistansen</li>
+  </ul>
+  <p class="forklaring">I en seriekobling har strømmen bare én vei, så den samme strømmen går gjennom begge motstandene. Spenningen deles mellom dem.</p>
+</div>
+
+<div class="quiz">
+  <p>To lamper er koblet i parallell til et batteri. Hva er like stort for begge lampene?</p>
+  <ul>
+    <li>strømmen</li>
+    <li data-riktig>spenningen</li>
+    <li>ingenting</li>
+  </ul>
+  <p class="forklaring">I en parallellkobling er alle komponentene koblet direkte til strømkilden, så de får den samme spenningen. Strømmen deler seg.</p>
+</div>
+
+<div class="quiz">
+  <p>To motstander er koblet i serie til et batteri på 12 V. Spenningen over den ene er 4,0 V. Hvor stor er spenningen over den andre?</p>
+  <ul>
+    <li>4,0 V</li>
+    <li data-riktig>8,0 V</li>
+    <li>12 V</li>
+  </ul>
+  <p class="forklaring">I en seriekobling legges spenningene sammen og blir like mye som batterispenningen: 12 V − 4,0 V = 8,0 V.</p>
+</div>
+
+<div class="quiz">
+  <p>To apparater er koblet til den samme kursen. Det ene trekker 3,0 A og det andre 5,0 A. Hvor stor strøm går i kursen?</p>
+  <ul>
+    <li>2,0 A</li>
+    <li>5,0 A</li>
+    <li data-riktig>8,0 A</li>
+  </ul>
+  <p class="forklaring">Stikkontaktene er koblet i parallell, og da legges strømmene sammen: 3,0 A + 5,0 A = 8,0 A.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvordan kobler du multimeteret når du skal måle strømmen i en krets?</p>
+  <ul>
+    <li>Over komponenten, uten å bryte kretsen.</li>
+    <li data-riktig>Inne i kretsen, slik at strømmen går gjennom multimeteret.</li>
+    <li>Rett over batteriet.</li>
+  </ul>
+  <p class="forklaring">Strøm måles i serie. Du bryter kretsen og setter multimeteret inn der, slik at strømmen går gjennom det. Rett over batteriet blir det kortslutning.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>seriekobling</td><td>Komponentene er koblet etter hverandre, slik at strømmen bare har én vei. Den samme strømmen går gjennom alle.</td><td></td></tr>
+    <tr><td>parallellkobling</td><td>Komponentene er koblet ved siden av hverandre, slik at strømmen deler seg. Alle får den samme spenningen.</td><td></td></tr>
+    <tr><td>kortslutning</td><td>En snarvei for strømmen nesten uten resistans. Strømmen blir svært stor, og ledningene kan bli varme eller begynne å brenne.</td><td>short circuit</td></tr>
+    <tr><td>multimeter</td><td>Et måleinstrument som kan måle spenning, strøm og resistans.</td><td>multimeter</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>På neste side, <a href="kretsbygger.html">Øv: Kretsbygger</a>, bygger du kretser i en simulator.</li>
+  <li><a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a> i Automasjon viser en seriekrets i anlegget.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene, forsøket og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

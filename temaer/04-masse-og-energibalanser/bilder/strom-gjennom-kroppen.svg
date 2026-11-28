@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" width="600" height="230" font-family="Segoe UI, Arial, sans-serif">
+  <title>Hva strøm gjennom kroppen gjør, fra under 1 mA til over 30 mA</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2828"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="230" rx="10" fill="#ffffff"/>
+  <text x="300" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">strøm gjennom kroppen</text>
+  <!-- grenser -->
+  <g font-size="12" font-weight="bold" text-anchor="middle" fill="#1c2828">
+    <text x="165" y="56">1 mA</text><text x="300" y="56">10 mA</text><text x="435" y="56">30 mA</text>
+  </g>
+  <!-- bånd -->
+  <rect x="30" y="64" width="135" height="66" fill="#d5eddc" stroke="#ffffff" stroke-width="2"/>
+  <rect x="165" y="64" width="135" height="66" fill="#fbeeb8" stroke="#ffffff" stroke-width="2"/>
+  <rect x="300" y="64" width="135" height="66" fill="#f8cfa2" stroke="#ffffff" stroke-width="2"/>
+  <rect x="435" y="64" width="135" height="66" fill="#f1a9a0" stroke="#ffffff" stroke-width="2"/>
+  <g font-size="12" text-anchor="middle" fill="#1c2828">
+    <text x="97" y="92">kjennes ikke</text><text x="97" y="108">eller så vidt</text>
+    <text x="232" y="92">prikking</text><text x="232" y="108">og smerte</text>
+    <text x="367" y="86">musklene låser</text><text x="367" y="102">seg, du klarer</text><text x="367" y="118">ikke slippe</text>
+    <text x="502" y="86">hjertet kan</text><text x="502" y="102">få flimmer:</text><text x="502" y="118" font-weight="bold">livsfarlig</text>
+  </g>
+  <!-- eksempler -->
+  <line x1="70" y1="170" x2="70" y2="136" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="70" y="186" font-size="12" text-anchor="middle" fill="#1c2828">9 V batteri,</text>
+  <text x="70" y="202" font-size="12" text-anchor="middle" fill="#1c2828">tørre hender</text>
+  <line x1="530" y1="170" x2="530" y2="136" stroke="#1c2828" stroke-width="2" marker-end="url(#pil)"/>
+  <text x="530" y="186" font-size="12" text-anchor="middle" fill="#1c2828">230 V,</text>
+  <text x="530" y="202" font-size="12" text-anchor="middle" fill="#1c2828">våte hender</text>
+  <text x="300" y="222" font-size="11" text-anchor="middle" fill="#586868">Omtrentlige verdier for vekselstrøm. Jo lenger tid, jo farligere.</text>
+</svg>

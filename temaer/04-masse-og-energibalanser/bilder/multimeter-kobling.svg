@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260" font-family="Segoe UI, Arial, sans-serif">
+  <title>Slik kobles multimeteret for å måle spenning og strøm</title>
+  <rect x="0" y="0" width="600" height="260" rx="10" fill="#ffffff"/>
+  <!-- krets -->
+  <path d="M150 122 V60 H450 V105 M450 155 V200 H318 M282 200 H150 V138" fill="none" stroke="#1c2828" stroke-width="3"/>
+  <!-- batteri -->
+  <line x1="135" y1="122" x2="165" y2="122" stroke="#1c2828" stroke-width="3"/>
+  <line x1="142" y1="138" x2="158" y2="138" stroke="#1c2828" stroke-width="6"/>
+  <text x="128" y="120" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+  <text x="128" y="146" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+  <text x="174" y="134" font-size="12" fill="#1c2828">batteri</text>
+  <!-- motstand -->
+  <rect x="442" y="105" width="16" height="50" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+  <text x="434" y="134" font-size="12" text-anchor="end" fill="#1c2828">motstand</text>
+  <!-- voltmeter parallelt -->
+  <path d="M450 85 H530 V112 M530 148 V175 H450" fill="none" stroke="#2a7a9a" stroke-width="2.5"/>
+  <circle cx="450" cy="85" r="4" fill="#2a7a9a"/>
+  <circle cx="450" cy="175" r="4" fill="#2a7a9a"/>
+  <circle cx="530" cy="130" r="18" fill="#e8f2f6" stroke="#2a7a9a" stroke-width="2.5"/>
+  <text x="530" y="136" font-size="16" font-weight="bold" text-anchor="middle" fill="#2a7a9a">V</text>
+  <text x="530" y="30" font-size="12" text-anchor="middle" fill="#2a7a9a">spenning måles</text>
+  <text x="530" y="46" font-size="12" text-anchor="middle" fill="#2a7a9a">over motstanden</text>
+  <!-- amperemeter i serie -->
+  <circle cx="300" cy="200" r="18" fill="#fbeaea" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="300" y="206" font-size="16" font-weight="bold" text-anchor="middle" fill="#c0392b">A</text>
+  <text x="300" y="238" font-size="12" text-anchor="middle" fill="#c0392b">strøm måles inne i kretsen:</text>
+  <text x="300" y="254" font-size="12" text-anchor="middle" fill="#c0392b">kretsen brytes, og strømmen går gjennom multimeteret</text>
+</svg>
