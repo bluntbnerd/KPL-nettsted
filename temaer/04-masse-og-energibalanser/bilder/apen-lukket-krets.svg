@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240" font-family="Segoe UI, Arial, sans-serif">
+  <title>Strømkrets med åpen og lukket bryter</title>
+  <defs>
+    <marker id="rod" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="240" rx="10" fill="#ffffff"/>
+  <line x1="300" y1="15" x2="300" y2="225" stroke="#d8e0e0" stroke-width="1"/>
+
+  <!-- A: åpen bryter -->
+  <g transform="translate(0,0)">
+    <text x="150" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">bryteren er åpen</text>
+    <path d="M60 107 V70 H136 M164 70 H240 V105 M240 135 V180 H60 V123" fill="none" stroke="#1c2828" stroke-width="3"/>
+    <!-- batteri -->
+    <line x1="45" y1="111" x2="75" y2="111" stroke="#1c2828" stroke-width="3"/>
+    <line x1="52" y1="119" x2="68" y2="119" stroke="#1c2828" stroke-width="6"/>
+    <text x="38" y="108" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+    <text x="38" y="128" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+    <text x="84" y="120" font-size="12" fill="#1c2828">batteri</text>
+    <!-- lampe av -->
+    <circle cx="150" cy="70" r="14" fill="#ffffff" stroke="#1c2828" stroke-width="2.5"/>
+    <path d="M140 60 L160 80 M160 60 L140 80" stroke="#1c2828" stroke-width="2"/>
+    <text x="150" y="50" font-size="12" text-anchor="middle" fill="#1c2828">lampe</text>
+    <!-- bryter åpen -->
+    <circle cx="240" cy="135" r="3.5" fill="#1c2828"/>
+    <circle cx="240" cy="105" r="3.5" fill="#1c2828"/>
+    <line x1="240" y1="135" x2="222" y2="108" stroke="#1c2828" stroke-width="3"/>
+    <text x="214" y="124" font-size="12" text-anchor="end" fill="#1c2828">bryter</text>
+    <text x="150" y="208" font-size="12" text-anchor="middle" fill="#1c2828">Kretsen er brutt. Ingen strøm.</text>
+    <text x="150" y="225" font-size="12" text-anchor="middle" fill="#1c2828">Lampa lyser ikke.</text>
+  </g>
+
+  <!-- B: lukket bryter -->
+  <g transform="translate(300,0)">
+    <text x="150" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">bryteren er lukket</text>
+    <path d="M60 107 V70 H136 M164 70 H240 V105 M240 135 V180 H60 V123" fill="none" stroke="#1c2828" stroke-width="3"/>
+    <!-- batteri -->
+    <line x1="45" y1="111" x2="75" y2="111" stroke="#1c2828" stroke-width="3"/>
+    <line x1="52" y1="119" x2="68" y2="119" stroke="#1c2828" stroke-width="6"/>
+    <text x="38" y="108" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+    <text x="38" y="128" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+    <text x="84" y="120" font-size="12" fill="#1c2828">batteri</text>
+    <!-- lampe på -->
+    <g stroke="#e6b800" stroke-width="2">
+      <line x1="150" y1="46" x2="150" y2="38"/><line x1="128" y1="54" x2="122" y2="48"/><line x1="172" y1="54" x2="178" y2="48"/>
+    </g>
+    <circle cx="150" cy="70" r="14" fill="#f9d71c" stroke="#1c2828" stroke-width="2.5"/>
+    <path d="M140 60 L160 80 M160 60 L140 80" stroke="#1c2828" stroke-width="2"/>
+    <!-- bryter lukket -->
+    <circle cx="240" cy="135" r="3.5" fill="#1c2828"/>
+    <circle cx="240" cy="105" r="3.5" fill="#1c2828"/>
+    <line x1="240" y1="135" x2="240" y2="105" stroke="#1c2828" stroke-width="3"/>
+    <text x="230" y="124" font-size="12" text-anchor="end" fill="#1c2828">bryter</text>
+    <!-- strømpiler -->
+    <line x1="90" y1="92" x2="118" y2="92" stroke="#c0392b" stroke-width="2.5" marker-end="url(#rod)"/>
+    <line x1="190" y1="166" x2="110" y2="166" stroke="#c0392b" stroke-width="2.5" marker-end="url(#rod)"/>
+    <text x="150" y="208" font-size="12" text-anchor="middle" fill="#1c2828">Kretsen er lukket. Strømmen går rundt.</text>
+    <text x="150" y="225" font-size="12" text-anchor="middle" fill="#1c2828">Lampa lyser.</text>
+  </g>
+</svg>

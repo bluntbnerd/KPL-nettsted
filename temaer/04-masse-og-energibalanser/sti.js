@@ -7,6 +7,7 @@
  * Planlagt side (ikke skrevet ennå): { tittel: "Tittel", status: "planlagt" }
  *
  * Fem emner fra 20.11.2026 (prosesslæreren). Hvert emne har sin egen emneøkt.
+ * Emnet Grunnleggende elektro er lagt til rett etter grunnbegrepene 28.11.2026 (prosesslæreren).
  * Massebalanser er flyttet til rett etter grunnbegrepene 27.11.2026, slik at systemgrense og massebalanse er lært før Fluidmekanikk og energibalansene.
  */
 KPL.sti("04-masse-og-energibalanser", [
@@ -22,6 +23,19 @@ KPL.sti("04-masse-og-energibalanser", [
       { fil: "energi-arbeid-effekt.html", tittel: "Energi, arbeid og effekt", meny: "Energi og effekt", type: "fagstoff", status: "ferdig" },
       { fil: "temperatur-og-varme.html", tittel: "Temperatur og varme", type: "fagstoff", status: "ferdig" },
       { fil: "grunnbegreper-hva-kan-du-na.html", tittel: "Hva kan du nå?", type: "sjekk", status: "ferdig" }
+    ]
+  },
+  {
+    emne: "Grunnleggende elektro",
+    sider: [
+      { fil: "strom-spenning-resistans.html", tittel: "Strøm, spenning og resistans", meny: "Ohms lov", type: "fagstoff", status: "utkast" },
+      { fil: "elektrisk-effekt.html", tittel: "Elektrisk effekt og energi", meny: "Elektrisk effekt", type: "fagstoff", status: "utkast" },
+      { fil: "vekselstrom.html", tittel: "Likestrøm, vekselstrøm og trefase", meny: "Vekselstrøm", type: "fagstoff", status: "utkast" },
+      { tittel: "Kretser i serie og parallell", meny: "Kretser", status: "planlagt" },
+      { tittel: "Øv: Kretsbygger", meny: "Kretsbygger", status: "planlagt" },
+      { tittel: "Elektromotorer i anlegget", meny: "Elektromotorer", status: "planlagt" },
+      { tittel: "Elektrisk sikkerhet", meny: "El-sikkerhet", status: "planlagt" },
+      { tittel: "Hva kan du nå?", status: "planlagt" }
     ]
   },
   {

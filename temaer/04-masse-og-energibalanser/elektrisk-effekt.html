@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elektrisk effekt og energi – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Elektrisk effekt og energi</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT1 og PT9</div>
+
+<p class="ingress">Hvor mye strøm trekker en vannkoker, og hva koster det å la en pumpe gå hele året? Her kobler du strøm og spenning sammen med energi og effekt. Da kan du lese et typeskilt, forstå hvorfor sikringen går, og regne ut strømregningen.</p>
+
+<h2>Effekt er energi per tid</h2>
+<p>På siden <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a> lærte du at <strong>effekt</strong> er hvor mye energi som brukes per tid, og at den måles i watt (W). En vannkoker på 2000 W bruker 2000 J hvert sekund. Nå skal du se hvordan effekten henger sammen med strøm og spenning.</p>
+
+<h2>Elektrisk effekt: P = U · I</h2>
+<p>Den <strong>elektriske effekten</strong> et apparat bruker, er spenningen ganget med strømmen:</p>
+<p>\[ P = U \cdot I \]</p>
+<ul>
+  <li><em>P</em> = effekt (W)</li>
+  <li><em>U</em> = spenning (V)</li>
+  <li><em>I</em> = strøm (A)</li>
+</ul>
+<p>Tenk på vannmodellen fra siden <a href="strom-spenning-resistans.html">Strøm, spenning og resistans</a>. Pumpen gjør mer arbeid jo høyere trykket er, og jo mer vann den flytter. På samme måte blir den elektriske effekten større jo høyere spenningen er, og jo større strømmen er.</p>
+<p>Effekten står på typeskiltet. Vil du vite hvor mye strøm apparatet trekker, snur du formelen:</p>
+<p>\[ I = \frac{P}{U} \]</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Varmeelementet</div>
+  <p><strong>Oppgave:</strong> Varmeelementet fra forrige side er koblet til 230 V og trekker 10 A. Hvor stor effekt har det?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Vi vet: \( U = 230 \text{ V} \) og \( I = 10 \text{ A} \).</li>
+    <li>Formelen: \( P = U \cdot I \)</li>
+    <li>Sett inn: \( P = 230 \text{ V} \cdot 10 \text{ A} = 2300 \text{ W} = 2{,}3 \text{ kW} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Varmeelementet har en effekt på 2,3 kW.</p>
+</div>
+
+<h2>Sikringen passer på strømmen</h2>
+<p>Ledningene fra sikringsskapet ut til stikkontaktene er delt i flere <strong>kurser</strong>. Hver kurs har sin egen <strong>sikring</strong>. Sikringen bryter strømmen hvis den blir større enn ledningen tåler. På en vanlig kurs på 230 V er sikringen ofte på 10 A eller 16 A.</p>
+<p>En sikring på 10 A tåler en samlet effekt på \( 230 \text{ V} \cdot 10 \text{ A} = 2300 \text{ W} \). Kobler du til mer enn det, går sikringen.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: To vannkokere på samme kurs</div>
+  <p><strong>Oppgave:</strong> På laben står to vannkokere på 2000 W hver. De er koblet til samme kurs på 230 V, og sikringen er på 10 A. Hva skjer når begge er slått på samtidig?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Strømmen til én vannkoker: \( I = \dfrac{P}{U} = \dfrac{2000 \text{ W}}{230 \text{ V}} \approx 8{,}7 \text{ A} \)</li>
+    <li>Strømmen til begge: \( 8{,}7 \text{ A} + 8{,}7 \text{ A} \approx 17 \text{ A} \)</li>
+    <li>17 A er mer enn 10 A.</li>
+  </ol>
+  <p><strong>Svar:</strong> Sikringen går. Én vannkoker går fint, men to er for mye for denne kursen. Koble dem til hver sin kurs.</p>
+</div>
+
+<h2>Elektrisk energi og strømregningen</h2>
+<p>Effekten sier hvor fort et apparat bruker energi. Hvor mye energi det bruker til sammen, avhenger også av hvor lenge det står på:</p>
+<p>\[ E = P \cdot t \]</p>
+<p>Strøm betales per <strong>kilowattime</strong> (kWh). Regner du med effekten i kW og tiden i timer, får du energien rett i kWh. Hvorfor 1 kWh er 3,6 MJ, står på siden <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a>.</p>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 3: Pumpe 2 i pumperommet</div>
+  <p><strong>Oppgave:</strong> Pumpe 2 i pumperommet har en motor på 2,2 kW. Tenk deg at pumpen går hele døgnet, hele året. Hvor mye energi bruker den, og hva koster det med en tenkt strømpris på 1 kr per kWh?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Tiden: \( t = 24 \text{ h} \cdot 365 = 8760 \text{ h} \)</li>
+    <li>Energien: \( E = P \cdot t = 2{,}2 \text{ kW} \cdot 8760 \text{ h} \approx 19\,000 \text{ kWh} \)</li>
+    <li>Pris: \( 19\,000 \text{ kWh} \cdot 1 \text{ kr/kWh} = 19\,000 \text{ kr} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Ca. 19 000 kWh, som koster ca. 19 000 kr per år. Det er nesten like mye strøm som en norsk bolig bruker på et år.</p>
+</div>
+
+<p>Pumpe 1 har en motor på 7,5 kW. Den bruker over tre ganger så mye strøm som pumpe 2 når den går med full effekt. Pumpe 1 har en frekvensomformer, som kan la motoren gå saktere når det trengs mindre vann. Da bruker den mye mindre strøm. Mer om motorene står på siden Elektromotorer i anlegget (kommer).</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Motoren bruker litt mer enn det som står på skiltet</div>
+  <p>På en motor er effekten på typeskiltet vanligvis den effekten motoren kan <em>levere</em> til pumpen. Motoren bruker litt mer strøm enn det, fordi noe av energien blir til varme i motoren. I eksempelet over er det regnet med 2,2 kW for å gjøre det enkelt. Hvor stor del av energien som blir nyttig, kalles virkningsgrad. Se <a href="varmetap.html">Varmetap og virkningsgrad</a>.</p>
+</div>
+
+<p>Pumpemotorene i anlegget går på 400 V trefase. Da regnes strømmen på en litt annen måte enn med \( P = U \cdot I \). Det lærer du om på siden <a href="vekselstrom.html">Likestrøm, vekselstrøm og trefase</a>.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: For stor strøm gir varme</div>
+  <p>Jo større strøm, jo varmere blir ledningene. Blir strømmen større enn ledningen tåler, kan isolasjonen smelte og det kan begynne å brenne. Derfor skal du aldri koble mange apparater med stor effekt, som vannkokere, varmeplater og varmeovner, til samme skjøteledning eller grenuttak. Rull helt ut en skjøteledning på kabeltrommel før du bruker den med stor effekt. Bytt aldri en sikring med en større enn den som hører til kursen. Mer om dette på siden Elektrisk sikkerhet (kommer).</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>En varmeplate er koblet til 230 V og trekker 5,0 A. Hvor stor effekt har den?</p>
+  <ul>
+    <li>46 W</li>
+    <li>235 W</li>
+    <li data-riktig>1150 W</li>
+  </ul>
+  <p class="forklaring">\( P = U \cdot I = 230 \text{ V} \cdot 5{,}0 \text{ A} = 1150 \text{ W} \), altså ca. 1,2 kW.</p>
+</div>
+
+<div class="quiz">
+  <p>En varmeovn på 1500 W er koblet til 230 V. Hvor stor strøm trekker den?</p>
+  <ul>
+    <li>0,15 A</li>
+    <li data-riktig>6,5 A</li>
+    <li>15 A</li>
+  </ul>
+  <p class="forklaring">\( I = \dfrac{P}{U} = \dfrac{1500 \text{ W}}{230 \text{ V}} \approx 6{,}5 \text{ A} \)</p>
+</div>
+
+<div class="quiz">
+  <p>En vifte på 3,0 kW går i 5,0 timer. Hvor mye energi bruker den?</p>
+  <ul>
+    <li>0,60 kWh</li>
+    <li>8,0 kWh</li>
+    <li data-riktig>15 kWh</li>
+  </ul>
+  <p class="forklaring">\( E = P \cdot t = 3{,}0 \text{ kW} \cdot 5{,}0 \text{ h} = 15 \text{ kWh} \)</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilken enhet betaler du for på strømregningen?</p>
+  <ul>
+    <li>watt (W)</li>
+    <li data-riktig>kilowattime (kWh)</li>
+    <li>ampere (A)</li>
+  </ul>
+  <p class="forklaring">Du betaler for energien du har brukt, og den måles i kWh. Watt er effekt, og ampere er strøm.</p>
+</div>
+
+<div class="quiz">
+  <p>Hva gjør en sikring?</p>
+  <ul>
+    <li>Den øker spenningen når det trengs mer effekt.</li>
+    <li data-riktig>Den bryter strømmen hvis den blir større enn ledningen tåler.</li>
+    <li>Den måler hvor mye energi du bruker.</li>
+  </ul>
+  <p class="forklaring">Sikringen beskytter ledningene mot for stor strøm, som kan gjøre dem så varme at det begynner å brenne.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>effekt</td><td>Hvor mye energi som brukes eller leveres per tid, P = E/t. Måles i watt (W).</td><td>power</td></tr>
+    <tr><td>elektrisk effekt</td><td>Effekten et elektrisk apparat bruker. Den er spenningen ganget med strømmen, P = U · I.</td><td></td></tr>
+    <tr><td>kilowattime</td><td>Energien en maskin på 1 kW bruker på 1 time. 1 kWh = 3,6 MJ. Strøm betales per kWh.</td><td>kilowatt-hour</td></tr>
+    <tr><td>kurs</td><td>En ledning fra sikringsskapet ut til en eller flere stikkontakter eller apparater, med sin egen sikring.</td><td></td></tr>
+    <tr><td>sikring</td><td>En komponent som bryter strømmen hvis den blir større enn ledningen tåler.</td><td>fuse</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li><a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a> og <a href="varmetap.html">Varmetap og virkningsgrad</a> i dette temaet.</li>
+</ul>
+<p><small>Om kildene: Teksten og eksemplene på denne siden er laget for dette nettstedet. Strømprisen er en tenkt pris. Effekten på pumpene er hentet fra pumperommet på skolen. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

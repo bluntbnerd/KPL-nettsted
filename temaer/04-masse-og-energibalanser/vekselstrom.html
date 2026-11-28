@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Likestrøm, vekselstrøm og trefase – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Likestrøm, vekselstrøm og trefase</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT1 og PT9</div>
+
+<p class="ingress">Batteriet, stikkontakten og pumpemotorene i anlegget bruker ikke samme slags strøm. Her lærer du forskjellen på likestrøm og vekselstrøm, hvorfor industrien bruker trefase på 400 V, og hvordan du finner omtrent hvor stor strøm en motor trekker.</p>
+
+<h2>Likestrøm og vekselstrøm</h2>
+<p><strong>Likestrøm</strong> går hele tiden samme vei, fra pluss til minus. Spenningen er like stor hele tiden. Likestrøm kalles også DC, fra engelsk <em>direct current</em>.</p>
+<p><strong>Vekselstrøm</strong> går fram og tilbake. Spenningen går opp til en topp, ned gjennom null til en bunn, og opp igjen. Vekselstrøm kalles også AC, fra engelsk <em>alternating current</em>.</p>
+
+<figure>
+  <img src="bilder/likestrom-vekselstrom.svg" alt="To grafer med spenning oppover og tid bortover. Til venstre likestrøm: en rett, vannrett linje over null, fordi spenningen er like stor hele tiden. Til høyre vekselstrøm: en bølge som går opp over null og ned under null, om og om igjen." width="600">
+  <figcaption>Figur: Likestrøm har samme spenning og samme retning hele tiden. Vekselstrøm går fram og tilbake. Spenningen går opp og ned, og er skiftevis pluss og minus.</figcaption>
+</figure>
+
+<p>Hvor mange ganger per sekund vekselstrømmen går fram og tilbake, kalles <strong>frekvensen</strong>. Den måles i <strong>hertz</strong> (Hz). Strømnettet i Norge og resten av Europa har 50 Hz. Det betyr at strømmen går fram og tilbake 50 ganger hvert sekund.</p>
+
+<table>
+  <thead><tr><th>Likestrøm (DC)</th><th>Vekselstrøm (AC)</th></tr></thead>
+  <tbody>
+    <tr><td>batterier, for eksempel i mobilen og i bærbart måleutstyr</td><td>stikkontakten (230 V)</td></tr>
+    <tr><td>strømforsyningen til givere og styresystem (24 V)</td><td>motorer, pumper og vifter i anlegget (400 V)</td></tr>
+    <tr><td>elektrolyse, for eksempel når aluminium lages</td><td>hele strømnettet, fra kraftverket og fram til bygget</td></tr>
+  </tbody>
+</table>
+<p>Elektrolyse må ha likestrøm, fordi strømmen må gå samme vei hele tiden for at reaksjonen skal gå. Det kan du lese om på siden <a href="../02-kjemi-og-beregninger/elektrolyse.html">Elektrolyse</a> i Kjemiske prinsipper. En lader for mobilen gjør om vekselstrøm fra stikkontakten til likestrøm.</p>
+
+<h2>Hvorfor strømnettet bruker vekselstrøm</h2>
+<p>Vekselspenning kan lett gjøres høyere eller lavere i en <strong>transformator</strong>. Det er den viktigste grunnen til at strømnettet bruker vekselstrøm.</p>
+<p>Fra kraftverket sendes strømmen over lange avstander med svært høy spenning, for eksempel 420 000 V. Med høy spenning trengs det mindre strøm for å overføre den samme effekten, fordi \( P = U \cdot I \). Mindre strøm gir mindre varme i ledningene, og da går mindre energi tapt på veien. Nær forbrukerne setter transformatorer spenningen ned i flere trinn, til slutt til 230 V og 400 V.</p>
+
+<h2>Trefase</h2>
+<p>I industrien kommer strømmen inn på tre ledere med vekselspenning. Hver av dem kalles en <strong>faseleder</strong>, og de merkes L1, L2 og L3. Spenningene i de tre fasene er like store, men de når toppen etter tur. Dette kalles <strong>trefase</strong>.</p>
+
+<figure>
+  <img src="bilder/trefase.svg" alt="Graf med spenning oppover og tid bortover. Tre like bølger i brunt, svart og grått, merket L1, L2 og L3. Bølgene er forskjøvet slik at de når toppen etter tur, en tredjedel av en periode etter hverandre." width="600">
+  <figcaption>Figur: I et trefasenett er det tre vekselspenninger. De er like store, men forskjøvet i tid, slik at de når toppen etter tur. Fargene brun, svart og grå er de samme som på lederne i en kabel.</figcaption>
+</figure>
+
+<p>I industrien er det vanligst med disse spenningene:</p>
+<ul>
+  <li><strong>400 V</strong> mellom to faseledere. Det brukes til motorer og annet stort utstyr.</li>
+  <li><strong>230 V</strong> mellom én faseleder og en egen leder som kalles nøytralleder. Det brukes til stikkontakter, lys og mindre utstyr.</li>
+</ul>
+<p>I mange eldre norske boliger er strømnettet bygd på en annen måte, med 230 V mellom fasene og ingen 400 V. I industrien er 400 V det vanlige.</p>
+
+<h2>Hvorfor motorene bruker trefase</h2>
+<p>Med trefase er det alltid minst én fase som er nær toppen. Derfor får en trefasemotor et jevnt «dytt» hele tiden og går jevnt rundt. En trefasemotor er enkel, robust og trenger lite vedlikehold. Nesten alle pumper, vifter og omrørere i prosessindustrien har trefasemotorer.</p>
+<p>Turtallet til en vanlig motor bestemmes av frekvensen. Ved 50 Hz går en slik motor med et fast turtall, for eksempel ca. 1450 eller ca. 2900 omdreininger per minutt. En <strong>frekvensomformer</strong> endrer frekvensen og dermed turtallet. Det lærer du mer om på siden Elektromotorer i anlegget (kommer).</p>
+
+<h2>Hvor stor strøm trekker en trefasemotor?</h2>
+<p>For trefase regnes strømmen ikke med \( P = U \cdot I \) alene. Den nøyaktige formelen er mer innviklet. I praksis kan du bruke en tommelfingerregel:</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tommelfingerregel for motorer på 400 V trefase</div>
+  <p>En motor trekker omtrent <strong>2 A per kW</strong> i hver faseleder. kW er effekten på typeskiltet.</p>
+  <p>Regelen tar med at motoren bruker litt mer enn den leverer. Den gir bare et overslag. Den nøyaktige strømmen står på typeskiltet.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel: Pumpene i pumperommet</div>
+  <p><strong>Oppgave:</strong> Pumpe 2 har en motor på 2,2 kW, og pumpe 1 har en motor på 7,5 kW. Begge går på 400 V trefase. Hvor stor strøm trekker de omtrent?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Pumpe 2: \( 2{,}2 \text{ kW} \cdot 2 \text{ A/kW} \approx 4{,}4 \text{ A} \) i hver faseleder.</li>
+    <li>Pumpe 1: \( 7{,}5 \text{ kW} \cdot 2 \text{ A/kW} = 15 \text{ A} \) i hver faseleder.</li>
+  </ol>
+  <p><strong>Svar:</strong> Pumpe 2 trekker ca. 4,4 A og pumpe 1 ca. 15 A i hver faseleder. Sjekk tallene mot typeskiltet på motorene.</p>
+</div>
+
+<p>Sammenlign med en vanlig motor på 230 V. Med \( I = P/U \) fra siden <a href="elektrisk-effekt.html">Elektrisk effekt og energi</a> ville den samme effekten på 2,2 kW gitt \( 2200 \text{ W} / 230 \text{ V} \approx 9{,}6 \text{ A} \), og enda litt mer fordi motoren har tap. Med trefase på 400 V deles effekten på tre ledere, og spenningen er høyere. Derfor blir strømmen i hver leder mye mindre, og kablene kan være tynnere.</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: 400 V</div>
+  <p>400 V er enda farligere enn 230 V. Trefaseutstyr kobles ofte til med røde industrikontakter, mens blå industrikontakter har 230 V. Koble bare til og fra trefaseutstyr når prosedyren sier at du kan, og aldri når utstyret går. Arbeid inne i motorer, koblingsbokser og tavler skal bare gjøres av fagfolk med el-utdanning. Etter el-forskriftene er det bare autoriserte fagfolk som får arbeide på elektriske anlegg. Les mer på siden Elektrisk sikkerhet (kommer).</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvilken strøm går hele tiden samme vei?</p>
+  <ul>
+    <li data-riktig>likestrøm</li>
+    <li>vekselstrøm</li>
+    <li>trefase</li>
+  </ul>
+  <p class="forklaring">Likestrøm (DC) går hele tiden samme vei, for eksempel fra et batteri. Vekselstrøm og trefase går fram og tilbake.</p>
+</div>
+
+<div class="quiz">
+  <p>Strømnettet har en frekvens på 50 Hz. Hva betyr det?</p>
+  <ul>
+    <li>Spenningen er 50 V.</li>
+    <li data-riktig>Strømmen går fram og tilbake 50 ganger per sekund.</li>
+    <li>Strømmen er 50 A.</li>
+  </ul>
+  <p class="forklaring">Frekvens er hvor mange ganger per sekund noe gjentar seg. 50 Hz betyr at vekselstrømmen går fram og tilbake 50 ganger hvert sekund.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvor stor er spenningen mellom to faseledere i et vanlig industrianlegg?</p>
+  <ul>
+    <li>24 V</li>
+    <li>230 V</li>
+    <li data-riktig>400 V</li>
+  </ul>
+  <p class="forklaring">I industrien er det 400 V mellom to faseledere og 230 V mellom en faseleder og nøytralleder.</p>
+</div>
+
+<div class="quiz">
+  <p>Pumpe 3 i pumperommet har en motor på 5,5 kW på 400 V trefase. Hvor stor strøm trekker den omtrent i hver faseleder?</p>
+  <ul>
+    <li>ca. 2,8 A</li>
+    <li data-riktig>ca. 11 A</li>
+    <li>ca. 24 A</li>
+  </ul>
+  <p class="forklaring">Tommelfingerregelen gir \( 5{,}5 \text{ kW} \cdot 2 \text{ A/kW} = 11 \text{ A} \). Den nøyaktige strømmen står på typeskiltet.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvorfor sendes strømmen over lange avstander med svært høy spenning?</p>
+  <ul>
+    <li>Fordi høy spenning er tryggere.</li>
+    <li data-riktig>Fordi det da trengs mindre strøm, og mindre energi går tapt som varme i ledningene.</li>
+    <li>Fordi kraftverkene bare kan lage høy spenning.</li>
+  </ul>
+  <p class="forklaring">Med \( P = U \cdot I \) trengs det mindre strøm for samme effekt når spenningen er høy. Mindre strøm gir mindre varme i ledningene.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>likestrøm</td><td>Strøm som hele tiden går samme vei, for eksempel fra et batteri. Kalles også DC.</td><td>direct current (DC)</td></tr>
+    <tr><td>vekselstrøm</td><td>Strøm som går fram og tilbake mange ganger i sekundet. Strømnettet bruker vekselstrøm. Kalles også AC.</td><td>alternating current (AC)</td></tr>
+    <tr><td>frekvens</td><td>Hvor mange ganger per sekund noe gjentar seg, for eksempel hvor mange ganger vekselstrømmen går fram og tilbake. Måles i hertz (Hz).</td><td>frequency</td></tr>
+    <tr><td>hertz</td><td>Enheten for frekvens. 1 Hz er én gang per sekund.</td><td></td></tr>
+    <tr><td>transformator</td><td>Et apparat som gjør vekselspenning høyere eller lavere.</td><td>transformer</td></tr>
+    <tr><td>trefase</td><td>Tre vekselspenninger som er like store, men når toppen etter tur. Brukes til motorer og annet stort utstyr i industrien.</td><td>three-phase</td></tr>
+    <tr><td>faseleder</td><td>En av de tre lederne med vekselspenning i et trefasenett. De merkes L1, L2 og L3.</td><td>phase conductor</td></tr>
+    <tr><td>frekvensomformer</td><td>Utstyr som endrer hvor fort en elektrisk motor går. Brukes til å styre pumper.</td><td>variable frequency drive (VFD)</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Elektromotorer i anlegget (kommer) bygger videre på denne siden.</li>
+  <li><a href="../02-kjemi-og-beregninger/elektrolyse.html">Elektrolyse</a> i Kjemiske prinsipper viser hva likestrøm brukes til i kjemisk industri.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Effekten på pumpene er hentet fra pumperommet på skolen. Tommelfingerregelen gir bare et overslag. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>

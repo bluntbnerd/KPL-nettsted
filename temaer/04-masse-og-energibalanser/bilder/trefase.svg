@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240" font-family="Segoe UI, Arial, sans-serif">
+  <title>Trefase: tre vekselspenninger som er forskjøvet etter hverandre</title>
+  <defs>
+    <clipPath id="vindu"><rect x="60" y="20" width="480" height="200"/></clipPath>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#586868"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="240" rx="10" fill="#ffffff"/>
+  <line x1="60" y1="195" x2="60" y2="35" stroke="#586868" stroke-width="1.5" marker-end="url(#pil)"/>
+  <line x1="60" y1="120" x2="545" y2="120" stroke="#586868" stroke-width="1.5" marker-end="url(#pil)"/>
+  <text x="52" y="54" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+  <text x="52" y="190" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+  <text x="52" y="124" font-size="11" text-anchor="end" fill="#586868">0</text>
+  <text x="540" y="138" font-size="11" text-anchor="end" fill="#586868">tid</text>
+  <text x="68" y="34" font-size="11" fill="#586868">spenning</text>
+  <g clip-path="url(#vindu)" fill="none" stroke-width="3">
+    <path stroke="#8b5a2b" d="M60 120 C92 40 118 40 150 120 C182 200 208 200 240 120 C272 40 298 40 330 120 C362 200 388 200 420 120 C452 40 478 40 510 120 C542 200 568 200 600 120"/>
+    <path stroke="#1c2828" d="M-60 120 C-28 40 -2 40 30 120 C62 200 88 200 120 120 C152 40 178 40 210 120 C242 200 268 200 300 120 C332 40 358 40 390 120 C422 200 448 200 480 120 C512 40 538 40 570 120"/>
+    <path stroke="#95a5a6" d="M0 120 C32 40 58 40 90 120 C122 200 148 200 180 120 C212 40 238 40 270 120 C302 200 328 200 360 120 C392 40 418 40 450 120 C482 200 508 200 540 120"/>
+  </g>
+  <g font-size="13" font-weight="bold">
+    <line x1="552" y1="60" x2="568" y2="60" stroke="#8b5a2b" stroke-width="3"/><text x="572" y="65" fill="#8b5a2b">L1</text>
+    <line x1="552" y1="85" x2="568" y2="85" stroke="#1c2828" stroke-width="3"/><text x="572" y="90" fill="#1c2828">L2</text>
+    <line x1="552" y1="110" x2="568" y2="110" stroke="#95a5a6" stroke-width="3"/><text x="572" y="115" fill="#7f8c8d">L3</text>
+  </g>
+  <text x="300" y="222" font-size="12" text-anchor="middle" fill="#1c2828">De tre fasene når toppen etter tur, en tredjedel av en periode etter hverandre.</text>
+</svg>

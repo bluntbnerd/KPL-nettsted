@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" width="600" height="230" font-family="Segoe UI, Arial, sans-serif">
+  <title>Likestrøm og vekselstrøm vist som grafer over spenningen</title>
+  <defs>
+    <marker id="pil" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#586868"/></marker>
+  </defs>
+  <rect x="0" y="0" width="600" height="230" rx="10" fill="#ffffff"/>
+  <line x1="300" y1="15" x2="300" y2="215" stroke="#d8e0e0" stroke-width="1"/>
+
+  <!-- Likestrøm -->
+  <text x="160" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">likestrøm (DC)</text>
+  <line x1="40" y1="175" x2="40" y2="45" stroke="#586868" stroke-width="1.5" marker-end="url(#pil)"/>
+  <line x1="40" y1="110" x2="275" y2="110" stroke="#586868" stroke-width="1.5" marker-end="url(#pil)"/>
+  <text x="32" y="62" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+  <text x="32" y="168" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+  <text x="32" y="114" font-size="11" text-anchor="end" fill="#586868">0</text>
+  <text x="270" y="128" font-size="11" text-anchor="end" fill="#586868">tid</text>
+  <text x="48" y="44" font-size="11" fill="#586868">spenning</text>
+  <line x1="40" y1="70" x2="260" y2="70" stroke="#c0392b" stroke-width="3"/>
+  <text x="160" y="197" font-size="12" text-anchor="middle" fill="#1c2828">Spenningen er like stor hele tiden,</text>
+  <text x="160" y="214" font-size="12" text-anchor="middle" fill="#1c2828">og strømmen går alltid samme vei.</text>
+
+  <!-- Vekselstrøm -->
+  <text x="450" y="26" font-size="15" font-weight="bold" text-anchor="middle" fill="#1c2828">vekselstrøm (AC)</text>
+  <line x1="340" y1="175" x2="340" y2="45" stroke="#586868" stroke-width="1.5" marker-end="url(#pil)"/>
+  <line x1="340" y1="110" x2="575" y2="110" stroke="#586868" stroke-width="1.5" marker-end="url(#pil)"/>
+  <text x="332" y="62" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">+</text>
+  <text x="332" y="168" font-size="13" font-weight="bold" text-anchor="end" fill="#1c2828">−</text>
+  <text x="332" y="114" font-size="11" text-anchor="end" fill="#586868">0</text>
+  <text x="570" y="128" font-size="11" text-anchor="end" fill="#586868">tid</text>
+  <text x="348" y="44" font-size="11" fill="#586868">spenning</text>
+  <path d="M340 110 C360 43.3 375 43.3 395 110 C415 176.7 430 176.7 450 110 C470 43.3 485 43.3 505 110 C525 176.7 540 176.7 560 110" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="450" y="197" font-size="12" text-anchor="middle" fill="#1c2828">Strømmen går fram og tilbake.</text>
+  <text x="450" y="214" font-size="12" text-anchor="middle" fill="#1c2828">I Norge 50 ganger per sekund (50 Hz).</text>
+</svg>

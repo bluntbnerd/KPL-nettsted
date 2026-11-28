@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strøm, spenning og resistans – KPL</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/stil.css">
+  <script src="../../assets/meny.js" defer></script>
+</head>
+<body data-status="utkast">
+<main>
+
+<h1>Strøm, spenning og resistans</h1>
+<div class="merker"><span class="fag">PT</span> <strong>Kompetansemål:</strong> grunnlag for PT1, PT3 og PT9</div>
+
+<p class="ingress">Nesten alt i et prosessanlegg trenger strøm: pumper, vifter, givere, ventiler og styresystemet. Her lærer du de tre grunnbegrepene i elektro, strøm, spenning og resistans, og hvordan de henger sammen i Ohms lov.</p>
+
+<h2>Strøm er som vann i et rør</h2>
+<p>Du kan ikke se strøm. Derfor er det lurt å sammenligne med noe du kjenner: vann som pumpes rundt i et rør. Pumpen gir trykk, vannet renner, og en trang ventil bremser vannet. En <strong>strømkrets</strong> virker på nesten samme måte.</p>
+
+<figure>
+  <img src="bilder/vannmodell-strom.svg" alt="To tegninger ved siden av hverandre. Til venstre en vannkrets: en pumpe sender vann rundt i et lukket rør, og en trang ventil på motsatt side bremser vannet. Piler viser at vannet renner rundt. Til høyre en strømkrets: et batteri med pluss og minus sender strøm rundt i en ledning, og en motstand på motsatt side bremser strømmen. Piler viser at strømmen går rundt fra pluss til minus." width="600">
+  <figcaption>Figur: Vannkretsen og strømkretsen ligner hverandre. Batteriet virker som pumpen, strømmen som vannet som renner, og motstanden som den trange ventilen.</figcaption>
+</figure>
+
+<table>
+  <thead><tr><th>Vannkrets</th><th>Strømkrets</th><th>Symbol og enhet</th></tr></thead>
+  <tbody>
+    <tr><td>trykket fra pumpen</td><td>spenning</td><td><em>U</em>, volt (V)</td></tr>
+    <tr><td>hvor mye vann som renner per sekund</td><td>strøm</td><td><em>I</em>, ampere (A)</td></tr>
+    <tr><td>trang ventil eller tynt rør som bremser</td><td>resistans</td><td><em>R</em>, ohm (Ω)</td></tr>
+  </tbody>
+</table>
+<p>Trykk lærte du om på siden <a href="kraft-og-trykk.html">Kraft og trykk</a>. Modellen er ikke helt riktig på alle punkter, men den hjelper deg å forstå hvordan strøm, spenning og resistans virker sammen.</p>
+
+<h2>Elektrisk strøm</h2>
+<p><strong>Elektrisk strøm</strong> er elektrisk ladning som beveger seg gjennom en leder. I metaller er det elektroner som beveger seg. Metaller har frie elektroner som kan flytte seg gjennom metallet. Det kan du lese om på siden <a href="../02-kjemi-og-beregninger/metallbinding.html">Metallbinding</a> i Kjemiske prinsipper.</p>
+<p>Strømmen har symbolet <em>I</em> og måles i <strong>ampere</strong> (A). Jo flere elektroner som passerer et punkt i ledningen per sekund, jo større er strømmen. Små strømmer oppgis i milliampere (mA):</p>
+<p>\[ 1 \text{ A} = 1000 \text{ mA} \]</p>
+<p>En vannkoker trekker rundt 10 A. Signalet fra en giver i anlegget er bare 4–20 mA.</p>
+<p>På tegninger viser vi strømretningen fra pluss (+) til minus (−) utenfor batteriet. Det er avtalt slik. Elektronene går faktisk motsatt vei, men det har ingen betydning for regningen på disse sidene.</p>
+
+<h2>Spenning</h2>
+<p><strong>Spenning</strong> er det som driver strømmen gjennom kretsen, omtrent som trykket fra en pumpe. Spenningen har symbolet <em>U</em> og måles i <strong>volt</strong> (V). Uten spenning går det ingen strøm.</p>
+<table>
+  <thead><tr><th>Strømkilde</th><th>Spenning</th></tr></thead>
+  <tbody>
+    <tr><td>vanlig batteri (AA)</td><td>1,5 V</td></tr>
+    <tr><td>firkantet batteri</td><td>9 V</td></tr>
+    <tr><td>strømforsyning til givere i anlegget</td><td>24 V</td></tr>
+    <tr><td>stikkontakt</td><td>230 V</td></tr>
+    <tr><td>større motorer i industrien</td><td>400 V</td></tr>
+  </tbody>
+</table>
+<p>Et batteri lager spenning med en kjemisk reaksjon. Det lærer du om på siden <a href="../02-kjemi-og-beregninger/galvanisk-element.html">Galvanisk element</a> i Kjemiske prinsipper. Forskjellen på strømmen fra et batteri og strømmen i stikkontakten lærer du om på siden <a href="vekselstrom.html">Likestrøm, vekselstrøm og trefase</a>.</p>
+
+<h2>Resistans</h2>
+<p><strong>Resistans</strong> er hvor mye noe bremser strømmen. Resistansen har symbolet <em>R</em> og måles i <strong>ohm</strong> (Ω). Jo større resistans, jo mindre strøm går det ved samme spenning.</p>
+<ul>
+  <li>En <strong>elektrisk leder</strong> slipper strømmen lett gjennom. Kobber er den vanligste lederen i kabler, fordi det har svært lav resistans.</li>
+  <li>En <strong>isolator</strong> slipper nesten ikke strøm gjennom. Plast, gummi, glass og tørr luft er isolatorer. Plasten rundt kobberet i en kabel er en isolator.</li>
+</ul>
+<p>En lang og tynn ledning har større resistans enn en kort og tykk. Det er som med vann: et langt, tynt rør bremser mer enn et kort, tykt rør. Derfor har kabler til store motorer tykke ledere.</p>
+<p>En <strong>motstand</strong> er en liten komponent med en bestemt resistans. Den brukes i elektronikk og på koblingsbrett for å styre hvor stor strømmen blir. Pass på forskjellen: <em>motstanden</em> er tingen, <em>resistansen</em> er hvor mye den bremser, målt i ohm.</p>
+
+<h2>Strømmen går bare i en lukket krets</h2>
+<p>Strømmen må ha en vei som går hele veien rundt: fra strømkilden, gjennom utstyret og tilbake. Det kalles en lukket krets. Blir kretsen brutt et sted, for eksempel med en bryter eller en ledning som har røket, stopper strømmen i hele kretsen.</p>
+
+<figure>
+  <img src="bilder/apen-lukket-krets.svg" alt="To like strømkretser med et batteri, en lampe og en bryter. Til venstre står bryteren åpen. Kretsen er brutt, det går ingen strøm, og lampa er mørk. Til høyre er bryteren lukket. Piler viser at strømmen går rundt i kretsen, og lampa lyser gult." width="600">
+  <figcaption>Figur: Når bryteren er åpen, er kretsen brutt og det går ingen strøm. Når bryteren lukkes, kan strømmen gå hele veien rundt, og lampa lyser. Figuren bruker de vanlige symbolene for batteri, lampe og bryter.</figcaption>
+</figure>
+
+<h2>Ohms lov</h2>
+<p>Strøm, spenning og resistans henger sammen. Sammenhengen kalles <strong>Ohms lov</strong>:</p>
+<p>\[ U = R \cdot I \]</p>
+<ul>
+  <li><em>U</em> = spenning (V)</li>
+  <li><em>R</em> = resistans (Ω)</li>
+  <li><em>I</em> = strøm (A)</li>
+</ul>
+<p>Ohms lov sier at strømmen blir dobbelt så stor hvis spenningen blir dobbelt så stor, så lenge resistansen er den samme. Og den sier at strømmen blir halvparten så stor hvis resistansen blir dobbelt så stor, så lenge spenningen er den samme.</p>
+<p>Du kan snu formelen etter hva du skal finne:</p>
+<p>\[ I = \frac{U}{R} \qquad R = \frac{U}{I} \]</p>
+
+<div class="boks tips">
+  <div class="boks-tittel">Tips: Husk enhetene</div>
+  <p>Regn alltid med volt, ampere og ohm. Er strømmen oppgitt i mA, gjør du den om til A først. Da blir svaret riktig.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 1: Motstand på koblingsbrettet</div>
+  <p><strong>Oppgave:</strong> Du kobler en motstand på 18 Ω til et batteri på 9,0 V. Hvor stor blir strømmen?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Vi vet: \( U = 9{,}0 \text{ V} \) og \( R = 18 \ \Omega \). Vi skal finne <em>I</em>.</li>
+    <li>Formelen: \( I = \dfrac{U}{R} \)</li>
+    <li>Sett inn: \( I = \dfrac{9{,}0 \text{ V}}{18 \ \Omega} = 0{,}50 \text{ A} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Strømmen blir 0,50 A, som er 500 mA.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 2: Varmeelementet</div>
+  <p><strong>Oppgave:</strong> Et varmeelement er koblet til 230 V og trekker 10 A. Hvor stor resistans har det?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Vi vet: \( U = 230 \text{ V} \) og \( I = 10 \text{ A} \). Vi skal finne <em>R</em>.</li>
+    <li>Formelen: \( R = \dfrac{U}{I} \)</li>
+    <li>Sett inn: \( R = \dfrac{230 \text{ V}}{10 \text{ A}} = 23 \ \Omega \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Varmeelementet har en resistans på 23 Ω.</p>
+</div>
+
+<div class="boks eksempel">
+  <div class="boks-tittel">Eksempel 3: Signalet fra en giver</div>
+  <p><strong>Oppgave:</strong> En trykkgiver sender et signal på 4–20 mA. Inne i styresystemet går signalet gjennom en motstand på 250 Ω, og styresystemet måler spenningen over motstanden. Hvor stor er spenningen ved 4 mA og ved 20 mA?</p>
+  <p><strong>Løsning:</strong></p>
+  <ol>
+    <li>Gjør om til ampere: 4 mA = 0,004 A og 20 mA = 0,020 A.</li>
+    <li>Formelen: \( U = R \cdot I \)</li>
+    <li>Ved 4 mA: \( U = 250 \ \Omega \cdot 0{,}004 \text{ A} = 1{,}0 \text{ V} \)</li>
+    <li>Ved 20 mA: \( U = 250 \ \Omega \cdot 0{,}020 \text{ A} = 5{,}0 \text{ V} \)</li>
+  </ol>
+  <p><strong>Svar:</strong> Spenningen er 1,0 V ved 4 mA og 5,0 V ved 20 mA. Noen styresystemer leser signalet på denne måten. Mer om signalet lærer du på siden <a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a> i Automasjon.</p>
+</div>
+
+<p>Strøm og spenning kan du måle med et multimeter. Det lærer du på siden Kretser i serie og parallell (kommer).</p>
+
+<div class="boks advarsel">
+  <div class="boks-tittel">Sikkerhet: Strøm gjennom kroppen</div>
+  <p>Kroppen leder strøm, og strøm gjennom kroppen kan stoppe hjertet. Allerede 230 V fra en stikkontakt kan drepe. Fuktig hud og våte hender gir lavere resistans, og da blir strømmen gjennom kroppen større. Batterier og koblingsbrett på skolen har lav spenning og er trygge å bruke. Arbeid på det elektriske anlegget, med 230 V eller 400 V, skal bare gjøres av fagfolk med el-utdanning. Etter el-forskriftene er det bare autoriserte fagfolk som får arbeide på elektriske anlegg. Les mer på siden Elektrisk sikkerhet (kommer).</p>
+</div>
+
+<h2>Test deg selv</h2>
+
+<div class="quiz">
+  <p>Hvilken enhet har resistans?</p>
+  <ul>
+    <li>volt (V)</li>
+    <li>ampere (A)</li>
+    <li data-riktig>ohm (Ω)</li>
+  </ul>
+  <p class="forklaring">Resistans måles i ohm. Spenning måles i volt, og strøm måles i ampere.</p>
+</div>
+
+<div class="quiz">
+  <p>Spenningen over en motstand blir dobbelt så stor. Resistansen er den samme. Hva skjer med strømmen?</p>
+  <ul>
+    <li>Den blir halvparten så stor.</li>
+    <li>Den er den samme.</li>
+    <li data-riktig>Den blir dobbelt så stor.</li>
+  </ul>
+  <p class="forklaring">Etter Ohms lov er \( I = U/R \). Når <em>U</em> dobles og <em>R</em> er den samme, dobles også <em>I</em>.</p>
+</div>
+
+<div class="quiz">
+  <p>En motstand på 4,0 Ω er koblet til 12 V. Hvor stor er strømmen?</p>
+  <ul>
+    <li>0,33 A</li>
+    <li data-riktig>3,0 A</li>
+    <li>48 A</li>
+  </ul>
+  <p class="forklaring">\( I = \dfrac{U}{R} = \dfrac{12 \text{ V}}{4{,}0 \ \Omega} = 3{,}0 \text{ A} \). 48 A får du hvis du ganger i stedet for å dele.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvor mye er 20 mA i ampere?</p>
+  <ul>
+    <li data-riktig>0,020 A</li>
+    <li>0,20 A</li>
+    <li>2,0 A</li>
+  </ul>
+  <p class="forklaring">1 A = 1000 mA. Da er 20 mA = 20/1000 A = 0,020 A.</p>
+</div>
+
+<div class="quiz">
+  <p>Hvilket stoff er en isolator?</p>
+  <ul>
+    <li>kobber</li>
+    <li data-riktig>plast</li>
+    <li>stål</li>
+  </ul>
+  <p class="forklaring">Plast slipper nesten ikke strøm gjennom, og brukes derfor rundt lederne i kabler. Kobber og stål er metaller og leder strøm.</p>
+</div>
+
+<h2>Ordliste</h2>
+<table>
+  <thead><tr><th>Begrep</th><th>Forklaring</th><th>Engelsk</th></tr></thead>
+  <tbody>
+    <tr><td>elektrisk strøm</td><td>Elektrisk ladning, oftest elektroner, som beveger seg gjennom en leder. Måles i ampere (A).</td><td>current</td></tr>
+    <tr><td>ampere</td><td>Enheten for elektrisk strøm. 1 A = 1000 mA.</td><td></td></tr>
+    <tr><td>spenning</td><td>Det som driver strømmen gjennom en krets, omtrent som trykket fra en pumpe. Måles i volt (V).</td><td>voltage</td></tr>
+    <tr><td>volt</td><td>Enheten for spenning.</td><td></td></tr>
+    <tr><td>resistans</td><td>Hvor mye noe bremser strømmen. Måles i ohm (Ω).</td><td>resistance</td></tr>
+    <tr><td>ohm</td><td>Enheten for resistans. Tegnet er Ω.</td><td></td></tr>
+    <tr><td>Ohms lov</td><td>Sammenhengen mellom spenning, resistans og strøm: U = R · I.</td><td></td></tr>
+    <tr><td>strømkrets</td><td>En lukket vei der strømmen kan gå rundt, fra strømkilden gjennom utstyret og tilbake.</td><td></td></tr>
+    <tr><td>elektrisk leder</td><td>Et stoff som slipper strøm lett gjennom, for eksempel kobber.</td><td></td></tr>
+    <tr><td>isolator</td><td>Et stoff som nesten ikke slipper strøm gjennom, for eksempel plast og gummi.</td><td></td></tr>
+    <tr><td>motstand</td><td>En komponent med en bestemt resistans, som brukes for å styre hvor stor strømmen blir.</td><td>resistor</td></tr>
+  </tbody>
+</table>
+
+<h2>Les mer</h2>
+<ul>
+  <li>Neste side, <a href="elektrisk-effekt.html">Elektrisk effekt og energi</a>, bygger videre på denne siden og på <a href="energi-arbeid-effekt.html">Energi, arbeid og effekt</a>.</li>
+  <li><a href="../05-maling-styring-regulering/signalet-4-20-ma.html">Signalet 4–20 mA</a> i Automasjon viser hvordan strøm brukes til å sende måleverdier.</li>
+</ul>
+<p><small>Om kildene: Teksten, eksemplene og figurene på denne siden er laget for dette nettstedet. Siden bygger på undervisningsopplegg i kjemiprosess- og laboratoriefag ved Sauda vgs, som er utarbeidet med utgangspunkt i blant annet <em>Kjemien stemmer</em>, <em>Laboranten</em> og åpne nettkilder.</small></p>
+
+</main>
+</body>
+</html>
